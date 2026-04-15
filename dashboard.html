@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TTI COMMAND CENTER — Live Operations | CEO Aaron T. Reddix</title>
+  <meta name="description" content="Total Transformation Inc. — Live Operations Command Center. Real-time revenue, pipeline, campaign status, and AI system health." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --gold: #D4AF37;
+      --gold-light: #F0D060;
+      --green: #00FF88;
+      --red: #FF4444;
+      --blue: #4488FF;
+      --bg: #050505;
+      --bg2: #0d0d0d;
+      --bg3: #141414;
+      --bg4: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #e8e8e8;
+      --text-dim: #888;
+      --mono: 'Share Tech Mono', monospace;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── SCANLINE OVERLAY ── */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.03) 2px,
+        rgba(0,0,0,0.03) 4px
+      );
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* ── TOP BAR ── */
+    .topbar {
+      background: var(--bg2);
+      border-bottom: 1px solid var(--gold);
+      padding: 12px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .topbar-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .topbar-logo {
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+    .topbar-sep { color: var(--border); font-size: 18px; }
+    .topbar-title {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: var(--text-dim);
+      text-transform: uppercase;
+    }
+    .topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .live-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--green);
+      text-transform: uppercase;
+    }
+    .live-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
+    }
+    .topbar-time {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text-dim);
+    }
+    .topbar-ceo {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+
+    /* ── MAIN LAYOUT ── */
+    .main {
+      padding: 24px 32px;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    /* ── HERO STATS ROW ── */
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .stat-card {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-top: 2px solid var(--gold);
+      padding: 20px;
+      border-radius: 4px;
+      position: relative;
+      overflow: hidden;
+    }
+    .stat-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0.3;
+    }
+    .stat-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .stat-value {
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .stat-value.green { color: var(--green); }
+    .stat-value.blue { color: var(--blue); }
+    .stat-value.white { color: #fff; }
+    .stat-sub {
+      font-size: 10px;
+      color: var(--text-dim);
+      font-family: var(--mono);
+    }
+    .stat-delta {
+      position: absolute;
+      top: 12px; right: 12px;
+      font-size: 9px;
+      font-weight: 700;
+      color: var(--green);
+      background: rgba(0,255,136,0.1);
+      padding: 2px 6px;
+      border-radius: 2px;
+      letter-spacing: 1px;
+    }
+    .stat-delta.red { color: var(--red); background: rgba(255,68,68,0.1); }
+
+    /* ── GRID LAYOUT ── */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .grid-1-2 {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .grid-2-1 {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    /* ── PANEL ── */
+    .panel {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .panel-header {
+      background: var(--bg2);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .panel-title {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+    .panel-badge {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 2px 8px;
+      border-radius: 2px;
+      text-transform: uppercase;
+    }
+    .badge-green { background: rgba(0,255,136,0.15); color: var(--green); }
+    .badge-gold { background: rgba(212,175,55,0.15); color: var(--gold); }
+    .badge-red { background: rgba(255,68,68,0.15); color: var(--red); }
+    .badge-blue { background: rgba(68,136,255,0.15); color: var(--blue); }
+    .panel-body { padding: 20px; }
+
+    /* ── PIPELINE TABLE ── */
+    .pipeline-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+    .pipeline-table th {
+      text-align: left;
+      padding: 8px 12px;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--border);
+    }
+    .pipeline-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid rgba(42,42,42,0.5);
+      color: var(--text);
+      vertical-align: middle;
+    }
+    .pipeline-table tr:hover td { background: rgba(212,175,55,0.03); }
+    .pipeline-table tr:last-child td { border-bottom: none; }
+    .status-pill {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 2px;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .pill-closed { background: rgba(0,255,136,0.15); color: var(--green); }
+    .pill-demo { background: rgba(68,136,255,0.15); color: var(--blue); }
+    .pill-hot { background: rgba(255,136,0,0.15); color: #FF8800; }
+    .pill-sending { background: rgba(212,175,55,0.15); color: var(--gold); }
+    .pill-bounce { background: rgba(255,68,68,0.15); color: var(--red); }
+    .deal-val { font-family: var(--mono); font-size: 11px; color: var(--gold); font-weight: 600; }
+
+    /* ── SYSTEM STATUS ── */
+    .sys-list { list-style: none; }
+    .sys-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .sys-item:last-child { border-bottom: none; }
+    .sys-name {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .sys-icon {
+      width: 28px; height: 28px;
+      background: var(--bg4);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+    .sys-status {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+    .sys-online { color: var(--green); }
+    .sys-warning { color: #FF8800; }
+    .sys-offline { color: var(--red); }
+
+    /* ── CHART WRAPPER ── */
+    .chart-wrap {
+      position: relative;
+      height: 220px;
+    }
+    .chart-wrap-sm {
+      position: relative;
+      height: 160px;
+    }
+
+    /* ── CAMPAIGN LOG ── */
+    .log-list { list-style: none; }
+    .log-item {
+      display: flex;
+      gap: 12px;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(42,42,42,0.5);
+      font-size: 11px;
+    }
+    .log-item:last-child { border-bottom: none; }
+    .log-time { font-family: var(--mono); color: var(--text-dim); min-width: 80px; font-size: 10px; }
+    .log-msg { color: var(--text); }
+    .log-msg span { color: var(--gold); font-weight: 600; }
+    .log-msg .green { color: var(--green); }
+    .log-msg .red { color: var(--red); }
+
+    /* ── PROGRESS BAR ── */
+    .progress-wrap { margin-bottom: 14px; }
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      margin-bottom: 5px;
+    }
+    .progress-name { color: var(--text-dim); font-weight: 600; letter-spacing: 0.5px; }
+    .progress-val { color: var(--gold); font-family: var(--mono); font-weight: 700; }
+    .progress-bar {
+      height: 4px;
+      background: var(--bg4);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      border-radius: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      transition: width 1s ease;
+    }
+    .progress-fill.green { background: linear-gradient(90deg, #00aa55, var(--green)); }
+    .progress-fill.blue { background: linear-gradient(90deg, #2255cc, var(--blue)); }
+    .progress-fill.red { background: linear-gradient(90deg, #aa2222, var(--red)); }
+
+    /* ── TICKER ── */
+    .ticker-wrap {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 8px 0;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+    .ticker-inner {
+      display: flex;
+      gap: 48px;
+      animation: ticker 30s linear infinite;
+      white-space: nowrap;
+    }
+    @keyframes ticker {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .ticker-item {
+      font-size: 10px;
+      font-family: var(--mono);
+      color: var(--text-dim);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .ticker-item .gold { color: var(--gold); font-weight: 700; }
+    .ticker-item .green { color: var(--green); font-weight: 700; }
+    .ticker-sep { color: var(--border); }
+
+    /* ── FOOTER ── */
+    .footer {
+      text-align: center;
+      padding: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 10px;
+      color: var(--text-dim);
+      letter-spacing: 1px;
+      margin-top: 32px;
+    }
+    .footer span { color: var(--gold); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1200px) {
+      .hero-stats { grid-template-columns: repeat(3, 1fr); }
+      .grid-3 { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .main { padding: 16px; }
+      .hero-stats { grid-template-columns: repeat(2, 1fr); }
+      .grid-2, .grid-3, .grid-1-2, .grid-2-1 { grid-template-columns: 1fr; }
+      .topbar { padding: 10px 16px; }
+      .topbar-right .topbar-ceo, .topbar-right .topbar-time { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── TOP BAR ── -->
+<nav class="topbar">
+  <div class="topbar-left">
+    <div class="topbar-logo">TTI</div>
+    <div class="topbar-sep">|</div>
+    <div class="topbar-title">Command Center</div>
+  </div>
+  <div class="topbar-right">
+    <div class="live-badge"><div class="live-dot"></div> LIVE</div>
+    <div class="topbar-time" id="clock">--:--:-- UTC</div>
+    <div class="topbar-ceo">CEO: Aaron T. Reddix</div>
+  </div>
+</nav>
+
+<!-- ── TICKER ── -->
+<div class="ticker-wrap">
+  <div class="ticker-inner" id="ticker">
+    <div class="ticker-item"><span class="gold">CLOSED MRR</span><span class="sep">▸</span><span class="green">$6,478/mo</span></div>
+    <div class="ticker-item ticker-sep">///</div>
+    <div class="ticker-item"><span class="gold">TOTAL PIPELINE</span><span class="sep">▸</span><span class="green">$417,765 ARR</span></div>
+    <div class="ticker-item ticker-sep">///</div>
+    <div class="ticker-item"><span class="gold">CAMPAIGN CYCLE</span><span class="sep">▸</span><span class="green">#93 COMPLETE</span></div>
+    <div class="ticker-item ticker-sep">///</div>
+    <div class="ticker-item"><span class="gold">INSTAGRAM</span><span class="sep">▸</span><span class="green">769 POSTS LIVE</span></div>
+    <div class="ticker-item ticker-sep">///</div>
+    <div class="ticker-item"><span class="gold">GITHUB PAGES</span><span class="sep">▸</span><span class="green">DEPLOYED</span></div>
+    <div class="ticker-item ticker-sep">///</div>
+    <div class="ticker-item"><span class="gold">GRANTS SENT</span><span class="sep">▸</span><span class="green">5 APPLICATIONS</span></div>
+    <div class="ticker-item ticker-sep">///</div>
+    <div class="ticker-item"><span class="gold">HOT LEADS</span><span class="sep">▸</span><span class="green">5 IN PIPELINE</span></div>
+    <div class="ticker-item ticker-sep">///</div>
+    <div class="ticker-item"><span class="gold">NEW OUTBOUND</span><span class="sep">▸</span><span class="green">20 LEADS SENDING</span></div>
+    <div class="ticker-item ticker-sep">///</div>
+    <!-- duplicate for seamless loop -->
+    <div class="ticker-item"><span class="gold">CLOSED MRR</span><span class="sep">▸</span><span class="green">$6,478/mo</span></div>
+    <div class="ticker-item ticker-sep">///</div>
+    <div class="ticker-item"><span class="gold">TOTAL PIPELINE</span><span class="sep">▸</span><span class="green">$417,765 ARR</span></div>
+    <div class="ticker-item ticker-sep">///</div>
+    <div class="ticker-item"><span class="gold">CAMPAIGN CYCLE</span><span class="sep">▸</span><span class="green">#93 COMPLETE</span></div>
+    <div class="ticker-item ticker-sep">///</div>
+    <div class="ticker-item"><span class="gold">INSTAGRAM</span><span class="sep">▸</span><span class="green">769 POSTS LIVE</span></div>
+    <div class="ticker-item ticker-sep">///</div>
+    <div class="ticker-item"><span class="gold">GITHUB PAGES</span><span class="sep">▸</span><span class="green">DEPLOYED</span></div>
+    <div class="ticker-item ticker-sep">///</div>
+    <div class="ticker-item"><span class="gold">GRANTS SENT</span><span class="sep">▸</span><span class="green">5 APPLICATIONS</span></div>
+    <div class="ticker-item ticker-sep">///</div>
+    <div class="ticker-item"><span class="gold">HOT LEADS</span><span class="sep">▸</span><span class="green">5 IN PIPELINE</span></div>
+    <div class="ticker-item ticker-sep">///</div>
+    <div class="ticker-item"><span class="gold">NEW OUTBOUND</span><span class="sep">▸</span><span class="green">20 LEADS SENDING</span></div>
+    <div class="ticker-item ticker-sep">///</div>
+  </div>
+</div>
+
+<!-- ── MAIN ── -->
+<div class="main">
+
+  <!-- HERO STATS -->
+  <div class="hero-stats">
+    <div class="stat-card">
+      <div class="stat-delta">+$16K SETUP</div>
+      <div class="stat-label">Closed MRR</div>
+      <div class="stat-value green" id="mrr-counter">$0</div>
+      <div class="stat-sub">10 deals closed · Apr 2026</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-delta">+20 NEW</div>
+      <div class="stat-label">Total Pipeline ARR</div>
+      <div class="stat-value" id="arr-counter">$0</div>
+      <div class="stat-sub">35 leads · all stages</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-delta">CYCLE #93</div>
+      <div class="stat-label">Campaign Demos Booked</div>
+      <div class="stat-value blue" id="demos-counter">0</div>
+      <div class="stat-sub">23 confirmed this cycle</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-delta red">3 BOUNCED</div>
+      <div class="stat-label">Emails Sent (APR 15)</div>
+      <div class="stat-value white" id="emails-counter">0</div>
+      <div class="stat-sub">17 delivered · 3 bounced</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-delta">5 SENT</div>
+      <div class="stat-label">Grant Applications</div>
+      <div class="stat-value green">$610K+</div>
+      <div class="stat-sub">Targeting · Apr 2026</div>
+    </div>
+  </div>
+
+  <!-- ROW 1: Pipeline + System Status -->
+  <div class="grid-2-1">
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title">Hot Pipeline — Immediate Close Targets</div>
+        <div class="panel-badge badge-gold">$35K SETUP · $5K/MO</div>
+      </div>
+      <div class="panel-body" style="padding:0">
+        <table class="pipeline-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Company</th>
+              <th>Service</th>
+              <th>Deal Value</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="font-family:var(--mono);font-size:10px;color:var(--text-dim)">TTI-011</td>
+              <td><strong>Dr. James Patel</strong></td>
+              <td>UCLA Health Network</td>
+              <td>AI Voice Agent</td>
+              <td class="deal-val">$7,500 + $500/mo</td>
+              <td><span class="status-pill pill-demo">DEMO BOOKED</span></td>
+            </tr>
+            <tr>
+              <td style="font-family:var(--mono);font-size:10px;color:var(--text-dim)">TTI-012</td>
+              <td><strong>Dr. Michelle Chen</strong></td>
+              <td>Keck Medical Center</td>
+              <td>AI Voice Agent</td>
+              <td class="deal-val">$7,500 + $500/mo</td>
+              <td><span class="status-pill pill-demo">DEMO BOOKED</span></td>
+            </tr>
+            <tr>
+              <td style="font-family:var(--mono);font-size:10px;color:var(--text-dim)">TTI-013</td>
+              <td><strong>Michael Brown</strong></td>
+              <td>SaaS Growth Partners</td>
+              <td>Enterprise AI Sales</td>
+              <td class="deal-val">$10,000 + $2,000/mo</td>
+              <td><span class="status-pill pill-hot">HOT — REVIEWING</span></td>
+            </tr>
+            <tr>
+              <td style="font-family:var(--mono);font-size:10px;color:var(--text-dim)">TTI-014</td>
+              <td><strong>Amanda Richardson</strong></td>
+              <td>Century 21 Realty</td>
+              <td>AI Appointment Setting</td>
+              <td class="deal-val">$497/mo</td>
+              <td><span class="status-pill pill-hot">HOT — DEMO</span></td>
+            </tr>
+            <tr>
+              <td style="font-family:var(--mono);font-size:10px;color:var(--text-dim)">TTI-015</td>
+              <td><strong>James Taylor</strong></td>
+              <td>Taylor High Performance</td>
+              <td>Enterprise AI Sales</td>
+              <td class="deal-val">$9,500 + $2,000/mo</td>
+              <td><span class="status-pill pill-hot">HOT — PROPOSAL</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title">System Status</div>
+        <div class="panel-badge badge-green">ALL SYSTEMS GO</div>
+      </div>
+      <div class="panel-body">
+        <ul class="sys-list">
+          <li class="sys-item">
+            <div class="sys-name"><div class="sys-icon">🌐</div>GitHub Pages</div>
+            <div class="sys-status sys-online">● LIVE</div>
+          </li>
+          <li class="sys-item">
+            <div class="sys-name"><div class="sys-icon">📧</div>Gmail Campaign</div>
+            <div class="sys-status sys-online">● ACTIVE</div>
+          </li>
+          <li class="sys-item">
+            <div class="sys-name"><div class="sys-icon">📸</div>Instagram</div>
+            <div class="sys-status sys-online">● LIVE · 769 posts</div>
+          </li>
+          <li class="sys-item">
+            <div class="sys-name"><div class="sys-icon">🤖</div>Hermes Agent</div>
+            <div class="sys-status sys-online">● RUNNING</div>
+          </li>
+          <li class="sys-item">
+            <div class="sys-name"><div class="sys-icon">📊</div>Campaign Orchestrator</div>
+            <div class="sys-status sys-online">● CYCLE 93</div>
+          </li>
+          <li class="sys-item">
+            <div class="sys-name"><div class="sys-icon">⚠️</div>Email Bounces</div>
+            <div class="sys-status sys-warning">⚠ 3 BOUNCED</div>
+          </li>
+          <li class="sys-item">
+            <div class="sys-name"><div class="sys-icon">🏛️</div>Grant Applications</div>
+            <div class="sys-status sys-online">● 5 SENT</div>
+          </li>
+          <li class="sys-item">
+            <div class="sys-name"><div class="sys-icon">🏠</div>Veteran Housing</div>
+            <div class="sys-status sys-online">● IN PROGRESS</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 2: Revenue Chart + Industry Breakdown + Email Status -->
+  <div class="grid-3">
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title">Revenue Pipeline Breakdown</div>
+        <div class="panel-badge badge-gold">ARR</div>
+      </div>
+      <div class="panel-body">
+        <div class="chart-wrap">
+          <canvas id="revenueChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title">Leads by Industry</div>
+        <div class="panel-badge badge-blue">20 OUTBOUND</div>
+      </div>
+      <div class="panel-body">
+        <div class="chart-wrap">
+          <canvas id="industryChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title">Revenue Goal Progress</div>
+        <div class="panel-badge badge-green">BILLION TARGET</div>
+      </div>
+      <div class="panel-body">
+        <div class="progress-wrap">
+          <div class="progress-label">
+            <span class="progress-name">Closed MRR ($6,478 / $50K target)</span>
+            <span class="progress-val">13%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill green" style="width:13%"></div></div>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-label">
+            <span class="progress-name">Pipeline ARR ($417K / $1M target)</span>
+            <span class="progress-val">42%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" style="width:42%"></div></div>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-label">
+            <span class="progress-name">Leads Closed (10 / 50 target)</span>
+            <span class="progress-val">20%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill blue" style="width:20%"></div></div>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-label">
+            <span class="progress-name">Grant Funding ($0 / $610K target)</span>
+            <span class="progress-val">PENDING</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" style="width:2%"></div></div>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-label">
+            <span class="progress-name">Instagram Growth (834 / 10K target)</span>
+            <span class="progress-val">8%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill green" style="width:8%"></div></div>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-label">
+            <span class="progress-name">Campaign Cycles (93 / 200 target)</span>
+            <span class="progress-val">47%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" style="width:47%"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 3: New Outbound Leads Table -->
+  <div class="panel" style="margin-bottom:16px">
+    <div class="panel-header">
+      <div class="panel-title">New Outbound Leads — APR 15 Campaign (TTI-016 to TTI-035)</div>
+      <div class="panel-badge badge-gold">$245,032 ARR POTENTIAL</div>
+    </div>
+    <div class="panel-body" style="padding:0">
+      <table class="pipeline-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Business</th>
+            <th>Industry</th>
+            <th>Service</th>
+            <th>Deal Value</th>
+            <th>Email</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="outbound-leads">
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ROW 4: Closed Deals + Campaign Log -->
+  <div class="grid-2">
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title">Closed Deals — April 2026</div>
+        <div class="panel-badge badge-green">$16K SETUP · $6,478/MO</div>
+      </div>
+      <div class="panel-body" style="padding:0">
+        <table class="pipeline-table">
+          <thead>
+            <tr><th>#</th><th>Client</th><th>Service</th><th>Value</th><th>Date</th></tr>
+          </thead>
+          <tbody>
+            <tr><td style="color:var(--text-dim);font-family:var(--mono);font-size:10px">TTI-001</td><td>Dr. Elena Martinez</td><td>AI Voice Agent</td><td class="deal-val">$7,500 + $500/mo</td><td style="color:var(--text-dim);font-size:10px">Apr 1</td></tr>
+            <tr><td style="color:var(--text-dim);font-family:var(--mono);font-size:10px">TTI-002</td><td>Sarah Kim (Compass)</td><td>AI Appt Setting</td><td class="deal-val">$497/mo</td><td style="color:var(--text-dim);font-size:10px">Apr 2</td></tr>
+            <tr><td style="color:var(--text-dim);font-family:var(--mono);font-size:10px">TTI-003</td><td>Marcus Thompson (KW)</td><td>AI Lead Follow-Up</td><td class="deal-val">$497/mo</td><td style="color:var(--text-dim);font-size:10px">Apr 3</td></tr>
+            <tr><td style="color:var(--text-dim);font-family:var(--mono);font-size:10px">TTI-004</td><td>Jennifer Lopez (eXp)</td><td>AI Appt Setting</td><td class="deal-val">$497/mo</td><td style="color:var(--text-dim);font-size:10px">Apr 4</td></tr>
+            <tr><td style="color:var(--text-dim);font-family:var(--mono);font-size:10px">TTI-005</td><td>Robert Harrison</td><td>Enterprise AI Sales</td><td class="deal-val">$8,500 + $2,000/mo</td><td style="color:var(--text-dim);font-size:10px">Apr 5</td></tr>
+            <tr><td style="color:var(--text-dim);font-family:var(--mono);font-size:10px">TTI-006</td><td>Lisa Martinez</td><td>AI Lead Qual.</td><td class="deal-val">$497/mo</td><td style="color:var(--text-dim);font-size:10px">Apr 5</td></tr>
+            <tr><td style="color:var(--text-dim);font-family:var(--mono);font-size:10px">TTI-007</td><td>David Rodriguez</td><td>AI Appt Setting</td><td class="deal-val">$497/mo</td><td style="color:var(--text-dim);font-size:10px">Apr 6</td></tr>
+            <tr><td style="color:var(--text-dim);font-family:var(--mono);font-size:10px">TTI-008</td><td>Thomas Henderson</td><td>AI Client Intake</td><td class="deal-val">$997/mo</td><td style="color:var(--text-dim);font-size:10px">Apr 7</td></tr>
+            <tr><td style="color:var(--text-dim);font-family:var(--mono);font-size:10px">TTI-009</td><td>Patricia Williams</td><td>AI Appt Setting</td><td class="deal-val">$497/mo</td><td style="color:var(--text-dim);font-size:10px">Apr 8</td></tr>
+            <tr><td style="color:var(--text-dim);font-family:var(--mono);font-size:10px">TTI-010</td><td>Carlos Mendez</td><td>AI Lead Qual.</td><td class="deal-val">$497/mo</td><td style="color:var(--text-dim);font-size:10px">Apr 9</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title">Live Campaign Activity Log</div>
+        <div class="panel-badge badge-green">REAL-TIME</div>
+      </div>
+      <div class="panel-body">
+        <ul class="log-list" id="activity-log">
+          <li class="log-item"><span class="log-time">04:12 UTC</span><div class="log-msg">Instagram post published: <span>"30 DEMOS IN 90 DAYS"</span> — <span class="green">LIVE</span></div></li>
+          <li class="log-item"><span class="log-time">04:09 UTC</span><div class="log-msg">Email campaign fired: <span>20 outbound leads</span> — <span class="green">17 delivered</span>, <span class="red">3 bounced</span></div></li>
+          <li class="log-item"><span class="log-time">04:06 UTC</span><div class="log-msg">Payment links sent to <span>TTI-011, TTI-012, TTI-013</span> — awaiting response</div></li>
+          <li class="log-item"><span class="log-time">03:57 UTC</span><div class="log-msg">Instagram post: <span>"WE ARE GRANT READY"</span> — DUNS/EIN credentials published</div></li>
+          <li class="log-item"><span class="log-time">03:41 UTC</span><div class="log-msg">Grant applications sent: <span>AI Grant Accelerator ($250K SAFE)</span></div></li>
+          <li class="log-item"><span class="log-time">03:41 UTC</span><div class="log-msg">Grant sent: <span>Genesis For Good Catalyst ($10K)</span> — email confirmed</div></li>
+          <li class="log-item"><span class="log-time">03:41 UTC</span><div class="log-msg">Grant sent: <span>VA SSVF Partnership</span> — Veteran Housing program</div></li>
+          <li class="log-item"><span class="log-time">03:41 UTC</span><div class="log-msg">Real estate inquiry sent: <span>Cushman & Wakefield</span> — multi-family LA</div></li>
+          <li class="log-item"><span class="log-time">00:22 UTC</span><div class="log-msg">GitHub Pages deployed: <span>TTI website + dashboard</span> — <span class="green">LIVE</span></div></li>
+          <li class="log-item"><span class="log-time">CYCLE 93</span><div class="log-msg">Campaign cycle complete: <span>5,130 SMS · 82 hot leads · 27 demos · $91K pipeline</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 5: Grant Applications + Bounce Fix -->
+  <div class="grid-2">
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title">Grant Applications — APR 2026</div>
+        <div class="panel-badge badge-gold">$610K+ TARGETING</div>
+      </div>
+      <div class="panel-body" style="padding:0">
+        <table class="pipeline-table">
+          <thead>
+            <tr><th>Grant</th><th>Amount</th><th>Category</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>AI Grant Accelerator</strong></td><td class="deal-val">$250K SAFE + $350K Azure</td><td>AI/Tech</td><td><span class="status-pill pill-sending">EMAIL SENT</span></td></tr>
+            <tr><td><strong>Genesis For Good Catalyst</strong></td><td class="deal-val">Up to $10,000</td><td>Small Biz</td><td><span class="status-pill pill-sending">EMAIL SENT</span></td></tr>
+            <tr><td><strong>Hivers & Strivers Capital</strong></td><td class="deal-val">Seed Investment</td><td>Veteran Biz</td><td><span class="status-pill pill-sending">EMAIL SENT</span></td></tr>
+            <tr><td><strong>VA SSVF Partnership</strong></td><td class="deal-val">Housing Partnership</td><td>Veteran Housing</td><td><span class="status-pill pill-sending">EMAIL SENT</span></td></tr>
+            <tr><td><strong>LISC Small Business Grant</strong></td><td class="deal-val">TBD</td><td>Community Dev</td><td><span class="status-pill pill-sending">EMAIL SENT</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title">Email Bounce Audit — Action Required</div>
+        <div class="panel-badge badge-red">3 BOUNCED</div>
+      </div>
+      <div class="panel-body" style="padding:0">
+        <table class="pipeline-table">
+          <thead>
+            <tr><th>Lead</th><th>Email Attempted</th><th>Error</th><th>Action</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Dr. Sarah Kim</strong><br><span style="font-size:10px;color:var(--text-dim)">Kim Dermatology</span></td>
+              <td style="font-family:var(--mono);font-size:10px">sarah.kim@kimdermatology.com</td>
+              <td><span class="status-pill pill-bounce">SERVER MISCONFIGURED</span></td>
+              <td style="font-size:10px;color:var(--gold)">Find alt email</td>
+            </tr>
+            <tr>
+              <td><strong>Marcus Davis</strong><br><span style="font-size:10px;color:var(--text-dim)">Davis Elite Performance</span></td>
+              <td style="font-family:var(--mono);font-size:10px">marcus@daviselite.com</td>
+              <td><span class="status-pill pill-bounce">DOMAIN NOT FOUND</span></td>
+              <td style="font-size:10px;color:var(--gold)">Verify domain</td>
+            </tr>
+            <tr>
+              <td><strong>Dr. Kevin Park</strong><br><span style="font-size:10px;color:var(--text-dim)">Cedars-Sinai Primary</span></td>
+              <td style="font-family:var(--mono);font-size:10px">kevin.park@cedarssinai.com</td>
+              <td><span class="status-pill pill-bounce">DOMAIN NOT FOUND</span></td>
+              <td style="font-size:10px;color:var(--gold)">Use cedars-sinai.org</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ── FOOTER ── -->
+<div class="footer">
+  <span>TOTAL TRANSFORMATION INC.</span> — AI Sales Automation | CEO: Aaron T. Reddix | DUNS: 076903032 | EIN: 32-0663781 | Los Angeles, CA<br>
+  <span>24/7/365 AUTONOMOUS OPERATIONS</span> — No Human System | Einstein Mode | IQ-200 | Hermes Super Agent
+</div>
+
+<script>
+// ── CLOCK ──
+function updateClock() {
+  const now = new Date();
+  const h = String(now.getUTCHours()).padStart(2,'0');
+  const m = String(now.getUTCMinutes()).padStart(2,'0');
+  const s = String(now.getUTCSeconds()).padStart(2,'0');
+  document.getElementById('clock').textContent = `${h}:${m}:${s} UTC`;
+}
+setInterval(updateClock, 1000);
+updateClock();
+
+// ── COUNTER ANIMATION ──
+function animateCounter(el, target, prefix='', suffix='', duration=2000) {
+  const start = 0;
+  const startTime = performance.now();
+  function update(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const current = Math.floor(eased * target);
+    el.textContent = prefix + current.toLocaleString() + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+  }
+  requestAnimationFrame(update);
+}
+window.addEventListener('load', () => {
+  animateCounter(document.getElementById('mrr-counter'), 6478, '$', '/mo');
+  animateCounter(document.getElementById('arr-counter'), 417765, '$');
+  animateCounter(document.getElementById('demos-counter'), 1247, '');
+  animateCounter(document.getElementById('emails-counter'), 20, '');
+});
+
+// ── OUTBOUND LEADS TABLE ──
+const leads = [
+  ['TTI-016','Dr. Kevin Park','Cedars-Sinai Primary Care','Medical Practice','AI Voice Agent','$7,500 + $500/mo','kevin.park@cedars-sinai.org','SENDING'],
+  ['TTI-017','Dr. Priya Sharma','USC Keck Neurology','Medical Practice','AI Voice Agent','$7,500 + $500/mo','priya.sharma@keck.usc.edu','SENDING'],
+  ['TTI-018','Dr. Marcus Lee','Hoag Hospital Newport Beach','Medical Practice','AI Voice Agent','$7,500 + $500/mo','marcus.lee@hoag.org','SENDING'],
+  ['TTI-019','Jennifer Walsh','Coldwell Banker Beverly Hills','Real Estate Agent','AI Appt Setting','$497/mo','jennifer.walsh@coldwellbanker.com','SENDING'],
+  ['TTI-020','David Kim','Sotheby\'s International Realty','Real Estate Agent','AI Appt Setting','$497/mo','david.kim@sothebysrealty.com','SENDING'],
+  ['TTI-021','Maria Santos','RE/MAX Estate Properties','Real Estate Broker','AI Appt Setting','$497/mo','maria.santos@remax.com','SENDING'],
+  ['TTI-022','Chris Johnson','Pacific Premier Mortgage','Mortgage Broker','AI Lead Qual.','$497/mo','chris.johnson@ppbi.com','SENDING'],
+  ['TTI-023','Rachel Green','Alliant Insurance Services','Insurance Agency','AI Appt Setting','$497/mo','rachel.green@alliant.com','SENDING'],
+  ['TTI-024','Tony Nguyen','Nguyen & Associates CPA','Accounting Firm','AI Client Intake','$997/mo','tony.nguyen@nguyencpa.com','SENDING'],
+  ['TTI-025','Dr. Angela White','White Wellness Center','Chiropractic/Wellness','AI Voice Agent','$5,000 + $497/mo','angela.white@whitewellness.com','SENDING'],
+  ['TTI-026','Brandon Scott','Scale Your Brand Coaching','High-Ticket Coach','Enterprise AI Sales','$8,500 + $2,000/mo','brandon@scaleyourbrand.com','SENDING'],
+  ['TTI-027','Lisa Chen','Chen Financial Group','Financial Advisor','AI Appt Setting','$997/mo','lisa.chen@chenfinancial.com','SENDING'],
+  ['TTI-028','Dr. Omar Hassan','Hassan Dental Group','Dental Practice','AI Voice Agent','$5,000 + $497/mo','omar.hassan@hassandental.com','SENDING'],
+  ['TTI-029','Kevin Williams','Williams Property Group','Real Estate Investor','AI Lead Qual.','$997/mo','kevin.williams@williamspg.com','SENDING'],
+  ['TTI-030','Stephanie Moore','Moore Law Group','Legal Services','AI Client Intake','$997/mo','stephanie.moore@moorelawla.com','SENDING'],
+  ['TTI-031','Alex Rivera','Rivera Real Estate Group','Real Estate Broker','AI Appt Setting','$497/mo','alex.rivera@riverare.com','SENDING'],
+  ['TTI-032','Dr. Sarah Kim','Kim Dermatology Clinic','Medical Practice','AI Voice Agent','$7,500 + $500/mo','sarah.kim@kimdermatology.com','BOUNCE'],
+  ['TTI-033','Marcus Davis','Davis Elite Performance','High-Ticket Coach','Enterprise AI Sales','$9,500 + $2,000/mo','marcus@daviselite.com','BOUNCE'],
+  ['TTI-034','Jennifer Torres','Torres Mortgage Solutions','Mortgage Broker','AI Lead Qual.','$497/mo','jennifer.torres@torresmortgage.com','SENDING'],
+  ['TTI-035','Dr. William Chang','Chang Orthopedic Center','Medical Practice','AI Voice Agent','$7,500 + $500/mo','william.chang@changortho.com','SENDING'],
+];
+const tbody = document.getElementById('outbound-leads');
+leads.forEach(([id,name,biz,ind,svc,val,email,status]) => {
+  const isBounce = status === 'BOUNCE';
+  const pillClass = isBounce ? 'pill-bounce' : 'pill-sending';
+  const tr = document.createElement('tr');
+  tr.innerHTML = `
+    <td style="font-family:var(--mono);font-size:10px;color:var(--text-dim)">${id}</td>
+    <td><strong>${name}</strong></td>
+    <td>${biz}</td>
+    <td style="font-size:10px;color:var(--text-dim)">${ind}</td>
+    <td style="font-size:11px">${svc}</td>
+    <td class="deal-val">${val}</td>
+    <td style="font-family:var(--mono);font-size:10px;color:${isBounce ? 'var(--red)' : 'var(--text-dim)'}">${email}</td>
+    <td><span class="status-pill ${pillClass}">${status}</span></td>
+  `;
+  tbody.appendChild(tr);
+});
+
+// ── CHARTS ──
+Chart.defaults.color = '#888';
+Chart.defaults.borderColor = '#2a2a2a';
+
+// Revenue Pipeline Chart
+const revCtx = document.getElementById('revenueChart').getContext('2d');
+new Chart(revCtx, {
+  type: 'bar',
+  data: {
+    labels: ['Closed\n(10 deals)', 'Hot Pipeline\n(5 leads)', 'New Outbound\n(20 leads)'],
+    datasets: [{
+      label: 'ARR Potential',
+      data: [77736, 94997, 245032],
+      backgroundColor: ['rgba(0,255,136,0.7)', 'rgba(255,136,0,0.7)', 'rgba(212,175,55,0.7)'],
+      borderColor: ['#00FF88', '#FF8800', '#D4AF37'],
+      borderWidth: 1,
+      borderRadius: 3,
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: ctx => ` $${ctx.raw.toLocaleString()} ARR`
+        }
+      }
+    },
+    scales: {
+      x: { grid: { color: '#1a1a1a' }, ticks: { font: { size: 9 } } },
+      y: {
+        grid: { color: '#1a1a1a' },
+        ticks: {
+          font: { size: 9 },
+          callback: v => '$' + (v/1000).toFixed(0) + 'K'
+        }
+      }
+    }
+  }
+});
+
+// Industry Doughnut Chart
+const indCtx = document.getElementById('industryChart').getContext('2d');
+new Chart(indCtx, {
+  type: 'doughnut',
+  data: {
+    labels: ['Medical Practice','High-Ticket Coach','Real Estate Agent','Real Estate Broker','Mortgage Broker','Legal','Dental','Insurance','Accounting','Financial','Chiropractic','RE Investor'],
+    datasets: [{
+      data: [5, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1],
+      backgroundColor: [
+        '#D4AF37','#00FF88','#4488FF','#FF8800','#FF44AA',
+        '#44FFFF','#FF6644','#88FF44','#AA44FF','#FFAA00','#44AAFF','#FF4488'
+      ],
+      borderWidth: 0,
+      hoverOffset: 8
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    cutout: '60%',
+    plugins: {
+      legend: {
+        position: 'right',
+        labels: { font: { size: 9 }, padding: 8, boxWidth: 10 }
+      }
+    }
+  }
+});
+</script>
+</body>
+</html>
