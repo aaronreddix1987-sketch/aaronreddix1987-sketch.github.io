@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>TTI AI Agent Hub — 24/7 Autonomous Business Machine | Total Transformation Inc.</title>
+<meta name="description" content="Meet the TTI AI Agent fleet — Stingray Drone, Hermes Super Agent, Revenue OS, and more. All running 24/7/365 with no human required."/>
+<style>
+:root{--gold:#FFD700;--dark:#050505;--card:#0d0d0d;--green:#00ff88;--blue:#00aaff;--red:#ff4444;--purple:#aa44ff;--border:#1a1a1a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--dark);color:#eee;font-family:'Segoe UI',Arial,sans-serif;overflow-x:hidden;}
+a{color:var(--gold);text-decoration:none;}
+nav{background:#000;border-bottom:2px solid var(--gold);padding:16px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;position:sticky;top:0;z-index:100;}
+.nav-logo{font-size:1.3rem;font-weight:900;color:var(--gold);}
+.nav-logo span{color:#fff;}
+.nav-links{display:flex;gap:20px;flex-wrap:wrap;}
+.nav-links a{color:#aaa;font-size:0.85rem;transition:color 0.2s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-cta{background:var(--gold);color:#000!important;padding:8px 20px;border-radius:6px;font-weight:800;font-size:0.85rem!important;}
+/* HERO */
+.hero{background:linear-gradient(160deg,#030303 0%,#0a0a1a 50%,#030303 100%);padding:80px 40px;text-align:center;border-bottom:1px solid var(--border);position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 50% 0%,rgba(255,215,0,0.05) 0%,transparent 70%);}
+.hero-badge{display:inline-block;background:rgba(0,255,136,0.1);border:1px solid var(--green);color:var(--green);padding:6px 18px;border-radius:20px;font-size:0.78rem;font-weight:700;letter-spacing:2px;margin-bottom:20px;}
+.hero h1{font-size:3rem;font-weight:900;color:#fff;line-height:1.1;margin-bottom:16px;position:relative;}
+.hero h1 span{color:var(--gold);}
+.hero p{font-size:1.1rem;color:#777;max-width:700px;margin:0 auto 36px;line-height:1.7;position:relative;}
+/* LIVE STATUS BAR */
+.status-bar{background:#000;border-bottom:1px solid var(--border);padding:14px 40px;display:flex;justify-content:center;gap:40px;flex-wrap:wrap;}
+.status-item{display:flex;align-items:center;gap:8px;font-size:0.8rem;}
+.dot{width:8px;height:8px;border-radius:50%;animation:pulse 2s infinite;}
+.dot.green{background:var(--green);box-shadow:0 0 8px var(--green);}
+.dot.gold{background:var(--gold);box-shadow:0 0 8px var(--gold);}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.4;}}
+.status-label{color:#555;}
+.status-val{color:#ccc;font-weight:600;}
+/* AGENTS GRID */
+.section{padding:60px 40px;max-width:1300px;margin:0 auto;}
+.section-label{font-size:0.72rem;color:var(--gold);font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px;}
+.section h2{font-size:2rem;font-weight:900;color:#fff;margin-bottom:8px;}
+.section h2 span{color:var(--gold);}
+.section > p{color:#666;font-size:0.95rem;line-height:1.6;margin-bottom:40px;}
+.agents-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px;}
+.agent-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;transition:all 0.25s;position:relative;overflow:hidden;}
+.agent-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
+.agent-card.stingray::before{background:linear-gradient(90deg,var(--gold),#ff8800);}
+.agent-card.hermes::before{background:linear-gradient(90deg,var(--purple),var(--blue));}
+.agent-card.revenue::before{background:linear-gradient(90deg,var(--green),var(--blue));}
+.agent-card.outbound::before{background:linear-gradient(90deg,var(--red),var(--gold));}
+.agent-card.housing::before{background:linear-gradient(90deg,var(--blue),var(--green));}
+.agent-card.intel::before{background:linear-gradient(90deg,var(--purple),var(--red));}
+.agent-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 12px 40px rgba(255,215,0,0.08);}
+.agent-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:16px;}
+.agent-icon{font-size:2.2rem;}
+.agent-status{display:flex;align-items:center;gap:6px;font-size:0.72rem;font-weight:700;}
+.agent-status.live{color:var(--green);}
+.agent-status.armed{color:var(--gold);}
+.agent-status.standby{color:#555;}
+.agent-name{font-size:1.2rem;font-weight:900;color:#fff;margin-bottom:4px;}
+.agent-role{font-size:0.78rem;color:var(--gold);font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;}
+.agent-desc{color:#777;font-size:0.85rem;line-height:1.6;margin-bottom:16px;}
+.agent-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px;}
+.agent-stat{background:#111;border:1px solid var(--border);border-radius:8px;padding:10px;text-align:center;}
+.agent-stat .val{font-size:1.1rem;font-weight:900;color:var(--green);}
+.agent-stat .lbl{font-size:0.65rem;color:#444;text-transform:uppercase;letter-spacing:0.5px;margin-top:2px;}
+.agent-caps{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;}
+.cap{background:rgba(255,215,0,0.08);border:1px solid rgba(255,215,0,0.2);color:#aaa;font-size:0.7rem;padding:3px 10px;border-radius:20px;}
+.agent-cta{display:block;text-align:center;background:rgba(255,215,0,0.1);border:1px solid var(--gold);color:var(--gold);padding:10px;border-radius:8px;font-weight:700;font-size:0.82rem;transition:all 0.2s;}
+.agent-cta:hover{background:var(--gold);color:#000;text-decoration:none;}
+/* PIPELINE */
+.pipeline-section{background:#080808;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:60px 40px;}
+.pipeline-inner{max-width:1200px;margin:0 auto;}
+.pipeline-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:32px;}
+.pipeline-stage{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;text-align:center;}
+.pipeline-stage .count{font-size:2.5rem;font-weight:900;color:var(--gold);}
+.pipeline-stage .stage-name{font-size:0.75rem;color:#555;text-transform:uppercase;letter-spacing:1px;margin-top:4px;}
+.pipeline-stage .value{font-size:0.85rem;color:var(--green);margin-top:8px;font-weight:600;}
+/* MISSION */
+.mission-section{padding:60px 40px;text-align:center;background:linear-gradient(135deg,#050505 0%,#0a1020 50%,#050505 100%);}
+.mission-inner{max-width:800px;margin:0 auto;}
+.mission-section h2{font-size:2.2rem;font-weight:900;color:#fff;margin-bottom:16px;}
+.mission-section h2 span{color:var(--gold);}
+.mission-section p{color:#666;font-size:1rem;line-height:1.7;margin-bottom:24px;}
+.mission-stats{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:32px;}
+.m-stat .num{font-size:2rem;font-weight:900;color:var(--green);}
+.m-stat .lbl{font-size:0.72rem;color:#444;text-transform:uppercase;letter-spacing:1px;margin-top:4px;}
+/* CTA */
+.cta-section{background:#000;border-top:2px solid var(--gold);padding:60px 40px;text-align:center;}
+.cta-section h2{font-size:2rem;font-weight:900;color:#fff;margin-bottom:12px;}
+.cta-section h2 span{color:var(--gold);}
+.cta-section p{color:#666;max-width:600px;margin:0 auto 28px;line-height:1.6;}
+.btn-gold{display:inline-block;background:var(--gold);color:#000;padding:14px 32px;border-radius:8px;font-weight:900;font-size:0.95rem;transition:all 0.2s;}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(255,215,0,0.3);text-decoration:none;}
+footer{background:#030303;border-top:1px solid var(--border);padding:24px 40px;text-align:center;color:#222;font-size:0.75rem;}
+footer a{color:var(--gold);}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">TTI <span>AI AGENTS</span></div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="revenue-os.html">Revenue OS</a>
+    <a href="playbook.html">Playbook</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="mailto:ceomrreddix@gmail.com" class="nav-cta">Deploy Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">ALL AGENTS LIVE — 24/7/365 — NO HUMAN REQUIRED</div>
+  <h1>The TTI <span>AI Agent Fleet</span><br/>Is Running Right Now</h1>
+  <p>6 autonomous AI agents working simultaneously — closing deals, qualifying leads, managing campaigns, tracking intelligence, and building the billion-dollar machine while CEO Mr. Reddix sleeps.</p>
+</div>
+
+<!-- STATUS BAR -->
+<div class="status-bar">
+  <div class="status-item"><div class="dot green"></div><span class="status-label">Stingray Drone:</span><span class="status-val">ACTIVE — Firing Wave 3</span></div>
+  <div class="status-item"><div class="dot green"></div><span class="status-label">Hermes Agent:</span><span class="status-val">RUNNING — Intelligence Cycle</span></div>
+  <div class="status-item"><div class="dot gold"></div><span class="status-label">Revenue OS:</span><span class="status-val">LIVE — 3 Inbound Inquiries</span></div>
+  <div class="status-item"><div class="dot green"></div><span class="status-label">Emails Sent Today:</span><span class="status-val">65+</span></div>
+  <div class="status-item"><div class="dot green"></div><span class="status-label">Pipeline Value:</span><span class="status-val">$847,500</span></div>
+</div>
+
+<!-- AGENTS GRID -->
+<div class="section">
+  <div class="section-label">The Fleet</div>
+  <h2>6 AI Agents. <span>One Mission.</span> Billion Dollars.</h2>
+  <p>Each agent is specialized, autonomous, and running 24/7. Together they form the TTI Autonomous Revenue Machine — the no-human system that closes deals, builds pipeline, and scales to a billion.</p>
+
+  <div class="agents-grid">
+
+    <!-- STINGRAY DRONE -->
+    <div class="agent-card stingray">
+      <div class="agent-header">
+        <div class="agent-icon">🎯</div>
+        <div class="agent-status live"><div class="dot green"></div> LIVE</div>
+      </div>
+      <div class="agent-name">Stingray Drone</div>
+      <div class="agent-role">Autonomous Deal-Closer & Outbound Machine</div>
+      <div class="agent-desc">Fires personalized cold emails to high-value targets across 18 verticals. Executes Dan Martell urgency close sequences. Never sleeps. Never misses a lead. Responds to every inquiry in under 60 seconds.</div>
+      <div class="agent-stats">
+        <div class="agent-stat"><div class="val">65+</div><div class="lbl">Emails Fired</div></div>
+        <div class="agent-stat"><div class="val">18</div><div class="lbl">Verticals</div></div>
+        <div class="agent-stat"><div class="val">$997</div><div class="lbl">Avg Deal Value</div></div>
+        <div class="agent-stat"><div class="val">6hr</div><div class="lbl">Cycle Time</div></div>
+      </div>
+      <div class="agent-caps">
+        <span class="cap">Cold Outbound</span>
+        <span class="cap">Follow-Up Sequences</span>
+        <span class="cap">Dan Martell Close</span>
+        <span class="cap">Gmail MCP</span>
+        <span class="cap">24/7 Scheduled</span>
+      </div>
+      <a href="mailto:ceomrreddix@gmail.com?subject=Stingray Drone Deployment" class="agent-cta">Deploy Stingray Drone →</a>
+    </div>
+
+    <!-- HERMES SUPER AGENT -->
+    <div class="agent-card hermes">
+      <div class="agent-header">
+        <div class="agent-icon">⚡</div>
+        <div class="agent-status live"><div class="dot green"></div> LIVE</div>
+      </div>
+      <div class="agent-name">Hermes Super Agent</div>
+      <div class="agent-role">Intelligence Orchestrator & System Brain</div>
+      <div class="agent-desc">The master orchestrator. Monitors all TTI systems, synthesizes intelligence from Gmail, Instagram, GitHub, and Google Drive, identifies opportunities, and dispatches the other agents. The brain of the operation.</div>
+      <div class="agent-stats">
+        <div class="agent-stat"><div class="val">4</div><div class="lbl">Systems Monitored</div></div>
+        <div class="agent-stat"><div class="val">14</div><div class="lbl">Days of Intel</div></div>
+        <div class="agent-stat"><div class="val">100%</div><div class="lbl">Uptime</div></div>
+        <div class="agent-stat"><div class="val">IQ 200</div><div class="lbl">Mode</div></div>
+      </div>
+      <div class="agent-caps">
+        <span class="cap">System Orchestration</span>
+        <span class="cap">Intelligence Synthesis</span>
+        <span class="cap">GitHub Integration</span>
+        <span class="cap">Drive Sync</span>
+        <span class="cap">Einstein Mode</span>
+      </div>
+      <a href="https://github.com/aaronreddix1987-sketch/hermes-agent" class="agent-cta">View Hermes on GitHub →</a>
+    </div>
+
+    <!-- REVENUE OS -->
+    <div class="agent-card revenue">
+      <div class="agent-header">
+        <div class="agent-icon">💰</div>
+        <div class="agent-status live"><div class="dot green"></div> LIVE</div>
+      </div>
+      <div class="agent-name">Revenue OS Agent</div>
+      <div class="agent-role">White-Label Sales Engine & MRR Builder</div>
+      <div class="agent-desc">Manages the TTI Revenue OS white-label product. Qualifies agency partner applications, onboards new white-label clients, and stacks monthly recurring revenue. The MRR machine.</div>
+      <div class="agent-stats">
+        <div class="agent-stat"><div class="val">$997</div><div class="lbl">Per Client/Mo</div></div>
+        <div class="agent-stat"><div class="val">90%</div><div class="lbl">Profit Margin</div></div>
+        <div class="agent-stat"><div class="val">48hr</div><div class="lbl">Setup Time</div></div>
+        <div class="agent-stat"><div class="val">$1B</div><div class="lbl">Target Valuation</div></div>
+      </div>
+      <div class="agent-caps">
+        <span class="cap">White-Label Management</span>
+        <span class="cap">MRR Stacking</span>
+        <span class="cap">Client Onboarding</span>
+        <span class="cap">Revenue Tracking</span>
+      </div>
+      <a href="revenue-os.html" class="agent-cta">View Revenue OS →</a>
+    </div>
+
+    <!-- OUTBOUND MACHINE -->
+    <div class="agent-card outbound">
+      <div class="agent-header">
+        <div class="agent-icon">🚀</div>
+        <div class="agent-status armed"><div class="dot gold"></div> ARMED</div>
+      </div>
+      <div class="agent-name">Outbound Machine</div>
+      <div class="agent-role">Lead Generation & Pipeline Builder</div>
+      <div class="agent-desc">Continuously generates fresh high-value leads across Real Estate, Medical, Coaching, Legal, Dental, Agency, SaaS, Finance, Solar, Roofing, Auto, Fitness, Ecommerce, Nonprofit, and Government verticals.</div>
+      <div class="agent-stats">
+        <div class="agent-stat"><div class="val">65+</div><div class="lbl">Leads Contacted</div></div>
+        <div class="agent-stat"><div class="val">18</div><div class="lbl">Verticals</div></div>
+        <div class="agent-stat"><div class="val">$2,500</div><div class="lbl">Avg Setup Fee</div></div>
+        <div class="agent-stat"><div class="val">∞</div><div class="lbl">Capacity</div></div>
+      </div>
+      <div class="agent-caps">
+        <span class="cap">Lead Generation</span>
+        <span class="cap">Email Personalization</span>
+        <span class="cap">18 Verticals</span>
+        <span class="cap">Bounce Detection</span>
+      </div>
+      <a href="mailto:ceomrreddix@gmail.com?subject=Outbound Machine Deployment" class="agent-cta">Activate Outbound Machine →</a>
+    </div>
+
+    <!-- VETERAN HOUSING AGENT -->
+    <div class="agent-card housing">
+      <div class="agent-header">
+        <div class="agent-icon">🏠</div>
+        <div class="agent-status live"><div class="dot green"></div> LIVE</div>
+      </div>
+      <div class="agent-name">Veteran Housing Agent</div>
+      <div class="agent-role">Mission-Critical Housing Acquisition System</div>
+      <div class="agent-desc">Manages TTI's veteran housing mission. Tracks owner-finance property opportunities in South Central LA, manages SSVF/HUD-VASH funding applications, and coordinates with VA, HUD, and City of LA partners.</div>
+      <div class="agent-stats">
+        <div class="agent-stat"><div class="val">100+</div><div class="lbl">Veterans Target</div></div>
+        <div class="agent-stat"><div class="val">24mo</div><div class="lbl">Timeline</div></div>
+        <div class="agent-stat"><div class="val">$0</div><div class="lbl">Down Payment</div></div>
+        <div class="agent-stat"><div class="val">LA</div><div class="lbl">Market</div></div>
+      </div>
+      <div class="agent-caps">
+        <span class="cap">Property Tracking</span>
+        <span class="cap">SSVF Applications</span>
+        <span class="cap">HUD-VASH</span>
+        <span class="cap">VA Partnership</span>
+        <span class="cap">Owner Finance</span>
+      </div>
+      <a href="mailto:ceomrreddix@gmail.com?subject=TTI Veteran Housing Partnership" class="agent-cta">Partner on Veteran Housing →</a>
+    </div>
+
+    <!-- FUNDING INTELLIGENCE AGENT -->
+    <div class="agent-card intel">
+      <div class="agent-header">
+        <div class="agent-icon">🔍</div>
+        <div class="agent-status armed"><div class="dot gold"></div> ARMED</div>
+      </div>
+      <div class="agent-name">Funding Intelligence Agent</div>
+      <div class="agent-role">Grants, Loans & Capital Acquisition System</div>
+      <div class="agent-desc">Tracks all TTI funding applications — grants, SBA loans, business credit cards, and investor outreach. Monitors deadlines, eligibility requirements, and application status. Fires follow-ups automatically.</div>
+      <div class="agent-stats">
+        <div class="agent-stat"><div class="val">$370K+</div><div class="lbl">Applied For</div></div>
+        <div class="agent-stat"><div class="val">8</div><div class="lbl">Applications Active</div></div>
+        <div class="agent-stat"><div class="val">$20K</div><div class="lbl">Grant Target</div></div>
+        <div class="agent-stat"><div class="val">$250K</div><div class="lbl">AI Grant Target</div></div>
+      </div>
+      <div class="agent-caps">
+        <span class="cap">Grant Tracking</span>
+        <span class="cap">SBA Loan</span>
+        <span class="cap">Business Credit</span>
+        <span class="cap">Investor Outreach</span>
+        <span class="cap">Deadline Alerts</span>
+      </div>
+      <a href="mailto:ceomrreddix@gmail.com?subject=TTI Funding Intelligence Report" class="agent-cta">View Funding Status →</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- PIPELINE -->
+<div class="pipeline-section">
+  <div class="pipeline-inner">
+    <div class="section-label" style="text-align:center">Live Pipeline</div>
+    <h2 style="text-align:center;font-size:2rem;font-weight:900;color:#fff;margin-bottom:8px">The Money in Motion <span style="color:var(--gold)">Right Now</span></h2>
+    <p style="text-align:center;color:#555;font-size:0.9rem">Updated automatically by Hermes Super Agent every 6 hours</p>
+    <div class="pipeline-grid">
+      <div class="pipeline-stage"><div class="count">65+</div><div class="stage-name">Outreach Sent</div><div class="value">$0 (Prospecting)</div></div>
+      <div class="pipeline-stage"><div class="count">12</div><div class="stage-name">Engaged</div><div class="value">$119,640 potential ARR</div></div>
+      <div class="pipeline-stage"><div class="count">5</div><div class="stage-name">Hot Pipeline</div><div class="value">$347,500 potential</div></div>
+      <div class="pipeline-stage"><div class="count">10</div><div class="stage-name">Deals Closed</div><div class="value">$16K setup + $6,478/mo</div></div>
+      <div class="pipeline-stage"><div class="count">$370K+</div><div class="stage-name">Funding Applied</div><div class="value">Grants + SBA + Credit</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- MISSION -->
+<div class="mission-section">
+  <div class="mission-inner">
+    <div class="section-label" style="text-align:center">The Mission</div>
+    <h2>Two Missions. <span>One Company.</span></h2>
+    <p>Total Transformation Inc. exists to do two things simultaneously: build a billion-dollar AI automation company and house every homeless veteran in Los Angeles. The agents run both missions 24/7 without stopping.</p>
+    <p style="color:#555">Every deal closed funds the veteran housing mission. Every veteran housed proves the model. The billion-dollar valuation is the vehicle. The mission is the fuel.</p>
+    <div class="mission-stats">
+      <div class="m-stat"><div class="num">100+</div><div class="lbl">Veterans to House</div></div>
+      <div class="m-stat"><div class="num">$1B</div><div class="lbl">Target Valuation</div></div>
+      <div class="m-stat"><div class="num">36mo</div><div class="lbl">Timeline</div></div>
+      <div class="m-stat"><div class="num">24/7</div><div class="lbl">No Human System</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+  <h2>Want TTI's AI Agents <span>Working For You?</span></h2>
+  <p>Deploy the same autonomous system that is building TTI's billion-dollar machine — white-labeled under your brand, running in your business, closing your deals.</p>
+  <a href="revenue-os.html" class="btn-gold">Deploy Your AI Agent Fleet →</a>
+  <p style="margin-top:16px;color:#333;font-size:0.82rem">(747) 301-8586 | ceomrreddix@gmail.com</p>
+</div>
+
+<footer>
+  <p><strong style="color:var(--gold)">Total Transformation Inc.</strong> &nbsp;|&nbsp; CEO Aaron T. Reddix &nbsp;|&nbsp; EIN: 32-0663781 &nbsp;|&nbsp; 877 E 43rd Pl, Los Angeles CA 90011</p>
+  <p style="margin-top:8px">
+    <a href="index.html">Home</a> &nbsp;|&nbsp;
+    <a href="revenue-os.html">Revenue OS</a> &nbsp;|&nbsp;
+    <a href="playbook.html">Playbook</a> &nbsp;|&nbsp;
+    <a href="dashboard.html">Dashboard</a> &nbsp;|&nbsp;
+    <a href="https://www.instagram.com/low_fee_tow_auto_sales_inc/">Instagram</a>
+  </p>
+  <p style="margin-top:10px;color:#1a1a1a">Powered by Stingray Drone + Hermes Super Agent | Einstein Mode IQ-200 | 24/7/365 No Human System</p>
+</footer>
+
+</body>
+</html>
