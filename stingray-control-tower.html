@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stingray Control Tower — Remote IoT Oil Pump & Industrial Control Platform | TTI</title>
+<meta name="description" content="TTI Stingray Control Tower: AI-powered remote control and monitoring for oil pumps, industrial infrastructure, and field operations. SCADA-grade intelligence. Deploy in 48 hours.">
+<style>
+  :root {
+    --primary: #00d4ff;
+    --secondary: #ff6b00;
+    --dark: #0a0e1a;
+    --darker: #060810;
+    --card: #0d1526;
+    --border: #1a2a4a;
+    --text: #e0e8ff;
+    --muted: #7a8aaa;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--darker); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; overflow-x: hidden; }
+
+  /* NAV */
+  nav { position: fixed; top: 0; width: 100%; background: rgba(6,8,16,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); z-index: 1000; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+  .nav-logo { font-size: 1.2rem; font-weight: 800; color: var(--primary); letter-spacing: 2px; }
+  .nav-links a { color: var(--muted); text-decoration: none; margin-left: 2rem; font-size: 0.9rem; transition: color 0.3s; }
+  .nav-links a:hover { color: var(--primary); }
+  .nav-cta { background: var(--secondary); color: white; padding: 0.5rem 1.5rem; border-radius: 4px; font-weight: 700; text-decoration: none; font-size: 0.9rem; }
+
+  /* HERO */
+  .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 8rem 2rem 4rem; background: radial-gradient(ellipse at 50% 0%, rgba(0,212,255,0.08) 0%, transparent 70%), radial-gradient(ellipse at 80% 80%, rgba(255,107,0,0.06) 0%, transparent 60%), var(--darker); position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; inset: 0; background-image: repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(0,212,255,0.03) 60px, rgba(0,212,255,0.03) 61px), repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(0,212,255,0.03) 60px, rgba(0,212,255,0.03) 61px); }
+  .hero-badge { display: inline-block; background: rgba(0,212,255,0.1); border: 1px solid rgba(0,212,255,0.3); color: var(--primary); padding: 0.4rem 1.2rem; border-radius: 20px; font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 1.5rem; }
+  .hero h1 { font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 900; line-height: 1.1; margin-bottom: 1.5rem; }
+  .hero h1 span { color: var(--primary); }
+  .hero h1 .accent { color: var(--secondary); }
+  .hero-sub { font-size: 1.3rem; color: var(--muted); max-width: 700px; margin: 0 auto 2.5rem; line-height: 1.6; }
+  .hero-stats { display: flex; gap: 3rem; justify-content: center; margin-bottom: 3rem; flex-wrap: wrap; }
+  .hero-stat { text-align: center; }
+  .hero-stat .num { font-size: 2.5rem; font-weight: 900; color: var(--primary); }
+  .hero-stat .label { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+  .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .btn-primary { background: var(--primary); color: var(--darker); padding: 1rem 2.5rem; border-radius: 4px; font-weight: 800; text-decoration: none; font-size: 1rem; transition: transform 0.2s, box-shadow 0.2s; }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,212,255,0.3); }
+  .btn-secondary { background: transparent; color: var(--primary); padding: 1rem 2.5rem; border-radius: 4px; font-weight: 700; text-decoration: none; font-size: 1rem; border: 2px solid var(--primary); transition: all 0.2s; }
+  .btn-secondary:hover { background: rgba(0,212,255,0.1); }
+
+  /* TICKER */
+  .ticker { background: var(--primary); color: var(--darker); padding: 0.6rem 0; overflow: hidden; white-space: nowrap; font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; }
+  .ticker-inner { display: inline-block; animation: ticker 30s linear infinite; }
+  @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+  /* SECTIONS */
+  section { padding: 6rem 2rem; max-width: 1200px; margin: 0 auto; }
+  .section-label { color: var(--primary); font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 1rem; }
+  .section-title { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; margin-bottom: 1.5rem; }
+  .section-sub { color: var(--muted); font-size: 1.1rem; max-width: 600px; line-height: 1.7; margin-bottom: 3rem; }
+
+  /* PROBLEM */
+  .problem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+  .problem-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 2rem; border-left: 4px solid var(--secondary); }
+  .problem-card .icon { font-size: 2rem; margin-bottom: 1rem; }
+  .problem-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--secondary); }
+  .problem-card p { color: var(--muted); font-size: 0.95rem; line-height: 1.6; }
+
+  /* PRODUCT */
+  .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+  .product-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 2rem; transition: border-color 0.3s, transform 0.3s; }
+  .product-card:hover { border-color: var(--primary); transform: translateY(-4px); }
+  .product-card .icon { width: 48px; height: 48px; background: rgba(0,212,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.2rem; }
+  .product-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.8rem; }
+  .product-card p { color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
+
+  /* DASHBOARD MOCKUP */
+  .dashboard-mock { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; margin: 3rem 0; }
+  .dash-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
+  .dash-title { font-size: 1.1rem; font-weight: 700; color: var(--primary); }
+  .dash-status { display: flex; gap: 0.5rem; align-items: center; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: #00ff88; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+  .pump-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
+  .pump-card { background: var(--darker); border: 1px solid var(--border); border-radius: 8px; padding: 1.2rem; text-align: center; }
+  .pump-name { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; }
+  .pump-status { font-size: 1.8rem; font-weight: 900; margin-bottom: 0.3rem; }
+  .pump-status.online { color: #00ff88; }
+  .pump-status.warning { color: var(--secondary); }
+  .pump-metric { font-size: 0.8rem; color: var(--muted); }
+  .pump-bar { height: 4px; background: var(--border); border-radius: 2px; margin-top: 0.8rem; overflow: hidden; }
+  .pump-fill { height: 100%; border-radius: 2px; background: linear-gradient(90deg, var(--primary), #00ff88); }
+
+  /* MARKET */
+  .market-table { width: 100%; border-collapse: collapse; margin-top: 2rem; }
+  .market-table th { background: var(--card); color: var(--primary); padding: 1rem; text-align: left; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; border-bottom: 2px solid var(--border); }
+  .market-table td { padding: 1rem; border-bottom: 1px solid var(--border); font-size: 0.95rem; color: var(--text); }
+  .market-table tr:hover td { background: rgba(0,212,255,0.03); }
+  .market-table .highlight { color: var(--primary); font-weight: 700; }
+
+  /* PRICING */
+  .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem; }
+  .price-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 2.5rem; text-align: center; position: relative; }
+  .price-card.featured { border-color: var(--primary); background: linear-gradient(135deg, rgba(0,212,255,0.05), var(--card)); }
+  .price-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--primary); color: var(--darker); padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.75rem; font-weight: 800; letter-spacing: 1px; white-space: nowrap; }
+  .price-tier { font-size: 0.85rem; color: var(--muted); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.5rem; }
+  .price-amount { font-size: 3rem; font-weight: 900; color: var(--primary); margin-bottom: 0.3rem; }
+  .price-period { font-size: 0.9rem; color: var(--muted); margin-bottom: 2rem; }
+  .price-features { list-style: none; text-align: left; margin-bottom: 2rem; }
+  .price-features li { padding: 0.5rem 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; color: var(--muted); display: flex; align-items: center; gap: 0.5rem; }
+  .price-features li::before { content: '✓'; color: var(--primary); font-weight: 700; }
+  .price-btn { display: block; background: var(--primary); color: var(--darker); padding: 0.9rem; border-radius: 4px; font-weight: 800; text-decoration: none; transition: opacity 0.2s; }
+  .price-btn:hover { opacity: 0.85; }
+
+  /* CTA */
+  .cta-section { background: linear-gradient(135deg, rgba(0,212,255,0.08), rgba(255,107,0,0.05)); border: 1px solid var(--border); border-radius: 16px; padding: 5rem 3rem; text-align: center; margin: 4rem 0; }
+  .cta-section h2 { font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 900; margin-bottom: 1.5rem; }
+  .cta-section p { color: var(--muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto 2.5rem; line-height: 1.7; }
+
+  /* FOOTER */
+  footer { background: var(--card); border-top: 1px solid var(--border); padding: 3rem 2rem; text-align: center; }
+  footer .footer-logo { font-size: 1.5rem; font-weight: 900; color: var(--primary); margin-bottom: 1rem; }
+  footer p { color: var(--muted); font-size: 0.9rem; }
+  footer a { color: var(--primary); text-decoration: none; }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .hero-stats { gap: 1.5rem; }
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">⚡ STINGRAY CONTROL TOWER</div>
+  <div class="nav-links">
+    <a href="#product">Product</a>
+    <a href="#market">Market</a>
+    <a href="#pricing">Pricing</a>
+    <a href="index.html">TTI Home</a>
+  </div>
+  <a href="mailto:ceomrreddix@gmail.com?subject=Stingray Control Tower Demo Request" class="nav-cta">Request Demo</a>
+</nav>
+
+<div class="ticker">
+  <span class="ticker-inner">
+    ⚡ SCADA MARKET: $473B BY 2035 &nbsp;|&nbsp; IoT OIL & GAS: $9.3B BY 2034 &nbsp;|&nbsp; REMOTE PUMP CONTROLLERS: $1.2B BY 2033 &nbsp;|&nbsp; STINGRAY CONTROL TOWER: LIVE NOW &nbsp;|&nbsp; DEPLOY IN 48 HOURS &nbsp;|&nbsp; NO HUMAN REQUIRED &nbsp;|&nbsp; 24/7 AUTONOMOUS MONITORING &nbsp;|&nbsp; AI-POWERED PREDICTIVE MAINTENANCE &nbsp;|&nbsp;
+    ⚡ SCADA MARKET: $473B BY 2035 &nbsp;|&nbsp; IoT OIL & GAS: $9.3B BY 2034 &nbsp;|&nbsp; REMOTE PUMP CONTROLLERS: $1.2B BY 2033 &nbsp;|&nbsp; STINGRAY CONTROL TOWER: LIVE NOW &nbsp;|&nbsp; DEPLOY IN 48 HOURS &nbsp;|&nbsp; NO HUMAN REQUIRED &nbsp;|&nbsp; 24/7 AUTONOMOUS MONITORING &nbsp;|&nbsp; AI-POWERED PREDICTIVE MAINTENANCE &nbsp;|&nbsp;
+  </span>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div style="position:relative;z-index:1;max-width:900px;">
+    <div class="hero-badge">🎯 Targeting the $473 Billion SCADA Market</div>
+    <h1>
+      <span>Stingray</span> Control Tower<br>
+      <span class="accent">Remote Oil Pump</span> &amp; Industrial<br>
+      IoT Command Platform
+    </h1>
+    <p class="hero-sub">
+      AI-powered remote monitoring and control for oil pumps, pipelines, and industrial infrastructure. SCADA-grade intelligence. Deploy in 48 hours. No human operator required.
+    </p>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num">$473B</div><div class="label">SCADA Market 2035</div></div>
+      <div class="hero-stat"><div class="num">48hr</div><div class="label">Deploy Time</div></div>
+      <div class="hero-stat"><div class="num">99.9%</div><div class="label">Uptime SLA</div></div>
+      <div class="hero-stat"><div class="num">24/7</div><div class="label">Autonomous</div></div>
+    </div>
+    <div class="hero-btns">
+      <a href="mailto:ceomrreddix@gmail.com?subject=Stingray Control Tower — Enterprise Demo Request" class="btn-primary">Request Enterprise Demo</a>
+      <a href="#pricing" class="btn-secondary">View Pricing</a>
+    </div>
+  </div>
+</div>
+
+<!-- LIVE DASHBOARD MOCKUP -->
+<section>
+  <div class="section-label">Live System</div>
+  <div class="section-title">Real-Time Control Dashboard</div>
+  <p class="section-sub">Monitor and control every pump, valve, and sensor from a single command interface — anywhere in the world, from any device.</p>
+  <div class="dashboard-mock">
+    <div class="dash-header">
+      <div class="dash-title">⚡ STINGRAY CONTROL TOWER — FIELD OPS CENTER</div>
+      <div class="dash-status"><div class="dot"></div><span style="font-size:0.85rem;color:#00ff88;font-weight:700;">ALL SYSTEMS OPERATIONAL</span></div>
+    </div>
+    <div class="pump-grid">
+      <div class="pump-card">
+        <div class="pump-name">Pump Unit 001 — Permian Basin</div>
+        <div class="pump-status online">ONLINE</div>
+        <div class="pump-metric">Flow: 847 bbl/day | Pressure: 2,340 PSI</div>
+        <div class="pump-bar"><div class="pump-fill" style="width:84%;"></div></div>
+      </div>
+      <div class="pump-card">
+        <div class="pump-name">Pump Unit 002 — Eagle Ford</div>
+        <div class="pump-status online">ONLINE</div>
+        <div class="pump-metric">Flow: 1,203 bbl/day | Pressure: 2,890 PSI</div>
+        <div class="pump-bar"><div class="pump-fill" style="width:92%;"></div></div>
+      </div>
+      <div class="pump-card">
+        <div class="pump-name">Pump Unit 003 — Bakken</div>
+        <div class="pump-status warning">ALERT</div>
+        <div class="pump-metric">Flow: 412 bbl/day | Pressure: 1,100 PSI ⚠</div>
+        <div class="pump-bar"><div class="pump-fill" style="width:38%;background:linear-gradient(90deg,#ff6b00,#ffaa00);"></div></div>
+      </div>
+      <div class="pump-card">
+        <div class="pump-name">Pump Unit 004 — Marcellus</div>
+        <div class="pump-status online">ONLINE</div>
+        <div class="pump-metric">Flow: 978 bbl/day | Pressure: 2,650 PSI</div>
+        <div class="pump-bar"><div class="pump-fill" style="width:78%;"></div></div>
+      </div>
+      <div class="pump-card">
+        <div class="pump-name">Pump Unit 005 — DJ Basin</div>
+        <div class="pump-status online">ONLINE</div>
+        <div class="pump-metric">Flow: 1,456 bbl/day | Pressure: 3,100 PSI</div>
+        <div class="pump-bar"><div class="pump-fill" style="width:97%;"></div></div>
+      </div>
+      <div class="pump-card">
+        <div class="pump-name">AI Predictive Engine</div>
+        <div class="pump-status online" style="font-size:1.2rem;">ACTIVE</div>
+        <div class="pump-metric">Next maintenance: Unit 003 in 6 hrs</div>
+        <div class="pump-bar"><div class="pump-fill" style="width:100%;"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section id="problem" style="padding-top:0;">
+  <div class="section-label">The Problem</div>
+  <div class="section-title">Oil Fields Are Bleeding Money Every Day</div>
+  <p class="section-sub">The average oil operator loses $2.3M per year in unplanned downtime. The cause: no real-time visibility, no remote control, no predictive intelligence.</p>
+  <div class="problem-grid">
+    <div class="problem-card">
+      <div class="icon">💸</div>
+      <h3>$2.3M Lost Per Year</h3>
+      <p>Average annual loss from unplanned pump downtime. Every hour offline costs $10,000-$50,000 in lost production.</p>
+    </div>
+    <div class="problem-card">
+      <div class="icon">🚗</div>
+      <h3>$180K in Truck Rolls</h3>
+      <p>Operators send field technicians to check equipment that could be monitored remotely. Average cost: $1,500 per truck roll, 120 rolls per year.</p>
+    </div>
+    <div class="problem-card">
+      <div class="icon">⏰</div>
+      <h3>4-Hour Response Time</h3>
+      <p>Average time to detect and respond to a pump failure without remote monitoring. With Stingray: under 60 seconds.</p>
+    </div>
+    <div class="problem-card">
+      <div class="icon">👷</div>
+      <h3>Safety Risk</h3>
+      <p>Manual field inspections expose workers to dangerous conditions. Remote monitoring eliminates unnecessary site visits.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT -->
+<section id="product">
+  <div class="section-label">The Solution</div>
+  <div class="section-title">Stingray Control Tower</div>
+  <p class="section-sub">AI-powered remote monitoring and control for every pump, valve, sensor, and field asset — deployed in 48 hours, running 24/7 with no human operator required.</p>
+  <div class="product-grid">
+    <div class="product-card">
+      <div class="icon">📡</div>
+      <h3>Remote Pump Control</h3>
+      <p>Start, stop, adjust, and override any pump remotely from the Stingray dashboard. Full SCADA-grade control from any device, anywhere in the world.</p>
+    </div>
+    <div class="product-card">
+      <div class="icon">🧠</div>
+      <h3>AI Predictive Maintenance</h3>
+      <p>Machine learning models analyze vibration, temperature, pressure, and flow data to predict failures 6-72 hours before they happen. Zero unplanned downtime.</p>
+    </div>
+    <div class="product-card">
+      <div class="icon">⚡</div>
+      <h3>60-Second Fault Detection</h3>
+      <p>Stingray detects anomalies in under 60 seconds and automatically alerts operators, dispatches maintenance, or executes pre-programmed responses.</p>
+    </div>
+    <div class="product-card">
+      <div class="icon">📊</div>
+      <h3>Real-Time Analytics</h3>
+      <p>Live dashboards showing flow rates, pressure, temperature, efficiency, and production totals across every field asset simultaneously.</p>
+    </div>
+    <div class="product-card">
+      <div class="icon">🔒</div>
+      <h3>Military-Grade Security</h3>
+      <p>AES-256 encrypted communications, multi-factor authentication, and air-gapped deployment options for critical infrastructure protection.</p>
+    </div>
+    <div class="product-card">
+      <div class="icon">🔗</div>
+      <h3>Universal Integration</h3>
+      <p>Integrates with existing SCADA systems, PLCs, RTUs, and IoT sensors. Works with Modbus, DNP3, OPC-UA, and all major industrial protocols.</p>
+    </div>
+    <div class="product-card">
+      <div class="icon">📱</div>
+      <h3>Mobile Command Center</h3>
+      <p>Full control from iOS and Android. Push notifications for critical alerts. Remote override capability from anywhere on earth.</p>
+    </div>
+    <div class="product-card">
+      <div class="icon">🤖</div>
+      <h3>Autonomous Operations</h3>
+      <p>Pre-program response protocols for every scenario. Stingray executes autonomously — adjusting pump speeds, closing valves, and dispatching maintenance without human intervention.</p>
+    </div>
+    <div class="product-card">
+      <div class="icon">☁️</div>
+      <h3>Cloud + Edge Hybrid</h3>
+      <p>Edge computing for ultra-low latency control. Cloud backup for data storage, analytics, and remote access. Works in areas with limited connectivity.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MARKET -->
+<section id="market">
+  <div class="section-label">The Market</div>
+  <div class="section-title">$500 Billion Opportunity</div>
+  <p class="section-sub">The industrial IoT and SCADA market is the largest technology opportunity of the next decade. Stingray Control Tower is positioned at the intersection of every major growth segment.</p>
+  <table class="market-table">
+    <thead>
+      <tr>
+        <th>Market Segment</th>
+        <th>2026 Value</th>
+        <th>2035 Projection</th>
+        <th>CAGR</th>
+        <th>TTI Entry</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>SCADA Systems</td><td>$13.87B</td><td class="highlight">$473.64B</td><td>30%+</td><td>✅ Direct</td></tr>
+      <tr><td>IoT Oil & Gas</td><td>$2.5B</td><td class="highlight">$9.3B</td><td>14%</td><td>✅ Direct</td></tr>
+      <tr><td>Digital Pump Controllers</td><td>$8.9B</td><td class="highlight">$13.6B</td><td>6.3%</td><td>✅ Direct</td></tr>
+      <tr><td>IoT Connected Machines</td><td>$295B</td><td class="highlight">$1.1T+</td><td>18%+</td><td>✅ Adjacent</td></tr>
+      <tr><td>Remote Pump Controllers (US)</td><td>$500M</td><td class="highlight">$1.2B</td><td>10%</td><td>✅ Direct</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="section-label">Pricing</div>
+  <div class="section-title">Deploy Today. Scale Tomorrow.</div>
+  <p class="section-sub">White-label licensing available for operators, integrators, and energy companies. All plans include 90-day performance guarantee.</p>
+  <div class="pricing-grid">
+    <div class="price-card">
+      <div class="price-tier">Field Operator</div>
+      <div class="price-amount">$4,997</div>
+      <div class="price-period">setup + $2,497/mo</div>
+      <ul class="price-features">
+        <li>Up to 25 pump units</li>
+        <li>Real-time monitoring dashboard</li>
+        <li>Remote start/stop control</li>
+        <li>AI fault detection (60-sec)</li>
+        <li>Mobile app (iOS + Android)</li>
+        <li>Email + SMS alerts</li>
+        <li>90-day performance guarantee</li>
+      </ul>
+      <a href="mailto:ceomrreddix@gmail.com?subject=Stingray Control Tower — Field Operator Plan" class="price-btn">Get Started</a>
+    </div>
+    <div class="price-card featured">
+      <div class="price-badge">MOST POPULAR</div>
+      <div class="price-tier">Enterprise Operator</div>
+      <div class="price-amount">$24,997</div>
+      <div class="price-period">setup + $9,997/mo</div>
+      <ul class="price-features">
+        <li>Unlimited pump units</li>
+        <li>Full SCADA integration</li>
+        <li>AI predictive maintenance</li>
+        <li>Autonomous operations mode</li>
+        <li>White-label dashboard</li>
+        <li>Dedicated account manager</li>
+        <li>Custom alert protocols</li>
+        <li>API access + integrations</li>
+        <li>90-day performance guarantee</li>
+      </ul>
+      <a href="mailto:ceomrreddix@gmail.com?subject=Stingray Control Tower — Enterprise Plan Demo" class="price-btn">Request Demo</a>
+    </div>
+    <div class="price-card">
+      <div class="price-tier">White-Label License</div>
+      <div class="price-amount">$99,997</div>
+      <div class="price-period">annual license</div>
+      <ul class="price-features">
+        <li>Full platform white-label rights</li>
+        <li>Unlimited client deployments</li>
+        <li>Source code access</li>
+        <li>Custom branding</li>
+        <li>Revenue sharing model available</li>
+        <li>Priority support + training</li>
+        <li>Co-marketing opportunities</li>
+        <li>Reseller rights included</li>
+      </ul>
+      <a href="mailto:ceomrreddix@gmail.com?subject=Stingray Control Tower — White-Label License" class="price-btn">Contact Sales</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section>
+  <div class="cta-section">
+    <h2>Ready to Control Your Field<br><span style="color:var(--primary);">From Anywhere on Earth?</span></h2>
+    <p>Deploy Stingray Control Tower in 48 hours. Monitor every pump. Control every valve. Predict every failure. No human operator required.</p>
+    <div class="hero-btns">
+      <a href="mailto:ceomrreddix@gmail.com?subject=Stingray Control Tower — Enterprise Demo Request&body=Company:%0AField Size (# of pumps):%0ALocation:%0ABest time to connect:" class="btn-primary">Request Enterprise Demo</a>
+      <a href="tel:+17473018586" class="btn-secondary">Call (747) 301-8586</a>
+    </div>
+    <p style="margin-top:1.5rem;font-size:0.85rem;color:var(--muted);">90-Day Performance Guarantee &nbsp;|&nbsp; Deploy in 48 Hours &nbsp;|&nbsp; No Human Operator Required</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">⚡ STINGRAY CONTROL TOWER</div>
+  <p>A Total Transformation Inc. Product &nbsp;|&nbsp; <a href="mailto:ceomrreddix@gmail.com">ceomrreddix@gmail.com</a> &nbsp;|&nbsp; <a href="tel:+17473018586">(747) 301-8586</a></p>
+  <p style="margin-top:0.5rem;">877 E 43rd Pl, Los Angeles CA 90011 &nbsp;|&nbsp; EIN: 32-0663781</p>
+  <p style="margin-top:1rem;"><a href="index.html">TTI Home</a> &nbsp;|&nbsp; <a href="revenue-os.html">Revenue OS</a> &nbsp;|&nbsp; <a href="agents.html">AI Agents</a> &nbsp;|&nbsp; <a href="dashboard.html">Dashboard</a></p>
+  <p style="margin-top:1rem;font-size:0.8rem;color:var(--muted);">© 2026 Total Transformation Inc. All Rights Reserved. &nbsp;|&nbsp; 24/7/365 No Human System</p>
+</footer>
+
+</body>
+</html>
