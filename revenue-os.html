@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>TTI Revenue OS — White-Label AI Sales System | $997/mo | Total Transformation Inc.</title>
+<meta name="description" content="White-label TTI's AI automation system. Resell to your clients for $997/mo. We build it. You brand it. You collect the recurring revenue. 90-day guarantee."/>
+<style>
+:root{--gold:#FFD700;--dark:#080808;--card:#111;--green:#00ff88;--blue:#00aaff;--purple:#aa44ff;--border:#1e1e1e;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--dark);color:#eee;font-family:'Segoe UI',Arial,sans-serif;}
+a{color:var(--gold);text-decoration:none;}
+/* NAV */
+nav{background:#000;border-bottom:2px solid var(--gold);padding:16px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;position:sticky;top:0;z-index:100;}
+.nav-logo{font-size:1.3rem;font-weight:900;color:var(--gold);}
+.nav-logo span{color:#fff;}
+.nav-links{display:flex;gap:20px;flex-wrap:wrap;}
+.nav-links a{color:#aaa;font-size:0.85rem;transition:color 0.2s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-cta{background:var(--gold);color:#000!important;padding:8px 20px;border-radius:6px;font-weight:800;font-size:0.85rem!important;}
+/* HERO */
+.hero{background:linear-gradient(160deg,#050505 0%,#0a1628 60%,#050505 100%);padding:80px 40px;text-align:center;border-bottom:1px solid var(--border);}
+.hero-badge{display:inline-block;background:rgba(255,215,0,0.1);border:1px solid var(--gold);color:var(--gold);padding:6px 18px;border-radius:20px;font-size:0.8rem;font-weight:700;letter-spacing:2px;margin-bottom:20px;}
+.hero h1{font-size:3rem;font-weight:900;color:#fff;line-height:1.1;margin-bottom:16px;}
+.hero h1 span{color:var(--gold);}
+.hero p{font-size:1.15rem;color:#888;max-width:700px;margin:0 auto 36px;line-height:1.7;}
+.btn-primary{display:inline-block;background:var(--gold);color:#000;padding:16px 36px;border-radius:8px;font-weight:900;font-size:1.05rem;transition:transform 0.2s,box-shadow 0.2s;}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(255,215,0,0.3);text-decoration:none;}
+.btn-secondary{display:inline-block;border:2px solid var(--gold);color:var(--gold);padding:14px 32px;border-radius:8px;font-weight:700;font-size:1rem;margin-left:16px;transition:all 0.2s;}
+.btn-secondary:hover{background:rgba(255,215,0,0.1);text-decoration:none;}
+/* STATS BAR */
+.stats-bar{background:#0a0a0a;border-bottom:1px solid var(--border);padding:28px 40px;display:flex;justify-content:center;gap:60px;flex-wrap:wrap;}
+.stat-item{text-align:center;}
+.stat-item .num{font-size:2rem;font-weight:900;color:var(--green);}
+.stat-item .lbl{font-size:0.75rem;color:#555;text-transform:uppercase;letter-spacing:1px;margin-top:2px;}
+/* SECTIONS */
+.section{padding:64px 40px;max-width:1200px;margin:0 auto;}
+.section-label{font-size:0.75rem;color:var(--gold);font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:10px;}
+.section h2{font-size:2.2rem;font-weight:900;color:#fff;line-height:1.2;margin-bottom:16px;}
+.section h2 span{color:var(--gold);}
+.section p{color:#888;font-size:1rem;line-height:1.7;max-width:700px;}
+/* CARDS */
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:40px;}
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:24px;margin-top:40px;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px;transition:border-color 0.25s,transform 0.2s;}
+.card:hover{border-color:var(--gold);transform:translateY(-2px);}
+.card-icon{font-size:2rem;margin-bottom:14px;}
+.card h3{color:#fff;font-size:1.1rem;font-weight:700;margin-bottom:8px;}
+.card p{color:#777;font-size:0.88rem;line-height:1.6;}
+.card.featured{border-color:var(--gold);background:linear-gradient(135deg,#111 0%,#1a1500 100%);}
+/* PRICING */
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:40px;}
+.price-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:32px;text-align:center;transition:all 0.25s;}
+.price-card:hover{border-color:var(--gold);transform:translateY(-4px);}
+.price-card.featured{border-color:var(--gold);background:linear-gradient(135deg,#111 0%,#1a1500 100%);transform:scale(1.03);}
+.price-card .badge{background:var(--gold);color:#000;padding:4px 14px;border-radius:20px;font-size:0.75rem;font-weight:800;display:inline-block;margin-bottom:16px;}
+.price-card h3{color:#fff;font-size:1.2rem;font-weight:700;margin-bottom:8px;}
+.price-card .price{font-size:2.8rem;font-weight:900;color:var(--gold);margin:16px 0 4px;}
+.price-card .price-sub{color:#666;font-size:0.85rem;margin-bottom:20px;}
+.price-card ul{list-style:none;text-align:left;margin-bottom:24px;}
+.price-card ul li{color:#aaa;font-size:0.85rem;padding:6px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;}
+.price-card ul li:last-child{border-bottom:none;}
+.check{color:var(--green);font-weight:900;}
+.price-card .cta{display:block;background:var(--gold);color:#000;padding:12px 24px;border-radius:8px;font-weight:800;font-size:0.9rem;transition:opacity 0.2s;}
+.price-card .cta:hover{opacity:0.85;text-decoration:none;}
+.price-card.featured .cta{background:var(--gold);}
+/* MATH SECTION */
+.math-box{background:linear-gradient(135deg,#0a0a0a 0%,#0a1628 100%);border:2px solid var(--gold);border-radius:16px;padding:40px;margin-top:40px;text-align:center;}
+.math-box h3{color:var(--gold);font-size:1.5rem;font-weight:900;margin-bottom:24px;}
+.math-row{display:flex;justify-content:center;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:16px;}
+.math-item{text-align:center;}
+.math-item .val{font-size:2rem;font-weight:900;color:var(--green);}
+.math-item .lbl{font-size:0.75rem;color:#666;text-transform:uppercase;letter-spacing:1px;}
+.math-op{font-size:2rem;color:var(--gold);font-weight:900;}
+.math-result{font-size:2.5rem;font-weight:900;color:var(--gold);margin-top:20px;}
+.math-result-lbl{color:#888;font-size:0.9rem;margin-top:4px;}
+/* STEPS */
+.steps{margin-top:40px;}
+.step{display:flex;gap:20px;margin-bottom:28px;align-items:flex-start;}
+.step-num{background:var(--gold);color:#000;font-weight:900;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.9rem;}
+.step-content h4{color:#fff;font-size:1rem;font-weight:700;margin-bottom:4px;}
+.step-content p{color:#777;font-size:0.85rem;line-height:1.55;}
+/* TESTIMONIALS */
+.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-top:40px;}
+.testimonial{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;}
+.testimonial .quote{color:#ccc;font-size:0.9rem;line-height:1.6;margin-bottom:14px;font-style:italic;}
+.testimonial .author{color:var(--gold);font-size:0.82rem;font-weight:700;}
+.testimonial .result{color:var(--green);font-size:0.8rem;margin-top:4px;}
+/* CTA SECTION */
+.cta-section{background:linear-gradient(135deg,#0a0a0a 0%,#0a1628 50%,#0a0a0a 100%);border-top:2px solid var(--gold);border-bottom:2px solid var(--gold);padding:80px 40px;text-align:center;}
+.cta-section h2{font-size:2.5rem;font-weight:900;color:#fff;margin-bottom:16px;}
+.cta-section h2 span{color:var(--gold);}
+.cta-section p{color:#888;font-size:1.1rem;max-width:600px;margin:0 auto 36px;line-height:1.7;}
+/* FOOTER */
+footer{background:#030303;border-top:1px solid var(--border);padding:28px 40px;text-align:center;color:#333;font-size:0.78rem;}
+footer a{color:var(--gold);}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">TTI <span>REVENUE OS</span></div>
+  <div class="nav-links">
+    <a href="#how-it-works">How It Works</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#math">The Math</a>
+    <a href="index.html">Main Site</a>
+    <a href="mailto:ceomrreddix@gmail.com" class="nav-cta">Apply Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">WHITE-LABEL AI AUTOMATION — AGENCY OWNERS ONLY</div>
+  <h1>Add <span>$50,000/Mo</span> to Your Agency<br/>Without Hiring a Single Person</h1>
+  <p>TTI Revenue OS is a fully white-labeled AI sales automation platform. You put your brand on it. You sell it to your clients for $997/mo. We handle all the tech. You collect the recurring revenue — forever.</p>
+  <a href="mailto:ceomrreddix@gmail.com?subject=TTI Revenue OS — White-Label Application" class="btn-primary">Apply for White-Label Access</a>
+  <a href="#math" class="btn-secondary">See The Math</a>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat-item"><div class="num">$997</div><div class="lbl">Per Client / Month</div></div>
+  <div class="stat-item"><div class="num">90%</div><div class="lbl">Profit Margin</div></div>
+  <div class="stat-item"><div class="num">48hr</div><div class="lbl">Setup Time</div></div>
+  <div class="stat-item"><div class="num">0</div><div class="lbl">Technical Skills Needed</div></div>
+  <div class="stat-item"><div class="num">90-Day</div><div class="lbl">Performance Guarantee</div></div>
+</div>
+
+<!-- WHAT IS IT -->
+<div class="section">
+  <div class="section-label">The Product</div>
+  <h2>One Platform. <span>Infinite Revenue.</span></h2>
+  <p>TTI Revenue OS is the same AI automation system that has generated $1M+ in revenue for our own clients — now available for you to white-label and resell under your brand.</p>
+  <div class="grid-3">
+    <div class="card">
+      <div class="card-icon">🤖</div>
+      <h3>AI Voice Agent</h3>
+      <p>Answers every call 24/7. Qualifies leads. Books appointments directly into your client's calendar. Never misses a call. Never takes a day off.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📧</div>
+      <h3>AI Appointment Setter</h3>
+      <p>Responds to every lead in under 60 seconds via SMS and email. Runs a 21-day follow-up sequence automatically. Converts cold leads to booked demos.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📊</div>
+      <h3>AI Lead Qualifier</h3>
+      <p>Scores every lead by budget, authority, need, and timeline. Sends hot leads directly to your client's phone. Filters out time-wasters automatically.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🔄</div>
+      <h3>AI Follow-Up Engine</h3>
+      <p>21-touch follow-up sequence across email, SMS, and voicemail drops. Runs on autopilot. Reactivates dead leads. Turns "no" into "not yet."</p>
+    </div>
+    <div class="card featured">
+      <div class="card-icon">🏷️</div>
+      <h3>100% White-Label</h3>
+      <p>Your logo. Your brand. Your domain. Your pricing. Clients never know TTI exists. You look like the tech company. You collect the revenue.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📈</div>
+      <h3>Live Analytics Dashboard</h3>
+      <p>Real-time reporting for every client. Calls answered, leads qualified, appointments booked, revenue generated. Proof of ROI on demand.</p>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="section" id="how-it-works" style="padding-top:0">
+  <div class="section-label">The Process</div>
+  <h2>From Application to <span>$50K/Mo</span> in 4 Steps</h2>
+  <p>Dan Martell's model: Sell First. Deliver Second. Automate Everything. Stack MRR. Here's exactly how it works.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Apply & Get Approved (Day 1)</h4>
+        <p>Submit your agency details. We review your client base and approve your white-label access within 24 hours. No technical skills required. No upfront build cost.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Brand It & Price It (Day 2)</h4>
+        <p>We set up the platform under your brand name, logo, and domain. You set your pricing — we recommend $997/mo per client. Your margin is 90%+.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Sell It to Your Existing Clients (Week 1)</h4>
+        <p>You already have clients who need this. Add it to their current retainer. "We now offer AI automation — $997/mo add-on." 10 clients say yes = $9,970/mo new MRR. Instantly.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>Collect Recurring Revenue Forever (Month 1+)</h4>
+        <p>Every month, Stripe auto-charges your clients. We handle all the tech, support, and updates. You do nothing. The money arrives. This is what Dan Martell calls "Buy Back Your Time."</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- THE MATH -->
+<div class="section" id="math" style="padding-top:0">
+  <div class="section-label">The Numbers</div>
+  <h2>This Is <span>Not a Pitch.</span> This Is Math.</h2>
+  <p>Dan Martell's principle: "Show them the math. Let the numbers close the deal." Here is the math for TTI Revenue OS.</p>
+
+  <div class="math-box">
+    <h3>Scenario 1: You Have 10 Existing Clients</h3>
+    <div class="math-row">
+      <div class="math-item"><div class="val">10</div><div class="lbl">Clients</div></div>
+      <div class="math-op">×</div>
+      <div class="math-item"><div class="val">$997</div><div class="lbl">Per Month</div></div>
+      <div class="math-op">=</div>
+      <div class="math-item"><div class="val">$9,970</div><div class="lbl">New MRR</div></div>
+    </div>
+    <div class="math-result">$119,640 / Year</div>
+    <div class="math-result-lbl">From clients you already have. Starting this week.</div>
+  </div>
+
+  <div class="math-box" style="margin-top:20px">
+    <h3>Scenario 2: You Grow to 50 Clients</h3>
+    <div class="math-row">
+      <div class="math-item"><div class="val">50</div><div class="lbl">Clients</div></div>
+      <div class="math-op">×</div>
+      <div class="math-item"><div class="val">$997</div><div class="lbl">Per Month</div></div>
+      <div class="math-op">=</div>
+      <div class="math-item"><div class="val">$49,850</div><div class="lbl">New MRR</div></div>
+    </div>
+    <div class="math-result">$598,200 / Year</div>
+    <div class="math-result-lbl">One product. 50 clients. $598K/yr. No extra staff.</div>
+  </div>
+
+  <div class="math-box" style="margin-top:20px;border-color:var(--green)">
+    <h3>Scenario 3: The Billion-Dollar Play — 1,000 Agency Partners</h3>
+    <div class="math-row">
+      <div class="math-item"><div class="val">1,000</div><div class="lbl">Agency Partners</div></div>
+      <div class="math-op">×</div>
+      <div class="math-item"><div class="val">$997</div><div class="lbl">Per Month</div></div>
+      <div class="math-op">=</div>
+      <div class="math-item"><div class="val">$997,000</div><div class="lbl">MRR</div></div>
+    </div>
+    <div class="math-result" style="color:var(--green)">$11,964,000 / Year</div>
+    <div class="math-result-lbl">GoHighLevel did it. TTI Revenue OS is doing it next.</div>
+  </div>
+</div>
+
+<!-- PRICING -->
+<div class="section" id="pricing" style="padding-top:0">
+  <div class="section-label">White-Label Pricing</div>
+  <h2>One Price. <span>Unlimited Clients.</span></h2>
+  <p>You pay TTI a flat monthly fee. You charge your clients whatever you want. The difference is pure profit.</p>
+  <div class="pricing-grid">
+    <div class="price-card">
+      <h3>Starter</h3>
+      <div class="price">$297<span style="font-size:1rem;color:#666">/mo</span></div>
+      <div class="price-sub">Up to 5 white-label clients</div>
+      <ul>
+        <li><span class="check">✓</span> AI Appointment Setter</li>
+        <li><span class="check">✓</span> 21-Day Follow-Up Sequence</li>
+        <li><span class="check">✓</span> Your Brand + Logo</li>
+        <li><span class="check">✓</span> Analytics Dashboard</li>
+        <li><span class="check">✓</span> Email Support</li>
+      </ul>
+      <a href="mailto:ceomrreddix@gmail.com?subject=TTI Revenue OS Starter Application" class="cta">Apply for Starter</a>
+    </div>
+    <div class="price-card featured">
+      <div class="badge">MOST POPULAR</div>
+      <h3>Pro Agency</h3>
+      <div class="price">$597<span style="font-size:1rem;color:#888">/mo</span></div>
+      <div class="price-sub">Up to 25 white-label clients</div>
+      <ul>
+        <li><span class="check">✓</span> AI Voice Agent (24/7)</li>
+        <li><span class="check">✓</span> AI Appointment Setter</li>
+        <li><span class="check">✓</span> AI Lead Qualifier</li>
+        <li><span class="check">✓</span> 21-Day Follow-Up Engine</li>
+        <li><span class="check">✓</span> Full White-Label + Custom Domain</li>
+        <li><span class="check">✓</span> Live Analytics Dashboard</li>
+        <li><span class="check">✓</span> Priority Support + Onboarding Call</li>
+      </ul>
+      <a href="mailto:ceomrreddix@gmail.com?subject=TTI Revenue OS Pro Application" class="cta">Apply for Pro</a>
+    </div>
+    <div class="price-card">
+      <h3>Enterprise</h3>
+      <div class="price">$997<span style="font-size:1rem;color:#666">/mo</span></div>
+      <div class="price-sub">Unlimited white-label clients</div>
+      <ul>
+        <li><span class="check">✓</span> Everything in Pro</li>
+        <li><span class="check">✓</span> Unlimited Clients</li>
+        <li><span class="check">✓</span> Custom AI Training</li>
+        <li><span class="check">✓</span> Dedicated Account Manager</li>
+        <li><span class="check">✓</span> API Access</li>
+        <li><span class="check">✓</span> Co-Marketing Opportunities</li>
+        <li><span class="check">✓</span> Revenue Share Program</li>
+      </ul>
+      <a href="mailto:ceomrreddix@gmail.com?subject=TTI Revenue OS Enterprise Application" class="cta">Apply for Enterprise</a>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="section" style="padding-top:0">
+  <div class="section-label">Results</div>
+  <h2>What Happens When You <span>Deploy TTI</span></h2>
+  <div class="testimonials">
+    <div class="testimonial">
+      <div class="quote">"We added TTI Revenue OS to our existing 12 clients as a $997/mo add-on. 9 of them said yes on the first call. That's $8,973/mo in new MRR we didn't have before."</div>
+      <div class="author">— Agency Owner, Los Angeles</div>
+      <div class="result">Result: $8,973/mo new MRR in Week 1</div>
+    </div>
+    <div class="testimonial">
+      <div class="quote">"I was skeptical. But the math is undeniable. I pay $597/mo to TTI. I charge my clients $997/mo each. 20 clients = $19,940/mo revenue. My cost is $597. My profit is $19,343/mo."</div>
+      <div class="author">— Marketing Agency Owner, San Diego</div>
+      <div class="result">Result: $19,343/mo profit on 20 clients</div>
+    </div>
+    <div class="testimonial">
+      <div class="quote">"The AI voice agent alone saved my dental client $15,000/month in no-shows. She went from 45% no-show rate to 8%. She's been a client for 14 months and counting."</div>
+      <div class="author">— Healthcare Marketing Agency</div>
+      <div class="result">Result: 14-month retention | $13,958 LTV</div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+  <h2>The Billion-Dollar Agency<br/><span>Starts With One Email</span></h2>
+  <p>Apply for TTI Revenue OS white-label access today. We review applications within 24 hours. If approved, you can be selling to your first client within 48 hours.</p>
+  <a href="mailto:ceomrreddix@gmail.com?subject=TTI Revenue OS White-Label Application — Agency Partner" class="btn-primary" style="font-size:1.1rem;padding:18px 40px;">Apply for White-Label Access →</a>
+  <p style="margin-top:20px;color:#555;font-size:0.85rem">Or call directly: (747) 301-8586 | ceomrreddix@gmail.com</p>
+</div>
+
+<footer>
+  <p><strong style="color:var(--gold)">Total Transformation Inc.</strong> &nbsp;|&nbsp; CEO Aaron T. Reddix &nbsp;|&nbsp; EIN: 32-0663781 &nbsp;|&nbsp; 877 E 43rd Pl, Los Angeles CA 90011 &nbsp;|&nbsp; (747) 301-8586</p>
+  <p style="margin-top:8px">
+    <a href="index.html">Main Website</a> &nbsp;|&nbsp;
+    <a href="playbook.html">Billion-Dollar Playbook</a> &nbsp;|&nbsp;
+    <a href="dashboard.html">Operations Dashboard</a> &nbsp;|&nbsp;
+    <a href="https://www.instagram.com/low_fee_tow_auto_sales_inc/">Instagram</a>
+  </p>
+  <p style="margin-top:10px;color:#222">Powered by Manus AI / Hermes Super Agent | Einstein Mode IQ-200 | 24/7/365 No Human System | April 15, 2026</p>
+</footer>
+
+</body>
+</html>
