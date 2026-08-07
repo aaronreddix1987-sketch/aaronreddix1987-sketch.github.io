@@ -3,87 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TTI Gallery — Total Transformation Inc</title>
+    <title>TTI Gallery — All Manus Projects + Premium Covers</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, sans-serif; background: #0a0a0a; color: #fff; }
-        .header { text-align: center; padding: 40px 20px; background: linear-gradient(135deg, #0f172a, #16213e); }
-        .header h1 { font-size: 36px; background: linear-gradient(135deg, #FFD700, #FF8C00); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .header p { color: #94a3b8; margin-top: 10px; }
-        .flash-banner { background: linear-gradient(135deg, #FFD700, #FF8C00); padding: 15px; text-align: center; }
-        .flash-banner a { color: #000; font-weight: bold; text-decoration: none; }
-        .gallery { max-width: 1200px; margin: 0 auto; padding: 40px 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .gallery-item { background: #1a1a2e; border-radius: 12px; overflow: hidden; border: 1px solid #333; transition: transform 0.2s; }
-        .gallery-item:hover { transform: translateY(-5px); }
-        .gallery-item img { width: 100%; height: auto; display: block; }
-        .gallery-item .caption { padding: 15px; text-align: center; }
-        .gallery-item .caption p { color: #aaa; font-size: 13px; }
-        .buy-section { text-align: center; padding: 40px 20px; background: #1a1a2e; margin: 40px 0; }
-        .buy-section h2 { color: #FFD700; font-size: 28px; margin-bottom: 15px; }
-        .buy-btn { display: inline-block; background: #FFD700; color: #000; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 18px; }
-        .chime { color: #34d399; font-size: 20px; margin: 10px 0; }
-        footer { text-align: center; padding: 30px; color: #666; border-top: 1px solid #222; }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:-apple-system,sans-serif; background:#0a0a0a; color:#fff; }
+        .header { text-align:center; padding:60px 20px; background:radial-gradient(ellipse at center, rgba(245,158,11,0.12) 0%, transparent 60%); }
+        .header h1 { font-size:42px; background:linear-gradient(135deg,#FFD700,#FF8C00); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+        .header p { color:#94a3b8; margin-top:10px; }
+        .avatar-section { text-align:center; padding:40px 20px; background:#14141e; border-top:1px solid #2a2a3a; border-bottom:1px solid #2a2a3a; }
+        .avatar-section h2 { color:#FFD700; font-size:24px; margin-bottom:20px; }
+        .avatars { display:flex; justify-content:center; gap:40px; flex-wrap:wrap; }
+        .avatar-card { text-align:center; }
+        .avatar-card img { width:200px; height:200px; border-radius:50%; border:3px solid #FFD700; object-fit:cover; }
+        .avatar-card p { color:#94a3b8; margin-top:10px; font-size:14px; }
+        .section { max-width:1200px; margin:0 auto; padding:40px 20px; }
+        .section h2 { color:#FFD700; font-size:28px; margin-bottom:20px; text-align:center; }
+        .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; }
+        .grid-item { background:#14141e; border-radius:12px; overflow:hidden; border:1px solid #2a2a3a; transition:transform 0.3s,border-color 0.3s; cursor:pointer; }
+        .grid-item:hover { transform:translateY(-5px); border-color:#FFD700; }
+        .grid-item img { width:100%; height:250px; object-fit:cover; }
+        .grid-item .caption { padding:12px; text-align:center; }
+        .grid-item .caption p { color:#94a3b8; font-size:12px; }
+        .nav-bar { display:flex; justify-content:center; gap:15px; padding:15px; flex-wrap:wrap; }
+        .nav-bar a { padding:10px 20px; border-radius:8px; text-decoration:none; font-weight:700; font-size:14px; }
+        .nav-bar .primary { background:#FFD700; color:#000; }
+        .nav-bar .secondary { background:#1a1a2e; color:#fff; border:1px solid #333; }
+        .chime-bar { text-align:center; background:linear-gradient(135deg,#059669,#047857); padding:20px; }
+        .chime-bar p { color:#fff; font-size:18px; }
+        .chime-bar strong { font-size:24px; }
+        footer { text-align:center; padding:30px; color:#445; border-top:1px solid #222; }
     </style>
 </head>
 <body>
-    <div class="flash-banner">
-        <a href="products.html">🔥 $1 FLASH SALE: 14 Ebooks — Instant Delivery — Pay $ceomrreddix on Chime →</a>
+
+<div class="header">
+    <h1>TTI Complete Gallery</h1>
+    <p>All 7 Manus projects + Premium AI covers + AI Avatar — Total Transformation Inc</p>
+    <div class="nav-bar" style="margin-top:20px;">
+        <a href="products.html" class="primary">📚 Premium Library</a>
+        <a href="agents.html" class="secondary">🤖 AI Agents</a>
+        <a href="flashsale.html" class="secondary">⚡ Flash Sale</a>
     </div>
-    <div class="header">
-        <h1>TTI Gallery</h1>
-        <p>Total Transformation Inc — AI Systems, Digital Products & Recovery Solutions</p>
-    </div>
-    <div class="gallery">
-        <div class="gallery-item">
-            <img src="https://raw.githubusercontent.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/main/assets/totalmadness_p8_img1.png" alt="Totalmadness P8 Img1" loading="lazy">
-            <div class="caption"><p>Totalmadness P8 Img1</p></div>
+</div>
+
+<div class="avatar-section">
+    <h2>🤖 TTI AI Avatar</h2>
+    <div class="avatars">
+        <div class="avatar-card">
+            <img src="https://media.base44.com/images/public/6a6459a10aa92a10be4d5f6b/0a8028f08_generated_image.png" alt="TTI CEO Avatar">
+            <p>CEO Commander Avatar</p>
         </div>
-        <div class="gallery-item">
-            <img src="https://raw.githubusercontent.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/main/assets/totalmadness_p9_img1.png" alt="Totalmadness P9 Img1" loading="lazy">
-            <div class="caption"><p>Totalmadness P9 Img1</p></div>
-        </div>
-        <div class="gallery-item">
-            <img src="https://raw.githubusercontent.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/main/assets/ttiwatchai_p1_img4.png" alt="Ttiwatchai P1 Img4" loading="lazy">
-            <div class="caption"><p>Ttiwatchai P1 Img4</p></div>
-        </div>
-        <div class="gallery-item">
-            <img src="https://raw.githubusercontent.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/main/assets/ttiwatchai_p2_img1.png" alt="Ttiwatchai P2 Img1" loading="lazy">
-            <div class="caption"><p>Ttiwatchai P2 Img1</p></div>
-        </div>
-        <div class="gallery-item">
-            <img src="https://raw.githubusercontent.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/main/assets/totalmadness_page1.png" alt="Totalmadness Page1" loading="lazy">
-            <div class="caption"><p>Totalmadness Page1</p></div>
-        </div>
-        <div class="gallery-item">
-            <img src="https://raw.githubusercontent.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/main/assets/ttidash_page1.png" alt="Ttidash Page1" loading="lazy">
-            <div class="caption"><p>Ttidash Page1</p></div>
-        </div>
-        <div class="gallery-item">
-            <img src="https://raw.githubusercontent.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/main/assets/ttiwatchai_page1.png" alt="Ttiwatchai Page1" loading="lazy">
-            <div class="caption"><p>Ttiwatchai Page1</p></div>
-        </div>
-        <div class="gallery-item">
-            <img src="https://raw.githubusercontent.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/main/assets/ttiwatchai_page2.png" alt="Ttiwatchai Page2" loading="lazy">
-            <div class="caption"><p>Ttiwatchai Page2</p></div>
-        </div>
-        <div class="gallery-item">
-            <img src="https://raw.githubusercontent.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/main/assets/ttiwatchai_page3.png" alt="Ttiwatchai Page3" loading="lazy">
-            <div class="caption"><p>Ttiwatchai Page3</p></div>
-        </div>
-        <div class="gallery-item">
-            <img src="https://raw.githubusercontent.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/main/assets/ttiwatchai_page4.png" alt="Ttiwatchai Page4" loading="lazy">
-            <div class="caption"><p>Ttiwatchai Page4</p></div>
+        <div class="avatar-card">
+            <img src="https://media.base44.com/images/public/6a6459a10aa92a10be4d5f6b/cea79b918_generated_image.png" alt="TTI Lion Emblem">
+            <p>TTI Lion Emblem</p>
         </div>
     </div>
-    <div class="buy-section">
-        <h2>Ready to Transform?</h2>
-        <p style="color: #aaa; margin-bottom: 20px;">14 digital ebooks for $1 each. Instant delivery. 100% guarantee.</p>
-        <div class="chime">💳 $ceomrreddix on Chime</div>
-        <a href="products.html" class="buy-btn">View Products →</a>
-        <p style="color: #666; margin-top: 15px;">Call (747) 301-8586 • aaronreddix1987@gmail.com</p>
+</div>
+
+<div class="section">
+    <h2>📚 Premium Ebook Covers</h2>
+    <div class="grid">
+        <div class="grid-item">
+            <img src="https://media.base44.com/images/public/6a6459a10aa92a10be4d5f6b/7e8fb9b3b_generated_image.png" alt="Treatment Recovery Series — $47" loading="lazy">
+            <div class="caption"><p>Treatment Recovery Series — $47</p></div>
+        </div>
+        <div class="grid-item">
+            <img src="https://media.base44.com/images/public/6a6459a10aa92a10be4d5f6b/563ac8122_generated_image.png" alt="Wealth Fortress — $29" loading="lazy">
+            <div class="caption"><p>Wealth Fortress — $29</p></div>
+        </div>
+        <div class="grid-item">
+            <img src="https://media.base44.com/images/public/6a6459a10aa92a10be4d5f6b/8346fc6e1_generated_image.png" alt="Credit Repair Master Plan — $47" loading="lazy">
+            <div class="caption"><p>Credit Repair Master Plan — $47</p></div>
+        </div>
+        <div class="grid-item">
+            <img src="https://media.base44.com/images/public/6a6459a10aa92a10be4d5f6b/c7d66328f_generated_image.png" alt="10X Recovery Mindset — $29" loading="lazy">
+            <div class="caption"><p>10X Recovery Mindset — $29</p></div>
+        </div>
+        <div class="grid-item">
+            <img src="https://media.base44.com/images/public/6a6459a10aa92a10be4d5f6b/5fd49d890_generated_image.png" alt="Cold Call Code — $29" loading="lazy">
+            <div class="caption"><p>Cold Call Code — $29</p></div>
+        </div>
+        <div class="grid-item">
+            <img src="https://media.base44.com/images/public/6a6459a10aa92a10be4d5f6b/83540b564_generated_image.png" alt="Billion Dollar Playbook — $97" loading="lazy">
+            <div class="caption"><p>Billion Dollar Playbook — $97</p></div>
+        </div>
     </div>
-    <footer>
-        <p>© 2026 Total Transformation Inc | Aaron T. Reddix, CEO | EIN: 32-0663781</p>
-    </footer>
+</div>
+
+<div class="section">
+    <h2>🌐 Manus Project Pages</h2>
+    <div class="grid">
+        <div class="grid-item">
+            <img src="https://raw.githubusercontent.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/main/assets/totalmadness_p8_img1.png" alt="Total Madness Cover" loading="lazy">
+            <div class="caption"><p>Total Madness Cover</p></div>
+        </div>
+        <div class="grid-item">
+            <img src="https://raw.githubusercontent.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/main/assets/totalmadness_p9_img1.png" alt="Total Madness Deck" loading="lazy">
+            <div class="caption"><p>Total Madness Deck</p></div>
+        </div>
+        <div class="grid-item">
+            <img src="https://raw.githubusercontent.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/main/assets/ttiwatchai_p1_img4.png" alt="Watch AI Cook" loading="lazy">
+            <div class="caption"><p>Watch AI Cook</p></div>
+        </div>
+        <div class="grid-item">
+            <img src="https://raw.githubusercontent.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/main/assets/ttiwatchai_p2_img1.png" alt="Watch AI Cook 2" loading="lazy">
+            <div class="caption"><p>Watch AI Cook 2</p></div>
+        </div>
+        <div class="grid-item">
+            <img src="https://raw.githubusercontent.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/main/assets/totalmadness_page1.png" alt="Total Madness Page 1" loading="lazy">
+            <div class="caption"><p>Total Madness Page 1</p></div>
+        </div>
+        <div class="grid-item">
+            <img src="https://raw.githubusercontent.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/main/assets/ttidash_page1.png" alt="TTI Dashboard" loading="lazy">
+            <div class="caption"><p>TTI Dashboard</p></div>
+        </div>
+        <div class="grid-item">
+            <img src="https://raw.githubusercontent.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/main/assets/reddixceo_p1_img1.png" alt="Reddixceo P1 Img1" loading="lazy">
+            <div class="caption"><p>Reddixceo P1 Img1</p></div>
+        </div>
+        <div class="grid-item">
+            <img src="https://raw.githubusercontent.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/main/assets/reddixceo_page1.png" alt="Reddixceo Page1" loading="lazy">
+            <div class="caption"><p>Reddixceo Page1</p></div>
+        </div>
+        <div class="grid-item">
+            <img src="https://raw.githubusercontent.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/main/assets/tottransplat_page1.png" alt="Tottransplat Page1" loading="lazy">
+            <div class="caption"><p>Tottransplat Page1</p></div>
+        </div>
+        <div class="grid-item">
+            <img src="https://raw.githubusercontent.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/main/assets/tottransplat_page10.png" alt="Tottransplat Page10" loading="lazy">
+            <div class="caption"><p>Tottransplat Page10</p></div>
+        </div>
+        <div class="grid-item">
+            <img src="https://raw.githubusercontent.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/main/assets/tottransplat_page11.png" alt="Tottransplat Page11" loading="lazy">
+            <div class="caption"><p>Tottransplat Page11</p></div>
+        </div>
+        <div class="grid-item">
+            <img src="https://raw.githubusercontent.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/main/assets/tottransplat_page13.png" alt="Tottransplat Page13" loading="lazy">
+            <div class="caption"><p>Tottransplat Page13</p></div>
+        </div>
+        <div class="grid-item">
+            <img src="https://raw.githubusercontent.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/main/assets/tottransplat_page14.png" alt="Tottransplat Page14" loading="lazy">
+            <div class="caption"><p>Tottransplat Page14</p></div>
+        </div>
+        <div class="grid-item">
+            <img src="https://raw.githubusercontent.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/main/assets/tottransplat_page16.png" alt="Tottransplat Page16" loading="lazy">
+            <div class="caption"><p>Tottransplat Page16</p></div>
+        </div>
+        <div class="grid-item">
+            <img src="https://raw.githubusercontent.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/main/assets/tottransplat_page17.png" alt="Tottransplat Page17" loading="lazy">
+            <div class="caption"><p>Tottransplat Page17</p></div>
+        </div>
+        <div class="grid-item">
+            <img src="https://raw.githubusercontent.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/main/assets/tottransplat_page18.png" alt="Tottransplat Page18" loading="lazy">
+            <div class="caption"><p>Tottransplat Page18</p></div>
+        </div>
+        <div class="grid-item">
+            <img src="https://raw.githubusercontent.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/main/assets/tottransplat_page19.png" alt="Tottransplat Page19" loading="lazy">
+            <div class="caption"><p>Tottransplat Page19</p></div>
+        </div>
+        <div class="grid-item">
+            <img src="https://raw.githubusercontent.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/main/assets/tottransplat_page3.png" alt="Tottransplat Page3" loading="lazy">
+            <div class="caption"><p>Tottransplat Page3</p></div>
+        </div>
+        <div class="grid-item">
+            <img src="https://raw.githubusercontent.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/main/assets/tottransplat_page4.png" alt="Tottransplat Page4" loading="lazy">
+            <div class="caption"><p>Tottransplat Page4</p></div>
+        </div>
+        <div class="grid-item">
+            <img src="https://raw.githubusercontent.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/main/assets/tottransplat_page5.png" alt="Tottransplat Page5" loading="lazy">
+            <div class="caption"><p>Tottransplat Page5</p></div>
+        </div>
+        <div class="grid-item">
+            <img src="https://raw.githubusercontent.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/main/assets/tottransplat_page9.png" alt="Tottransplat Page9" loading="lazy">
+            <div class="caption"><p>Tottransplat Page9</p></div>
+        </div>
+    </div>
+</div>
+
+<div class="chime-bar">
+    <p>💳 <strong>$ceomrreddix on Chime</strong> — Instant Google Drive Delivery</p>
+</div>
+
+<footer>
+    <p>© 2026 Total Transformation Inc | Aaron T. Reddix, CEO | EIN: 32-0663781</p>
+    <p>7 Manus Projects + 14 Premium Ebooks + AI Avatar</p>
+</footer>
+
 </body>
 </html>
