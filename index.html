@@ -1,41 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Total Transformation Inc — Premium Digital Products</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,sans-serif;background:#0a0a0a;color:#fff;text-align:center}
-.hero{padding:100px 20px;background:radial-gradient(ellipse at center,rgba(245,158,11,0.1) 0%,transparent 60%)}
-h1{font-size:48px;background:linear-gradient(135deg,#FFD700,#FF8C00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:20px}
-p{color:#94a3b8;font-size:18px;max-width:600px;margin:0 auto 30px}
-.nav{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin-top:40px}
-.nav a{padding:15px 25px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px;transition:all 0.3s}
-.nav .primary{background:#FFD700;color:#000}
-.nav .primary:hover{background:#FFC700;transform:translateY(-3px)}
-.nav .secondary{background:#1a1a2e;color:#fff;border:1px solid #333}
-.nav .secondary:hover{border-color:#FFD700}
-.nav .donate{background:#059669;color:#fff}
-.nav .donate:hover{background:#047857;transform:translateY(-3px)}
-.chime{margin-top:30px;color:#34d399;font-size:20px}
-footer{padding:30px;color:#445;border-top:1px solid #222;margin-top:60px}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Total Transformation Inc. — original workbooks for focused operations and deliberate progress.">
+  <title>Total Transformation Inc. — Original Workbooks</title>
+  <style>
+    :root { --ink:#09111f; --panel:#111b2f; --panel-2:#17243d; --text:#f6f8fc; --muted:#b4c0d3; --accent:#f7c948; --success:#69d6a4; --line:#2a3a56; }
+    * { box-sizing:border-box; margin:0; }
+    body { min-height:100vh; background:radial-gradient(circle at top,#1c3158 0, var(--ink) 44rem); color:var(--text); font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; line-height:1.55; }
+    a { color:inherit; }
+    .wrap { width:min(1120px,calc(100% - 2rem)); margin:auto; }
+    header { border-bottom:1px solid rgba(180,192,211,.18); }
+    .nav { min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+    .brand { text-decoration:none; font-weight:800; letter-spacing:.02em; }
+    .brand span { color:var(--accent); }
+    .navlinks { display:flex; flex-wrap:wrap; gap:.5rem; }
+    .navlinks a { padding:.55rem .8rem; border-radius:.5rem; color:var(--muted); font-size:.92rem; text-decoration:none; }
+    .navlinks a:hover,.navlinks a:focus-visible { background:rgba(255,255,255,.08); color:var(--text); }
+    .hero { padding:7rem 0 5rem; text-align:center; max-width:850px; margin:auto; }
+    .eyebrow { display:inline-flex; align-items:center; gap:.5rem; border:1px solid rgba(105,214,164,.45); background:rgba(22,75,65,.35); color:#b2f0cf; padding:.35rem .75rem; border-radius:999px; font-size:.84rem; font-weight:700; }
+    h1 { max-width:800px; margin:1.1rem auto 1.2rem; font-size:clamp(2.7rem,7vw,5.3rem); line-height:1.02; letter-spacing:-.055em; }
+    .lead { color:var(--muted); font-size:clamp(1.05rem,2vw,1.25rem); max-width:700px; margin:auto; }
+    .actions { display:flex; justify-content:center; flex-wrap:wrap; gap:.75rem; margin-top:2rem; }
+    .button { display:inline-block; border-radius:.65rem; padding:.82rem 1.1rem; text-decoration:none; font-weight:750; border:1px solid transparent; }
+    .button.primary { background:var(--accent); color:#1a1606; }
+    .button.secondary { border-color:var(--line); background:rgba(17,27,47,.76); color:var(--text); }
+    .button:hover,.button:focus-visible { transform:translateY(-1px); filter:brightness(1.06); }
+    .principles { padding:0 0 5rem; }
+    .principles-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+    .card { border:1px solid var(--line); background:linear-gradient(145deg,rgba(23,36,61,.9),rgba(12,20,35,.9)); border-radius:1rem; padding:1.4rem; }
+    .card h2 { font-size:1.1rem; margin-bottom:.5rem; }
+    .card p { color:var(--muted); font-size:.95rem; }
+    .support { padding:1.15rem 1.25rem; margin-bottom:4rem; border-left:3px solid var(--success); background:rgba(17,27,47,.8); color:var(--muted); border-radius:.45rem; }
+    footer { border-top:1px solid rgba(180,192,211,.18); padding:2rem 0 3rem; color:#91a0b8; font-size:.9rem; }
+    footer p + p { margin-top:.35rem; }
+    @media (max-width:680px) { .nav { padding:1rem 0; align-items:flex-start; flex-direction:column; } .hero { padding:5rem 0 4rem; } .principles-grid { grid-template-columns:1fr; } }
+  </style>
 </head>
 <body>
-<div class="hero">
-<h1>Total Transformation Inc</h1>
-<p>Premium digital products, AI systems, and recovery solutions. Built by Aaron Reddix, CEO. Instant delivery. 100% automated.</p>
-<div class="nav">
-<a href="products.html" class="primary">📚 Premium Library</a>
-<a href="donate.html" class="donate">💚 Donate</a>
-<a href="gallery.html" class="secondary">🖼 Gallery</a>
-<a href="agents.html" class="secondary">🤖 AI Agents</a>
-</div>
-<div class="chime">💳 $ceomrreddix on Chime — Instant Google Drive Delivery</div>
-</div>
-<footer>
-<p>© 2026 Total Transformation Inc | Aaron T. Reddix, CEO | (747) 301-8586 </p>
-</footer>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="index.html">TOTAL <span>TRANSFORMATION</span> INC.</a>
+      <nav class="navlinks" aria-label="Primary navigation">
+        <a href="products.html">Workbook library</a>
+        <a href="donate.html">Campaign updates</a>
+        <a href="mailto:aaronreddix1987@gmail.com">Support</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">Release-gated original workbooks</p>
+      <h1 id="page-title">Original workbooks for focused operations and deliberate progress.</h1>
+      <p class="lead">Practical, self-guided tools for organizing projects, communications, documentation, and review routines. A title is released only after its content, delivery file, and buyer information have been reviewed.</p>
+      <div class="actions">
+        <a class="button primary" href="products.html">Explore the workbook library</a>
+        <a class="button secondary" href="mailto:aaronreddix1987@gmail.com?subject=TTI%20release%20list">Join the release list</a>
+      </div>
+    </section>
+    <section class="principles" aria-label="Operating principles">
+      <div class="principles-grid">
+        <article class="card"><h2>Clear tools</h2><p>Each release describes the workbook, included files, intended audience, and version.</p></article>
+        <article class="card"><h2>Clear boundaries</h2><p>Content is self-guided and does not provide medical, mental-health, legal, tax, investment, credit-repair, or employment advice.</p></article>
+        <article class="card"><h2>Clear release process</h2><p>Pricing, checkout, refund terms, and delivery appear only after the specific product path is tested and documented.</p></article>
+      </div>
+    </section>
+    <aside class="support"><strong>Support:</strong> For release-list and general support questions, email <a href="mailto:aaronreddix1987@gmail.com">aaronreddix1987@gmail.com</a> or call <a href="tel:+17473018586">(747) 301-8586</a>. Do not send card numbers, bank credentials, government IDs, or sensitive health information by email.</aside>
+  </main>
+  <footer><div class="wrap"><p>© 2026 Total Transformation Inc. | Aaron T. Reddix, CEO</p><p>Public information is updated as individual releases and campaign records clear review.</p></div></footer>
 </body>
 </html>

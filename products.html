@@ -1,306 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Total Transformation Inc — Premium Digital Library</title>
-    <style>
-        * { margin:0; padding:0; box-sizing:border-box; }
-        body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; background:#0a0a0a; color:#fff; }
-        
-        /* Hero */
-        .hero { text-align:center; padding:80px 20px; background:radial-gradient(ellipse at center, rgba(245,158,11,0.12) 0%, transparent 60%); }
-        .hero h1 { font-size:52px; font-weight:800; background:linear-gradient(135deg,#FFD700,#FF8C00,#FFD700); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:15px; }
-        .hero p { color:#94a3b8; font-size:18px; max-width:700px; margin:0 auto; }
-        .hero .stats { display:flex; justify-content:center; gap:40px; margin-top:40px; flex-wrap:wrap; }
-        .stat { text-align:center; }
-        .stat .num { font-size:36px; font-weight:800; color:#FFD700; }
-        .stat .label { color:#64748b; font-size:13px; text-transform:uppercase; }
-        
-        /* Trust bar */
-        .trust { background:#1a1a2e; padding:20px; text-align:center; border-top:1px solid #333; border-bottom:1px solid #333; }
-        .trust p { color:#94a3b8; font-size:14px; }
-        .trust strong { color:#FFD700; }
-        
-        /* Products */
-        .products-section { max-width:1200px; margin:60px auto; padding:0 20px; }
-        .section-header { text-align:center; margin-bottom:50px; }
-        .section-header h2 { font-size:36px; color:#fff; margin-bottom:10px; }
-        .section-header p { color:#64748b; font-size:16px; }
-        
-        .product-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:30px; }
-        
-        .product-card { background:#14141e; border:1px solid #2a2a3a; border-radius:16px; overflow:hidden; position:relative; transition:transform 0.3s,border-color 0.3s; }
-        .product-card:hover { transform:translateY(-8px); border-color:#FFD700; }
-        
-        .badge { position:absolute; top:15px; right:15px; padding:4px 12px; border-radius:12px; font-size:11px; font-weight:700; color:#fff; z-index:1; text-transform:uppercase; }
-        
-        .product-cover { width:100%; height:280px; overflow:hidden; background:#0a0a14; }
-        .product-cover img { width:100%; height:100%; object-fit:cover; }
-        
-        .product-card h3 { padding:20px 20px 5px; font-size:22px; }
-        .product-card .subtitle { padding:0 20px; color:#60a5fa; font-size:13px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; }
-        .product-card .desc { padding:15px 20px; color:#94a3b8; font-size:14px; line-height:1.6; }
-        
-        .price-row { padding:0 20px; display:flex; justify-content:space-between; align-items:center; margin-bottom:5px; }
-        .price { font-size:32px; font-weight:800; color:#FFD700; }
-        .buy-btn { background:#059669; color:#fff; padding:12px 30px; border-radius:8px; text-decoration:none; font-weight:700; font-size:15px; transition:background 0.3s; }
-        .buy-btn:hover { background:#047857; }
-        
-        .chime-note { padding:0 20px 20px; text-align:center; color:#34d399; font-size:12px; font-weight:600; }
-        
-        /* Extra products */
-        .extras { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:15px; margin-top:40px; }
-        .product-card-mini { background:#14141e; border:1px solid #2a2a3a; border-radius:10px; padding:15px 20px; display:flex; justify-content:space-between; align-items:center; transition:border-color 0.3s; }
-        .product-card-mini:hover { border-color:#FFD700; }
-        .mini-info h4 { font-size:15px; margin-bottom:3px; }
-        .mini-info p { color:#64748b; font-size:12px; }
-        .mini-price { display:flex; align-items:center; gap:12px; }
-        .mini-price span { color:#FFD700; font-size:22px; font-weight:800; }
-        .mini-price a { background:#059669; color:#fff; padding:8px 16px; border-radius:6px; text-decoration:none; font-size:13px; font-weight:600; }
-        
-        /* Chime CTA */
-        .chime-cta { text-align:center; background:linear-gradient(135deg,#059669,#047857); padding:60px 20px; margin:60px 0; }
-        .chime-cta h2 { color:#fff; font-size:32px; margin-bottom:15px; }
-        .chime-cta p { color:#d1fae5; font-size:16px; margin-bottom:25px; }
-        .chime-cta .handle { background:#fff; color:#047857; padding:15px 50px; border-radius:50px; font-size:28px; font-weight:800; display:inline-block; }
-        .chime-cta .instant { margin-top:20px; color:#a7f3d0; font-size:14px; }
-        
-        /* Process */
-        .process { max-width:900px; margin:60px auto; padding:0 20px; }
-        .process h2 { text-align:center; font-size:32px; margin-bottom:40px; }
-        .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:30px; }
-        .step { text-align:center; }
-        .step .icon { font-size:40px; margin-bottom:15px; }
-        .step h4 { font-size:18px; margin-bottom:8px; }
-        .step p { color:#94a3b8; font-size:14px; }
-        
-        /* Footer */
-        footer { text-align:center; padding:40px 20px; color:#445; border-top:1px solid #222; }
-        footer p { margin-bottom:5px; }
-        
-        @media (max-width:768px) { .hero h1 { font-size:32px; } .steps { grid-template-columns:1fr; } }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Total Transformation Inc. workbook library. Titles are released individually after review.">
+  <title>Workbook Library — Total Transformation Inc.</title>
+  <style>
+    :root { --ink:#09111f; --panel:#111b2f; --text:#f6f8fc; --muted:#b4c0d3; --accent:#f7c948; --line:#2a3a56; --tag:#183b45; }
+    * { box-sizing:border-box; margin:0; }
+    body { min-height:100vh; background:linear-gradient(160deg,#0c1830 0,var(--ink) 45rem); color:var(--text); font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; line-height:1.55; }
+    a { color:inherit; }
+    .wrap { width:min(1120px,calc(100% - 2rem)); margin:auto; }
+    header { border-bottom:1px solid rgba(180,192,211,.18); }
+    .nav { min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+    .brand { text-decoration:none; font-weight:800; letter-spacing:.02em; }.brand span{color:var(--accent)}
+    .back { color:var(--muted); font-size:.93rem; text-decoration:none; }.back:hover{color:var(--text)}
+    .hero { padding:5.5rem 0 3rem; max-width:780px; }
+    .hero p:first-child { color:var(--accent); text-transform:uppercase; letter-spacing:.12em; font-weight:800; font-size:.76rem; }
+    h1 { font-size:clamp(2.6rem,6vw,4.7rem); line-height:1.03; letter-spacing:-.05em; margin:.75rem 0 1rem; }
+    .lead { color:var(--muted); font-size:1.15rem; }
+    .notice { margin:0 0 2.4rem; padding:1rem 1.15rem; background:rgba(23,36,61,.85); border:1px solid var(--line); border-radius:.7rem; color:var(--muted); }
+    .notice strong { color:var(--text); }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(265px,1fr)); gap:1rem; padding-bottom:4rem; }
+    article { min-height:260px; display:flex; flex-direction:column; padding:1.4rem; border-radius:1rem; border:1px solid var(--line); background:linear-gradient(145deg,rgba(23,36,61,.94),rgba(12,20,35,.92)); }
+    .tag { display:inline-flex; align-self:flex-start; padding:.3rem .62rem; border-radius:999px; background:var(--tag); color:#a7e6cf; font-size:.76rem; font-weight:800; letter-spacing:.03em; }
+    h2 { font-size:1.3rem; line-height:1.2; margin:1.2rem 0 .65rem; }
+    article p { color:var(--muted); font-size:.95rem; }
+    .status { margin-top:auto; padding-top:1.35rem; color:var(--accent); font-size:.88rem; font-weight:800; }
+    .support { padding:1.2rem; border-top:1px solid var(--line); color:var(--muted); text-align:center; }
+    footer { padding:2.4rem 0; border-top:1px solid rgba(180,192,211,.18); color:#91a0b8; font-size:.9rem; }
+    @media(max-width:650px){.nav{padding:1rem 0;align-items:flex-start;flex-direction:column}.hero{padding-top:4rem}}
+  </style>
 </head>
 <body>
-
-<div class="hero">
-    <h1>Premium Digital Library</h1>
-    <p>14 professional ebooks and systems built by Aaron Reddix, CEO of Total Transformation Inc. Recovery, credit, wealth, sales, and business automation — battle-tested and ready to deploy.</p>
-    <div class="stats">
-        <div class="stat"><div class="num">14</div><div class="label">Premium Titles</div></div>
-        <div class="stat"><div class="num">529</div><div class="label">Drive Assets</div></div>
-        <div class="stat"><div class="num">8</div><div class="label">Automated Systems</div></div>
-        <div class="stat"><div class="num">14</div><div class="label">Products Listed</div></div>
-    </div>
-</div>
-
-<div class="trust">
-    <p>📚 <strong>Digital Product Catalog</strong> • 💳 <strong>$ceomrreddix on Chime</strong> • 📞 <strong>(747) 301-8586</strong> • Include the product title and delivery email in your payment note</p>
-</div>
-
-<div class="products-section">
-    <div class="section-header">
-        <h2>Featured Premium Collection</h2>
-        <p>Professional-grade digital products with clear payment and delivery instructions</p>
-    </div>
-    <div class="product-grid">
-        
-        <div class="product-card">
-            <span class="badge" style="background:#dc2626">BESTSELLER</span>
-            <div class="product-cover"><img src="https://media.base44.com/images/public/6a6459a10aa92a10be4d5f6b/7e8fb9b3b_generated_image.png" alt="Treatment Recovery Series" loading="lazy"></div>
-            <h3>Treatment Recovery Series</h3>
-            <p class="subtitle">10-Book Complete Set</p>
-            <p class="desc">Comprehensive recovery education for treatment centers, counselors, and individuals. 10 volumes covering orientation, aftercare, relapse prevention, and holistic wellness.</p>
-            <div class="price-row">
-                <span class="price">$47</span>
-                <a href="https://app.chime.com/link/qr?u=ceomrreddix" target="_blank" rel="noopener noreferrer" class="buy-btn">Pay with Chime</a>
-            </div>
-            <div class="chime-note">💳 Pay on Chime and include the title plus your delivery email in the payment note</div>
-        </div>
-        <div class="product-card">
-            <span class="badge" style="background:#2563eb">MOST PRACTICAL</span>
-            <div class="product-cover"><img src="https://media.base44.com/images/public/6a6459a10aa92a10be4d5f6b/8346fc6e1_generated_image.png" alt="Credit Repair Master Plan" loading="lazy"></div>
-            <h3>Credit Repair Master Plan</h3>
-            <p class="subtitle">FCRA 609 System + DIY Dispute Templates</p>
-            <p class="desc">Complete credit repair system with ready-to-mail dispute letters for all 3 bureaus. Step-by-step process, legal templates, and tracking system.</p>
-            <div class="price-row">
-                <span class="price">$47</span>
-                <a href="https://app.chime.com/link/qr?u=ceomrreddix" target="_blank" rel="noopener noreferrer" class="buy-btn">Pay with Chime</a>
-            </div>
-            <div class="chime-note">💳 Pay on Chime and include the title plus your delivery email in the payment note</div>
-        </div>
-        <div class="product-card">
-            
-            <div class="product-cover"><img src="https://media.base44.com/images/public/6a6459a10aa92a10be4d5f6b/c7d66328f_generated_image.png" alt="10X Recovery Mindset" loading="lazy"></div>
-            <h3>10X Recovery Mindset</h3>
-            <p class="subtitle">Street Edition — TTI Expanded</p>
-            <p class="desc">Grant Cardone-style mindset reprogramming for recovery. Built for the streets, tested in the real world. Transform your relationship with success.</p>
-            <div class="price-row">
-                <span class="price">$29</span>
-                <a href="https://app.chime.com/link/qr?u=ceomrreddix" target="_blank" rel="noopener noreferrer" class="buy-btn">Pay with Chime</a>
-            </div>
-            <div class="chime-note">💳 Pay on Chime and include the title plus your delivery email in the payment note</div>
-        </div>
-        <div class="product-card">
-            
-            <div class="product-cover"><img src="https://media.base44.com/images/public/6a6459a10aa92a10be4d5f6b/563ac8122_generated_image.png" alt="Wealth Fortress" loading="lazy"></div>
-            <h3>Wealth Fortress</h3>
-            <p class="subtitle">Build Your Financial Defense System</p>
-            <p class="desc">Protect and grow what you build. A complete framework for financial defense, asset protection, and generational wealth building from zero.</p>
-            <div class="price-row">
-                <span class="price">$29</span>
-                <a href="https://app.chime.com/link/qr?u=ceomrreddix" target="_blank" rel="noopener noreferrer" class="buy-btn">Pay with Chime</a>
-            </div>
-            <div class="chime-note">💳 Pay on Chime and include the title plus your delivery email in the payment note</div>
-        </div>
-        <div class="product-card">
-            
-            <div class="product-cover"><img src="https://media.base44.com/images/public/6a6459a10aa92a10be4d5f6b/5fd49d890_generated_image.png" alt="Cold Call Code" loading="lazy"></div>
-            <h3>Cold Call Code</h3>
-            <p class="subtitle">Sales Scripts That Close</p>
-            <p class="desc">Grant Cardone-inspired cold calling scripts, objection handlers, and follow-up sequences. Close more deals on every call.</p>
-            <div class="price-row">
-                <span class="price">$29</span>
-                <a href="https://app.chime.com/link/qr?u=ceomrreddix" target="_blank" rel="noopener noreferrer" class="buy-btn">Pay with Chime</a>
-            </div>
-            <div class="chime-note">💳 Pay on Chime and include the title plus your delivery email in the payment note</div>
-        </div>
-        <div class="product-card">
-            <span class="badge" style="background:#f59e0b">PREMIUM</span>
-            <div class="product-cover"><img src="https://media.base44.com/images/public/6a6459a10aa92a10be4d5f6b/83540b564_generated_image.png" alt="The Billion Dollar Playbook" loading="lazy"></div>
-            <h3>The Billion Dollar Playbook</h3>
-            <p class="subtitle">CEO Edition — Total Transformation Inc</p>
-            <p class="desc">Aaron Reddix's complete CEO playbook. 10-agent command board architecture, AI automation frameworks, and the operating system behind TTI.</p>
-            <div class="price-row">
-                <span class="price">$97</span>
-                <a href="https://app.chime.com/link/qr?u=ceomrreddix" target="_blank" rel="noopener noreferrer" class="buy-btn">Pay with Chime</a>
-            </div>
-            <div class="chime-note">💳 Pay on Chime and include the title plus your delivery email in the payment note</div>
-        </div>
-    </div>
-    
-    <div class="section-header" style="margin-top:60px;">
-        <h2>Complete Library</h2>
-        <p>8 additional titles with the same Chime payment instructions</p>
-    </div>
-    <div class="extras">
-        
-        <div class="product-card-mini">
-            <div class="mini-info">
-                <h4>Tax Deed Investing Guide</h4>
-                <p>Real Estate Through Tax Deeds</p>
-            </div>
-            <div class="mini-price">
-                <span>$29</span>
-                <a href="https://app.chime.com/link/qr?u=ceomrreddix" target="_blank" rel="noopener noreferrer">Pay</a>
-            </div>
-        </div>
-        <div class="product-card-mini">
-            <div class="mini-info">
-                <h4>Comeback Blueprint</h4>
-                <p>Spark Edition — 2026 Is Your Year</p>
-            </div>
-            <div class="mini-price">
-                <span>$19</span>
-                <a href="https://app.chime.com/link/qr?u=ceomrreddix" target="_blank" rel="noopener noreferrer">Pay</a>
-            </div>
-        </div>
-        <div class="product-card-mini">
-            <div class="mini-info">
-                <h4>CEO Recovery Study Book</h4>
-                <p>Leadership Lessons from Recovery</p>
-            </div>
-            <div class="mini-price">
-                <span>$19</span>
-                <a href="https://app.chime.com/link/qr?u=ceomrreddix" target="_blank" rel="noopener noreferrer">Pay</a>
-            </div>
-        </div>
-        <div class="product-card-mini">
-            <div class="mini-info">
-                <h4>Business Affirmation Workbook</h4>
-                <p>Daily Practices for CEOs</p>
-            </div>
-            <div class="mini-price">
-                <span>$19</span>
-                <a href="https://app.chime.com/link/qr?u=ceomrreddix" target="_blank" rel="noopener noreferrer">Pay</a>
-            </div>
-        </div>
-        <div class="product-card-mini">
-            <div class="mini-info">
-                <h4>GED Complete Study Guide</h4>
-                <p>Full Printable Study System</p>
-            </div>
-            <div class="mini-price">
-                <span>$19</span>
-                <a href="https://app.chime.com/link/qr?u=ceomrreddix" target="_blank" rel="noopener noreferrer">Pay</a>
-            </div>
-        </div>
-        <div class="product-card-mini">
-            <div class="mini-info">
-                <h4>90 Day Undercover Billionaire Blueprint</h4>
-                <p>From Zero to Empire in 90 Days</p>
-            </div>
-            <div class="mini-price">
-                <span>$29</span>
-                <a href="https://app.chime.com/link/qr?u=ceomrreddix" target="_blank" rel="noopener noreferrer">Pay</a>
-            </div>
-        </div>
-        <div class="product-card-mini">
-            <div class="mini-info">
-                <h4>Dan Martell AI Operating System Playbook</h4>
-                <p>Build Workflows, Test, Scale</p>
-            </div>
-            <div class="mini-price">
-                <span>$47</span>
-                <a href="https://app.chime.com/link/qr?u=ceomrreddix" target="_blank" rel="noopener noreferrer">Pay</a>
-            </div>
-        </div>
-        <div class="product-card-mini">
-            <div class="mini-info">
-                <h4>Total Transformation General Packet</h4>
-                <p>Complete Business Overview</p>
-            </div>
-            <div class="mini-price">
-                <span>$19</span>
-                <a href="https://app.chime.com/link/qr?u=ceomrreddix" target="_blank" rel="noopener noreferrer">Pay</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="chime-cta">
-    <h2>💳 Pay with Chime — Delivery Instructions</h2>
-    <p>Send payment to $ceomrreddix and include the exact product title plus your delivery email in the payment note.</p>
-    <div class="handle">$ceomrreddix</div>
-    <p class="instant">The Chime payment path is live. Delivery is issued after the payment record and requested title are matched.</p>
-</div>
-
-<div class="process">
-    <h2>How It Works</h2>
-    <div class="steps">
-        <div class="step">
-            <div class="icon">💳</div>
-            <h4>1. Pay on Chime</h4>
-            <p>Send payment to $ceomrreddix with the product title and your delivery email in the note</p>
-        </div>
-        <div class="step">
-            <div class="icon">⚡</div>
-            <h4>2. Payment Is Matched</h4>
-            <p>The payment record, selected title, and delivery email are matched before delivery is issued.</p>
-        </div>
-        <div class="step">
-            <div class="icon">📚</div>
-            <h4>3. Receive Your Download</h4>
-            <p>Use the delivery link to access your selected ebook or digital product.</p>
-        </div>
-    </div>
-</div>
-
-<footer>
-    <p>© 2026 Total Transformation Inc | Aaron T. Reddix, CEO </p>
-    <p><a href="gallery.html" style="color:#445;">Gallery</a> • <a href="agents.html" style="color:#445;">AI Agents</a> • <a href="flashsale.html" style="color:#445;">Flash Sale</a></p>
-</footer>
-
+  <header><div class="wrap nav"><a class="brand" href="index.html">TOTAL <span>TRANSFORMATION</span> INC.</a><a class="back" href="index.html">← Home</a></div></header>
+  <main class="wrap">
+    <section class="hero"><p>Original workbook library</p><h1>Tools released one at a time.</h1><p class="lead">Each title below is a release candidate. No price, payment link, or download is shown until the specific content, buyer information, checkout, and delivery workflow have been reviewed.</p></section>
+    <aside class="notice"><strong>Release standard:</strong> These are self-guided planning and review tools. They do not provide medical, mental-health, legal, tax, investment, credit-repair, employment, or other professional advice, and they do not guarantee a result.</aside>
+    <section class="grid" aria-label="Release candidate workbooks">
+      <article><span class="tag">IN REVIEW</span><h2>Operating Clarity: A 7-Day Workflow Reset</h2><p>A structured workbook for inventorying work, identifying active commitments, and selecting a daily focus.</p><p class="status">In review — join the release list</p></article>
+      <article><span class="tag">IN REVIEW</span><h2>The One-Offer Launch Workbook</h2><p>A planning workbook for defining one original offer and its content, support, and delivery requirements.</p><p class="status">In review — join the release list</p></article>
+      <article><span class="tag">IN REVIEW</span><h2>The Approval-Gated Operations Toolkit</h2><p>Templates for staging sensitive operational actions before execution and recording required approvals.</p><p class="status">In review — join the release list</p></article>
+      <article><span class="tag">IN REVIEW</span><h2>Inbox to Intent</h2><p>A three-bucket communication-triage workbook for deciding what to act on, track, or close.</p><p class="status">In review — join the release list</p></article>
+      <article><span class="tag">IN REVIEW</span><h2>Project Portfolio Reset</h2><p>A worksheet for mapping source materials, duplicate projects, decision points, and active work.</p><p class="status">In review — join the release list</p></article>
+    </section>
+  </main>
+  <section class="support">To join the release list or ask a support question, contact <a href="mailto:aaronreddix1987@gmail.com">aaronreddix1987@gmail.com</a> or <a href="tel:+17473018586">(747) 301-8586</a>. Do not email sensitive personal or payment information.</section>
+  <footer><div class="wrap">© 2026 Total Transformation Inc. | Product information is published only after individual review.</div></footer>
 </body>
 </html>
