@@ -1,51 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The Total Transformation Inc. workbook library. Titles are released individually after review.">
-  <title>Workbook Library — Total Transformation Inc.</title>
-  <style>
-    :root { --ink:#09111f; --panel:#111b2f; --text:#f6f8fc; --muted:#b4c0d3; --accent:#f7c948; --line:#2a3a56; --tag:#183b45; }
-    * { box-sizing:border-box; margin:0; }
-    body { min-height:100vh; background:linear-gradient(160deg,#0c1830 0,var(--ink) 45rem); color:var(--text); font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; line-height:1.55; }
-    a { color:inherit; }
-    .wrap { width:min(1120px,calc(100% - 2rem)); margin:auto; }
-    header { border-bottom:1px solid rgba(180,192,211,.18); }
-    .nav { min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:1rem; }
-    .brand { text-decoration:none; font-weight:800; letter-spacing:.02em; }.brand span{color:var(--accent)}
-    .back { color:var(--muted); font-size:.93rem; text-decoration:none; }.back:hover{color:var(--text)}
-    .hero { padding:5.5rem 0 3rem; max-width:780px; }
-    .hero p:first-child { color:var(--accent); text-transform:uppercase; letter-spacing:.12em; font-weight:800; font-size:.76rem; }
-    h1 { font-size:clamp(2.6rem,6vw,4.7rem); line-height:1.03; letter-spacing:-.05em; margin:.75rem 0 1rem; }
-    .lead { color:var(--muted); font-size:1.15rem; }
-    .notice { margin:0 0 2.4rem; padding:1rem 1.15rem; background:rgba(23,36,61,.85); border:1px solid var(--line); border-radius:.7rem; color:var(--muted); }
-    .notice strong { color:var(--text); }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(265px,1fr)); gap:1rem; padding-bottom:4rem; }
-    article { min-height:260px; display:flex; flex-direction:column; padding:1.4rem; border-radius:1rem; border:1px solid var(--line); background:linear-gradient(145deg,rgba(23,36,61,.94),rgba(12,20,35,.92)); }
-    .tag { display:inline-flex; align-self:flex-start; padding:.3rem .62rem; border-radius:999px; background:var(--tag); color:#a7e6cf; font-size:.76rem; font-weight:800; letter-spacing:.03em; }
-    h2 { font-size:1.3rem; line-height:1.2; margin:1.2rem 0 .65rem; }
-    article p { color:var(--muted); font-size:.95rem; }
-    .status { margin-top:auto; padding-top:1.35rem; color:var(--accent); font-size:.88rem; font-weight:800; }
-    .support { padding:1.2rem; border-top:1px solid var(--line); color:var(--muted); text-align:center; }
-    footer { padding:2.4rem 0; border-top:1px solid rgba(180,192,211,.18); color:#91a0b8; font-size:.9rem; }
-    @media(max-width:650px){.nav{padding:1rem 0;align-items:flex-start;flex-direction:column}.hero{padding-top:4rem}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TTI — Digital Products | Total Transformation Inc.</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;background:#0f0f1a;color:#fff}
+.hero{background:linear-gradient(135deg,#1a1a2e,#e53e3e);padding:60px 20px;text-align:center}
+.hero h1{font-size:2.5em;margin-bottom:10px}
+.hero p{color:#ddd;font-size:1.1em}
+.container{max-width:1100px;margin:0 auto;padding:40px 20px}
+.section-title{font-size:1.4em;font-weight:700;border-left:4px solid #e53e3e;padding-left:12px;margin:40px 0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.card{background:#1a1a2e;border:1px solid #2d2d4e;border-radius:10px;padding:20px;display:flex;flex-direction:column}
+.card h3{font-size:1em;margin-bottom:8px;color:#fff}
+.price{font-size:1.6em;font-weight:700;color:#e53e3e;margin:8px 0}
+.btn{display:block;background:#e53e3e;color:white;text-align:center;padding:12px;border-radius:6px;text-decoration:none;font-weight:700;margin-top:auto}
+.btn:hover{background:#c53030}
+.chime{text-align:center;background:#1a1a2e;border:1px solid #2d2d4e;border-radius:10px;padding:30px;margin:40px 0}
+footer{text-align:center;padding:30px;color:#666;font-size:.85em}
+</style>
 </head>
 <body>
-  <header><div class="wrap nav"><a class="brand" href="index.html">TOTAL <span>TRANSFORMATION</span> INC.</a><a class="back" href="index.html">← Home</a></div></header>
-  <main class="wrap">
-    <section class="hero"><p>Original workbook library</p><h1>Tools released one at a time.</h1><p class="lead">Each title below is a release candidate. No price, payment link, or download is shown until the specific content, buyer information, checkout, and delivery workflow have been reviewed.</p></section>
-    <aside class="notice"><strong>Release standard:</strong> These are self-guided planning and review tools. They do not provide medical, mental-health, legal, tax, investment, credit-repair, employment, or other professional advice, and they do not guarantee a result.</aside>
-    <section class="grid" aria-label="Release candidate workbooks">
-      <article><span class="tag">IN REVIEW</span><h2>Operating Clarity: A 7-Day Workflow Reset</h2><p>A structured workbook for inventorying work, identifying active commitments, and selecting a daily focus.</p><p class="status">In review — join the release list</p></article>
-      <article><span class="tag">IN REVIEW</span><h2>The One-Offer Launch Workbook</h2><p>A planning workbook for defining one original offer and its content, support, and delivery requirements.</p><p class="status">In review — join the release list</p></article>
-      <article><span class="tag">IN REVIEW</span><h2>The Approval-Gated Operations Toolkit</h2><p>Templates for staging sensitive operational actions before execution and recording required approvals.</p><p class="status">In review — join the release list</p></article>
-      <article><span class="tag">IN REVIEW</span><h2>Inbox to Intent</h2><p>A three-bucket communication-triage workbook for deciding what to act on, track, or close.</p><p class="status">In review — join the release list</p></article>
-      <article><span class="tag">IN REVIEW</span><h2>Project Portfolio Reset</h2><p>A worksheet for mapping source materials, duplicate projects, decision points, and active work.</p><p class="status">In review — join the release list</p></article>
-    </section>
-  </main>
-  <section class="support">To join the release list or ask a support question, contact <a href="mailto:aaronreddix1987@gmail.com">aaronreddix1987@gmail.com</a> or <a href="tel:+17473018586">(747) 301-8586</a>. Do not email sensitive personal or payment information.</section>
-  <footer><div class="wrap">© 2026 Total Transformation Inc. | Product information is published only after individual review.</div></footer>
+<div class="hero">
+<h1>Total Transformation Inc.</h1>
+<p>40 Digital Products — Instant Download After Purchase</p>
+<p style="margin-top:8px;font-size:.9em;color:#ffb">All proceeds fund veteran housing & recovery services in Los Angeles</p>
+</div>
+<div class="container">
+<div class="section-title">📚 Recovery Books & Audio</div><div class="grid"><div class="card">
+<h3>10X Recovery: Spirituality and Purpose</h3>
+<div class="price">$17</div>
+<a href="https://buy.stripe.com/14AdR91bRfOn6411qk0ZW0e" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div><div class="card">
+<h3>10X Recovery: Relationships</h3>
+<div class="price">$17</div>
+<a href="https://buy.stripe.com/aFaaEXg6LgSr7857OI0ZW09" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div><div class="card">
+<h3>10X Recovery: Relapse Prevention</h3>
+<div class="price">$17</div>
+<a href="https://buy.stripe.com/3cI14n9IneKj9gdfha0ZW0b" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div><div class="card">
+<h3>10X Recovery: Family Recovery</h3>
+<div class="price">$17</div>
+<a href="https://buy.stripe.com/cNi28r5s7dGfcspc4Y0ZW0i" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div><div class="card">
+<h3>10X Recovery: Financial Recovery</h3>
+<div class="price">$17</div>
+<a href="https://buy.stripe.com/aFadR9aMr1XxgIFed60ZW06" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div><div class="card">
+<h3>10X Recovery: Mental Health</h3>
+<div class="price">$17</div>
+<a href="https://buy.stripe.com/eVqcN5aMr45FeAxb0U0ZW07" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div><div class="card">
+<h3>10X Recovery: Housing and Stability</h3>
+<div class="price">$17</div>
+<a href="https://buy.stripe.com/bJe6oHcUz31BeAx2uo0ZW01" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div><div class="card">
+<h3>10X Recovery: Legacy and Leadership</h3>
+<div class="price">$17</div>
+<a href="https://buy.stripe.com/00w28r07Nau34ZXgle0ZW0j" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div><div class="card">
+<h3>10X Recovery: Workforce Development</h3>
+<div class="price">$17</div>
+<a href="https://buy.stripe.com/6oUfZh5s78lV7853ys0ZW08" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div><div class="card">
+<h3>10X Recovery: The Foundation</h3>
+<div class="price">$17</div>
+<a href="https://buy.stripe.com/14AdR97AffOnakh4Cw0ZW02" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div><div class="card">
+<h3>CEO Recovery Study Book</h3>
+<div class="price">$27</div>
+<a href="https://buy.stripe.com/eVq28rcUzby77858SM0ZW03" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div><div class="card">
+<h3>2026 Is Your Year — Work While They Sleep (E-Book + Audiobook)</h3>
+<div class="price">$47</div>
+<a href="https://buy.stripe.com/aFa3cv1bRgSr8c9fha0ZW0E" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div><div class="card">
+<h3>The 10X Recovery Mindset — Street Edition (E-Book + Audiobook)</h3>
+<div class="price">$67</div>
+<a href="https://buy.stripe.com/3cI6oH3jZ6dNgIF5GA0ZW0F" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div><div class="card">
+<h3>Love & Rehab — The Reality Show Package (E-Book + Audio Trailer)</h3>
+<div class="price">$97</div>
+<a href="https://buy.stripe.com/4gM4gz5s7cCbfEBfha0ZW0G" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div><div class="card">
+<h3>10X Recovery System - Complete Bundle (All 10 eBooks)</h3>
+<div class="price">$97</div>
+<a href="https://buy.stripe.com/6oUdR907NdGfeAxc4Y0ZW00" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div><div class="card">
+<h3>From the Bottom — Complete 3-Book Bundle (E-Books + Audio)</h3>
+<div class="price">$147</div>
+<a href="https://buy.stripe.com/aFa28rdYD45FfEB3ys0ZW0H" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div><div class="card">
+<h3>10X Recovery System - Complete Audiobook Bundle (All 10 Books)</h3>
+<div class="price">$147</div>
+<a href="https://buy.stripe.com/5kQaEX1bRcCb7854Cw0ZW0t" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div></div><div class="section-title">🏦 Credit & Financial</div><div class="grid"><div class="card">
+<h3>Reparacion de Credito y Educacion Financiera (Espanol)</h3>
+<div class="price">$27</div>
+<a href="https://buy.stripe.com/7sYbJ18Ej45F0JH9WQ0ZW0a" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div><div class="card">
+<h3>Credit Repair and Financial Literacy Blueprint</h3>
+<div class="price">$27</div>
+<a href="https://buy.stripe.com/7sYfZh07N7hR1NLgle0ZW0f" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div><div class="card">
+<h3>Credit Dispute Letter Kit — Bureau Removal System</h3>
+<div class="price">$97</div>
+<a href="https://buy.stripe.com/5kQ7sL2fV0Tt1NL6KE0ZW0z" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div><div class="card">
+<h3>Credit Mastery Course — 800 Score Blueprint</h3>
+<div class="price">$197</div>
+<a href="https://buy.stripe.com/fZufZhdYD59J9gdfha0ZW0u" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div><div class="card">
+<h3>500 Recession-Proof Financial Literacy Course</h3>
+<div class="price">$297</div>
+<a href="https://buy.stripe.com/dRm14n9IndGf2RPd920ZW0v" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div></div><div class="section-title">🏠 Real Estate & Tax Investing</div><div class="grid"><div class="card">
+<h3>Real Estate Investing Mastery - Complete Guide</h3>
+<div class="price">$27</div>
+<a href="https://buy.stripe.com/28E4gzdYD45F9gd3ys0ZW04" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div><div class="card">
+<h3>Inversion en Bienes Raices - Guia Completa (Espanol)</h3>
+<div class="price">$27</div>
+<a href="https://buy.stripe.com/fZueVd07NdGfgIFfha0ZW0g" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div><div class="card">
+<h3>Inversion en Tax Deeds - Propiedades por Centavos (Espanol)</h3>
+<div class="price">$37</div>
+<a href="https://buy.stripe.com/28EaEX2fVby7akh4Cw0ZW0o" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div><div class="card">
+<h3>Tax Deed Investing - Acquire Properties for Pennies</h3>
+<div class="price">$37</div>
+<a href="https://buy.stripe.com/5kQdR9bQv45F4ZX6KE0ZW0l" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div><div class="card">
+<h3>Tax Lien & Deed Investing Masterclass</h3>
+<div class="price">$397</div>
+<a href="https://buy.stripe.com/5kQ5kDaMr1Xx3VT1qk0ZW0w" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div><div class="card">
+<h3>AI Phone Agent for Real Estate Agents - 24/7 Lead Qualification</h3>
+<div class="price">$2500</div>
+<a href="https://buy.stripe.com/cNi5kD8Ej0Tt1NL7OI0ZW0q" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div></div><div class="section-title">🎓 Career & Counseling</div><div class="grid"><div class="card">
+<h3>Business Affirmation Workbook (UPGRADED)</h3>
+<div class="price">$12</div>
+<a href="https://buy.stripe.com/cNifZh9In0Tt4ZX8SM0ZW0c" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div><div class="card">
+<h3>How to Become a Counselor - RADT Certification Guide</h3>
+<div class="price">$22</div>
+<a href="https://buy.stripe.com/5kQaEXaMr59J9gdfha0ZW0p" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div><div class="card">
+<h3>Como Convertirse en Consejero - Guia RADT (Espanol)</h3>
+<div class="price">$22</div>
+<a href="https://buy.stripe.com/7sY4gzg6Lby71NLfha0ZW0m" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div></div><div class="section-title">🤖 AI Business Services</div><div class="grid"><div class="card">
+<h3>AI Business Automation Blueprint</h3>
+<div class="price">$497</div>
+<a href="https://buy.stripe.com/28E28r7Af0Tt4ZXfha0ZW0x" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div><div class="card">
+<h3>AI Business Automation - Starter Package</h3>
+<div class="price">$2500</div>
+<a href="https://buy.stripe.com/3cI00j5s7fOngIFed60ZW0d" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div><div class="card">
+<h3>AI Phone Agent for Medical Practices - Patient Scheduling</h3>
+<div class="price">$5000</div>
+<a href="https://buy.stripe.com/3cI28r9Inau3dwt2uo0ZW0n" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div><div class="card">
+<h3>AI Business Automation - Standard Package</h3>
+<div class="price">$7500</div>
+<a href="https://buy.stripe.com/3cI5kDg6LfOn3VTc4Y0ZW05" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div><div class="card">
+<h3>AI Executive Assistant - Full Business Automation Suite</h3>
+<div class="price">$15000</div>
+<a href="https://buy.stripe.com/dRmeVdbQvdGffEBgle0ZW0r" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div><div class="card">
+<h3>AI Business Automation - Premium Package</h3>
+<div class="price">$15000</div>
+<a href="https://buy.stripe.com/5kQ8wPf2H59Jbol3ys0ZW0h" class="btn" target="_blank">Buy Now — Instant Download</a>
+</div></div><div class="section-title">More Products</div><div class="grid"><div class="card">
+<h3>Sistema 10X Recuperacion - Edicion Completa (Espanol)</h3>
+<div class="price">$97</div>
+<a href="https://buy.stripe.com/7sYfZhdYDdGf1NLb0U0ZW0k" class="btn" target="_blank">Buy Now</a>
+</div><div class="card">
+<h3>Done-For-You Business Starter Kit — Launch in 48 Hours</h3>
+<div class="price">$147</div>
+<a href="https://buy.stripe.com/4gM5kDf2H0Tt8c9fha0ZW0y" class="btn" target="_blank">Buy Now</a>
+</div><div class="card">
+<h3>Sistema 10X Recuperacion - Audiolibro Completo (Espanol)</h3>
+<div class="price">$147</div>
+<a href="https://buy.stripe.com/fZu3cvdYD1XxfEB3ys0ZW0s" class="btn" target="_blank">Buy Now</a>
+</div></div>
+<div class="chime">
+<h3>💳 Payment Options</h3>
+<p style="margin-top:10px">Card (Stripe) &nbsp;|&nbsp; Chime: <strong>747-301-8586</strong> &nbsp;|&nbsp; CashApp: <strong>$aaronreddix1987</strong> &nbsp;|&nbsp; Zelle: <strong>aaronreddix1987@gmail.com</strong></p>
+</div>
+</div>
+<footer>Total Transformation Inc. &nbsp;|&nbsp; Aaron Reddix &nbsp;|&nbsp; (747) 301-8586 &nbsp;|&nbsp; aaronreddix1987@gmail.com &nbsp;|&nbsp; 877 E 43rd Pl, Los Angeles CA 90011<br>Questions? Email or text us. All digital products deliver instantly via Stripe.</footer>
 </body>
 </html>
