@@ -1,200 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TTI — Digital Products | Total Transformation Inc.</title>
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;background:#0f0f1a;color:#fff}
-.hero{background:linear-gradient(135deg,#1a1a2e,#e53e3e);padding:60px 20px;text-align:center}
-.hero h1{font-size:2.5em;margin-bottom:10px}
-.hero p{color:#ddd;font-size:1.1em}
-.container{max-width:1100px;margin:0 auto;padding:40px 20px}
-.section-title{font-size:1.4em;font-weight:700;border-left:4px solid #e53e3e;padding-left:12px;margin:40px 0 20px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
-.card{background:#1a1a2e;border:1px solid #2d2d4e;border-radius:10px;padding:20px;display:flex;flex-direction:column}
-.card h3{font-size:1em;margin-bottom:8px;color:#fff}
-.price{font-size:1.6em;font-weight:700;color:#e53e3e;margin:8px 0}
-.btn{display:block;background:#e53e3e;color:white;text-align:center;padding:12px;border-radius:6px;text-decoration:none;font-weight:700;margin-top:auto}
-.btn:hover{background:#c53030}
-.chime{text-align:center;background:#1a1a2e;border:1px solid #2d2d4e;border-radius:10px;padding:30px;margin:40px 0}
-footer{text-align:center;padding:30px;color:#666;font-size:.85em}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Total Transformation Inc. — Digital Products</title>
+  <meta name="description" content="40+ digital products for recovery, credit repair, real estate investing, and AI business automation. Built by Aaron Reddix, CEO of Total Transformation Inc.">
+  <meta name="keywords" content="recovery books, credit repair, real estate investing, AI automation, 10X recovery, RADT certification, financial literacy">
+  <meta property="og:title" content="Total Transformation Inc. — Digital Products">
+  <meta property="og:description" content="40+ tools for recovery, credit, real estate, and AI automation. Instant download. Live Stripe checkout.">
+  <meta property="og:url" content="https://aaronreddix1987-sketch.github.io/products.html">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; background: #0a0a0a; color: #fff; }
+    header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); padding: 60px 20px; text-align: center; }
+    header h1 { font-size: 2.8rem; font-weight: 800; color: #ffd700; text-transform: uppercase; letter-spacing: 2px; }
+    header p { font-size: 1.2rem; color: #ccc; margin-top: 12px; }
+    .badge { display: inline-block; background: #ffd700; color: #000; padding: 6px 16px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; margin-top: 16px; }
+    .filter-bar { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; padding: 30px 20px 10px; }
+    .filter-btn { padding: 8px 20px; border: 2px solid #ffd700; background: transparent; color: #ffd700; border-radius: 25px; cursor: pointer; font-size: 0.9rem; transition: all 0.2s; }
+    .filter-btn:hover, .filter-btn.active { background: #ffd700; color: #000; font-weight: 700; }
+    .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; max-width: 1400px; margin: 0 auto; padding: 20px; }
+    .product-card { background: #111; border: 1px solid #222; border-radius: 12px; padding: 24px; transition: transform 0.2s, border-color 0.2s; }
+    .product-card:hover { transform: translateY(-4px); border-color: #ffd700; }
+    .product-card.hidden { display: none; }
+    .product-icon { font-size: 2rem; margin-bottom: 12px; }
+    .product-card h3 { font-size: 1rem; color: #fff; margin-bottom: 12px; line-height: 1.4; }
+    .product-price { font-size: 1.6rem; font-weight: 800; color: #ffd700; margin-bottom: 16px; }
+    .buy-btn { display: block; background: #ffd700; color: #000; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.95rem; transition: background 0.2s; }
+    .buy-btn:hover { background: #ffed4e; }
+    .stats-bar { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; padding: 30px; background: #111; border-top: 1px solid #222; border-bottom: 1px solid #222; margin: 20px 0; }
+    .stat { text-align: center; }
+    .stat-num { font-size: 2rem; font-weight: 800; color: #ffd700; }
+    .stat-label { font-size: 0.85rem; color: #888; margin-top: 4px; }
+    footer { text-align: center; padding: 40px 20px; color: #555; font-size: 0.9rem; }
+    footer a { color: #ffd700; text-decoration: none; }
+  </style>
 </head>
 <body>
-<div class="hero">
-<h1>Total Transformation Inc.</h1>
-<p>40 Digital Products — Instant Download After Purchase</p>
-<p style="margin-top:8px;font-size:.9em;color:#ffb">All proceeds fund veteran housing & recovery services in Los Angeles</p>
-</div>
-<div class="container">
-<div class="section-title">📚 Recovery Books & Audio</div><div class="grid"><div class="card">
-<h3>10X Recovery: Spirituality and Purpose</h3>
-<div class="price">$17</div>
-<a href="https://buy.stripe.com/14AdR91bRfOn6411qk0ZW0e" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div><div class="card">
-<h3>10X Recovery: Relationships</h3>
-<div class="price">$17</div>
-<a href="https://buy.stripe.com/aFaaEXg6LgSr7857OI0ZW09" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div><div class="card">
-<h3>10X Recovery: Relapse Prevention</h3>
-<div class="price">$17</div>
-<a href="https://buy.stripe.com/3cI14n9IneKj9gdfha0ZW0b" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div><div class="card">
-<h3>10X Recovery: Family Recovery</h3>
-<div class="price">$17</div>
-<a href="https://buy.stripe.com/cNi28r5s7dGfcspc4Y0ZW0i" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div><div class="card">
-<h3>10X Recovery: Financial Recovery</h3>
-<div class="price">$17</div>
-<a href="https://buy.stripe.com/aFadR9aMr1XxgIFed60ZW06" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div><div class="card">
-<h3>10X Recovery: Mental Health</h3>
-<div class="price">$17</div>
-<a href="https://buy.stripe.com/eVqcN5aMr45FeAxb0U0ZW07" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div><div class="card">
-<h3>10X Recovery: Housing and Stability</h3>
-<div class="price">$17</div>
-<a href="https://buy.stripe.com/bJe6oHcUz31BeAx2uo0ZW01" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div><div class="card">
-<h3>10X Recovery: Legacy and Leadership</h3>
-<div class="price">$17</div>
-<a href="https://buy.stripe.com/00w28r07Nau34ZXgle0ZW0j" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div><div class="card">
-<h3>10X Recovery: Workforce Development</h3>
-<div class="price">$17</div>
-<a href="https://buy.stripe.com/6oUfZh5s78lV7853ys0ZW08" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div><div class="card">
-<h3>10X Recovery: The Foundation</h3>
-<div class="price">$17</div>
-<a href="https://buy.stripe.com/14AdR97AffOnakh4Cw0ZW02" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div><div class="card">
-<h3>CEO Recovery Study Book</h3>
-<div class="price">$27</div>
-<a href="https://buy.stripe.com/eVq28rcUzby77858SM0ZW03" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div><div class="card">
-<h3>2026 Is Your Year — Work While They Sleep (E-Book + Audiobook)</h3>
-<div class="price">$47</div>
-<a href="https://buy.stripe.com/aFa3cv1bRgSr8c9fha0ZW0E" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div><div class="card">
-<h3>The 10X Recovery Mindset — Street Edition (E-Book + Audiobook)</h3>
-<div class="price">$67</div>
-<a href="https://buy.stripe.com/3cI6oH3jZ6dNgIF5GA0ZW0F" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div><div class="card">
-<h3>Love & Rehab — The Reality Show Package (E-Book + Audio Trailer)</h3>
-<div class="price">$97</div>
-<a href="https://buy.stripe.com/4gM4gz5s7cCbfEBfha0ZW0G" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div><div class="card">
-<h3>10X Recovery System - Complete Bundle (All 10 eBooks)</h3>
-<div class="price">$97</div>
-<a href="https://buy.stripe.com/6oUdR907NdGfeAxc4Y0ZW00" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div><div class="card">
-<h3>From the Bottom — Complete 3-Book Bundle (E-Books + Audio)</h3>
-<div class="price">$147</div>
-<a href="https://buy.stripe.com/aFa28rdYD45FfEB3ys0ZW0H" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div><div class="card">
-<h3>10X Recovery System - Complete Audiobook Bundle (All 10 Books)</h3>
-<div class="price">$147</div>
-<a href="https://buy.stripe.com/5kQaEX1bRcCb7854Cw0ZW0t" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div></div><div class="section-title">🏦 Credit & Financial</div><div class="grid"><div class="card">
-<h3>Reparacion de Credito y Educacion Financiera (Espanol)</h3>
-<div class="price">$27</div>
-<a href="https://buy.stripe.com/7sYbJ18Ej45F0JH9WQ0ZW0a" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div><div class="card">
-<h3>Credit Repair and Financial Literacy Blueprint</h3>
-<div class="price">$27</div>
-<a href="https://buy.stripe.com/7sYfZh07N7hR1NLgle0ZW0f" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div><div class="card">
-<h3>Credit Dispute Letter Kit — Bureau Removal System</h3>
-<div class="price">$97</div>
-<a href="https://buy.stripe.com/5kQ7sL2fV0Tt1NL6KE0ZW0z" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div><div class="card">
-<h3>Credit Mastery Course — 800 Score Blueprint</h3>
-<div class="price">$197</div>
-<a href="https://buy.stripe.com/fZufZhdYD59J9gdfha0ZW0u" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div><div class="card">
-<h3>500 Recession-Proof Financial Literacy Course</h3>
-<div class="price">$297</div>
-<a href="https://buy.stripe.com/dRm14n9IndGf2RPd920ZW0v" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div></div><div class="section-title">🏠 Real Estate & Tax Investing</div><div class="grid"><div class="card">
-<h3>Real Estate Investing Mastery - Complete Guide</h3>
-<div class="price">$27</div>
-<a href="https://buy.stripe.com/28E4gzdYD45F9gd3ys0ZW04" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div><div class="card">
-<h3>Inversion en Bienes Raices - Guia Completa (Espanol)</h3>
-<div class="price">$27</div>
-<a href="https://buy.stripe.com/fZueVd07NdGfgIFfha0ZW0g" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div><div class="card">
-<h3>Inversion en Tax Deeds - Propiedades por Centavos (Espanol)</h3>
-<div class="price">$37</div>
-<a href="https://buy.stripe.com/28EaEX2fVby7akh4Cw0ZW0o" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div><div class="card">
-<h3>Tax Deed Investing - Acquire Properties for Pennies</h3>
-<div class="price">$37</div>
-<a href="https://buy.stripe.com/5kQdR9bQv45F4ZX6KE0ZW0l" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div><div class="card">
-<h3>Tax Lien & Deed Investing Masterclass</h3>
-<div class="price">$397</div>
-<a href="https://buy.stripe.com/5kQ5kDaMr1Xx3VT1qk0ZW0w" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div><div class="card">
-<h3>AI Phone Agent for Real Estate Agents - 24/7 Lead Qualification</h3>
-<div class="price">$2500</div>
-<a href="https://buy.stripe.com/cNi5kD8Ej0Tt1NL7OI0ZW0q" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div></div><div class="section-title">🎓 Career & Counseling</div><div class="grid"><div class="card">
-<h3>Business Affirmation Workbook (UPGRADED)</h3>
-<div class="price">$12</div>
-<a href="https://buy.stripe.com/cNifZh9In0Tt4ZX8SM0ZW0c" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div><div class="card">
-<h3>How to Become a Counselor - RADT Certification Guide</h3>
-<div class="price">$22</div>
-<a href="https://buy.stripe.com/5kQaEXaMr59J9gdfha0ZW0p" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div><div class="card">
-<h3>Como Convertirse en Consejero - Guia RADT (Espanol)</h3>
-<div class="price">$22</div>
-<a href="https://buy.stripe.com/7sY4gzg6Lby71NLfha0ZW0m" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div></div><div class="section-title">🤖 AI Business Services</div><div class="grid"><div class="card">
-<h3>AI Business Automation Blueprint</h3>
-<div class="price">$497</div>
-<a href="https://buy.stripe.com/28E28r7Af0Tt4ZXfha0ZW0x" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div><div class="card">
-<h3>AI Business Automation - Starter Package</h3>
-<div class="price">$2500</div>
-<a href="https://buy.stripe.com/3cI00j5s7fOngIFed60ZW0d" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div><div class="card">
-<h3>AI Phone Agent for Medical Practices - Patient Scheduling</h3>
-<div class="price">$5000</div>
-<a href="https://buy.stripe.com/3cI28r9Inau3dwt2uo0ZW0n" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div><div class="card">
-<h3>AI Business Automation - Standard Package</h3>
-<div class="price">$7500</div>
-<a href="https://buy.stripe.com/3cI5kDg6LfOn3VTc4Y0ZW05" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div><div class="card">
-<h3>AI Executive Assistant - Full Business Automation Suite</h3>
-<div class="price">$15000</div>
-<a href="https://buy.stripe.com/dRmeVdbQvdGffEBgle0ZW0r" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div><div class="card">
-<h3>AI Business Automation - Premium Package</h3>
-<div class="price">$15000</div>
-<a href="https://buy.stripe.com/5kQ8wPf2H59Jbol3ys0ZW0h" class="btn" target="_blank">Buy Now — Instant Download</a>
-</div></div><div class="section-title">More Products</div><div class="grid"><div class="card">
-<h3>Sistema 10X Recuperacion - Edicion Completa (Espanol)</h3>
-<div class="price">$97</div>
-<a href="https://buy.stripe.com/7sYfZhdYDdGf1NLb0U0ZW0k" class="btn" target="_blank">Buy Now</a>
-</div><div class="card">
-<h3>Done-For-You Business Starter Kit — Launch in 48 Hours</h3>
-<div class="price">$147</div>
-<a href="https://buy.stripe.com/4gM5kDf2H0Tt8c9fha0ZW0y" class="btn" target="_blank">Buy Now</a>
-</div><div class="card">
-<h3>Sistema 10X Recuperacion - Audiolibro Completo (Espanol)</h3>
-<div class="price">$147</div>
-<a href="https://buy.stripe.com/fZu3cvdYD1XxfEB3ys0ZW0s" class="btn" target="_blank">Buy Now</a>
-</div></div>
-<div class="chime">
-<h3>💳 Payment Options</h3>
-<p style="margin-top:10px">Card (Stripe) &nbsp;|&nbsp; Chime: <strong>747-301-8586</strong> &nbsp;|&nbsp; CashApp: <strong>$aaronreddix1987</strong> &nbsp;|&nbsp; Zelle: <strong>aaronreddix1987@gmail.com</strong></p>
-</div>
-</div>
-<footer>Total Transformation Inc. &nbsp;|&nbsp; Aaron Reddix &nbsp;|&nbsp; (747) 301-8586 &nbsp;|&nbsp; aaronreddix1987@gmail.com &nbsp;|&nbsp; 877 E 43rd Pl, Los Angeles CA 90011<br>Questions? Email or text us. All digital products deliver instantly via Stripe.</footer>
+  <header>
+    <h1>Total Transformation Inc.</h1>
+    <p>40+ Digital Products for Recovery · Credit · Real Estate · AI Automation</p>
+    <span class="badge">⚡ Instant Download · Live Stripe Checkout</span>
+  </header>
+
+  <div class="stats-bar">
+    <div class="stat"><div class="stat-num">40+</div><div class="stat-label">Digital Products</div></div>
+    <div class="stat"><div class="stat-num">44</div><div class="stat-label">Live Checkout Links</div></div>
+    <div class="stat"><div class="stat-num">$12</div><div class="stat-label">Starting Price</div></div>
+    <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Instant Delivery</div></div>
+  </div>
+
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterProducts('all', this)">All Products</button>
+    <button class="filter-btn" onclick="filterProducts('recovery', this)">📗 Recovery</button>
+    <button class="filter-btn" onclick="filterProducts('finance', this)">💳 Finance & Real Estate</button>
+    <button class="filter-btn" onclick="filterProducts('ai', this)">🤖 AI Automation</button>
+    <button class="filter-btn" onclick="filterProducts('books', this)">📚 Books & Bundles</button>
+    <button class="filter-btn" onclick="filterProducts('certification', this)">🎓 Certifications</button>
+    <button class="filter-btn" onclick="filterProducts('spanish', this)">🇪🇸 En Español</button>
+  </div>
+
+  <div class="products-grid" id="productsGrid">
+    <div class="product-card recovery" data-category="recovery">
+      <div class="product-icon">📗</div>
+      <h3>10X Recovery: The Foundation</h3>
+      <div class="product-price">$12.00</div>
+      <a href="https://buy.stripe.com/aFa28rdYD45FfEB3ys0ZW0H" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card recovery" data-category="recovery">
+      <div class="product-icon">📗</div>
+      <h3>10X Recovery: Mental Health</h3>
+      <div class="product-price">$12.00</div>
+      <a href="https://buy.stripe.com/4gM4gz5s7cCbfEBfha0ZW0G" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card recovery" data-category="recovery">
+      <div class="product-icon">📗</div>
+      <h3>10X Recovery: Relationships</h3>
+      <div class="product-price">$12.00</div>
+      <a href="https://buy.stripe.com/3cI6oH3jZ6dNgIF5GA0ZW0F" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card recovery" data-category="recovery">
+      <div class="product-icon">📗</div>
+      <h3>10X Recovery: Relapse Prevention</h3>
+      <div class="product-price">$12.00</div>
+      <a href="https://buy.stripe.com/aFa3cv1bRgSr8c9fha0ZW0E" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card recovery" data-category="recovery">
+      <div class="product-icon">📗</div>
+      <h3>10X Recovery: Financial Recovery</h3>
+      <div class="product-price">$12.00</div>
+      <a href="https://buy.stripe.com/fZufZh9In6dNfEB5GA0ZW0D" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card recovery" data-category="recovery">
+      <div class="product-icon">📗</div>
+      <h3>10X Recovery: Housing & Stability</h3>
+      <div class="product-price">$12.00</div>
+      <a href="https://buy.stripe.com/eVq8wPf2HcCbfEB5GA0ZW0C" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card recovery" data-category="recovery">
+      <div class="product-icon">📗</div>
+      <h3>10X Recovery: Spirituality & Purpose</h3>
+      <div class="product-price">$12.00</div>
+      <a href="https://buy.stripe.com/7sYfZh4o345FgIF1qk0ZW0B" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card recovery" data-category="recovery">
+      <div class="product-icon">📗</div>
+      <h3>10X Recovery: Family Recovery</h3>
+      <div class="product-price">$12.00</div>
+      <a href="https://buy.stripe.com/fZu6oH7AfeKjcsped60ZW0A" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card recovery" data-category="recovery">
+      <div class="product-icon">📗</div>
+      <h3>10X Recovery: Workforce Development</h3>
+      <div class="product-price">$12.00</div>
+      <a href="https://buy.stripe.com/5kQ7sL2fV0Tt1NL6KE0ZW0z" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card recovery" data-category="recovery">
+      <div class="product-icon">📗</div>
+      <h3>10X Recovery: Legacy & Leadership</h3>
+      <div class="product-price">$12.00</div>
+      <a href="https://buy.stripe.com/4gM5kDf2H0Tt8c9fha0ZW0y" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card recovery" data-category="recovery">
+      <div class="product-icon">📦</div>
+      <h3>10X Recovery System — Complete Bundle</h3>
+      <div class="product-price">$97.00</div>
+      <a href="https://buy.stripe.com/28E28r7Af0Tt4ZXfha0ZW0x" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card recovery" data-category="recovery">
+      <div class="product-icon">🎧</div>
+      <h3>10X Recovery System — Complete Audiobook</h3>
+      <div class="product-price">$97.00</div>
+      <a href="https://buy.stripe.com/5kQ5kDaMr1Xx3VT1qk0ZW0w" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card finance" data-category="finance">
+      <div class="product-icon">💳</div>
+      <h3>Credit Repair & Financial Literacy Blueprint</h3>
+      <div class="product-price">$27.00</div>
+      <a href="https://buy.stripe.com/dRm14n9IndGf2RPd920ZW0v" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card finance" data-category="finance">
+      <div class="product-icon">📋</div>
+      <h3>Credit Dispute Letter Kit — Bureau Removal System</h3>
+      <div class="product-price">$27.00</div>
+      <a href="https://buy.stripe.com/fZufZhdYD59J9gdfha0ZW0u" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card finance" data-category="finance">
+      <div class="product-icon">🏆</div>
+      <h3>Credit Mastery Course — 800 Score Blueprint</h3>
+      <div class="product-price">$97.00</div>
+      <a href="https://buy.stripe.com/5kQaEX1bRcCb7854Cw0ZW0t" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card finance" data-category="finance">
+      <div class="product-icon">📈</div>
+      <h3>500 Recession-Proof Financial Literacy Course</h3>
+      <div class="product-price">$97.00</div>
+      <a href="https://buy.stripe.com/fZu3cvdYD1XxfEB3ys0ZW0s" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card finance" data-category="finance">
+      <div class="product-icon">🏠</div>
+      <h3>Real Estate Investing Mastery — Complete Guide</h3>
+      <div class="product-price">$37.00</div>
+      <a href="https://buy.stripe.com/dRmeVdbQvdGffEBgle0ZW0r" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card finance" data-category="finance">
+      <div class="product-icon">🏠</div>
+      <h3>Tax Deed Investing — Acquire Properties for Pennies</h3>
+      <div class="product-price">$37.00</div>
+      <a href="https://buy.stripe.com/cNi5kD8Ej0Tt1NL7OI0ZW0q" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card finance" data-category="finance">
+      <div class="product-icon">🏠</div>
+      <h3>Tax Lien & Deed Investing Masterclass</h3>
+      <div class="product-price">$97.00</div>
+      <a href="https://buy.stripe.com/5kQaEXaMr59J9gdfha0ZW0p" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card certification" data-category="certification">
+      <div class="product-icon">🎓</div>
+      <h3>How to Become a Counselor — RADT Certification Guide</h3>
+      <div class="product-price">$27.00</div>
+      <a href="https://buy.stripe.com/28EaEX2fVby7akh4Cw0ZW0o" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card ai" data-category="ai">
+      <div class="product-icon">🤖</div>
+      <h3>AI Business Automation Blueprint</h3>
+      <div class="product-price">$97.00</div>
+      <a href="https://buy.stripe.com/3cI28r9Inau3dwt2uo0ZW0n" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card ai" data-category="ai">
+      <div class="product-icon">🤖</div>
+      <h3>AI Business Automation — Starter Package</h3>
+      <div class="product-price">$500.00</div>
+      <a href="https://buy.stripe.com/7sY4gzg6Lby71NLfha0ZW0m" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card ai" data-category="ai">
+      <div class="product-icon">🤖</div>
+      <h3>AI Business Automation — Standard Package</h3>
+      <div class="product-price">$2500.00</div>
+      <a href="https://buy.stripe.com/5kQdR9bQv45F4ZX6KE0ZW0l" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card ai" data-category="ai">
+      <div class="product-icon">🤖</div>
+      <h3>AI Business Automation — Premium Package</h3>
+      <div class="product-price">$5000.00</div>
+      <a href="https://buy.stripe.com/7sYfZhdYDdGf1NLb0U0ZW0k" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card ai" data-category="ai">
+      <div class="product-icon">🤖</div>
+      <h3>AI Executive Assistant — Full Business Automation Suite</h3>
+      <div class="product-price">$15000.00</div>
+      <a href="https://buy.stripe.com/00w28r07Nau34ZXgle0ZW0j" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card ai" data-category="ai">
+      <div class="product-icon">📞</div>
+      <h3>AI Phone Agent for Real Estate — 24/7 Lead Qualification</h3>
+      <div class="product-price">$2500.00</div>
+      <a href="https://buy.stripe.com/cNi28r5s7dGfcspc4Y0ZW0i" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card ai" data-category="ai">
+      <div class="product-icon">📞</div>
+      <h3>AI Phone Agent for Medical Practices</h3>
+      <div class="product-price">$2500.00</div>
+      <a href="https://buy.stripe.com/5kQ8wPf2H59Jbol3ys0ZW0h" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card books" data-category="books">
+      <div class="product-icon">📚</div>
+      <h3>CEO Recovery Study Book</h3>
+      <div class="product-price">$27.00</div>
+      <a href="https://buy.stripe.com/fZueVd07NdGfgIFfha0ZW0g" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card books" data-category="books">
+      <div class="product-icon">✍️</div>
+      <h3>Business Affirmation Workbook (Upgraded)</h3>
+      <div class="product-price">$12.00</div>
+      <a href="https://buy.stripe.com/7sYfZh07N7hR1NLgle0ZW0f" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card books" data-category="books">
+      <div class="product-icon">📖</div>
+      <h3>2026 Is Your Year — Work While They Sleep</h3>
+      <div class="product-price">$12.00</div>
+      <a href="https://buy.stripe.com/14AdR91bRfOn6411qk0ZW0e" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card books" data-category="books">
+      <div class="product-icon">📖</div>
+      <h3>The 10X Recovery Mindset — Street Edition</h3>
+      <div class="product-price">$12.00</div>
+      <a href="https://buy.stripe.com/3cI00j5s7fOngIFed60ZW0d" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card books" data-category="books">
+      <div class="product-icon">❤️</div>
+      <h3>Love & Rehab — The Reality Show Package</h3>
+      <div class="product-price">$12.00</div>
+      <a href="https://buy.stripe.com/cNifZh9In0Tt4ZX8SM0ZW0c" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card books" data-category="books">
+      <div class="product-icon">📦</div>
+      <h3>From the Bottom — Complete 3-Book Bundle</h3>
+      <div class="product-price">$27.00</div>
+      <a href="https://buy.stripe.com/3cI14n9IneKj9gdfha0ZW0b" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card books" data-category="books">
+      <div class="product-icon">💼</div>
+      <h3>Done-For-You Business Starter Kit</h3>
+      <div class="product-price">$97.00</div>
+      <a href="https://buy.stripe.com/7sYbJ18Ej45F0JH9WQ0ZW0a" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card spanish" data-category="spanish">
+      <div class="product-icon">🇪🇸</div>
+      <h3>Sistema 10X Recuperación — Edición Completa (Español)</h3>
+      <div class="product-price">$97.00</div>
+      <a href="https://buy.stripe.com/aFaaEXg6LgSr7857OI0ZW09" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card spanish" data-category="spanish">
+      <div class="product-icon">🎧</div>
+      <h3>Sistema 10X Recuperación — Audiolibro Completo (Español)</h3>
+      <div class="product-price">$97.00</div>
+      <a href="https://buy.stripe.com/6oUfZh5s78lV7853ys0ZW08" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card spanish" data-category="spanish">
+      <div class="product-icon">💳</div>
+      <h3>Reparación de Crédito y Educación Financiera (Español)</h3>
+      <div class="product-price">$27.00</div>
+      <a href="https://buy.stripe.com/eVqcN5aMr45FeAxb0U0ZW07" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card spanish" data-category="spanish">
+      <div class="product-icon">🏠</div>
+      <h3>Inversión en Bienes Raíces — Guía Completa (Español)</h3>
+      <div class="product-price">$37.00</div>
+      <a href="https://buy.stripe.com/aFadR9aMr1XxgIFed60ZW06" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card spanish" data-category="spanish">
+      <div class="product-icon">🏠</div>
+      <h3>Inversión en Tax Deeds — Propiedades por Centavos (Español)</h3>
+      <div class="product-price">$37.00</div>
+      <a href="https://buy.stripe.com/3cI5kDg6LfOn3VTc4Y0ZW05" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+    <div class="product-card spanish" data-category="spanish">
+      <div class="product-icon">🎓</div>
+      <h3>Como Convertirse en Consejero — Guía RADT (Español)</h3>
+      <div class="product-price">$27.00</div>
+      <a href="https://buy.stripe.com/28E4gzdYD45F9gd3ys0ZW04" class="buy-btn" target="_blank" rel="noopener">Buy Now →</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>Built by <strong>Aaron Reddix</strong> · CEO, Total Transformation Inc.</p>
+    <p style="margin-top:8px">📧 <a href="mailto:aaronreddix1987@gmail.com">aaronreddix1987@gmail.com</a></p>
+    <p style="margin-top:8px; color:#333; font-size:0.8rem">© 2026 Total Transformation Inc. All rights reserved. Powered by Stripe.</p>
+  </footer>
+
+  <script>
+    function filterProducts(category, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.product-card').forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+  </script>
 </body>
 </html>
