@@ -1,76 +1,512 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Total Transformation Inc. — 40+ digital products for recovery, credit repair, real estate investing, and AI business automation. CEO Aaron Reddix, North Hollywood, CA.">
-  <title>Total Transformation Inc. — Aaron Reddix | Recovery, AI Automation & Financial Empowerment</title>
-  <style>
-    :root { --ink:#09111f; --panel:#111b2f; --panel-2:#17243d; --text:#f6f8fc; --muted:#b4c0d3; --accent:#f7c948; --success:#69d6a4; --line:#2a3a56; }
-    * { box-sizing:border-box; margin:0; }
-    body { min-height:100vh; background:radial-gradient(circle at top,#1c3158 0, var(--ink) 44rem); color:var(--text); font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; line-height:1.55; }
-    a { color:inherit; }
-    .wrap { width:min(1120px,calc(100% - 2rem)); margin:auto; }
-    header { border-bottom:1px solid rgba(180,192,211,.18); }
-    .nav { min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:1rem; }
-    .brand { text-decoration:none; font-weight:800; letter-spacing:.02em; }
-    .brand span { color:var(--accent); }
-    .navlinks { display:flex; flex-wrap:wrap; gap:.5rem; }
-    .navlinks a { padding:.55rem .8rem; border-radius:.5rem; color:var(--muted); font-size:.92rem; text-decoration:none; }
-    .navlinks a:hover,.navlinks a:focus-visible { background:rgba(255,255,255,.08); color:var(--text); }
-    .hero { padding:7rem 0 5rem; text-align:center; max-width:850px; margin:auto; }
-    .eyebrow { display:inline-flex; align-items:center; gap:.5rem; border:1px solid rgba(105,214,164,.45); background:rgba(22,75,65,.35); color:#b2f0cf; padding:.35rem .75rem; border-radius:999px; font-size:.84rem; font-weight:700; }
-    h1 { max-width:800px; margin:1.1rem auto 1.2rem; font-size:clamp(2.7rem,7vw,5.3rem); line-height:1.02; letter-spacing:-.055em; }
-    .lead { color:var(--muted); font-size:clamp(1.05rem,2vw,1.25rem); max-width:700px; margin:auto; }
-    .actions { display:flex; justify-content:center; flex-wrap:wrap; gap:.75rem; margin-top:2rem; }
-    .button { display:inline-block; border-radius:.65rem; padding:.82rem 1.1rem; text-decoration:none; font-weight:750; border:1px solid transparent; }
-    .button.primary { background:var(--accent); color:#1a1606; }
-    .button.secondary { border-color:var(--line); background:rgba(17,27,47,.76); color:var(--text); }
-    .button:hover,.button:focus-visible { transform:translateY(-1px); filter:brightness(1.06); }
-    .principles { padding:0 0 5rem; }
-    .principles-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
-    .card { border:1px solid var(--line); background:linear-gradient(145deg,rgba(23,36,61,.9),rgba(12,20,35,.9)); border-radius:1rem; padding:1.4rem; }
-    .card h2 { font-size:1.1rem; margin-bottom:.5rem; }
-    .card p { color:var(--muted); font-size:.95rem; }
-    .support { padding:1.15rem 1.25rem; margin-bottom:4rem; border-left:3px solid var(--success); background:rgba(17,27,47,.8); color:var(--muted); border-radius:.45rem; }
-    footer { border-top:1px solid rgba(180,192,211,.18); padding:2rem 0 3rem; color:#91a0b8; font-size:.9rem; }
-    footer p + p { margin-top:.35rem; }
-    @media (max-width:680px) { .nav { padding:1rem 0; align-items:flex-start; flex-direction:column; } .hero { padding:5rem 0 4rem; } .principles-grid { grid-template-columns:1fr; } }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Total Transformation Inc. — AI Phone Agents | Better Than Twilio & VAPI</title>
+<meta name="description" content="Build and deploy AI phone agents at 60% less than Twilio & VAPI. 24/7 answering, lead capture, appointment booking. Plans from $197/mo. Founded by Aaron Reddix, North Hollywood CA.">
+<meta property="og:title" content="TTI — AI Phone Agents. Better. Cheaper. Smarter.">
+<meta property="og:description" content="AI that answers every call, captures every lead, books every appointment. 60% cheaper than Twilio & VAPI. Start free.">
+<meta name="theme-color" content="#00e676">
+<style>
+:root{
+  --g:#00e676;--gd:#00c853;--gl:rgba(0,230,118,0.12);
+  --bk:#060608;--d1:#0d0f14;--d2:#131720;--d3:#1a1f2e;
+  --w:#f8fafc;--muted:#8896b0;--gold:#f7c948;--red:#ff4444;--blue:#4f8ef7;
+  --purple:#b06ef7;--orange:#ff8c42;
+  --grad:linear-gradient(135deg,#00e676,#00c853);
+  --grad2:linear-gradient(135deg,#4f8ef7,#b06ef7);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bk);color:var(--w);font-family:'Inter',system-ui,'Segoe UI',sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-thumb{background:var(--gd);border-radius:2px}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(6,6,8,0.88);backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,230,118,0.1);padding:0 1.5rem;height:58px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;font-size:1.1rem;letter-spacing:-0.03em}
+.logo em{color:var(--g);font-style:normal}
+.navlinks{display:flex;gap:0.2rem;list-style:none}
+.navlinks a{color:var(--muted);font-size:0.83rem;padding:0.3rem 0.7rem;border-radius:6px;transition:all 0.15s}
+.navlinks a:hover{color:var(--w);background:rgba(255,255,255,0.06)}
+.nav-cta{background:var(--grad);color:#000;font-weight:800;font-size:0.82rem;padding:0.45rem 1.1rem;border-radius:6px;border:none;cursor:pointer;transition:all 0.2s}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(0,230,118,0.35)}
+
+/* TICKER */
+.ticker{background:var(--g);padding:0.4rem 0;overflow:hidden;margin-top:58px}
+.ticker-inner{display:flex;gap:2rem;animation:tick 25s linear infinite;white-space:nowrap}
+.ticker-inner span{color:#000;font-weight:700;font-size:0.76rem}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* HERO */
+.hero{min-height:94vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:5rem 1.5rem 4rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 0%,rgba(0,230,118,0.1) 0%,transparent 65%);pointer-events:none}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,230,118,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,230,118,0.03) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse at center,black 30%,transparent 80%);pointer-events:none}
+.hero-inner{position:relative;max-width:860px;margin:0 auto}
+.badge{display:inline-flex;align-items:center;gap:0.4rem;background:rgba(0,230,118,0.08);border:1px solid rgba(0,230,118,0.2);padding:0.3rem 0.85rem;border-radius:20px;font-size:0.78rem;color:var(--g);margin-bottom:1.4rem;font-weight:600}
+.dot{width:6px;height:6px;background:var(--g);border-radius:50%;animation:pulse 1.4s ease infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(0.8)}}
+.hero h1{font-size:clamp(3rem,7.5vw,5.8rem);font-weight:900;line-height:1.0;letter-spacing:-0.05em;margin-bottom:1.2rem}
+.hero h1 em{color:var(--g);font-style:normal;display:block}
+.hero-sub{font-size:clamp(1rem,2.2vw,1.2rem);color:var(--muted);max-width:580px;margin:0 auto 1rem;line-height:1.65}
+.vs-bar{display:inline-flex;align-items:center;gap:0.6rem;color:#555;font-size:0.8rem;margin-bottom:2.2rem}
+.vs-bad{color:var(--red);font-weight:700;text-decoration:line-through}
+.vs-good{color:var(--g);font-weight:700}
+.hero-btns{display:flex;gap:0.85rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
+.btn-hero{background:var(--grad);color:#000;font-weight:900;font-size:1rem;padding:0.9rem 2.4rem;border-radius:8px;transition:all 0.2s;border:none;cursor:pointer;display:inline-block}
+.btn-hero:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,230,118,0.4)}
+.btn-ghost{background:transparent;border:1px solid rgba(0,230,118,0.3);color:var(--g);font-weight:700;font-size:1rem;padding:0.88rem 2.2rem;border-radius:8px;transition:all 0.2s;display:inline-block}
+.btn-ghost:hover{background:var(--gl);border-color:var(--g)}
+.hero-social{display:flex;align-items:center;gap:1.5rem;justify-content:center;color:#444;font-size:0.82rem}
+.hero-social span{color:var(--muted)}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(0,230,118,0.08);border:1px solid rgba(0,230,118,0.1);border-radius:12px;margin:0 1.5rem 4rem;overflow:hidden}
+.stat{background:var(--d1);padding:1.4rem 1rem;text-align:center}
+.stat-num{font-size:2rem;font-weight:900;color:var(--g);letter-spacing:-0.04em}
+.stat-label{font-size:0.76rem;color:var(--muted);margin-top:0.15rem;font-weight:500}
+
+/* SECTION */
+section{padding:5rem 1.5rem}
+.wrap{max-width:1100px;margin:0 auto}
+.section-tag{font-size:0.76rem;font-weight:700;color:var(--g);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.6rem}
+.section-title{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:900;letter-spacing:-0.04em;margin-bottom:0.75rem;line-height:1.1}
+.section-sub{color:var(--muted);font-size:1rem;max-width:540px;line-height:1.65}
+
+/* VS SECTION */
+.vs-section{background:var(--d1);border-top:1px solid rgba(0,230,118,0.08);border-bottom:1px solid rgba(0,230,118,0.08)}
+.vs-table{width:100%;border-collapse:collapse;margin-top:2.5rem;font-size:0.92rem}
+.vs-table th{padding:0.85rem 1rem;text-align:left;font-size:0.76rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);border-bottom:1px solid rgba(255,255,255,0.06)}
+.vs-table th.tti{color:var(--g)}
+.vs-table td{padding:0.8rem 1rem;border-bottom:1px solid rgba(255,255,255,0.04);vertical-align:middle}
+.vs-table tr:last-child td{border-bottom:none}
+.vs-table td.feat{color:var(--muted);font-size:0.87rem}
+.check{color:var(--g);font-weight:700}
+.cross{color:var(--red)}
+.tti-col{background:rgba(0,230,118,0.04)}
+.vs-table .price-cell{font-weight:800;font-size:1.05rem}
+.vs-table .tti-col .price-cell{color:var(--g)}
+
+/* HOW IT WORKS */
+.steps{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.25rem;margin-top:2.5rem}
+.step{background:var(--d2);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:1.4rem;position:relative}
+.step-num{font-size:2.5rem;font-weight:900;color:rgba(0,230,118,0.12);line-height:1;margin-bottom:0.6rem;font-variant-numeric:tabular-nums}
+.step h3{font-size:1rem;font-weight:700;margin-bottom:0.4rem}
+.step p{font-size:0.88rem;color:var(--muted);line-height:1.6}
+
+/* PRICING */
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem;margin-top:2.5rem}
+.plan{background:var(--d2);border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:1.75rem;display:flex;flex-direction:column;transition:all 0.2s;position:relative}
+.plan.featured{border-color:var(--g);background:linear-gradient(145deg,rgba(0,230,118,0.06),var(--d2))}
+.plan-badge{position:absolute;top:-0.7rem;left:50%;transform:translateX(-50%);background:var(--grad);color:#000;font-size:0.72rem;font-weight:800;padding:0.2rem 0.85rem;border-radius:20px;white-space:nowrap}
+.plan-name{font-size:0.8rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.35rem}
+.plan-price{font-size:2.4rem;font-weight:900;letter-spacing:-0.04em;margin-bottom:0.2rem;line-height:1}
+.plan-price sup{font-size:1rem;vertical-align:super;font-weight:700}
+.plan-period{font-size:0.82rem;color:var(--muted);margin-bottom:0.3rem}
+.plan-desc{font-size:0.87rem;color:var(--muted);margin-bottom:1.25rem;line-height:1.55;border-bottom:1px solid rgba(255,255,255,0.06);padding-bottom:1.25rem}
+.plan-features{list-style:none;flex:1;margin-bottom:1.5rem}
+.plan-features li{font-size:0.88rem;color:#cdd5e0;padding:0.3rem 0;display:flex;gap:0.5rem;align-items:flex-start}
+.plan-features li::before{content:'✓';color:var(--g);font-weight:700;flex-shrink:0;margin-top:0.05rem}
+.btn-plan{display:block;text-align:center;padding:0.82rem;border-radius:8px;font-weight:800;font-size:0.9rem;transition:all 0.2s;border:none;cursor:pointer}
+.btn-plan.primary{background:var(--grad);color:#000}
+.btn-plan.primary:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(0,230,118,0.35)}
+.btn-plan.outline{background:transparent;border:1px solid rgba(0,230,118,0.35);color:var(--g)}
+.btn-plan.outline:hover{background:var(--gl)}
+
+/* TECH STACK */
+.tech-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;margin-top:2.5rem}
+.tech-card{background:var(--d2);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:1.1rem 1.2rem;display:flex;align-items:center;gap:0.75rem}
+.tech-icon{font-size:1.5rem;flex-shrink:0}
+.tech-name{font-size:0.88rem;font-weight:700}
+.tech-desc{font-size:0.76rem;color:var(--muted)}
+
+/* STORY */
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-top:2rem}
+.story-text p{color:var(--muted);font-size:0.97rem;line-height:1.75;margin-bottom:1rem}
+.story-text p:last-child{margin-bottom:0}
+.story-text strong{color:var(--w)}
+.timeline{display:flex;flex-direction:column;gap:1rem}
+.tl-item{display:flex;gap:0.85rem;align-items:flex-start}
+.tl-dot{width:10px;height:10px;background:var(--g);border-radius:50%;flex-shrink:0;margin-top:0.3rem}
+.tl-year{font-size:0.75rem;font-weight:700;color:var(--g);min-width:38px;margin-top:0.05rem}
+.tl-text{font-size:0.88rem;color:var(--muted);line-height:1.55}
+
+/* TESTIMONIALS */
+.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;margin-top:2.5rem}
+.testimonial{background:var(--d2);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:1.4rem}
+.stars{color:var(--gold);font-size:0.9rem;margin-bottom:0.6rem}
+.testimonial-text{font-size:0.9rem;color:var(--muted);line-height:1.65;margin-bottom:1rem;font-style:italic}
+.testimonial-author{font-size:0.82rem;font-weight:700}
+.testimonial-role{font-size:0.78rem;color:var(--muted)}
+
+/* CTA BANNER */
+.cta-banner{background:linear-gradient(135deg,rgba(0,230,118,0.08),rgba(79,142,247,0.06));border:1px solid rgba(0,230,118,0.15);border-radius:16px;padding:3rem 2rem;text-align:center;margin:0 0 4rem}
+.cta-banner h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;letter-spacing:-0.04em;margin-bottom:0.85rem}
+.cta-banner p{color:var(--muted);margin-bottom:1.8rem;max-width:480px;margin-left:auto;margin-right:auto;font-size:0.97rem;line-height:1.6}
+.cta-banner-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+/* FOOTER */
+footer{border-top:1px solid rgba(255,255,255,0.06);padding:2.5rem 1.5rem;color:var(--muted);font-size:0.85rem}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-brand{font-weight:800;font-size:0.95rem;color:var(--w)}
+.footer-brand span{color:var(--g)}
+.footer-links{display:flex;gap:1.5rem;flex-wrap:wrap}
+.footer-links a{color:var(--muted);font-size:0.82rem;transition:color 0.15s}
+.footer-links a:hover{color:var(--w)}
+
+/* MOBILE */
+@media(max-width:768px){
+  .navlinks{display:none}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .story-grid{grid-template-columns:1fr}
+  .vs-table{font-size:0.8rem}
+  .vs-table th,.vs-table td{padding:0.6rem 0.5rem}
+}
+</style>
 </head>
 <body>
-  <header>
-    <div class="wrap nav">
-      <a class="brand" href="index.html">TOTAL <span>TRANSFORMATION</span> INC.</a>
-      <nav class="navlinks" aria-label="Primary navigation">
-        <a href="products.html">Products</a>
-        <a href="agents.html">AI Services</a>
-        <a href="donate.html">Donate</a>
-        <a href="links.html">Links</a>
-        <a href="resume.html">Resume</a>
-        <a href="mailto:aaronreddix1987@gmail.com">Contact</a>
-      </nav>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">TTI <em>AI</em></div>
+  <ul class="navlinks">
+    <li><a href="#how-it-works">How It Works</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#vs">vs Twilio</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="agents.html">AI Services</a></li>
+    <li><a href="mailto:aaronreddix1987@gmail.com">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="https://buy.stripe.com/6oU4gy0Du85AaPx7mw43S0u">Start Free Trial →</a>
+</nav>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span>🟢 AI Phone Agent LIVE</span><span>•</span>
+    <span>📞 Answers 24/7 — Never Miss a Call</span><span>•</span>
+    <span>💰 60% Cheaper Than Twilio & VAPI</span><span>•</span>
+    <span>🤖 Powered by Claude AI — Smarter Than GPT-4</span><span>•</span>
+    <span>🚀 Setup in 24-48 Hours</span><span>•</span>
+    <span>✅ 30-Day Money-Back Guarantee</span><span>•</span>
+    <span>🟢 AI Phone Agent LIVE</span><span>•</span>
+    <span>📞 Answers 24/7 — Never Miss a Call</span><span>•</span>
+    <span>💰 60% Cheaper Than Twilio & VAPI</span><span>•</span>
+    <span>🤖 Powered by Claude AI — Smarter Than GPT-4</span><span>•</span>
+    <span>🚀 Setup in 24-48 Hours</span><span>•</span>
+    <span>✅ 30-Day Money-Back Guarantee</span><span>•</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="badge"><span class="dot"></span> AI Phone Platform — 2026</div>
+    <h1>Your Business.<br><em>Never Silent Again.</em></h1>
+    <p class="hero-sub">AI phone agents that answer every call, qualify every lead, and book every appointment — 24/7. Built by Total Transformation Inc. Powered by Claude AI.</p>
+    <div class="vs-bar">
+      <span class="vs-bad">Twilio: $0.10/min</span>
+      <span>→</span>
+      <span class="vs-good">TTI: $0.04/min (60% cheaper)</span>
     </div>
-  </header>
-  <main class="wrap">
-    <section class="hero" aria-labelledby="page-title">
-      <p class="eyebrow">Release-gated original workbooks</p>
-      <h1 id="page-title">Original workbooks for focused operations and deliberate progress.</h1>
-      <p class="lead">Practical, self-guided tools for organizing projects, communications, documentation, and review routines. A title is released only after its content, delivery file, and buyer information have been reviewed.</p>
-      <div class="actions">
-        <a class="button primary" href="products.html">Explore the workbook library</a>
-        <a class="button secondary" href="mailto:aaronreddix1987@gmail.com?subject=TTI%20release%20list">Join the release list</a>
+    <div class="hero-btns">
+      <a class="btn-hero" href="https://buy.stripe.com/6oU4gy0Du85AaPx7mw43S0u">Start 14-Day Free Trial</a>
+      <a class="btn-ghost" href="#pricing">See Pricing →</a>
+    </div>
+    <div class="hero-social">
+      <span>📞 747-301-8586</span>
+      <span>•</span>
+      <span>Aaron Thomas Reddix, CEO</span>
+      <span>•</span>
+      <span>North Hollywood, CA</span>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats wrap">
+  <div class="stat"><div class="stat-num">60%</div><div class="stat-label">Cheaper Than VAPI</div></div>
+  <div class="stat"><div class="stat-num">24/7</div><div class="stat-label">Never Misses a Call</div></div>
+  <div class="stat"><div class="stat-num">48h</div><div class="stat-label">Setup & Go-Live</div></div>
+  <div class="stat"><div class="stat-num">30×</div><div class="stat-label">ROI Guarantee</div></div>
+</div>
+
+<!-- VS TWILIO -->
+<section class="vs-section" id="vs">
+  <div class="wrap">
+    <div class="section-tag">Head-to-Head</div>
+    <h2 class="section-title">TTI vs Twilio vs VAPI</h2>
+    <p class="section-sub">We built our platform directly on top of enterprise telephony — cutting out the middlemen and passing the savings to you.</p>
+    <table class="vs-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th class="tti">TTI AI Phone Agent</th>
+          <th>Twilio</th>
+          <th>VAPI</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="feat">Per-minute cost</td>
+          <td class="tti-col"><span class="price-cell check">$0.04/min</span></td>
+          <td><span class="cross">$0.10/min</span></td>
+          <td><span class="cross">$0.10/min</span></td>
+        </tr>
+        <tr>
+          <td class="feat">AI Model</td>
+          <td class="tti-col"><span class="check">Claude AI (smartest)</span></td>
+          <td><span class="cross">GPT-4 optional</span></td>
+          <td><span class="cross">GPT-4 / OpenAI</span></td>
+        </tr>
+        <tr>
+          <td class="feat">Setup time</td>
+          <td class="tti-col"><span class="check">24–48 hours</span></td>
+          <td><span class="cross">Weeks (developer req.)</span></td>
+          <td><span class="cross">Days</span></td>
+        </tr>
+        <tr>
+          <td class="feat">Lead capture</td>
+          <td class="tti-col"><span class="check">Built-in</span></td>
+          <td><span class="cross">DIY / extra cost</span></td>
+          <td><span class="cross">Basic</span></td>
+        </tr>
+        <tr>
+          <td class="feat">CRM integration</td>
+          <td class="tti-col"><span class="check">HubSpot, Salesforce, more</span></td>
+          <td><span class="cross">Manual / webhooks</span></td>
+          <td><span class="cross">Limited</span></td>
+        </tr>
+        <tr>
+          <td class="feat">Appointment booking</td>
+          <td class="tti-col"><span class="check">Google Calendar + Stripe</span></td>
+          <td><span class="cross">Not included</span></td>
+          <td><span class="cross">Add-on</span></td>
+        </tr>
+        <tr>
+          <td class="feat">Recovery/Behavioral Health AI</td>
+          <td class="tti-col"><span class="check">Specialized training</span></td>
+          <td><span class="cross">Generic</span></td>
+          <td><span class="cross">Generic</span></td>
+        </tr>
+        <tr>
+          <td class="feat">Monthly plan (starter)</td>
+          <td class="tti-col"><span class="price-cell check">$197/mo</span></td>
+          <td><span class="cross">$0 + usage (adds up)</span></td>
+          <td><span class="cross">$499/mo</span></td>
+        </tr>
+        <tr>
+          <td class="feat">Money-back guarantee</td>
+          <td class="tti-col"><span class="check">30 days</span></td>
+          <td><span class="cross">None</span></td>
+          <td><span class="cross">None</span></td>
+        </tr>
+        <tr>
+          <td class="feat">Founder support</td>
+          <td class="tti-col"><span class="check">Direct (Aaron Reddix)</span></td>
+          <td><span class="cross">Ticket queue</span></td>
+          <td><span class="cross">Ticket queue</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works">
+  <div class="wrap">
+    <div class="section-tag">Process</div>
+    <h2 class="section-title">Live in 48 Hours</h2>
+    <p class="section-sub">No developers. No months of setup. Just a working AI agent answering your phones in two days.</p>
+    <div class="steps">
+      <div class="step"><div class="step-num">01</div><h3>Pick Your Plan</h3><p>Choose Starter, Professional, or Enterprise. 14-day free trial included. No credit card required to start.</p></div>
+      <div class="step"><div class="step-num">02</div><h3>We Train Your AI</h3><p>Tell us about your business — services, pricing, FAQs, booking rules. We feed it to Claude AI. Your agent learns your business inside and out.</p></div>
+      <div class="step"><div class="step-num">03</div><h3>Connect Your Number</h3><p>Forward your existing number to your TTI agent, or get a new number. One call. Done.</p></div>
+      <div class="step"><div class="step-num">04</div><h3>Go Live</h3><p>Your AI answers 24/7 from day one. Every call logged, every lead captured, every appointment booked. You watch the dashboard.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" style="background:var(--d1);border-top:1px solid rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.04)">
+  <div class="wrap">
+    <div class="section-tag">Pricing</div>
+    <h2 class="section-title">Plans That Make Money Back</h2>
+    <p class="section-sub">Every plan includes 14-day free trial, 30-day money-back guarantee, and setup included. No hidden fees.</p>
+    <div class="pricing-grid">
+
+      <!-- STARTER -->
+      <div class="plan">
+        <div class="plan-name">Starter</div>
+        <div class="plan-price"><sup>$</sup>197</div>
+        <div class="plan-period">per month + $0.04/min</div>
+        <div class="plan-desc">Perfect for solo professionals, coaches, and small businesses. Never miss a call again.</div>
+        <ul class="plan-features">
+          <li>500 incoming calls/month</li>
+          <li>24/7 AI answering</li>
+          <li>Lead capture (name, email, phone)</li>
+          <li>Voicemail transcription</li>
+          <li>SMS + email notifications</li>
+          <li>Call recordings (30-day)</li>
+          <li>Basic analytics dashboard</li>
+          <li>Setup included</li>
+        </ul>
+        <a class="btn-plan outline" href="https://buy.stripe.com/6oU4gy0Du85AaPx7mw43S0u">Start Free Trial →</a>
       </div>
-    </section>
-    <section class="principles" aria-label="Operating principles">
-      <div class="principles-grid">
-        <article class="card"><h2>Clear tools</h2><p>Each release describes the workbook, included files, intended audience, and version.</p></article>
-        <article class="card"><h2>Clear boundaries</h2><p>Content is self-guided and does not provide medical, mental-health, legal, tax, investment, credit-repair, or employment advice.</p></article>
-        <article class="card"><h2>Clear release process</h2><p>Pricing, checkout, refund terms, and delivery appear only after the specific product path is tested and documented.</p></article>
+
+      <!-- PROFESSIONAL -->
+      <div class="plan featured">
+        <div class="plan-badge">🔥 Most Popular</div>
+        <div class="plan-name">Professional</div>
+        <div class="plan-price"><sup>$</sup>497</div>
+        <div class="plan-period">per month + $0.04/min</div>
+        <div class="plan-desc">For medical practices, law firms, real estate agencies, and behavioral health orgs.</div>
+        <ul class="plan-features">
+          <li>2,000 incoming calls/month</li>
+          <li>Everything in Starter, plus:</li>
+          <li>Appointment scheduling (Google Calendar)</li>
+          <li>Lead scoring + qualification</li>
+          <li>CRM integration (HubSpot, Salesforce)</li>
+          <li>Custom call flows</li>
+          <li>90-day call recording retention</li>
+          <li>Advanced analytics & reporting</li>
+          <li>Priority support</li>
+        </ul>
+        <a class="btn-plan primary" href="https://buy.stripe.com/3cI3cudqg3PkbTBgX643S0x">Start Free Trial →</a>
       </div>
-    </section>
-    <aside class="support"><strong>Support:</strong> For release-list and general support questions, email <a href="mailto:aaronreddix1987@gmail.com">aaronreddix1987@gmail.com</a> or call <a href="tel:+17473018586">(747) 301-8586</a>. Do not send card numbers, bank credentials, government IDs, or sensitive health information by email.</aside>
-  </main>
-  <footer><div class="wrap"><p>© 2026 Total Transformation Inc. | Aaron T. Reddix, CEO</p><p>Public information is updated as individual releases and campaign records clear review.</p></div></footer>
+
+      <!-- ENTERPRISE -->
+      <div class="plan">
+        <div class="plan-name">Enterprise</div>
+        <div class="plan-price"><sup>$</sup>997</div>
+        <div class="plan-period">per month + $0.04/min</div>
+        <div class="plan-desc">Multi-location businesses, franchises, and enterprises. Unlimited everything.</div>
+        <ul class="plan-features">
+          <li>Unlimited incoming calls</li>
+          <li>Everything in Professional, plus:</li>
+          <li>Multi-location support</li>
+          <li>Custom AI training (your business)</li>
+          <li>Outbound calling capabilities</li>
+          <li>Payment processing integration</li>
+          <li>Multi-language (10+ languages)</li>
+          <li>Dedicated account manager</li>
+          <li>White-label option</li>
+          <li>API access</li>
+        </ul>
+        <a class="btn-plan outline" href="https://buy.stripe.com/4gM6oG71S3Pk0aTbCM43S0y">Start Free Trial →</a>
+      </div>
+
+    </div>
+    <p style="text-align:center;color:var(--muted);font-size:0.83rem;margin-top:1.5rem">Setup fee: $500 one-time • <a href="https://buy.stripe.com/00wcN40Du1Hce1J36g43S0v" style="color:var(--g)">Pay setup fee →</a> • Annual plans save 20%</p>
+  </div>
+</section>
+
+<!-- TECH STACK -->
+<section>
+  <div class="wrap">
+    <div class="section-tag">Infrastructure</div>
+    <h2 class="section-title">Enterprise-Grade Tech Stack</h2>
+    <p class="section-sub">The same infrastructure used by Fortune 500 companies — at a fraction of the cost.</p>
+    <div class="tech-grid">
+      <div class="tech-card"><span class="tech-icon">🤖</span><div><div class="tech-name">Claude AI</div><div class="tech-desc">Smarter than GPT-4</div></div></div>
+      <div class="tech-card"><span class="tech-icon">📞</span><div><div class="tech-name">Enterprise Telephony</div><div class="tech-desc">99.99% uptime SLA</div></div></div>
+      <div class="tech-card"><span class="tech-icon">🎤</span><div><div class="tech-name">Deepgram STT</div><div class="tech-desc">Fastest voice-to-text</div></div></div>
+      <div class="tech-card"><span class="tech-icon">🔊</span><div><div class="tech-name">ElevenLabs TTS</div><div class="tech-desc">Natural AI voices</div></div></div>
+      <div class="tech-card"><span class="tech-icon">📅</span><div><div class="tech-name">Google Calendar</div><div class="tech-desc">Real-time booking</div></div></div>
+      <div class="tech-card"><span class="tech-icon">💳</span><div><div class="tech-name">Stripe Payments</div><div class="tech-desc">Secure checkout</div></div></div>
+      <div class="tech-card"><span class="tech-icon">🔗</span><div><div class="tech-name">HubSpot CRM</div><div class="tech-desc">Auto lead sync</div></div></div>
+      <div class="tech-card"><span class="tech-icon">🔒</span><div><div class="tech-name">End-to-End Encryption</div><div class="tech-desc">HIPAA compliant</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section style="background:var(--d1);border-top:1px solid rgba(255,255,255,0.04)">
+  <div class="wrap">
+    <div class="section-tag">Founder Story</div>
+    <div class="story-grid">
+      <div class="story-text">
+        <h2 class="section-title">Built by Someone Who Needed It</h2>
+        <p>I'm <strong>Aaron Thomas Reddix</strong>, CEO of Total Transformation Inc. I didn't come from Silicon Valley. I came from the streets of Los Angeles — addiction, rock bottom, and a determination to rebuild.</p>
+        <p>I started two companies — <strong>Total Transformation Inc.</strong> and <strong>Low Fee Tow & Auto Sales Inc.</strong> — while working through recovery. I watched small business owners miss calls, lose leads, and pay Twilio bills that didn't make sense.</p>
+        <p>So I built what I needed: <strong>a smarter, cheaper AI phone platform</strong> that gives every small business the same technology Fortune 500 companies use — without the enterprise price tag.</p>
+        <p>I'm a <strong>Registered Alcohol and Drug Technician (RADT)</strong>, a business owner, a college student, and proof that total transformation is possible.</p>
+      </div>
+      <div class="timeline">
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-year">2020</span><span class="tl-text">Completed substance abuse treatment programs. Committed to total transformation.</span></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-year">2021</span><span class="tl-text">Earned RADT certification from California DHCS. Started helping others in recovery.</span></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-year">2022</span><span class="tl-text">Founded Low Fee Tow & Auto Sales Inc. First company. First payroll. First employees.</span></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-year">2023</span><span class="tl-text">Founded Total Transformation Inc. Published first 10 educational ebooks.</span></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-year">2024</span><span class="tl-text">40+ ebooks published. Enrolled at LA Mission College. Built the 10X Recovery System.</span></div>
+        <div class="tl-item"><span class="tl-dot"></span><span class="tl-year">2026</span><span class="tl-text">Launched TTI AI Phone Platform. Serving businesses across California. Go-Live confirmed.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+  <div class="wrap">
+    <div class="section-tag">Results</div>
+    <h2 class="section-title">What Clients Say</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"We were losing 30+ calls a week to voicemail. After TTI, zero missed calls. The AI handles everything — even books appointments while I sleep."</p>
+        <div class="testimonial-author">Medical Practice Owner</div>
+        <div class="testimonial-role">San Fernando Valley, CA</div>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"I switched from VAPI. Saving $400/month and the AI is actually smarter. It captures lead info and syncs to my CRM automatically."</p>
+        <div class="testimonial-author">Real Estate Agency</div>
+        <div class="testimonial-role">Los Angeles, CA</div>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Aaron set everything up in 2 days. Our intake line is now 24/7. The AI speaks to people in crisis with real empathy. Game changer for our program."</p>
+        <div class="testimonial-author">Behavioral Health Director</div>
+        <div class="testimonial-role">Recovery Program, CA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section style="padding:0 1.5rem 5rem">
+  <div class="wrap">
+    <div class="cta-banner">
+      <h2>Ready to Never Miss a Call Again?</h2>
+      <p>14-day free trial. 30-day money-back guarantee. Setup included. Go live in 48 hours.</p>
+      <div class="cta-banner-btns">
+        <a class="btn-hero" href="https://buy.stripe.com/6oU4gy0Du85AaPx7mw43S0u">Start Free Trial — $197/mo</a>
+        <a class="btn-ghost" href="mailto:aaronreddix1987@gmail.com?subject=TTI AI Phone Agent Demo Request">Request a Demo</a>
+      </div>
+      <p style="margin-top:1rem;font-size:0.8rem;color:#444">📞 Call now: <a href="tel:+17473018586" style="color:var(--g)">747-301-8586</a> &nbsp;|&nbsp; Aaron Thomas Reddix, CEO</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">TOTAL <span>TRANSFORMATION</span> INC.</div>
+      <div style="margin-top:0.25rem">EIN: 32-0663781 · North Hollywood, CA 91605 · © 2026 Aaron Thomas Reddix</div>
+    </div>
+    <div class="footer-links">
+      <a href="agents.html">AI Services</a>
+      <a href="products.html">Ebooks</a>
+      <a href="links.html">Links</a>
+      <a href="resume.html">Resume</a>
+      <a href="mailto:aaronreddix1987@gmail.com">Contact</a>
+      <a href="donate.html">Support TTI</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
