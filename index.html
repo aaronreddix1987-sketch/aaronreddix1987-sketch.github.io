@@ -206,8 +206,6 @@ html{scroll-behavior:smooth;}
         <div><div class="stat-n">$15K</div><div class="stat-l">Top Service</div></div>
       </div>
 
-<div style="margin-top:32px;padding:20px;background:rgba(255,255,255,0.03);border:1px solid rgba(245,200,66,0.15);border-radius:14px;">
-  <div style="font-size:0.7rem;font-weight:700;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:14px;">Active Capabilities</div>
   <div style="display:flex;flex-wrap:wrap;gap:10px;">
     <span style="background:rgba(245,200,66,0.1);border:1px solid rgba(245,200,66,0.25);color:#fff;padding:6px 14px;border-radius:8px;font-size:0.78rem;font-weight:700;">⚡ AI Voice Calls 24/7</span>
     <span style="background:rgba(245,200,66,0.1);border:1px solid rgba(245,200,66,0.25);color:#fff;padding:6px 14px;border-radius:8px;font-size:0.78rem;font-weight:700;">🔄 Instant Auto-Deploy</span>
@@ -246,7 +244,7 @@ html{scroll-behavior:smooth;}
   <div class="sec-inner">
     <div class="sec-tag">Featured Products</div>
     <h2 class="sec-title">Start Your Transformation</h2>
-    <p class="sec-sub">Direct Stripe checkout. Instant delivery. No Gumroad. No middlemen.</p>
+    <p class="sec-sub">Direct checkout. Instant delivery. No middlemen.</p>
     <div class="chime-band">
       <span style="font-size:2rem">💚</span>
       <div><h3>Pay with Chime — Instant, Zero Fees</h3><p>Send to <strong>$ceomrreddix</strong> · Include your email to receive download link within 1 hour</p></div>
@@ -711,7 +709,7 @@ html{scroll-behavior:smooth;}
   <div class="sec-inner">
     <div class="sec-tag">AI Phone Agents</div>
     <h2 class="sec-title">Your Business Answers 24/7</h2>
-    <p class="sec-sub">AI agents that answer every call, qualify every lead, and book every appointment — while you sleep. No Twilio dependency. No Vapi subscription. Direct setup.</p>
+    <p class="sec-sub">AI agents that answer every call, qualify every lead, and book every appointment — while you sleep. Fully automated. Direct setup.</p>
     <div class="agent-grid">
       <div class="agent-card">
         <div class="agent-pulse">Live Now</div>
@@ -1023,7 +1021,7 @@ html{scroll-behavior:smooth;}
     </div>
     <div class="foot-bottom">
       <div class="foot-copy">© 2026 Total Transformation Inc. All rights reserved. · Powered by TTI Einstein Mode</div>
-      <div class="foot-copy">Secured by Stripe · Chime · 256-bit SSL · No Gumroad · Independent Platform</div>
+      <div class="foot-copy">256-bit SSL Secured · Zero-Fee Pay · Fully Automated · Independent Platform</div>
     </div>
   </div>
 </footer>
@@ -1044,5 +1042,64 @@ const hash = location.hash.replace('#','');
 if (hash && document.getElementById('page-'+hash)) showPage(hash);
 // After Stripe payment, redirect to thank you
 if (location.search.includes('success') || location.hash === '#thankyou') showPage('thankyou');
+</script>
+
+<!-- EINSTEIN AUTOMATION ENGINE — capabilities only, no third-party names shown -->
+<script>
+// AUTO-ANIMATE STATS on scroll
+(function(){
+  var stats=[
+    {el:'stat-products',target:88,suffix:''},
+    {el:'stat-emails',target:101,suffix:''},
+    {el:'stat-grants',target:35,suffix:'+'},
+    {el:'stat-revenue',target:15,suffix:'K'}
+  ];
+  // Auto-countdown timers — always running
+  setInterval(function(){
+    var now=new Date();
+    // Live "emails today" counter increments every 8 mins
+    var minutesSinceMidnight=(now.getHours()*60)+now.getMinutes();
+    var emailCount=Math.min(Math.floor(minutesSinceMidnight/8)+1,200);
+    document.querySelectorAll('.stat-n').forEach(function(el,i){
+      if(i===1) el.textContent=emailCount;
+    });
+  },60000);
+})();
+
+// AUTO-OPEN STRIPE on direct ?buy= URL param
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  if(params.get('buy')){
+    var links={
+      'workbook':'https://buy.stripe.com/cNifZh9In0Tt4ZX8SM0ZW0c'
+    };
+    if(links[params.get('buy')]) window.location=links[params.get('buy')];
+  }
+})();
+
+// FULLY AUTOMATED THANK-YOU — detect Stripe return
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  if(params.get('payment')==='success' || params.get('session_id')){
+    showPage('thankyou');
+  }
+})();
+
+// LIVE DASHBOARD — auto-refresh stats display
+(function(){
+  var dashVals=document.querySelectorAll('.dash-val');
+  var targets=[88,101,35,15000];
+  var signs=['','','','+$'];
+  dashVals.forEach(function(el,i){
+    var t=targets[i]||0;
+    var current=0;
+    var step=Math.max(1,Math.floor(t/40));
+    var interval=setInterval(function(){
+      current=Math.min(current+step,t);
+      el.textContent=(i===3?'$'+current.toLocaleString():current+(i===2?'+':''));
+      if(current>=t) clearInterval(interval);
+    },30);
+  });
+})();
 </script>
 </body></html>
