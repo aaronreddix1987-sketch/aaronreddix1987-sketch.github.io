@@ -238,6 +238,11 @@ footer{background:var(--dark3);border-top:1px solid rgba(201,168,76,.1);padding:
 <div style="display:flex;gap:20px;padding:32px 52px;background:var(--dark2);flex-wrap:wrap;justify-content:center;position:relative;z-index:1;">
   <img src="biz_card.png" alt="Aaron T. Reddix — Business Card" style="height:200px;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.5);border:1px solid rgba(201,168,76,.2);">
   <img src="biz_post.png" alt="Business Office Administration — 30 Week Program" style="height:200px;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.5);border:1px solid rgba(201,168,76,.2);">
+  <img src="meta1.webp" alt="Aaron T. Reddix — Total Transformation Inc." style="height:200px;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.5);border:1px solid rgba(201,168,76,.2);">
+  <img src="meta2.webp" alt="TTI Executive Portrait" style="height:200px;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.5);border:1px solid rgba(201,168,76,.2);">
+  <img src="meta3.webp" alt="TTI Business Office" style="height:200px;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.5);border:1px solid rgba(201,168,76,.2);">
+  <img src="meta4.webp" alt="TTI AI Platform" style="height:200px;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.5);border:1px solid rgba(201,168,76,.2);">
+  <img src="aaron_main.jpg" alt="Aaron T. Reddix CEO" style="height:200px;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.5);border:1px solid rgba(201,168,76,.2);">
 </div>
 
   </div>
@@ -490,7 +495,219 @@ document.getElementById('tool-modal').addEventListener('click',function(e){if(e.
 function cp(id){var el=document.getElementById(id);el.select();document.execCommand('copy');}
 function gv(id){return(document.getElementById(id)||{}).value||'';}
 function showOut(id){document.getElementById(id).style.display='block';}
-function genWB(){var n=gv('wb-n')||'My Business';var t=gv('wb-t');document.getElementById('wb-c').value='<!DOCTYPE html><html><head><title>'+n+'</title><style>body{font-family:system-ui;background:#090910;color:#fff;margin:0}header{background:linear-gradient(135deg,#c9a84c,#f0c060);padding:60px 40px;text-align:center;color:#000}h1{font-size:48px;font-weight:900}.cta{display:inline-block;background:#000;color:#c9a84c;padding:16px 36px;border-radius:10px;text-decoration:none;font-weight:800;margin-top:20px}.sec{padding:60px 40px;max-width:960px;margin:0 auto}</style></head><body><header><h1>'+n+'</h1><p>'+t+' — Powered by TTI</p><a href="https://chime.com/pay/ceomrreddix" class="cta">Get Started</a></header><div class="sec"><h2 style="color:#c9a84c">Our Services</h2><p>Add your content here.</p></div></body></html>';showOut('wb-o');}
+function genWB(){var n=gv('wb-n')||'My Business';var t=gv('wb-t');document.getElementById('wb-c').value='<!DOCTYPE html><html><head><title>'+n+'</title><style>body{font-family:system-ui;background:#090910;color:#fff;margin:0}header{background:linear-gradient(135deg,#c9a84c,#f0c060);padding:60px 40px;text-align:center;color:#000}h1{font-size:48px;font-weight:900}.cta{display:inline-block;background:#000;color:#c9a84c;padding:16px 36px;border-radius:10px;text-decoration:none;font-weight:800;margin-top:20px}.sec{padding:60px 40px;max-width:960px;margin:0 auto}</style></head><body><header><h1>'+n+'</h1><p>'+t+' — Powered by TTI</p><a href="https://chime.com/pay/ceomrreddix" class="cta">Get Started</a></header><div class="sec"><h2 style="color:#c9a84c">Our Services</h2><p>Add your content here.</p></div>
+<div id="ebooks-section" style="margin:40px 0;padding:32px;background:rgba(201,168,76,.06);border-radius:16px;border:1px solid rgba(201,168,76,.2)">
+<h2 style="color:var(--gold);font-size:1.6rem;margin-bottom:8px;text-align:center">📚 TTI DIGITAL PRODUCT CATALOG — INSTANT DOWNLOAD</h2>
+<p style="color:var(--text2);text-align:center;margin-bottom:28px">Pay. Get instant download. No waiting. Powered by Chime: $ceomrreddix</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px">
+<div style="background:var(--dark3);border:1px solid rgba(201,168,76,.15);border-radius:12px;padding:20px;transition:transform .2s" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+<div style="background:linear-gradient(135deg,var(--gold),var(--gold2));border-radius:8px;padding:24px;text-align:center;margin-bottom:14px;font-size:2rem">🤖</div>
+<h3 style="color:var(--gold);font-size:1rem;margin-bottom:8px">AI Automation for Small Business</h3>
+<p style="color:var(--text2);font-size:.85rem;margin-bottom:14px;line-height:1.5">Complete guide to automating your business with AI agents. Save 20+ hrs/week.</p>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+<span style="color:var(--gold);font-size:1.3rem;font-weight:800">$47</span>
+<span style="background:rgba(46,204,113,.15);color:#2ecc71;padding:3px 10px;border-radius:20px;font-size:.75rem">⚡ Instant Download</span>
+</div>
+<a href="https://buy.stripe.com/placeholder_1" onclick="alert('Contact Aaron: (747)301-8586 | Chime: $ceomrreddix\nInstant delivery after payment!');return false;" style="display:block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;text-align:center;padding:12px;border-radius:8px;font-weight:800;text-decoration:none;font-size:.9rem">💳 BUY NOW — INSTANT DOWNLOAD</a>
+</div>
+<div style="background:var(--dark3);border:1px solid rgba(201,168,76,.15);border-radius:12px;padding:20px;transition:transform .2s" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+<div style="background:linear-gradient(135deg,var(--gold),var(--gold2));border-radius:8px;padding:24px;text-align:center;margin-bottom:14px;font-size:2rem">💳</div>
+<h3 style="color:var(--gold);font-size:1rem;margin-bottom:8px">Credit Repair & Business Credit</h3>
+<p style="color:var(--text2);font-size:.85rem;margin-bottom:14px;line-height:1.5">Step-by-step credit repair playbook. Build 700+ score & get business funding.</p>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+<span style="color:var(--gold);font-size:1.3rem;font-weight:800">$37</span>
+<span style="background:rgba(46,204,113,.15);color:#2ecc71;padding:3px 10px;border-radius:20px;font-size:.75rem">⚡ Instant Download</span>
+</div>
+<a href="https://buy.stripe.com/placeholder_2" onclick="alert('Contact Aaron: (747)301-8586 | Chime: $ceomrreddix\nInstant delivery after payment!');return false;" style="display:block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;text-align:center;padding:12px;border-radius:8px;font-weight:800;text-decoration:none;font-size:.9rem">💳 BUY NOW — INSTANT DOWNLOAD</a>
+</div>
+<div style="background:var(--dark3);border:1px solid rgba(201,168,76,.15);border-radius:12px;padding:20px;transition:transform .2s" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+<div style="background:linear-gradient(135deg,var(--gold),var(--gold2));border-radius:8px;padding:24px;text-align:center;margin-bottom:14px;font-size:2rem">🏠</div>
+<h3 style="color:var(--gold);font-size:1rem;margin-bottom:8px">Real Estate Investing & Sober Living</h3>
+<p style="color:var(--text2);font-size:.85rem;margin-bottom:14px;line-height:1.5">How to build a real estate portfolio starting with sober living homes.</p>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+<span style="color:var(--gold);font-size:1.3rem;font-weight:800">$67</span>
+<span style="background:rgba(46,204,113,.15);color:#2ecc71;padding:3px 10px;border-radius:20px;font-size:.75rem">⚡ Instant Download</span>
+</div>
+<a href="https://buy.stripe.com/placeholder_3" onclick="alert('Contact Aaron: (747)301-8586 | Chime: $ceomrreddix\nInstant delivery after payment!');return false;" style="display:block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;text-align:center;padding:12px;border-radius:8px;font-weight:800;text-decoration:none;font-size:.9rem">💳 BUY NOW — INSTANT DOWNLOAD</a>
+</div>
+<div style="background:var(--dark3);border:1px solid rgba(201,168,76,.15);border-radius:12px;padding:20px;transition:transform .2s" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+<div style="background:linear-gradient(135deg,var(--gold),var(--gold2));border-radius:8px;padding:24px;text-align:center;margin-bottom:14px;font-size:2rem">🔒</div>
+<h3 style="color:var(--gold);font-size:1rem;margin-bottom:8px">Cybersecurity Fundamentals Course</h3>
+<p style="color:var(--text2);font-size:.85rem;margin-bottom:14px;line-height:1.5">Full cybersecurity course — certify your team & protect your business.</p>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+<span style="color:var(--gold);font-size:1.3rem;font-weight:800">$97</span>
+<span style="background:rgba(46,204,113,.15);color:#2ecc71;padding:3px 10px;border-radius:20px;font-size:.75rem">⚡ Instant Download</span>
+</div>
+<a href="https://buy.stripe.com/placeholder_4" onclick="alert('Contact Aaron: (747)301-8586 | Chime: $ceomrreddix\nInstant delivery after payment!');return false;" style="display:block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;text-align:center;padding:12px;border-radius:8px;font-weight:800;text-decoration:none;font-size:.9rem">💳 BUY NOW — INSTANT DOWNLOAD</a>
+</div>
+<div style="background:var(--dark3);border:1px solid rgba(201,168,76,.15);border-radius:12px;padding:20px;transition:transform .2s" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+<div style="background:linear-gradient(135deg,var(--gold),var(--gold2));border-radius:8px;padding:24px;text-align:center;margin-bottom:14px;font-size:2rem">🚗</div>
+<h3 style="color:var(--gold);font-size:1rem;margin-bottom:8px">Automotive Business & NEMT Playbook</h3>
+<p style="color:var(--text2);font-size:.85rem;margin-bottom:14px;line-height:1.5">Start your towing, auto, or NEMT business from scratch.</p>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+<span style="color:var(--gold);font-size:1.3rem;font-weight:800">$47</span>
+<span style="background:rgba(46,204,113,.15);color:#2ecc71;padding:3px 10px;border-radius:20px;font-size:.75rem">⚡ Instant Download</span>
+</div>
+<a href="https://buy.stripe.com/placeholder_5" onclick="alert('Contact Aaron: (747)301-8586 | Chime: $ceomrreddix\nInstant delivery after payment!');return false;" style="display:block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;text-align:center;padding:12px;border-radius:8px;font-weight:800;text-decoration:none;font-size:.9rem">💳 BUY NOW — INSTANT DOWNLOAD</a>
+</div>
+<div style="background:var(--dark3);border:1px solid rgba(201,168,76,.15);border-radius:12px;padding:20px;transition:transform .2s" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+<div style="background:linear-gradient(135deg,var(--gold),var(--gold2));border-radius:8px;padding:24px;text-align:center;margin-bottom:14px;font-size:2rem">🏥</div>
+<h3 style="color:var(--gold);font-size:1rem;margin-bottom:8px">Medical Billing Mastery</h3>
+<p style="color:var(--text2);font-size:.85rem;margin-bottom:14px;line-height:1.5">Master medical billing — start your own practice or get hired immediately.</p>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+<span style="color:var(--gold);font-size:1.3rem;font-weight:800">$57</span>
+<span style="background:rgba(46,204,113,.15);color:#2ecc71;padding:3px 10px;border-radius:20px;font-size:.75rem">⚡ Instant Download</span>
+</div>
+<a href="https://buy.stripe.com/placeholder_6" onclick="alert('Contact Aaron: (747)301-8586 | Chime: $ceomrreddix\nInstant delivery after payment!');return false;" style="display:block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;text-align:center;padding:12px;border-radius:8px;font-weight:800;text-decoration:none;font-size:.9rem">💳 BUY NOW — INSTANT DOWNLOAD</a>
+</div>
+<div style="background:var(--dark3);border:1px solid rgba(201,168,76,.15);border-radius:12px;padding:20px;transition:transform .2s" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+<div style="background:linear-gradient(135deg,var(--gold),var(--gold2));border-radius:8px;padding:24px;text-align:center;margin-bottom:14px;font-size:2rem">📋</div>
+<h3 style="color:var(--gold);font-size:1rem;margin-bottom:8px">Medical Data & HIM Careers</h3>
+<p style="color:var(--text2);font-size:.85rem;margin-bottom:14px;line-height:1.5">Healthcare information management career launch guide.</p>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+<span style="color:var(--gold);font-size:1.3rem;font-weight:800">$37</span>
+<span style="background:rgba(46,204,113,.15);color:#2ecc71;padding:3px 10px;border-radius:20px;font-size:.75rem">⚡ Instant Download</span>
+</div>
+<a href="https://buy.stripe.com/placeholder_7" onclick="alert('Contact Aaron: (747)301-8586 | Chime: $ceomrreddix\nInstant delivery after payment!');return false;" style="display:block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;text-align:center;padding:12px;border-radius:8px;font-weight:800;text-decoration:none;font-size:.9rem">💳 BUY NOW — INSTANT DOWNLOAD</a>
+</div>
+<div style="background:var(--dark3);border:1px solid rgba(201,168,76,.15);border-radius:12px;padding:20px;transition:transform .2s" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+<div style="background:linear-gradient(135deg,var(--gold),var(--gold2));border-radius:8px;padding:24px;text-align:center;margin-bottom:14px;font-size:2rem">🔄</div>
+<h3 style="color:var(--gold);font-size:1rem;margin-bottom:8px">Recovery & Re-Entry Success Toolkit</h3>
+<p style="color:var(--text2);font-size:.85rem;margin-bottom:14px;line-height:1.5">Complete toolkit for re-entry into business and professional life.</p>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+<span style="color:var(--gold);font-size:1.3rem;font-weight:800">$27</span>
+<span style="background:rgba(46,204,113,.15);color:#2ecc71;padding:3px 10px;border-radius:20px;font-size:.75rem">⚡ Instant Download</span>
+</div>
+<a href="https://buy.stripe.com/placeholder_8" onclick="alert('Contact Aaron: (747)301-8586 | Chime: $ceomrreddix\nInstant delivery after payment!');return false;" style="display:block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;text-align:center;padding:12px;border-radius:8px;font-weight:800;text-decoration:none;font-size:.9rem">💳 BUY NOW — INSTANT DOWNLOAD</a>
+</div>
+<div style="background:var(--dark3);border:1px solid rgba(201,168,76,.15);border-radius:12px;padding:20px;transition:transform .2s" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+<div style="background:linear-gradient(135deg,var(--gold),var(--gold2));border-radius:8px;padding:24px;text-align:center;margin-bottom:14px;font-size:2rem">✨</div>
+<h3 style="color:var(--gold);font-size:1rem;margin-bottom:8px">Spark Ebook — Ignite Your Business</h3>
+<p style="color:var(--text2);font-size:.85rem;margin-bottom:14px;line-height:1.5">The spark that starts your entrepreneurship journey.</p>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+<span style="color:var(--gold);font-size:1.3rem;font-weight:800">$17</span>
+<span style="background:rgba(46,204,113,.15);color:#2ecc71;padding:3px 10px;border-radius:20px;font-size:.75rem">⚡ Instant Download</span>
+</div>
+<a href="https://buy.stripe.com/placeholder_9" onclick="alert('Contact Aaron: (747)301-8586 | Chime: $ceomrreddix\nInstant delivery after payment!');return false;" style="display:block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;text-align:center;padding:12px;border-radius:8px;font-weight:800;text-decoration:none;font-size:.9rem">💳 BUY NOW — INSTANT DOWNLOAD</a>
+</div>
+<div style="background:var(--dark3);border:1px solid rgba(201,168,76,.15);border-radius:12px;padding:20px;transition:transform .2s" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+<div style="background:linear-gradient(135deg,var(--gold),var(--gold2));border-radius:8px;padding:24px;text-align:center;margin-bottom:14px;font-size:2rem">📈</div>
+<h3 style="color:var(--gold);font-size:1rem;margin-bottom:8px">10M Blueprint Complete Series</h3>
+<p style="color:var(--text2);font-size:.85rem;margin-bottom:14px;line-height:1.5">The complete blueprint to building a $10M business.</p>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+<span style="color:var(--gold);font-size:1.3rem;font-weight:800">$97</span>
+<span style="background:rgba(46,204,113,.15);color:#2ecc71;padding:3px 10px;border-radius:20px;font-size:.75rem">⚡ Instant Download</span>
+</div>
+<a href="https://buy.stripe.com/placeholder_10" onclick="alert('Contact Aaron: (747)301-8586 | Chime: $ceomrreddix\nInstant delivery after payment!');return false;" style="display:block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;text-align:center;padding:12px;border-radius:8px;font-weight:800;text-decoration:none;font-size:.9rem">💳 BUY NOW — INSTANT DOWNLOAD</a>
+</div>
+<div style="background:var(--dark3);border:1px solid rgba(201,168,76,.15);border-radius:12px;padding:20px;transition:transform .2s" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+<div style="background:linear-gradient(135deg,var(--gold),var(--gold2));border-radius:8px;padding:24px;text-align:center;margin-bottom:14px;font-size:2rem">🛠️</div>
+<h3 style="color:var(--gold);font-size:1rem;margin-bottom:8px">System Pack — Business Operating System</h3>
+<p style="color:var(--text2);font-size:.85rem;margin-bottom:14px;line-height:1.5">Build your complete business operating system.</p>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+<span style="color:var(--gold);font-size:1.3rem;font-weight:800">$77</span>
+<span style="background:rgba(46,204,113,.15);color:#2ecc71;padding:3px 10px;border-radius:20px;font-size:.75rem">⚡ Instant Download</span>
+</div>
+<a href="https://buy.stripe.com/placeholder_11" onclick="alert('Contact Aaron: (747)301-8586 | Chime: $ceomrreddix\nInstant delivery after payment!');return false;" style="display:block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;text-align:center;padding:12px;border-radius:8px;font-weight:800;text-decoration:none;font-size:.9rem">💳 BUY NOW — INSTANT DOWNLOAD</a>
+</div>
+<div style="background:var(--dark3);border:1px solid rgba(201,168,76,.15);border-radius:12px;padding:20px;transition:transform .2s" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+<div style="background:linear-gradient(135deg,var(--gold),var(--gold2));border-radius:8px;padding:24px;text-align:center;margin-bottom:14px;font-size:2rem">💰</div>
+<h3 style="color:var(--gold);font-size:1rem;margin-bottom:8px">TTI Business Funding Guide</h3>
+<p style="color:var(--text2);font-size:.85rem;margin-bottom:14px;line-height:1.5">Complete guide to SBA loans, grants, and alternative funding.</p>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+<span style="color:var(--gold);font-size:1.3rem;font-weight:800">$47</span>
+<span style="background:rgba(46,204,113,.15);color:#2ecc71;padding:3px 10px;border-radius:20px;font-size:.75rem">⚡ Instant Download</span>
+</div>
+<a href="https://buy.stripe.com/placeholder_12" onclick="alert('Contact Aaron: (747)301-8586 | Chime: $ceomrreddix\nInstant delivery after payment!');return false;" style="display:block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;text-align:center;padding:12px;border-radius:8px;font-weight:800;text-decoration:none;font-size:.9rem">💳 BUY NOW — INSTANT DOWNLOAD</a>
+</div>
+<div style="background:var(--dark3);border:1px solid rgba(201,168,76,.15);border-radius:12px;padding:20px;transition:transform .2s" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+<div style="background:linear-gradient(135deg,var(--gold),var(--gold2));border-radius:8px;padding:24px;text-align:center;margin-bottom:14px;font-size:2rem">📞</div>
+<h3 style="color:var(--gold);font-size:1rem;margin-bottom:8px">Cold Call Code — AI Phone Agent</h3>
+<p style="color:var(--text2);font-size:.85rem;margin-bottom:14px;line-height:1.5">Script + setup guide for AI phone agents that close deals.</p>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+<span style="color:var(--gold);font-size:1.3rem;font-weight:800">$67</span>
+<span style="background:rgba(46,204,113,.15);color:#2ecc71;padding:3px 10px;border-radius:20px;font-size:.75rem">⚡ Instant Download</span>
+</div>
+<a href="https://buy.stripe.com/placeholder_13" onclick="alert('Contact Aaron: (747)301-8586 | Chime: $ceomrreddix\nInstant delivery after payment!');return false;" style="display:block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;text-align:center;padding:12px;border-radius:8px;font-weight:800;text-decoration:none;font-size:.9rem">💳 BUY NOW — INSTANT DOWNLOAD</a>
+</div>
+<div style="background:var(--dark3);border:1px solid rgba(201,168,76,.15);border-radius:12px;padding:20px;transition:transform .2s" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+<div style="background:linear-gradient(135deg,var(--gold),var(--gold2));border-radius:8px;padding:24px;text-align:center;margin-bottom:14px;font-size:2rem">📧</div>
+<h3 style="color:var(--gold);font-size:1rem;margin-bottom:8px">Email Outreach Sequence Pack</h3>
+<p style="color:var(--text2);font-size:.85rem;margin-bottom:14px;line-height:1.5">The exact email sequences TTI uses to close $7.5K clients.</p>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+<span style="color:var(--gold);font-size:1.3rem;font-weight:800">$37</span>
+<span style="background:rgba(46,204,113,.15);color:#2ecc71;padding:3px 10px;border-radius:20px;font-size:.75rem">⚡ Instant Download</span>
+</div>
+<a href="https://buy.stripe.com/placeholder_14" onclick="alert('Contact Aaron: (747)301-8586 | Chime: $ceomrreddix\nInstant delivery after payment!');return false;" style="display:block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;text-align:center;padding:12px;border-radius:8px;font-weight:800;text-decoration:none;font-size:.9rem">💳 BUY NOW — INSTANT DOWNLOAD</a>
+</div>
+<div style="background:var(--dark3);border:1px solid rgba(201,168,76,.15);border-radius:12px;padding:20px;transition:transform .2s" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+<div style="background:linear-gradient(135deg,var(--gold),var(--gold2));border-radius:8px;padding:24px;text-align:center;margin-bottom:14px;font-size:2rem">🎯</div>
+<h3 style="color:var(--gold);font-size:1rem;margin-bottom:8px">60-Day Launch Roadmap</h3>
+<p style="color:var(--text2);font-size:.85rem;margin-bottom:14px;line-height:1.5">Execute your business launch in 60 days — day by day plan.</p>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+<span style="color:var(--gold);font-size:1.3rem;font-weight:800">$47</span>
+<span style="background:rgba(46,204,113,.15);color:#2ecc71;padding:3px 10px;border-radius:20px;font-size:.75rem">⚡ Instant Download</span>
+</div>
+<a href="https://buy.stripe.com/placeholder_15" onclick="alert('Contact Aaron: (747)301-8586 | Chime: $ceomrreddix\nInstant delivery after payment!');return false;" style="display:block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;text-align:center;padding:12px;border-radius:8px;font-weight:800;text-decoration:none;font-size:.9rem">💳 BUY NOW — INSTANT DOWNLOAD</a>
+</div>
+<div style="background:var(--dark3);border:1px solid rgba(201,168,76,.15);border-radius:12px;padding:20px;transition:transform .2s" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+<div style="background:linear-gradient(135deg,var(--gold),var(--gold2));border-radius:8px;padding:24px;text-align:center;margin-bottom:14px;font-size:2rem">🌟</div>
+<h3 style="color:var(--gold);font-size:1rem;margin-bottom:8px">Reentry Success Toolkit</h3>
+<p style="color:var(--text2);font-size:.85rem;margin-bottom:14px;line-height:1.5">Resources and roadmap for successful business reentry.</p>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+<span style="color:var(--gold);font-size:1.3rem;font-weight:800">$27</span>
+<span style="background:rgba(46,204,113,.15);color:#2ecc71;padding:3px 10px;border-radius:20px;font-size:.75rem">⚡ Instant Download</span>
+</div>
+<a href="https://buy.stripe.com/placeholder_16" onclick="alert('Contact Aaron: (747)301-8586 | Chime: $ceomrreddix\nInstant delivery after payment!');return false;" style="display:block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;text-align:center;padding:12px;border-radius:8px;font-weight:800;text-decoration:none;font-size:.9rem">💳 BUY NOW — INSTANT DOWNLOAD</a>
+</div>
+<div style="background:var(--dark3);border:1px solid rgba(201,168,76,.15);border-radius:12px;padding:20px;transition:transform .2s" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+<div style="background:linear-gradient(135deg,var(--gold),var(--gold2));border-radius:8px;padding:24px;text-align:center;margin-bottom:14px;font-size:2rem">📖</div>
+<h3 style="color:var(--gold);font-size:1rem;margin-bottom:8px">Twelve Step Study Guide</h3>
+<p style="color:var(--text2);font-size:.85rem;margin-bottom:14px;line-height:1.5">Structured study guide for professional development.</p>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+<span style="color:var(--gold);font-size:1.3rem;font-weight:800">$17</span>
+<span style="background:rgba(46,204,113,.15);color:#2ecc71;padding:3px 10px;border-radius:20px;font-size:.75rem">⚡ Instant Download</span>
+</div>
+<a href="https://buy.stripe.com/placeholder_17" onclick="alert('Contact Aaron: (747)301-8586 | Chime: $ceomrreddix\nInstant delivery after payment!');return false;" style="display:block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;text-align:center;padding:12px;border-radius:8px;font-weight:800;text-decoration:none;font-size:.9rem">💳 BUY NOW — INSTANT DOWNLOAD</a>
+</div>
+<div style="background:var(--dark3);border:1px solid rgba(201,168,76,.15);border-radius:12px;padding:20px;transition:transform .2s" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+<div style="background:linear-gradient(135deg,var(--gold),var(--gold2));border-radius:8px;padding:24px;text-align:center;margin-bottom:14px;font-size:2rem">🔐</div>
+<h3 style="color:var(--gold);font-size:1rem;margin-bottom:8px">Cybersecurity Full Course + Workbook</h3>
+<p style="color:var(--text2);font-size:.85rem;margin-bottom:14px;line-height:1.5">Complete cybersecurity training with workbook exercises.</p>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+<span style="color:var(--gold);font-size:1.3rem;font-weight:800">$127</span>
+<span style="background:rgba(46,204,113,.15);color:#2ecc71;padding:3px 10px;border-radius:20px;font-size:.75rem">⚡ Instant Download</span>
+</div>
+<a href="https://buy.stripe.com/placeholder_18" onclick="alert('Contact Aaron: (747)301-8586 | Chime: $ceomrreddix\nInstant delivery after payment!');return false;" style="display:block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;text-align:center;padding:12px;border-radius:8px;font-weight:800;text-decoration:none;font-size:.9rem">💳 BUY NOW — INSTANT DOWNLOAD</a>
+</div>
+<div style="background:var(--dark3);border:1px solid rgba(201,168,76,.15);border-radius:12px;padding:20px;transition:transform .2s" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+<div style="background:linear-gradient(135deg,var(--gold),var(--gold2));border-radius:8px;padding:24px;text-align:center;margin-bottom:14px;font-size:2rem">👔</div>
+<h3 style="color:var(--gold);font-size:1rem;margin-bottom:8px">Dan Martell Exec Admin Playbook</h3>
+<p style="color:var(--text2);font-size:.85rem;margin-bottom:14px;line-height:1.5">Build your executive admin system — buy back your time.</p>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+<span style="color:var(--gold);font-size:1.3rem;font-weight:800">$57</span>
+<span style="background:rgba(46,204,113,.15);color:#2ecc71;padding:3px 10px;border-radius:20px;font-size:.75rem">⚡ Instant Download</span>
+</div>
+<a href="https://buy.stripe.com/placeholder_19" onclick="alert('Contact Aaron: (747)301-8586 | Chime: $ceomrreddix\nInstant delivery after payment!');return false;" style="display:block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;text-align:center;padding:12px;border-radius:8px;font-weight:800;text-decoration:none;font-size:.9rem">💳 BUY NOW — INSTANT DOWNLOAD</a>
+</div>
+<div style="background:var(--dark3);border:1px solid rgba(201,168,76,.15);border-radius:12px;padding:20px;transition:transform .2s" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+<div style="background:linear-gradient(135deg,var(--gold),var(--gold2));border-radius:8px;padding:24px;text-align:center;margin-bottom:14px;font-size:2rem">💡</div>
+<h3 style="color:var(--gold);font-size:1rem;margin-bottom:8px">AI Company Operating System</h3>
+<p style="color:var(--text2);font-size:.85rem;margin-bottom:14px;line-height:1.5">Set up your complete AI-powered company OS.</p>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+<span style="color:var(--gold);font-size:1.3rem;font-weight:800">$77</span>
+<span style="background:rgba(46,204,113,.15);color:#2ecc71;padding:3px 10px;border-radius:20px;font-size:.75rem">⚡ Instant Download</span>
+</div>
+<a href="https://buy.stripe.com/placeholder_20" onclick="alert('Contact Aaron: (747)301-8586 | Chime: $ceomrreddix\nInstant delivery after payment!');return false;" style="display:block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;text-align:center;padding:12px;border-radius:8px;font-weight:800;text-decoration:none;font-size:.9rem">💳 BUY NOW — INSTANT DOWNLOAD</a>
+</div>
+</div>
+<div style="text-align:center;margin-top:28px;padding:20px;background:rgba(201,168,76,.08);border-radius:12px">
+<p style="color:var(--text);font-weight:700;margin-bottom:8px">💰 BUNDLE ALL 20 PRODUCTS — SAVE 80%</p>
+<p style="color:var(--text2);font-size:.9rem;margin-bottom:14px">Get every ebook, playbook, and guide for one price</p>
+<a href="tel:7473018586" style="background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;padding:14px 32px;border-radius:10px;font-weight:900;text-decoration:none;font-size:1rem;margin-right:12px">📞 CALL FOR BUNDLE</a>
+<a href="https://chime.com/pay/ceomrreddix" style="background:rgba(201,168,76,.15);color:var(--gold);border:1px solid var(--gold);padding:14px 32px;border-radius:10px;font-weight:900;text-decoration:none;font-size:1rem">💳 PAY VIA CHIME</a>
+</div>
+</div></body></html>';showOut('wb-o');}
 function genEW(){var t=gv('ew-t');var r=gv('ew-r')||'[Organization]';var texts={'Grant Application':'Subject: Grant Application — Total Transformation Inc.\n\nDear '+r+',\n\nI am Aaron T. Reddix, CEO of Total Transformation Inc., a 501(c)(3) nonprofit in North Hollywood, CA. We respectfully request $50,000 to expand our AI automation platform and digital product distribution — currently serving 500+ individuals annually.\n\nAttached: full proposal, financials, IRS determination letter.\n\nAaron T. Reddix | (747) 301-8586 | aaronreddix1987@gmail.com','Legal / FCRA Dispute':'Subject: FORMAL FCRA DISPUTE — Section 609 Notice\n\nTo: '+r+'\n\nI am Aaron T. Reddix, 5643 Case Ave, North Hollywood CA 91601. Under 15 U.S.C. § 1681 I formally dispute all inaccurate entries in my file. Please provide source documentation within 30 days or delete the entry per § 1681i. Failure to comply will result in CFPB and FTC complaints plus legal action.\n\nAaron T. Reddix | (747) 301-8586','Loan Application':'Subject: Microloan Application — Total Transformation Inc.\n\nDear '+r+',\n\nApplying for $25,000–$50,000 for Total Transformation Inc. (501c3, North Hollywood CA). We have 88 active Stripe products and are scaling AI automation services. Ready to provide all documentation.\n\nCall: (747) 301-8586\nAaron T. Reddix, CEO'};document.getElementById('ew-c').value=texts[t]||'Subject: Follow-Up — Total Transformation Inc.\n\nDear '+r+',\n\nFollowing up on our previous correspondence. We are ready to move forward immediately.\n\nCall: (747) 301-8586\nAaron T. Reddix, CEO';showOut('ew-o');}
 function genCB(){var b=gv('cb-b');var i=gv('cb-i')||'disputed item';document.getElementById('cb-c').value=new Date().toDateString()+'\n\n'+b+' Disputes Department\n\nRe: Section 609 FCRA Formal Dispute\n\nI, Aaron T. Reddix, dispute the following: '+i+'\n\nUnder Section 609 (15 U.S.C. §1681g), provide all source documents within 30 days or DELETE this entry per §1681i.\n\nAaron T. Reddix | 5643 Case Ave, North Hollywood CA 91601 | (747) 301-8586';showOut('cb-o');}
 function genFB(){var p=gv('fb-p')||'My Product';var pr=gv('fb-pr')||'$47';document.getElementById('fb-c').value='<!DOCTYPE html><html><head><title>'+p+'</title><style>*{margin:0;padding:0}body{font-family:system-ui;background:#090910;color:#fff}section{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 24px;text-align:center}h1{font-size:48px;font-weight:900;color:#c9a84c}.price{font-size:64px;font-weight:900;color:#fff;margin:16px 0}.btn{background:linear-gradient(135deg,#c9a84c,#f0c060);color:#000;border:none;padding:20px 48px;border-radius:12px;font-size:20px;font-weight:900;cursor:pointer;text-decoration:none;display:inline-block;margin-top:8px}</style></head><body><section><h1>'+p+'</h1><div class="price">'+pr+'</div><p style="color:#888;margin-bottom:24px">Instant download after payment</p><a href="https://chime.com/pay/ceomrreddix" class="btn">Buy Now →</a></section></body></html>';showOut('fb-o');}
