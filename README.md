@@ -1,47 +1,28 @@
-# Total Transformation Inc — Live Income Portal
+# Total Transformation Inc — LIVE
 
-**CEO:** Aaron T. Reddix  
-**Live Site:** https://aaronreddix1987-sketch.github.io/  
-**Phone / AI Agent:** (747) 301-8586  
-**Chime (ONLY payment):** $ceomrreddix  
-**Email:** aaronreddix1987@gmail.com  
-**IG:** @low_fee_tow_auto_sales_inc
+**CEO Aaron T. Reddix**  
+**Phone / AI:** (747) 301-8586  
+**Chime (only):** $ceomrreddix  
+**Email:** aaronreddix1987@gmail.com
 
----
+## Go-live income pages (no human required for the sales page itself)
 
-## 💰 How to Buy Ebooks / Digital Products (Fastest Cash)
+| Page | URL |
+|------|-----|
+| **Ebook / Chime sales (clean)** | https://aaronreddix1987-sketch.github.io/ebooks.html |
+| Full wired React deploy | https://aaronreddix1987-sketch.github.io/Final-Deploy-Wired-Github.html |
+| Flash sale | https://aaronreddix1987-sketch.github.io/flashsale.html |
+| Main platform | https://aaronreddix1987-sketch.github.io/ |
 
-1. Pay on Chime to **$ceomrreddix** (put product name in the note)
-2. Text **747-301-8586** with your Chime confirmation + email
-3. Receive Google Drive link instantly
+## Buyer flow (automated as far as possible)
+1. Pay Chime **$ceomrreddix** (product name in note)
+2. Text **747-301-8586** confirmation + email
+3. Receive Drive link
 
-**Current Flash / Priority Offers**
-- Digital Undercover Billionaire
-- Cold Call Code — AI Phone Agent Playbook
-- Money Math Series
-- Credit Repair / Wealth Building
-- Tax Deed Investing Guide
-- Cybersecurity 5-Star
-- Full Operator / System packs
+Fulfillment becomes fully no-human only after public Drive links for each product are set and wired. Until then the text step is required.
 
-See also: [flashsale.html](https://aaronreddix1987-sketch.github.io/flashsale.html) and the full wired deploy page in repo.
-
----
-
-## 🖼️ Branding Assets (Real Face Locked)
-- Professional CEO night-city dual-monitor shot received
-- Luxury black/gold business card branding received
-- Use only these for public-facing pages ("Pictures locked real face only")
-
----
-
-## 🔧 Status 2026-09-06 / 07
-- Site is LIVE
-- Chime path is the only working checkout
-- Stripe page is not active (identity / backend incomplete)
-- Delivery bottleneck = public Drive share links for finished PDFs (most current files are Markdown outlines)
-- Temporary email delays are auto-retrying — do not mass-resend
+## Branding
+Real-face CEO photo + black/gold card assets received and locked.
 
 ## Company
-Total Transformation Inc | EIN 32-0663781 | CA Corp  
-Addresses on file: North Hollywood / Los Angeles
+Total Transformation Inc | EIN 32-0663781
