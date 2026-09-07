@@ -1,28 +1,26 @@
-# Total Transformation Inc — LIVE
+# Total Transformation Inc — LIVE INCOME
 
-**CEO Aaron T. Reddix**  
-**Phone / AI:** (747) 301-8586  
-**Chime (only):** $ceomrreddix  
+**CEO:** Aaron T. Reddix  
+**Primary sales page:** https://aaronreddix1987-sketch.github.io/ebooks.html  
+**Phone:** (747) 301-8586  
+**Chime:** $ceomrreddix  
 **Email:** aaronreddix1987@gmail.com
 
-## Go-live income pages (no human required for the sales page itself)
+## How money comes in (no-human path)
 
-| Page | URL |
-|------|-----|
-| **Ebook / Chime sales (clean)** | https://aaronreddix1987-sketch.github.io/ebooks.html |
-| Full wired React deploy | https://aaronreddix1987-sketch.github.io/Final-Deploy-Wired-Github.html |
-| Flash sale | https://aaronreddix1987-sketch.github.io/flashsale.html |
-| Main platform | https://aaronreddix1987-sketch.github.io/ |
+1. **Card (recommended)** — Buyer clicks Stripe Payment Link → pays → automatic redirect to Google Drive download. Zero human steps.
+2. **Chime** — Pay $ceomrreddix → text 747 → receive link.
 
-## Buyer flow (automated as far as possible)
-1. Pay Chime **$ceomrreddix** (product name in note)
-2. Text **747-301-8586** confirmation + email
-3. Receive Drive link
+## Live URLs
+- Ebooks / sales: https://aaronreddix1987-sketch.github.io/ebooks.html
+- Main: https://aaronreddix1987-sketch.github.io/
+- Flash: https://aaronreddix1987-sketch.github.io/flashsale.html
+- Full wired: https://aaronreddix1987-sketch.github.io/Final-Deploy-Wired-Github.html
 
-Fulfillment becomes fully no-human only after public Drive links for each product are set and wired. Until then the text step is required.
+## Status 2026-09-07
+- Stripe Payment Links active and redirecting to Drive files
+- Chime path remains as secondary
+- Site updated for income-first, bottleneck-removed
+- Social posts drafted for IG / FB / LinkedIn (copy-paste)
 
-## Branding
-Real-face CEO photo + black/gold card assets received and locked.
-
-## Company
-Total Transformation Inc | EIN 32-0663781
+EIN 32-0663781 · CA Corp
