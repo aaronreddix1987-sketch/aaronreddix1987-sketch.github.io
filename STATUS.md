@@ -1,32 +1,37 @@
-# TTI Einstein Mode — Auto-Upgrade Status
-Last updated: September 05, 2026 at 10:23 PM UTC
+# TTI Status — Income First
+Updated: 2026-09-06/07
 
-## Hourly Automation Status
-- Inbox monitoring: ✅ Active (6 accounts)
-- Email sending: ✅ Rate limits cleared — resend in progress
-- Platform: ✅ Live at https://aaronreddix1987-sketch.github.io
-- Stripe: ✅ 88 products, 93 payment links active
-- Drive: ✅ Clean (115 empty folders removed)
-- Legal: ✅ 7 active complaints (FTC, CFPB, HUD, DOJ, FBI x2, CPUC)
-- Cron: ✅ Running hourly (job a74787be)
+## Live
+- Main: https://aaronreddix1987-sketch.github.io/
+- Flash / Chime sales: https://aaronreddix1987-sketch.github.io/flashsale.html
+- Final-Deploy-Wired-Github.html present in repo (full ebook + DVC + AI phone machine)
 
-## Today's Email Activity
-- Wave 1: 55 sent (legal/grant/biz)
-- Wave 2: 70 sent (new foundations)
-- Wave 3: 101 sent (aaronreddix38 — all corrected bounces)
-- Replies: 10 sent (FTC, HUD, Techstars, etc.)
-- Wave 4: 34 sent (platform launch announcement)
-- Rate-reset resend: In progress (81 held messages)
-- TOTAL: 295+ emails sent today
+## Payment
+- **Chime only:** $ceomrreddix
+- Phone: 747-301-8586
+- Do not route buyers to the Stripe checkout page until backend is real
 
-## Platform URLs
-- Main: https://aaronreddix1987-sketch.github.io
-- Store: https://aaronreddix1987-sketch.github.io#store
-- AI Agents: https://aaronreddix1987-sketch.github.io#agents
-- Thank You: https://aaronreddix1987-sketch.github.io/thank-you.html
-- Chime: https://chime.com/pay/ceomrreddix
+## Assets Received Today
+1. Real-face CEO professional photo (dual monitors / city night)
+2. Luxury black marble + gold Total Transformation Inc branding card
+3. Final-Deploy HTML (already in repo)
 
-## Contact
-Aaron T. Reddix | CEO, Total Transformation Inc.
-EIN: 32-0663781 | (747) 301-8586
-aaronreddix38@gmail.com
+## Critical Remaining Work for Automation
+1. Convert top Markdown ebooks to clean PDFs (or publish the MDs)
+2. Set each finished file to "Anyone with the link can view"
+3. Hard-code those links into the sales page + fulfillment SOP
+4. Then fulfillment can be near-automatic (text confirmation → send link)
+
+## Email
+- Recent "bounces" are Delivery Status Notification (Delay) — Gmail is still retrying
+- Do not resend the delayed batch; wait for permanent failure notices only
+
+## Drive
+- TTI Empire — Ebooks & Products contains the current product files (mostly .md + a few PDFs)
+- Keep TTI-CURRENT-LIVE-2026-09-06 as single source of truth
+- No mass deletes performed
+
+## Next Human Actions
+- Make 5–10 public Drive links for the strongest products
+- Paste links here so they can be wired into the live page
+- Fund Bland.ai if AI phone is to go fully live on 747
