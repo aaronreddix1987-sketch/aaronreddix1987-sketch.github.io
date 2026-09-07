@@ -1,32 +1,28 @@
-# TTI LIVE — 2026-09-07 Night
+# REVENUE RUN — 2026-09-07
 
-## Marketed link (keep sharing this)
+## Live money URL
 https://aaronreddix1987-sketch.github.io/
 
-**Money + school page:** https://aaronreddix1987-sketch.github.io/ebooks.html
+## Dan Martell (Buy Back Your Time) application
+1. Productize what already exists (ebooks + Stripe links)
+2. Deliver without your hours (card = auto Drive)
+3. Reinvest first sales into higher automation / agent package
+4. Keep school referral as second income path
 
-## Live now
-- Luxury sales page with DVC/ATC 10X Career referral (Xiomara Figueroa, Wilshire address, apply numbers)
-- Stripe Payment Links = automatic Drive download (no human)
-- Chime $ceomrreddix backup
-- Expanded ebook list from Drive inventory
-- Final-Deploy + Tti-Empire builds available for manual upload (size limit)
+## What runs without you
+- Homepage + offers live
+- Stripe Payment Links → automatic download
+- Chime instructions on page
 
-## Professional photos + full React (Tti-Empire-Os-V9 / 1.2MB index)
-Upload via browser (files too large for single API push):
-1. https://github.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/upload
-2. Drag Tti-Empire-Os-V9.html or index.html → rename to index.html if replacing homepage
-3. Drag CEO photos into /assets/ folder
-4. Commit — live in ~30 seconds
+## What still needs you when a sale hits Chime
+- Text reply with Drive link (until public links are hard-wired per product)
 
-## School marketing angle
-Page now leads with 10X program + Aaron referral so traffic from emails/social can enroll OR buy books.
+## Overnight focus
+- Share the live URL
+- Drive traffic to Buy Now (card first)
+- First revenue → upgrade automation package
 
-## Not fully automated on free tier
-- Grant portal submissions (manual / future paid automation)
-- Mass bounce recovery (Gmail delays were temporary; permanent failures need list hygiene)
-- Instagram/Facebook/LinkedIn direct posting (copy provided earlier)
-
-## Payment truth
-Card Stripe links = real no-human delivery today.
-Chime still needs text confirmation.
+## Not fully auto (honest)
+- Grant portal submissions
+- Social posting from this chat
+- Photo binary on homepage (optional manual upload)
