@@ -1,30 +1,32 @@
-# TTI LIVE STATUS — 2026-09-07
+# TTI LIVE — 2026-09-07 Night
 
-## Marketed link (emails + social already sent)
-**https://aaronreddix1987-sketch.github.io/**
+## Marketed link (keep sharing this)
+https://aaronreddix1987-sketch.github.io/
 
-Primary money page:
-**https://aaronreddix1987-sketch.github.io/ebooks.html**
+**Money + school page:** https://aaronreddix1987-sketch.github.io/ebooks.html
 
-## What is live
-- Luxury sales page (gold theme, expanded catalog)
-- Stripe Payment Links → automatic Drive download (no human)
-- Chime $ceomrreddix backup path
-- Final-Deploy-Wired-Github.html still in repo (full React catalog)
-- Products from Drive + Stripe inventory listed
+## Live now
+- Luxury sales page with DVC/ATC 10X Career referral (Xiomara Figueroa, Wilshire address, apply numbers)
+- Stripe Payment Links = automatic Drive download (no human)
+- Chime $ceomrreddix backup
+- Expanded ebook list from Drive inventory
+- Final-Deploy + Tti-Empire builds available for manual upload (size limit)
 
-## Your 1.2MB React index.html
-Too large for automated push in one shot.
-To replace the homepage with that exact build:
-1. Go to https://github.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/upload
-2. Drag your downloaded index.html
-3. Commit — it becomes the live root instantly
+## Professional photos + full React (Tti-Empire-Os-V9 / 1.2MB index)
+Upload via browser (files too large for single API push):
+1. https://github.com/aaronreddix1987-sketch/aaronreddix1987-sketch.github.io/upload
+2. Drag Tti-Empire-Os-V9.html or index.html → rename to index.html if replacing homepage
+3. Drag CEO photos into /assets/ folder
+4. Commit — live in ~30 seconds
 
-Same for embedding the gold-chain CEO photo: upload the image to /assets/ then reference it.
+## School marketing angle
+Page now leads with 10X program + Aaron referral so traffic from emails/social can enroll OR buy books.
 
-## Payment
-Card = no-human auto delivery  
-Chime = text 747 after pay
+## Not fully automated on free tier
+- Grant portal submissions (manual / future paid automation)
+- Mass bounce recovery (Gmail delays were temporary; permanent failures need list hygiene)
+- Instagram/Facebook/LinkedIn direct posting (copy provided earlier)
 
-## Next
-Upload full React index via GitHub web UI for maximum visual impact on the exact link already in your emails.
+## Payment truth
+Card Stripe links = real no-human delivery today.
+Chime still needs text confirmation.
