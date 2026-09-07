@@ -1,26 +1,21 @@
-# Total Transformation Inc — LIVE INCOME
+# Total Transformation Inc — NO-HUMAN SALES
 
-**CEO:** Aaron T. Reddix  
-**Primary sales page:** https://aaronreddix1987-sketch.github.io/ebooks.html  
-**Phone:** (747) 301-8586  
-**Chime:** $ceomrreddix  
-**Email:** aaronreddix1987@gmail.com
+**Live:** https://aaronreddix1987-sketch.github.io/
 
-## How money comes in (no-human path)
+## Fully automated path (card)
+1. Customer opens the site
+2. Taps Buy Now
+3. Pays on Stripe
+4. Google Drive file downloads automatically
 
-1. **Card (recommended)** — Buyer clicks Stripe Payment Link → pays → automatic redirect to Google Drive download. Zero human steps.
-2. **Chime** — Pay $ceomrreddix → text 747 → receive link.
+No text. No email from you. No computer skills required from you after sharing the link.
 
-## Live URLs
-- Ebooks / sales: https://aaronreddix1987-sketch.github.io/ebooks.html
-- Main: https://aaronreddix1987-sketch.github.io/
-- Flash: https://aaronreddix1987-sketch.github.io/flashsale.html
-- Full wired: https://aaronreddix1987-sketch.github.io/Final-Deploy-Wired-Github.html
+## Your only job
+Share this link:
+https://aaronreddix1987-sketch.github.io/
 
-## Status 2026-09-07
-- Stripe Payment Links active and redirecting to Drive files
-- Chime path remains as secondary
-- Site updated for income-first, bottleneck-removed
-- Social posts drafted for IG / FB / LinkedIn (copy-paste)
+## Phone
+747-301-8586
 
-EIN 32-0663781 · CA Corp
+## School referral
+Mention Aaron T Reddix · Xiomara Figueroa (213) 481-6198 Ext 108
