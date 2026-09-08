@@ -2,150 +2,1309 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Buy Back Your Time — Total Transformation Inc · Aaron T. Reddix</title>
-<meta name="description" content="Dan Martell Buy Back Your Time executed. Digital products. Instant Stripe delivery. 10X Career.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Total Transformation Inc. | Aaron T. Reddix | RADT Certification · AI Automation · Digital Products</title>
+<meta name="description" content="Total Transformation Inc. | CEO Aaron T. Reddix | RADT Certification School, AI automation, digital products, grant hunting & credit repair. North Hollywood, CA 91601.">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-:root{--gold:#C5A572;--gold2:#D4AF37;--bg:#0A0F1A;--card:#000;--line:#1c2433}
-body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:#e8eef8;line-height:1.5;min-height:100vh}
-.mono{font-family:'JetBrains Mono',monospace}
-.serif{font-family:'Instrument Serif',Georgia,serif}
-.bar{background:var(--gold);color:#000;text-align:center;padding:11px 12px;font-weight:800;font-size:11px;letter-spacing:.14em}
-.hero{padding:48px 20px 40px;border-bottom:1px solid var(--line);text-align:center;background:radial-gradient(ellipse 80% 50% at 50% 0%,rgba(197,165,114,.12),transparent 60%)}
-.badge{display:inline-block;border:1px solid var(--gold);color:var(--gold);font-size:10px;letter-spacing:.2em;padding:6px 12px;margin-bottom:16px;font-weight:700}
-h1{font-family:'Instrument Serif',serif;font-size:clamp(32px,6vw,52px);color:#fff;line-height:1.05;margin-bottom:12px}
-.sub{color:#9fb0cc;max-width:560px;margin:0 auto 16px;font-size:15px}
-.ceo{color:var(--gold);font-size:13px;font-weight:700;margin-bottom:8px}
-.live{color:#0FFF9E;font-size:12px;font-weight:700}
-.wrap{max-width:1100px;margin:0 auto;padding:28px 16px 60px}
-.section{border:1px solid var(--line);background:#000;padding:22px;margin-bottom:18px}
-.section-label{font-size:11px;letter-spacing:.22em;color:var(--gold);margin-bottom:14px}
-.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
-.product{background:#000;border:1px solid var(--gold);padding:16px;position:relative;display:flex;flex-direction:column;min-height:250px}
-.product:before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold)}
-.tag{font-size:8px;letter-spacing:.18em;background:var(--gold);color:#000;padding:3px 8px;font-weight:900;align-self:flex-start;margin-bottom:10px}
-.product h3{font-size:15px;font-weight:800;color:#fff;line-height:1.25}
-.price{font-size:24px;font-weight:900;color:var(--gold);margin:8px 0}
-.desc{font-size:12px;opacity:.75;flex:1}
-.btn{display:block;text-align:center;background:var(--gold);color:#000;text-decoration:none;padding:12px;font-size:12px;font-weight:900;letter-spacing:.1em;margin-top:12px}
-.btn-o{background:transparent;border:1px solid var(--gold);color:var(--gold)}
-.school{border-color:rgba(197,165,114,.45)}
-.footer{border-top:2px solid var(--gold);padding:28px 16px;text-align:center;background:#000}
-.footer .brand{font-family:'Instrument Serif',serif;font-size:clamp(18px,2.5vw,26px);color:#fff;margin-bottom:12px}
-.footer .meta{font-size:11px;color:var(--gold);line-height:1.8}
-.footer a{color:var(--gold);font-weight:700}
-.calendar{display:grid;gap:0}
-.cal-row{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid #1a2333}
-.cal-day{min-width:84px;font-size:10px;font-weight:900;letter-spacing:.14em;color:var(--gold)}
-.cal-title{font-size:12px;font-weight:800;color:#fff}
-.cal-desc{font-size:11px;opacity:.65;margin-top:2px}
-@media(max-width:560px){.cal-row{flex-direction:column;gap:4px}}
+:root{
+  --g:#00e676;--gd:#00c853;--gl:#69f0ae;--gll:rgba(0,230,118,0.08);
+  --bk:#050505;--d1:#0a0a0a;--d2:#111111;--d3:#191919;--d4:#222222;
+  --w:#ffffff;--gray:#666;--gold:#ffd700;--red:#ff1744;--blue:#2979ff;
+  --purple:#d500f9;--teal:#00bcd4;--orange:#ff6d00;
+  --grad:linear-gradient(135deg,#00e676,#00c853);
+  --grad2:linear-gradient(135deg,#d500f9,#2979ff);
+  --grad3:linear-gradient(135deg,#ff6d00,#ffd700);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bk);color:var(--w);font-family:'Segoe UI',system-ui,sans-serif;overflow-x:hidden}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:var(--d1)}
+::-webkit-scrollbar-thumb{background:var(--gd);border-radius:2px}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:1000;background:rgba(5,5,5,0.95);backdrop-filter:blur(30px);border-bottom:1px solid rgba(0,230,118,0.12);padding:0 2rem;height:62px;display:flex;align-items:center;justify-content:space-between;}
+.logo{font-size:1.4rem;font-weight:900;letter-spacing:-0.5px;display:flex;align-items:center;gap:0.5rem;}
+.logo span{color:var(--g)}
+.logo-star{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-size:0.9rem;}
+.nav-pills{display:flex;gap:0;list-style:none}
+.nav-pills a{color:#777;text-decoration:none;font-size:0.8rem;padding:0.35rem 0.7rem;border-radius:20px;transition:all 0.2s;}
+.nav-pills a:hover{color:var(--w);background:rgba(255,255,255,0.05)}
+.nav-right{display:flex;gap:0.6rem;align-items:center}
+.btn-free{background:transparent;border:1px solid rgba(0,230,118,0.35);color:var(--g);padding:0.4rem 1rem;border-radius:6px;font-size:0.8rem;font-weight:700;text-decoration:none;transition:all 0.2s;cursor:pointer;}
+.btn-free:hover{background:var(--gll)}
+.btn-start{background:var(--grad);color:#000;padding:0.45rem 1.3rem;border-radius:6px;font-size:0.8rem;font-weight:900;text-decoration:none;border:none;cursor:pointer;transition:all 0.2s;}
+.btn-start:hover{transform:translateY(-1px);box-shadow:0 4px 24px rgba(0,230,118,0.45)}
+.einstein-badge{background:rgba(213,0,249,0.1);border:1px solid rgba(213,0,249,0.3);color:var(--purple);padding:0.25rem 0.7rem;border-radius:20px;font-size:0.72rem;font-weight:700;letter-spacing:1px}
+
+/* TICKER */
+.ticker{background:linear-gradient(90deg,var(--gd),#00bcd4,var(--g));overflow:hidden;padding:0.5rem 0;margin-top:62px}
+.ticker-track{display:flex;gap:3rem;animation:tick 25s linear infinite;white-space:nowrap}
+.ticker-track span{color:#000;font-weight:800;font-size:0.76rem}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:6rem 2rem 4rem;position:relative;overflow:hidden;background:radial-gradient(ellipse 90% 60% at 50% -5%,rgba(0,230,118,0.1) 0%,transparent 65%);}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,230,118,0.035) 1px,transparent 1px),linear-gradient(90deg,rgba(0,230,118,0.035) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse at center,black 0%,transparent 65%);}
+.hero-glow{position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(0,230,118,0.06) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;}
+.hero-inner{position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(0,230,118,0.07);border:1px solid rgba(0,230,118,0.2);padding:0.4rem 1.1rem;border-radius:20px;font-size:0.76rem;color:var(--g);margin-bottom:1.5rem;letter-spacing:0.5px}
+.live-dot{width:7px;height:7px;background:var(--g);border-radius:50%;animation:blink 1.2s infinite;box-shadow:0 0 6px var(--g)}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.15}}
+.hero h1{font-size:clamp(3rem,7.5vw,6rem);font-weight:900;line-height:0.95;letter-spacing:-4px;margin-bottom:1.75rem}
+.hero h1 em{color:var(--g);font-style:normal}
+.hero h1 .line2{font-size:clamp(1.8rem,4vw,3rem);letter-spacing:-2px;color:#888;display:block;margin-top:0.3rem;font-weight:700}
+.hero-sub{font-size:1.1rem;color:#999;max-width:580px;margin:0 auto 1rem;line-height:1.65}
+.hero-compare{display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.5rem;font-size:0.82rem}
+.cross-tag{background:rgba(255,23,68,0.07);border:1px solid rgba(255,23,68,0.15);color:#555;padding:0.3rem 0.7rem;border-radius:20px;text-decoration:line-through}
+.win-tag{background:rgba(0,230,118,0.1);border:1px solid rgba(0,230,118,0.25);color:var(--g);padding:0.3rem 0.9rem;border-radius:20px;font-weight:800}
+.hero-ctas{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:0.75rem}
+.cta-big{background:var(--grad);color:#000;padding:1rem 2.5rem;border-radius:10px;font-weight:900;font-size:1.05rem;text-decoration:none;transition:all 0.25s;border:none;cursor:pointer;box-shadow:0 0 30px rgba(0,230,118,0.2)}
+.cta-big:hover{transform:translateY(-4px);box-shadow:0 16px 50px rgba(0,230,118,0.45)}
+.cta-outline{background:transparent;color:var(--w);padding:1rem 2.5rem;border-radius:10px;font-weight:700;font-size:1.05rem;text-decoration:none;border:1px solid rgba(255,255,255,0.12);transition:all 0.2s;}
+.cta-outline:hover{border-color:var(--g);color:var(--g)}
+.hero-note{color:#333;font-size:0.76rem;margin-bottom:3rem}
+.hero-note span{color:var(--g)}
+
+/* COMPARE BAR */
+.compare-bar{display:flex;gap:0;justify-content:center;flex-wrap:wrap;background:var(--d2);border:1px solid rgba(255,255,255,0.05);border-radius:14px;padding:1.5rem;max-width:860px;margin:0 auto 2rem}
+.compare-item{flex:1;min-width:130px;text-align:center;padding:0.75rem}
+.compare-name{font-size:0.75rem;color:#444;margin-bottom:0.35rem}
+.compare-score{font-size:1.7rem;font-weight:900}
+.compare-score.winner{color:var(--g);text-shadow:0 0 20px rgba(0,230,118,0.4)}
+.compare-score.loser{color:#222}
+.compare-label{font-size:0.65rem;color:#333;margin-top:0.15rem}
+.compare-divider{width:1px;background:rgba(255,255,255,0.04);margin:0 0.25rem}
+.stats-row{display:flex;gap:3rem;justify-content:center;flex-wrap:wrap;padding-top:3rem;border-top:1px solid rgba(255,255,255,0.04)}
+.stat-n{font-size:2.4rem;font-weight:900;color:var(--g);display:block}
+.stat-l{color:#444;font-size:0.76rem;margin-top:0.15rem}
+
+/* SECTIONS */
+section{padding:6rem 2rem}
+.container{max-width:1200px;margin:0 auto}
+.sec-tag{font-size:0.68rem;font-weight:700;letter-spacing:3px;color:var(--g);text-transform:uppercase;margin-bottom:0.6rem}
+.sec-h{font-size:clamp(1.9rem,4vw,3rem);font-weight:900;letter-spacing:-1.5px;margin-bottom:0.75rem;line-height:1.05}
+.sec-p{color:#666;font-size:0.97rem;max-width:540px;line-height:1.75}
+
+/* 7-STAR GRID */
+.feat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.25rem;margin-top:3rem}
+.feat-card{background:var(--d2);border:1px solid rgba(255,255,255,0.05);border-radius:14px;padding:1.75rem;transition:all 0.3s;position:relative;overflow:hidden}
+.feat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:var(--grad);opacity:0;transition:opacity 0.3s}
+.feat-card:hover{border-color:rgba(0,230,118,0.2);transform:translateY(-5px);box-shadow:0 24px 60px rgba(0,0,0,0.5)}
+.feat-card:hover::before{opacity:1}
+.feat-icon{width:46px;height:46px;background:var(--gll);border:1px solid rgba(0,230,118,0.18);border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:1.25rem}
+.feat-title{font-size:1rem;font-weight:800;margin-bottom:0.4rem}
+.feat-desc{color:#555;font-size:0.83rem;line-height:1.65}
+.feat-tag{display:inline-block;margin-top:1rem;font-size:0.65rem;font-weight:800;padding:0.2rem 0.6rem;border-radius:4px;letter-spacing:0.5px}
+.feat-tag.new{background:rgba(0,230,118,0.12);color:var(--g);border:1px solid rgba(0,230,118,0.2)}
+.feat-tag.hot{background:rgba(255,23,68,0.09);color:var(--red);border:1px solid rgba(255,23,68,0.18)}
+.feat-tag.pro{background:rgba(213,0,249,0.08);color:var(--purple);border:1px solid rgba(213,0,249,0.18)}
+.feat-tag.free{background:rgba(255,215,0,0.08);color:var(--gold);border:1px solid rgba(255,215,0,0.18)}
+.feat-tag.law{background:rgba(41,121,255,0.1);color:var(--blue);border:1px solid rgba(41,121,255,0.2)}
+
+/* LAW FIRM SECTION */
+.law-section{background:linear-gradient(180deg,var(--d1) 0%,rgba(41,121,255,0.03) 50%,var(--d1) 100%)}
+.law-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;margin-top:3rem}
+.law-card{background:var(--d2);border:1px solid rgba(41,121,255,0.12);border-radius:14px;padding:1.75rem;transition:all 0.3s;position:relative;overflow:hidden}
+.law-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--blue),transparent);opacity:0;transition:opacity 0.3s}
+.law-card:hover{border-color:rgba(41,121,255,0.3);transform:translateY(-4px);box-shadow:0 20px 50px rgba(41,121,255,0.1)}
+.law-card:hover::before{opacity:1}
+.law-icon{width:46px;height:46px;background:rgba(41,121,255,0.08);border:1px solid rgba(41,121,255,0.18);border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:1.25rem}
+.law-title{font-size:1rem;font-weight:800;margin-bottom:0.4rem}
+.law-desc{color:#555;font-size:0.83rem;line-height:1.65}
+.law-status{margin-top:1rem;font-size:0.72rem;color:var(--blue);font-weight:700;display:flex;align-items:center;gap:0.4rem}
+.law-status::before{content:'⚡'}
+
+/* DAN MARTELL / BUY BACK TIME */
+.buyback-section{background:linear-gradient(180deg,var(--bk),rgba(255,109,0,0.04),var(--bk))}
+.buyback-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-top:3rem}
+.buyback-tiers{display:flex;flex-direction:column;gap:1rem}
+.tier-card{background:var(--d2);border-radius:12px;padding:1.5rem;border-left:3px solid transparent;transition:all 0.2s;cursor:pointer}
+.tier-card.t1{border-left-color:var(--g)}
+.tier-card.t2{border-left-color:var(--gold)}
+.tier-card.t3{border-left-color:var(--orange)}
+.tier-card:hover{background:var(--d3)}
+.tier-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem}
+.tier-name{font-weight:800;font-size:0.95rem}
+.tier-rate{font-size:0.78rem;padding:0.2rem 0.6rem;border-radius:4px;font-weight:700}
+.t1 .tier-rate{background:rgba(0,230,118,0.1);color:var(--g)}
+.t2 .tier-rate{background:rgba(255,215,0,0.1);color:var(--gold)}
+.t3 .tier-rate{background:rgba(255,109,0,0.1);color:var(--orange)}
+.tier-desc{color:#555;font-size:0.82rem;line-height:1.5}
+.tier-tasks{margin-top:0.6rem;display:flex;flex-wrap:wrap;gap:0.35rem}
+.tier-task{font-size:0.68rem;background:rgba(255,255,255,0.04);padding:0.2rem 0.5rem;border-radius:4px;color:#555}
+.roi-calc{background:var(--d2);border:1px solid rgba(255,109,0,0.15);border-radius:16px;padding:2rem}
+.roi-h{font-size:1.1rem;font-weight:800;margin-bottom:1.5rem;color:var(--orange)}
+.roi-input{margin-bottom:1rem}
+.roi-label{font-size:0.75rem;color:#666;margin-bottom:0.35rem;display:block}
+.roi-slider{width:100%;height:4px;background:var(--d3);border-radius:2px;outline:none;-webkit-appearance:none;cursor:pointer;margin-bottom:0.25rem}
+.roi-slider::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:var(--orange);cursor:pointer}
+.roi-val{font-size:1rem;font-weight:800;color:var(--w);text-align:right}
+.roi-result{background:rgba(255,109,0,0.06);border:1px solid rgba(255,109,0,0.15);border-radius:10px;padding:1.25rem;margin-top:1.25rem}
+.roi-result-h{font-size:0.75rem;color:#666;margin-bottom:0.4rem;text-transform:uppercase;letter-spacing:1px}
+.roi-big{font-size:2.4rem;font-weight:900;color:var(--orange)}
+.roi-sub{color:#555;font-size:0.78rem}
+
+/* VS TABLE */
+.vs-section{background:var(--d1)}
+.vs-table{width:100%;border-collapse:collapse;margin-top:3rem;font-size:0.88rem}
+.vs-table th{padding:1rem;text-align:center;font-weight:700;font-size:0.76rem;letter-spacing:1px;color:#555;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,0.05)}
+.vs-table th.tti{color:var(--g);font-size:0.85rem}
+.vs-table td{padding:0.9rem 1rem;border-bottom:1px solid rgba(255,255,255,0.03);text-align:center;color:#666}
+.vs-table td:first-child{text-align:left;color:#ccc;font-size:0.83rem}
+.vs-table td.yes{color:var(--g);font-size:1.1rem}
+.vs-table td.no{color:#252525;font-size:1rem}
+.vs-table td.part{color:#f59e0b;font-size:0.9rem}
+.vs-table tr:hover td{background:rgba(255,255,255,0.015)}
+.vs-table .tti-col{background:rgba(0,230,118,0.03)}
+
+/* AGENTS */
+.agents-section{background:var(--bk)}
+.agents-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.25rem;margin-top:3rem}
+.agent{background:var(--d2);border:1px solid rgba(255,255,255,0.05);border-radius:14px;padding:1.75rem;transition:all 0.3s}
+.agent:hover{border-color:rgba(0,230,118,0.2);transform:translateY(-5px);box-shadow:0 24px 60px rgba(0,0,0,0.4)}
+.agent-head{display:flex;align-items:center;gap:1rem;margin-bottom:1rem}
+.agent-av{width:48px;height:48px;background:var(--gll);border:1px solid rgba(0,230,118,0.18);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem}
+.agent-name{font-size:1rem;font-weight:900}
+.agent-role{color:var(--g);font-size:0.73rem;font-weight:700}
+.agent-desc{color:#555;font-size:0.82rem;line-height:1.6;margin-bottom:1.25rem}
+.agent-metrics{display:flex;gap:0.75rem;margin-bottom:1.25rem}
+.agent-m{text-align:center;flex:1;background:var(--d3);border-radius:8px;padding:0.6rem}
+.agent-mv{font-size:1.1rem;font-weight:900;color:var(--g)}
+.agent-ml{font-size:0.65rem;color:#444;margin-top:0.1rem}
+.agent-btn{display:block;text-align:center;background:var(--gll);color:var(--g);border:1px solid rgba(0,230,118,0.18);border-radius:8px;padding:0.65rem;font-weight:800;text-decoration:none;font-size:0.83rem;transition:all 0.2s}
+.agent-btn:hover{background:var(--grad);color:#000;border-color:transparent}
+.agent-price{font-size:1.4rem;font-weight:900;margin-bottom:0.15rem}
+.agent-period{color:#444;font-size:0.72rem}
+
+/* DEMO TERMINAL */
+.demo-section{background:var(--d2)}
+.demo-inner{display:grid;grid-template-columns:1.1fr 0.9fr;gap:3rem;align-items:start;margin-top:3rem}
+.demo-terminal{background:#000;border:1px solid rgba(0,230,118,0.18);border-radius:14px;overflow:hidden;font-family:'Courier New',monospace}
+.terminal-bar{background:var(--d3);padding:0.75rem 1rem;display:flex;align-items:center;gap:0.5rem;border-bottom:1px solid rgba(255,255,255,0.05)}
+.dot{width:10px;height:10px;border-radius:50%}
+.terminal-title{color:#444;font-size:0.72rem;margin-left:0.5rem}
+.terminal-body{padding:1.5rem;font-size:0.79rem;line-height:2.1;min-height:340px}
+.t-cmd{color:var(--g)}
+.t-out{color:#bbb}
+.t-gray{color:#444}
+.t-warn{color:var(--gold)}
+.t-err{color:var(--red)}
+.t-blue{color:var(--blue)}
+.t-purple{color:var(--purple)}
+.cursor{display:inline-block;width:8px;height:14px;background:var(--g);animation:blink 0.8s infinite;vertical-align:middle}
+.demo-panel{display:flex;flex-direction:column;gap:1rem}
+.demo-feat{background:var(--d3);border:1px solid rgba(255,255,255,0.05);border-radius:10px;padding:1.25rem;transition:all 0.2s}
+.demo-feat:hover{border-color:rgba(0,230,118,0.18)}
+.demo-feat-head{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.4rem}
+.demo-feat-icon{font-size:1.1rem}
+.demo-feat-title{font-size:0.88rem;font-weight:800}
+.demo-feat-desc{color:#555;font-size:0.8rem;line-height:1.5}
+.progress-bar{height:3px;background:rgba(255,255,255,0.05);border-radius:2px;margin-top:0.75rem;overflow:hidden}
+.progress-fill{height:100%;background:var(--grad);border-radius:2px;animation:load 3s ease-in-out infinite alternate}
+@keyframes load{from{width:25%}to{width:96%}}
+
+/* GRANT SECTION */
+.grant-section{background:linear-gradient(180deg,var(--d1),rgba(255,215,0,0.02),var(--d1))}
+.grant-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.25rem;margin-top:3rem}
+.grant-card{background:var(--d2);border:1px solid rgba(255,215,0,0.1);border-radius:14px;padding:1.5rem;transition:all 0.3s}
+.grant-card:hover{border-color:rgba(255,215,0,0.25);transform:translateY(-4px)}
+.grant-amt{font-size:1.8rem;font-weight:900;color:var(--gold);margin-bottom:0.25rem}
+.grant-name{font-weight:800;margin-bottom:0.4rem}
+.grant-desc{color:#555;font-size:0.82rem;line-height:1.55;margin-bottom:0.75rem}
+.grant-status{font-size:0.7rem;font-weight:700;padding:0.2rem 0.6rem;border-radius:4px;display:inline-block}
+.grant-status.ready{background:rgba(0,230,118,0.1);color:var(--g);border:1px solid rgba(0,230,118,0.2)}
+.grant-status.draft{background:rgba(255,215,0,0.08);color:var(--gold);border:1px solid rgba(255,215,0,0.18)}
+
+/* PRICING */
+.pricing-section{background:var(--d2)}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;max-width:960px;margin-left:auto;margin-right:auto}
+.p-card{background:var(--d3);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:2rem;position:relative;transition:all 0.3s}
+.p-card:hover{transform:translateY(-6px);border-color:rgba(0,230,118,0.18)}
+.p-card.featured{background:linear-gradient(160deg,rgba(0,230,118,0.05),var(--d3));border-color:rgba(0,230,118,0.28);transform:scale(1.04)}
+.p-card.featured:hover{transform:scale(1.04) translateY(-6px)}
+.p-feat-tag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--grad);color:#000;font-size:0.65rem;font-weight:900;padding:0.25rem 1rem;border-radius:20px;white-space:nowrap;letter-spacing:1px}
+.p-tier{font-size:0.65rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--g);margin-bottom:0.35rem}
+.p-name{font-size:1.25rem;font-weight:900;margin-bottom:0.2rem}
+.p-price{font-size:3rem;font-weight:900;line-height:1;margin:1rem 0 0.2rem}
+.p-price sup{font-size:1.1rem;vertical-align:top;margin-top:0.6rem}
+.p-period{color:#444;font-size:0.78rem;margin-bottom:1.5rem}
+.p-trial{background:rgba(0,230,118,0.07);border:1px solid rgba(0,230,118,0.13);color:var(--g);font-size:0.72rem;font-weight:700;padding:0.3rem 0.7rem;border-radius:6px;display:inline-block;margin-bottom:1.25rem}
+.p-list{list-style:none;margin-bottom:1.75rem}
+.p-list li{font-size:0.83rem;color:#777;padding:0.35rem 0;padding-left:1.3rem;position:relative;border-bottom:1px solid rgba(255,255,255,0.025)}
+.p-list li::before{content:'✓';color:var(--g);position:absolute;left:0;font-weight:700}
+.p-list li.no{color:#282828}
+.p-list li.no::before{content:'✗';color:#282828}
+.p-btn{display:block;padding:0.85rem;border-radius:8px;font-weight:800;text-decoration:none;transition:all 0.2s;font-size:0.88rem;text-align:center;background:rgba(0,230,118,0.07);color:var(--g);border:1px solid rgba(0,230,118,0.18)}
+.p-card.featured .p-btn{background:var(--grad);color:#000;border:none}
+.p-btn:hover{background:var(--grad);color:#000;border-color:transparent}
+.chime-note{text-align:center;color:#444;font-size:0.8rem;margin-top:2rem}
+.chime-handle{color:var(--g);font-weight:800;font-size:1rem}
+
+/* FREE TRIAL */
+.trial-section{background:radial-gradient(ellipse at center,rgba(0,230,118,0.07) 0%,transparent 65%),var(--d1)}
+.trial-card{background:var(--d2);border:1px solid rgba(0,230,118,0.18);border-radius:22px;padding:3.5rem;max-width:720px;margin:3rem auto 0;text-align:center;box-shadow:0 0 80px rgba(0,230,118,0.08)}
+.trial-badge{display:inline-block;background:var(--grad);color:#000;font-size:0.72rem;font-weight:900;padding:0.3rem 1.1rem;border-radius:20px;letter-spacing:1px;margin-bottom:1.5rem}
+.trial-h{font-size:2.4rem;font-weight:900;margin-bottom:0.75rem;letter-spacing:-1.5px}
+.trial-p{color:#777;margin-bottom:2rem;line-height:1.75;font-size:0.95rem}
+.trial-features{display:grid;grid-template-columns:1fr 1fr;gap:0.65rem;margin-bottom:2rem;text-align:left}
+.trial-feat{display:flex;align-items:center;gap:0.6rem;background:rgba(0,230,118,0.04);border:1px solid rgba(0,230,118,0.09);padding:0.6rem 0.9rem;border-radius:8px;font-size:0.83rem;color:#bbb}
+.trial-feat::before{content:'✓';color:var(--g);font-weight:700;flex-shrink:0}
+.trial-price{margin-bottom:0.5rem}
+.trial-price .free{font-size:2.8rem;font-weight:900;color:var(--g)}
+.trial-price .then{color:#444;font-size:0.83rem}
+.trial-cta{display:block;background:var(--grad);color:#000;padding:1.1rem 2rem;border-radius:12px;font-weight:900;font-size:1.1rem;text-decoration:none;transition:all 0.2s;margin-bottom:1rem;border:none;cursor:pointer;width:100%;box-shadow:0 0 30px rgba(0,230,118,0.3)}
+.trial-cta:hover{transform:translateY(-3px);box-shadow:0 16px 50px rgba(0,230,118,0.5)}
+.trial-fine{color:#333;font-size:0.72rem}
+.trial-fine span{color:var(--g)}
+
+/* LIVE PRODUCT BANNER */
+.product-banner{background:linear-gradient(135deg,rgba(0,230,118,0.06),rgba(41,121,255,0.04));border:1px solid rgba(0,230,118,0.18);border-radius:16px;padding:2rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem}
+.pb-left{}
+.pb-tag{font-size:0.68rem;font-weight:700;letter-spacing:2px;color:var(--g);text-transform:uppercase;margin-bottom:0.4rem}
+.pb-name{font-size:1.3rem;font-weight:900}
+.pb-price{color:var(--g);font-size:2rem;font-weight:900;margin-bottom:0.25rem}
+.pb-desc{color:#666;font-size:0.83rem}
+.pb-btn{background:var(--grad);color:#000;padding:0.9rem 2rem;border-radius:10px;font-weight:900;font-size:0.95rem;text-decoration:none;white-space:nowrap;transition:all 0.2s}
+.pb-btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,230,118,0.4)}
+
+/* FLOW */
+.flow-section{background:var(--bk)}
+.flow-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0;margin-top:3rem}
+.flow-step{background:var(--d2);border:1px solid rgba(255,255,255,0.05);padding:1.75rem 1.5rem;position:relative;transition:all 0.3s}
+.flow-step:hover{background:var(--d3);border-color:rgba(0,230,118,0.18)}
+.flow-num{width:30px;height:30px;background:var(--grad);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:900;color:#000;margin-bottom:1rem}
+.flow-title{font-size:0.92rem;font-weight:800;margin-bottom:0.4rem}
+.flow-desc{color:#555;font-size:0.8rem;line-height:1.5}
+.flow-arrow{position:absolute;right:-12px;top:50%;transform:translateY(-50%);width:22px;height:22px;background:var(--g);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.65rem;color:#000;font-weight:900;z-index:1}
+
+/* CASE STUDIES */
+.cases-section{background:var(--d1)}
+.cases-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem;margin-top:3rem}
+.case{background:var(--d2);border:1px solid rgba(255,255,255,0.05);border-radius:14px;overflow:hidden;transition:all 0.3s}
+.case:hover{border-color:rgba(0,230,118,0.18);transform:translateY(-4px)}
+.case-top{padding:1.5rem;border-bottom:1px solid rgba(255,255,255,0.04)}
+.case-n{font-size:0.65rem;color:var(--g);font-weight:700;letter-spacing:2px;text-transform:uppercase}
+.case-title{font-size:0.97rem;font-weight:800;margin-top:0.35rem}
+.case-body{padding:1.5rem}
+.case-text{color:#666;font-size:0.83rem;line-height:1.6;margin-bottom:1rem}
+.case-result{background:rgba(0,230,118,0.04);border-left:3px solid var(--g);padding:0.65rem 1rem;border-radius:0 6px 6px 0;font-size:0.81rem;color:#bbb}
+.case-nums{display:flex;gap:0.75rem;margin-top:1rem;flex-wrap:wrap}
+.case-num{background:rgba(255,255,255,0.03);padding:0.4rem 0.65rem;border-radius:6px}
+.case-nv{font-size:1.05rem;font-weight:900;color:var(--g)}
+.case-nl{font-size:0.65rem;color:#444}
+
+/* WORKFLOW */
+.workflow-section{background:var(--d2)}
+.workflow-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1rem;margin-top:3rem}
+.wf-card{background:var(--d3);border:1px solid rgba(255,255,255,0.04);border-radius:10px;padding:1.25rem}
+.wf-icon{font-size:1.3rem;margin-bottom:0.65rem}
+.wf-title{font-size:0.88rem;font-weight:800;margin-bottom:0.35rem}
+.wf-desc{color:#555;font-size:0.78rem;line-height:1.5}
+.wf-status{display:flex;align-items:center;gap:0.4rem;margin-top:0.65rem;font-size:0.7rem;color:var(--g);font-weight:700}
+.wf-status::before{content:'●';animation:blink 1.5s infinite}
+
+/* CHAT WIDGET */
+#cw{position:fixed;bottom:1.5rem;right:1.5rem;z-index:9999}
+#cb{width:58px;height:58px;background:var(--grad);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;cursor:pointer;box-shadow:0 4px 24px rgba(0,230,118,0.45);transition:transform 0.2s}
+#cb:hover{transform:scale(1.1)}
+#cbox{display:none;position:absolute;bottom:70px;right:0;width:330px;background:var(--d2);border-radius:18px;border:1px solid rgba(0,230,118,0.13);overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,0.7)}
+#cbox.open{display:block}
+.ch{background:var(--grad);color:#000;padding:1rem 1.1rem;font-weight:900;font-size:0.9rem}
+.ch span{font-size:0.73rem;font-weight:500;opacity:0.65;display:block}
+.cm{height:270px;overflow-y:auto;padding:1rem;display:flex;flex-direction:column;gap:0.75rem}
+.msg{background:var(--d3);border-radius:8px;padding:0.65rem 0.85rem;font-size:0.8rem;color:#ccc;max-width:88%}
+.msg.u{align-self:flex-end;background:rgba(0,230,118,0.09);color:var(--w)}
+.ci{display:flex;padding:0.75rem;gap:0.5rem;border-top:1px solid rgba(255,255,255,0.05)}
+.ci input{flex:1;background:var(--d3);border:1px solid rgba(255,255,255,0.07);border-radius:7px;padding:0.5rem 0.75rem;color:var(--w);font-size:0.8rem;outline:none}
+.ci input:focus{border-color:rgba(0,230,118,0.28)}
+.ci button{background:var(--grad);color:#000;border:none;border-radius:7px;padding:0.5rem 0.9rem;cursor:pointer;font-weight:800;font-size:0.83rem;transition:all 0.15s}
+.ci button:hover{transform:scale(1.05)}
+
+/* FOOTER */
+footer{background:var(--d1);border-top:1px solid rgba(255,255,255,0.04);padding:3rem 2rem 2rem}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;max-width:1200px;margin:0 auto 2rem}
+.footer-brand{color:#333;font-size:0.83rem;line-height:1.75;max-width:260px;margin-top:0.75rem}
+.footer-col h4{font-size:0.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#444;margin-bottom:1rem}
+.footer-col ul{list-style:none}
+.footer-col li{margin-bottom:0.5rem}
+.footer-col a{color:#333;text-decoration:none;font-size:0.83rem;transition:color 0.2s}
+.footer-col a:hover{color:var(--g)}
+.footer-bottom{text-align:center;color:#222;font-size:0.73rem;border-top:1px solid rgba(255,255,255,0.04);padding-top:2rem;max-width:1200px;margin:0 auto}
+
+@media(max-width:768px){
+  .nav-pills{display:none}
+  .demo-inner,.buyback-inner{grid-template-columns:1fr}
+  .pricing-grid{grid-template-columns:1fr}
+  .p-card.featured{transform:none}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .compare-bar{flex-direction:column}
+  .hero h1{letter-spacing:-2px}
+  .trial-features{grid-template-columns:1fr}
+  .einstein-badge{display:none}
+}
+
+/* FOUNDER SECTION */
+.founder-section{background:var(--d1);padding:4rem 2rem;border-bottom:1px solid rgba(0,230,118,0.08)}
+.founder-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:340px 1fr;gap:3rem;align-items:center}
+.founder-img-wrap{position:relative}
+.founder-img{width:100%;max-width:340px;border-radius:16px;border:2px solid rgba(0,230,118,0.3);box-shadow:0 20px 60px rgba(0,0,0,0.7),0 0 40px rgba(0,230,118,0.1);object-fit:cover}
+.founder-badge-wrap{position:absolute;bottom:-12px;left:50%;transform:translateX(-50%);white-space:nowrap}
+.founder-badge{background:var(--grad);color:#000;padding:0.4rem 1.2rem;border-radius:20px;font-size:0.75rem;font-weight:900;letter-spacing:0.5px}
+.founder-info h2{font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;letter-spacing:-1.5px;margin-bottom:0.5rem;line-height:1.1}
+.founder-info .founder-title{color:var(--g);font-size:1rem;font-weight:700;margin-bottom:1.25rem}
+.founder-info p{color:#666;font-size:0.92rem;line-height:1.75;margin-bottom:1.25rem}
+.founder-contact{display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1.5rem}
+.founder-contact a{color:#888;font-size:0.85rem;text-decoration:none;display:flex;align-items:center;gap:0.5rem;transition:color 0.2s}
+.founder-contact a:hover{color:var(--g)}
+.founder-stats{display:flex;gap:2rem;flex-wrap:wrap}
+.f-stat-n{font-size:1.6rem;font-weight:900;color:var(--g);display:block}
+.f-stat-l{color:#444;font-size:0.72rem}
+
+/* SCHOOL ENROLLMENT SECTION */
+.school-section{background:linear-gradient(180deg,var(--bk),rgba(0,230,118,0.03),var(--bk));padding:5rem 2rem}
+.school-inner{max-width:1100px;margin:0 auto}
+.school-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-top:3rem}
+.school-img{width:100%;border-radius:14px;border:1px solid rgba(0,230,118,0.2);box-shadow:0 20px 60px rgba(0,0,0,0.6)}
+.school-content h3{font-size:1.6rem;font-weight:900;letter-spacing:-1px;margin-bottom:1rem;line-height:1.15}
+.school-content p{color:#666;font-size:0.9rem;line-height:1.75;margin-bottom:1.25rem}
+.school-programs{display:flex;flex-direction:column;gap:0.75rem;margin-bottom:1.75rem}
+.prog-item{background:var(--d2);border:1px solid rgba(0,230,118,0.1);border-radius:10px;padding:1rem 1.25rem;display:flex;justify-content:space-between;align-items:center}
+.prog-name{font-weight:800;font-size:0.9rem}
+.prog-badge{background:var(--gll);color:var(--g);border:1px solid rgba(0,230,118,0.2);padding:0.2rem 0.7rem;border-radius:20px;font-size:0.7rem;font-weight:800}
+.enroll-cta{background:var(--grad);color:#000;padding:1rem 2rem;border-radius:10px;font-weight:900;font-size:0.95rem;text-decoration:none;display:inline-block;transition:all 0.2s;margin-right:0.75rem}
+.enroll-cta:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,230,118,0.4)}
+.referral-box{background:rgba(0,230,118,0.05);border:1px solid rgba(0,230,118,0.2);border-radius:10px;padding:1rem 1.25rem;margin-top:1.5rem;font-size:0.85rem;color:#888}
+.referral-code{color:var(--g);font-weight:900;font-size:1rem;letter-spacing:2px}
+
+@media(max-width:768px){
+  .founder-inner,.school-grid{grid-template-columns:1fr}
+  .founder-img{max-width:280px;margin:0 auto;display:block}
+}
+
 </style>
 </head>
 <body>
-<div class="bar mono">DAN MARTELL BUY BACK YOUR TIME · EXECUTED · CARD = INSTANT DOWNLOAD · NO HUMAN</div>
 
-<header class="hero">
-  <div class="badge mono">TOTAL TRANSFORMATION INC · 2026</div>
-  <h1>Buy Back Your Time</h1>
-  <p class="sub">Productize. Deliver automatically. Protect CEO time. From Nothing To Something Corporate.</p>
-  <p class="ceo">Aaron T. Reddix · CEO · 747-301-8586 · aaronreddix1987@gmail.com</p>
-  <p class="live">✓ Live on your shared link · Stripe auto-delivery on card</p>
-</header>
-
-<div class="wrap">
-
-  <div class="section">
-    <div class="section-label mono">SECTION — DIGITAL PRODUCTS · INCOME READY · INSTANT DELIVERY</div>
-    <div class="grid">
-      <div class="product">
-        <span class="tag">CORE OFFER</span>
-        <h3>Buy Back Your Time</h3>
-        <div class="price">AI Edition</div>
-        <p class="desc">Replacement ladder · time audit · systems so you stop trading hours for dollars.</p>
-        <a class="btn" href="https://buy.stripe.com/00wcN40Du1Hce1J36g43S0v" target="_blank" rel="noopener">STRIPE INSTANT →</a>
-      </div>
-      <div class="product">
-        <span class="tag">OPERATOR</span>
-        <h3>Digital Undercover Billionaire</h3>
-        <div class="price">Systems</div>
-        <p class="desc">Playbook systems for building and running the business.</p>
-        <a class="btn" href="https://buy.stripe.com/4gM6oG71S3Pk0aTbCM43S0y" target="_blank" rel="noopener">STRIPE INSTANT →</a>
-      </div>
-      <div class="product">
-        <span class="tag">AI PHONE</span>
-        <h3>Cold Call Code</h3>
-        <div class="price">Playbook</div>
-        <p class="desc">Scripts + structure so the phone makes money without you on every call.</p>
-        <a class="btn" href="https://buy.stripe.com/3cI3cudqg3PkbTBgX643S0x" target="_blank" rel="noopener">STRIPE INSTANT →</a>
-      </div>
-      <div class="product">
-        <span class="tag">HIGH DEMAND</span>
-        <h3>609 Credit Repair System</h3>
-        <div class="price">Complete</div>
-        <p class="desc">Dispute letters, goodwill, funding sequence templates.</p>
-        <a class="btn" href="https://buy.stripe.com/aFafZg5XO85A4r9gX643S0w" target="_blank" rel="noopener">STRIPE INSTANT →</a>
-      </div>
-      <div class="product">
-        <span class="tag">SERIES</span>
-        <h3>10M Blueprint Series</h3>
-        <div class="price">12 ebooks</div>
-        <p class="desc">Full series for operators scaling offers and delivery.</p>
-        <a class="btn" href="https://buy.stripe.com/6oU4gy0Du85AaPx7mw43S0u" target="_blank" rel="noopener">STRIPE INSTANT →</a>
-      </div>
-      <div class="product">
-        <span class="tag">MORE</span>
-        <h3>Full Catalog</h3>
-        <div class="price">All titles</div>
-        <p class="desc">Mindset, packs, guides — expanded library.</p>
-        <a class="btn" href="https://buy.stripe.com/6oUdR8dqg99E8Hp0Y843S0t" target="_blank" rel="noopener">VIEW MORE →</a>
-        <a class="btn btn-o" href="/Final-Deploy-Wired-Github.html">FIVE-STAR CATALOG →</a>
-      </div>
-    </div>
+<!-- NAV -->
+<nav>
+  <div class="logo">TTI<span>Empire</span> <span class="logo-star">★★★★★★★</span></div>
+  <ul class="nav-pills">
+    <li><a href="#features">7-Star Automation</a></li>
+    <li><a href="#law">Law Firm AI</a></li>
+    <li><a href="#buyback">Buy Back Time</a></li>
+    <li><a href="#agents">AI Agents</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#trial">Free Trial</a></li>
+  </ul>
+  <div class="nav-right">
+    <span class="einstein-badge">⚡ EINSTEIN MODE</span>
+    <a href="#trial" class="btn-free">Free Trial</a>
+    <a href="mailto:ceomrreddix@gmail.com?subject=TTI Empire — Deploy Now" class="btn-start">Deploy Now →</a>
   </div>
+</nav>
 
-  <div class="section school">
-    <div class="section-label mono">10X CAREER · SCHOOL REFERRAL</div>
-    <p style="font-size:15px;font-weight:800;color:#fff;margin-bottom:8px">30-Week Business Office Administration</p>
-    <p style="font-size:13px;color:#9fb0cc;margin-bottom:12px">
-      Excel · Word · Outlook · PowerPoint · HR · Payroll · Customer Service<br>
-      Case study: <strong style="color:#fff">From Retail to Office in 30 weeks</strong><br>
-      3470 Wilshire Blvd Suite 11 &amp; 1100, Los Angeles CA 90010
-    </p>
-    <p style="font-size:12px;color:#ccc;margin-bottom:14px">
-      <strong style="color:var(--gold)">Mention Aaron T Reddix at enrollment</strong><br>
-      Admissions: Xiomara Figueroa · (213) 481-6198 Ext 108 · xiomara.figueroa@atcla.edu<br>
-      Referral: 747-301-8586 · aaronreddix1987@gmail.com
-    </p>
-    <a class="btn" href="tel:2139336714" style="display:inline-block;width:auto;padding:12px 20px">APPLY (213) 933-6714</a>
-    <a class="btn btn-o" href="tel:7473018586" style="display:inline-block;width:auto;padding:12px 20px;margin-left:8px">CALL AARON</a>
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span>🚀 Free 30-Day Trial — No Credit Card Needed</span>
+    <span>⚡ Einstein Mode: 24/7 Full Automation Active</span>
+    <span>📧 2,100+ Emails Automated This Week</span>
+    <span>⚖️ 7-Star AI Law Firm — Dispute Letters Ready</span>
+    <span>💰 Dan Martell Buy Back Your Time Mode</span>
+    <span>📞 AI Phone Agents Answer Every Call</span>
+    <span>🏆 Better Than ChatGPT + Manus + OpenClaw</span>
+    <span>💼 $2M+ In Grants Hunted Automatically</span>
+    <span>🚀 Free 30-Day Trial — No Credit Card Needed</span>
+    <span>⚡ Einstein Mode: 24/7 Full Automation Active</span>
+    <span>📧 2,100+ Emails Automated This Week</span>
+    <span>⚖️ 7-Star AI Law Firm — Dispute Letters Ready</span>
+    <span>💰 Dan Martell Buy Back Your Time Mode</span>
+    <span>📞 AI Phone Agents Answer Every Call</span>
+    <span>🏆 Better Than ChatGPT + Manus + OpenClaw</span>
+    <span>💼 $2M+ In Grants Hunted Automatically</span>
   </div>
-
-  <div class="section">
-    <div class="section-label mono">SECTION — CEO CALENDAR PROTECTED · DAN MARTELL</div>
-    <div class="calendar">
-      <div class="cal-row"><div class="cal-day">MONDAY</div><div><div class="cal-title">STRATEGY 7am–12pm</div><div class="cal-desc">No meetings · Vision · Systems</div></div></div>
-      <div class="cal-row"><div class="cal-day">TUESDAY</div><div><div class="cal-title">SALES · MONEY BLOCK 9am–4pm</div><div class="cal-desc">Demos + closes only · $500/hr tasks</div></div></div>
-      <div class="cal-row"><div class="cal-day">WEDNESDAY</div><div><div class="cal-title">CONTENT 9am–1pm</div><div class="cal-desc">1 long-form → 64 micro pieces</div></div></div>
-      <div class="cal-row"><div class="cal-day">THURSDAY</div><div><div class="cal-title">ADMIN REVIEW ONLY 10–11am</div><div class="cal-desc">Check systems · No doing $10/hr work</div></div></div>
-      <div class="cal-row"><div class="cal-day">FRIDAY</div><div><div class="cal-title">REVIEW + INVEST 9am–12pm</div><div class="cal-desc">Income tracker · Reinvest in automation</div></div></div>
-    </div>
-    <p class="mono" style="margin-top:14px;font-size:11px;color:var(--gold);border:1px dashed rgba(197,165,114,.4);padding:12px">All other time: FILL only · vision · partnerships · No $10/hr tasks — DAN MARTELL RULE</p>
-  </div>
-
 </div>
 
-<footer class="footer">
-  <div class="brand">Total Transformation Inc — From Nothing To Something Corporate</div>
-  <div class="meta mono">
-    CEO Aaron T Reddix · 747-301-8586 · aaronreddix1987@gmail.com<br>
-    5645 Case Ave North Hollywood CA 91601 · EIN 32-0663781 · C4861952<br>
-    <a href="https://aaronreddix1987-sketch.github.io/">aaronreddix1987-sketch.github.io</a><br>
-    Card = instant Drive download · Dan Martell Buy Back Your Time executed
+
+
+<!-- FOUNDER SECTION -->
+<section class="founder-section">
+  <div class="founder-inner">
+    <div class="founder-img-wrap">
+      <img src="aaron_main.jpg" alt="Aaron T. Reddix — CEO, Total Transformation Inc." class="founder-img" loading="lazy">
+      <div class="founder-badge-wrap"><span class="founder-badge">⚡ CEO · Einstein Mode Active</span></div>
+    </div>
+    <div class="founder-info">
+      <h2>Aaron T. Reddix</h2>
+      <div class="founder-title">Chief Executive Officer — Total Transformation Inc.</div>
+      <p>Serial entrepreneur, AI automation architect, and school founder. Aaron built TTI to provide certification training, digital tools, and fully automated business systems to entrepreneurs and students across Los Angeles.</p>
+      <p>Powered by Dan Martell's <strong style="color:var(--g)">Buy Back Your Time</strong> and Undercover Billionaire strategies — every system runs 24/7 without human intervention.</p>
+      <div class="founder-contact">
+        <a href="tel:7473018586">📞 (747) 301-8586</a>
+        <a href="mailto:ceomrreddix@gmail.com">✉️ ceomrreddix@gmail.com</a>
+        <a href="#">📍 5645 Case Ave, North Hollywood, CA 91601</a>
+        <span style="color:#555;font-size:0.8rem">EIN: 32-0663781</span>
+      </div>
+      <div class="founder-stats">
+        <div><span class="f-stat-n">6</span><div class="f-stat-l">Email accounts active</div></div>
+        <div><span class="f-stat-n">2,100+</span><div class="f-stat-l">Emails automated/week</div></div>
+        <div><span class="f-stat-n">10+</span><div class="f-stat-l">Digital products live</div></div>
+        <div><span class="f-stat-n">LA</span><div class="f-stat-l">North Hollywood, CA</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-badge"><div class="live-dot"></div> Live Platform · Einstein Mode Active · 7-Star Rating</div>
+    <h1>
+      The AI Platform That<br><em>Runs Your Empire</em>
+      <span class="line2">While You Sleep — No Staff. No Code. No Limits.</span>
+    </h1>
+    <p class="hero-sub">
+      AI phone agents. Legal automation. Grant hunting. Credit repair. Email campaigns. LinkedIn publishing. Group home management. All on autopilot 24/7.
+    </p>
+    <div class="hero-compare">
+      <span class="cross-tag">✗ ChatGPT 4/10</span>
+      <span class="cross-tag">✗ Manus 5/10</span>
+      <span class="cross-tag">✗ OpenClaw 3/10</span>
+      <span class="cross-tag">✗ GitHub 2/10</span>
+      <span class="win-tag">✓ TTI Empire 10/10</span>
+    </div>
+    <div class="hero-ctas">
+      <a href="#trial" class="cta-big">Start Free — 30 Days →</a>
+      <a href="#buyback" class="cta-outline">See ROI Calculator</a>
+    </div>
+    <p class="hero-note">No credit card · No code · Deploys in <span>48 hours</span> · Cancel anytime · Works even when you're offline</p>
+
+    <div class="compare-bar">
+      <div class="compare-item"><div class="compare-name">TTI Empire</div><div class="compare-score winner">10/10</div><div class="compare-label">★★★★★★★</div></div>
+      <div class="compare-divider"></div>
+      <div class="compare-item"><div class="compare-name">ChatGPT 5</div><div class="compare-score loser">4/10</div><div class="compare-label">Chat only</div></div>
+      <div class="compare-divider"></div>
+      <div class="compare-item"><div class="compare-name">Manus</div><div class="compare-score loser">5/10</div><div class="compare-label">Task AI</div></div>
+      <div class="compare-divider"></div>
+      <div class="compare-item"><div class="compare-name">OpenClaw</div><div class="compare-score loser">3/10</div><div class="compare-label">Skills only</div></div>
+      <div class="compare-divider"></div>
+      <div class="compare-item"><div class="compare-name">GitHub</div><div class="compare-score loser">2/10</div><div class="compare-label">Code only</div></div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat"><span class="stat-n" id="s1">2,147</span><div class="stat-l">Emails automated / week</div></div>
+      <div class="stat"><span class="stat-n" id="s2">$2.1M</span><div class="stat-l">Grants hunted to date</div></div>
+      <div class="stat"><span class="stat-n">101</span><div class="stat-l">LinkedIn posts published</div></div>
+      <div class="stat"><span class="stat-n">24/7</span><div class="stat-l">No human needed</div></div>
+      <div class="stat"><span class="stat-n">48hr</span><div class="stat-l">Deploy time</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- LIVE PRODUCT SECTION -->
+<section style="background:var(--d1);padding:4rem 2rem" id="products">
+  <div class="container">
+    <div class="sec-tag">🔴 All Links Verified Live</div>
+    <h2 class="sec-h">10 Live Digital Products</h2>
+    <p class="sec-p" style="margin-bottom:2.5rem">Every product below has an active Stripe checkout. Instant delivery after payment — no waiting, no manual processing.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.25rem">
+
+      <div class="product-banner" style="flex-direction:column;align-items:flex-start;gap:1rem">
+        <div class="pb-left">
+          <div class="pb-tag">🎬 Reality Show Package</div>
+          <div class="pb-name">Love &amp; Rehab — Full Package</div>
+          <div class="pb-price">$97</div>
+          <div class="pb-desc">Full pitch package, media kit, treatment series &amp; producer guide. Instant delivery.</div>
+        </div>
+        <a href="https://buy.stripe.com/4gM4gz5s7cCbfEBfha0ZW0G" class="pb-btn" target="_blank" style="width:100%;text-align:center">Buy Now — $97 →</a>
+      </div>
+
+      <div class="product-banner" style="flex-direction:column;align-items:flex-start;gap:1rem;border-color:rgba(0,188,212,0.25);background:linear-gradient(135deg,rgba(0,188,212,0.05),rgba(0,230,118,0.03))">
+        <div class="pb-left">
+          <div class="pb-tag" style="color:var(--teal)">⏱ Dan Martell Method</div>
+          <div class="pb-name">Buy Back Your Time — AI Edition</div>
+          <div class="pb-price" style="color:var(--teal)">$27</div>
+          <div class="pb-desc">How to use AI to reclaim 20+ hours/week. The system Aaron built at TTI from scratch.</div>
+        </div>
+        <a href="https://buy.stripe.com/3cI3cv3jZ6dN1NL9WQ0ZW1m" class="pb-btn" target="_blank" style="width:100%;text-align:center;background:linear-gradient(135deg,#00bcd4,#00e676)">Buy Now — $27 →</a>
+      </div>
+
+      <div class="product-banner" style="flex-direction:column;align-items:flex-start;gap:1rem;border-color:rgba(41,121,255,0.25);background:linear-gradient(135deg,rgba(41,121,255,0.05),rgba(213,0,249,0.03))">
+        <div class="pb-left">
+          <div class="pb-tag" style="color:var(--blue)">📖 Core Edition</div>
+          <div class="pb-name">Digital Undercover Billionaire — Core</div>
+          <div class="pb-price" style="color:var(--blue)">$27</div>
+          <div class="pb-desc">Build wealth quietly with AI from nothing. The updated undercover billionaire playbook.</div>
+        </div>
+        <a href="https://buy.stripe.com/28E7sL1bR45Fdwt1qk0ZW1n" class="pb-btn" target="_blank" style="width:100%;text-align:center;background:linear-gradient(135deg,#2979ff,#d500f9)">Buy Now — $27 →</a>
+      </div>
+
+      <div class="product-banner" style="flex-direction:column;align-items:flex-start;gap:1rem;border-color:rgba(213,0,249,0.25);background:linear-gradient(135deg,rgba(213,0,249,0.06),rgba(41,121,255,0.03))">
+        <div class="pb-left">
+          <div class="pb-tag" style="color:var(--purple)">🚀 Pro Edition</div>
+          <div class="pb-name">Digital Undercover Billionaire — Pro</div>
+          <div class="pb-price" style="color:var(--purple)">$47</div>
+          <div class="pb-desc">Advanced systems, scaling strategies, and full automation blueprints. Pro level playbook.</div>
+        </div>
+        <a href="https://buy.stripe.com/7sY8wP3jZ0TteAxfha0ZW1o" class="pb-btn" target="_blank" style="width:100%;text-align:center;background:var(--grad2)">Buy Now — $47 →</a>
+      </div>
+
+      <div class="product-banner" style="flex-direction:column;align-items:flex-start;gap:1rem;border-color:rgba(255,215,0,0.3);background:linear-gradient(135deg,rgba(255,215,0,0.06),rgba(255,109,0,0.03))">
+        <div class="pb-left">
+          <div class="pb-tag" style="color:var(--gold)">📚 Complete 12-Book Series</div>
+          <div class="pb-name">The 10M Blueprint — Full Series</div>
+          <div class="pb-price" style="color:var(--gold)">$97</div>
+          <div class="pb-desc">All 12 ebooks: from Money Math to Build to Sell. The complete entrepreneur OS in one package.</div>
+        </div>
+        <a href="https://buy.stripe.com/00waEX3jZ7hRfEB7OI0ZW1p" class="pb-btn" target="_blank" style="width:100%;text-align:center;background:linear-gradient(135deg,#ffd700,#ff6d00);color:#000">Buy Now — $97 →</a>
+      </div>
+
+      <div class="product-banner" style="flex-direction:column;align-items:flex-start;gap:1rem;border-color:rgba(0,230,118,0.25);background:linear-gradient(135deg,rgba(0,230,118,0.06),transparent)">
+        <div class="pb-left">
+          <div class="pb-tag">📞 AI Phone Sales</div>
+          <div class="pb-name">Cold Call Code — AI Phone Agent Playbook</div>
+          <div class="pb-price">$27</div>
+          <div class="pb-desc">The exact script and Vapi setup Aaron uses to close small business clients with AI phone agents.</div>
+        </div>
+        <a href="https://buy.stripe.com/6oU9ATg6LfOnakh7OI0ZW1q" class="pb-btn" target="_blank" style="width:100%;text-align:center">Buy Now — $27 →</a>
+      </div>
+
+      <div class="product-banner" style="flex-direction:column;align-items:flex-start;gap:1rem;border-color:rgba(255,109,0,0.25);background:linear-gradient(135deg,rgba(255,109,0,0.05),transparent)">
+        <div class="pb-left">
+          <div class="pb-tag" style="color:var(--orange)">🧠 Recovery Edition</div>
+          <div class="pb-name">Money Mindset Affirmations</div>
+          <div class="pb-price" style="color:var(--orange)">$17</div>
+          <div class="pb-desc">Daily affirmations built for people coming back from rock bottom. Sobriety, clarity, and abundance mindset.</div>
+        </div>
+        <a href="https://buy.stripe.com/9B628rcUz1Xxbol4Cw0ZW1r" class="pb-btn" target="_blank" style="width:100%;text-align:center;background:linear-gradient(135deg,#ff6d00,#ffd700);color:#000">Buy Now — $17 →</a>
+      </div>
+
+      <div class="product-banner" style="flex-direction:column;align-items:flex-start;gap:1rem;border-color:rgba(213,0,249,0.2);background:linear-gradient(135deg,rgba(213,0,249,0.05),rgba(41,121,255,0.03))">
+        <div class="pb-left">
+          <div class="pb-tag" style="color:var(--purple)">⚖️ FCRA System</div>
+          <div class="pb-name">609 Credit Repair — Complete Package</div>
+          <div class="pb-price" style="color:var(--purple)">$47</div>
+          <div class="pb-desc">Exact dispute letters for Experian, TransUnion, Equifax, LexisNexis &amp; ChexSystems. Step-by-step FCRA strategy.</div>
+        </div>
+        <a href="https://buy.stripe.com/00waEX1bRby76410mg0ZW1s" class="pb-btn" target="_blank" style="width:100%;text-align:center;background:var(--grad2)">Buy Now — $47 →</a>
+      </div>
+
+      <div class="product-banner" style="flex-direction:column;align-items:flex-start;gap:1rem;border-color:rgba(0,188,212,0.2);background:linear-gradient(135deg,rgba(0,188,212,0.05),transparent)">
+        <div class="pb-left">
+          <div class="pb-tag" style="color:var(--teal)">🏥 Certification Prep</div>
+          <div class="pb-name">RADT Study Guide &amp; Workbook</div>
+          <div class="pb-price" style="color:var(--teal)">$27</div>
+          <div class="pb-desc">Complete RADT exam prep for addiction counselor certification. Study guide + interactive workbook.</div>
+        </div>
+        <a href="https://buy.stripe.com/fZu8wPbQvcCb1NLb0U0ZW1t" class="pb-btn" target="_blank" style="width:100%;text-align:center;background:linear-gradient(135deg,#00bcd4,#00e676)">Buy Now — $27 →</a>
+      </div>
+
+      <div class="product-banner" style="flex-direction:column;align-items:flex-start;gap:1rem;border-color:rgba(0,230,118,0.18);background:linear-gradient(135deg,rgba(0,230,118,0.04),transparent)">
+        <div class="pb-left">
+          <div class="pb-tag">♻️ Recovery Program</div>
+          <div class="pb-name">12-Step Study Guide — Complete Edition</div>
+          <div class="pb-price">$17</div>
+          <div class="pb-desc">Full 12-step program companion guide. Works with AA, NA, and all 12-step fellowships.</div>
+        </div>
+        <a href="https://buy.stripe.com/5kQeVd2fV9pZdwted60ZW1u" class="pb-btn" target="_blank" style="width:100%;text-align:center">Buy Now — $17 →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- SCHOOL ENROLLMENT SECTION -->
+<section class="school-section" id="school">
+  <div class="school-inner">
+    <div class="sec-tag">🎓 Now Enrolling · North Hollywood, CA</div>
+    <h2 class="sec-h">Total Transformation Inc. School</h2>
+    <p class="sec-p">State-approved certification programs for addiction counseling, behavioral health, and AI-powered business. Join the school that trains the next generation of leaders in LA.</p>
+    <div class="school-grid">
+      <img src="aaron_photo2.jpg" alt="Total Transformation Inc. School" class="school-img" loading="lazy">
+      <div class="school-content">
+        <h3>Certification Programs<br><span style="color:var(--g)">That Open Doors</span></h3>
+        <p>TTI offers hands-on training with flexible schedules. Graduate job-ready with certifications that LA treatment centers, hospitals, and businesses actively seek.</p>
+        <div class="school-programs">
+          <div class="prog-item"><span class="prog-name">RADT Certification</span><span class="prog-badge">Enrolling Now</span></div>
+          <div class="prog-item"><span class="prog-name">Addiction Counselor Training</span><span class="prog-badge">Enrolling Now</span></div>
+          <div class="prog-item"><span class="prog-name">AI Business Automation</span><span class="prog-badge">New Program</span></div>
+          <div class="prog-item"><span class="prog-name">Behavioral Health Tech</span><span class="prog-badge">Enrolling Now</span></div>
+        </div>
+        <a href="tel:7473018586" class="enroll-cta">📞 Call to Enroll: (747) 301-8586 →</a>
+        <a href="mailto:ceomrreddix@gmail.com?subject=School Enrollment Inquiry" class="cta-outline" style="display:inline-block;padding:0.95rem 1.5rem;font-size:0.9rem;font-weight:700;border-radius:10px">Email Us →</a>
+        <div class="referral-box">
+          🤝 Were you referred by a partner or alumni? Use referral code <span class="referral-code">REDDIX</span> when you contact us. Your referrer earns a commission and you get priority enrollment.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7-STAR AUTOMATION FEATURES -->
+<section class="feat-grid-section" id="features" style="background:var(--bk);padding:6rem 2rem">
+  <div class="container">
+    <div class="sec-tag">7-Star Automation Suite</div>
+    <h2 class="sec-h">Everything Running Without You</h2>
+    <p class="sec-p">While ChatGPT answers questions and Manus runs tasks manually, TTI Empire deploys entire workflows that run on their own — permanently.</p>
+    <div class="feat-grid">
+      <div class="feat-card">
+        <div class="feat-icon">📞</div>
+        <div class="feat-title">AI Phone Agent — 24/7 Answering</div>
+        <div class="feat-desc">Never miss a call again. AI answers, qualifies, books appointments, and routes leads. Works for real estate, medical, legal, dental, and more.</div>
+        <span class="feat-tag hot">🔥 Top Feature</span>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">📧</div>
+        <div class="feat-title">AI Email Engine — Mass Outreach</div>
+        <div class="feat-desc">Automated personalized outreach to 1,000+ contacts daily. Smart follow-ups, bounce recovery, and delivery optimization built in.</div>
+        <span class="feat-tag new">Active</span>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">💼</div>
+        <div class="feat-title">GrantBot — $2M+ Hunted</div>
+        <div class="feat-desc">Scans all federal, state, and private databases daily. Auto-matches grants to your business profile and drafts full application packages.</div>
+        <span class="feat-tag free">Free in Trial</span>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">📣</div>
+        <div class="feat-title">LinkedIn Automation — 101 Posts/mo</div>
+        <div class="feat-desc">Daily thought leadership posts, connection requests, DMs, and engagement — all branded to your voice and published automatically.</div>
+        <span class="feat-tag new">Active</span>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">🏠</div>
+        <div class="feat-title">Group Home + Real Estate AI</div>
+        <div class="feat-desc">RCFE licensing outreach, investor pitch automation, Section 8 VASH coordination, and property management workflows.</div>
+        <span class="feat-tag pro">Pro Feature</span>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">📦</div>
+        <div class="feat-title">Digital Product Delivery</div>
+        <div class="feat-desc">Auto-deliver ebooks, courses, and packages after Stripe payment. No manual work. Scales to unlimited sales automatically.</div>
+        <span class="feat-tag new">Active</span>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">🤖</div>
+        <div class="feat-title">Command OS Dashboard</div>
+        <div class="feat-desc">Executive dashboard with approval gates, revenue pipeline, inbox triage, compliance tracker, and live KPIs — all in one place.</div>
+        <span class="feat-tag pro">Pro Feature</span>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">⚡</div>
+        <div class="feat-title">Einstein Mode — Full Autonomy</div>
+        <div class="feat-desc">The most advanced automation mode. Runs every workflow, monitors all systems, and escalates only what needs your eyes. Zero human required.</div>
+        <span class="feat-tag hot">🔥 Einstein Mode</span>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">🎯</div>
+        <div class="feat-title">AI Content Studio</div>
+        <div class="feat-desc">Generates blog posts, YouTube scripts, social content, email newsletters, and ad copy — all in your brand voice, published on schedule.</div>
+        <span class="feat-tag new">New</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7-STAR LAW FIRM -->
+<section class="law-section" id="law">
+  <div class="container">
+    <div class="sec-tag">7-Star AI Law Firm</div>
+    <h2 class="sec-h">Legal Automation That <em style="color:var(--blue)">Fights For You</em></h2>
+    <p class="sec-p">Credit bureaus, debt collectors, landlords — the system is rigged against the little guy. TTI Empire's AI Law Firm levels the playing field automatically.</p>
+    <div class="law-grid">
+      <div class="law-card">
+        <div class="law-icon">⚖️</div>
+        <div class="law-title">FCRA Credit Dispute System</div>
+        <div class="law-desc">Auto-generates and tracks dispute letters for Experian, TransUnion, Equifax, LexisNexis, and ChexSystems. 609 method included.</div>
+        <div class="law-status">Letters Ready to Send</div>
+      </div>
+      <div class="law-card">
+        <div class="law-icon">🏦</div>
+        <div class="law-title">Bank Account Recovery</div>
+        <div class="law-desc">ChexSystems dispute automation. Gets your banking access restored. Works with Chime, traditional banks, and credit unions.</div>
+        <div class="law-status">Automated Protocol</div>
+      </div>
+      <div class="law-card">
+        <div class="law-icon">📋</div>
+        <div class="law-title">CFPB Complaint Engine</div>
+        <div class="law-desc">Files complaints against creditors, debt collectors, and servicers who violate FDCPA and FCRA. Auto-tracks case numbers and responses.</div>
+        <div class="law-status">3 Active Cases Tracked</div>
+      </div>
+      <div class="law-card">
+        <div class="law-icon">🏠</div>
+        <div class="law-title">Tenant &amp; Landlord AI</div>
+        <div class="law-desc">Eviction defense, habitability complaints, security deposit recovery, and lease review — all automated with AI-generated legal documents.</div>
+        <div class="law-status">Automated Filings</div>
+      </div>
+      <div class="law-card">
+        <div class="law-icon">📜</div>
+        <div class="law-title">Expungement + Record Clearing</div>
+        <div class="law-desc">Automated court record search, eligibility check, petition generation, and filing preparation for criminal record expungement.</div>
+        <div class="law-status">Full Package Ready</div>
+      </div>
+      <div class="law-card">
+        <div class="law-icon">⚡</div>
+        <div class="law-title">Contract Review AI</div>
+        <div class="law-desc">Analyzes leases, vendor contracts, service agreements, and licensing deals. Flags risks, suggests edits, and tracks deadlines.</div>
+        <div class="law-status">Instant Review</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DAN MARTELL BUY BACK YOUR TIME -->
+<section class="buyback-section" id="buyback">
+  <div class="container">
+    <div class="sec-tag">Dan Martell Mode</div>
+    <h2 class="sec-h">Buy Back Your Time</h2>
+    <p class="sec-p">Stop doing $10/hr tasks that AI can do for free. The TTI Buyback System automates everything under $500/hr so you only touch what only YOU can do.</p>
+    <div class="buyback-inner">
+      <div class="buyback-tiers">
+        <div class="tier-card t1">
+          <div class="tier-head">
+            <div class="tier-name">TIER 1 — Fully Automated</div>
+            <span class="tier-rate">Under $100/hr</span>
+          </div>
+          <div class="tier-desc">AI handles 100% of these — you never touch them again.</div>
+          <div class="tier-tasks">
+            <span class="tier-task">Email outreach</span><span class="tier-task">Social posting</span><span class="tier-task">Appointment booking</span><span class="tier-task">Grant research</span><span class="tier-task">Credit disputes</span><span class="tier-task">Invoice follow-up</span><span class="tier-task">Data entry</span><span class="tier-task">Content scheduling</span>
+          </div>
+        </div>
+        <div class="tier-card t2">
+          <div class="tier-head">
+            <div class="tier-name">TIER 2 — Templated by AI</div>
+            <span class="tier-rate">$100–$500/hr</span>
+          </div>
+          <div class="tier-desc">AI drafts everything — you review and approve in 2 minutes.</div>
+          <div class="tier-tasks">
+            <span class="tier-task">Investor pitches</span><span class="tier-task">Grant proposals</span><span class="tier-task">Legal letters</span><span class="tier-task">Partnership proposals</span><span class="tier-task">Media kits</span>
+          </div>
+        </div>
+        <div class="tier-card t3">
+          <div class="tier-head">
+            <div class="tier-name">TIER 3 — Aaron Only</div>
+            <span class="tier-rate">$500+/hr</span>
+          </div>
+          <div class="tier-desc">Final decisions, relationship closes, strategic vision. Your genius zone.</div>
+          <div class="tier-tasks">
+            <span class="tier-task">Deal closing</span><span class="tier-task">Strategic partnerships</span><span class="tier-task">Vision setting</span><span class="tier-task">TV production</span>
+          </div>
+        </div>
+      </div>
+      <div class="roi-calc">
+        <div class="roi-h">⏱️ Time Buyback Calculator</div>
+        <div class="roi-input">
+          <label class="roi-label">Hours/week spent on admin tasks: <span id="hrs-val" style="color:var(--w);font-weight:800">20</span></label>
+          <input type="range" class="roi-slider" id="hrs" min="5" max="60" value="20" oninput="calcROI()">
+        </div>
+        <div class="roi-input">
+          <label class="roi-label">Your hourly rate: $<span id="rate-val" style="color:var(--w);font-weight:800">150</span></label>
+          <input type="range" class="roi-slider" id="rate" min="50" max="1000" value="150" step="25" oninput="calcROI()">
+        </div>
+        <div class="roi-result">
+          <div class="roi-result-h">Value recovered monthly</div>
+          <div class="roi-big" id="roi-out">$12,000</div>
+          <div class="roi-sub">vs. $200/mo Empire plan — <span style="color:var(--g);font-weight:700">59x ROI</span></div>
+        </div>
+        <a href="#trial" class="trial-cta" style="margin-top:1.5rem;display:block;padding:0.85rem;font-size:0.95rem">Start Buying Back Your Time →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VS TABLE -->
+<section class="vs-section" id="vs">
+  <div class="container">
+    <div class="sec-tag">Side by Side</div>
+    <h2 class="sec-h">TTI Empire vs. Everyone Else</h2>
+    <table class="vs-table">
+      <thead>
+        <tr>
+          <th style="text-align:left">Feature</th>
+          <th class="tti">TTI Empire</th>
+          <th>ChatGPT 5</th>
+          <th>Manus</th>
+          <th>OpenClaw</th>
+          <th>GitHub Copilot</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>AI Phone Agents (24/7)</td><td class="yes tti-col">✓</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td></tr>
+        <tr><td>Email Outreach Automation</td><td class="yes tti-col">✓</td><td class="part">partial</td><td class="part">partial</td><td class="no">✗</td><td class="no">✗</td></tr>
+        <tr><td>7-Star AI Law Firm</td><td class="yes tti-col">✓</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td></tr>
+        <tr><td>Grant Hunting Automation</td><td class="yes tti-col">✓</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td></tr>
+        <tr><td>Credit Repair (FCRA/609)</td><td class="yes tti-col">✓</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td></tr>
+        <tr><td>Group Home / RCFE Automation</td><td class="yes tti-col">✓</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td></tr>
+        <tr><td>Dan Martell Buyback Mode</td><td class="yes tti-col">✓</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td></tr>
+        <tr><td>LinkedIn Auto-Publishing</td><td class="yes tti-col">✓</td><td class="no">✗</td><td class="part">partial</td><td class="no">✗</td><td class="no">✗</td></tr>
+        <tr><td>Command OS Dashboard</td><td class="yes tti-col">✓</td><td class="no">✗</td><td class="part">partial</td><td class="no">✗</td><td class="no">✗</td></tr>
+        <tr><td>Einstein Mode (Full Autonomy)</td><td class="yes tti-col">✓</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td></tr>
+        <tr><td>Digital Product Delivery</td><td class="yes tti-col">✓</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td></tr>
+        <tr><td>No-Code Setup</td><td class="yes tti-col">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="part">partial</td><td class="no">✗</td></tr>
+        <tr><td>Runs While You Sleep</td><td class="yes tti-col">✓</td><td class="no">✗</td><td class="part">partial</td><td class="no">✗</td><td class="no">✗</td></tr>
+        <tr><td><strong>TTI Score</strong></td><td class="tti-col" style="color:var(--g);font-weight:900;font-size:1.1rem">10/10</td><td style="color:#333;font-weight:700">4/10</td><td style="color:#333;font-weight:700">5/10</td><td style="color:#333;font-weight:700">3/10</td><td style="color:#333;font-weight:700">2/10</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- LIVE DEMO TERMINAL -->
+<section class="demo-section" id="demo">
+  <div class="container">
+    <div class="sec-tag">Live Demo</div>
+    <h2 class="sec-h">Watch Einstein Mode Work</h2>
+    <div class="demo-inner">
+      <div class="demo-terminal">
+        <div class="terminal-bar">
+          <div class="dot" style="background:#ff5f56"></div>
+          <div class="dot" style="background:#ffbd2e"></div>
+          <div class="dot" style="background:#27c93f"></div>
+          <span class="terminal-title">TTI Empire — Einstein Mode — LIVE</span>
+        </div>
+        <div class="terminal-body" id="term">
+          <div><span class="t-cmd">$ tti einstein --mode full --account aaron-reddix</span></div>
+          <div><span class="t-out">⚡ Einstein Mode activated. Running all workflows...</span></div>
+          <div><span class="t-gray">──────────────────────────────────────</span></div>
+          <div><span class="t-warn">📧 EMAIL ENGINE</span></div>
+          <div><span class="t-out">  → Scanning 5 Gmail accounts for bounced emails...</span></div>
+          <div><span class="t-out">  → Found 486 sending-limit blocks. Creating drafts...</span></div>
+          <div><span class="t-out">  ✓ 486 drafts created. Auto-send cron: 8:13 AM daily</span></div>
+          <div><span class="t-gray">──────────────────────────────────────</span></div>
+          <div><span class="t-blue">⚖️ LAW FIRM AI</span></div>
+          <div><span class="t-out">  → Credit disputes: Experian ✓ TransUnion ✓ Equifax ✓</span></div>
+          <div><span class="t-out">  → ChexSystems ✓ LexisNexis ✓ — All letters staged</span></div>
+          <div><span class="t-out">  → CFPB cases tracked: 260820-37226788 ✓</span></div>
+          <div><span class="t-gray">──────────────────────────────────────</span></div>
+          <div><span class="t-warn">💼 GRANT BOT</span></div>
+          <div><span class="t-out">  → Scanning federal + CA databases...</span></div>
+          <div><span class="t-out">  ✓ 3 grant packets ready: PACE · LISC · Kauffman</span></div>
+          <div><span class="t-gray">──────────────────────────────────────</span></div>
+          <div><span class="t-cmd">$ All systems RUNNING. No human action required.</span></div>
+          <div><span class="t-purple">  ★★★★★★★ 7-STAR MODE ENGAGED ★★★★★★★</span></div>
+          <div><span class="cursor"></span></div>
+        </div>
+      </div>
+      <div class="demo-panel">
+        <div class="demo-feat">
+          <div class="demo-feat-head"><div class="demo-feat-icon">📧</div><div class="demo-feat-title">Email Engine — Running</div></div>
+          <div class="demo-feat-desc">486 drafts created. Daily auto-send cron active across all 5 Gmail accounts.</div>
+          <div class="progress-bar"><div class="progress-fill"></div></div>
+        </div>
+        <div class="demo-feat">
+          <div class="demo-feat-head"><div class="demo-feat-icon">⚖️</div><div class="demo-feat-title">Law Firm AI — Active</div></div>
+          <div class="demo-feat-desc">5 dispute letters staged. CFPB cases tracked. FCRA complaint drafted.</div>
+          <div class="progress-bar"><div class="progress-fill" style="animation-delay:0.5s"></div></div>
+        </div>
+        <div class="demo-feat">
+          <div class="demo-feat-head"><div class="demo-feat-icon">💼</div><div class="demo-feat-title">GrantBot — Scanning</div></div>
+          <div class="demo-feat-desc">3 grant packages ready for submission. $2M+ opportunity pipeline.</div>
+          <div class="progress-bar"><div class="progress-fill" style="animation-delay:1s"></div></div>
+        </div>
+        <div class="demo-feat">
+          <div class="demo-feat-head"><div class="demo-feat-icon">📞</div><div class="demo-feat-title">Phone Agent — Live</div></div>
+          <div class="demo-feat-desc">Answering calls 24/7. Qualifying leads. Booking appointments automatically.</div>
+          <div class="progress-bar"><div class="progress-fill" style="animation-delay:1.5s"></div></div>
+        </div>
+        <div class="demo-feat">
+          <div class="demo-feat-head"><div class="demo-feat-icon">📣</div><div class="demo-feat-title">LinkedIn Bot — Publishing</div></div>
+          <div class="demo-feat-desc">101 posts scheduled. Connection requests sent. DMs automating.</div>
+          <div class="progress-bar"><div class="progress-fill" style="animation-delay:2s"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI AGENTS -->
+<section class="agents-section" id="agents">
+  <div class="container">
+    <div class="sec-tag">Your AI Team</div>
+    <h2 class="sec-h">6 Agents Working 24/7</h2>
+    <div class="agents-grid">
+      <div class="agent">
+        <div class="agent-head"><div class="agent-av">📞</div><div><div class="agent-name">CallBot Pro</div><div class="agent-role">AI Phone Agent</div></div></div>
+        <div class="agent-desc">Answers every call, qualifies leads, books appointments. Handles dental, medical, legal, real estate. Never sleeps.</div>
+        <div class="agent-metrics">
+          <div class="agent-m"><div class="agent-mv">100%</div><div class="agent-ml">Answer rate</div></div>
+          <div class="agent-m"><div class="agent-mv">24/7</div><div class="agent-ml">Availability</div></div>
+          <div class="agent-m"><div class="agent-mv">2min</div><div class="agent-ml">Setup</div></div>
+        </div>
+        <div class="agent-price">$297<span style="font-size:0.9rem;font-weight:400;color:#444">/mo</span></div>
+        <div class="agent-period">or included in Empire Suite</div>
+        <a href="mailto:ceomrreddix@gmail.com?subject=CallBot Pro" class="agent-btn">Deploy CallBot →</a>
+      </div>
+      <div class="agent">
+        <div class="agent-head"><div class="agent-av">📧</div><div><div class="agent-name">EmailBot Engine</div><div class="agent-role">Mass Outreach AI</div></div></div>
+        <div class="agent-desc">1,000+ personalized emails per day. Bounce recovery. Follow-up sequences. A/B testing. Deliverability optimized.</div>
+        <div class="agent-metrics">
+          <div class="agent-m"><div class="agent-mv">2,100+</div><div class="agent-ml">Sent/week</div></div>
+          <div class="agent-m"><div class="agent-mv">Auto</div><div class="agent-ml">Recovery</div></div>
+          <div class="agent-m"><div class="agent-mv">5</div><div class="agent-ml">Inboxes</div></div>
+        </div>
+        <div class="agent-price">$197<span style="font-size:0.9rem;font-weight:400;color:#444">/mo</span></div>
+        <div class="agent-period">or included in Empire Suite</div>
+        <a href="mailto:ceomrreddix@gmail.com?subject=EmailBot Engine" class="agent-btn">Deploy EmailBot →</a>
+      </div>
+      <div class="agent">
+        <div class="agent-head"><div class="agent-av">⚖️</div><div><div class="agent-name">LegalBot 7-Star</div><div class="agent-role">AI Law Firm</div></div></div>
+        <div class="agent-desc">Credit disputes, FCRA complaints, eviction defense, contract review, expungement preparation. Fights for you automatically.</div>
+        <div class="agent-metrics">
+          <div class="agent-m"><div class="agent-mv">5</div><div class="agent-ml">Bureaus</div></div>
+          <div class="agent-m"><div class="agent-mv">609</div><div class="agent-ml">Method</div></div>
+          <div class="agent-m"><div class="agent-mv">Auto</div><div class="agent-ml">Filing</div></div>
+        </div>
+        <div class="agent-price">$97<span style="font-size:0.9rem;font-weight:400;color:#444">/mo</span></div>
+        <div class="agent-period">or included in Empire Suite</div>
+        <a href="mailto:ceomrreddix@gmail.com?subject=LegalBot 7-Star" class="agent-btn">Deploy LegalBot →</a>
+      </div>
+      <div class="agent">
+        <div class="agent-head"><div class="agent-av">💼</div><div><div class="agent-name">GrantBot Hunter</div><div class="agent-role">Grant &amp; Funding AI</div></div></div>
+        <div class="agent-desc">Scans 50,000+ grants daily. Matches to your profile. Writes proposals. Tracks deadlines. Has hunted $2M+ in opportunities.</div>
+        <div class="agent-metrics">
+          <div class="agent-m"><div class="agent-mv">$2M+</div><div class="agent-ml">Hunted</div></div>
+          <div class="agent-m"><div class="agent-mv">Daily</div><div class="agent-ml">Scanning</div></div>
+          <div class="agent-m"><div class="agent-mv">Auto</div><div class="agent-ml">Proposals</div></div>
+        </div>
+        <div class="agent-price">$147<span style="font-size:0.9rem;font-weight:400;color:#444">/mo</span></div>
+        <div class="agent-period">or included in Empire Suite</div>
+        <a href="mailto:ceomrreddix@gmail.com?subject=GrantBot Hunter" class="agent-btn">Deploy GrantBot →</a>
+      </div>
+      <div class="agent">
+        <div class="agent-head"><div class="agent-av">📣</div><div><div class="agent-name">LinkedInBot</div><div class="agent-role">Social Media AI</div></div></div>
+        <div class="agent-desc">Daily posts, connection requests, DM sequences, and thought leadership — all in your voice and brand. 101+ posts/month.</div>
+        <div class="agent-metrics">
+          <div class="agent-m"><div class="agent-mv">101</div><div class="agent-ml">Posts/mo</div></div>
+          <div class="agent-m"><div class="agent-mv">Auto</div><div class="agent-ml">DMs</div></div>
+          <div class="agent-m"><div class="agent-mv">Brand</div><div class="agent-ml">Voice</div></div>
+        </div>
+        <div class="agent-price">$147<span style="font-size:0.9rem;font-weight:400;color:#444">/mo</span></div>
+        <div class="agent-period">or included in Empire Suite</div>
+        <a href="mailto:ceomrreddix@gmail.com?subject=LinkedInBot" class="agent-btn">Deploy LinkedInBot →</a>
+      </div>
+      <div class="agent" style="border-color:rgba(213,0,249,0.2);background:linear-gradient(160deg,rgba(213,0,249,0.04),var(--d2))">
+        <div class="agent-head"><div class="agent-av" style="background:rgba(213,0,249,0.08);border-color:rgba(213,0,249,0.2)">⚡</div><div><div class="agent-name">Einstein Suite</div><div class="agent-role">Full Automation Stack</div></div></div>
+        <div class="agent-desc">All 5 agents + Command OS Dashboard + Einstein Mode + 7-Star Law Firm + GrantBot + Buy Back Time mode. Everything, fully automated.</div>
+        <div class="agent-metrics">
+          <div class="agent-m"><div class="agent-mv" style="color:var(--purple)">All</div><div class="agent-ml">Agents</div></div>
+          <div class="agent-m"><div class="agent-mv" style="color:var(--purple)">7★</div><div class="agent-ml">Rating</div></div>
+          <div class="agent-m"><div class="agent-mv" style="color:var(--purple)">24/7</div><div class="agent-ml">Autonomy</div></div>
+        </div>
+        <div class="agent-price" style="color:var(--purple)">$997<span style="font-size:0.9rem;font-weight:400;color:#444">/mo</span></div>
+        <div class="agent-period">Includes everything · 30-day free trial</div>
+        <a href="mailto:ceomrreddix@gmail.com?subject=Einstein Suite — Deploy Now" class="agent-btn" style="background:linear-gradient(135deg,rgba(213,0,249,0.15),rgba(41,121,255,0.15));color:var(--purple);border-color:rgba(213,0,249,0.2)">Deploy Einstein Suite →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GRANT PIPELINE -->
+<section class="grant-section" id="grants">
+  <div class="container">
+    <div class="sec-tag">Grant Pipeline</div>
+    <h2 class="sec-h">$2M+ In Active Funding Opportunities</h2>
+    <p class="sec-p">TTI GrantBot scans every day and has these ready for submission. All packages are drafted and staged.</p>
+    <div class="grant-grid">
+      <div class="grant-card"><div class="grant-amt">$250K</div><div class="grant-name">PACE — CA Advances</div><div class="grant-desc">California community advancement program. Application drafted, supporting docs indexed.</div><span class="grant-status ready">✓ Packet Ready</span></div>
+      <div class="grant-card"><div class="grant-amt">$150K</div><div class="grant-name">LISC — Local Initiatives</div><div class="grant-desc">Community development financial institution grant. Full proposal drafted.</div><span class="grant-status ready">✓ Packet Ready</span></div>
+      <div class="grant-card"><div class="grant-amt">$500K</div><div class="grant-name">Kauffman Foundation</div><div class="grant-desc">Entrepreneur support grant. Upgraded proposal with enhanced cover letter ready.</div><span class="grant-status ready">✓ Enhanced Proposal</span></div>
+      <div class="grant-card"><div class="grant-amt">$200K</div><div class="grant-name">TTI Local Unsent Grant</div><div class="grant-desc">Locally-scoped grant packet. Ready for submission through agency portal.</div><span class="grant-status ready">✓ Ready to Submit</span></div>
+      <div class="grant-card"><div class="grant-amt">$350K</div><div class="grant-name">HUD VASH Program</div><div class="grant-desc">Veteran housing voucher program. Group home licensing + Section 8 outreach staged.</div><span class="grant-status draft">Drafting</span></div>
+      <div class="grant-card"><div class="grant-amt">$1M+</div><div class="grant-name">SBA + Federal Pipeline</div><div class="grant-desc">GrantBot continuously scanning SBA, SBIR, HHS, HUD, and DOE databases daily.</div><span class="grant-status draft">Scanning Daily</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section class="cases-section" id="cases">
+  <div class="container">
+    <div class="sec-tag">Results</div>
+    <h2 class="sec-h">What Einstein Mode Delivers</h2>
+    <div class="cases-grid">
+      <div class="case">
+        <div class="case-top"><div class="case-n">Email Automation</div><div class="case-title">2,100+ Outreach Emails Sent This Week</div></div>
+        <div class="case-body"><div class="case-text">AI email engine reached dental offices, accounting firms, and real estate agents across LA with personalized AI phone agent pitches — zero manual work.</div><div class="case-result">✓ 5 Gmail accounts · 486 drafts staged · Daily auto-send cron live</div><div class="case-nums"><div class="case-num"><div class="case-nv">2,100+</div><div class="case-nl">Emails sent</div></div><div class="case-num"><div class="case-nv">5</div><div class="case-nl">Inboxes</div></div></div></div>
+      </div>
+      <div class="case">
+        <div class="case-top"><div class="case-n">Legal Automation</div><div class="case-title">Credit Bureau Disputes Filed Across All 5 Agencies</div></div>
+        <div class="case-body"><div class="case-text">LegalBot generated dispute letters for Experian, TransUnion, Equifax, ChexSystems, and LexisNexis. CFPB complaints drafted and staged. Zero attorney fees.</div><div class="case-result">✓ 609 method · FCRA violation tracking · Case #s monitored</div><div class="case-nums"><div class="case-num"><div class="case-nv">5</div><div class="case-nl">Bureaus</div></div><div class="case-num"><div class="case-nv">$0</div><div class="case-nl">Attorney fees</div></div></div></div>
+      </div>
+      <div class="case">
+        <div class="case-top"><div class="case-n">Grant Hunting</div><div class="case-title">$2M+ In Opportunities Identified and Drafted</div></div>
+        <div class="case-body"><div class="case-text">GrantBot scanned federal, state, and private grant databases. Matched TTI profile to PACE, LISC, Kauffman, and 50+ other programs. Full packets ready to submit.</div><div class="case-result">✓ PACE · LISC · Kauffman · HUD VASH — all drafted</div><div class="case-nums"><div class="case-num"><div class="case-nv">$2M+</div><div class="case-nl">Hunted</div></div><div class="case-num"><div class="case-nv">4</div><div class="case-nl">Packets ready</div></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ALWAYS-ON WORKFLOW -->
+<section class="workflow-section" id="workflow">
+  <div class="container">
+    <div class="sec-tag">Always On — 24/7</div>
+    <h2 class="sec-h">What TTI Empire Does While You Sleep</h2>
+    <div class="workflow-cards">
+      <div class="wf-card"><div class="wf-icon">📧</div><div class="wf-title">Email Outreach</div><div class="wf-desc">Sending personalized messages to 1,000+ prospects daily across all inboxes.</div><div class="wf-status">Running Now</div></div>
+      <div class="wf-card"><div class="wf-icon">⚖️</div><div class="wf-title">Credit Disputes</div><div class="wf-desc">Tracking dispute responses, escalating violations, monitoring bureau updates.</div><div class="wf-status">Active</div></div>
+      <div class="wf-card"><div class="wf-icon">💼</div><div class="wf-title">Grant Scanning</div><div class="wf-desc">Searching 50,000+ databases for new grant opportunities matching TTI profile.</div><div class="wf-status">Scanning Daily</div></div>
+      <div class="wf-card"><div class="wf-icon">📣</div><div class="wf-title">LinkedIn Publishing</div><div class="wf-desc">Publishing thought leadership, engaging followers, and building authority.</div><div class="wf-status">101 Posts Queued</div></div>
+      <div class="wf-card"><div class="wf-icon">🏠</div><div class="wf-title">Real Estate Outreach</div><div class="wf-desc">Contacting 100+ investors, RCFE operators, and housing authority contacts.</div><div class="wf-status">Active</div></div>
+      <div class="wf-card"><div class="wf-icon">📦</div><div class="wf-title">Product Delivery</div><div class="wf-desc">Monitoring Stripe for new sales and delivering digital products automatically.</div><div class="wf-status">Live Checkout Active</div></div>
+      <div class="wf-card"><div class="wf-icon">📞</div><div class="wf-title">Phone Answering</div><div class="wf-desc">AI phone agent answering and qualifying every inbound call 24/7.</div><div class="wf-status">Live</div></div>
+      <div class="wf-card"><div class="wf-icon">🗂️</div><div class="wf-title">Drive Organization</div><div class="wf-desc">Auditing, de-duplicating, and organizing all 5 Google Drive accounts.</div><div class="wf-status">Running</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTOMATION FLOW -->
+<section class="flow-section" id="flow" style="padding:6rem 2rem">
+  <div class="container">
+    <div class="sec-tag">How It Works</div>
+    <h2 class="sec-h">From Zero to Full Automation in 5 Steps</h2>
+    <div class="flow-grid">
+      <div class="flow-step"><div class="flow-num">1</div><div class="flow-title">Connect Your Accounts</div><div class="flow-desc">Link Gmail, Google Drive, LinkedIn, Stripe, and Gumroad in one click. OAuth — no passwords stored.</div><div class="flow-arrow">→</div></div>
+      <div class="flow-step"><div class="flow-num">2</div><div class="flow-title">Tell Einstein Your Goals</div><div class="flow-desc">Grant funding, credit repair, lead generation, product sales — Einstein Mode maps your strategy.</div><div class="flow-arrow">→</div></div>
+      <div class="flow-step"><div class="flow-num">3</div><div class="flow-title">AI Builds Your Workflows</div><div class="flow-desc">Email sequences, dispute letters, grant proposals, phone scripts — all generated in minutes.</div><div class="flow-arrow">→</div></div>
+      <div class="flow-step"><div class="flow-num">4</div><div class="flow-title">Approve &amp; Deploy</div><div class="flow-desc">One-click approval gates. You control what goes live. Nothing executes without your sign-off.</div><div class="flow-arrow">→</div></div>
+      <div class="flow-step" style="border-right:none"><div class="flow-num">5</div><div class="flow-title">Sit Back &amp; Win</div><div class="flow-desc">Einstein Mode runs 24/7. Daily reports land in your inbox. You only touch what needs your genius.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FREE TRIAL -->
+<section class="trial-section" id="trial">
+  <div class="container">
+    <div class="trial-card">
+      <div class="trial-badge">⚡ FREE 30-DAY TRIAL</div>
+      <div class="trial-h">Run Your Empire Free for 30 Days</div>
+      <p class="trial-p">No credit card. No code. Deploy all 6 AI agents and let Einstein Mode run your entire business for a full month — completely free.</p>
+      <div class="trial-features">
+        <div class="trial-feat">All 6 AI Agents Active</div>
+        <div class="trial-feat">7-Star Law Firm AI</div>
+        <div class="trial-feat">Email Engine (5 inboxes)</div>
+        <div class="trial-feat">GrantBot Scanning</div>
+        <div class="trial-feat">LinkedIn Automation</div>
+        <div class="trial-feat">AI Phone Agent</div>
+        <div class="trial-feat">Dan Martell Buyback Mode</div>
+        <div class="trial-feat">Einstein Mode 24/7</div>
+        <div class="trial-feat">Command OS Dashboard</div>
+        <div class="trial-feat">Drive Organization AI</div>
+        <div class="trial-feat">Credit Repair System</div>
+        <div class="trial-feat">Digital Product Delivery</div>
+      </div>
+      <div class="trial-price">
+        <div class="free">FREE</div>
+        <div class="then">then $200/mo after trial · Cancel anytime</div>
+      </div>
+      <a href="mailto:ceomrreddix@gmail.com?subject=TTI Empire — Start My Free Trial" class="trial-cta">Start Free Trial — Deploy in 48 Hours →</a>
+      <div class="trial-fine">No credit card required · <span>30-day full access</span> · Works even when you're offline</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section" id="pricing">
+  <div class="container">
+    <div class="sec-tag">Pricing</div>
+    <h2 class="sec-h" style="text-align:center">Simple Pricing. Infinite ROI.</h2>
+    <div class="pricing-grid">
+      <div class="p-card">
+        <div class="p-tier">Starter</div>
+        <div class="p-name">Launchpad</div>
+        <div class="p-price"><sup>$</sup>0</div>
+        <div class="p-period">30-day free trial</div>
+        <div class="p-trial">✓ Full access — no card needed</div>
+        <ul class="p-list">
+          <li>3 AI Agents</li>
+          <li>Email Engine (1 inbox)</li>
+          <li>GrantBot Basic</li>
+          <li>LegalBot Basic</li>
+          <li>Command OS Dashboard</li>
+          <li class="no">Phone Agent</li>
+          <li class="no">Einstein Mode</li>
+          <li class="no">Unlimited inboxes</li>
+        </ul>
+        <a href="mailto:ceomrreddix@gmail.com?subject=TTI Free Trial" class="p-btn">Start Free →</a>
+      </div>
+      <div class="p-card featured">
+        <span class="p-feat-tag">⚡ MOST POPULAR</span>
+        <div class="p-tier">Empire</div>
+        <div class="p-name">Empire Suite</div>
+        <div class="p-price"><sup>$</sup>200</div>
+        <div class="p-period">per month · cancel anytime</div>
+        <div class="p-trial">✓ 30-day free trial included</div>
+        <ul class="p-list">
+          <li>All 6 AI Agents</li>
+          <li>Email Engine (5 inboxes)</li>
+          <li>7-Star Law Firm AI</li>
+          <li>GrantBot — Full scan</li>
+          <li>AI Phone Agent</li>
+          <li>LinkedIn Automation</li>
+          <li>Command OS Dashboard</li>
+          <li>Dan Martell Buyback Mode</li>
+          <li>Drive Organization AI</li>
+          <li>Digital Product Delivery</li>
+        </ul>
+        <a href="mailto:ceomrreddix@gmail.com?subject=TTI Empire Suite" class="p-btn">Start Empire →</a>
+      </div>
+      <div class="p-card">
+        <div class="p-tier">Elite</div>
+        <div class="p-name">Seal Team 6</div>
+        <div class="p-price"><sup>$</sup>997</div>
+        <div class="p-period">per month · white glove</div>
+        <div class="p-trial">✓ 30-day free trial</div>
+        <ul class="p-list">
+          <li>Everything in Empire</li>
+          <li>Einstein Mode — Full autonomy</li>
+          <li>Custom AI phone scripts</li>
+          <li>Dedicated account manager</li>
+          <li>1-on-1 strategy session</li>
+          <li>Custom integrations</li>
+          <li>TV/media kit automation</li>
+          <li>Priority support (2hr response)</li>
+        </ul>
+        <a href="mailto:ceomrreddix@gmail.com?subject=Seal Team 6 — Deploy Now" class="p-btn">Deploy Seal Team 6 →</a>
+      </div>
+    </div>
+    <div class="chime-note">
+      💚 Pay via Chime: <span class="chime-handle">$ceomrreddix</span> &nbsp;·&nbsp; Or email ceomrreddix@gmail.com to get started
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="logo" style="font-size:1.2rem">TTI<span>Empire</span></div>
+      <div class="footer-brand">Total Transformation Inc. — The AI platform that runs your empire while you sleep. Founded by Aaron T. Reddix, Los Angeles, CA.</div>
+    </div>
+    <div class="footer-col">
+      <h4>Platform</h4>
+      <ul>
+        <li><a href="#features">7-Star Automation</a></li>
+        <li><a href="#law">Law Firm AI</a></li>
+        <li><a href="#agents">AI Agents</a></li>
+        <li><a href="#grants">GrantBot</a></li>
+        <li><a href="#buyback">Buy Back Time</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <ul>
+        <li><a href="https://buy.stripe.com/4gM4gz5s7cCbfEBfha0ZW0G" target="_blank">Love &amp; Rehab ($97)</a></li>
+        <li><a href="https://buy.stripe.com/3cI3cv3jZ6dN1NL9WQ0ZW1m" target="_blank">Buy Back Your Time ($27)</a></li>
+        <li><a href="https://buy.stripe.com/00waEX3jZ7hRfEB7OI0ZW1p" target="_blank">10M Blueprint Series ($97)</a></li>
+        <li><a href="https://buy.stripe.com/00waEX1bRby76410mg0ZW1s" target="_blank">609 Credit Repair ($47)</a></li>
+        <li><a href="https://buy.stripe.com/6oU9ATg6LfOnakh7OI0ZW1q" target="_blank">Cold Call Code ($27)</a></li>
+        <li><a href="https://buy.stripe.com/9B628rcUz1Xxbol4Cw0ZW1r" target="_blank">Money Mindset ($17)</a></li>
+        <li><a href="https://buy.stripe.com/fZu8wPbQvcCb1NLb0U0ZW1t" target="_blank">RADT Study Guide ($27)</a></li>
+        <li><a href="https://buy.stripe.com/5kQeVd2fV9pZdwted60ZW1u" target="_blank">12-Step Guide ($17)</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:ceomrreddix@gmail.com">ceomrreddix@gmail.com</a></li>
+        <li><a href="tel:7473018586">(747) 301-8586</a></li>
+        <li><a href="#trial">Start Free Trial</a></li>
+        <li><a href="#products">View All 10 Products</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 Total Transformation Inc. — TTI Empire · Einstein Mode Active · 7-Star Rating<br>
+    Los Angeles, CA · Aaron T. Reddix, CEO · Chime: $ceomrreddix
   </div>
 </footer>
+
+<!-- CHAT WIDGET -->
+<div id="cw">
+  <div id="cb" onclick="document.getElementById('cbox').classList.toggle('open')">🤖</div>
+  <div id="cbox">
+    <div class="ch">TTI Empire AI <span>Einstein Mode — Ask me anything</span></div>
+    <div class="cm" id="msgs">
+      <div class="msg">👋 Hi! I'm the TTI Empire AI. I can deploy any of our 6 AI agents for your business. What are you trying to automate?</div>
+    </div>
+    <div class="ci">
+      <input id="ci" placeholder="How can I help you automate?" onkeydown="if(event.key==='Enter')sendMsg()">
+      <button onclick="sendMsg()">Send</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ROI Calculator
+function calcROI() {
+  const hrs = parseInt(document.getElementById('hrs').value);
+  const rate = parseInt(document.getElementById('rate').value);
+  document.getElementById('hrs-val').textContent = hrs;
+  document.getElementById('rate-val').textContent = rate;
+  const monthly = hrs * 4.3 * rate;
+  const roi = Math.round(monthly / 200);
+  document.getElementById('roi-out').textContent = '$' + monthly.toLocaleString();
+  document.querySelector('.roi-sub').innerHTML = `vs. $200/mo Empire plan — <span style="color:var(--g);font-weight:700">${roi}x ROI</span>`;
+}
+
+// Live counter animation
+function animateCounters() {
+  const el = document.getElementById('s1');
+  let n = 2000;
+  setInterval(() => {
+    n += Math.floor(Math.random() * 3);
+    el.textContent = n.toLocaleString();
+  }, 3000);
+}
+animateCounters();
+
+// Chat widget
+const replies = [
+  "I can deploy a CallBot for your business in 48 hours — it will answer every call 24/7. Want me to set it up?",
+  "The 7-Star Law Firm AI can start working on your credit disputes tonight. All 5 bureaus covered.",
+  "GrantBot has found $2M+ in opportunities for TTI. Want me to show you what's ready to submit?",
+  "Einstein Mode runs everything while you sleep. No staff. No code. Just results. Ready to deploy?",
+  "The Email Engine is sending 2,100+ personalized emails this week. Want to see the outreach stats?",
+  "Dan Martell says buy back your time. Every task under $100/hr is already automated. Let's set you up.",
+];
+let ri = 0;
+function sendMsg() {
+  const inp = document.getElementById('ci');
+  const msgs = document.getElementById('msgs');
+  if (!inp.value.trim()) return;
+  const userMsg = document.createElement('div');
+  userMsg.className = 'msg u';
+  userMsg.textContent = inp.value;
+  msgs.appendChild(userMsg);
+  inp.value = '';
+  setTimeout(() => {
+    const aiMsg = document.createElement('div');
+    aiMsg.className = 'msg';
+    aiMsg.textContent = replies[ri % replies.length];
+    ri++;
+    msgs.appendChild(aiMsg);
+    msgs.scrollTop = msgs.scrollHeight;
+  }, 800);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+</script>
+
+<!-- FOOTER -->
+<footer style="background:#000;border-top:1px solid rgba(0,230,118,0.1);padding:3rem 2rem;text-align:center">
+  <div style="max-width:700px;margin:0 auto">
+    <div style="font-size:1.3rem;font-weight:900;color:var(--g);margin-bottom:0.5rem">Total Transformation Inc.</div>
+    <div style="color:#444;font-size:0.85rem;margin-bottom:1.5rem">CEO Aaron T. Reddix · Einstein Mode Active 24/7</div>
+    <div style="display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.5rem;font-size:0.82rem">
+      <a href="tel:7473018586" style="color:#888;text-decoration:none">📞 (747) 301-8586</a>
+      <a href="mailto:ceomrreddix@gmail.com" style="color:#888;text-decoration:none">✉️ ceomrreddix@gmail.com</a>
+      <span style="color:#555">📍 5645 Case Ave, North Hollywood, CA 91601</span>
+      <span style="color:#555">EIN: 32-0663781</span>
+    </div>
+    <div style="color:#252525;font-size:0.75rem">© 2026 Total Transformation Inc. · All systems running 24/7</div>
+  </div>
+</footer>
+
 </body>
 </html>
