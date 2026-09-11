@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Total Transformation Inc. — Store</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0a;color:#fff;min-height:100vh}
+    header{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);padding:60px 20px 40px;text-align:center;border-bottom:1px solid #1e3a5f}
+    header h1{font-size:2.4rem;font-weight:800;letter-spacing:-1px;margin-bottom:10px}
+    header h1 span{background:linear-gradient(90deg,#4fc3f7,#00e5ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    header p{color:#90caf9;font-size:1.05rem;max-width:540px;margin:0 auto}
+    .stores{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:1100px;margin:50px auto;padding:0 20px}
+    .card{background:linear-gradient(145deg,#111827,#1f2937);border:1px solid #1e3a5f;border-radius:16px;padding:36px 28px;text-align:center;transition:transform .2s,box-shadow .2s;text-decoration:none;color:#fff;display:block}
+    .card:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(79,195,247,.15);border-color:#4fc3f7}
+    .card-icon{font-size:3rem;margin-bottom:16px;display:block}
+    .card h2{font-size:1.4rem;font-weight:700;margin-bottom:10px}
+    .card p{color:#9ca3af;font-size:.9rem;line-height:1.6;margin-bottom:20px}
+    .btn{display:inline-block;background:linear-gradient(90deg,#0ea5e9,#06b6d4);color:#fff;padding:12px 28px;border-radius:8px;font-weight:600;font-size:.9rem;letter-spacing:.3px;text-decoration:none}
+    .card:hover .btn{background:linear-gradient(90deg,#38bdf8,#22d3ee)}
+    .featured{border-color:#f59e0b;background:linear-gradient(145deg,#1c1507,#292106)}
+    .featured:hover{border-color:#fbbf24;box-shadow:0 20px 40px rgba(251,191,36,.15)}
+    .featured .btn{background:linear-gradient(90deg,#f59e0b,#d97706)}
+    .badge{display:inline-block;background:#f59e0b;color:#000;font-size:.7rem;font-weight:800;padding:3px 10px;border-radius:20px;margin-bottom:12px;letter-spacing:.5px}
+    footer{text-align:center;padding:40px 20px;color:#4b5563;font-size:.85rem;border-top:1px solid #1f2937;margin-top:20px}
+    footer a{color:#6b7280;text-decoration:none}
+    footer a:hover{color:#9ca3af}
+    .stats{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;padding:30px 20px;background:#111827;border-bottom:1px solid #1f2937}
+    .stat{text-align:center}
+    .stat-num{font-size:1.8rem;font-weight:800;color:#4fc3f7}
+    .stat-label{color:#6b7280;font-size:.8rem;margin-top:4px}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Total <span>Transformation</span> Inc.</h1>
+  <p>Digital products, AI automation tools, and business resources — built for operators who move fast.</p>
+</header>
+
+<div class="stats">
+  <div class="stat">
+    <div class="stat-num">80+</div>
+    <div class="stat-label">Digital Products</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">9</div>
+    <div class="stat-label">Product Categories</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">24/7</div>
+    <div class="stat-label">Auto-Delivery</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">$7–$247</div>
+    <div class="stat-label">Price Range</div>
+  </div>
+</div>
+
+<div class="stores">
+
+  <a class="card featured" href="ebooks.html">
+    <div class="badge">LIVE — 80 PRODUCTS</div>
+    <span class="card-icon">📚</span>
+    <h2>Digital Ebook Store</h2>
+    <p>Browse 80+ digital products across Recovery, Credit Repair, AI Automation, Real Estate, Business, Mindset, and more. Instant Stripe checkout.</p>
+    <span class="btn">Shop the Store &rarr;</span>
+  </a>
+
+  <a class="card" href="ebooks.html#recovery">
+    <span class="card-icon">💊</span>
+    <h2>10X Recovery Series</h2>
+    <p>12 books on recovery, sobriety, money mindset, and building a new life. Written for people who want real change — not just inspiration.</p>
+    <span class="btn">Browse Recovery &rarr;</span>
+  </a>
+
+  <a class="card" href="ebooks.html#credit">
+    <span class="card-icon">💳</span>
+    <h2>Credit &amp; Finance</h2>
+    <p>Credit repair playbooks, 800-score roadmaps, and dispute letter systems. Built for people who are done letting bad credit hold them back.</p>
+    <span class="btn">Browse Credit &rarr;</span>
+  </a>
+
+  <a class="card" href="ebooks.html#ai">
+    <span class="card-icon">🤖</span>
+    <h2>AI Automation Tools</h2>
+    <p>Cold call scripts, AI phone agent playbooks, automation packages, and business systems. Deploy AI across your business starting today.</p>
+    <span class="btn">Browse AI &rarr;</span>
+  </a>
+
+  <a class="card" href="ebooks.html#blueprint">
+    <span class="card-icon">💰</span>
+    <h2>$10M Blueprint Series</h2>
+    <p>Complete 12-book series from offer creation to building to sell. The full entrepreneurial operating system in digital format.</p>
+    <span class="btn">Browse Blueprint &rarr;</span>
+  </a>
+
+  <a class="card" href="ebooks.html#realestate">
+    <span class="card-icon">🏠</span>
+    <h2>Real Estate</h2>
+    <p>Tax lien investing, owner-finance deals, and rental property systems. Find deals others miss using proven frameworks.</p>
+    <span class="btn">Browse Real Estate &rarr;</span>
+  </a>
+
+</div>
+
+<footer>
+  <p>Total Transformation Inc. &mdash; Los Angeles, CA &mdash; EIN 32-0663781</p>
+  <p style="margin-top:8px"><a href="mailto:aaronreddix1987@gmail.com">aaronreddix1987@gmail.com</a> &nbsp;|&nbsp; (747) 301-8586 &nbsp;|&nbsp; <a href="ebooks.html">Full Store</a></p>
+  <p style="margin-top:12px;font-size:.75rem;color:#374151">All digital products are delivered electronically. No physical items. All sales subject to TTI refund policy.</p>
+</footer>
+
+</body>
+</html>
