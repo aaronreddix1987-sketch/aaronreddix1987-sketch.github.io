@@ -1,28 +1,28 @@
-# REVENUE RUN — 2026-09-07
+# REVENUE RUN — 2026-09-12 (wired delivery)
 
-## Live money URL
-https://aaronreddix1987-sketch.github.io/
+## Live money URLs
+- https://aaronreddix1987-sketch.github.io/
+- https://aaronreddix1987-sketch.github.io/ebooks.html
+- https://aaronreddix1987-sketch.github.io/thank-you.html?product=buy-back-your-time-ai
+- https://aaronreddix1987-sketch.github.io/download.html
+- Vault: https://aaronreddix1987-sketch.github.io/vault/
 
-## Dan Martell (Buy Back Your Time) application
-1. Productize what already exists (ebooks + Stripe links)
-2. Deliver without your hours (card = auto Drive)
-3. Reinvest first sales into higher automation / agent package
-4. Keep school referral as second income path
+## Instant delivery map (set Stripe Payment Link success URL when verification clears)
+| Product slug | Success URL |
+|---|---|
+| buy-back-your-time-ai | /thank-you.html?product=buy-back-your-time-ai |
+| digital-undercover-billionaire | /thank-you.html?product=digital-undercover-billionaire |
+| cold-call-code | /thank-you.html?product=cold-call-code |
+| money-mindset | /thank-you.html?product=money-mindset |
+| 10x-recovery-bundle | /thank-you.html?product=10x-recovery-bundle |
+| 10m-blueprint | /thank-you.html?product=10m-blueprint |
+| credit-repair-609 | /thank-you.html?product=credit-repair-609 |
 
-## What runs without you
-- Homepage + offers live
-- Stripe Payment Links → automatic download
-- Chime instructions on page
+## Stripe status
+Account pending verification (1–2 days). Payment Links return HTTP 200. After unlock, set success_url on each link to the map above.
 
-## What still needs you when a sale hits Chime
-- Text reply with Drive link (until public links are hard-wired per product)
+## Chime path
+$ceomrreddix → buyer texts 747-301-8586 → send thank-you URL with product slug.
 
-## Overnight focus
-- Share the live URL
-- Drive traffic to Buy Now (card first)
-- First revenue → upgrade automation package
-
-## Not fully auto (honest)
-- Grant portal submissions
-- Social posting from this chat
-- Photo binary on homepage (optional manual upload)
+## School referral (live on ebooks)
+Associated Technical College / DVC · Xiomara Figueroa · (213) 481-6198 Ext 108 · Mention Aaron T. Reddix
