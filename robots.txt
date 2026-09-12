@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+Disallow: /checkout.html
 Sitemap: https://aaronreddix1987-sketch.github.io/sitemap.xml
