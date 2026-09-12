@@ -1,0 +1,8 @@
+Operational note for owners: if leads hit after 6pm and the line goes to voicemail, conversion drops before the pitch starts.
+
+We productized the fix — AI phone coverage + digital playbooks with instant delivery.
+
+Storefront: https://aaronreddix1987-sketch.github.io/agents.html
+Case study: https://aaronreddix1987-sketch.github.io/case-study.html
+
+Total Transformation Inc · Los Angeles
