@@ -1,195 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Total Transformation Inc. — Store Hub</title>
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0a;color:#fff;min-height:100vh}
-    header{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);padding:60px 20px 40px;text-align:center;border-bottom:1px solid #1e3a5f}
-    header h1{font-size:2.4rem;font-weight:800;letter-spacing:-1px;margin-bottom:10px}
-    header h1 span{background:linear-gradient(90deg,#4fc3f7,#00e5ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-    header p{color:#90caf9;font-size:1.05rem;max-width:560px;margin:0 auto 20px}
-    .stats{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;padding:30px 20px;background:#111827;border-bottom:1px solid #1f2937}
-    .stat{text-align:center}
-    .stat-num{font-size:1.8rem;font-weight:800;color:#4fc3f7}
-    .stat-label{color:#6b7280;font-size:.8rem;margin-top:4px}
-    .section{max-width:1100px;margin:40px auto;padding:0 20px}
-    .section-title{font-size:1.5rem;font-weight:800;margin-bottom:20px;color:#4fc3f7;border-bottom:1px solid #1e3a5f;padding-bottom:10px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
-    .card{background:linear-gradient(145deg,#111827,#1f2937);border:1px solid #1e3a5f;border-radius:14px;padding:28px 22px;transition:transform .2s,box-shadow .2s}
-    .card:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(79,195,247,.12);border-color:#4fc3f7}
-    .card-icon{font-size:2.2rem;margin-bottom:12px}
-    .card h3{font-size:1.1rem;font-weight:700;margin-bottom:8px}
-    .card p{color:#9ca3af;font-size:.85rem;line-height:1.5;margin-bottom:16px}
-    .price{font-size:1.3rem;font-weight:800;color:#00e5ff;margin-bottom:14px}
-    .btn{display:inline-block;background:linear-gradient(90deg,#0ea5e9,#06b6d4);color:#fff;padding:10px 22px;border-radius:8px;font-weight:600;font-size:.85rem;text-decoration:none;cursor:pointer}
-    .btn:hover{background:linear-gradient(90deg,#38bdf8,#22d3ee)}
-    .btn-gold{background:linear-gradient(90deg,#f59e0b,#d97706)}
-    .btn-gold:hover{background:linear-gradient(90deg,#fbbf24,#f59e0b)}
-    .featured{border-color:#f59e0b;background:linear-gradient(145deg,#1c1507,#292106)}
-    .featured:hover{border-color:#fbbf24;box-shadow:0 16px 32px rgba(251,191,36,.12)}
-    .badge{display:inline-block;background:#f59e0b;color:#000;font-size:.65rem;font-weight:800;padding:2px 8px;border-radius:20px;margin-bottom:10px;letter-spacing:.5px}
-    footer{text-align:center;padding:40px 20px;color:#4b5563;font-size:.85rem;border-top:1px solid #1f2937;margin-top:40px}
-    footer a{color:#6b7280;text-decoration:none}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Total Transformation Inc. — Full Product Store</title>
+<meta name="description" content="80+ digital products — AI automation, business systems, recovery guides, credit repair, real estate. Instant Stripe checkout.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--black:#050508;--dark:#0d0d14;--card:#12121e;--border:#1e1e35;--blue:#0ea5e9;--cyan:#06b6d4;--gold:#f59e0b;--green:#10b981;--text:#e2e8f0;--muted:#64748b;--light:#94a3b8}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;background:var(--black);color:var(--text);min-height:100vh}
+nav{background:rgba(5,5,8,.95);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.nav-logo{font-size:.95rem;font-weight:800}
+.nav-logo span{background:linear-gradient(90deg,#0ea5e9,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.back-btn{background:rgba(255,255,255,.06);border:1px solid var(--border);color:var(--light);padding:7px 16px;border-radius:6px;font-size:.82rem;text-decoration:none;transition:all .2s}
+.back-btn:hover{border-color:var(--blue);color:#fff}
+
+header{padding:60px 24px 40px;text-align:center;background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(14,165,233,.07) 0%,transparent 70%)}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(14,165,233,.1);border:1px solid rgba(14,165,233,.3);border-radius:20px;padding:5px 14px;font-size:.72rem;font-weight:700;color:var(--blue);letter-spacing:.5px;margin-bottom:20px;text-transform:uppercase}
+.badge::before{content:'';width:7px;height:7px;background:var(--green);border-radius:50%;animation:p 2s infinite}
+@keyframes p{0%,100%{opacity:1}50%{opacity:.3}}
+header h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:900;letter-spacing:-1.5px;margin-bottom:12px}
+header h1 span{background:linear-gradient(90deg,#0ea5e9,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+header p{color:var(--light);font-size:.95rem;max-width:520px;margin:0 auto 32px;line-height:1.65}
+
+.stats{display:flex;justify-content:center;gap:clamp(20px,4vw,50px);flex-wrap:wrap;padding:24px;background:rgba(255,255,255,.03);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.stat-n{font-size:1.6rem;font-weight:900;background:linear-gradient(90deg,#0ea5e9,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.stat-l{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-top:3px}
+
+.main{max-width:1100px;margin:0 auto;padding:48px 24px}
+.cat-title{font-size:.72rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);margin:48px 0 20px;padding-bottom:12px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px}
+.cat-title:first-child{margin-top:0}
+.cat-title .count{background:rgba(14,165,233,.1);color:var(--blue);border:1px solid rgba(14,165,233,.25);border-radius:20px;padding:2px 8px;font-size:.65rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;display:flex;flex-direction:column;transition:transform .2s,border-color .2s,box-shadow .2s;text-decoration:none;color:inherit}
+.card:hover{transform:translateY(-3px);border-color:var(--blue);box-shadow:0 12px 30px rgba(14,165,233,.1)}
+.card.feat{border-color:var(--gold);background:linear-gradient(145deg,#1a1507,#221c08)}
+.card.feat:hover{border-color:#fbbf24;box-shadow:0 12px 30px rgba(245,158,11,.12)}
+.cb{display:inline-block;font-size:.62rem;font-weight:800;padding:2px 8px;border-radius:12px;margin-bottom:10px;text-transform:uppercase;letter-spacing:.4px}
+.cb.hot{background:rgba(245,158,11,.15);color:#f59e0b;border:1px solid rgba(245,158,11,.3)}
+.cb.new{background:rgba(16,185,129,.15);color:#10b981;border:1px solid rgba(16,185,129,.3)}
+.cb.live{background:rgba(14,165,233,.15);color:#0ea5e9;border:1px solid rgba(14,165,233,.3)}
+.cb.rec{background:rgba(139,92,246,.15);color:#8b5cf6;border:1px solid rgba(139,92,246,.3)}
+.icon{font-size:2rem;margin-bottom:10px;display:block}
+.card h3{font-size:1rem;font-weight:800;margin-bottom:6px}
+.card p{color:var(--light);font-size:.82rem;line-height:1.55;flex:1;margin-bottom:16px}
+.meta{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.price{font-size:1.5rem;font-weight:900}
+.price.gld{background:linear-gradient(90deg,#f59e0b,#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.price sub{font-size:.65rem;color:var(--muted);font-weight:400}
+.btn{display:block;text-align:center;padding:10px 20px;border-radius:7px;font-weight:800;font-size:.85rem;text-decoration:none;transition:all .2s}
+.btn.blue{background:linear-gradient(90deg,#0ea5e9,#06b6d4);color:#fff}
+.btn.blue:hover{background:linear-gradient(90deg,#38bdf8,#22d3ee)}
+.btn.gold{background:linear-gradient(90deg,#f59e0b,#d97706);color:#fff}
+.btn.gold:hover{background:linear-gradient(90deg,#fbbf24,#f59e0b)}
+.btn.purple{background:linear-gradient(90deg,#7c3aed,#6d28d9);color:#fff}
+.sec{font-size:.68rem;color:var(--muted);text-align:center;margin-top:7px}
+.sec span{color:var(--green)}
+
+footer{text-align:center;padding:40px 24px;border-top:1px solid var(--border);color:var(--muted);font-size:.78rem;line-height:1.8}
+footer a{color:#6b7280;text-decoration:none}
+footer a:hover{color:var(--light)}
+</style>
 </head>
 <body>
+<nav>
+  <div class="nav-logo">Total <span>Transformation</span> Inc.</div>
+  <a class="back-btn" href="index.html">← Back to Home</a>
+</nav>
 
 <header>
-  <h1>Total <span>Transformation</span> Inc.</h1>
-  <p>AI automation, digital products, and business blueprints. Built for operators who move fast.</p>
+  <div class="badge">🟢 80+ Live Products — Instant Delivery</div>
+  <h1>The Full <span>Product</span> Store</h1>
+  <p>Digital products, AI automation tools, business systems, and recovery guides. Every product ships instantly. All payments through Stripe.</p>
 </header>
 
 <div class="stats">
-  <div class="stat"><div class="stat-num">80+</div><div class="stat-label">Digital Products</div></div>
-  <div class="stat"><div class="stat-num">$197</div><div class="stat-label">AI Agent Starts At</div></div>
-  <div class="stat"><div class="stat-num">24/7</div><div class="stat-label">Auto-Delivery</div></div>
-  <div class="stat"><div class="stat-num">$7–$2.5K</div><div class="stat-label">Price Range</div></div>
+  <div style="text-align:center"><div class="stat-n">80+</div><div class="stat-l">Digital Products</div></div>
+  <div style="text-align:center"><div class="stat-n">9</div><div class="stat-l">Categories</div></div>
+  <div style="text-align:center"><div class="stat-n">24/7</div><div class="stat-l">Auto-Delivery</div></div>
+  <div style="text-align:center"><div class="stat-n">$27–$2,500</div><div class="stat-l">Price Range</div></div>
 </div>
 
-<!-- AI AUTOMATION SERVICES -->
-<div class="section">
-  <div class="section-title">🤖 AI Automation Services</div>
+<div class="main">
+
+  <!-- AI SERVICES -->
+  <div class="cat-title">🤖 AI Automation Services <span class="count">4 products</span></div>
   <div class="grid">
-    <div class="card featured">
-      <div class="badge">MOST POPULAR</div>
-      <div class="card-icon">📞</div>
-      <h3>AI Phone Agent — Setup</h3>
-      <p>Full AI phone system build: 24/7 call answering, appointment booking, lead qualification, SMS follow-ups. Live in 48 hours.</p>
-      <div class="price">$2,500 one-time</div>
-      <a href="https://buy.stripe.com/dRmeVd5s7cCb9gd7OI0ZW1i" class="btn btn-gold">Get Started →</a>
+    <div class="card feat">
+      <span class="cb hot">Done-For-You</span>
+      <span class="icon">🤖</span>
+      <h3>AI Phone Agent Setup</h3>
+      <p>Complete AI phone agent deployment. VAPI/Bland.ai configured, custom scripts, CRM integration, 24/7 inbound call handling, appointment booking. Go live in days.</p>
+      <div class="meta"><div class="price gld">$2,500</div></div>
+      <a class="btn gold" href="https://buy.stripe.com/dRmeVd5s7cCb9gd7OI0ZW1i" target="_blank">Buy Now → Instant Setup</a>
+      <div class="sec"><span>🔒</span> Stripe · One-time payment</div>
     </div>
     <div class="card">
-      <div class="card-icon">⚡</div>
-      <h3>AI Agent — Basic Plan</h3>
-      <p>500 calls/month, 24/7 answering, call routing, voicemail transcription, email + SMS notifications, analytics.</p>
-      <div class="price">$500/month</div>
-      <a href="https://buy.stripe.com/aFa3cv07N9pZ2RP8SM0ZW1j" class="btn">Subscribe →</a>
+      <span class="cb live">Monthly Plan</span>
+      <span class="icon">⚡</span>
+      <h3>Basic AI Plan — $500/mo</h3>
+      <p>AI phone agent monitoring, basic workflow automation, monthly reporting, email support. Perfect for solo operators testing AI automation.</p>
+      <div class="meta"><div class="price">$500<sub>/mo</sub></div></div>
+      <a class="btn blue" href="https://buy.stripe.com/aFa3cv07N9pZ2RP8SM0ZW1j" target="_blank">Start Basic Plan →</a>
+      <div class="sec"><span>🔒</span> Stripe · Cancel anytime</div>
     </div>
     <div class="card">
-      <div class="card-icon">🚀</div>
-      <h3>AI Agent — Professional</h3>
-      <p>2,000 calls/month, appointment scheduling, CRM integration (HubSpot, Salesforce), lead scoring, priority support.</p>
-      <div class="price">$1,500/month</div>
-      <a href="https://buy.stripe.com/8x29AT6wbeKj8c97OI0ZW1k" class="btn">Subscribe →</a>
+      <span class="cb live">Most Popular</span>
+      <span class="icon">🚀</span>
+      <h3>Professional AI Plan — $1,500/mo</h3>
+      <p>AI voice agent 24/7, CRM integration, lead qualification, appointment booking, bi-weekly strategy calls, multi-channel follow-up automation.</p>
+      <div class="meta"><div class="price">$1,500<sub>/mo</sub></div></div>
+      <a class="btn blue" href="https://buy.stripe.com/8x29AT6wbeKj8c97OI0ZW1k" target="_blank">Start Pro Plan →</a>
+      <div class="sec"><span>🔒</span> Stripe · Cancel anytime</div>
     </div>
-    <div class="card">
-      <div class="card-icon">🏢</div>
-      <h3>AI Agent — Premium</h3>
-      <p>Unlimited calls, multi-location, outbound calling, payment processing, white-label option, dedicated account manager.</p>
-      <div class="price">$2,500/month</div>
-      <a href="https://buy.stripe.com/6oU4gz2fVby79gd2uo0ZW1l" class="btn">Subscribe →</a>
+    <div class="card feat">
+      <span class="cb hot">White Glove</span>
+      <span class="icon">💎</span>
+      <h3>Premium AI Plan — $2,500/mo</h3>
+      <p>Full AI business operations. Inbound + outbound calls, lead generation, booking, follow-up sequences, weekly strategy sessions with Aaron directly.</p>
+      <div class="meta"><div class="price gld">$2,500<sub>/mo</sub></div></div>
+      <a class="btn gold" href="https://buy.stripe.com/6oU4gz2fVby79gd2uo0ZW1l" target="_blank">Start Premium Plan →</a>
+      <div class="sec"><span>🔒</span> Stripe · Cancel anytime</div>
     </div>
   </div>
-</div>
 
-<!-- $10M BLUEPRINT SERIES -->
-<div class="section">
-  <div class="section-title">💰 $10M Blueprint Series — 12-Book Library</div>
+  <!-- BLUEPRINT SERIES -->
+  <div class="cat-title">💰 $10M Blueprint Series <span class="count">12 books</span></div>
   <div class="grid">
-    <div class="card featured">
-      <div class="badge">COMPLETE SERIES</div>
-      <div class="card-icon">📚</div>
-      <h3>Complete 12-Book Bundle</h3>
-      <p>Money Math → Foundation → Irresistible Offer → AI Delivery → Growth Engine → Build to Sell. The full entrepreneurial OS.</p>
-      <div class="price">$47</div>
-      <a href="https://buy.stripe.com/bJe7sL3jZ31Bbol5GA0ZW12" class="btn btn-gold">Get All 12 Books →</a>
-    </div>
-    <div class="card">
-      <div class="card-icon">🧠</div>
-      <h3>Money Mindset Affirmations</h3>
-      <p>Rewire your subconscious for financial success. Daily affirmations + exercises for people rebuilding from the ground up.</p>
-      <div class="price">$9.97</div>
-      <a href="https://buy.stripe.com/dRm9AT9In59J8c95GA0ZW13" class="btn">Buy Now →</a>
-    </div>
-    <div class="card">
-      <div class="card-icon">⏱️</div>
-      <h3>Buy Back Your Time</h3>
-      <p>AI tools to reclaim 20+ hours per week. The exact systems to automate your business without a tech team.</p>
-      <div class="price">$19</div>
-      <a href="https://buy.stripe.com/3cIbJ17Af59Jbold920ZW14" class="btn">Buy Now →</a>
-    </div>
-    <div class="card">
-      <div class="card-icon">📱</div>
-      <h3>Cold Call Code</h3>
-      <p>Master the phone. Scripts, objection handling, and a system to book appointments from cold calls. No fluff.</p>
-      <div class="price">$9.97</div>
-      <a href="https://buy.stripe.com/3cIbJ1f2Hby72RPb0U0ZW15" class="btn">Buy Now →</a>
+    <div class="card feat">
+      <span class="cb new">Full Series</span>
+      <span class="icon">📚</span>
+      <h3>$10M Blueprint — Complete 12-Book Series</h3>
+      <p>Full entrepreneurial operating system. Offer creation, AI delivery systems, growth engine, conversion machine, recurring revenue, build-to-sell. The complete roadmap from zero to exit — instant download.</p>
+      <div class="meta"><div class="price gld">$47</div></div>
+      <a class="btn gold" href="https://buy.stripe.com/bJe7sL3jZ31Bbol5GA0ZW12" target="_blank">Get All 12 Books →</a>
+      <div class="sec"><span>🔒</span> Stripe · Instant delivery</div>
     </div>
   </div>
-</div>
 
-<!-- RECOVERY & REENTRY -->
-<div class="section">
-  <div class="section-title">💊 Recovery & Reentry Series</div>
+  <!-- RECOVERY -->
+  <div class="cat-title" id="recovery">💊 10X Recovery Series <span class="count">12 books</span></div>
   <div class="grid">
-    <div class="card featured">
-      <div class="badge">10X RECOVERY</div>
-      <div class="card-icon">🔥</div>
-      <h3>Treatment Recovery Series</h3>
-      <p>10-book series on long-term sobriety, money mindset, reentry, and building a new life. Written for real change.</p>
-      <div class="price">$47</div>
-      <a href="https://buy.stripe.com/9B6fZhg6LdGf641fha0ZW18" class="btn btn-gold">Get the Series →</a>
-    </div>
     <div class="card">
-      <div class="card-icon">🔑</div>
-      <h3>Re-Entry Success Toolkit</h3>
-      <p>Everything you need post-incarceration: housing, employment, social reintegration, and financial rebuilding.</p>
-      <div class="price">$27</div>
-      <a href="https://buy.stripe.com/8x28wP7AfcCb1NL8SM0ZW19" class="btn">Buy Now →</a>
+      <span class="cb rec">Series</span>
+      <span class="icon">💊</span>
+      <h3>10X Recovery — Complete Series</h3>
+      <p>12 books on recovery, sobriety, money mindset, credit rebuilding, employment, and launching a business from zero. Written for people who want real change, not just inspiration.</p>
+      <div class="meta"><div class="price">$47</div></div>
+      <a class="btn purple" href="https://buy.stripe.com/9B6fZhg6LdGf641fha0ZW18" target="_blank">Get All 12 Books →</a>
+      <div class="sec"><span>🔒</span> Stripe · Instant delivery</div>
     </div>
+  </div>
+
+  <!-- CREDIT -->
+  <div class="cat-title" id="credit">💳 Credit &amp; Finance</div>
+  <div class="grid">
     <div class="card">
-      <div class="card-icon">💳</div>
+      <span class="cb new">Coming Soon</span>
+      <span class="icon">💳</span>
       <h3>Credit Repair Playbook</h3>
-      <p>Legal, step-by-step method to restore your financial reputation. Dispute letters, score roadmaps, and strategy.</p>
-      <div class="price">$47</div>
-      <a href="https://buy.stripe.com/eVqaEX9IneKjcspb0U0ZW1a" class="btn">Buy Now →</a>
+      <p>Dispute letter system, 800-score roadmap, client portal setup, compliance guide. Start a credit repair business charging $1,000/client.</p>
+      <div class="meta"><div class="price">$97</div></div>
+      <a class="btn blue" href="mailto:aaronreddix1987@gmail.com?subject=Credit Repair Playbook">Pre-Order — Email Us</a>
+      <div class="sec">Email to reserve your copy</div>
     </div>
     <div class="card">
-      <div class="card-icon">🏠</div>
-      <h3>Real Estate / Sober Living</h3>
-      <p>Launch a socially conscious, high-ROI business in recovery housing. Licensing, operations, and funding guide.</p>
-      <div class="price">$47</div>
-      <a href="https://buy.stripe.com/7sYcN5g6L0TtfEBb0U0ZW0L" class="btn">Buy Now →</a>
+      <span class="cb new">Coming Soon</span>
+      <span class="icon">📊</span>
+      <h3>800 Credit Score Roadmap</h3>
+      <p>Step-by-step system for rebuilding credit from any starting point. Dispute templates, timeline, creditor scripts, and monitoring setup.</p>
+      <div class="meta"><div class="price">$47</div></div>
+      <a class="btn blue" href="mailto:aaronreddix1987@gmail.com?subject=800 Score Roadmap">Pre-Order — Email Us</a>
+      <div class="sec">Email to reserve your copy</div>
     </div>
   </div>
-</div>
 
-<!-- CAREER & WEALTH -->
-<div class="section">
-  <div class="section-title">🎓 Career & Wealth Guides</div>
+  <!-- REAL ESTATE -->
+  <div class="cat-title" id="realestate">🏠 Real Estate</div>
   <div class="grid">
     <div class="card">
-      <div class="card-icon">🏥</div>
-      <h3>Medical Billing Mastery</h3>
-      <p>High-demand back-office skill. Work from home, no degree required. Step-by-step guide to getting paid.</p>
-      <div class="price">$37</div>
-      <a href="https://buy.stripe.com/dRmfZh2fV1XxfEBed60ZW0I" class="btn">Buy Now →</a>
-    </div>
-    <div class="card">
-      <div class="card-icon">🔐</div>
-      <h3>Cybersecurity Fundamentals</h3>
-      <p>Enter the world's highest-demand field. From zero to employable with the right certifications and skills.</p>
-      <div class="price">$47</div>
-      <a href="https://buy.stripe.com/28EdR94o3fOn3VTfha0ZW0J" class="btn">Buy Now →</a>
-    </div>
-    <div class="card">
-      <div class="card-icon">📦</div>
-      <h3>Complete Ebook Bundle</h3>
-      <p>All 80+ products. Every category: business, recovery, credit, real estate, AI, mindset. One price for everything.</p>
-      <div class="price">$97</div>
-      <a href="ebooks.html" class="btn btn-gold">Browse All 80+ →</a>
+      <span class="cb new">Coming Soon</span>
+      <span class="icon">🏠</span>
+      <h3>Tax Lien Investing System</h3>
+      <p>Find and acquire tax liens, owner-finance deals, and rental properties using proven frameworks. Focus on deals others miss.</p>
+      <div class="meta"><div class="price">$97</div></div>
+      <a class="btn blue" href="mailto:aaronreddix1987@gmail.com?subject=Tax Lien System">Pre-Order — Email Us</a>
+      <div class="sec">Email to reserve your copy</div>
     </div>
   </div>
-</div>
+
+</div><!-- /main -->
 
 <footer>
   <p>Total Transformation Inc. &mdash; Los Angeles, CA &mdash; EIN 32-0663781</p>
-  <p style="margin-top:8px"><a href="mailto:aaronreddix1987@gmail.com">aaronreddix1987@gmail.com</a> &nbsp;|&nbsp; (747) 301-8586 &nbsp;|&nbsp; <a href="ebooks.html">Full Catalog</a></p>
-  <p style="margin-top:12px;font-size:.75rem;color:#374151">All digital products delivered electronically. AI services subject to service agreement. All sales subject to TTI refund policy.</p>
+  <p style="margin-top:6px"><a href="mailto:aaronreddix1987@gmail.com">aaronreddix1987@gmail.com</a> &nbsp;|&nbsp; (747) 301-8586 &nbsp;|&nbsp; <a href="index.html">Home</a></p>
+  <p style="margin-top:10px">All digital products delivered electronically. No physical items. All sales subject to TTI refund policy. Payments by Stripe.</p>
 </footer>
-
 </body>
 </html>
