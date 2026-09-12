@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 Disallow: /checkout.html
+Disallow: /dashboard.html
 Sitemap: https://aaronreddix1987-sketch.github.io/sitemap.xml
+
+# Polite crawling
+Crawl-delay: 1
