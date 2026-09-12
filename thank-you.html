@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Download Ready — Total Transformation Inc.</title>
+<meta name="robots" content="noindex">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--gold:#D4AF37;--gold2:#F0CC5A;--bg:#060504;--card:#111;--green:#22c55e;--text:#f0e6d0;--muted:#a89878}
@@ -15,63 +16,69 @@ h1{font-size:clamp(28px,5vw,42px);background:linear-gradient(135deg,#fff,var(--g
 .sub{color:var(--muted);margin-bottom:28px;line-height:1.5}
 .card{background:var(--card);border:1px solid rgba(212,175,55,.25);border-radius:16px;padding:22px;margin-bottom:16px}
 .card h2{color:var(--gold);font-size:14px;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
-.btn{display:block;text-align:center;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;font-weight:800;padding:14px;border-radius:12px;text-decoration:none;margin-bottom:10px}
+.btn{display:block;text-align:center;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;font-weight:800;padding:16px;border-radius:12px;text-decoration:none;margin-bottom:10px;font-size:16px}
 .btn2{background:transparent;border:2px solid var(--gold);color:var(--gold)}
 .list a{display:block;padding:12px 14px;border:1px solid rgba(255,255,255,.08);border-radius:10px;color:var(--text);text-decoration:none;margin-bottom:8px;background:rgba(255,255,255,.03)}
 .list a:hover{border-color:var(--gold)}
 .meta{font-size:12px;color:var(--muted);margin-top:8px}
+.note{font-size:13px;color:var(--muted);line-height:1.5;margin-top:12px}
 .school{border-color:rgba(34,197,94,.3);background:rgba(34,197,94,.06)}
 footer{text-align:center;color:#666;font-size:12px;margin-top:32px}
 footer a{color:var(--gold)}
+#status{color:var(--green);font-weight:700;margin-bottom:12px;font-size:14px}
 </style>
 </head>
 <body>
-<div class="bar">PAYMENT CONFIRMED · INSTANT VAULT ACCESS · NO HUMAN REQUIRED</div>
+<div class="bar">PAYMENT CONFIRMED · INSTANT DOWNLOAD · ZERO HUMAN STEPS</div>
 <div class="wrap">
-  <div class="badge">✓ Order unlocked</div>
-  <h1>Your download is ready</h1>
-  <p class="sub">Tap your product below. Files open immediately. Save or print to PDF from your browser if needed.</p>
+  <div class="badge">✓ Unlocked automatically</div>
+  <h1>Your file is ready</h1>
+  <p class="sub">No email wait. No ticket. Your product opens below. Bookmark this page for re-download anytime.</p>
+  <p id="status">Preparing your download…</p>
 
   <div class="card">
     <h2>Your product</h2>
     <div id="primary"></div>
     <p class="meta" id="orderMeta"></p>
+    <p class="note">Tip: on phone, tap and hold → Open in new tab. Use browser Share → Save PDF if you want an offline copy.</p>
   </div>
 
   <div class="card">
-    <h2>Full vault (purchased library)</h2>
+    <h2>Full vault</h2>
     <div class="list" id="vault"></div>
   </div>
 
   <div class="card school">
     <h2>Career path referral</h2>
-    <p style="color:var(--muted);font-size:14px;margin-bottom:12px">Associated Technical College / DVC — Business Office Administration (30 weeks). Admissions: Xiomara Figueroa · (213) 481-6198 Ext 108. Mention <strong>Aaron T. Reddix</strong>.</p>
+    <p style="color:var(--muted);font-size:14px;margin-bottom:12px">Associated Technical College / DVC — Business Office Administration. Admissions: Xiomara Figueroa · (213) 481-6198 Ext 108. Mention <strong>Aaron T. Reddix</strong>.</p>
     <a class="btn btn2" href="tel:2134816198">Call admissions</a>
   </div>
 
-  <a class="btn" href="/ebooks.html">Browse more products</a>
-  <a class="btn btn2" href="/">Home</a>
+  <a class="btn btn2" href="/access.html">Lost your link? Customer access help</a>
+  <a class="btn btn2" href="/ebooks.html">Browse more products</a>
   <footer>
-    TTI · 747-301-8586 · <a href="mailto:aaronreddix1987@gmail.com">aaronreddix1987@gmail.com</a><br>
-    Chime: $ceomrreddix · Card sales auto-deliver here after Stripe unlocks
+    Total Transformation Inc · Text 747-301-8586 · <a href="mailto:aaronreddix1987@gmail.com">aaronreddix1987@gmail.com</a><br>
+    Card = this page after Stripe. Chime buyers: use access.html or text us with product name.
   </footer>
 </div>
 <script>
 const CATALOG = {
-  "buy-back-your-time-ai": {name:"Buy Back Your Time — AI Edition", file:"/vault/buy-back-your-time-ai.html", stripe:"https://buy.stripe.com/00wcN40Du1Hce1J36g43S0v"},
-  "digital-undercover-billionaire": {name:"Digital Undercover Billionaire", file:"/vault/digital-undercover-billionaire.html", stripe:"https://buy.stripe.com/4gM6oG71S3Pk0aTbCM43S0y"},
-  "cold-call-code": {name:"Cold Call Code", file:"/vault/cold-call-code.html", stripe:"https://buy.stripe.com/3cI3cudqg3PkbTBgX643S0x"},
-  "money-mindset": {name:"Money Mindset Affirmations", file:"/vault/money-mindset.html", stripe:"https://buy.stripe.com/6oUdR8dqg99E8Hp0Y843S0t"},
-  "10x-recovery-bundle": {name:"10X Recovery Bundle", file:"/vault/10x-recovery-bundle.html", stripe:"https://buy.stripe.com/28E28r7Af0Tt4ZXfha0ZW0x"},
-  "10m-blueprint": {name:"$10M Blueprint Series", file:"/vault/10m-blueprint.html", stripe:"https://buy.stripe.com/6oU4gy0Du85AaPx7mw43S0u"},
-  "credit-repair-609": {name:"609 Credit Repair System", file:"/vault/credit-repair-609.html", stripe:"https://buy.stripe.com/aFafZg5XO85A4r9gX643S0w"}
+  "buy-back-your-time-ai": {name:"Buy Back Your Time — AI Edition", file:"/vault/buy-back-your-time-ai.html"},
+  "digital-undercover-billionaire": {name:"Digital Undercover Billionaire", file:"/vault/digital-undercover-billionaire.html"},
+  "cold-call-code": {name:"Cold Call Code", file:"/vault/cold-call-code.html"},
+  "money-mindset": {name:"Money Mindset Affirmations", file:"/vault/money-mindset.html"},
+  "10x-recovery-bundle": {name:"10X Recovery Bundle", file:"/vault/10x-recovery-bundle.html"},
+  "10m-blueprint": {name:"$10M Blueprint Series", file:"/vault/10m-blueprint.html"},
+  "credit-repair-609": {name:"609 Credit Repair System", file:"/vault/credit-repair-609.html"}
 };
 const params = new URLSearchParams(location.search);
 let product = params.get("product") || params.get("p") || "buy-back-your-time-ai";
 if (!CATALOG[product]) product = "buy-back-your-time-ai";
 const item = CATALOG[product];
-document.getElementById("primary").innerHTML = `<a class="btn" href="${item.file}" target="_blank" rel="noopener">⬇ Download ${item.name}</a>`;
-document.getElementById("orderMeta").textContent = "Product: " + item.name + (params.get("order") ? " · Order " + params.get("order") : " · " + new Date().toLocaleString());
+document.getElementById("primary").innerHTML =
+  `<a class="btn" id="dl" href="${item.file}" target="_blank" rel="noopener">⬇ Download ${item.name} now</a>`;
+document.getElementById("orderMeta").textContent =
+  "Product: " + item.name + " · " + new Date().toLocaleString();
 const vault = document.getElementById("vault");
 Object.entries(CATALOG).forEach(([k,v]) => {
   const a = document.createElement("a");
@@ -79,6 +86,15 @@ Object.entries(CATALOG).forEach(([k,v]) => {
   a.textContent = (k===product?"★ ":"") + v.name;
   vault.appendChild(a);
 });
+// Auto-open primary download (zero human)
+setTimeout(function(){
+  try {
+    window.open(item.file, "_blank");
+    document.getElementById("status").textContent = "Download opened. If blocked by your browser, tap the gold button.";
+  } catch(e) {
+    document.getElementById("status").textContent = "Tap the gold button to download.";
+  }
+}, 600);
 </script>
 </body>
 </html>

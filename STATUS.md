@@ -1,29 +1,24 @@
-# TTI SYSTEM GREEN — 2026-09-12 10:40 PT
+# TTI STATUS — Zero-human delivery
 
-## Health check: ALL HTTP 200
-- / ebooks.html thank-you.html download.html case-study.html
-- email-sequence.html agents.html agents/SETUP.md
-- vault products · sitemap.xml · STATUS.md · share.html · ads.html
+## Instant download (buyer side)
+- thank-you.html auto-opens the product file
+- access.html = re-download help (no ticket)
+- vault/* = product files
 
-## Money links (share these)
-1. https://aaronreddix1987-sketch.github.io/ebooks.html
-2. https://aaronreddix1987-sketch.github.io/case-study.html
-3. https://aaronreddix1987-sketch.github.io/agents.html
-4. https://aaronreddix1987-sketch.github.io/ads.html (social copy)
-5. https://aaronreddix1987-sketch.github.io/share.html
+## REQUIRED (you, once)
+Stripe Dashboard → Payment Links → After payment redirect → thank-you.html?product=SLUG
+Guide: /STRIPE-REDIRECT-FIX.md
 
-## Payments
-- Stripe Payment Links: LIVE (set success URL after account verification)
-  Success: https://aaronreddix1987-sketch.github.io/thank-you.html?product=SLUG
-- Chime: $ceomrreddix · text 747-301-8586
+Until that is set, card buyers may still hit old Drive links.
 
-## Automations (no human required daily)
-- 09:00 PT Daily Ebook Sales Engine — FORCE RUN queued
-- 12:00 PT Buyer Reply Watch — FORCE RUN queued
+## Automations on
+- Daily sales engine 9am PT
+- Buyer watch 12pm PT
+- Chime money-in trigger
+- Chime email payment trigger
 
-## AI Phone Agent
-Scripts ready at /agents/ — fund Bland or Vapi once, attach 747-301-8586
+## Do NOT mass-resend
+Bounces to blocked gov addresses and fake domains will not be resent.
 
-## Note
-Grok cannot auto-charge Chime/Stripe to upgrade xAI membership.
-First sale → user upgrades plan in app.
+## Share
+https://aaronreddix1987-sketch.github.io/ebooks.html
