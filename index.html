@@ -2,625 +2,234 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Total Transformation Inc. — AI Business Systems That Run Without You</title>
-<meta name="description" content="AI phone agents, digital products, and business automation systems built by Aaron Reddix. Los Angeles, CA. ">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Total Transformation Inc. — Los Angeles</title>
+<meta name="description" content="Luxury digital store. Pay by card and download instantly. AI phone agents. Aaron T. Reddix, CEO. Los Angeles.">
+<meta property="og:title" content="Total Transformation Inc. — Los Angeles">
+<meta property="og:description" content="One store. Card = instant download. Chime $ceomrreddix.">
+<meta property="og:image" content="https://aaronreddix1987-sketch.github.io/luxury_portrait.jpg">
+<link rel="canonical" href="https://aaronreddix1987-sketch.github.io/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --black:#050508;
-  --dark:#0d0d14;
-  --card:#12121e;
-  --border:#1e1e35;
-  --blue:#0ea5e9;
-  --cyan:#06b6d4;
-  --gold:#f59e0b;
-  --green:#10b981;
-  --text:#e2e8f0;
-  --muted:#64748b;
-  --light:#94a3b8;
+  --ink:#070605; --panel:#120f0c; --line:rgba(198,161,91,.28);
+  --gold:#c6a15b; --gold2:#e7d09a; --ivory:#f3ead7; --mute:#b7a68a; --ok:#3dd68c;
 }
+*{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;background:var(--black);color:var(--text);min-height:100vh;overflow-x:hidden}
-
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(5,5,8,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
-.nav-logo{font-size:.95rem;font-weight:800;letter-spacing:-.3px}
-.nav-logo span{background:linear-gradient(90deg,#0ea5e9,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.nav-links{display:flex;gap:24px;align-items:center}
-.nav-links a{color:var(--light);text-decoration:none;font-size:.85rem;font-weight:500;transition:color .2s}
-.nav-links a:hover{color:#fff}
-.nav-cta{background:linear-gradient(90deg,var(--blue),var(--cyan));color:#fff;padding:8px 20px;border-radius:6px;font-size:.85rem;font-weight:700;text-decoration:none;transition:opacity .2s}
-.nav-cta:hover{opacity:.85}
-
-/* HERO */
-.hero{min-height:100vh;display:flex;align-items:center;padding:100px 24px 60px;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(14,165,233,.08) 0%,transparent 70%)}
-.hero-inner{max-width:1000px;margin:0 auto;text-align:center}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(14,165,233,.1);border:1px solid rgba(14,165,233,.3);border-radius:20px;padding:6px 16px;font-size:.75rem;font-weight:700;color:var(--blue);letter-spacing:.5px;margin-bottom:32px;text-transform:uppercase}
-.hero-badge::before{content:'';width:8px;height:8px;background:var(--green);border-radius:50%;animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-.hero h1{font-size:clamp(2.4rem,6vw,5rem);font-weight:900;line-height:1.05;letter-spacing:-2px;margin-bottom:28px}
-.hero h1 .grad{background:linear-gradient(90deg,#0ea5e9,#06b6d4,#38bdf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero h1 .gold{background:linear-gradient(90deg,#f59e0b,#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero-sub{font-size:clamp(1rem,2vw,1.2rem);color:var(--light);max-width:660px;margin:0 auto 44px;line-height:1.7}
-.hero-sub strong{color:#fff}
-.hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:60px}
-.btn-primary{background:linear-gradient(90deg,#0ea5e9,#06b6d4);color:#fff;padding:16px 36px;border-radius:10px;font-weight:800;font-size:1rem;text-decoration:none;transition:transform .2s,box-shadow .2s;letter-spacing:-.2px}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(14,165,233,.3)}
-.btn-secondary{background:rgba(255,255,255,.06);border:1px solid var(--border);color:#fff;padding:16px 36px;border-radius:10px;font-weight:700;font-size:1rem;text-decoration:none;transition:all .2s}
-.btn-secondary:hover{border-color:var(--blue);background:rgba(14,165,233,.08)}
-.hero-stats{display:flex;justify-content:center;gap:clamp(24px,4vw,60px);flex-wrap:wrap;padding:32px 24px;background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:16px;max-width:700px;margin:0 auto}
-.hstat{text-align:center}
-.hstat-n{font-size:1.8rem;font-weight:900;background:linear-gradient(90deg,#0ea5e9,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hstat-l{font-size:.75rem;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:.5px}
-
-/* SECTION LAYOUT */
-section{padding:80px 24px}
-.section-inner{max-width:1100px;margin:0 auto}
-.section-tag{font-size:.72rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);margin-bottom:14px}
-.section-h{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;letter-spacing:-1px;line-height:1.15;margin-bottom:16px}
-.section-sub{color:var(--light);font-size:1rem;line-height:1.7;max-width:560px;margin-bottom:48px}
-
-/* 92% RULE FRAMEWORK */
-.framework{background:var(--dark);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.framework-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:var(--border)}
-.fw-card{background:var(--dark);padding:40px 32px;position:relative;overflow:hidden}
-.fw-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
-.fw-card.l1::before{background:linear-gradient(90deg,#6366f1,#8b5cf6)}
-.fw-card.l2::before{background:linear-gradient(90deg,#0ea5e9,#06b6d4)}
-.fw-card.l3::before{background:linear-gradient(90deg,#f59e0b,#f97316)}
-.fw-level{font-size:.7rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
-.fw-card.l1 .fw-level{color:#8b5cf6}
-.fw-card.l2 .fw-level{color:#0ea5e9}
-.fw-card.l3 .fw-level{color:#f59e0b}
-.fw-emoji{font-size:2.2rem;margin-bottom:14px;display:block}
-.fw-card h3{font-size:1.3rem;font-weight:800;margin-bottom:10px}
-.fw-card p{color:var(--light);font-size:.9rem;line-height:1.65;margin-bottom:20px}
-.fw-items{list-style:none;display:flex;flex-direction:column;gap:8px}
-.fw-items li{font-size:.85rem;color:var(--light);display:flex;align-items:flex-start;gap:8px}
-.fw-items li::before{content:'→';color:var(--blue);flex-shrink:0;margin-top:1px}
-.fw-price{margin-top:24px;padding-top:20px;border-top:1px solid var(--border)}
-.fw-price-label{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
-.fw-price-amt{font-size:1.6rem;font-weight:900}
-.fw-card.l3 .fw-price-amt{background:linear-gradient(90deg,#f59e0b,#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-
-/* PRODUCTS GRID */
-.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
-.prod-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px;display:flex;flex-direction:column;transition:transform .2s,border-color .2s,box-shadow .2s;position:relative;overflow:hidden}
-.prod-card:hover{transform:translateY(-4px);border-color:var(--blue);box-shadow:0 16px 40px rgba(14,165,233,.12)}
-.prod-card.featured{border-color:var(--gold);background:linear-gradient(145deg,#1a1507,#221c08)}
-.prod-card.featured:hover{border-color:#fbbf24;box-shadow:0 16px 40px rgba(245,158,11,.15)}
-.prod-badge{display:inline-block;font-size:.65rem;font-weight:800;padding:3px 10px;border-radius:20px;margin-bottom:14px;letter-spacing:.5px;text-transform:uppercase}
-.prod-badge.hot{background:rgba(245,158,11,.15);color:#f59e0b;border:1px solid rgba(245,158,11,.3)}
-.prod-badge.new{background:rgba(16,185,129,.15);color:#10b981;border:1px solid rgba(16,185,129,.3)}
-.prod-badge.live{background:rgba(14,165,233,.15);color:#0ea5e9;border:1px solid rgba(14,165,233,.3)}
-.prod-badge.rec{background:rgba(139,92,246,.15);color:#8b5cf6;border:1px solid rgba(139,92,246,.3)}
-.prod-icon{font-size:2.4rem;margin-bottom:14px;display:block}
-.prod-card h3{font-size:1.15rem;font-weight:800;margin-bottom:8px}
-.prod-card p{color:var(--light);font-size:.87rem;line-height:1.6;flex:1;margin-bottom:18px}
-.prod-meta{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
-.prod-price{font-size:1.7rem;font-weight:900}
-.prod-price sub{font-size:.7rem;color:var(--muted);font-weight:400}
-.prod-price.gold{background:linear-gradient(90deg,#f59e0b,#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.prod-tags{display:flex;gap:6px;flex-wrap:wrap}
-.prod-tag{font-size:.68rem;background:rgba(255,255,255,.05);border:1px solid var(--border);padding:3px 8px;border-radius:4px;color:var(--muted)}
-.btn-buy{display:block;text-align:center;background:linear-gradient(90deg,#0ea5e9,#06b6d4);color:#fff;padding:12px 24px;border-radius:8px;font-weight:800;font-size:.9rem;text-decoration:none;transition:all .2s;letter-spacing:-.2px}
-.btn-buy:hover{background:linear-gradient(90deg,#38bdf8,#22d3ee);transform:translateY(-1px)}
-.btn-buy.gold-btn{background:linear-gradient(90deg,#f59e0b,#d97706)}
-.btn-buy.gold-btn:hover{background:linear-gradient(90deg,#fbbf24,#f59e0b)}
-.btn-buy.purple-btn{background:linear-gradient(90deg,#7c3aed,#6d28d9)}
-.btn-buy.purple-btn:hover{background:linear-gradient(90deg,#8b5cf6,#7c3aed)}
-.prod-secure{font-size:.72rem;color:var(--muted);text-align:center;margin-top:10px}
-.prod-secure span{color:var(--green)}
-
-/* AI PHONE AGENT SECTION */
-.agent-section{background:linear-gradient(135deg,rgba(14,165,233,.05) 0%,rgba(6,182,212,.03) 100%);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.agent-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-@media(max-width:768px){.agent-grid{grid-template-columns:1fr}}
-.agent-terminal{background:#0a0a0f;border:1px solid rgba(14,165,233,.3);border-radius:14px;padding:28px;font-family:'SF Mono','Fira Code',monospace;font-size:.82rem;line-height:1.7}
-.terminal-bar{display:flex;gap:6px;margin-bottom:18px}
-.dot{width:12px;height:12px;border-radius:50%}
-.dot.r{background:#ef4444}.dot.y{background:#f59e0b}.dot.g{background:#10b981}
-.t-line{color:#94a3b8;margin-bottom:4px}
-.t-line .cmd{color:#0ea5e9}
-.t-line .ok{color:#10b981}
-.t-line .ai{color:#f59e0b}
-.t-line .num{color:#c084fc}
-.agent-features{list-style:none;display:flex;flex-direction:column;gap:16px;margin:24px 0}
-.agent-features li{display:flex;align-items:flex-start;gap:14px}
-.af-icon{width:36px;height:36px;border-radius:8px;background:rgba(14,165,233,.1);border:1px solid rgba(14,165,233,.2);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
-.af-text strong{display:block;font-size:.9rem;font-weight:700;margin-bottom:2px}
-.af-text span{font-size:.82rem;color:var(--light)}
-
-/* PRICING TIERS */
-.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-.price-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px;display:flex;flex-direction:column;transition:all .2s}
-.price-card:hover{border-color:var(--blue);transform:translateY(-3px)}
-.price-card.popular{border-color:var(--blue);background:linear-gradient(145deg,#0c1a2e,#0f2040);position:relative}
-.popular-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(90deg,#0ea5e9,#06b6d4);color:#fff;font-size:.65rem;font-weight:800;padding:4px 14px;border-radius:20px;letter-spacing:.5px;text-transform:uppercase;white-space:nowrap}
-.pc-name{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--light);margin-bottom:10px}
-.pc-price{font-size:2.2rem;font-weight:900;margin-bottom:4px}
-.pc-period{font-size:.8rem;color:var(--muted)}
-.pc-desc{font-size:.82rem;color:var(--light);margin:14px 0;line-height:1.6}
-.pc-features{list-style:none;flex:1;margin-bottom:20px}
-.pc-features li{font-size:.82rem;color:var(--light);padding:6px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px}
-.pc-features li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0}
-
-/* PROOF STRIP */
-.proof{background:var(--dark);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:40px 24px;overflow:hidden}
-.proof-inner{max-width:1100px;margin:0 auto}
-.proof-grid{display:flex;flex-wrap:wrap;gap:32px;justify-content:center}
-.proof-item{text-align:center;padding:0 24px}
-.proof-num{font-size:2rem;font-weight:900;background:linear-gradient(90deg,#0ea5e9,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.proof-label{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-top:4px}
-
-/* ABOUT STRIP */
-.about-strip{padding:60px 24px;background:linear-gradient(135deg,rgba(245,158,11,.04) 0%,transparent 60%)}
-.about-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center}
-@media(max-width:600px){.about-inner{grid-template-columns:1fr;text-align:center}}
-.about-avatar{width:100px;height:100px;border-radius:50%;border:3px solid var(--gold);object-fit:cover;background:var(--card)}
-.about-avatar-placeholder{width:100px;height:100px;border-radius:50%;border:3px solid var(--gold);background:linear-gradient(135deg,#1c1507,#292106);display:flex;align-items:center;justify-content:center;font-size:2rem;flex-shrink:0}
-.about-inner blockquote{font-size:1.05rem;color:var(--light);line-height:1.75;font-style:italic}
-.about-inner cite{display:block;margin-top:12px;font-size:.82rem;color:var(--muted);font-style:normal}
-.about-inner cite strong{color:var(--gold)}
-
-/* VIDEO SECTION */
-.video-section{padding:80px 24px;text-align:center;background:var(--dark);border-top:1px solid var(--border)}
-.video-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-top:40px;text-align:left}
-.vid-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;transition:all .2s}
-.vid-card:hover{border-color:var(--blue)}
-.vid-thumb{font-size:2rem;margin-bottom:10px}
-.vid-card h4{font-size:.9rem;font-weight:700;margin-bottom:6px}
-.vid-card p{font-size:.8rem;color:var(--muted);line-height:1.5}
-.vid-tag{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--blue);margin-bottom:8px}
-
-/* CONTACT BAR */
-.contact-bar{background:linear-gradient(90deg,rgba(14,165,233,.08),rgba(6,182,212,.05));border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:28px 24px;text-align:center}
-.contact-bar a{color:var(--blue);text-decoration:none;font-weight:600}
-.contact-bar a:hover{color:#38bdf8}
-
-/* FOOTER */
-footer{padding:40px 24px;background:var(--dark);border-top:1px solid var(--border);text-align:center}
-.footer-links{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
-.footer-links a{color:var(--muted);text-decoration:none;font-size:.82rem;transition:color .2s}
-.footer-links a:hover{color:var(--light)}
-.footer-legal{color:var(--muted);font-size:.78rem;line-height:1.8}
-
-/* MOBILE NAV */
-@media(max-width:640px){
-  .nav-links{display:none}
-  .hero h1{letter-spacing:-1px}
-  .hero-btns{flex-direction:column;align-items:center}
-  .btn-primary,.btn-secondary{width:100%;max-width:320px;text-align:center}
+body{font-family:Outfit,system-ui,sans-serif;background:var(--ink);color:var(--ivory);line-height:1.5}
+img{max-width:100%;display:block}
+a{color:inherit}
+.serif{font-family:"Cormorant Garamond",Georgia,serif}
+nav{position:fixed;inset:0 0 auto;z-index:40;display:flex;align-items:center;justify-content:space-between;padding:16px 28px;background:linear-gradient(180deg,rgba(7,6,5,.86),rgba(7,6,5,.2));backdrop-filter:blur(10px)}
+.brand{letter-spacing:.28em;font-size:11px;font-weight:600;text-transform:uppercase;color:var(--gold)}
+.nav-a{display:flex;gap:22px;align-items:center;font-size:12px;color:var(--mute)}
+.nav-a a{text-decoration:none}
+.nav-a a:hover{color:var(--ivory)}
+.gold-btn{display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a140a;text-decoration:none;font-weight:700;letter-spacing:.04em;padding:12px 22px;border-radius:999px;font-size:13px}
+.ghost-btn{display:inline-block;border:1px solid var(--line);color:var(--ivory);text-decoration:none;padding:12px 22px;border-radius:999px;font-size:13px}
+.hero{min-height:100vh;position:relative;display:grid;place-items:center;padding:110px 24px 64px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url(downtown.jpg) center/cover no-repeat;filter:saturate(1.05) contrast(1.05)}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,6,5,.35) 0%,rgba(7,6,5,.72) 48%,rgba(7,6,5,.94) 100%)}
+.hero-inner{position:relative;z-index:1;max-width:1180px;width:100%;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.kicker{color:var(--gold);letter-spacing:.32em;font-size:11px;text-transform:uppercase;margin-bottom:18px}
+h1{font-size:clamp(42px,7vw,84px);line-height:.92;font-weight:600;margin-bottom:18px}
+.lede{color:var(--mute);font-size:17px;max-width:520px;margin-bottom:28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+.meta{display:flex;flex-wrap:wrap;gap:18px;color:var(--mute);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.portrait-wrap{position:relative}
+.portrait{width:100%;height:560px;object-fit:cover;object-position:center 12%;border-radius:28px;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.portrait-cap{position:absolute;left:18px;bottom:18px;background:rgba(7,6,5,.72);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:16px;padding:12px 14px}
+.portrait-cap b{display:block;color:var(--gold);font-size:13px}
+.portrait-cap span{font-size:11px;color:var(--mute)}
+.band{padding:28px 24px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#0c0a08}
+.band-row{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}
+.band b{display:block;color:var(--gold);font-size:18px;font-family:"Cormorant Garamond",Georgia,serif}
+.band span{font-size:11px;color:var(--mute);letter-spacing:.12em;text-transform:uppercase}
+section{padding:72px 24px}
+.wrap{max-width:1180px;margin:0 auto}
+.office{width:100%;height:520px;object-fit:cover;border-radius:28px;border:1px solid var(--line)}
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+h2{font-size:clamp(32px,5vw,54px);font-weight:600;line-height:1;margin:10px 0 16px}
+p.quiet{color:var(--mute);max-width:520px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:24px}
+.num{color:var(--gold);font-family:"Cormorant Garamond",Georgia,serif;font-size:28px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:22px;display:flex;flex-direction:column;min-height:250px}
+.card h3{font-size:22px;margin:8px 0 8px}
+.card p{color:var(--mute);font-size:14px;flex:1}
+.price{color:var(--gold);font-size:28px;font-family:"Cormorant Garamond",Georgia,serif;margin:12px 0}
+.school{display:grid;grid-template-columns:.7fr 1.3fr;gap:28px;align-items:center;background:linear-gradient(180deg,#14110d,#0c0a08);border:1px solid var(--line);border-radius:28px;overflow:hidden}
+.school img{height:100%;min-height:360px;object-fit:cover}
+.school-copy{padding:28px 28px 28px 0}
+.chime{text-align:center;border:1px solid var(--line);border-radius:28px;padding:36px;background:radial-gradient(circle at top,rgba(198,161,91,.12),transparent 60%)}
+.tag{font-family:ui-monospace,monospace;display:inline-block;border:1px solid var(--gold);color:var(--gold);padding:10px 18px;border-radius:999px;font-size:22px;margin:12px 0}
+footer{padding:40px 24px 60px;text-align:center;color:#7a6c57;font-size:12px;border-top:1px solid var(--line)}
+footer a{color:var(--gold);text-decoration:none}
+@media(max-width:860px){
+  .hero-inner,.split,.school,.grid,.steps,.band-row{grid-template-columns:1fr}
+  .nav-a{display:none}
+  .portrait,.office{height:380px}
+  .school-copy{padding:22px}
 }
-
-/* UTILS */
-.divider{width:48px;height:3px;background:linear-gradient(90deg,#0ea5e9,#06b6d4);border-radius:2px;margin:0 0 32px}
-.text-gold{color:var(--gold)}
-.text-green{color:var(--green)}
-.text-blue{color:var(--blue)}
-.mt-8{margin-top:8px}
-.mb-48{margin-bottom:48px}
-.center{text-align:center}
-.center .divider{margin:0 auto 32px}
-.center .section-sub{margin-left:auto;margin-right:auto}
 </style>
 </head>
 <body>
-
-<!-- NAV -->
 <nav>
-  <div class="nav-logo">Total <span>Transformation</span> Inc.</div>
-  <div class="nav-links">
+  <div class="brand">Total Transformation</div>
+  <div class="nav-a">
     <a href="ebooks.html">Library</a>
     <a href="agents.html">AI Agents</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#contact">Contact</a>
-    <a class="nav-cta" href="#products">Shop Now →</a>
+    <a href="thank-you.html">Vault</a>
+    <a href="tel:7473018586">747-301-8586</a>
   </div>
+  <a class="gold-btn" href="ebooks.html">Enter the store</a>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
+  <div class="hero-bg"></div>
   <div class="hero-inner">
-    <div class="hero-badge">🟢 Live — AI Systems Deployed</div>
-    <h1>
-      The AI Business<br>
-      That <span class="grad">Runs Without</span><br>
-      <span class="gold">You</span>
-    </h1>
-    <p class="hero-sub">
-      <strong>The 92% Rule:</strong> When you deploy the right AI systems, AI handles 92% of execution. You show up for the final 8% — the vision, the judgment, the call only you can make. <strong>Total Transformation Inc.</strong> builds and sells those systems.
-    </p>
-    <div class="hero-btns">
-      <a class="btn-primary" href="#products">Browse All Products →</a>
-      <a class="btn-secondary" href="tel:7473018586">📞 Call (747) 301-8586</a>
-    </div>
-    <div class="hero-stats">
-      <div class="hstat"><div class="hstat-n">80+</div><div class="hstat-l">Digital Products</div></div>
-      <div class="hstat"><div class="hstat-n">54+</div><div class="hstat-l">Outreach Campaigns</div></div>
-      <div class="hstat"><div class="hstat-n">24/7</div><div class="hstat-l">AI Phone Coverage</div></div>
-      <div class="hstat"><div class="hstat-n">$7–$2,500</div><div class="hstat-l">Price Range</div></div>
-    </div>
-    <div class="hero-photos" style="margin-top:48px;display:grid;grid-template-columns:1.1fr .9fr;gap:16px;max-width:860px;margin-left:auto;margin-right:auto;">
-      <img src="aaron_main.jpg" alt="Aaron T. Reddix, CEO" style="width:100%;height:420px;object-fit:cover;object-position:center 18%;border-radius:16px;border:1px solid #1e1e35;">
-      <img src="office.jpg" alt="Luxury command office" style="width:100%;height:420px;object-fit:cover;border-radius:16px;border:1px solid #1e1e35;">
-    </div>
-  </div>
-</section>
-
-<!-- PROOF STRIP -->
-<div class="proof">
-  <div class="proof-inner">
-    <div class="proof-grid">
-      <div class="proof-item"><div class="proof-num">Los Angeles, CA.</div><div class="proof-label">Headquarters</div></div>
-      <div class="proof-item"><div class="proof-num">California Corp</div><div class="proof-label">Registered Corporation</div></div>
-      <div class="proof-item"><div class="proof-num">Stripe Payments</div><div class="proof-label">Secure Checkout</div></div>
-      <div class="proof-item"><div class="proof-num">Instant Delivery</div><div class="proof-label">All Digital Products</div></div>
-    </div>
-  </div>
-</div>
-
-<!-- FRAMEWORK SECTION -->
-<section class="framework" id="framework">
-  <div class="section-inner center" style="padding-bottom:48px">
-    <p class="section-tag">The Dan Martell 92% Rule — Applied to Your Business</p>
-    <h2 class="section-h">Three Levels of AI. One Company That Builds Them All.</h2>
-    <p class="section-sub">Most business owners are still copy-pasting prompts from YouTube. Here's the operating standard that separates operators who are <em>using</em> AI from those who've built an AI-powered machine that works without them.</p>
-  </div>
-  <div class="framework-grid">
-    <div class="fw-card l1">
-      <div class="fw-level">Level 1 — Chat (The Skateboard)</div>
-      <span class="fw-emoji">📚</span>
-      <h3>DIY Digital Products</h3>
-      <p>You do the thinking, AI helps you move faster. Playbooks, ebooks, scripts, and cheatsheets that give you the frameworks so you stop guessing and start executing.</p>
-      <ul class="fw-items">
-        <li>$10M Blueprint Series (12 books)</li>
-        <li>10X Recovery Series</li>
-        <li>Credit Repair Playbook</li>
-        <li>78-System Income Bundle</li>
-        <li>AI Phone Agent Script Vault</li>
-      </ul>
-      <div class="fw-price">
-        <div class="fw-price-label">Starts at</div>
-        <div class="fw-price-amt">$27 – $97</div>
-      </div>
-    </div>
-    <div class="fw-card l2">
-      <div class="fw-level">Level 2 — Automation (The Electric Scooter)</div>
-      <span class="fw-emoji">⚙️</span>
-      <h3>Done-With-You Systems</h3>
-      <p>Step away from the chat window. We build automated workflows that connect your tools, handle leads, book appointments, and send follow-ups — while you sleep.</p>
-      <ul class="fw-items">
-        <li>AI Phone Agent Setup ($2,500 one-time)</li>
-        <li>Zapier + Make.com workflow builds</li>
-        <li>CRM automation + lead nurture</li>
-        <li>Calendly booking conversion system</li>
-        <li>SMS auto-response funnels</li>
-      </ul>
-      <div class="fw-price">
-        <div class="fw-price-label">Starts at</div>
-        <div class="fw-price-amt">$500 / mo</div>
-      </div>
-    </div>
-    <div class="fw-card l3">
-      <div class="fw-level">Level 3 — Agents (The Personal Driver)</div>
-      <span class="fw-emoji">🤖</span>
-      <h3>Done-For-You AI Operations</h3>
-      <p>The leading edge. AI agents that don't just follow rules — they reason, adapt, and execute entire workflows autonomously. You show up for the 8% that requires you.</p>
-      <ul class="fw-items">
-        <li>AI voice agent (24/7 inbound + outbound)</li>
-        <li>Full business automation deployment</li>
-        <li>Multi-channel AI coverage</li>
-        <li>Custom system prompts + SOPs</li>
-        <li>Monthly performance reports</li>
-      </ul>
-      <div class="fw-price">
-        <div class="fw-price-label">Premium starts at</div>
-        <div class="fw-price-amt text-gold">$2,500 / mo</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRODUCTS -->
-<section id="products">
-  <div class="section-inner">
-    <p class="section-tag">Digital Product Store — Instant Stripe Checkout</p>
-    <h2 class="section-h">Every System. One Store.</h2>
-    <p class="section-sub">All products are delivered electronically. Instant access after purchase. Stripe-secured checkout. No physical items.</p>
-    <div class="divider"></div>
-
-    <div class="products-grid">
-
-      <!-- AI SETUP -->
-      <div class="prod-card featured">
-        <span class="prod-badge hot">Most Popular</span>
-        <span class="prod-icon">🤖</span>
-        <h3>AI Phone Agent Setup</h3>
-        <p>Complete AI phone agent deployment for your business. We configure VAPI/Bland.ai, write custom scripts for your industry, integrate with your CRM, and go live. Handles inbound calls 24/7, books appointments, qualifies leads — fully automated.</p>
-        <div class="prod-meta">
-          <div class="prod-price gold">$2,500</div>
-          <div class="prod-tags"><span class="prod-tag">One-time</span><span class="prod-tag">Done-for-you</span></div>
-        </div>
-        <a class="btn-buy gold-btn" href="https://buy.stripe.com/dRmeVd5s7cCb9gd7OI0ZW1i" target="_blank" rel="noopener">Buy Now — Instant Setup →</a>
-        <div class="prod-secure"><span>🔒</span> Secured by Stripe · Instant delivery</div>
-      </div>
-
-      <!-- 10M BLUEPRINT -->
-      <div class="prod-card">
-        <span class="prod-badge new">12-Book Series</span>
-        <span class="prod-icon">💰</span>
-        <h3>$10M Blueprint Series</h3>
-        <p>Complete 12-book entrepreneurial operating system. Covers offer creation, AI delivery systems, growth engine, conversion machine, recurring revenue, and build-to-sell. The full roadmap from zero to exit.</p>
-        <div class="prod-meta">
-          <div class="prod-price">$47</div>
-          <div class="prod-tags"><span class="prod-tag">12 books</span><span class="prod-tag">Instant download</span></div>
-        </div>
-        <a class="btn-buy" href="https://buy.stripe.com/bJe7sL3jZ31Bbol5GA0ZW12" target="_blank" rel="noopener">Get Instant Access →</a>
-        <div class="prod-secure"><span>🔒</span> Secured by Stripe · Instant delivery</div>
-      </div>
-
-      <!-- RECOVERY SERIES -->
-      <div class="prod-card">
-        <span class="prod-badge rec">Recovery</span>
-        <span class="prod-icon">💊</span>
-        <h3>10X Recovery Series</h3>
-        <p>12 books on recovery, sobriety, money mindset, and building a new life after addiction. Written for people who want real change. Covers relapse prevention, credit rebuilding, employment, and launching a business from zero.</p>
-        <div class="prod-meta">
-          <div class="prod-price">$47</div>
-          <div class="prod-tags"><span class="prod-tag">12 books</span><span class="prod-tag">Instant download</span></div>
-        </div>
-        <a class="btn-buy purple-btn" href="https://buy.stripe.com/9B6fZhg6LdGf641fha0ZW18" target="_blank" rel="noopener">Get Instant Access →</a>
-        <div class="prod-secure"><span>🔒</span> Secured by Stripe · Instant delivery</div>
-      </div>
-
-      <!-- BASIC PLAN -->
-      <div class="prod-card">
-        <span class="prod-badge live">AI Service</span>
-        <span class="prod-icon">⚡</span>
-        <h3>Basic AI Plan</h3>
-        <p>Entry-level AI automation for growing businesses. Includes AI phone agent monitoring, basic workflow automation, monthly reporting, and email support. Perfect for sole proprietors and small teams ready to deploy AI.</p>
-        <div class="prod-meta">
-          <div class="prod-price">$500<sub>/mo</sub></div>
-          <div class="prod-tags"><span class="prod-tag">Monthly</span><span class="prod-tag">Cancel anytime</span></div>
-        </div>
-        <a class="btn-buy" href="https://buy.stripe.com/aFa3cv07N9pZ2RP8SM0ZW1j" target="_blank" rel="noopener">Start Basic Plan →</a>
-        <div class="prod-secure"><span>🔒</span> Secured by Stripe · Cancel anytime</div>
-      </div>
-
-      <!-- PROFESSIONAL PLAN -->
-      <div class="prod-card">
-        <span class="prod-badge live">AI Service</span>
-        <span class="prod-icon">🚀</span>
-        <h3>Professional AI Plan</h3>
-        <p>Full-stack AI automation for established businesses. Includes AI voice agent, CRM integration, lead qualification automation, appointment booking, multi-channel follow-up, and bi-weekly strategy calls.</p>
-        <div class="prod-meta">
-          <div class="prod-price">$1,500<sub>/mo</sub></div>
-          <div class="prod-tags"><span class="prod-tag">Monthly</span><span class="prod-tag">Strategy calls</span></div>
-        </div>
-        <a class="btn-buy" href="https://buy.stripe.com/8x29AT6wbeKj8c97OI0ZW1k" target="_blank" rel="noopener">Start Pro Plan →</a>
-        <div class="prod-secure"><span>🔒</span> Secured by Stripe · Cancel anytime</div>
-      </div>
-
-      <!-- PREMIUM PLAN -->
-      <div class="prod-card featured">
-        <span class="prod-badge hot">Full Service</span>
-        <span class="prod-icon">💎</span>
-        <h3>Premium AI Plan</h3>
-        <p>Complete done-for-you AI business operations. AI handles inbound/outbound calls, lead generation, appointment booking, follow-up sequences, and reporting. Weekly strategy sessions with Aaron directly.</p>
-        <div class="prod-meta">
-          <div class="prod-price gold">$2,500<sub>/mo</sub></div>
-          <div class="prod-tags"><span class="prod-tag">Monthly</span><span class="prod-tag">White glove</span></div>
-        </div>
-        <a class="btn-buy gold-btn" href="https://buy.stripe.com/6oU4gz2fVby79gd2uo0ZW1l" target="_blank" rel="noopener">Start Premium Plan →</a>
-        <div class="prod-secure"><span>🔒</span> Secured by Stripe · Cancel anytime</div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- AI PHONE AGENT DEEP DIVE -->
-<section class="agent-section" id="ai-agent">
-  <div class="section-inner">
-    <div class="agent-grid">
-      <div>
-        <p class="section-tag">AI Phone Agent — 747-301-8586</p>
-        <h2 class="section-h">Your Phone Is Now a Revenue Machine</h2>
-        <p style="color:var(--light);font-size:.95rem;line-height:1.75;margin-bottom:28px">Most businesses lose 40-60% of inbound leads because nobody answered the phone. Our AI phone agent answers every call in under 3 seconds, 24 hours a day, 7 days a week — and converts them into booked appointments.</p>
-        <ul class="agent-features">
-          <li>
-            <div class="af-icon">📞</div>
-            <div class="af-text"><strong>24/7 Inbound Call Handling</strong><span>Never miss a lead again. AI answers in &lt;3 seconds every time.</span></div>
-          </li>
-          <li>
-            <div class="af-icon">📅</div>
-            <div class="af-text"><strong>Automatic Appointment Booking</strong><span>Connects to your calendar. Books slots without human intervention.</span></div>
-          </li>
-          <li>
-            <div class="af-icon">🎯</div>
-            <div class="af-text"><strong>Lead Qualification</strong><span>Asks the right questions. Only routes hot leads to you.</span></div>
-          </li>
-          <li>
-            <div class="af-icon">💬</div>
-            <div class="af-text"><strong>SMS Follow-Up Sequences</strong><span>Auto-sends confirmations, reminders, and nurture messages.</span></div>
-          </li>
-          <li>
-            <div class="af-icon">📊</div>
-            <div class="af-text"><strong>Call Analytics + Reporting</strong><span>See every call, conversion rate, and booking in real time.</span></div>
-          </li>
-        </ul>
-        <a class="btn-primary" href="https://buy.stripe.com/dRmeVd5s7cCb9gd7OI0ZW1i" target="_blank" rel="noopener">Deploy My AI Agent — $2,500 →</a>
-      </div>
-      <div class="agent-terminal">
-        <div class="terminal-bar"><div class="dot r"></div><div class="dot y"></div><div class="dot g"></div></div>
-        <div class="t-line"><span class="cmd">TTI AI PHONE AGENT v3.1</span></div>
-        <div class="t-line"><span class="ok">● ONLINE</span> · 747-301-8586</div>
-        <div class="t-line" style="margin-top:16px">INBOUND CALL RECEIVED</div>
-        <div class="t-line"><span class="ai">AI:</span> "Thank you for calling Total Transformation. I'm the AI assistant. How can I help you today?"</div>
-        <div class="t-line" style="margin-top:8px">CALLER: "I need to book an appointment"</div>
-        <div class="t-line"><span class="ai">AI:</span> "Of course! I have openings tomorrow at 10 AM and 2 PM. Which works best for you?"</div>
-        <div class="t-line" style="margin-top:8px">CALLER: "10 AM works"</div>
-        <div class="t-line"><span class="ai">AI:</span> "Perfect. I've booked you for 10 AM tomorrow. You'll receive a confirmation text."</div>
-        <div class="t-line" style="margin-top:8px"><span class="ok">✓ APPOINTMENT BOOKED</span></div>
-        <div class="t-line"><span class="ok">✓ SMS CONFIRMATION SENT</span></div>
-        <div class="t-line"><span class="ok">✓ CRM UPDATED</span></div>
-        <div class="t-line" style="margin-top:8px"><span class="num">RESPONSE TIME: 0.3s</span></div>
-        <div class="t-line"><span class="num">HUMAN INTERVENTION: 0%</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING TIERS -->
-<section id="pricing">
-  <div class="section-inner center">
-    <p class="section-tag">AI Service Plans</p>
-    <h2 class="section-h">Pick Your Automation Level</h2>
-    <p class="section-sub">From solo operators to full-service AI deployments. Every plan includes Stripe billing, cancel anytime, and direct access to Aaron.</p>
-    <div class="divider"></div>
-    <div class="pricing-grid">
-
-      <div class="price-card">
-        <div class="pc-name">Basic</div>
-        <div class="pc-price">$500<span class="pc-period">/month</span></div>
-        <div class="pc-desc">For solo operators and small businesses ready to test AI automation.</div>
-        <ul class="pc-features">
-          <li>AI phone agent (monitoring)</li>
-          <li>Basic workflow automation</li>
-          <li>Monthly performance report</li>
-          <li>Email support</li>
-          <li>Cancel anytime</li>
-        </ul>
-        <a class="btn-buy" href="https://buy.stripe.com/aFa3cv07N9pZ2RP8SM0ZW1j" target="_blank" rel="noopener">Start Basic →</a>
-      </div>
-
-      <div class="price-card popular">
-        <div class="popular-badge">Most Popular</div>
-        <div class="pc-name">Professional</div>
-        <div class="pc-price">$1,500<span class="pc-period">/month</span></div>
-        <div class="pc-desc">Full-stack AI for established businesses ready to scale with systems.</div>
-        <ul class="pc-features">
-          <li>AI voice agent (24/7 live)</li>
-          <li>CRM integration + automation</li>
-          <li>Lead qualification system</li>
-          <li>Appointment booking AI</li>
-          <li>Bi-weekly strategy calls</li>
-          <li>Multi-channel follow-up</li>
-        </ul>
-        <a class="btn-buy" href="https://buy.stripe.com/8x29AT6wbeKj8c97OI0ZW1k" target="_blank" rel="noopener">Start Professional →</a>
-      </div>
-
-      <div class="price-card">
-        <div class="pc-name">Premium</div>
-        <div class="pc-price text-gold">$2,500<span class="pc-period">/month</span></div>
-        <div class="pc-desc">White-glove, done-for-you AI operations. Aaron works with you directly.</div>
-        <ul class="pc-features">
-          <li>Full AI business operations</li>
-          <li>Inbound + outbound AI calls</li>
-          <li>Lead generation automation</li>
-          <li>Weekly strategy with Aaron</li>
-          <li>Custom AI system prompts</li>
-          <li>All Professional features</li>
-          <li>Priority support</li>
-        </ul>
-        <a class="btn-buy gold-btn" href="https://buy.stripe.com/6oU4gz2fVby79gd2uo0ZW1l" target="_blank" rel="noopener">Start Premium →</a>
-      </div>
-
-    </div>
-    <p style="text-align:center;color:var(--muted);font-size:.82rem;margin-top:28px">All plans billed monthly via Stripe. Cancel anytime. Setup fee required for AI agent deployment ($2,500 one-time).</p>
-  </div>
-</section>
-
-<!-- VIDEO / CONTENT -->
-<section class="video-section">
-  <div class="section-inner">
-    <p class="section-tag">YouTube — Watch the Playbooks in Action</p>
-    <h2 class="section-h">Real Strategy. No Fluff.</h2>
-    <p style="color:var(--light);max-width:540px;margin:0 auto;line-height:1.7">The full playbook is documented on YouTube. Watch how the systems were built, deployed, and scaled from South LA.</p>
-    <div class="video-grid">
-      <div class="vid-card">
-        <div class="vid-tag">Email Automation</div>
-        <div class="vid-thumb">📧</div>
-        <h4>How I Sent 1,777 Emails in 72 Hours Using AI</h4>
-        <p>4-account Gmail rotation, Python automation, and the exact multi-wave outreach system that hit dental, real estate, and media contacts.</p>
-      </div>
-      <div class="vid-card">
-        <div class="vid-tag">Consumer Rights</div>
-        <div class="vid-thumb">⚖️</div>
-        <h4>I Sued AT&T and Wells Fargo — Here's How</h4>
-        <p>The full escalation playbook. From complaint letters to OCC filings to Equifax disputes. Real cases, real outcomes.</p>
-      </div>
-      <div class="vid-card">
-        <div class="vid-tag">Business Building</div>
-        <div class="vid-thumb">🏙️</div>
-        <h4>Undercover Billionaire — South LA Edition</h4>
-        <p>Building two companies simultaneously from 877 E 43rd Place. Low Fee Tow and Total Transformation Inc — documented in real time.</p>
-      </div>
-      <div class="vid-card">
-        <div class="vid-tag">AI Automation</div>
-        <div class="vid-thumb">🤖</div>
-        <h4>Build an AI Phone Agent from Scratch</h4>
-        <p>VAPI + Bland.ai + Twilio + custom scripts. The exact stack used to build the 747-301-8586 AI phone agent — step by step.</p>
-      </div>
-      <div class="vid-card">
-        <div class="vid-tag">Digital Products</div>
-        <div class="vid-thumb">📦</div>
-        <h4>46 Products, $0 Inventory — How I Did It</h4>
-        <p>Building a digital product empire with 80+ Stripe-connected products, instant delivery, and no warehousing. The full system.</p>
-      </div>
-      <div class="vid-card">
-        <div class="vid-tag">Legal</div>
-        <div class="vid-thumb">🏛️</div>
-        <h4>PC 1203.4 Expungement — South LA Guide</h4>
-        <p>California expungement petition walkthrough. Penal Code 1203.4 explained for non-lawyers. Real petition, real filing process.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<div class="about-strip">
-  <div class="about-inner">
-    <div class="about-avatar-placeholder">👤</div>
     <div>
-      <blockquote>"I built Total Transformation Inc. from recovery. No venture capital. No connections. Just systems, automation, and relentless execution. The same AI frameworks that run my business are the ones I sell. When they work for me, I package them for you."</blockquote>
-      <cite><strong>Aaron T. Reddix</strong> — CEO, Total Transformation Inc. &amp; Low Fee Tow &amp; Auto Sales Inc. · Los Angeles, CA · (747) 301-8586</cite>
+      <p class="kicker">Los Angeles · 2026</p>
+      <h1 class="serif">A five-star store that sells while you work.</h1>
+      <p class="lede">Card payment downloads the book immediately. No ticket. No wait. If you do not have a card, send Chime and the file is released the same way.</p>
+      <div class="btns">
+        <a class="gold-btn" href="ebooks.html">Shop 80 products</a>
+        <a class="ghost-btn" href="agents.html">AI phone agents</a>
+      </div>
+      <div class="meta">
+        <span>Stripe instant</span>
+        <span>Chime $ceomrreddix</span>
+        <span>CEO Aaron T. Reddix</span>
+      </div>
+    </div>
+    <div class="portrait-wrap">
+      <img class="portrait" src="luxury_portrait.jpg" alt="Aaron T. Reddix, CEO">
+      <div class="portrait-cap">
+        <b>Aaron T. Reddix</b>
+        <span>CEO · Total Transformation Inc.</span>
+      </div>
     </div>
   </div>
+</section>
+
+<div class="band">
+  <div class="band-row">
+    <div><b>80+</b><span>Digital products</span></div>
+    <div><b>24/7</b><span>AI coverage</span></div>
+    <div><b>$9</b><span>Starting price</span></div>
+    <div><b>0</b><span>Human in checkout</span></div>
+  </div>
 </div>
 
-<!-- CONTACT BAR -->
-<div class="contact-bar" id="contact">
-  <p style="font-size:1rem;font-weight:700;margin-bottom:8px">Ready to deploy AI in your business?</p>
-  <p style="color:var(--light);font-size:.9rem;margin-bottom:12px">Call, text, or email — Aaron responds directly.</p>
-  <p>
-    <a href="tel:7473018586">(747) 301-8586</a>
-    &nbsp;&nbsp;·&nbsp;&nbsp;
-    <a href="mailto:aaronreddix1987@gmail.com">aaronreddix1987@gmail.com</a>
-    &nbsp;&nbsp;·&nbsp;&nbsp;
-    <a href="store.html">Full Product Store →</a>
-  </p>
-</div>
+<section>
+  <div class="wrap split">
+    <img class="office" src="office.jpg" alt="Command office with three computers">
+    <div>
+      <p class="kicker">The office</p>
+      <h2 class="serif">Built from a real command desk. Not a 1994 brochure.</h2>
+      <p class="quiet">Three screens. One checkout. The same page every Facebook, Instagram, LinkedIn, and GitHub link already points to.</p>
+    </div>
+  </div>
+</section>
 
-<!-- FOOTER -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <p class="kicker">How it works</p>
+    <h2 class="serif">Pay. File opens. Done.</h2>
+    <div class="steps">
+      <div class="step"><div class="num">01</div><h3 class="serif">Choose a product</h3><p class="quiet">Library, recovery, credit, real estate, or an AI phone agent.</p></div>
+      <div class="step"><div class="num">02</div><h3 class="serif">Pay on Stripe</h3><p class="quiet">Card checkout is live. After payment you land on the vault.</p></div>
+      <div class="step"><div class="num">03</div><h3 class="serif">Download now</h3><p class="quiet">The file opens automatically. Bookmark the vault for re-download.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="products" style="padding-top:0">
+  <div class="wrap">
+    <p class="kicker">Live catalog</p>
+    <h2 class="serif">Start here. The rest of the library is one tap away.</h2>
+    <div class="grid" style="margin-top:28px">
+      <article class="card">
+        <p class="kicker">Flagship</p>
+        <h3 class="serif">AI Phone Agent Setup</h3>
+        <p>Answers while you are in class or at work. Booking, capture, follow-up.</p>
+        <div class="price">$97</div>
+        <a class="gold-btn" href="https://buy.stripe.com/dRmeVd5s7cCb9gd7OI0ZW1i" target="_blank" rel="noopener">Pay & start</a>
+      </article>
+      <article class="card">
+        <p class="kicker">Series</p>
+        <h3 class="serif">$10M Blueprint</h3>
+        <p>Written operator system for digital income. Instant download.</p>
+        <div class="price">$27</div>
+        <a class="gold-btn" href="https://buy.stripe.com/bJe7sL3jZ31Bbol5GA0ZW12" target="_blank" rel="noopener">Pay & download</a>
+      </article>
+      <article class="card">
+        <p class="kicker">Recovery</p>
+        <h3 class="serif">10X Recovery System</h3>
+        <p>The complete recovery library. One checkout. Files open after pay.</p>
+        <div class="price">$97</div>
+        <a class="gold-btn" href="https://buy.stripe.com/9B6fZhg6LdGf641fha0ZW18" target="_blank" rel="noopener">Pay & download</a>
+      </article>
+      <article class="card">
+        <p class="kicker">AI</p>
+        <h3 class="serif">Basic plan</h3>
+        <p>Starter coverage for inbound calls and lead capture.</p>
+        <div class="price">$197/mo</div>
+        <a class="gold-btn" href="https://buy.stripe.com/aFa3cv07N9pZ2RP8SM0ZW1j" target="_blank" rel="noopener">Start Basic</a>
+      </article>
+      <article class="card">
+        <p class="kicker">AI</p>
+        <h3 class="serif">Professional plan</h3>
+        <p>Calendar booking, scoring, and CRM sync.</p>
+        <div class="price">$497/mo</div>
+        <a class="gold-btn" href="https://buy.stripe.com/8x29AT6wbeKj8c97OI0ZW1k" target="_blank" rel="noopener">Start Pro</a>
+      </article>
+      <article class="card">
+        <p class="kicker">AI</p>
+        <h3 class="serif">Premium plan</h3>
+        <p>Unlimited coverage. Custom training. White-label option.</p>
+        <div class="price">$997/mo</div>
+        <a class="gold-btn" href="https://buy.stripe.com/6oU4gz2fVby79gd2uo0ZW1l" target="_blank" rel="noopener">Start Premium</a>
+      </article>
+    </div>
+    <p style="margin-top:22px"><a class="ghost-btn" href="ebooks.html">Open the full 80-product library</a></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap school">
+    <img src="school.jpg" alt="Aaron T. Reddix at Associated Technical College">
+    <div class="school-copy">
+      <p class="kicker">School · career</p>
+      <h2 class="serif">Built while enrolled. Sold while at work.</h2>
+      <p class="quiet">Associated Technical College / DVC — Business Office Administration. Admissions: Xiomara Figueroa · (213) 481-6198 Ext 108. Mention Aaron T. Reddix.</p>
+      <div class="btns" style="margin-top:18px">
+        <a class="gold-btn" href="ebooks.html">Buy a book now</a>
+        <a class="ghost-btn" href="tel:2134816198">Call admissions</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap chime">
+    <p class="kicker">No card?</p>
+    <h2 class="serif">Chime still works.</h2>
+    <p class="quiet" style="margin:0 auto">Send the price to $ceomrreddix, then text 747-301-8586 with the product name. The vault is the same page Stripe buyers receive.</p>
+    <div class="tag">$ceomrreddix</div>
+    <div class="btns" style="justify-content:center">
+      <a class="gold-btn" href="ebooks.html">Use card instead</a>
+      <a class="ghost-btn" href="sms:7473018586">Text the office</a>
+    </div>
+  </div>
+</section>
+
 <footer>
-  <div class="footer-links">
-    <a href="ebooks.html">Library</a>
-    <a href="agents.html">AI Agents</a>
-    <a href="#pricing">Pricing</a>
-    <a href="store.html">Store Hub</a>
-    <a href="ebooks.html">Ebooks</a>
-    <a href="mailto:aaronreddix1987@gmail.com">Contact</a>
-  </div>
-  <div class="footer-legal">
-    <p>Total Transformation Inc. &mdash; 877 E 43rd Place, Los Angeles, CA 90011 &mdash; </p>
-    <p class="mt-8">&copy; 2026 Total Transformation Inc. All rights reserved.</p>
-    <p class="mt-8">All digital products are delivered electronically. No physical items. All sales subject to TTI refund policy. This site does not provide medical, legal, tax, or financial advice. Results vary.</p>
-    <p class="mt-8">Payments processed securely by <strong>Stripe</strong>. TTI is not affiliated with Dan Martell or SaaS Academy. AI Business Cheatsheet framework referenced for educational purposes.</p>
-  </div>
+  Total Transformation Inc. · Los Angeles · <a href="mailto:aaronreddix1987@gmail.com">aaronreddix1987@gmail.com</a> · <a href="tel:7473018586">747-301-8586</a><br>
+  <a href="ebooks.html">Library</a> · <a href="agents.html">Agents</a> · <a href="thank-you.html">Vault</a> · <a href="links.html">All links</a>
 </footer>
-
 </body>
 </html>
