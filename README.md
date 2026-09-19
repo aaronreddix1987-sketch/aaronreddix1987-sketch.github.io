@@ -1,21 +1,24 @@
-# Total Transformation Inc — NO-HUMAN SALES
+# Total Transformation Inc — live library only
 
-**Live:** https://aaronreddix1987-sketch.github.io/
+**The only page to send customers:**
+https://aaronreddix1987-sketch.github.io/ebooks.html
 
-## Fully automated path (card)
-1. Customer opens the site
-2. Taps Buy Now
+That page has the gold-chain photo, the book list, and the correct Stripe button for each title.
+
+Do not send:
+- random GitHub files
+- Drive folders
+- the old CEO-Mr-Reddix product grid (every Buy button used the same Stripe link)
+- package.html as the main link (keep it as a short checkout page only)
+
+## How a sale works
+1. Customer opens ebooks.html
+2. Taps the exact title
 3. Pays on Stripe
-4. Google Drive file downloads automatically
+4. File should download
 
-No text. No email from you. No computer skills required from you after sharing the link.
+No card: Chime $ceomrreddix then text 747-301-8586 with the title and email.
 
-## Your only job
-Share this link:
-https://aaronreddix1987-sketch.github.io/
-
-## Phone
-747-301-8586
-
-## School referral
-Mention Aaron T Reddix · Xiomara Figueroa (213) 481-6198 Ext 108
+## Recovery books
+Each 10X Recovery title has its own Stripe link on ebooks.html#recovery.
+The Complete Transformation Bundle no longer uses the Recovery $97 checkout.
