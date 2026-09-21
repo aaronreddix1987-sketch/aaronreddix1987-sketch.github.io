@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://aaronreddix1987-sketch.github.io/thank-you.html">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--gold:#D4AF37;--gold2:#F0CC5A;--bg:#060504;--card:#111;--green:#22c55e;--text:#f0e6d0;--muted:#a89878}
+:root{--gold:#D4AF37;--gold2:#F0CC5A;--bg:#060504;--card:#111;--text:#f0e6d0;--muted:#a89878}
 body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
 .bar{background:linear-gradient(90deg,var(--gold),var(--gold2));color:#000;text-align:center;padding:12px;font-weight:800;font-size:12px}
 .wrap{max-width:720px;margin:0 auto;padding:40px 18px 80px}
@@ -23,7 +23,7 @@ footer a{color:var(--gold)}
 </style>
 </head>
 <body>
-<div class="bar">ONE PRODUCT · ONE DRIVE FILE · CARD ONLY · NO CHIME</div>
+<div class="bar">ONE PRODUCT · ONE DRIVE FILE · CARD ONLY</div>
 <div class="wrap">
   <h1>Your file is ready</h1>
   <p class="sub">Stripe already sent the Drive file that belongs to the product you paid for. This page only opens that same file — never another title.</p>
@@ -37,11 +37,11 @@ footer a{color:var(--gold)}
 <script>
 const CATALOG = {
   "10m-blueprint": {name:"The 10M Blueprint Complete 12-Book Series", file:"10M_Blueprint_Complete_Series.pdf", drive:"1X0ZI5PBpQYztokazJ_9mZ3LnJj8Jnw3D"},
-  "buy-back-your-time-ai": {name:"Buy Back Your Time: Get Your Life Back Using AI", file:"Buy_Back_Your_Time.pdf", drive:"1gsSdgm7RC3Q0QBVjLbzIF9iARdJfeAKo"},
-  "cold-call-code": {name:"Cold Call Code: Building Trust Fast in a World of Strangers", file:"Cold_Call_Code.pdf", drive:"18w0VRZnCQgwK65HuS73j4x7_FKASQISK"},
+  "buy-back-your-time-ai": {name:"Buy Back Your Time: Get Your Life Back Using AI", file:"Buy_Back_Your_Time.pdf", drive:"1-uLVHH977D6ecTNiq_AXHjfa2pHMCPD7"},
+  "cold-call-code": {name:"Cold Call Code: Building Trust Fast in a World of Strangers", file:"Cold_Call_Code.pdf", drive:"11xPMOra9eQM--P6Ek0-u8ot7PuTePFy4"},
   "money-mindset": {name:"Money Mindset: Affirmation System for Building Wealth", file:"Money Mindset PDF", drive:"1x5PGgiC-MLz8TWjU27kZgMeb_pPMpDmj"},
-  "build-to-sell": {name:"Build to Sell: Create a Business That Runs Without You", file:"Build to Sell PDF", drive:"1eoUKzkGD6g0u40YXPnTcfi0RdFE_8DMT"},
-  "become-the-ceo": {name:"Become the CEO: Stop Working In It", file:"Become the CEO PDF", drive:"1EjJGxFreoP4ojDQT9u2HiiiDGAsZlZB9"},
+  "build-to-sell": {name:"Build to Sell: Create a Business That Runs Without You", file:"Build to Sell PDF", drive:"1m5HiL7g0xpDv7kak5_mrNRn7b-haY1Zl"},
+  "become-the-ceo": {name:"Become the CEO: Stop Working In It", file:"Become the CEO PDF", drive:"1bi3CxJOxEzjnmoXlws6GDXQfiDYywYoD"},
   "credit-repair-609": {name:"Credit Repair and Business Credit Mastery", file:"TTI Ebook - Credit Repair and Business Credit.pdf", drive:"1JLcdnCipbrvebfWJXJl5DVXB396v9Be4"},
   "real-estate": {name:"Real Estate Investing and Sober Living", file:"Real Estate PDF", drive:"1WjaP8L8D1USjplVUnvPfBCYQpj_ot5Ll"},
   "cybersecurity": {name:"Cybersecurity Fundamentals for Small Business", file:"Cybersecurity PDF", drive:"1U5nmPisUJk7UCcvlO9c6Kpb5Pe13AW9X"},
@@ -53,7 +53,7 @@ const params = new URLSearchParams(location.search);
 const product = params.get("product") || params.get("p");
 const box = document.getElementById("box");
 if (!product || !CATALOG[product]) {
-  box.innerHTML = "<p class=\"meta\">If you just paid, your file opened from Stripe. Do not download a different title from the library. Open the library only to buy another book.</p>";
+  box.innerHTML = "<p class=\"meta\">If you just paid, your file opened from Stripe. Do not download a different title from the library.</p>";
 } else {
   const item = CATALOG[product];
   const file = "https://drive.google.com/uc?id=" + item.drive + "&export=download";
