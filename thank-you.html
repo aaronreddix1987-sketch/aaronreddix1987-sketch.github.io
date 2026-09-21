@@ -12,79 +12,75 @@
 body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
 .bar{background:linear-gradient(90deg,var(--gold),var(--gold2));color:#000;text-align:center;padding:12px;font-weight:800;font-size:12px}
 .wrap{max-width:720px;margin:0 auto;padding:40px 18px 80px}
-.badge{display:inline-flex;gap:8px;align-items:center;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.4);color:var(--green);padding:8px 14px;border-radius:999px;font-size:12px;font-weight:800;margin-bottom:16px}
-h1{font-size:clamp(28px,5vw,42px);background:linear-gradient(135deg,#fff,var(--gold2),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:10px}
+.badge{display:inline-flex;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.4);color:var(--green);padding:8px 14px;border-radius:999px;font-size:12px;font-weight:800;margin-bottom:16px}
+h1{font-size:clamp(28px,5vw,42px);color:var(--gold2);margin-bottom:10px}
 .sub{color:var(--muted);margin-bottom:28px;line-height:1.5}
 .card{background:var(--card);border:1px solid rgba(212,175,55,.25);border-radius:16px;padding:22px;margin-bottom:16px}
 .card h2{color:var(--gold);font-size:14px;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
 .btn{display:block;text-align:center;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;font-weight:800;padding:16px;border-radius:12px;text-decoration:none;margin-bottom:10px;font-size:16px}
 .btn2{background:transparent;border:2px solid var(--gold);color:var(--gold)}
 .list a{display:block;padding:12px 14px;border:1px solid rgba(255,255,255,.08);border-radius:10px;color:var(--text);text-decoration:none;margin-bottom:8px;background:rgba(255,255,255,.03)}
-.list a:hover{border-color:var(--gold)}
-.meta{font-size:12px;color:var(--muted);margin-top:8px}
-.note{font-size:13px;color:var(--muted);line-height:1.5;margin-top:12px}
+.meta,.note{font-size:13px;color:var(--muted);margin-top:10px;line-height:1.5}
 footer{text-align:center;color:#666;font-size:12px;margin-top:32px}
 footer a{color:var(--gold)}
 #status{color:var(--green);font-weight:700;margin-bottom:12px;font-size:14px}
 </style>
 </head>
 <body>
-<div class="bar">PAYMENT CONFIRMED · INSTANT DOWNLOAD · NO EMAIL · NO HUMAN STEPS</div>
+<div class="bar">STRIPE CONFIRMED · GOOGLE DRIVE FILE · NO CUSTOMER EMAIL</div>
 <div class="wrap">
-  <div class="badge">✓ Self-serve vault</div>
+  <div class="badge">Self-serve vault</div>
   <h1>Your file is ready</h1>
-  <p class="sub">No email wait. No ticket. Open the product below. Bookmark this page for re-download.</p>
-  <p id="status">Preparing your download…</p>
+  <p class="sub">Stripe already opened the Drive file after pay. If the download did not start, use the gold button.</p>
+  <p id="status">Connecting to Drive…</p>
   <div class="card">
     <h2>Your product</h2>
     <div id="primary"></div>
     <p class="meta" id="orderMeta"></p>
-    <p class="note">If the popup is blocked, tap the gold button. On phone: tap and hold → Open in new tab.</p>
+    <p class="note">Files are the Google Drive copies attached to each live Payment Link.</p>
   </div>
   <div class="card">
-    <h2>Full vault</h2>
+    <h2>Library vault</h2>
     <div class="list" id="vault"></div>
   </div>
   <a class="btn btn2" href="/ebooks.html">Browse more products</a>
   <a class="btn btn2" href="/">Return to store</a>
-  <footer>
-    Total Transformation Inc · Single URL: <a href="https://aaronreddix1987-sketch.github.io/">aaronreddix1987-sketch.github.io</a><br>
-    Card checkout only. No email path. No Chime.
-  </footer>
+  <footer>Store: <a href="https://aaronreddix1987-sketch.github.io/">aaronreddix1987-sketch.github.io</a><br>Grant proposals only: <a href="/grants.html">/grants.html</a></footer>
 </div>
 <script>
 const CATALOG = {
-  "buy-back-your-time-ai": {name:"Buy Back Your Time — AI Edition", file:"/vault/buy-back-your-time-ai.html"},
-  "digital-undercover-billionaire": {name:"Digital Undercover Billionaire", file:"/vault/digital-undercover-billionaire.html"},
-  "cold-call-code": {name:"Cold Call Code", file:"/vault/cold-call-code.html"},
-  "money-mindset": {name:"Money Mindset Affirmations", file:"/vault/money-mindset.html"},
-  "10x-recovery-bundle": {name:"10X Recovery Bundle", file:"/vault/10x-recovery-bundle.html"},
-  "10m-blueprint": {name:"$10M Blueprint Series", file:"/vault/10m-blueprint.html"},
-  "credit-repair-609": {name:"609 Credit Repair System", file:"/vault/credit-repair-609.html"}
+  "10m-blueprint": {name:"The 10M Blueprint Complete 12-Book Series", drive:"1X0ZI5PBpQYztokazJ_9mZ3LnJj8Jnw3D"},
+  "buy-back-your-time-ai": {name:"Buy Back Your Time: Get Your Life Back Using AI", drive:"1gsSdgm7RC3Q0QBVjLbzIF9iARdJfeAKo"},
+  "cold-call-code": {name:"Cold Call Code: Building Trust Fast in a World of Strangers", drive:"18w0VRZnCQgwK65HuS73j4x7_FKASQISK"},
+  "money-mindset": {name:"Money Mindset: Affirmation System for Building Wealth", drive:"1x5PGgiC-MLz8TWjU27kZgMeb_pPMpDmj"},
+  "build-to-sell": {name:"Build to Sell: Create a Business That Runs Without You", drive:"1eoUKzkGD6g0u40YXPnTcfi0RdFE_8DMT"},
+  "become-the-ceo": {name:"Become the CEO: Stop Working In It", drive:"1EjJGxFreoP4ojDQT9u2HiiiDGAsZlZB9"},
+  "credit-repair-609": {name:"Credit Repair and Business Credit Mastery", drive:"1JLcdnCipbrvebfWJXJl5DVXB396v9Be4"},
+  "real-estate": {name:"Real Estate Investing and Sober Living", drive:"1WjaP8L8D1USjplVUnvPfBCYQpj_ot5Ll"},
+  "cybersecurity": {name:"Cybersecurity Fundamentals for Small Business", drive:"1U5nmPisUJk7UCcvlO9c6Kpb5Pe13AW9X"},
+  "automotive-nemt": {name:"Automotive Business and NEMT Guide", drive:"13DOIr2iqhBPaW5zyecEqGxlwe36YidQt"},
+  "medical-data": {name:"Medical Data Input and HIM Careers", drive:"1qQu-cDEz6g0jkQrtWOJVAR49iJZ3ysGy"},
+  "medical-billing": {name:"Medical Billing Mastery", drive:"1nIonSncHgTFaWrEoQcwnCcpmtCnq-l7C"}
 };
+function driveUrl(id){ return "https://drive.google.com/uc?id="+id+"&export=download"; }
 const params = new URLSearchParams(location.search);
 let product = params.get("product") || params.get("p") || "10m-blueprint";
 if (!CATALOG[product]) product = "10m-blueprint";
 const item = CATALOG[product];
-document.getElementById("primary").innerHTML =
-  `<a class="btn" id="dl" href="${item.file}" target="_blank" rel="noopener">Download ${item.name} now</a>`;
-document.getElementById("orderMeta").textContent =
-  "Product: " + item.name + " · " + new Date().toLocaleString();
+const file = driveUrl(item.drive);
+document.getElementById("primary").innerHTML = '<a class="btn" href="'+file+'" target="_blank" rel="noopener">Download '+item.name+'</a>';
+document.getElementById("orderMeta").textContent = "Product: " + item.name;
 const vault = document.getElementById("vault");
 Object.entries(CATALOG).forEach(([k,v]) => {
   const a = document.createElement("a");
-  a.href = v.file; a.target = "_blank"; a.rel = "noopener";
+  a.href = driveUrl(v.drive); a.target = "_blank"; a.rel = "noopener";
   a.textContent = (k===product?"\u2605 ":"") + v.name;
   vault.appendChild(a);
 });
 setTimeout(function(){
-  try {
-    window.open(item.file, "_blank");
-    document.getElementById("status").textContent = "Download opened. If blocked, tap the gold button.";
-  } catch(e) {
-    document.getElementById("status").textContent = "Tap the gold button to download.";
-  }
-}, 600);
+  try { window.open(file, "_blank"); document.getElementById("status").textContent = "Drive download opened. If blocked, tap the gold button."; }
+  catch(e){ document.getElementById("status").textContent = "Tap the gold button to download from Drive."; }
+}, 500);
 </script>
 </body>
 </html>
