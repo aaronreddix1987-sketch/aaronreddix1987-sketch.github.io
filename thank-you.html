@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Download Ready — Total Transformation Inc.</title>
 <meta name="robots" content="noindex">
+<link rel="canonical" href="https://aaronreddix1987-sketch.github.io/thank-you.html">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--gold:#D4AF37;--gold2:#F0CC5A;--bg:#060504;--card:#111;--green:#22c55e;--text:#f0e6d0;--muted:#a89878}
@@ -22,43 +23,33 @@ h1{font-size:clamp(28px,5vw,42px);background:linear-gradient(135deg,#fff,var(--g
 .list a:hover{border-color:var(--gold)}
 .meta{font-size:12px;color:var(--muted);margin-top:8px}
 .note{font-size:13px;color:var(--muted);line-height:1.5;margin-top:12px}
-.school{border-color:rgba(34,197,94,.3);background:rgba(34,197,94,.06)}
 footer{text-align:center;color:#666;font-size:12px;margin-top:32px}
 footer a{color:var(--gold)}
 #status{color:var(--green);font-weight:700;margin-bottom:12px;font-size:14px}
 </style>
 </head>
 <body>
-<div class="bar">PAYMENT CONFIRMED · INSTANT DOWNLOAD · ZERO HUMAN STEPS</div>
+<div class="bar">PAYMENT CONFIRMED · INSTANT DOWNLOAD · NO EMAIL · NO HUMAN STEPS</div>
 <div class="wrap">
-  <div class="badge">✓ Unlocked automatically</div>
+  <div class="badge">✓ Self-serve vault</div>
   <h1>Your file is ready</h1>
-  <p class="sub">No email wait. No ticket. Your product opens below. Bookmark this page for re-download anytime.</p>
+  <p class="sub">No email wait. No ticket. Open the product below. Bookmark this page for re-download.</p>
   <p id="status">Preparing your download…</p>
-
   <div class="card">
     <h2>Your product</h2>
     <div id="primary"></div>
     <p class="meta" id="orderMeta"></p>
-    <p class="note">Tip: on phone, tap and hold → Open in new tab. Use browser Share → Save PDF if you want an offline copy.</p>
+    <p class="note">If the popup is blocked, tap the gold button. On phone: tap and hold → Open in new tab.</p>
   </div>
-
   <div class="card">
     <h2>Full vault</h2>
     <div class="list" id="vault"></div>
   </div>
-
-  <div class="card school">
-    <h2>Career path referral</h2>
-    <p style="color:var(--muted);font-size:14px;margin-bottom:12px">Associated Technical College / DVC — Business Office Administration. Admissions: Xiomara Figueroa · (213) 481-6198 Ext 108. Mention <strong>Aaron T. Reddix</strong>.</p>
-    <a class="btn btn2" href="tel:2134816198">Call admissions</a>
-  </div>
-
-  <a class="btn btn2" href="/access.html">Lost your link? Customer access help</a>
   <a class="btn btn2" href="/ebooks.html">Browse more products</a>
+  <a class="btn btn2" href="/">Return to store</a>
   <footer>
-    Total Transformation Inc · Text 747-301-8586 · <a href="mailto:aaronreddix1987@gmail.com">aaronreddix1987@gmail.com</a><br>
-    Card = this page after Stripe. Chime buyers: use access.html or text us with product name.
+    Total Transformation Inc · Single URL: <a href="https://aaronreddix1987-sketch.github.io/">aaronreddix1987-sketch.github.io</a><br>
+    Card checkout only. No email path. No Chime.
   </footer>
 </div>
 <script>
@@ -72,25 +63,24 @@ const CATALOG = {
   "credit-repair-609": {name:"609 Credit Repair System", file:"/vault/credit-repair-609.html"}
 };
 const params = new URLSearchParams(location.search);
-let product = params.get("product") || params.get("p") || "buy-back-your-time-ai";
-if (!CATALOG[product]) product = "buy-back-your-time-ai";
+let product = params.get("product") || params.get("p") || "10m-blueprint";
+if (!CATALOG[product]) product = "10m-blueprint";
 const item = CATALOG[product];
 document.getElementById("primary").innerHTML =
-  `<a class="btn" id="dl" href="${item.file}" target="_blank" rel="noopener">⬇ Download ${item.name} now</a>`;
+  `<a class="btn" id="dl" href="${item.file}" target="_blank" rel="noopener">Download ${item.name} now</a>`;
 document.getElementById("orderMeta").textContent =
   "Product: " + item.name + " · " + new Date().toLocaleString();
 const vault = document.getElementById("vault");
 Object.entries(CATALOG).forEach(([k,v]) => {
   const a = document.createElement("a");
   a.href = v.file; a.target = "_blank"; a.rel = "noopener";
-  a.textContent = (k===product?"★ ":"") + v.name;
+  a.textContent = (k===product?"\u2605 ":"") + v.name;
   vault.appendChild(a);
 });
-// Auto-open primary download (zero human)
 setTimeout(function(){
   try {
     window.open(item.file, "_blank");
-    document.getElementById("status").textContent = "Download opened. If blocked by your browser, tap the gold button.";
+    document.getElementById("status").textContent = "Download opened. If blocked, tap the gold button.";
   } catch(e) {
     document.getElementById("status").textContent = "Tap the gold button to download.";
   }
