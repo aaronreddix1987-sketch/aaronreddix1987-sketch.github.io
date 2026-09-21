@@ -11,6 +11,5 @@ https://buy.stripe.com/6oUaEW71Sfy2cXF22c43S0p
 | Library | https://aaronreddix1987-sketch.github.io/ebooks.html |
 | 10X Recovery | https://aaronreddix1987-sketch.github.io/recovery.html |
 | Capacity project | https://aaronreddix1987-sketch.github.io/project.html |
-| Vault | https://aaronreddix1987-sketch.github.io/thank-you.html |
 
-Other GitHub repos redirect here. Card only. No Chime. No email tickets. No human intake on the public site.
+Card checkout through Stripe. File delivery through the Drive link on that Payment Link.
