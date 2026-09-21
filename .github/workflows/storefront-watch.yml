@@ -1,0 +1,26 @@
+name: POINT storefront watch
+on:
+  schedule:
+    - cron: "0 15 * * *"
+  workflow_dispatch:
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hit live URLs
+        run: |
+          set -e
+          for u in \
+            https://aaronreddix1987-sketch.github.io/ \
+            https://aaronreddix1987-sketch.github.io/ebooks.html \
+            https://aaronreddix1987-sketch.github.io/project.html \
+            https://buy.stripe.com/6oUaEW71Sfy2cXF22c43S0p \
+            https://buy.stripe.com/dRmcN485W3Pk6zhayI43S0s
+          do
+            code=$(curl -sS -o /dev/null -w "%{http_code}" -L --max-time 25 "$u")
+            echo "$code $u"
+            case "$code" in
+              2*|3*) ;;
+              *) echo "FAIL $u"; exit 1 ;;
+            esac
+          done
