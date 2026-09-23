@@ -2,12 +2,12 @@
 
 Business line target: **(747) 301-8586**  
 Company: Total Transformation Inc. / Aaron T. Reddix  
-Source: Drive pack `01_AI_PHONE_AGENT_NO_TWILIO_PACK.md` + Cold Call Code principles
+Payment: Stripe card checkout only. Chime is closed. Do not collect Chime payments.
 
 ## Pick one platform (fund once)
 | Platform | Best for | Signup |
 |---|---|---|
-| **Bland AI** (Drive default) | Fast production phone agents | https://www.bland.ai |
+| **Bland AI** | Fast production phone agents | https://www.bland.ai |
 | **Retell AI** | Natural voice quality | https://www.retellai.com |
 | **Vapi** | Full control + JSON below | https://vapi.ai |
 | Synthflow | No-code | https://synthflow.ai |
@@ -26,8 +26,8 @@ Source: Drive pack `01_AI_PHONE_AGENT_NO_TWILIO_PACK.md` + Cold Call Code princi
 
 ## After a YES or "I paid"
 - Card ebook buyers → https://aaronreddix1987-sketch.github.io/thank-you.html
-- Chime → confirm $ceomrreddix note, then send download or onboarding text
 - AI Admissions sale → text onboarding + book Aaron callback
+- Never send a Chime $cashtag
 
 ## Sales page already live
 https://aaronreddix1987-sketch.github.io/agents.html
@@ -36,4 +36,3 @@ https://aaronreddix1987-sketch.github.io/agents.html
 - Say you are AI when relevant
 - Outbound: business lines, honor STOP
 - No clinical guarantees
-- HIPAA BAA only if client needs PHI handling
