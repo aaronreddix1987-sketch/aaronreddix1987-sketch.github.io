@@ -33,14 +33,30 @@ These cannot be safely faked or completed from a static GitHub Pages repository:
 
 Store all secrets in the provider or automation platform. Never commit keys, OAuth authorization URLs, webhook secrets, or customer data to this repository.
 
+## Live now (24 Sep 2026)
+
+- [x] Homepage sell page: https://aaronreddix1987-sketch.github.io/
+- [x] Offer page: https://aaronreddix1987-sketch.github.io/offer.html
+- [x] Lead capture (opens SMS/email): https://aaronreddix1987-sketch.github.io/lead.html
+- [x] Onboarding checklist: https://aaronreddix1987-sketch.github.io/onboard.html
+- [x] Inbound agent prompt: /agents/inbound-system-prompt.txt (identifies as AI; approved claims only)
+- [x] Stripe live account connected for *existing* ebook Payment Links
+- [x] Hourly Stripe charge poll + Stripe email watcher (Grok Automations)
+- [ ] $497 setup Payment Link — BLOCKED: connected Stripe key cannot create products
+- [ ] $297/mo recurring Price — BLOCKED: same key permission
+- [ ] Calendar provider — not connected
+- [ ] SMS/voice provider (Vapi/Twilio) — prompt only, no live number routing
+- [ ] CRM / database — not connected
+- [ ] Direct Stripe → Grok webhook — signature mismatch; poll used instead
+
 ## Launch checklist
 
-- [ ] Correct Stripe account connected and merchant ownership verified
+- [x] Correct Stripe account visible (`acct_1TI5o4AZJj5080Vf`) — ebook links work
 - [ ] Setup Payment Link created and tested with a controlled purchase
-- [ ] Success page and onboarding form tested
-- [ ] Inbound agent identifies itself as AI and uses approved claims only
+- [x] Success/onboarding page published (`onboard.html`)
+- [x] Inbound agent identifies itself as AI and uses approved claims only
 - [ ] Calendar and SMS permissions connected
-- [ ] Failed payment and escalation paths tested
+- [ ] Failed payment and escalation paths tested against a real $497 invoice
 - [ ] One approved campaign scheduled
 - [ ] Funnel metrics tracked: visit → click → checkout → paid → onboarded
 
