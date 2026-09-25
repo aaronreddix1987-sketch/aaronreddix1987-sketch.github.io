@@ -3,22 +3,226 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Total Transformation Inc. — AI Front Desk</title>
-<meta name="description" content="AI front-desk systems for local businesses: answer calls, capture leads, book appointments, and follow up automatically.">
+<title>Total Transformation Inc. — AI Front Desk for Local Businesses</title>
+<meta name="description" content="AI front-desk systems for local businesses that answer calls, qualify leads, book appointments, and send follow-up automatically.">
 <link rel="canonical" href="https://aaronreddix1987-sketch.github.io/">
 <style>
-:root{--bg:#080a0d;--panel:#11161d;--line:#263342;--gold:#e5b95c;--text:#f5f7fa;--muted:#aab6c4;--green:#8ee0b2}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 0,#17283a 0,#080a0d 42%);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}a{color:inherit}.wrap{max-width:1080px;margin:auto;padding:0 22px}nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:1px solid var(--line)}.brand{color:var(--gold);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:12px}.navlinks{display:flex;gap:20px;font-size:13px;color:var(--muted)}.hero{padding:90px 0 70px;display:grid;grid-template-columns:1.15fr .85fr;gap:54px;align-items:center}.eyebrow{color:var(--gold);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700}h1{font-size:clamp(42px,7vw,78px);line-height:.98;margin:16px 0 22px;letter-spacing:-.04em}h2{font-size:36px;line-height:1.05;margin:10px 0 16px}p{color:var(--muted)}.lede{font-size:19px;max-width:650px}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin:30px 0}.btn{display:inline-block;padding:14px 20px;border-radius:8px;text-decoration:none;font-weight:800}.primary{background:var(--gold);color:#171108}.secondary{border:1px solid var(--line);color:var(--text)}.panel{background:rgba(17,22,29,.9);border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:0 20px 70px #0006}.panel h3{margin-top:0}.price{font-size:35px;color:var(--gold);font-weight:800}.small{font-size:13px;color:var(--muted)}.steps,.offers{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px}.num{color:var(--gold);font-weight:800}.card h3{margin:8px 0}.check{color:var(--green)}section{padding:65px 0;border-top:1px solid var(--line)}footer{padding:35px 0 60px;color:var(--muted);font-size:13px}.legal{font-size:12px;color:#8290a0;max-width:800px}@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:60px}.steps,.offers{grid-template-columns:1fr}.navlinks{display:none}}
+:root{
+  --bg:#060b11;
+  --panel:#0d141d;
+  --panel-2:#111d2b;
+  --line:#203246;
+  --gold:#e6bb5a;
+  --gold-soft:#f3d98d;
+  --text:#edf3f8;
+  --muted:#a9b7c7;
+  --green:#93d9b9;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at top, rgba(33,52,70,.7), rgba(6,11,17,1) 28%);color:var(--text);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0;border-bottom:1px solid var(--line)}
+.brand{font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.navlinks{display:flex;gap:22px;align-items:center;font-size:13px;color:var(--muted)}
+.navlinks a:hover{color:var(--text)}
+.primary-btn,.secondary-btn{display:inline-block;padding:14px 20px;border-radius:10px;font-weight:800;border:1px solid transparent;transition:.2s ease}
+.primary-btn{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#120e0b}
+.primary-btn:hover{filter:brightness(1.06)}
+.secondary-btn{border-color:var(--line);color:var(--text);background:rgba(255,255,255,0.02)}
+.secondary-btn:hover{border-color:rgba(230,187,90,.7)}
+.hero{padding:88px 0 60px;display:grid;grid-template-columns:1.2fr .8fr;gap:42px;align-items:center}
+.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:800}
+h1{font-size:clamp(42px,6vw,82px);line-height:0.97;letter-spacing:-0.05em;margin:18px 0 20px}
+.lede{font-size:19px;color:var(--muted);max-width:640px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0 18px}
+.meta{display:flex;flex-wrap:wrap;gap:18px;color:var(--muted);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.panel{background:rgba(17,25,35,.85);border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:0 20px 70px rgba(0,0,0,.28)}
+.panel h3{margin:0 0 10px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.panel h2{margin:0 0 10px;font-size:34px;line-height:1.05}
+.panel .price{font-size:38px;color:var(--gold);font-weight:800;line-height:1.1;margin:18px 0 14px}
+.panel ul{padding-left:18px;color:var(--muted);margin:12px 0 22px}
+.panel li{margin:8px 0}
+.small{font-size:13px;color:var(--muted)}
+section{padding:72px 0;border-top:1px solid var(--line)}
+.section-head{max-width:760px;margin-bottom:26px}
+.section-head h2{font-size:clamp(32px,4vw,52px);line-height:1.05;margin:10px 0 12px}
+.section-head p{color:var(--muted);margin:0}
+.steps,.offers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px}
+.num{color:var(--gold);font-size:12px;letter-spacing:.13em;text-transform:uppercase;font-weight:800}
+.card h3{margin:12px 0 8px;font-size:26px;line-height:1.15}
+.card p{margin:0;color:var(--muted)}
+.card .btn-wrap{margin-top:20px}
+.grid-2{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+.benefits{padding-left:18px;color:var(--muted);margin:0}
+.benefits li{margin:10px 0}
+.pricing-box{background:linear-gradient(180deg, rgba(230,187,90,.08), rgba(17,25,35,.6));border:1px solid rgba(230,187,90,.35);border-radius:18px;padding:24px}
+.pricing-box .label{font-size:12px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;font-weight:800}
+.pricing-box h3{font-size:32px;margin:12px 0}
+.pricing-box .price{font-size:52px;color:var(--gold);margin:10px 0}
+.pricing-box .sub{color:var(--muted)}
+.pricing-box ul{padding-left:18px;color:var(--muted);margin:18px 0 20px}
+footer{padding:40px 0 70px;color:var(--muted);font-size:13px}
+.footer-links{display:flex;gap:18px;flex-wrap:wrap;margin-top:12px}
+@media (max-width: 860px){
+  .hero,.steps,.offers,.grid-2{grid-template-columns:1fr}
+  nav{padding-top:18px}
+  .navlinks{display:none}
+  .hero{padding-top:60px}
+}
 </style>
 </head>
-<body><div class="wrap">
-<nav><a class="brand" href="/">Total Transformation Inc.</a><div class="navlinks"><a href="#how">How it works</a><a href="#offer">Pricing</a><a href="ebooks.html">Ebooks</a></div></nav>
-<main>
-<section class="hero" style="border:0">
-<div><div class="eyebrow">AI front desk · local business systems</div><h1>Stop missing calls. Start capturing more leads.</h1><p class="lede">TTI installs an AI front-desk workflow that answers routine inquiries, qualifies prospects, books the next step, and sends follow-up when your team is unavailable.</p><div class="buttons"><a class="btn primary" href="offer.html">Get my AI front desk</a><a class="btn secondary" href="#how">See how it works</a></div><p class="small">Built for service businesses. No guaranteed revenue claims. Results depend on your offer, traffic, and operations.</p></div>
-<div class="panel" id="offer"><div class="eyebrow">Simple launch offer</div><h2>AI Front Desk Setup</h2><p>One focused workflow for missed-call recovery and appointment capture.</p><div class="price">$497 setup + $297/mo</div><ul><li class="check">24/7 first response</li><li class="check">Lead qualification</li><li class="check">Calendar routing</li><li class="check">Missed-call text-back</li><li class="check">Monthly workflow monitoring</li></ul><a class="btn primary" href="offer.html">Review the setup</a></div>
-</section>
-<section id="how"><div class="eyebrow">Buy back your time</div><h2>One system. One next step.</h2><p>Routine work is automated; sensitive, unusual, or high-risk requests are routed to an approved human. That keeps the system fast without pretending every situation is safe to automate.</p><div class="steps"><div class="card"><div class="num">01 · Capture</div><h3>Answer and identify intent</h3><p>Phone, form, or chat becomes one structured lead record.</p></div><div class="card"><div class="num">02 · Qualify</div><h3>Ask only what matters</h3><p>Industry, need, timing, contact details, and preferred next step.</p></div><div class="card"><div class="num">03 · Route</div><h3>Book, buy, or escalate</h3><p>Calendar booking, Stripe product link, or a clear escalation queue.</p></div></div></section>
-<section><div class="eyebrow">The revenue ladder</div><h2>Start small. Add only what earns its place.</h2><div class="offers"><div class="card"><h3>$47 Blueprint</h3><p>Low-ticket educational entry point for business systems and follow-up.</p><a class="btn secondary" href="https://buy.stripe.com/6oUaEW71Sfy2cXF22c43S0p">Buy the blueprint</a></div><div class="card"><h3>$199 Follow-Up Setup</h3><p>One-time setup for a focused lead follow-up workflow.</p><a class="btn secondary" href="offer.html">View setup</a></div><div class="card"><h3>Full ebook library</h3><p>Additional verified titles for buyers who already know what they need.</p><a class="btn secondary" href="ebooks.html">Browse ebooks</a></div></div></section>
-<section><div class="panel"><div class="eyebrow">Automation boundary</div><h2>Automation handles the repeatable work.</h2><p>Payment authorization, regulated advice, disputes, account access, emergencies, and unusual requests require provider controls or human review. TTI does not promise zero-human operation, guaranteed income, or guaranteed business outcomes.</p><div class="buttons"><a class="btn primary" href="offer.html">Start with the offer</a><a class="btn secondary" href="agents/">View agent setup</a></div></div></section>
-</main><footer>© Total Transformation Inc. · Educational products and business-automation setup only.<br><a href="ebooks.html">Ebooks</a> · <a href="offer.html">AI Front Desk</a> · <a href="agents/">Agent setup</a></footer>
-</div></body></html>
+<body>
+<div class="wrap">
+  <nav>
+    <a class="brand" href="/">Total Transformation</a>
+    <div class="navlinks">
+      <a href="#how">How it works</a>
+      <a href="#offer">Pricing</a>
+      <a href="ebooks.html">Ebooks</a>
+      <a href="offer.html">Setup</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">AI Front Desk · Local Business Systems</div>
+        <h1>Stop missing calls. Start capturing more leads.</h1>
+        <p class="lede">TTI installs AI front-desk systems for local businesses that answer routine inquiries, qualify prospects, book appointments, and send follow-up automatically—even when your team is unavailable.</p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="offer.html">Get My AI Front Desk</a>
+          <a class="secondary-btn" href="#how">See How It Works</a>
+        </div>
+        <div class="meta">
+          <span>24/7 response</span>
+          <span>Lead capture</span>
+          <span>Booking flow</span>
+        </div>
+      </div>
+
+      <div class="panel" id="offer">
+        <h3>Launch offer</h3>
+        <h2>AI Front Desk Setup</h2>
+        <div class="price">$497 setup + $297/mo</div>
+        <ul>
+          <li>Call answering automation</li>
+          <li>Lead qualification</li>
+          <li>Appointment booking</li>
+          <li>Missed-call text-back</li>
+          <li>Monthly monitoring and support</li>
+        </ul>
+        <a class="primary-btn" href="offer.html">Review The Setup</a>
+        <p class="small" style="margin-top:16px;">Built for service businesses that lose leads when calls go unanswered. Results vary based on your traffic and operations.</p>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="section-head">
+        <div class="eyebrow">Why it matters</div>
+        <h2>One system. One next step.</h2>
+        <p>Routine lead handling is automated. Exceptions and unusual requests are routed for human review. That keeps the system fast without pretending every case should be fully automated.</p>
+      </div>
+
+      <div class="steps">
+        <div class="card">
+          <div class="num">01 · Capture</div>
+          <h3>Answer and identify intent</h3>
+          <p>Phone, form, or chat become one organized lead record with business details and preferred next step.</p>
+        </div>
+        <div class="card">
+          <div class="num">02 · Qualify</div>
+          <h3>Ask only what matters</h3>
+          <p>Industry, problem, urgency, contact details, and timing are collected before the next step is offered.</p>
+        </div>
+        <div class="card">
+          <div class="num">03 · Route</div>
+          <h3>Book, buy, or escalate</h3>
+          <p>Prospects are sent to a calendar flow, a Stripe checkout, or a human-approved escalation path.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="grid-2">
+        <div>
+          <div class="section-head" style="margin-bottom:20px">
+            <div class="eyebrow">Built for frictionless sales</div>
+            <h2>Remove the operational drag.</h2>
+          </div>
+          <ul class="benefits">
+            <li>Answer missed calls without waiting on staff availability.</li>
+            <li>Capture lead intent even after business hours.</li>
+            <li>Reduce follow-up gaps with structured reminders and routing.</li>
+            <li>Fast-track the first conversation without forcing a full time-consuming sales process.</li>
+            <li>Keep the offer simple: one clear service, one clear price, one clear CTA.</li>
+          </ul>
+        </div>
+
+        <div class="pricing-box">
+          <div class="label">Main offer</div>
+          <h3>AI Front Desk</h3>
+          <div class="price">$497</div>
+          <div class="sub">setup + $297/month</div>
+          <ul>
+            <li>Qualified call handling</li>
+            <li>Lead intake and triage</li>
+            <li>Appointment booking</li>
+            <li>Follow-up messaging</li>
+            <li>Monthly management and check-ins</li>
+          </ul>
+          <a class="primary-btn" href="offer.html">Start With The Offer</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="eyebrow">The revenue ladder</div>
+        <h2>Start simple. Add only what earns its place.</h2>
+      </div>
+
+      <div class="offers">
+        <div class="card">
+          <div class="num">LOW TICKET</div>
+          <h3>$47 Blueprint</h3>
+          <p>Low-friction educational entry point for business systems and follow-up.</p>
+          <div class="btn-wrap"><a class="secondary-btn" href="https://buy.stripe.com/6oUaEW71Sfy2cXF22c43S0p">Buy the blueprint</a></div>
+        </div>
+        <div class="card">
+          <div class="num">ONE-TIME</div>
+          <h3>$199 Setup</h3>
+          <p>Focused lead follow-up and workflow setup for a smaller implementation.</p>
+          <div class="btn-wrap"><a class="secondary-btn" href="offer.html">View the setup</a></div>
+        </div>
+        <div class="card">
+          <div class="num">RECURRING</div>
+          <h3>AI Front Desk</h3>
+          <p>Ongoing automation, lead handling, and business operations support.</p>
+          <div class="btn-wrap"><a class="secondary-btn" href="offer.html">Get started</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="panel">
+        <div class="eyebrow">Automation boundary</div>
+        <h2>Automation handles the repeatable work.</h2>
+        <p class="small">Payment authorization, regulated advice, emergencies, disputes, account access, credential requests, and unusual cases require provider controls or human review. We do not promise zero-human operation, guaranteed business outcomes, or guaranteed income.</p>
+        <div class="hero-actions" style="margin-bottom:0">
+          <a class="primary-btn" href="offer.html">Get My AI Front Desk</a>
+          <a class="secondary-btn" href="ebooks.html">Browse ebooks</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © Total Transformation Inc. · <a href="ebooks.html">Ebooks</a> · <a href="offer.html">AI Front Desk</a> · <a href="agents/">Agent setup</a>
+  </footer>
+</div>
+</body>
+</html>
