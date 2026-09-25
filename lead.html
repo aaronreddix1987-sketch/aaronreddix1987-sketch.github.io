@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book the AI Front Desk — TTI</title>
+<link rel="canonical" href="https://aaronreddix1987-sketch.github.io/lead.html">
+<style>
+:root{--bg:#080a0d;--panel:#11161d;--line:#263342;--gold:#e5b95c;--text:#f5f7fa;--muted:#aab6c4}
+*{box-sizing:border-box}body{margin:0;background:#080a0d;color:var(--text);font:16px/1.6 system-ui,sans-serif;padding:28px}
+.wrap{max-width:640px;margin:40px auto;border:1px solid var(--line);border-radius:20px;padding:32px;background:var(--panel)}
+label{display:block;margin:12px 0 6px;font-size:13px;color:var(--muted)}input,textarea,select{width:100%;padding:12px;border-radius:8px;border:1px solid var(--line);background:#0b0f14;color:var(--text)}
+.btn{display:inline-block;margin-top:18px;background:var(--gold);color:#171108;text-decoration:none;font-weight:800;padding:14px 20px;border-radius:8px;border:0;cursor:pointer}
+a{color:var(--gold)}.note{color:var(--muted);font-size:13px;margin-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<p><a href="/">← Home</a> · <a href="offer.html">Offer</a></p>
+<p style="color:var(--gold);letter-spacing:.18em;font-size:12px;text-transform:uppercase;font-weight:700">Lead capture</p>
+<h1>Tell us who to call back.</h1>
+<p>This form opens your email or text app. Nothing is stored on this static site.</p>
+<form id="f">
+<label>Full name</label><input id="name" required>
+<label>Business</label><input id="biz">
+<label>Industry</label><input id="ind">
+<label>Phone</label><input id="phone" type="tel" required>
+<label>Email</label><input id="email" type="email">
+<label>What happens when you miss a call?</label><textarea id="need" rows="3"></textarea>
+<label>Preferred next step</label>
+<select id="next">
+<option>Text me about $497 + $297/mo</option>
+<option>I only want the $47 book</option>
+<option>Human callback</option>
+</select>
+<button class="btn" type="submit">Open message to the office</button>
+</form>
+<p class="note">Or text 747-301-8586 now. Never send card numbers here.</p>
+</div>
+<script>
+document.getElementById('f').addEventListener('submit', function(e){
+  e.preventDefault();
+  var body = [
+    'AI Front Desk lead',
+    'Name: ' + document.getElementById('name').value,
+    'Business: ' + document.getElementById('biz').value,
+    'Industry: ' + document.getElementById('ind').value,
+    'Phone: ' + document.getElementById('phone').value,
+    'Email: ' + document.getElementById('email').value,
+    'Missed-call problem: ' + document.getElementById('need').value,
+    'Next step: ' + document.getElementById('next').value
+  ].join('\n');
+  var sms = 'sms:7473018586?body=' + encodeURIComponent(body.slice(0,280));
+  var mail = 'mailto:aaronreddix1987@gmail.com?subject=' + encodeURIComponent('TTI Front Desk lead') + '&body=' + encodeURIComponent(body);
+  window.location.href = sms;
+  setTimeout(function(){ window.location.href = mail; }, 400);
+});
+</script>
+</body>
+</html>
