@@ -1,4 +1,4 @@
-# TTI CEO COMMAND BRIEF — 24 Sep 2026 09:54 PDT
+# TTI CEO COMMAND BRIEF — 27 Sep 2026 16:11 PDT
 
 Official store: https://aaronreddix1987-sketch.github.io/
 Library: https://aaronreddix1987-sketch.github.io/ebooks.html
@@ -32,3 +32,6 @@ Medi-Cal still not an email packet. SAPC draft stays a question, not an applicat
 1. Text 3 people who already know you: the homepage URL + $47 Blueprint.
 2. Reconnect Gmail in this chat if you want the SAPC draft and owner-carry template sent.
 3. Log into Verizon Digital Ready, finish 2 short courses if not done, submit the $10K app.
+
+## 27 SEP UPDATE — STRIPE REDIRECT
+Attempted to fix all 10 Payment Link success URLs via API. Key is read-only on payment links — no write access. Manual dashboard edit required (see TASKS.md). Thank-you page and catalog are correct and live.
