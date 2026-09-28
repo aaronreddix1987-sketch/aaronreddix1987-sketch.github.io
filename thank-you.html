@@ -23,10 +23,10 @@ footer a{color:var(--gold)}
 </style>
 </head>
 <body>
-<div class="bar">ONE PRODUCT · ONE FILE · CARD ONLY</div>
+<div class="bar">PAYMENT RECEIVED · FILE OPENS AUTOMATICALLY</div>
 <div class="wrap">
   <h1>Your file is ready</h1>
-  <p class="sub">Stripe should have opened the Drive file for the product you paid. If a popup was blocked, use the button below or text the office with the product name and the email used at checkout.</p>
+  <p class="sub" id="status">If you paid on Stripe, the download should start now. If a popup is blocked, tap the gold button.</p>
   <div class="card" id="box"></div>
   <a class="btn" href="sms:7473018586?body=Paid%20but%20file%20did%20not%20open.%20Email%20used%20at%20Stripe%3A%20">Text 747-301-8586 if the file did not open</a>
   <a class="btn btn2" href="/">Return to store</a>
@@ -54,11 +54,13 @@ const params = new URLSearchParams(location.search);
 const product = params.get("product") || params.get("p");
 const box = document.getElementById("box");
 if (!product || !CATALOG[product]) {
-  box.innerHTML = "<p class=\"meta\">If you just paid, your file opened from Stripe. If it did not, text 747-301-8586 with the product name. Do not download a different title from the library.</p>";
+  box.innerHTML = "<p class=\"meta\">If you just paid, Stripe also opens the Drive file directly. If nothing downloaded, text 747-301-8586 with the product name and checkout email.</p>";
 } else {
   const item = CATALOG[product];
   const file = "https://drive.google.com/uc?id=" + item.drive + "&export=download";
-  box.innerHTML = "<p class=\"meta\">" + item.name + "<br>" + item.file + "</p><a class=\"btn\" href=\"" + file + "\" target=\"_blank\" rel=\"noopener\">Download this title only</a>";
+  box.innerHTML = "<p class=\"meta\">" + item.name + "<br>" + item.file + "</p><a class=\"btn\" id=\"dl\" href=\"" + file + "\" target=\"_blank\" rel=\"noopener\">Download this title</a>";
+  const a = document.getElementById("dl");
+  setTimeout(function(){ if (a) a.click(); }, 400);
 }
 </script>
 </body>
