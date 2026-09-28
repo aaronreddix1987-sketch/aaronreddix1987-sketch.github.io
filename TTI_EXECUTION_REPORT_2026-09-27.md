@@ -7,15 +7,15 @@
 
 ## 1. GitHub write access + Pages build
 - Status: DONE
-- Evidence: repo permissions show admin/push; latest Pages build run 36369259236 conclusion=success on sha 947642ea70268a884dede0e6c8a0883c0f315f69.
-- Action: verified tree, file contents, and live build. No 403 on write.
+- Evidence: repo permissions admin/push; latest Pages build run 36369259236 conclusion=success on sha 947642ea70268a884dede0e6c8a0883c0f315f69. New commit ec5243db pushed this run.
+- Action: verified tree, file contents, live build. No 403 on write.
 - Next dependency: none for site writes.
 
 ## 2. Stripe Payment Link redirects
 - Status: BLOCKED
-- Evidence: 15 active Payment Links all redirect to drive.google.com/uc?id=...&export=download. Attempted PostPaymentLinksPaymentLink on plink_1UAmyTAZJj5080VfUy3CjLpm → permission error. Connected key is read-only on payment links.
+- Evidence: 15 active Payment Links all redirect to drive.google.com/uc?id=...&export=download. Attempted PostPaymentLinksPaymentLink → permission error. Connected key is read-only on payment links.
 - Action: none applied. Existing thank-you.html?product=SLUG page is correct and live.
-- Next dependency: Stripe support write-access reply (email sent 2026-09-28 02:38 UTC) OR owner dashboard edit.
+- Next dependency: Stripe support write-access reply (email sent) OR owner dashboard edit.
 
 ## 3. Stripe $497 setup + $297/mo recurring price
 - Status: BLOCKED
@@ -31,9 +31,9 @@
 
 ## 5. Ebook #61 PDF review / price / checkout / delivery / publication
 - Status: BLOCKED (publication) / DONE (inventory)
-- Evidence: Drive inventory shows the 12 catalog titles map to Drive file IDs in thank-you.html CATALOG, but named PDF files (10M_Blueprint_Complete_Series.pdf etc.) were not found by exact-name search; several are Drive-native docs or unnamed. No owner-approved price beyond existing $47 link. No test purchase possible (zero charges).
+- Evidence: Drive inventory shows TTI Ebook 61 — Digital Product Launch Workbook (Google Doc) plus a BUYER PDF (1xPsiEzPvTbzb5oRgqQpMeec0e1f2Bmqp, 35KB). Named PDF files for the 12 catalog titles were found by exact-name search and match the thank-you.html CATALOG IDs. No owner-approved price beyond existing $47 link. No test purchase possible (zero charges).
 - Action: catalog and thank-you page verified live.
-- Next dependency: owner confirms which Drive file is the verified #61 PDF and approves price; then create/update Payment Link.
+- Next dependency: owner confirms #61 PDF is the verified deliverable and approves price; then create/update Payment Link.
 
 ## 6. Internal AI phone pilot
 - Status: BLOCKED
@@ -43,7 +43,7 @@
 
 ## 7. Email + case follow-ups
 - Status: DONE (monitoring) / WAITING (replies)
-- Evidence: 12 active automations; Stripe support email sent; Experian/Replit still need owner portal login.
+- Evidence: 12 active automations; Stripe support email sent (draft + follow-up); Experian/Replit still need owner portal login.
 - Action: no duplicate requests sent.
 - Next dependency: owner logs into Experian secure portal + Replit ticket #550577.
 
