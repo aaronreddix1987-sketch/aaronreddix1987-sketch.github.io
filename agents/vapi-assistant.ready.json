@@ -1,0 +1,17 @@
+{
+  "name": "TTI AI Front Desk Assistant",
+  "firstMessage": "Thanks for calling Total Transformation Inc. I'm the AI assistant. Are you calling about the AI Front Desk, an ebook, or something else?",
+  "model": {
+    "provider": "openai",
+    "model": "gpt-4o",
+    "messages": [{"role": "system", "content": "Use agents/inbound-system-prompt.txt. Be transparent that you are AI. Never invent claims or request payment-card data. Escalate medical, legal, emergency, refund, credential, account-access, and unusual requests."}]
+  },
+  "voice": {"provider": "11labs", "voiceId": "burt"},
+  "webhookUrl": "https://YOUR-HOSTED-WEBHOOK/tti-phone",
+  "serverUrl": "https://YOUR-HOSTED-WEBHOOK/tti-phone",
+  "endCallMessage": "Thanks for calling Total Transformation Inc. Your next step has been recorded. Goodbye.",
+  "endCallPhrases": ["goodbye", "that's all", "hang up", "stop calling"],
+  "recordingEnabled": false,
+  "hipaaEnabled": false,
+  "backgroundSound": "off"
+}
