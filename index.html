@@ -1,44 +1,191 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>TTI Digital Library — Aaron T. Reddix</title>
-<meta name="description" content="Pay on Stripe for a TTI ebook.">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Total Transformation Inc. — AI Front Office Automation</title>
+<meta name="description" content="High-ticket AI Front Office for local businesses: first response, lead capture, qualification, booking, and follow-up. Setup by invoice after a call.">
 <link rel="canonical" href="https://aaronreddix1987-sketch.github.io/">
 <style>
-body{margin:0;font-family:system-ui,sans-serif;background:#060504;color:#f3ead7}
-.bar{background:linear-gradient(90deg,#d4af37,#f0cc5a);color:#000;text-align:center;padding:10px;font-weight:800;font-size:12px}
-.hero{padding:28px 16px;text-align:center;background:linear-gradient(180deg,#0d0b07,#060504)}
-img.p{width:120px;height:120px;border-radius:50%;object-fit:cover;object-position:center 18%;border:2px solid #d4af37}
-h1{color:#f0cc5a;margin:12px 0 6px}
-.sub{color:#b7a68a}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;max-width:1100px;margin:0 auto;padding:16px}
-.c{background:#111;border:1px solid rgba(212,175,55,.25);border-radius:14px;padding:14px}
-.c h3{margin:0 0 6px;font-size:15px}
-.c p{margin:0 0 10px;color:#d4af37;font-weight:700}
-a.b{display:block;text-align:center;background:linear-gradient(135deg,#d4af37,#f0cc5a);color:#000;text-decoration:none;font-weight:800;padding:10px;border-radius:10px}
-footer{text-align:center;padding:24px;color:#7a6c57;font-size:12px}
-footer a{color:#d4af37}
-</style></head>
+:root{
+  --bg:#060b11;--panel:#0d141d;--line:#203246;--gold:#e6bb5a;--gold-soft:#f3d98d;--text:#edf3f8;--muted:#a9b7c7;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at top, rgba(33,52,70,.7), rgba(6,11,17,1) 28%);color:var(--text);font-family:system-ui,-apple-system,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0;border-bottom:1px solid var(--line)}
+.brand{font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.navlinks{display:flex;gap:22px;align-items:center;font-size:13px;color:var(--muted)}
+.navlinks a:hover{color:var(--text)}
+.primary-btn,.secondary-btn{display:inline-block;padding:14px 20px;border-radius:10px;font-weight:800;border:1px solid transparent}
+.primary-btn{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#120e0b}
+.secondary-btn{border-color:var(--line);color:var(--text);background:rgba(255,255,255,0.02)}
+.hero{padding:88px 0 60px;display:grid;grid-template-columns:1.15fr .85fr;gap:42px;align-items:center}
+.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:800}
+h1{font-size:clamp(40px,6vw,78px);line-height:0.97;letter-spacing:-0.05em;margin:18px 0 20px}
+.lede{font-size:19px;color:var(--muted);max-width:640px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0 18px}
+.meta{display:flex;flex-wrap:wrap;gap:18px;color:var(--muted);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.panel{background:rgba(17,25,35,.85);border:1px solid rgba(230,187,90,.4);border-radius:22px;padding:28px;box-shadow:0 20px 70px rgba(0,0,0,.28)}
+.panel h3{margin:0 0 10px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.panel h2{margin:0 0 10px;font-size:32px;line-height:1.05}
+.panel .price{font-size:36px;color:var(--gold);font-weight:800;line-height:1.1;margin:18px 0 14px}
+.panel ul{padding-left:18px;color:var(--muted);margin:12px 0 22px}
+.small{font-size:13px;color:var(--muted)}
+section{padding:72px 0;border-top:1px solid var(--line)}
+.section-head{max-width:760px;margin-bottom:26px}
+.section-head h2{font-size:clamp(32px,4vw,52px);line-height:1.05;margin:10px 0 12px}
+.section-head p{color:var(--muted);margin:0}
+.steps,.offers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px}
+.num{color:var(--gold);font-size:12px;letter-spacing:.13em;text-transform:uppercase;font-weight:800}
+.card h3{margin:12px 0 8px;font-size:24px;line-height:1.15}
+.card p{margin:0;color:var(--muted)}
+.card .btn-wrap{margin-top:20px}
+.grid-2{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+.benefits{padding-left:18px;color:var(--muted);margin:0}
+.benefits li{margin:10px 0}
+.pricing-box{background:linear-gradient(180deg, rgba(230,187,90,.08), rgba(17,25,35,.6));border:1px solid rgba(230,187,90,.35);border-radius:18px;padding:24px}
+.pricing-box .label{font-size:12px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;font-weight:800}
+.pricing-box h3{font-size:32px;margin:12px 0}
+.pricing-box .price{font-size:46px;color:var(--gold);margin:10px 0}
+.pricing-box .sub{color:var(--muted)}
+footer{padding:40px 0 70px;color:var(--muted);font-size:13px}
+@media (max-width: 860px){
+  .hero,.steps,.offers,.grid-2{grid-template-columns:1fr}
+  .navlinks{display:none}
+  .hero{padding-top:60px}
+}
+</style>
+</head>
 <body>
-<div class="bar">PAY SECURELY ON STRIPE</div>
-<div class="hero">
-<img class="p" src="aaron_photo2.jpg" alt="Aaron T. Reddix">
-<h1>Digital Library</h1>
-<p class="sub">Aaron T. Reddix · Total Transformation Inc.<br>Choose a title. Pay on Stripe.</p>
+<div class="wrap">
+  <nav>
+    <a class="brand" href="/">Total Transformation</a>
+    <div class="navlinks">
+      <a href="#how">How it works</a>
+      <a href="#offer">Pricing</a>
+      <a href="offer.html">Front Office</a>
+      <a href="ebooks.html">Library</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">AI Front Office · High-ticket automation</div>
+        <h1>Your front office runs while you are on the tools.</h1>
+        <p class="lede">TTI installs an AI Front Office for owners who lose money when calls, texts, and forms sit unanswered. First response, qualification, booking or product-link routing, and follow-up. Setup and monitoring only. No guaranteed sales.</p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="offer.html">Get the $4,997 Front Office</a>
+          <a class="secondary-btn" href="#how">See the system</a>
+        </div>
+        <div class="meta">
+          <span>24/7 first response</span>
+          <span>Lead capture</span>
+          <span>Invoice after call</span>
+        </div>
+      </div>
+
+      <div class="panel" id="offer">
+        <h3>Flagship offer</h3>
+        <h2>AI Front Office Automation</h2>
+        <div class="price">$4,997 setup + $997/mo</div>
+        <ul>
+          <li>Phone, SMS, and form first response</li>
+          <li>Lead qualification and routing</li>
+          <li>Calendar booking or Stripe product link</li>
+          <li>Missed-call text-back</li>
+          <li>Monthly workflow check and human escalation rules</li>
+        </ul>
+        <a class="primary-btn" href="sms:7473018586?body=I%20want%20the%20AI%20Front%20Office%20%244%2C997%20%2B%20%24997%2Fmo">Text 747-301-8586</a>
+        <p class="small" style="margin-top:16px;">No public Payment Link for this package yet. Do not pay a $47 ebook for it. Aaron sends a Stripe invoice after the call. Card numbers are never taken by phone or chat.</p>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="section-head">
+        <div class="eyebrow">The system</div>
+        <h2>One front office. One next step.</h2>
+        <p>Routine inquiries are automated. Disputes, medical, legal, emergency, and account-access requests go to a human. Results depend on your offer, traffic, and operations.</p>
+      </div>
+      <div class="steps">
+        <div class="card">
+          <div class="num">01 · Capture</div>
+          <h3>Answer and log the lead</h3>
+          <p>Name, business, phone, email, industry, and need in one record — from a call, text, or form.</p>
+        </div>
+        <div class="card">
+          <div class="num">02 · Qualify</div>
+          <h3>Ask only what books the next step</h3>
+          <p>Problem, urgency, budget range, and timing before anyone spends staff time.</p>
+        </div>
+        <div class="card">
+          <div class="num">03 · Route</div>
+          <h3>Book, buy, or escalate</h3>
+          <p>Calendar, product link, or human review. No fake “fully autonomous company” claim.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="grid-2">
+        <div>
+          <div class="section-head" style="margin-bottom:20px">
+            <div class="eyebrow">Who this is for</div>
+            <h2>Owners who already have demand and lose it after hours.</h2>
+          </div>
+          <ul class="benefits">
+            <li>Service businesses that miss calls during jobs.</li>
+            <li>Owners who want one clear package, not a menu of toys.</li>
+            <li>Teams that can take a booked appointment the next morning.</li>
+            <li>Not for guaranteed revenue, treatment, or regulated advice.</li>
+          </ul>
+        </div>
+        <div class="pricing-box">
+          <div class="label">Core install (if flagship is too much)</div>
+          <h3>AI Front Desk</h3>
+          <div class="price">$497</div>
+          <div class="sub">setup + $297/month</div>
+          <p class="small">Same workflow, narrower scope. Invoice after a call. Same rule: do not use the $47 book checkout for this.</p>
+          <p style="margin-top:18px"><a class="primary-btn" href="offer.html">Compare packages</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="eyebrow">The ladder</div>
+        <h2>Book first. Automation second. Library last.</h2>
+      </div>
+      <div class="offers">
+        <div class="card">
+          <div class="num">HIGH TICKET</div>
+          <h3>$4,997 + $997/mo</h3>
+          <p>Full AI Front Office install and monthly monitoring.</p>
+          <div class="btn-wrap"><a class="secondary-btn" href="offer.html">Review the package</a></div>
+        </div>
+        <div class="card">
+          <div class="num">CORE</div>
+          <h3>$497 + $297/mo</h3>
+          <p>Focused front-desk workflow for one number and one offer.</p>
+          <div class="btn-wrap"><a class="secondary-btn" href="offer.html">Core setup</a></div>
+        </div>
+        <div class="card">
+          <div class="num">LIBRARY</div>
+          <h3>$47 Blueprint</h3>
+          <p>Education only. Live Stripe checkout. Not the automation install.</p>
+          <div class="btn-wrap"><a class="secondary-btn" href="https://buy.stripe.com/6oUaEW71Sfy2cXF22c43S0p">Buy the $47 book</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Total Transformation Inc. · Educational products and business-automation setup only.<br>
+    <a href="ebooks.html">Library</a> · <a href="offer.html">Front Office</a> · <a href="lead.html">Leave details</a> · <a href="mailto:aaronreddix1987@gmail.com">aaronreddix1987@gmail.com</a> · 747-301-8586
+  </footer>
 </div>
-<div class="grid">
-<div class="c"><h3>The 10M Blueprint Complete 12-Book Series</h3><p>$47</p><a class="b" href="https://buy.stripe.com/6oUaEW71Sfy2cXF22c43S0p">Buy</a></div>
-<div class="c"><h3>Buy Back Your Time: Get Your Life Back Using AI</h3><p>$19</p><a class="b" href="https://buy.stripe.com/dRmcN485W3Pk6zhayI43S0s">Buy</a></div>
-<div class="c"><h3>Cold Call Code: Building Trust Fast in a World of Strangers</h3><p>$9.97</p><a class="b" href="https://buy.stripe.com/3cIaEW85W99Ee1JeOY43S0r">Buy</a></div>
-<div class="c"><h3>Money Mindset: Affirmation System for Building Wealth</h3><p>$9.97</p><a class="b" href="https://buy.stripe.com/aFa00i9a02Lg5vddKU43S0q">Buy</a></div>
-<div class="c"><h3>Build to Sell: Create a Business That Runs Without You</h3><p>$9.97</p><a class="b" href="https://buy.stripe.com/9B63cugCs99E5vddKU43S0o">Buy</a></div>
-<div class="c"><h3>Become the CEO: Stop Working In It</h3><p>$9.97</p><a class="b" href="https://buy.stripe.com/7sY9ASdqgadIf5NayI43S0n">Buy</a></div>
-<div class="c"><h3>Credit Repair and Business Credit Mastery</h3><p>$24.97</p><a class="b" href="https://buy.stripe.com/4gM6oG71S3Pk0aTbCM43S0y">Buy</a></div>
-<div class="c"><h3>Cybersecurity Fundamentals for Small Business</h3><p>$19.97</p><a class="b" href="https://buy.stripe.com/00wcN40Du1Hce1J36g43S0v">Buy</a></div>
-<div class="c"><h3>Automotive Business and NEMT Guide</h3><p>$19.97</p><a class="b" href="https://buy.stripe.com/3cI3cudqg3PkbTBgX643S0x">Buy</a></div>
-<div class="c"><h3>Medical Data Input and HIM Careers</h3><p>$14.97</p><a class="b" href="https://buy.stripe.com/6oU4gy0Du85AaPx7mw43S0u">Buy</a></div>
-<div class="c"><h3>Medical Billing Mastery</h3><p>$19.97</p><a class="b" href="https://buy.stripe.com/6oUdR8dqg99E8Hp0Y843S0t">Buy</a></div>
-<div class="c"><h3>Real Estate Investing</h3><p>$29.97</p><a class="b" href="https://buy.stripe.com/aFafZg5XO85A4r9gX643S0w">Buy</a></div>
-</div>
-<footer>Total Transformation Inc. · <a href="mailto:aaronreddix1987@gmail.com">aaronreddix1987@gmail.com</a></footer>
-</body></html>
+</body>
+</html>
