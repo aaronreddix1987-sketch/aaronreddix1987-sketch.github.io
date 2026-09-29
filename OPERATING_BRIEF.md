@@ -12,12 +12,17 @@ Use this file in Grok, ChatGPT, Manus, or any other agent. Do not invent status.
 - Stripe account that this session can read: acct_1TMAPOExiZYmegFs
 - GitHub: aaronreddix1987-sketch/aaronreddix1987-sketch.github.io
 
+## Hard ban
+
+Do not name, CC, or reference CRI-Help or CRI.HELP.INC in any email, workflow, pitch, grant send, or status update. Do not send the 10X grant draft while it still contains that name or treatment language.
+
 ## Priority order
 
-1. Sell the 12 ebooks that already have buy.stripe.com buttons. That is the only cash path that does not need new permission.
+1. Keep the ebook store live. Sell the 12 titles that already have buy.stripe.com buttons.
 2. Do not add a buy button unless the Payment Link exists on acct_1TMAPOExiZYmegFs and the thank-you page has a Drive file for that slug.
 3. Housing: one commercial building, 15 to 30 beds, portfolio owner, master lease or owner-carry, on-site manager, rent above market. No 25% down. No single-family homeowner.
 4. Nonprofit only after $350 is in hand. Do not ask for donations before IRS acceptance.
+5. A $500 billion figure is a long-term target, not a result. Never report it as revenue, pipeline, or a commitment.
 
 ## Tool map
 
@@ -25,7 +30,7 @@ Use this file in Grok, ChatGPT, Manus, or any other agent. Do not invent status.
 |---|---|---|
 | GitHub Pages | Store, thank-you download, this brief | Taking card numbers |
 | Stripe | Prices, Payment Links, after-pay redirect | Guessing that a buy.stripe.com URL belongs to this account |
-| Gmail | Replies to people who already wrote, one broker desk at a time | Blasting grant PDFs or unverified owners |
+| Gmail | Replies to people who already wrote | Blasting grant PDFs, unverified owners, or repeat pitches |
 | Google Drive | Source PDFs and the housing sheet | Proof that a house is vacant or zoned |
 | SAM.gov | Free federal vendor registration after EIN, legal name, and bank are typed by Aaron | A shortcut to a contract |
 | City Planning virtual counter | One real address and APN | A general recovery-campus letter |
@@ -35,7 +40,7 @@ Use this file in Grok, ChatGPT, Manus, or any other agent. Do not invent status.
 
 - A home that provides only housing, house rules, and peer support is not a DHCS-licensed treatment facility. Health and Safety Code 1505(i) exempts a recovery house that does not provide care or supervision from community-care licensing.
 - DHCS licenses facilities that provide detox, counseling, treatment planning, or other alcohol-or-drug treatment. Doing those on site without a license is the line that cannot be crossed.
-- The 10X grant draft on Drive still says treatment and has a blank dollar amount. Do not mail it until it is rewritten as housing-only and has a real budget and a real address.
+- The 10X grant draft on Drive still says treatment and has a blank dollar amount. Do not mail it.
 - Los Angeles still controls zoning, fire, occupancy, and business tax. Planning will only review a specific parcel.
 
 ## SAM.gov
@@ -66,10 +71,15 @@ Use this file in Grok, ChatGPT, Manus, or any other agent. Do not invent status.
 
 - Bryn Stroyke, 1129 Via Mirabel: declined.
 - Fred Aframian, 5955-5959 S Western: seller wants 25% down.
-- Phillip Sample, 410 W 7th: owner wants an outright sale. Call only if Aaron still wants that meeting.
+- Phillip Sample, 410 W 7th: owner wants an outright sale.
 - FTB addresses that bounced. Do not resend.
-- Glen Scher, Marcus and Millichap: portfolio ask already sent 2026-09-28. Wait for a reply.
+- Portfolio desks already pitched on 2026-09-28: Glen Scher, Trion, Avanath, BH Properties, Cityview, JRK, Decron, TruAmerica, Kearny, Tower (deals@towerrep.com). Wait.
+- September 25-26 institutional list in the Drive register. Do not repeat.
 
 ## Housing sheet
 
 Drive file TTI Recovery Housing Automation Workflow. As of 2026-09-28: 25 candidates, 0 qualified. Do not describe a candidate as ready until vacancy, condition, and zoning are verified.
+
+## Hourly workflow
+
+Automation name: TTI hourly reply desk. It checks replies and that the store URL still loads. It does not send email. It does not mention CRI-Help.
