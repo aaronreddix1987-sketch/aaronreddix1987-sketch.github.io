@@ -1,63 +1,23 @@
-# TTI automated revenue workflow
+# TTI automated workflow — cash + housing
 
-## Objective
-Automate routine lead capture, qualification, checkout, onboarding, and follow-up around one offer: **AI Front Desk — $497 setup + $297/month**.
+Updated 2026-09-28. Martell loop: Audit → Transfer → Fill. Tokens first, hire later.
 
-This is an automation-first workflow, not a promise of zero human involvement. Humans remain the escalation path for payment disputes, regulated or clinical matters, emergencies, account permissions, legal requests, and unusual cases.
+## P0 Cash — ebooks live now
+Store: https://aaronreddix1987-sketch.github.io/ebooks.html
+- Recovery housing book $29.97 https://buy.stripe.com/aFafZg5XO85A4r9gX643S0w
+- 10M Blueprint $47 https://buy.stripe.com/6oUaEW71Sfy2cXF22c43S0p
+- Buy Back Your Time $19 https://buy.stripe.com/dRmcN485W3Pk6zhayI43S0s
+Thank-you: https://aaronreddix1987-sketch.github.io/thank-you.html
+Chime is closed. Stripe card only. No invented sales.
 
-## Customer path
+## P0 Housing — live-in manager near 9710 San Fernando Rd, Sun Valley 91352
+Daily automation searches 180+ DOM 3+ bed houses in 91352 / nearby and sends owner-carry or master-lease inquiries to verified listing-agent emails only. Cap 3/day. Never send a dollar bid without Aaron's cash authorization.
+Current primary target: 7230 Case Ave, Sun Valley, MLS GD26033801, agent Argin Nercisian.
 
-1. **Traffic** — website, approved social posts, or compliant outreach.
-2. **Capture** — form, chat, or phone agent collects name, business, phone, email, industry, need, and preferred next step.
-3. **Qualify** — the agent checks fit and intent; it does not invent results, testimonials, or guarantees.
-4. **Route** — send a Stripe product link, offer the booking calendar, or place the lead in the escalation queue.
-5. **Payment** — Stripe is the source of truth. Never collect card details in chat or by phone.
-6. **Onboarding** — after a verified payment event, send the onboarding form, access checklist, and implementation expectations.
-7. **Delivery** — configure the agreed workflow, test five call paths, and send a completion notice.
-8. **Retention** — monthly health check, failed-payment alert, usage summary, and renewal reminder.
+Permits are human-only after an owner yes: ZIMAS, LADBS, LAFD. Peer sober living is not DHCS-licensed treatment.
 
-## Autonomous boundaries
+## Gatekeeper rules
+Draft first on identity, legal, refund, and payment-permission items. Never email SSN or ID images. Never claim nonprofit, Medi-Cal, or an acquired building.
 
-The system may automatically handle routine FAQs, reminders, lead tagging, scheduling, product-link delivery, receipts, and status notifications. It must stop and escalate when a person requests medical, legal, financial, emergency, credential, refund, or account-permission help.
-
-## Required provider connections
-
-These cannot be safely faked or completed from a static GitHub Pages repository:
-
-- Stripe merchant account and Payment Links
-- Calendar provider
-- CRM or database
-- SMS/voice provider
-- Email sender/domain authentication
-- Social accounts and publishing permissions
-
-Store all secrets in the provider or automation platform. Never commit keys, OAuth authorization URLs, webhook secrets, or customer data to this repository.
-
-## Live now (24 Sep 2026)
-
-- [x] Homepage sell page: https://aaronreddix1987-sketch.github.io/
-- [x] Offer page: https://aaronreddix1987-sketch.github.io/offer.html
-- [x] Lead capture (opens SMS/email): https://aaronreddix1987-sketch.github.io/lead.html
-- [x] Onboarding checklist: https://aaronreddix1987-sketch.github.io/onboard.html
-- [x] Inbound agent prompt: /agents/inbound-system-prompt.txt (identifies as AI; approved claims only)
-- [x] Stripe live account connected for *existing* ebook Payment Links
-- [x] Hourly Stripe charge poll + Stripe email watcher (Grok Automations)
-- [ ] $497 setup Payment Link — BLOCKED: connected Stripe key cannot create products
-- [ ] $297/mo recurring Price — BLOCKED: same key permission
-- [ ] Calendar provider — not connected
-- [ ] SMS/voice provider (Vapi/Twilio) — prompt only, no live number routing
-- [ ] CRM / database — not connected
-- [ ] Direct Stripe → Grok webhook — signature mismatch; poll used instead
-
-## Launch checklist
-
-- [x] Correct Stripe account visible (`acct_1TI5o4AZJj5080Vf`) — ebook links work
-- [ ] Setup Payment Link created and tested with a controlled purchase
-- [x] Success/onboarding page published (`onboard.html`)
-- [x] Inbound agent identifies itself as AI and uses approved claims only
-- [ ] Calendar and SMS permissions connected
-- [ ] Failed payment and escalation paths tested against a real $497 invoice
-- [ ] One approved campaign scheduled
-- [ ] Funnel metrics tracked: visit → click → checkout → paid → onboarded
-
-No revenue, conversion, or performance outcome is guaranteed by this workflow.
+## Daily 7:15 AM PT automation
+TTI Sun Valley housing + ebook cash engine (task e342fe57-e978-49be-be3f-ebcf325ab12b).
