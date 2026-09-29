@@ -1,5 +1,0 @@
-TTI checkout status 2026-09-28
-GitHub read of ebooks.html succeeded.
-12 existing buy.stripe.com buttons remain the only public checkouts.
-This agent session has no Stripe Payment Link write tool, so no new link was created and none were replaced.
-Do not treat this file as a payment confirmation.
