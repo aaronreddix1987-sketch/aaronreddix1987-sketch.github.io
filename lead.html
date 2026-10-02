@@ -16,10 +16,10 @@ a{color:var(--gold)}.note{color:var(--muted);font-size:13px;margin-top:14px}
 </head>
 <body>
 <div class="wrap">
-<p><a href="/">← Home</a> · <a href="offer.html">Offer</a></p>
+<p><a href="/">← Home</a> · <a href="offer.html">Offer</a> · <a href="escalation.html">Escalation</a></p>
 <p style="color:var(--gold);letter-spacing:.18em;font-size:12px;text-transform:uppercase;font-weight:700">Lead capture</p>
 <h1>Tell us who to call back.</h1>
-<p>This form opens your email or text app. Nothing is stored on this static site.</p>
+<p>This form opens your text app, then email. Nothing is stored on this static site.</p>
 <form id="f">
 <label>Full name</label><input id="name" required>
 <label>Business</label><input id="biz">
@@ -29,17 +29,19 @@ a{color:var(--gold)}.note{color:var(--muted);font-size:13px;margin-top:14px}
 <label>What happens when you miss a call?</label><textarea id="need" rows="3"></textarea>
 <label>Preferred next step</label>
 <select id="next">
-<option>Text me about $497 + $297/mo</option>
+<option>Invoice me for $4,997 setup + $997/mo</option>
+<option>Invoice me for $497 setup + $297/mo</option>
 <option>I only want the $47 book</option>
 <option>Human callback</option>
 </select>
 <button class="btn" type="submit">Open message to the office</button>
 </form>
-<p class="note">Or text 747-301-8586 now. Never send card numbers here.</p>
+<p class="note">Or text 747-301-8586 now. Never send card numbers here. The $47 book is the only public card checkout: <a href="https://buy.stripe.com/6oUaEW71Sfy2cXF22c43S0p">Pay $47</a>.</p>
 </div>
 <script>
 document.getElementById('f').addEventListener('submit', function(e){
   e.preventDefault();
+  var next = document.getElementById('next').value;
   var body = [
     'AI Front Desk lead',
     'Name: ' + document.getElementById('name').value,
@@ -48,13 +50,18 @@ document.getElementById('f').addEventListener('submit', function(e){
     'Phone: ' + document.getElementById('phone').value,
     'Email: ' + document.getElementById('email').value,
     'Missed-call problem: ' + document.getElementById('need').value,
-    'Next step: ' + document.getElementById('next').value
+    'Next step: ' + next
   ].join('\n');
-  var sms = 'sms:7473018586?body=' + encodeURIComponent(body.slice(0,280));
+  if (next.indexOf('$47') !== -1) {
+    window.location.href = 'https://buy.stripe.com/6oUaEW71Sfy2cXF22c43S0p';
+    return;
+  }
+  var sms = 'sms:7473018586?body=' + encodeURIComponent(body.slice(0,300));
   var mail = 'mailto:aaronreddix1987@gmail.com?subject=' + encodeURIComponent('TTI Front Desk lead') + '&body=' + encodeURIComponent(body);
   window.location.href = sms;
-  setTimeout(function(){ window.location.href = mail; }, 400);
+  setTimeout(function(){ window.location.href = mail; }, 600);
 });
 </script>
+</div>
 </body>
 </html>
