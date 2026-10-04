@@ -37,18 +37,34 @@ footer a{color:var(--gold)}
 </div>
 <script>
 const CATALOG = {
-  "10m-blueprint": {name:"The 10M Blueprint Complete 12-Book Series", file:"10M_Blueprint_Complete_Series.pdf", drive:"1X0ZI5PBpQYztokazJ_9mZ3LnJj8Jnw3D"},
-  "buy-back-your-time-ai": {name:"Buy Back Your Time: Get Your Life Back Using AI", file:"Buy_Back_Your_Time.pdf", drive:"1gsSdgm7RC3Q0QBVjLbzIF9iARdJfeAKo"},
-  "cold-call-code": {name:"Cold Call Code: Building Trust Fast in a World of Strangers", file:"Cold_Call_Code.pdf", drive:"18w0VRZnCQgwK65HuS73j4x7_FKASQISK"},
-  "money-mindset": {name:"Money Mindset: Affirmation System for Building Wealth", file:"Money Mindset PDF", drive:"1x5PGgiC-MLz8TWjU27kZgMeb_pPMpDmj"},
-  "build-to-sell": {name:"Build to Sell: Create a Business That Runs Without You", file:"Build to Sell PDF", drive:"1eoUKzkGD6g0u40YXPnTcfi0RdFE_8DMT"},
-  "become-the-ceo": {name:"Become the CEO: Stop Working In It", file:"Become the CEO PDF", drive:"1EjJGxFreoP4ojDQT9u2HiiiDGAsZlZB9"},
-  "credit-repair-609": {name:"Credit Repair and Business Credit Mastery", file:"TTI Ebook - Credit Repair and Business Credit.pdf", drive:"1JLcdnCipbrvebfWJXJl5DVXB396v9Be4"},
-  "real-estate": {name:"Real Estate Investing and Sober Living", file:"Real Estate PDF", drive:"1WjaP8L8D1USjplVUnvPfBCYQpj_ot5Ll"},
-  "cybersecurity": {name:"Cybersecurity Fundamentals for Small Business", file:"Cybersecurity PDF", drive:"1U5nmPisUJk7UCcvlO9c6Kpb5Pe13AW9X"},
-  "automotive-nemt": {name:"Automotive Business and NEMT Guide", file:"Automotive NEMT PDF", drive:"13DOIr2iqhBPaW5zyecEqGxlwe36YidQt"},
-  "medical-data": {name:"Medical Data Input and HIM Careers", file:"Medical Data PDF", drive:"1qQu-cDEz6g0jkQrtWOJVAR49iJZ3ysGy"},
-  "medical-billing": {name:"Medical Billing Mastery", file:"TTI Ebook - Medical Billing Mastery.pdf", drive:"1nIonSncHgTFaWrEoQcwnCcpmtCnq-l7C"}
+  "10m-blueprint":              {name:"The 10M Blueprint Complete 12-Book Series",          file:"10M_Blueprint_Complete_Series.pdf",           drive:"1X0ZI5PBpQYztokazJ_9mZ3LnJj8Jnw3D"},
+  "buy-back-your-time-ai":      {name:"Buy Back Your Time: Get Your Life Back Using AI",     file:"Buy_Back_Your_Time.pdf",                      drive:"1gsSdgm7RC3Q0QBVjLbzIF9iARdJfeAKo"},
+  "cold-call-code":             {name:"Cold Call Code: Building Trust Fast",                 file:"Cold_Call_Code.pdf",                          drive:"18w0VRZnCQgwK65HuS73j4x7_FKASQISK"},
+  "money-mindset":              {name:"Money Mindset: Affirmation System for Building Wealth", file:"Money_Mindset.pdf",                         drive:"1hmlxKT_kyg5TnXnTsB8qFgaTvX12QxG2"},
+  "build-to-sell":              {name:"Build to Sell: Create a Business That Runs Without You", file:"Build_to_Sell_Book12.pdf",                 drive:"1T0ReG0QrBoRRznlyihGIprqRohZYrbH5"},
+  "become-the-ceo":             {name:"Become the CEO: Stop Working In It",                  file:"Become_CEO_Book11.pdf",                       drive:"1X1ZTf_KCIu1hpqI4wV4rMBztFJJ2f6nx"},
+  "credit-repair-609":          {name:"Credit Repair and Business Credit Mastery",           file:"TTI_Ebook_Credit_Repair.pdf",                 drive:"1JLcdnCipbrvebfWJXJl5DVXB396v9Be4"},
+  "real-estate":                {name:"Real Estate Investing and Sober Living",              file:"Real_Estate_Investing.pdf",                   drive:"1WjaP8L8D1USjplVUnvPfBCYQpj_ot5Ll"},
+  "cybersecurity":              {name:"Cybersecurity Fundamentals for Small Business",       file:"Cybersecurity_Fundamentals.pdf",               drive:"1U5nmPisUJk7UCcvlO9c6Kpb5Pe13AW9X"},
+  "automotive-nemt":            {name:"Automotive Business and NEMT Guide",                  file:"Automotive_NEMT_Guide.pdf",                   drive:"13DOIr2iqhBPaW5zyecEqGxlwe36YidQt"},
+  "medical-data":               {name:"Medical Data Input and HIM Careers",                  file:"Medical_Data_HIM.pdf",                        drive:"1qQu-cDEz6g0jkQrtWOJVAR49iJZ3ysGy"},
+  "medical-billing":            {name:"Medical Billing Mastery",                             file:"Medical_Billing_Mastery.pdf",                 drive:"1nIonSncHgTFaWrEoQcwnCcpmtCnq-l7C"},
+  "recurring-revenue":          {name:"Recurring Revenue: The Subscription Business Blueprint", file:"Recurring_Revenue_Book10.pdf",             drive:"1gYju35lxt_v1amD-CiRzZjkbErQZenow"},
+  "hire-like-a-navy-seal":      {name:"Hire Like a Navy SEAL: Build Your Elite Team",        file:"Hire_Like_Navy_SEAL_Book7.pdf",               drive:"1QU8VqXBb7-O62RDTvDcbtWLoe8-ODKDe"},
+  "ai-delivery-systems":        {name:"AI Delivery Systems: Automate Your Service Business", file:"AI_Delivery_Systems_Book6.pdf",               drive:"1zpDBpvORw6ZfTYhLP-4eflu_v3Cx_IYx"},
+  "price-like-a-pro":           {name:"Price Like a Pro: Charge What You're Worth",          file:"Price_Like_a_Pro_Book5.pdf",                  drive:"1vPBjttyAS1IGsmL2YR6ZLdSKB7GjVbuV"},
+  "underpromise":               {name:"Underpromise and Overdeliver: Client Retention Playbook", file:"Underpromise_Overdeliver_Book4.pdf",      drive:"1oOioxSpmKSp6J2BiMyyx81-JIYe5N-3d"},
+  "right-foundation":           {name:"The Right Foundation: Mindset, Systems and Identity", file:"Right_Foundation_Book2.pdf",                  drive:"1K7bHu7mmbEzxFHrxWDtO0bd-ez421Cls"},
+  "money-math":                 {name:"Money Math Book 1",                                   file:"Money_Math_Book1.pdf",                        drive:"1UUNiJ8fQRlo_al9E5lEp7E538m8wn1Kc"},
+  "spark-ebook":                {name:"Spark Ebook",                                         file:"Irresistible_Offer_Book3.pdf",                drive:"1LFjZ4CTv6vfKBLRzp1nvDz9qpjrNAJt1"},
+  "twelve-step-study-guide":    {name:"Twelve Step Study Guide",                             file:"Twelve_Step_Study_Guide.pdf",                 drive:"1w36c4vwkZSKt4OdgBapRLLj_Isi3elLZ"},
+  "digital-undercover-billionaire": {name:"Digital Undercover Billionaire Bundle",           file:"Digital_Undercover_Billionaire_Professional.pdf", drive:"18dmneOD0nbVJNd-CIbXU7KnOqSe8rXiI"},
+  "treatment-recovery-series-10-b": {name:"Treatment Recovery Series — 10 Books",           file:"RADT_Study_Guide_and_Workbook.pdf",            drive:"1JEd4bFz8GXRoSRWKVX59iiaLlte7EJ1R"},
+  "system-pack":                {name:"System Pack",                                         file:"Daily_Operator_Playbook.pdf",                 drive:"1yErmmsaVhYK6503Xx-kzH8QJ4xCslk8v"},
+  "the-tax-deed-bible-california": {name:"The Tax Deed Bible — California Edition",          file:"RE_Licensing_Roadmap.pdf",                    drive:"1aNxP_kmUBsKmqDM-gLeSjsCA8CQOal86"},
+  "the-tax-lien-code-bible":    {name:"The Tax Lien Code Bible",                             file:"RE_Licensing_Roadmap.pdf",                    drive:"1aNxP_kmUBsKmqDM-gLeSjsCA8CQOal86"},
+  "the-re-entry-success-toolkit-l": {name:"The Re-Entry Success Toolkit — Los Angeles",     file:"RADT_Study_Guide_and_Workbook.pdf",            drive:"1JEd4bFz8GXRoSRWKVX59iiaLlte7EJ1R"},
+  "the-complete-transformation-bu": {name:"The Complete Transformation Bundle — All 4 Guides", file:"Digital_Undercover_Billionaire_Professional.pdf", drive:"18dmneOD0nbVJNd-CIbXU7KnOqSe8rXiI"}
 };
 const params = new URLSearchParams(location.search);
 const product = params.get("product") || params.get("p");
