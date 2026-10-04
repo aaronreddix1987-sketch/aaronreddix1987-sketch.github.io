@@ -1,26 +1,47 @@
-name: POINT storefront watch
+name: TTI storefront health check
 on:
   schedule:
-    - cron: "0 15 * * *"
+    - cron: "0 */6 * * *"
   workflow_dispatch:
 jobs:
-  ping:
+  health:
     runs-on: ubuntu-latest
     steps:
-      - name: Hit live URLs
+      - name: Check all live pages and Stripe links
         run: |
           set -e
-          for u in \
-            https://aaronreddix1987-sketch.github.io/ \
-            https://aaronreddix1987-sketch.github.io/ebooks.html \
-            https://aaronreddix1987-sketch.github.io/project.html \
-            https://buy.stripe.com/6oUaEW71Sfy2cXF22c43S0p \
-            https://buy.stripe.com/dRmcN485W3Pk6zhayI43S0s
-          do
-            code=$(curl -sS -o /dev/null -w "%{http_code}" -L --max-time 25 "$u")
-            echo "$code $u"
-            case "$code" in
-              2*|3*) ;;
-              *) echo "FAIL $u"; exit 1 ;;
-            esac
-          done
+          FAIL=0
+          check() {
+            code=$(curl -sS -o /dev/null -w "%{http_code}" -L --max-time 25 "$1")
+            if echo "$code" | grep -qE "^[23]"; then
+              echo "OK  $code $1"
+            else
+              echo "FAIL $code $1"
+              FAIL=1
+            fi
+          }
+          # Core pages
+          check https://aaronreddix1987-sketch.github.io/
+          check https://aaronreddix1987-sketch.github.io/ebooks.html
+          check https://aaronreddix1987-sketch.github.io/offer.html
+          check https://aaronreddix1987-sketch.github.io/lead.html
+          check https://aaronreddix1987-sketch.github.io/owners.html
+          check https://aaronreddix1987-sketch.github.io/system.html
+          check https://aaronreddix1987-sketch.github.io/workflow.html
+          check https://aaronreddix1987-sketch.github.io/escalation.html
+          check https://aaronreddix1987-sketch.github.io/thank-you.html
+          check https://aaronreddix1987-sketch.github.io/project.html
+          check https://aaronreddix1987-sketch.github.io/love-and-rehab.html
+          check https://aaronreddix1987-sketch.github.io/sober-living/
+          # Flagship Stripe links
+          check https://buy.stripe.com/6oUaEW71Sfy2cXF22c43S0p
+          check https://buy.stripe.com/dRmcN485W3Pk6zhayI43S0s
+          check https://buy.stripe.com/3cIaEW85W99Ee1JeOY43S0r
+          check https://buy.stripe.com/aFa00i9a02Lg5vddKU43S0q
+          check https://buy.stripe.com/9B63cugCs99E5vddKU43S0o
+          check https://buy.stripe.com/7sY9ASdqgadIf5NayI43S0n
+          if [ $FAIL -eq 1 ]; then
+            echo "ONE OR MORE CHECKS FAILED"
+            exit 1
+          fi
+          echo "All checks passed"
