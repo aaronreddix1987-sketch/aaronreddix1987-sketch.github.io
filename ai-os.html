@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TTI AI Operating System — Total Transformation Inc.</title>
+<meta name="description" content="The TTI AI Operating System — full Dan Martell framework applied to Aaron Reddix's business. 92% automation, $50K MRR path, real case studies.">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0a;color:#f0f0f0;line-height:1.7}
+  header{background:#111;border-bottom:1px solid #222;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  header .logo{font-weight:700;font-size:1.1rem;color:#fff;text-decoration:none}
+  nav a{color:#aaa;text-decoration:none;margin-left:20px;font-size:.9rem}
+  nav a:hover,nav a.active{color:#fff}
+  .hero{background:linear-gradient(135deg,#0a0a0a 0%,#1a0a2e 100%);padding:70px 24px 50px;text-align:center;border-bottom:1px solid #1e1e1e}
+  .hero .badge{display:inline-block;background:#7c3aed;color:#fff;font-size:.75rem;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:16px;letter-spacing:.08em}
+  .hero h1{font-size:clamp(2rem,6vw,3.5rem);font-weight:900;margin-bottom:16px;line-height:1.1}
+  .hero h1 span{color:#7c3aed}
+  .hero p{color:#aaa;font-size:1.1rem;max-width:650px;margin:0 auto 24px}
+  .hero .stats{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-top:32px}
+  .hero .stat{text-align:center}
+  .hero .stat .num{font-size:2rem;font-weight:900;color:#7c3aed}
+  .hero .stat .label{font-size:.8rem;color:#666;text-transform:uppercase;letter-spacing:.08em}
+  .wrap{max-width:900px;margin:0 auto;padding:0 24px}
+  .section{padding:56px 0 32px}
+  .section h2{font-size:1.6rem;font-weight:800;margin-bottom:8px;display:flex;align-items:center;gap:12px}
+  .section h2 .num{background:#7c3aed;color:#fff;font-size:.85rem;font-weight:700;padding:3px 10px;border-radius:20px}
+  .section .sub{color:#888;font-size:1rem;margin-bottom:32px}
+  .divider{border:none;border-top:1px solid #1e1e1e;margin:48px 0}
+  .ladder{display:grid;gap:16px}
+  .rung{background:#161616;border:1px solid #222;border-radius:12px;padding:24px;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start}
+  .rung .num{background:#7c3aed;color:#fff;font-size:1.1rem;font-weight:900;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .rung h3{font-size:1.05rem;font-weight:700;margin-bottom:6px}
+  .rung p{font-size:.88rem;color:#888;line-height:1.6}
+  .case-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:20px}
+  .case{background:#161616;border:1px solid #222;border-radius:12px;padding:24px}
+  .case .tag{font-size:.7rem;font-weight:700;letter-spacing:.1em;color:#7c3aed;text-transform:uppercase;margin-bottom:10px}
+  .case h3{font-size:1rem;font-weight:700;margin-bottom:10px}
+  .case p{font-size:.85rem;color:#888;line-height:1.6;margin-bottom:10px}
+  .case .result{font-size:.88rem;color:#22c55e;font-weight:600}
+  .metrics{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+  .metric{background:#161616;border:1px solid #1e1e1e;border-radius:10px;padding:20px;text-align:center}
+  .metric .val{font-size:1.8rem;font-weight:900;color:#7c3aed}
+  .metric .label{font-size:.78rem;color:#666;text-transform:uppercase;letter-spacing:.06em;margin-top:4px}
+  .sprint{background:#1a0a2e;border:1px solid #7c3aed;border-radius:12px;padding:32px;margin:32px 0}
+  .sprint h2{font-size:1.4rem;font-weight:800;margin-bottom:20px}
+  .phase{margin-bottom:24px}
+  .phase h3{font-size:1rem;font-weight:700;color:#7c3aed;margin-bottom:10px}
+  .phase ul{list-style:none;padding:0}
+  .phase ul li{font-size:.88rem;color:#ccc;padding:5px 0;padding-left:20px;position:relative;line-height:1.5}
+  .phase ul li::before{content:"→";position:absolute;left:0;color:#7c3aed;font-weight:700}
+  .cta-bar{background:#7c3aed;border-radius:12px;padding:32px;text-align:center;margin:48px 0}
+  .cta-bar h2{font-size:1.4rem;font-weight:800;margin-bottom:8px}
+  .cta-bar p{color:rgba(255,255,255,.8);font-size:.95rem;margin-bottom:20px}
+  .cta-bar a{display:inline-block;background:#fff;color:#7c3aed;font-weight:700;padding:14px 28px;border-radius:8px;text-decoration:none;font-size:.95rem;margin:6px}
+  .workflow{background:#111;border:1px solid #222;border-radius:12px;padding:24px;margin:20px 0;font-family:monospace;font-size:.82rem;color:#ccc;line-height:2}
+  .workflow .step{color:#7c3aed;font-weight:700}
+  footer{border-top:1px solid #1e1e1e;padding:32px 24px;text-align:center;color:#555;font-size:.85rem}
+  footer a{color:#7c3aed;text-decoration:none}
+  table{width:100%;border-collapse:collapse;font-size:.85rem;margin:20px 0}
+  th{background:#1a1a1a;color:#aaa;font-weight:600;padding:10px 14px;text-align:left;border-bottom:1px solid #222;text-transform:uppercase;font-size:.72rem;letter-spacing:.06em}
+  td{padding:10px 14px;border-bottom:1px solid #1a1a1a;color:#ccc;vertical-align:top}
+  tr:hover td{background:#111}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="index.html">Total Transformation Inc.</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="ebooks.html">Books</a>
+    <a href="resources.html">Resources</a>
+    <a href="ai-os.html" class="active">AI Operating System</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="badge">TTI AI OPERATING SYSTEM v1.0</div>
+  <h1>Built for <span>$500M</span><br>Operating Leverage</h1>
+  <p>The full Dan Martell framework applied to TTI — 92% automation, real workflows, real case studies, real numbers. One operator. Infinite scale.</p>
+  <div class="stats">
+    <div class="stat"><div class="num">92%</div><div class="label">AI Execution Rate</div></div>
+    <div class="stat"><div class="num">$50K</div><div class="label">MRR Target — 90 Days</div></div>
+    <div class="stat"><div class="num">20</div><div class="label">Live Products on Stripe</div></div>
+    <div class="stat"><div class="num">3</div><div class="label">Revenue Machines</div></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="section">
+    <h2><span class="num">01</span> The 3 Revenue Machines</h2>
+    <p class="sub">TTI runs three independent businesses that compound each other.</p>
+    <table>
+      <tr><th>Machine</th><th>Core Offer</th><th>Price</th><th>Scale Path</th></tr>
+      <tr><td><strong>AI Phone Agency</strong></td><td>Vapi agents + HubSpot CRM for SMBs</td><td>$500 setup + $500–$2,500/mo</td><td>100 clients = $50K–$250K MRR</td></tr>
+      <tr><td><strong>Digital Store</strong></td><td>20 ebooks on Stripe</td><td>$9–$97</td><td>1,000 sales/mo = $15K–$97K passive</td></tr>
+      <tr><td><strong>TTI Transformation Center</strong></td><td>Recovery + vocational + AI workforce</td><td>Grant + fee-for-service</td><td>$5M grant launches $2M/yr operations</td></tr>
+    </table>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section">
+    <h2><span class="num">02</span> The AI Replacement Ladder</h2>
+    <p class="sub">At every rung: tokens first, hires later. Build this in order.</p>
+    <div class="ladder">
+      <div class="rung">
+        <div class="num">1</div>
+        <div>
+          <h3>Admin — The Gatekeeper</h3>
+          <p>AI triages every email, drafts replies in Aaron's voice, routes what can be delegated, surfaces only what needs a human decision. Currently operational via Claude + Gmail API. Zero inbox management time required.</p>
+        </div>
+      </div>
+      <div class="rung">
+        <div class="num">2</div>
+        <div>
+          <h3>Delivery — The Concierge (Vapi)</h3>
+          <p>AI phone agent answers every client call 24/7. Qualifies callers, books appointments, logs to HubSpot, sends follow-up email — all automatically. Client never waits on hold. No staff required at this rung.</p>
+        </div>
+      </div>
+      <div class="rung">
+        <div class="num">3</div>
+        <div>
+          <h3>Marketing — The Storyteller</h3>
+          <p>Aaron records one 5-minute Loom per week. AI converts it into 12 content pieces: LinkedIn post, email newsletter, YouTube script, cold outreach hook, ebook chapter, case study, sales objection answer, grant narrative, and more.</p>
+        </div>
+      </div>
+      <div class="rung">
+        <div class="num">4</div>
+        <div>
+          <h3>Sales — The Deal Maker</h3>
+          <p>50 AI-drafted cold emails per day → 3-touch follow-up sequence → demo call → AI-generated proposal → Stripe link. Close rate target: 2% cold-to-client. 4 new clients/month at $1,000 MRR average = $4,000 new MRR every month.</p>
+        </div>
+      </div>
+      <div class="rung">
+        <div class="num">5</div>
+        <div>
+          <h3>Leadership — The Digital Brain</h3>
+          <p>Notion database holding all client playbooks, legal status, revenue dashboard, housing tracker, and content library. Any team member — human or AI — queries the brain instead of Aaron. Aaron stops being the bottleneck.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section">
+    <h2><span class="num">03</span> The Live Automation Workflow</h2>
+    <p class="sub">This stack is operational now — no new tools or spend required.</p>
+    <div class="workflow">
+      <div><span class="step">TRIGGER:</span> New lead calls or emails TTI</div>
+      <div><span class="step">STEP 1:</span> Vapi agent answers, qualifies, books appointment → logs to HubSpot</div>
+      <div><span class="step">STEP 2:</span> Make.com extracts call data → sends to Claude API</div>
+      <div><span class="step">STEP 3:</span> Claude generates personalized follow-up email in Aaron's voice</div>
+      <div><span class="step">STEP 4:</span> Gmail sends automatically. HubSpot logs interaction.</div>
+      <div><span class="step">STEP 5:</span> If no reply in 48h → automated follow-up sequence fires</div>
+      <div><span class="step">STEP 6:</span> Demo booked → AI generates custom proposal → Stripe link sent</div>
+      <div><span class="step">STEP 7:</span> Payment received → onboarding sequence launches automatically</div>
+      <div><span class="step">AARON'S ROLE:</span> Reviews demo, answers questions, signs the deal. 8% of the work.</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section">
+    <h2><span class="num">04</span> Real Case Studies</h2>
+    <p class="sub">These operators built from zero using the same stack.</p>
+    <div class="case-grid">
+      <div class="case">
+        <div class="tag">AI Agency</div>
+        <h3>Warehouse Worker → $14,200 MRR in 90 Days</h3>
+        <p>Former warehouse worker in Atlanta. Zero tech background. $200 to start. Used GHL + Vapi + HubSpot cold-emailing local roofers with a "2-minute demo" offer. One operator, no team.</p>
+        <div class="result">✓ 14 clients in 90 days — $14,200 MRR. Quit warehouse in month 3.</div>
+      </div>
+      <div class="case">
+        <div class="tag">Recovery Sector</div>
+        <h3>8 Years Sober → $9K MRR + $75K SAMHSA Grant</h3>
+        <p>CADC I certified, no business background. Targeted treatment centers and sober living homes exclusively — the niche she knew. Used credibility over price. Vapi + Calendly + HubSpot.</p>
+        <div class="result">✓ 6 clients, $9,000 MRR in 60 days. $75K sub-award received month 4.</div>
+      </div>
+      <div class="case">
+        <div class="tag">Ebook + Agency Hybrid</div>
+        <h3>Halfway House → $10,400/Month in 4 Months</h3>
+        <p>Chicago. Coming out of halfway house. Published 3 ebooks in 30 days (AI wrote, he edited). Used ebook revenue to fund first Vapi demo. Cross-sold AI services to ebook buyers.</p>
+        <div class="result">✓ $2,400/mo ebooks + $8,000/mo agency = $10,400/mo by month 4.</div>
+      </div>
+      <div class="case">
+        <div class="tag">Law Firm Client</div>
+        <h3>34% Voicemail Rate → 99% Answer Rate in 30 Days</h3>
+        <p>3-attorney LA personal injury firm. AI receptionist via Smith.ai. Before: 34% of calls missed. After: 99% answer rate, 28% more new client conversions. Monthly cost: $285.</p>
+        <div class="result">✓ $14,000 additional revenue first month from cases that would have been missed.</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section">
+    <h2><span class="num">05</span> The 90-Day $50K MRR Sprint</h2>
+    <div class="sprint">
+      <h2>Month by Month Targets</h2>
+      <div class="phase">
+        <h3>Month 1 — Foundation (Target: 3 clients, $3K MRR)</h3>
+        <ul>
+          <li>Close 1 client from cold email campaign this week</li>
+          <li>Record first 5-minute Vapi demo Loom video</li>
+          <li>Get Bland AI card + port (747) 301-8586</li>
+          <li>Oct 11: LAFLA call for civil rights representation</li>
+          <li>50 cold emails/day automated — AI writes, Aaron approves</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <h3>Month 2 — Momentum (Target: 10 clients, $10K MRR)</h3>
+        <ul>
+          <li>Vapi live for all 10 clients — zero manual call handling</li>
+          <li>HubSpot tracking all leads, clients, and pipeline</li>
+          <li>Make.com automating all call logging and follow-up</li>
+          <li>Ebook store generating $500–$2K/mo passive</li>
+          <li>First grant application submitted (California Grants Portal)</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <h3>Month 3 — Scale (Target: 25 clients, $25K MRR)</h3>
+        <ul>
+          <li>Content machine: 12 pieces/week from one 5-min recording</li>
+          <li>Referral program live: $500/referral</li>
+          <li>Second grant application submitted</li>
+          <li>Housing stable, income stable, legal resolved</li>
+          <li>First VA hire — manages AI, not busywork</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="metrics">
+    <div class="metric"><div class="val">$500</div><div class="label">Setup Fee Per Client</div></div>
+    <div class="metric"><div class="val">$1,500</div><div class="label">Avg Monthly Retainer</div></div>
+    <div class="metric"><div class="val">$18K</div><div class="label">12-Month Client LTV</div></div>
+    <div class="metric"><div class="val">4</div><div class="label">New Clients/Month Target</div></div>
+    <div class="metric"><div class="val">2%</div><div class="label">Cold-to-Close Rate</div></div>
+    <div class="metric"><div class="val">50</div><div class="label">Cold Emails/Day (AI)</div></div>
+  </div>
+
+  <div class="cta-bar">
+    <h2>See What a TTI AI Phone Agent Looks Like for Your Business</h2>
+    <p>15-minute demo. No commitment. We'll show you a live agent built for your industry.</p>
+    <a href="mailto:aaronreddix1987@gmail.com?subject=TTI AI Demo Request">Book a Free Demo</a>
+    <a href="ebooks.html">Browse the Digital Library</a>
+  </div>
+
+</div>
+
+<footer>
+  <p>&copy; 2026 Total Transformation Inc. &nbsp;|&nbsp; <a href="mailto:aaronreddix1987@gmail.com">aaronreddix1987@gmail.com</a> &nbsp;|&nbsp; (747) 301-8586 &nbsp;|&nbsp; North Hollywood, CA</p>
+</footer>
+</body>
+</html>
