@@ -4,134 +4,95 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TTI Digital Library — Aaron T. Reddix</title>
-<meta name="description" content="Business, recovery, and AI automation books. Instant download after Stripe checkout.">
-<link rel="canonical" href="https://aaronreddix1987-sketch.github.io/ebooks.html">
+<meta name="description" content="Books, guides and playbooks by Aaron T. Reddix — Total Transformation Inc.">
 <style>
-:root{--bg:#060b11;--panel:#0d141d;--line:#203246;--gold:#e6bb5a;--gold-soft:#f3d98d;--text:#edf3f8;--muted:#a9b7c7}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:radial-gradient(circle at top,rgba(33,52,70,.7),rgba(6,11,17,1) 28%);color:var(--text);font-family:system-ui,-apple-system,sans-serif;line-height:1.6}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0;border-bottom:1px solid var(--line)}
-.brand{font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
-.navlinks{display:flex;gap:18px;align-items:center;font-size:13px;color:var(--muted)}
-.hero{padding:60px 0 32px}
-h1{color:var(--gold);margin:12px 0 6px;font-size:clamp(32px,5vw,52px);line-height:1.05}
-.sub{color:var(--muted);margin:0 0 40px}
-.new-badge{display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#120e0b;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:4px;margin-left:8px;vertical-align:middle}
-.sec{margin:40px 0 14px}
-.sec h2{color:#d4af37;font-size:13px;text-transform:uppercase;letter-spacing:.08em;border-bottom:1px solid rgba(212,175,55,.2);padding-bottom:6px;margin-bottom:0}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-top:16px}
-.c{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column}
-.c.featured{border-color:rgba(230,187,90,.4);background:linear-gradient(180deg,rgba(230,187,90,.06),var(--panel))}
-.tag{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;display:block}
-.c h3{margin:0 0 6px;font-size:15px;line-height:1.3}
-.c p{margin:0 0 16px;color:var(--muted);font-size:13px;flex:1}
-.price-line{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
-.price-text{font-size:18px;font-weight:800;color:var(--gold)}
-.b{display:inline-block;padding:10px 18px;background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#120e0b;border-radius:8px;font-weight:800;font-size:13px}
-.b:hover{opacity:.9}
-footer{padding:40px 0 70px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin-top:60px}
-@media(max-width:700px){.navlinks{display:none}}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0a;color:#f0f0f0}
+  header{background:#111;border-bottom:1px solid #222;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  header .logo{font-weight:700;font-size:1.1rem;color:#fff;text-decoration:none}
+  nav a{color:#aaa;text-decoration:none;margin-left:20px;font-size:.9rem;transition:color .2s}
+  nav a:hover,nav a.active{color:#fff}
+  .hero{background:linear-gradient(135deg,#111 0%,#1a1a2e 100%);padding:60px 24px 40px;text-align:center}
+  .hero h1{font-size:clamp(1.8rem,5vw,2.8rem);font-weight:800;margin-bottom:12px}
+  .hero p{color:#aaa;font-size:1rem;max-width:580px;margin:0 auto}
+  .badge{display:inline-block;background:#7c3aed;color:#fff;font-size:.75rem;font-weight:700;padding:4px 10px;border-radius:20px;margin-bottom:16px}
+  .bundle-wrap{max-width:1100px;margin:32px auto;padding:0 24px}
+  .bundle-bar{background:#1a1a2e;border:1px solid #7c3aed;border-radius:12px;padding:28px;text-align:center}
+  .bundle-bar h2{font-size:1.25rem;font-weight:700;margin-bottom:8px}
+  .bundle-bar p{color:#aaa;font-size:.9rem;margin-bottom:18px}
+  .btn-bundle{display:inline-block;background:#7c3aed;color:#fff;font-weight:700;font-size:1rem;padding:14px 32px;border-radius:8px;text-decoration:none}
+  .btn-bundle:hover{background:#6d28d9}
+  .section-label{font-size:.72rem;font-weight:700;letter-spacing:.12em;color:#7c3aed;text-transform:uppercase;padding:36px 24px 14px;max-width:1100px;margin:0 auto}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:18px;padding:0 24px 32px;max-width:1100px;margin:0 auto}
+  .card{background:#161616;border:1px solid #222;border-radius:12px;padding:22px;display:flex;flex-direction:column;transition:border-color .2s}
+  .card:hover{border-color:#7c3aed}
+  .card .tag{font-size:.68rem;font-weight:700;letter-spacing:.08em;color:#7c3aed;text-transform:uppercase;margin-bottom:8px}
+  .card h3{font-size:.97rem;font-weight:700;margin-bottom:8px;line-height:1.4}
+  .card p{font-size:.83rem;color:#888;line-height:1.5;flex:1;margin-bottom:16px}
+  .card-footer{display:flex;align-items:center;justify-content:space-between}
+  .price{font-size:1.1rem;font-weight:800}
+  .btn{display:inline-block;background:#7c3aed;color:#fff;font-size:.8rem;font-weight:700;padding:9px 16px;border-radius:6px;text-decoration:none}
+  .btn:hover{background:#6d28d9}
+  footer{border-top:1px solid #1e1e1e;padding:32px 24px;text-align:center;color:#555;font-size:.85rem}
+  footer a{color:#7c3aed;text-decoration:none}
 </style>
 </head>
 <body>
-<div class="wrap">
+<header>
+  <a class="logo" href="index.html">Total Transformation Inc.</a>
   <nav>
-    <a class="brand" href="/">Total Transformation</a>
-    <div class="navlinks">
-      <a href="/">Home</a>
-      <a href="owners.html">Owners</a>
-      <a href="system.html">System</a>
-      <a href="offer.html">Front Office</a>
-      <a href="ebooks.html">Library</a>
-      <a href="resources.html">Resources</a>
-    </div>
+    <a href="index.html">Home</a>
+    <a href="ebooks.html" class="active">Books</a>
+    <a href="resources.html">Resources</a>
   </nav>
-  <div class="hero">
-    <h1>Digital Library</h1>
-    <p class="sub">Aaron T. Reddix · Total Transformation Inc.<br>Choose a title. Pay on Stripe. File downloads automatically.</p>
-  </div>
-
-  <div class="sec"><h2>Complete Series</h2></div>
-  <div class="grid">
-    <div class="c featured">
-      <span class="tag">12-BOOK BUNDLE</span>
-      <h3>The $10M Blueprint — Complete 12-Ebook Series</h3>
-      <p>Every system, strategy, and tool in one package.</p>
-      <div class="price-line"><span class="price-text">$47</span><a class="b" href="https://buy.stripe.com/6oUaEW71Sfy2cXF22c43S0p">Buy Now</a></div>
-    </div>
-    <div class="c featured">
-      <span class="tag">BUNDLE</span>
-      <h3>Digital Undercover Billionaire Bundle</h3>
-      <p>Core + Pro edition combined.</p>
-      <div class="price-line"><span class="price-text">$19</span><a class="b" href="https://buy.stripe.com/7sY6oGcmcfy2f5N4ak43S01">Buy Now</a></div>
-    </div>
-    <div class="c featured">
-      <span class="tag">BUNDLE · $127</span>
-      <h3>The Complete Transformation Bundle — All 4 Guides</h3>
-      <p>Recovery, credit, business, and accountability in one.</p>
-      <div class="price-line"><span class="price-text">$127</span><a class="b" href="https://buy.stripe.com/6oU3cudqgclQe1J0Y843S07">Buy Now</a></div>
-    </div>
-  </div>
-
-  <div class="sec"><h2>NEW — Rewritten 2026 Editions <span class="new-badge">New</span></h2></div>
-  <div class="grid">
-    <div class="c featured">
-      <span class="tag">REWRITTEN 2026</span>
-      <h3>AI Phone Agent Planning for Small Business</h3>
-      <p>How to build, script, and deploy an AI phone agent for any local service business. Step-by-step playbook with real prompts.</p>
-      <div class="price-line"><span class="price-text">$27</span><a class="b" href="https://buy.stripe.com/dRmcN485W3Pk6zhayI43S0s">Buy Now</a></div>
-    </div>
-    <div class="c featured">
-      <span class="tag">REWRITTEN 2026</span>
-      <h3>Instagram Marketing for Local Service Businesses</h3>
-      <p>Content strategy, posting system, and DM workflows built for local owners who don't have a marketing team.</p>
-      <div class="price-line"><span class="price-text">$19</span><a class="b" href="https://buy.stripe.com/3cIaEW85W99Ee1JeOY43S0r">Buy Now</a></div>
-    </div>
-    <div class="c featured">
-      <span class="tag">REWRITTEN 2026</span>
-      <h3>Starting a Cleaning Business: Launch Workbook</h3>
-      <p>The complete launch checklist, pricing calculator, and client-acquisition system for new cleaning business owners.</p>
-      <div class="price-line"><span class="price-text">$19</span><a class="b" href="https://buy.stripe.com/aFa00i9a02Lg5vddKU43S0q">Buy Now</a></div>
-    </div>
-    <div class="c featured">
-      <span class="tag">REWRITTEN 2026</span>
-      <h3>Business Mindset & Accountability Workbook</h3>
-      <p>Daily discipline system, identity-shift exercises, and 90-day accountability framework for entrepreneurs building from scratch.</p>
-      <div class="price-line"><span class="price-text">$19</span><a class="b" href="https://buy.stripe.com/9B63cugCs99E5vddKU43S0o">Buy Now</a></div>
-    </div>
-    <div class="c featured">
-      <span class="tag">REWRITTEN 2026</span>
-      <h3>30-Day Accountability Workbook for Entrepreneurs</h3>
-      <p>30 structured daily prompts, weekly reviews, and goal-tracking system to lock in momentum in your first month.</p>
-      <div class="price-line"><span class="price-text">$19</span><a class="b" href="https://buy.stripe.com/7sY9ASdqgadIf5NayI43S0n">Buy Now</a></div>
-    </div>
-  </div>
-
-  <div class="sec"><h2>Business &amp; Entrepreneurship</h2></div>
-  <div class="grid">
-    <div class="c"><h3>Buy Back Your Time: Get Your Life Back Using AI</h3><p>Delegation, automation, and time-buying systems for business owners.</p><div class="price-line"><span class="price-text">$19</span><a class="b" href="https://buy.stripe.com/dRmcN485W3Pk6zhayI43S0s">Buy</a></div></div>
-    <div class="c"><h3>Cold Call Code — AI Phone Agent Playbook</h3><p>Scripts, objection handling, and AI-assisted outbound dialing system.</p><div class="price-line"><span class="price-text">$27</span><a class="b" href="https://buy.stripe.com/3cIaEW85W99Ee1JeOY43S0r">Buy</a></div></div>
-    <div class="c"><h3>Build to Sell: Create a Business That Runs Without You</h3><p></p><div class="price-line"><span class="price-text">$9.97</span><a class="b" href="https://buy.stripe.com/9B63cugCs99E5vddKU43S0o">Buy</a></div></div>
-    <div class="c"><h3>Become the CEO: Stop Working In It</h3><p></p><div class="price-line"><span class="price-text">$9.97</span><a class="b" href="https://buy.stripe.com/7sY9ASdqgadIf5NayI43S0n">Buy</a></div></div>
-    <div class="c"><h3>Recurring Revenue: The Subscription Business Blueprint</h3><p></p><div class="price-line"><span class="price-text">$9.97</span><a class="b" href="https://buy.stripe.com/3cIdR8dqgadI1eX36g43S0m">Buy</a></div></div>
-    <div class="c"><h3>Price Like a Pro: Charge What You're Worth</h3><p></p><div class="price-line"><span class="price-text">$9.97</span><a class="b" href="https://buy.stripe.com/bJe4gyeukbhM5vd6is43S0j">Buy</a></div></div>
-  </div>
-
-  <div class="sec"><h2>Recovery &amp; Personal Transformation</h2></div>
-  <div class="grid">
-    <div class="c"><h3>12-Step Study Guide — Complete Edition</h3><p>Step-by-step workbook for working all 12 steps with daily exercises.</p><div class="price-line"><span class="price-text">$17</span><a class="b" href="https://buy.stripe.com/fZu3cucmc85A4r98qA43S0i">Buy</a></div></div>
-    <div class="c"><h3>RADT Study Guide &amp; Workbook</h3><p>Exam prep and competency guide for the Registered Alcohol/Drug Technician credential.</p><div class="price-line"><span class="price-text">$27</span><a class="b" href="https://buy.stripe.com/28EaEWeukgC6aPx6is43S0h">Buy</a></div></div>
-    <div class="c"><h3>Money Mindset Affirmations — Recovery Edition</h3><p>Daily affirmation and journaling system built for people rebuilding after addiction.</p><div class="price-line"><span class="price-text">$17</span><a class="b" href="https://buy.stripe.com/fZu5kCae4bhM6zhgX643S0g">Buy</a></div></div>
-    <div class="c"><h3>609 Credit Repair System — Complete Package</h3><p>Dispute letter templates, credit bureau process, and step-by-step repair system.</p><div class="price-line"><span class="price-text">$47</span><a class="b" href="https://buy.stripe.com/aFa9ASeuk85A7Dl8qA43S0f">Buy</a></div></div>
-    <div class="c"><h3>Credit Repair &amp; Business Credit Mastery</h3><p>Personal and business credit building from zero to fundable.</p><div class="price-line"><span class="price-text">$25</span><a class="b" href="https://buy.stripe.com/4gM6oG71S3Pk0aTbCM43S0y">Buy</a></div></div>
-  </div>
-
-  <footer>
-    <p>Total Transformation Inc. · Aaron T. Reddix · <a href="mailto:aaronreddix1987@gmail.com">aaronreddix1987@gmail.com</a> · 747-301-8586</p>
-    <p style="margin-top:8px"><a href="/">Home</a> · <a href="offer.html">AI Front Office</a> · <a href="resources.html">Resources</a></p>
-  </footer>
+</header>
+<div class="hero">
+  <div class="badge">TTI Digital Library</div>
+  <h1>Books That Build Real Results</h1>
+  <p>AI automation, business building, recovery, and financial literacy — written for people starting from zero.</p>
 </div>
+<div class="bundle-wrap">
+  <div class="bundle-bar">
+    <h2>The $10M Blueprint — Complete 12-Book Series</h2>
+    <p>Every ebook in the TTI series in one bundle — business model, offer creation, AI delivery, sales systems, and recurring revenue.</p>
+    <a class="btn-bundle" href="https://buy.stripe.com/6oUaEW71Sfy2cXF22c43S0p" target="_blank">Get the Full Bundle — $47</a>
+  </div>
+</div>
+<div class="section-label">AI &amp; Business Building</div>
+<div class="grid">
+  <div class="card"><div class="tag">AI Automation</div><h3>Buy Back Your Time: Get Your Life Back Using AI</h3><p>Use AI as your first employee — automate the 80% so you focus on the work only you can do.</p><div class="card-footer"><span class="price">$19</span><a class="btn" href="https://buy.stripe.com/dRmcN485W3Pk6zhayI43S0s" target="_blank">Buy Now</a></div></div>
+  <div class="card"><div class="tag">AI Delivery</div><h3>AI Delivery Systems: Automate Your Service Business</h3><p>Find your one bottleneck and eliminate it — delivery, support, SOPs, and quality control with AI.</p><div class="card-footer"><span class="price">$9</span><a class="btn" href="https://buy.stripe.com/7sY5kC85W99E3n58qA43S0k" target="_blank">Buy Now</a></div></div>
+  <div class="card"><div class="tag">Cold Outreach</div><h3>Cold Call Code: Building Trust Fast</h3><p>Exact scripts, objection handling, and a repeatable call structure for booking appointments.</p><div class="card-footer"><span class="price">$9</span><a class="btn" href="https://buy.stripe.com/3cIaEW85W99Ee1JeOY43S0r" target="_blank">Buy Now</a></div></div>
+  <div class="card"><div class="tag">Digital Business</div><h3>Digital Undercover Billionaire</h3><p>A 6-step blueprint for building income from nothing using AI — no capital, no team required to start.</p><div class="card-footer"><span class="price">$9</span><a class="btn" href="https://buy.stripe.com/aFa9ASeuk85A7Dl8qA43S0f" target="_blank">Buy Now</a></div></div>
+</div>
+<div class="section-label">The 12-Book Business Series</div>
+<div class="grid">
+  <div class="card"><div class="tag">Book 1</div><h3>The Right Foundation: Mindset, Systems and Identity</h3><p>Build the internal foundation that every lasting business runs on before tactics ever matter.</p><div class="card-footer"><span class="price">$9</span><a class="btn" href="https://buy.stripe.com/28EaEWeukgC6aPx6is43S0h" target="_blank">Buy Now</a></div></div>
+  <div class="card"><div class="tag">Book 2</div><h3>Money Math: Know Your Numbers</h3><p>Margins, revenue targets, and the exact math every solo operator needs to run a profitable business.</p><div class="card-footer"><span class="price">$9</span><a class="btn" href="https://buy.stripe.com/fZu5kCae4bhM6zhgX643S0g" target="_blank">Buy Now</a></div></div>
+  <div class="card"><div class="tag">Book 3</div><h3>Underpromise and Overdeliver: Client Retention Playbook</h3><p>The system for keeping every client long enough to build a real reputation and referral engine.</p><div class="card-footer"><span class="price">$9</span><a class="btn" href="https://buy.stripe.com/fZu3cucmc85A4r98qA43S0i" target="_blank">Buy Now</a></div></div>
+  <div class="card"><div class="tag">Book 4</div><h3>Price Like a Pro: Charge What You're Worth</h3><p>Stop undercharging. Pricing frameworks that justify your rate and protect your margins.</p><div class="card-footer"><span class="price">$9</span><a class="btn" href="https://buy.stripe.com/bJe4gyeukbhM5vd6is43S0j" target="_blank">Buy Now</a></div></div>
+  <div class="card"><div class="tag">Book 5</div><h3>Hire Like a Navy SEAL: Build Your Elite Team</h3><p>How to hire for culture and performance — and build a team that executes without babysitting.</p><div class="card-footer"><span class="price">$9</span><a class="btn" href="https://buy.stripe.com/7sYeVc5XO4TobTB4ak43S0l" target="_blank">Buy Now</a></div></div>
+  <div class="card"><div class="tag">Book 6</div><h3>Recurring Revenue: The Subscription Business Blueprint</h3><p>Stop starting from zero every month — build retainers and maintenance plans that compound.</p><div class="card-footer"><span class="price">$9</span><a class="btn" href="https://buy.stripe.com/3cIdR8dqgadI1eX36g43S0m" target="_blank">Buy Now</a></div></div>
+  <div class="card"><div class="tag">Book 7</div><h3>Become the CEO: Stop Working In It</h3><p>The transition from operator to owner — systems, delegation, and the mindset shift that makes it stick.</p><div class="card-footer"><span class="price">$9</span><a class="btn" href="https://buy.stripe.com/7sY9ASdqgadIf5NayI43S0n" target="_blank">Buy Now</a></div></div>
+  <div class="card"><div class="tag">Book 8</div><h3>Build to Sell: Create a Business That Runs Without You</h3><p>Design your business from day one to be sellable — documented, transferable, independent of you.</p><div class="card-footer"><span class="price">$9</span><a class="btn" href="https://buy.stripe.com/9B63cugCs99E5vddKU43S0o" target="_blank">Buy Now</a></div></div>
+</div>
+<div class="section-label">Financial Literacy &amp; Career Guides</div>
+<div class="grid">
+  <div class="card"><div class="tag">Mindset</div><h3>Money Mindset: Affirmation System for Building Wealth</h3><p>Daily affirmations and exercises to rebuild your relationship with money from the ground up.</p><div class="card-footer"><span class="price">$9</span><a class="btn" href="https://buy.stripe.com/aFa00i9a02Lg5vddKU43S0q" target="_blank">Buy Now</a></div></div>
+  <div class="card"><div class="tag">Credit</div><h3>Credit Repair and Business Credit Mastery</h3><p>Step-by-step guide to repairing personal credit and building business credit from scratch.</p><div class="card-footer"><span class="price">$24</span><a class="btn" href="https://buy.stripe.com/4gM6oG71S3Pk0aTbCM43S0y" target="_blank">Buy Now</a></div></div>
+  <div class="card"><div class="tag">Career</div><h3>Medical Billing Mastery</h3><p>Break into medical billing — a recession-proof remote career with real income potential and low barriers.</p><div class="card-footer"><span class="price">$19</span><a class="btn" href="https://buy.stripe.com/6oUdR8dqg99E8Hp0Y843S0t" target="_blank">Buy Now</a></div></div>
+  <div class="card"><div class="tag">Career</div><h3>Medical Data Input and HIM Careers</h3><p>Health information management as a remote entry-level career — certifications, roles, and income.</p><div class="card-footer"><span class="price">$14</span><a class="btn" href="https://buy.stripe.com/6oU4gy0Du85AaPx7mw43S0u" target="_blank">Buy Now</a></div></div>
+  <div class="card"><div class="tag">Cybersecurity</div><h3>Cybersecurity Fundamentals for Small Business</h3><p>Protect your business from the most common threats — practical, no-jargon security for owners.</p><div class="card-footer"><span class="price">$19</span><a class="btn" href="https://buy.stripe.com/00wcN40Du1Hce1J36g43S0v" target="_blank">Buy Now</a></div></div>
+  <div class="card"><div class="tag">Transportation</div><h3>Automotive Business and NEMT Guide</h3><p>Start or grow a transportation or non-emergency medical transport business — licensing and operations.</p><div class="card-footer"><span class="price">$19</span><a class="btn" href="https://buy.stripe.com/3cI3cudqg3PkbTBgX643S0x" target="_blank">Buy Now</a></div></div>
+  <div class="card"><div class="tag">Real Estate</div><h3>Real Estate Investing and Sober Living</h3><p>Build income through real estate — including the sober living facility model as a business.</p><div class="card-footer"><span class="price">$29</span><a class="btn" href="https://buy.stripe.com/aFafZg5XO85A4r9gX643S0w" target="_blank">Buy Now</a></div></div>
+</div>
+<div class="section-label">Recovery Guides</div>
+<div class="grid">
+  <div class="card"><div class="tag">12-Step</div><h3>A Working Guide to the Twelve Steps</h3><p>Plain-language step explanations, honest reflection prompts, and journaling space for all 12 steps.</p><div class="card-footer"><span class="price">$9</span><a class="btn" href="https://buy.stripe.com/6oUaEW71Sfy2cXF22c43S0p" target="_blank">Buy Now</a></div></div>
+</div>
+<footer>
+  <p>&copy; 2026 Total Transformation Inc. &nbsp;|&nbsp; <a href="mailto:aaronreddix1987@gmail.com">aaronreddix1987@gmail.com</a> &nbsp;|&nbsp; (747) 301-8586</p>
+  <p style="margin-top:8px;color:#444">Digital downloads delivered via Stripe secure checkout.</p>
+</footer>
 </body>
 </html>
