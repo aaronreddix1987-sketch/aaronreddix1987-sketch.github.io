@@ -1,2 +1,84 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0;url=https://aaronreddix1987-sketch.github.io/thank-you.html"><link rel="canonical" href="https://aaronreddix1987-sketch.github.io/thank-you.html"><title>Download → Vault</title><script>location.replace("https://aaronreddix1987-sketch.github.io/thank-you.html");</script><style>body{font-family:system-ui;background:#050508;color:#e2e8f0;display:flex;min-height:100vh;align-items:center;justify-content:center;text-align:center;padding:24px}a{color:#f59e0b;font-weight:800}</style></head><body><p><a href="https://aaronreddix1987-sketch.github.io/thank-you.html">Open vault →</a></p></body></html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download Your Ebook — Total Transformation Inc.</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f0f4f8;color:#1a1a2e;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem}
+.card{background:white;border-radius:16px;padding:3rem 2rem;max-width:520px;width:100%;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,.12)}
+.check{font-size:4rem;margin-bottom:1rem}
+h1{font-size:1.6rem;color:#0f3460;margin-bottom:.5rem}
+p{color:#555;margin-bottom:1.5rem;line-height:1.6}
+.btn{background:#e94560;color:white;padding:1rem 2rem;border-radius:8px;text-decoration:none;font-weight:700;font-size:1.1rem;display:inline-block;margin:.4rem;transition:opacity .2s}
+.btn:hover{opacity:.88}
+.btn-secondary{background:#0f3460}
+.divider{border:none;border-top:1px solid #e2e8f0;margin:2rem 0}
+.product-name{background:#f0f4f8;border-radius:8px;padding:.8rem 1rem;font-weight:700;color:#0f3460;margin-bottom:1.5rem;font-size:1.05rem}
+.support{font-size:.85rem;color:#888}
+.support a{color:#e94560}
+.hidden{display:none}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="check">✅</div>
+  <h1>Payment Confirmed!</h1>
+  <p>Thank you for your purchase. Your download is ready below.</p>
+
+  <!-- Product display — filled by JS from URL param -->
+  <div class="product-name" id="product-title">Loading your product...</div>
+
+  <a id="download-btn" class="btn" href="#" target="_blank">
+    📥 Download Your Ebook Now
+  </a>
+
+  <br>
+  <a href="https://theconsultinglab.com" class="btn btn-secondary" style="margin-top:.5rem">
+    ← Back to Store
+  </a>
+
+  <hr class="divider">
+
+  <p class="support">
+    Questions? Email us at <a href="mailto:aaronreddix1987@gmail.com">aaronreddix1987@gmail.com</a>
+    or call <a href="tel:7473018586">747-301-8586</a>
+  </p>
+</div>
+
+<script>
+// Product → Google Drive download link map
+// UPDATE THESE LINKS when Drive files are uploaded as public
+const PRODUCTS = {
+  '10m-blueprint':        { name: 'The 10M Blueprint',            link: 'UPLOAD_TO_DRIVE' },
+  '609-credit-repair':    { name: '609 Credit Repair System',     link: 'UPLOAD_TO_DRIVE' },
+  'real-estate-guide':    { name: 'Real Estate Investing Guide',  link: 'UPLOAD_TO_DRIVE' },
+  'cold-call-code':       { name: 'Cold Call Code',               link: 'UPLOAD_TO_DRIVE' },
+  'buy-back-time':        { name: 'Buy Back Your Time',           link: 'UPLOAD_TO_DRIVE' },
+  'money-mindset':        { name: 'Money Mindset Affirmations',   link: 'UPLOAD_TO_DRIVE' },
+  'build-to-sell':        { name: 'Build to Sell',                link: 'UPLOAD_TO_DRIVE' },
+  'become-ceo':           { name: 'Become the CEO',               link: 'UPLOAD_TO_DRIVE' },
+  'medical-billing':      { name: 'Medical Billing Mastery',      link: 'UPLOAD_TO_DRIVE' },
+  'nemt-guide':           { name: 'NEMT Business Guide',          link: 'UPLOAD_TO_DRIVE' },
+  'cybersecurity':        { name: 'Cybersecurity for Business',   link: 'UPLOAD_TO_DRIVE' },
+  'medical-him-careers':  { name: 'Medical Data & HIM Careers',   link: 'UPLOAD_TO_DRIVE' },
+};
+
+const params = new URLSearchParams(window.location.search);
+const key = params.get('product') || '10m-blueprint';
+const product = PRODUCTS[key];
+
+if (product) {
+  document.getElementById('product-title').textContent = product.name;
+  const btn = document.getElementById('download-btn');
+  if (product.link === 'UPLOAD_TO_DRIVE') {
+    btn.textContent = '📧 Check Your Email for Download Link';
+    btn.href = 'mailto:aaronreddix1987@gmail.com?subject=Download Link Request - ' + encodeURIComponent(product.name);
+  } else {
+    btn.href = product.link;
+  }
+}
+</script>
+</body>
+</html>
