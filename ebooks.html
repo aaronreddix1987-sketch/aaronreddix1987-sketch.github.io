@@ -4,98 +4,471 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TTI Digital Library — Aaron T. Reddix</title>
-<meta name="description" content="Books, guides and playbooks by Aaron T. Reddix — Total Transformation Inc.">
+<meta name="description" content="43 professional ebooks and guides on recovery careers, business, finance, and mindset by Aaron T. Reddix, Total Transformation Inc.">
 <style>
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0a;color:#f0f0f0}
-  header{background:#111;border-bottom:1px solid #222;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
-  header .logo{font-weight:700;font-size:1.1rem;color:#fff;text-decoration:none}
-  nav a{color:#aaa;text-decoration:none;margin-left:20px;font-size:.9rem;transition:color .2s}
-  nav a:hover,nav a.active{color:#fff}
-  .hero{background:linear-gradient(135deg,#111 0%,#1a1a2e 100%);padding:60px 24px 40px;text-align:center}
-  .hero h1{font-size:clamp(1.8rem,5vw,2.8rem);font-weight:800;margin-bottom:12px}
-  .hero p{color:#aaa;font-size:1rem;max-width:580px;margin:0 auto}
-  .badge{display:inline-block;background:#7c3aed;color:#fff;font-size:.75rem;font-weight:700;padding:4px 10px;border-radius:20px;margin-bottom:16px}
-  .bundle-wrap{max-width:1100px;margin:32px auto;padding:0 24px}
-  .bundle-bar{background:#1a1a2e;border:1px solid #7c3aed;border-radius:12px;padding:28px;text-align:center}
-  .bundle-bar h2{font-size:1.25rem;font-weight:700;margin-bottom:8px}
-  .bundle-bar p{color:#aaa;font-size:.9rem;margin-bottom:18px}
-  .btn-bundle{display:inline-block;background:#7c3aed;color:#fff;font-weight:700;font-size:1rem;padding:14px 32px;border-radius:8px;text-decoration:none}
-  .btn-bundle:hover{background:#6d28d9}
-  .section-label{font-size:.72rem;font-weight:700;letter-spacing:.12em;color:#7c3aed;text-transform:uppercase;padding:36px 24px 14px;max-width:1100px;margin:0 auto}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:18px;padding:0 24px 32px;max-width:1100px;margin:0 auto}
-  .card{background:#161616;border:1px solid #222;border-radius:12px;padding:22px;display:flex;flex-direction:column;transition:border-color .2s}
-  .card:hover{border-color:#7c3aed}
-  .card .tag{font-size:.68rem;font-weight:700;letter-spacing:.08em;color:#7c3aed;text-transform:uppercase;margin-bottom:8px}
-  .card h3{font-size:.97rem;font-weight:700;margin-bottom:8px;line-height:1.4}
-  .card p{font-size:.83rem;color:#888;line-height:1.5;flex:1;margin-bottom:16px}
-  .card-footer{display:flex;align-items:center;justify-content:space-between}
-  .price{font-size:1.1rem;font-weight:800}
-  .btn{display:inline-block;background:#7c3aed;color:#fff;font-size:.8rem;font-weight:700;padding:9px 16px;border-radius:6px;text-decoration:none}
-  .btn:hover{background:#6d28d9}
-  footer{border-top:1px solid #1e1e1e;padding:32px 24px;text-align:center;color:#555;font-size:.85rem}
-  footer a{color:#7c3aed;text-decoration:none}
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0A0E14; color: #E0E0E0; font-family: 'Segoe UI', Arial, sans-serif; min-height: 100vh; }
+  header { background: #12161E; border-bottom: 2px solid #E6BB5A; padding: 1.5rem 1rem; text-align: center; }
+  header h1 { font-size: 2rem; color: #E6BB5A; letter-spacing: 1px; }
+  header p { color: #aaa; margin-top: 0.4rem; font-size: 0.95rem; }
+  nav { text-align: center; padding: 1rem; background: #12161E; }
+  nav a { color: #E6BB5A; text-decoration: none; margin: 0 0.8rem; font-size: 0.9rem; }
+  nav a:hover { text-decoration: underline; }
+  main { max-width: 1100px; margin: 0 auto; padding: 2rem 1rem 4rem; }
+  .section-label { font-size: 1.2rem; font-weight: 700; color: #E6BB5A; text-transform: uppercase;
+                    letter-spacing: 2px; margin: 2.5rem 0 1rem; padding-left: 0.5rem;
+                    border-left: 4px solid #7C3AED; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 1.2rem; }
+  .card { background: #12161E; border: 1px solid #1E2530; border-radius: 10px;
+           padding: 1.4rem; display: flex; flex-direction: column; transition: border-color .2s; }
+  .card:hover { border-color: #E6BB5A; }
+  .tag { display: inline-block; background: #7C3AED22; color: #A78BFA; border: 1px solid #7C3AED44;
+          font-size: 0.7rem; font-weight: 600; letter-spacing: 1px; padding: 2px 8px;
+          border-radius: 20px; text-transform: uppercase; margin-bottom: 0.6rem; }
+  .card h3 { font-size: 1rem; color: #F5F5F5; line-height: 1.4; margin-bottom: 0.5rem; }
+  .card p { font-size: 0.85rem; color: #999; line-height: 1.5; flex: 1; }
+  .card-footer { display: flex; align-items: center; justify-content: space-between;
+                  margin-top: 1rem; padding-top: 0.8rem; border-top: 1px solid #1E2530; }
+  .price { font-size: 1.3rem; font-weight: 800; color: #E6BB5A; }
+  .btn { background: #E6BB5A; color: #0A0E14; font-weight: 700; font-size: 0.85rem;
+          padding: 0.5rem 1.2rem; border-radius: 6px; text-decoration: none;
+          transition: background .15s; }
+  .btn:hover { background: #f0cc6a; }
+  footer { text-align: center; padding: 2rem 1rem; background: #12161E;
+            border-top: 1px solid #1E2530; color: #666; font-size: 0.85rem; }
+  footer a { color: #E6BB5A; text-decoration: none; }
 </style>
 </head>
 <body>
 <header>
-  <a class="logo" href="index.html">Total Transformation Inc.</a>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="ebooks.html" class="active">Books</a>
-    <a href="resources.html">Resources</a>
-  </nav>
+  <h1>TTI Digital Library</h1>
+  <p>43 Professional Guides by Aaron T. Reddix &amp; Total Transformation Inc.</p>
 </header>
-<div class="hero">
-  <div class="badge">TTI Digital Library</div>
-  <h1>Books That Build Real Results</h1>
-  <p>AI automation, business building, recovery, and financial literacy — written for people starting from zero.</p>
-</div>
-<div class="bundle-wrap">
-  <div class="bundle-bar">
-    <h2>The $10M Blueprint — Complete 12-Book Series</h2>
-    <p>Every ebook in the TTI series in one bundle — business model, offer creation, AI delivery, sales systems, and recurring revenue.</p>
-    <a class="btn-bundle" href="https://buy.stripe.com/6oUaEW71Sfy2cXF22c43S0p" target="_blank">Get the Full Bundle — $47</a>
-  </div>
-</div>
-<div class="section-label">AI &amp; Business Building</div>
-<p class="section-label">Recovery Career</p>
-<div class="grid">
-<div class="card"><div class="tag">Recovery Career</div><h3>RADT Study Guide and Workbook</h3><p>Complete exam prep for Registered Alcohol and Drug Technician certification — 12 Core Functions, 42 CFR Part 2, ethics, documentation, and 100+ practice questions.</p><div class="card-footer"><span class="price">$27</span><a class="btn" href="https://buy.stripe.com/dRm14m5XO5Xs9Lt0Y843S0z" target="_blank">Buy Now</a></div></div>
-
-  <div class="card"><div class="tag">AI Automation</div><h3>Buy Back Your Time: Get Your Life Back Using AI</h3><p>Use AI as your first employee — automate the 80% so you focus on the work only you can do.</p><div class="card-footer"><span class="price">$19</span><a class="btn" href="https://buy.stripe.com/dRmcN485W3Pk6zhayI43S0s" target="_blank">Buy Now</a></div></div>
-  <div class="card"><div class="tag">AI Delivery</div><h3>AI Delivery Systems: Automate Your Service Business</h3><p>Find your one bottleneck and eliminate it — delivery, support, SOPs, and quality control with AI.</p><div class="card-footer"><span class="price">$9</span><a class="btn" href="https://buy.stripe.com/7sY5kC85W99E3n58qA43S0k" target="_blank">Buy Now</a></div></div>
-  <div class="card"><div class="tag">Cold Outreach</div><h3>Cold Call Code: Building Trust Fast</h3><p>Exact scripts, objection handling, and a repeatable call structure for booking appointments.</p><div class="card-footer"><span class="price">$9</span><a class="btn" href="https://buy.stripe.com/3cIaEW85W99Ee1JeOY43S0r" target="_blank">Buy Now</a></div></div>
-  <div class="card"><div class="tag">Digital Business</div><h3>Digital Undercover Billionaire</h3><p>A 6-step blueprint for building income from nothing using AI — no capital, no team required to start.</p><div class="card-footer"><span class="price">$9</span><a class="btn" href="https://buy.stripe.com/aFa9ASeuk85A7Dl8qA43S0f" target="_blank">Buy Now</a></div></div>
-</div>
-<div class="section-label">The 12-Book Business Series</div>
-<div class="grid">
-  <div class="card"><div class="tag">Book 1</div><h3>The Right Foundation: Mindset, Systems and Identity</h3><p>Build the internal foundation that every lasting business runs on before tactics ever matter.</p><div class="card-footer"><span class="price">$9</span><a class="btn" href="https://buy.stripe.com/28EaEWeukgC6aPx6is43S0h" target="_blank">Buy Now</a></div></div>
-  <div class="card"><div class="tag">Book 2</div><h3>Money Math: Know Your Numbers</h3><p>Margins, revenue targets, and the exact math every solo operator needs to run a profitable business.</p><div class="card-footer"><span class="price">$9</span><a class="btn" href="https://buy.stripe.com/fZu5kCae4bhM6zhgX643S0g" target="_blank">Buy Now</a></div></div>
-  <div class="card"><div class="tag">Book 3</div><h3>Underpromise and Overdeliver: Client Retention Playbook</h3><p>The system for keeping every client long enough to build a real reputation and referral engine.</p><div class="card-footer"><span class="price">$9</span><a class="btn" href="https://buy.stripe.com/fZu3cucmc85A4r98qA43S0i" target="_blank">Buy Now</a></div></div>
-  <div class="card"><div class="tag">Book 4</div><h3>Price Like a Pro: Charge What You're Worth</h3><p>Stop undercharging. Pricing frameworks that justify your rate and protect your margins.</p><div class="card-footer"><span class="price">$9</span><a class="btn" href="https://buy.stripe.com/bJe4gyeukbhM5vd6is43S0j" target="_blank">Buy Now</a></div></div>
-  <div class="card"><div class="tag">Book 5</div><h3>Hire Like a Navy SEAL: Build Your Elite Team</h3><p>How to hire for culture and performance — and build a team that executes without babysitting.</p><div class="card-footer"><span class="price">$9</span><a class="btn" href="https://buy.stripe.com/7sYeVc5XO4TobTB4ak43S0l" target="_blank">Buy Now</a></div></div>
-  <div class="card"><div class="tag">Book 6</div><h3>Recurring Revenue: The Subscription Business Blueprint</h3><p>Stop starting from zero every month — build retainers and maintenance plans that compound.</p><div class="card-footer"><span class="price">$9</span><a class="btn" href="https://buy.stripe.com/3cIdR8dqgadI1eX36g43S0m" target="_blank">Buy Now</a></div></div>
-  <div class="card"><div class="tag">Book 7</div><h3>Become the CEO: Stop Working In It</h3><p>The transition from operator to owner — systems, delegation, and the mindset shift that makes it stick.</p><div class="card-footer"><span class="price">$9</span><a class="btn" href="https://buy.stripe.com/7sY9ASdqgadIf5NayI43S0n" target="_blank">Buy Now</a></div></div>
-  <div class="card"><div class="tag">Book 8</div><h3>Build to Sell: Create a Business That Runs Without You</h3><p>Design your business from day one to be sellable — documented, transferable, independent of you.</p><div class="card-footer"><span class="price">$9</span><a class="btn" href="https://buy.stripe.com/9B63cugCs99E5vddKU43S0o" target="_blank">Buy Now</a></div></div>
-</div>
-<div class="section-label">Financial Literacy &amp; Career Guides</div>
-<div class="grid">
-  <div class="card"><div class="tag">Mindset</div><h3>Money Mindset: Affirmation System for Building Wealth</h3><p>Daily affirmations and exercises to rebuild your relationship with money from the ground up.</p><div class="card-footer"><span class="price">$9</span><a class="btn" href="https://buy.stripe.com/aFa00i9a02Lg5vddKU43S0q" target="_blank">Buy Now</a></div></div>
-  <div class="card"><div class="tag">Credit</div><h3>Credit Repair and Business Credit Mastery</h3><p>Step-by-step guide to repairing personal credit and building business credit from scratch.</p><div class="card-footer"><span class="price">$24</span><a class="btn" href="https://buy.stripe.com/4gM6oG71S3Pk0aTbCM43S0y" target="_blank">Buy Now</a></div></div>
-  <div class="card"><div class="tag">Career</div><h3>Medical Billing Mastery</h3><p>Break into medical billing — a recession-proof remote career with real income potential and low barriers.</p><div class="card-footer"><span class="price">$19</span><a class="btn" href="https://buy.stripe.com/6oUdR8dqg99E8Hp0Y843S0t" target="_blank">Buy Now</a></div></div>
-  <div class="card"><div class="tag">Career</div><h3>Medical Data Input and HIM Careers</h3><p>Health information management as a remote entry-level career — certifications, roles, and income.</p><div class="card-footer"><span class="price">$14</span><a class="btn" href="https://buy.stripe.com/6oU4gy0Du85AaPx7mw43S0u" target="_blank">Buy Now</a></div></div>
-  <div class="card"><div class="tag">Cybersecurity</div><h3>Cybersecurity Fundamentals for Small Business</h3><p>Protect your business from the most common threats — practical, no-jargon security for owners.</p><div class="card-footer"><span class="price">$19</span><a class="btn" href="https://buy.stripe.com/00wcN40Du1Hce1J36g43S0v" target="_blank">Buy Now</a></div></div>
-  <div class="card"><div class="tag">Transportation</div><h3>Automotive Business and NEMT Guide</h3><p>Start or grow a transportation or non-emergency medical transport business — licensing and operations.</p><div class="card-footer"><span class="price">$19</span><a class="btn" href="https://buy.stripe.com/3cI3cudqg3PkbTBgX643S0x" target="_blank">Buy Now</a></div></div>
-  <div class="card"><div class="tag">Real Estate</div><h3>Real Estate Investing and Sober Living</h3><p>Build income through real estate — including the sober living facility model as a business.</p><div class="card-footer"><span class="price">$29</span><a class="btn" href="https://buy.stripe.com/aFafZg5XO85A4r9gX643S0w" target="_blank">Buy Now</a></div></div>
-</div>
-<div class="section-label">Recovery Guides</div>
-<div class="grid">
-  <div class="card"><div class="tag">12-Step</div><h3>A Working Guide to the Twelve Steps</h3><p>Plain-language step explanations, honest reflection prompts, and journaling space for all 12 steps.</p><div class="card-footer"><span class="price">$9</span><a class="btn" href="https://buy.stripe.com/6oUaEW71Sfy2cXF22c43S0p" target="_blank">Buy Now</a></div></div>
-</div>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="ebooks.html">Ebooks</a>
+  <a href="thank-you.html">After Purchase</a>
+</nav>
+<main>
+  <p style="color:#aaa;margin-bottom:1.5rem;font-size:0.9rem;">
+    Every purchase is delivered instantly to your email — automated, no waiting.
+    All titles cover recovery careers, business, finance, and mindset in 2026.
+  </p>
+      <p class="section-label">Recovery Career</p>
+      <div class="grid">
+        <div class="card">
+          <div class="tag">Recovery Career</div>
+          <h3>RADT Study Guide and Workbook</h3>
+          <p>Complete exam prep for RADT certification — 12 Core Functions, 42 CFR Part 2, ethics, documentation, and 100+ practice questions.</p>
+          <div class="card-footer">
+            <span class="price">$27</span>
+            <a class="btn" href="https://buy.stripe.com/dRm14m5XO5Xs9Lt0Y843S0z" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Recovery Career</div>
+          <h3>CADC-I Exam Prep Master Guide</h3>
+          <p>Master the CADC-I exam with full coverage of the 12 Core Functions, ethics, case studies, and 120+ practice questions.</p>
+          <div class="card-footer">
+            <span class="price">$47</span>
+            <a class="btn" href="https://buy.stripe.com/00w9ASgCs4Toe1J8qA43S0A" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Recovery Career</div>
+          <h3>Recovery Housing Manager Guide</h3>
+          <p>Everything to operate a certified recovery residence: licensing, staffing, house culture, and compliance.</p>
+          <div class="card-footer">
+            <span class="price">$37</span>
+            <a class="btn" href="https://buy.stripe.com/4gMdR80Du71w2j1bCM43S0B" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Recovery Career</div>
+          <h3>Motivational Interviewing Mastery</h3>
+          <p>Evidence-based MI for addiction counselors: OARS, change talk, and ambivalence resolution techniques.</p>
+          <div class="card-footer">
+            <span class="price">$47</span>
+            <a class="btn" href="https://buy.stripe.com/bJe28qgCs85A7DlbCM43S0C" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Recovery Career</div>
+          <h3>Trauma-Informed Care Essentials</h3>
+          <p>Integrate trauma-informed principles: trauma types, nervous system response, and healing-centered engagement.</p>
+          <div class="card-footer">
+            <span class="price">$37</span>
+            <a class="btn" href="https://buy.stripe.com/14A4gy4TK1HcaPxbCM43S0D" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Recovery Career</div>
+          <h3>Documentation Mastery for Counselors</h3>
+          <p>Write faster, better clinical notes: BIRP, DAP, SOAP, treatment plans, and discharge summaries.</p>
+          <div class="card-footer">
+            <span class="price">$27</span>
+            <a class="btn" href="https://buy.stripe.com/eVq14mcmcdpU6zhdKU43S0E" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Recovery Career</div>
+          <h3>Recovery Professional Job Search</h3>
+          <p>Land your counseling job: resume, interview prep, credential roadmap, and salary negotiation.</p>
+          <div class="card-footer">
+            <span class="price">$27</span>
+            <a class="btn" href="https://buy.stripe.com/28E8wOcmcadI0aT4ak43S0F" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Recovery Career</div>
+          <h3>Group Facilitation Skills for Counselors</h3>
+          <p>Lead powerful recovery groups: group types, handling difficult members, and therapeutic factors.</p>
+          <div class="card-footer">
+            <span class="price">$37</span>
+            <a class="btn" href="https://buy.stripe.com/5kQcN4ae4bhM1eXbCM43S0G" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Recovery Career</div>
+          <h3>Co-Occurring Disorders Guide</h3>
+          <p>Treat dual diagnosis: depression, anxiety, PTSD, and psychosis alongside addiction.</p>
+          <div class="card-footer">
+            <span class="price">$47</span>
+            <a class="btn" href="https://buy.stripe.com/5kQ8wO4TKgC64r922c43S0H" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Recovery Career</div>
+          <h3>From Client to Counselor</h3>
+          <p>Turn lived experience into a counseling career: certification pathways and your unique advantage.</p>
+          <div class="card-footer">
+            <span class="price">$37</span>
+            <a class="btn" href="https://buy.stripe.com/cNiaEW3PG1Hcg9R36g43S0I" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Recovery Career</div>
+          <h3>Cultural Competency in Recovery Counseling</h3>
+          <p>Serve diverse communities: race, gender, LGBTQ+, and spirituality in treatment.</p>
+          <div class="card-footer">
+            <span class="price">$27</span>
+            <a class="btn" href="https://buy.stripe.com/dRm7sKae499E7Dl36g43S0J" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Recovery Career</div>
+          <h3>Peer Support Specialist Exam Prep</h3>
+          <p>Pass your PSS certification: core competencies, ethics, wellness tools, and practice questions.</p>
+          <div class="card-footer">
+            <span class="price">$37</span>
+            <a class="btn" href="https://buy.stripe.com/6oU8wO1Hyfy28Hp4ak43S0K" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Recovery Career</div>
+          <h3>12-Step Facilitation Professional Guide</h3>
+          <p>Evidence-based TSF clinical manual: acceptance, surrender, active involvement, and session structure.</p>
+          <div class="card-footer">
+            <span class="price">$47</span>
+            <a class="btn" href="https://buy.stripe.com/cNiaEW0DuadI3n58qA43S0L" target="_blank">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <p class="section-label">Business & Entrepreneurship</p>
+      <div class="grid">
+        <div class="card">
+          <div class="tag">Business & Entrepreneurship</div>
+          <h3>The Dan Martell Method for Recovery Entrepreneurs</h3>
+          <p>Apply Buy Back Your Time principles to build a recovery business that runs without you.</p>
+          <div class="card-footer">
+            <span class="price">$97</span>
+            <a class="btn" href="https://buy.stripe.com/8x2eVc3PG1HccXFcGQ43S0M" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Business & Entrepreneurship</div>
+          <h3>AI Business Automation for Recovery Professionals</h3>
+          <p>Automate 80% of your admin using free and low-cost AI tools available in 2026.</p>
+          <div class="card-footer">
+            <span class="price">$67</span>
+            <a class="btn" href="https://buy.stripe.com/8x23cu1Hy99E3n5bCM43S0N" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Business & Entrepreneurship</div>
+          <h3>10X in Recovery: The Grant Cardone Playbook</h3>
+          <p>Apply 10X thinking to sobriety, career, and income goals — massive action, massive results.</p>
+          <div class="card-footer">
+            <span class="price">$67</span>
+            <a class="btn" href="https://buy.stripe.com/eVq28qfyo71w3n522c43S0O" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Business & Entrepreneurship</div>
+          <h3>LinkedIn Domination for Recovery Coaches</h3>
+          <p>Build a client-generating LinkedIn presence from scratch in 30 days.</p>
+          <div class="card-footer">
+            <span class="price">$47</span>
+            <a class="btn" href="https://buy.stripe.com/4gM6oG0Du4To1eX22c43S0P" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Business & Entrepreneurship</div>
+          <h3>From Street to CEO</h3>
+          <p>Blueprint for a 7-figure recovery business starting with nothing but your story.</p>
+          <div class="card-footer">
+            <span class="price">$47</span>
+            <a class="btn" href="https://buy.stripe.com/8x2aEWae41Hc6zheOY43S0Q" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Business & Entrepreneurship</div>
+          <h3>The Recovery CEO Playbook</h3>
+          <p>Mindset, systems, and revenue strategies to build a 7-figure recovery enterprise.</p>
+          <div class="card-footer">
+            <span class="price">$97</span>
+            <a class="btn" href="https://buy.stripe.com/aFa6oG9a0dpU5vd4ak43S0R" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Business & Entrepreneurship</div>
+          <h3>Digital Products for Recovery Coaches</h3>
+          <p>Create once, sell forever — the complete passive income system for recovery professionals.</p>
+          <div class="card-footer">
+            <span class="price">$47</span>
+            <a class="btn" href="https://buy.stripe.com/eVq3cu2LCdpU9Lt8qA43S0S" target="_blank">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <p class="section-label">Finance & Credit</p>
+      <div class="grid">
+        <div class="card">
+          <div class="tag">Finance & Credit</div>
+          <h3>Business Credit Mastery</h3>
+          <p>Build business credit from zero: EIN, DUNS, Net-30 accounts, and bank credit in 12 months.</p>
+          <div class="card-footer">
+            <span class="price">$47</span>
+            <a class="btn" href="https://buy.stripe.com/28E28qgCs85A0aTgX643S0T" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Finance & Credit</div>
+          <h3>SBA Grants for Recovery Organizations</h3>
+          <p>Secure federal funding for your recovery program: SAMHSA, HRSA, SBA, and state grants.</p>
+          <div class="card-footer">
+            <span class="price">$47</span>
+            <a class="btn" href="https://buy.stripe.com/cNi00igCs3PkcXF36g43S0U" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Finance & Credit</div>
+          <h3>Recovery Entrepreneur Finance Guide</h3>
+          <p>Bootstrapping, revenue-based financing, and SBA loans for recovery businesses.</p>
+          <div class="card-footer">
+            <span class="price">$47</span>
+            <a class="btn" href="https://buy.stripe.com/cNi3cu9a01HcaPx22c43S0V" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Finance & Credit</div>
+          <h3>Sober and Rich: Wealth Building in Recovery</h3>
+          <p>Credit repair, investing, and generational wealth strategies for people in recovery.</p>
+          <div class="card-footer">
+            <span class="price">$37</span>
+            <a class="btn" href="https://buy.stripe.com/cNifZgeuk5XsbTBcGQ43S0W" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Finance & Credit</div>
+          <h3>Recovery to Real Estate</h3>
+          <p>House hacking, sober living investment, and real estate wealth for recovery.</p>
+          <div class="card-footer">
+            <span class="price">$67</span>
+            <a class="btn" href="https://buy.stripe.com/7sY5kCcmcfy2cXFfT243S0X" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Finance & Credit</div>
+          <h3>The EIN Playbook</h3>
+          <p>Set up your business entity and separate finances in one weekend.</p>
+          <div class="card-footer">
+            <span class="price">$27</span>
+            <a class="btn" href="https://buy.stripe.com/6oU28q2LC3Pk9LtfT243S0Y" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Finance & Credit</div>
+          <h3>Grant Writing for Recovery Nonprofits</h3>
+          <p>Write winning grant proposals and secure six figures for your recovery organization.</p>
+          <div class="card-footer">
+            <span class="price">$67</span>
+            <a class="btn" href="https://buy.stripe.com/bJe9AS71Sfy24r96is43S0Z" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Finance & Credit</div>
+          <h3>Recovery Capital: Building Assets in Sobriety</h3>
+          <p>The comprehensive guide to financial, social, and human capital in recovery.</p>
+          <div class="card-footer">
+            <span class="price">$37</span>
+            <a class="btn" href="https://buy.stripe.com/eVq5kC0Du99E4r9ayI43S10" target="_blank">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <p class="section-label">Mindset & Transformation</p>
+      <div class="grid">
+        <div class="card">
+          <div class="tag">Mindset & Transformation</div>
+          <h3>Identity Shift: Becoming the Person You Want to Be</h3>
+          <p>Rewire your self-concept from addict to entrepreneur using proven neuroscience.</p>
+          <div class="card-footer">
+            <span class="price">$37</span>
+            <a class="btn" href="https://buy.stripe.com/eVq5kCae45XsbTBayI43S11" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Mindset & Transformation</div>
+          <h3>Total Transformation System</h3>
+          <p>The complete Aaron Reddix framework: sobriety + career + finances + mindset.</p>
+          <div class="card-footer">
+            <span class="price">$67</span>
+            <a class="btn" href="https://buy.stripe.com/9B614mgCsclQ8Hp8qA43S12" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Mindset & Transformation</div>
+          <h3>30-Day Transformation Journal</h3>
+          <p>Daily prompts, affirmations, and goal-tracking for your first 30 days of transformation.</p>
+          <div class="card-footer">
+            <span class="price">$17</span>
+            <a class="btn" href="https://buy.stripe.com/3cI5kC3PG71w7DlfT243S13" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Mindset & Transformation</div>
+          <h3>10X Recovery Mindset Advanced</h3>
+          <p>Advanced mindset techniques: visualization, identity, and peak performance for recovery leaders.</p>
+          <div class="card-footer">
+            <span class="price">$47</span>
+            <a class="btn" href="https://buy.stripe.com/aFaeVcbi871wf5N4ak43S14" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Mindset & Transformation</div>
+          <h3>Relapse Prevention Mastery</h3>
+          <p>HALT, urge surfing, triggers, and a personalized relapse prevention plan.</p>
+          <div class="card-footer">
+            <span class="price">$37</span>
+            <a class="btn" href="https://buy.stripe.com/dRm7sKgCs2LgbTB9uE43S15" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Mindset & Transformation</div>
+          <h3>Affirmations for Recovery and Wealth</h3>
+          <p>365 daily affirmations combining sobriety, identity, and financial abundance.</p>
+          <div class="card-footer">
+            <span class="price">$17</span>
+            <a class="btn" href="https://buy.stripe.com/dRm7sK3PGfy2bTBgX643S16" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Mindset & Transformation</div>
+          <h3>The Accountability Partner System</h3>
+          <p>Build a high-performance support network that keeps you sober and accelerates success.</p>
+          <div class="card-footer">
+            <span class="price">$27</span>
+            <a class="btn" href="https://buy.stripe.com/9B614m1HyclQ2j1dKU43S17" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Mindset & Transformation</div>
+          <h3>Crisis Intervention Guide</h3>
+          <p>Respond to mental health and addiction crises with confidence using the Safe-MAPP protocol.</p>
+          <div class="card-footer">
+            <span class="price">$47</span>
+            <a class="btn" href="https://buy.stripe.com/9B628qcmc71wg9R5eo43S18" target="_blank">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <p class="section-label">Marketing & Skills</p>
+      <div class="grid">
+        <div class="card">
+          <div class="tag">Marketing & Skills</div>
+          <h3>AI-Powered Counseling Practice</h3>
+          <p>Use AI tools to automate documentation, client engagement, and marketing.</p>
+          <div class="card-footer">
+            <span class="price">$47</span>
+            <a class="btn" href="https://buy.stripe.com/fZu28q4TKadI7Dl4ak43S19" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Marketing & Skills</div>
+          <h3>Network Marketing for Recovery Professionals</h3>
+          <p>Leverage the most powerful word-of-mouth network on earth to build residual income.</p>
+          <div class="card-footer">
+            <span class="price">$27</span>
+            <a class="btn" href="https://buy.stripe.com/dRm00igCs2LgbTB9uE43S1a" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Marketing & Skills</div>
+          <h3>Cold Outreach Mastery for Recovery Coaches</h3>
+          <p>Get clients without referrals using proven LinkedIn, email, and phone outreach.</p>
+          <div class="card-footer">
+            <span class="price">$37</span>
+            <a class="btn" href="https://buy.stripe.com/5kQ7sK5XO0D89LtcGQ43S1b" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Marketing & Skills</div>
+          <h3>The Algorithm Blueprint for Recovery Brands</h3>
+          <p>Dominate TikTok, Instagram, and LinkedIn with a content system that runs itself.</p>
+          <div class="card-footer">
+            <span class="price">$37</span>
+            <a class="btn" href="https://buy.stripe.com/fZubJ03PGgC6f5N0Y843S1c" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Marketing & Skills</div>
+          <h3>Recovery Podcasting Blueprint</h3>
+          <p>Launch a podcast that builds your brand, audience, and passive income in 90 days.</p>
+          <div class="card-footer">
+            <span class="price">$37</span>
+            <a class="btn" href="https://buy.stripe.com/9B6bJ0eukgC64r98qA43S1d" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Marketing & Skills</div>
+          <h3>Sober Living Operations Mastery</h3>
+          <p>Open, fill, and profitably operate a certified sober living home from day one.</p>
+          <div class="card-footer">
+            <span class="price">$97</span>
+            <a class="btn" href="https://buy.stripe.com/28E14mdqgbhM0aT4ak43S1e" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Marketing & Skills</div>
+          <h3>The Speaking Side Hustle for Recovery Professionals</h3>
+          <p>Get paid $500-$5,000 per keynote sharing your recovery story on stages everywhere.</p>
+          <div class="card-footer">
+            <span class="price">$37</span>
+            <a class="btn" href="https://buy.stripe.com/fZu7sKfyoclQe1J7mw43S1f" target="_blank">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="tag">Marketing & Skills</div>
+          <h3>The Solopreneur AI Stack</h3>
+          <p>The complete 2026 AI tool stack for one-person recovery businesses.</p>
+          <div class="card-footer">
+            <span class="price">$47</span>
+            <a class="btn" href="https://buy.stripe.com/dRm4gy71S71w6zh22c43S1g" target="_blank">Buy Now</a>
+          </div>
+        </div>
+      </div>
+</main>
 <footer>
-  <p>&copy; 2026 Total Transformation Inc. &nbsp;|&nbsp; <a href="mailto:aaronreddix1987@gmail.com">aaronreddix1987@gmail.com</a> &nbsp;|&nbsp; (747) 301-8586</p>
-  <p style="margin-top:8px;color:#444">Digital downloads delivered via Stripe secure checkout.</p>
+  <p>&copy; 2026 Total Transformation Inc. &bull; Aaron T. Reddix</p>
+  <p style="margin-top:0.4rem;"><a href="mailto:aaronreddix1987@gmail.com">aaronreddix1987@gmail.com</a> &bull; 747-301-8586</p>
 </footer>
 </body>
 </html>
