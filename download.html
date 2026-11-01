@@ -3,81 +3,341 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Download Your Ebook — Total Transformation Inc.</title>
+<title>Your Downloads — Total Transformation Inc.</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f0f4f8;color:#1a1a2e;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem}
-.card{background:white;border-radius:16px;padding:3rem 2rem;max-width:520px;width:100%;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,.12)}
-.check{font-size:4rem;margin-bottom:1rem}
-h1{font-size:1.6rem;color:#0f3460;margin-bottom:.5rem}
-p{color:#555;margin-bottom:1.5rem;line-height:1.6}
-.btn{background:#e94560;color:white;padding:1rem 2rem;border-radius:8px;text-decoration:none;font-weight:700;font-size:1.1rem;display:inline-block;margin:.4rem;transition:opacity .2s}
-.btn:hover{opacity:.88}
-.btn-secondary{background:#0f3460}
-.divider{border:none;border-top:1px solid #e2e8f0;margin:2rem 0}
-.product-name{background:#f0f4f8;border-radius:8px;padding:.8rem 1rem;font-weight:700;color:#0f3460;margin-bottom:1.5rem;font-size:1.05rem}
-.support{font-size:.85rem;color:#888}
-.support a{color:#e94560}
-.hidden{display:none}
+:root{--gold:#FFD700;--dark:#080808;--card:#0f0f0f;--border:#1e1e1e;--green:#00e676}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--dark);color:#d4d4d4;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;padding:0 0 60px}
+.header{background:linear-gradient(135deg,#000,#0a0a1e);border-bottom:1px solid #1a1a3e;padding:50px 24px;text-align:center}
+.header h1{color:#fff;font-size:2rem;margin-bottom:10px}
+.header h1 span{color:var(--gold)}
+.header p{color:#666;max-width:500px;margin:0 auto 20px}
+.notice{background:linear-gradient(135deg,#001a00,#003300);border:2px solid var(--green);border-radius:12px;padding:20px 24px;max-width:700px;margin:30px auto;text-align:center}
+.notice p{color:var(--green);font-weight:700;font-size:1.05rem}
+.notice small{color:#666;display:block;margin-top:6px}
+.container{max-width:900px;margin:0 auto;padding:0 24px}
+.search-box{margin:30px auto;max-width:900px;padding:0 24px}
+.search-box input{width:100%;background:#111;border:1px solid #222;color:#ddd;padding:12px 16px;border-radius:8px;font-size:1rem;outline:none}
+.search-box input:focus{border-color:var(--gold)}
+table{width:100%;border-collapse:collapse;margin-top:10px}
+thead th{background:#0a0a0a;color:var(--gold);padding:12px 16px;text-align:left;border-bottom:1px solid #1e1e1e;font-size:.8rem;text-transform:uppercase;letter-spacing:1px}
+tbody tr{border-bottom:1px solid #111;transition:background .15s}
+tbody tr:hover{background:#0a0a0a}
+.vol{color:#333;font-size:.78rem;font-family:monospace;padding:14px 16px;white-space:nowrap;width:70px}
+.title{padding:14px 16px;color:#ddd;font-size:.92rem}
+.dl{padding:14px 16px;white-space:nowrap;width:180px}
+.btn-view{background:#111;border:1px solid #222;color:#888;padding:6px 14px;border-radius:6px;font-size:.78rem;margin-right:6px;display:inline-block}
+.btn-view:hover{border-color:var(--gold);color:var(--gold)}
+.btn-dl{background:var(--gold);color:#000;padding:6px 14px;border-radius:6px;font-size:.78rem;font-weight:700;display:inline-block}
+.btn-dl:hover{background:#ffc800}
+.footer{text-align:center;padding:40px 24px 0;color:#2a2a2a;font-size:.78rem}
+.footer a{color:#3a3a3a}
+.support{background:#0a0a0a;border:1px solid #1e1e1e;border-radius:10px;padding:20px;max-width:700px;margin:30px auto;text-align:center}
+.support p{color:#555;font-size:.88rem}
+.support a{color:var(--gold)}
 </style>
 </head>
 <body>
-<div class="card">
-  <div class="check">✅</div>
-  <h1>Payment Confirmed!</h1>
-  <p>Thank you for your purchase. Your download is ready below.</p>
-
-  <!-- Product display — filled by JS from URL param -->
-  <div class="product-name" id="product-title">Loading your product...</div>
-
-  <a id="download-btn" class="btn" href="#" target="_blank">
-    📥 Download Your Ebook Now
-  </a>
-
-  <br>
-  <a href="https://theconsultinglab.com" class="btn btn-secondary" style="margin-top:.5rem">
-    ← Back to Store
-  </a>
-
-  <hr class="divider">
-
-  <p class="support">
-    Questions? Email us at <a href="mailto:aaronreddix1987@gmail.com">aaronreddix1987@gmail.com</a>
-    or call <a href="tel:7473018586">747-301-8586</a>
-  </p>
+<div class="header">
+  <h1>Your <span>Downloads</span> Are Ready</h1>
+  <p>Thank you for your purchase. All 43 titles are below. Click Download to save your file.</p>
+  <a href="https://aaronreddix1987-sketch.github.io" style="color:var(--gold);font-size:.85rem">← Back to Store</a>
 </div>
+<div class="notice">
+  <p>All purchases are delivered instantly — no email required.</p>
+  <small>Bookmark this page. You can return anytime to re-download your titles.</small>
+</div>
+<div class="search-box">
+  <input type="text" id="search" placeholder="Search by title or volume number..." oninput="filterBooks()">
+</div>
+<div class="container">
+  <table id="bookTable">
+    <thead>
+      <tr>
+        <th>Vol</th>
+        <th>Title</th>
+        <th>Download</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody">
 
+    <tr>
+      <td class="vol">Vol 01</td>
+      <td class="title">Buy Back Your Time with AI Systems</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1zFA--yhEte3QlqY6cs4tWcUqg0QYYVX1/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1zFA--yhEte3QlqY6cs4tWcUqg0QYYVX1" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 02</td>
+      <td class="title">The AI Delegation Blueprint</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1KhEZt4Y2CUgyBpd9-zD49JaX4OEbaoCx/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1KhEZt4Y2CUgyBpd9-zD49JaX4OEbaoCx" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 03</td>
+      <td class="title">Systems Before Hustle</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1HjHFxgklhawVqIFdloBv7BvN8QVv6N1U/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1HjHFxgklhawVqIFdloBv7BvN8QVv6N1U" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 04</td>
+      <td class="title">AI Delivery Systems: No Human Required</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1VRqrJsK9tjxgLMwbbCW8FCy0Utn3dA72/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1VRqrJsK9tjxgLMwbbCW8FCy0Utn3dA72" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 05</td>
+      <td class="title">Growth Engine: Parallel Channels</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1jWSmXxuY6ljl4MN3BDOPGRV3KHAN9TS2/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1jWSmXxuY6ljl4MN3BDOPGRV3KHAN9TS2" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 06</td>
+      <td class="title">The Buyback Mindset</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1ELbBx5rLOhRz0RYhm341ASAs0GVwT_zJ/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1ELbBx5rLOhRz0RYhm341ASAs0GVwT_zJ" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 07</td>
+      <td class="title">Automated Client Acquisition</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1zvKrXRTTa631Ne_aC37NDHVAmh_3jA8h/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1zvKrXRTTa631Ne_aC37NDHVAmh_3jA8h" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 08</td>
+      <td class="title">The 10-Hour Work Week Playbook</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1HNyb-4-cSvc6U387sjRtSBML4iB4Xi9a/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1HNyb-4-cSvc6U387sjRtSBML4iB4Xi9a" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 09</td>
+      <td class="title">From Zero to Recurring Revenue</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1OLRGu2Qf7WJiAh1iH7KHQNsPJPErsm70/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1OLRGu2Qf7WJiAh1iH7KHQNsPJPErsm70" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 10</td>
+      <td class="title">The Re-Entry Toolkit</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1ejnUR9-lDtP4h6CKx6dsy8UucAAA_La-/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1ejnUR9-lDtP4h6CKx6dsy8UucAAA_La-" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 11</td>
+      <td class="title">RADT Certification Study Guide</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1_yY1D6th5CMbCTime5C_lNHvPluZWHwO/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1_yY1D6th5CMbCTime5C_lNHvPluZWHwO" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 12</td>
+      <td class="title">CADC Career Ladder Guide</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1wttu4WjV-M6z3-2QTJ5Le5OdB2Mt_FmN/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1wttu4WjV-M6z3-2QTJ5Le5OdB2Mt_FmN" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 13</td>
+      <td class="title">Substance Use Counseling Fundamentals</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1Y9iy29Yc99ATgnEZkAjfSaJsALtTeeDj/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1Y9iy29Yc99ATgnEZkAjfSaJsALtTeeDj" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 14</td>
+      <td class="title">Ethics in Recovery Services</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1Wy2xyO7bZoXzv_0VeSkCYsGQoKPAOabx/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1Wy2xyO7bZoXzv_0VeSkCYsGQoKPAOabx" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 15</td>
+      <td class="title">Case Management Mastery</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1TDgQTe0AQYx-FKrUO8oOXbKgLo1WfFoX/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1TDgQTe0AQYx-FKrUO8oOXbKgLo1WfFoX" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 16</td>
+      <td class="title">Group Facilitation Skills</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/15A5bC7EdJpYdohmqBI8dnlqWCVeV5gxN/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=15A5bC7EdJpYdohmqBI8dnlqWCVeV5gxN" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 17</td>
+      <td class="title">Trauma-Informed Care Essentials</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/194PQYicibTbGe0i6iW0gThrajf-ub3u_/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=194PQYicibTbGe0i6iW0gThrajf-ub3u_" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 18</td>
+      <td class="title">Motivational Interviewing in Practice</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1pff9OqDrBo8Hhc-RCY68Y_C9HgpJnWqj/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1pff9OqDrBo8Hhc-RCY68Y_C9HgpJnWqj" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 19</td>
+      <td class="title">Digital Undercover Billionaire: Core</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1-GSOL4JvaE-G_C2MQBTecbgYXV7Ppb-D/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1-GSOL4JvaE-G_C2MQBTecbgYXV7Ppb-D" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 20</td>
+      <td class="title">Digital Undercover Billionaire: Professional</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1Lg51UPQ-OOX1qVoWou-3kcf4xlTJbUVh/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1Lg51UPQ-OOX1qVoWou-3kcf4xlTJbUVh" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 21</td>
+      <td class="title">Digital Undercover Billionaire: High School</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1bBugpRLM7t0txb8sBbMQrxZEW1-pd27C/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1bBugpRLM7t0txb8sBbMQrxZEW1-pd27C" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 22</td>
+      <td class="title">AI Phone Agent Cold Call Playbook</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1EMGlyccytADyopMPHuwGwwQNNUiwv1eV/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1EMGlyccytADyopMPHuwGwwQNNUiwv1eV" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 23</td>
+      <td class="title">Never Miss a Lead: AI Follow-Up Systems</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1FovDIy4ugvHTPbHoXFrdaod-yXY9qov3/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1FovDIy4ugvHTPbHoXFrdaod-yXY9qov3" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 24</td>
+      <td class="title">CRM Automation for Solo Operators</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1lEJFU8oZoQow8p5YmmVqcINRFMhcbsCh/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1lEJFU8oZoQow8p5YmmVqcINRFMhcbsCh" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 25</td>
+      <td class="title">The $500/Month Retainer Model</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1BFPktjbHrIoOiX6ohByxc6CmqSSgJbaK/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1BFPktjbHrIoOiX6ohByxc6CmqSSgJbaK" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 26</td>
+      <td class="title">White-Label AI: Build an Agency</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/19kZaIARyG38L3UOdLqZlc-EXWRj7ithN/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=19kZaIARyG38L3UOdLqZlc-EXWRj7ithN" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 27</td>
+      <td class="title">Local Business Lead Generation with AI</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/10VDXAqakgQXfDl2nJBCgNlrPNe2dDB5J/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=10VDXAqakgQXfDl2nJBCgNlrPNe2dDB5J" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 28</td>
+      <td class="title">GoHighLevel Mastery for Resellers</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1n2hfeTU3df98Dn_CBx663cAdBspxBBYt/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1n2hfeTU3df98Dn_CBx663cAdBspxBBYt" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 29</td>
+      <td class="title">Vapi Voice Agent Deployment Guide</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1bQe5LS1_9_4NJxSIVEETn0ysqzDwwhMX/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1bQe5LS1_9_4NJxSIVEETn0ysqzDwwhMX" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 30</td>
+      <td class="title">The AI Agency Owner's Playbook</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1HCvRkHm-ibbwHRoFPnTVuvDvP6xHEWCz/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1HCvRkHm-ibbwHRoFPnTVuvDvP6xHEWCz" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 31</td>
+      <td class="title">Rewire Your Money Mindset</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/130qL1qx74-oE51ae5wWSH8G-VX-fwZWi/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=130qL1qx74-oE51ae5wWSH8G-VX-fwZWi" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 32</td>
+      <td class="title">The Twelve Step Study Guide</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1iYMtfupW9yljV_jRufFVrCxosHCPUI-M/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1iYMtfupW9yljV_jRufFVrCxosHCPUI-M" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 33</td>
+      <td class="title">Recovery to Entrepreneurship Bridge</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1Lsiauu_V_MrBBvKggiL3DMl-rbrKWsI0/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1Lsiauu_V_MrBBvKggiL3DMl-rbrKWsI0" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 34</td>
+      <td class="title">Sober and Building: A Practical Guide</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1WPNUgZ1IEsFVLbFO5GniSF6urEYwjwxd/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1WPNUgZ1IEsFVLbFO5GniSF6urEYwjwxd" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 35</td>
+      <td class="title">Affirmations That Actually Work</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/16Ac7cZEkBvTnRqq93F5DP1kkwkMb9Y5G/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=16Ac7cZEkBvTnRqq93F5DP1kkwkMb9Y5G" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 36</td>
+      <td class="title">Nonprofit Funding Mastery</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1PPslwU94-6ryYavPsFvgkj9jdt2qMEIh/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1PPslwU94-6ryYavPsFvgkj9jdt2qMEIh" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 37</td>
+      <td class="title">Grant Writing for Small Organizations</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1Y9iy29Yc99ATgnEZkAjfSaJsALtTeeDj/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1Y9iy29Yc99ATgnEZkAjfSaJsALtTeeDj" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 38</td>
+      <td class="title">501(c)(3) Application Step-by-Step</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1_I6nB0QCZjL4t3MozkaI3dqpRaz2rEKz/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1_I6nB0QCZjL4t3MozkaI3dqpRaz2rEKz" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 39</td>
+      <td class="title">Corporate Partnership Pitching</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1HNyb-4-cSvc6U387sjRtSBML4iB4Xi9a/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1HNyb-4-cSvc6U387sjRtSBML4iB4Xi9a" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 40</td>
+      <td class="title">Community Impact Reporting</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1ELbBx5rLOhRz0RYhm341ASAs0GVwT_zJ/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1ELbBx5rLOhRz0RYhm341ASAs0GVwT_zJ" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 41</td>
+      <td class="title">Build to Sell: Exit Strategy</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1Lg51UPQ-OOX1qVoWou-3kcf4xlTJbUVh/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1Lg51UPQ-OOX1qVoWou-3kcf4xlTJbUVh" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 42</td>
+      <td class="title">The DRIP Matrix</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1jWSmXxuY6ljl4MN3BDOPGRV3KHAN9TS2/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1jWSmXxuY6ljl4MN3BDOPGRV3KHAN9TS2" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    <tr>
+      <td class="vol">Vol 43</td>
+      <td class="title">The Complete TTI Operating System Bundle</td>
+      <td class="dl"><a href="https://drive.google.com/file/d/1VRqrJsK9tjxgLMwbbCW8FCy0Utn3dA72/view" target="_blank" class="btn-view">View</a>
+      <a href="https://drive.google.com/uc?export=download&id=1VRqrJsK9tjxgLMwbbCW8FCy0Utn3dA72" target="_blank" class="btn-dl">Download</a></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div class="support">
+  <p>Questions? Email <a href="mailto:aaronreddix1987@gmail.com">aaronreddix1987@gmail.com</a> or call <a href="tel:7473018586">(747) 301-8586</a><br>
+  Total Transformation Inc. · Los Angeles, CA</p>
+</div>
+<div class="footer">
+  Total Transformation Inc. · Aaron T. Reddix · <a href="mailto:aaronreddix1987@gmail.com">aaronreddix1987@gmail.com</a><br>
+  <span style="margin-top:4px;display:block">Secure checkout powered by Stripe · © 2026 Total Transformation Inc.</span>
+</div>
 <script>
-// Product → Google Drive download link map
-// UPDATE THESE LINKS when Drive files are uploaded as public
-const PRODUCTS = {
-  '10m-blueprint':        { name: 'The 10M Blueprint',            link: 'UPLOAD_TO_DRIVE' },
-  '609-credit-repair':    { name: '609 Credit Repair System',     link: 'UPLOAD_TO_DRIVE' },
-  'real-estate-guide':    { name: 'Real Estate Investing Guide',  link: 'UPLOAD_TO_DRIVE' },
-  'cold-call-code':       { name: 'Cold Call Code',               link: 'UPLOAD_TO_DRIVE' },
-  'buy-back-time':        { name: 'Buy Back Your Time',           link: 'UPLOAD_TO_DRIVE' },
-  'money-mindset':        { name: 'Money Mindset Affirmations',   link: 'UPLOAD_TO_DRIVE' },
-  'build-to-sell':        { name: 'Build to Sell',                link: 'UPLOAD_TO_DRIVE' },
-  'become-ceo':           { name: 'Become the CEO',               link: 'UPLOAD_TO_DRIVE' },
-  'medical-billing':      { name: 'Medical Billing Mastery',      link: 'UPLOAD_TO_DRIVE' },
-  'nemt-guide':           { name: 'NEMT Business Guide',          link: 'UPLOAD_TO_DRIVE' },
-  'cybersecurity':        { name: 'Cybersecurity for Business',   link: 'UPLOAD_TO_DRIVE' },
-  'medical-him-careers':  { name: 'Medical Data & HIM Careers',   link: 'UPLOAD_TO_DRIVE' },
-};
-
-const params = new URLSearchParams(window.location.search);
-const key = params.get('product') || '10m-blueprint';
-const product = PRODUCTS[key];
-
-if (product) {
-  document.getElementById('product-title').textContent = product.name;
-  const btn = document.getElementById('download-btn');
-  if (product.link === 'UPLOAD_TO_DRIVE') {
-    btn.textContent = '📧 Check Your Email for Download Link';
-    btn.href = 'mailto:aaronreddix1987@gmail.com?subject=Download Link Request - ' + encodeURIComponent(product.name);
-  } else {
-    btn.href = product.link;
-  }
+function filterBooks() {
+  const q = document.getElementById('search').value.toLowerCase();
+  const rows = document.querySelectorAll('#tableBody tr');
+  rows.forEach(r => {
+    const text = r.textContent.toLowerCase();
+    r.style.display = text.includes(q) ? '' : 'none';
+  });
 }
 </script>
 </body>
