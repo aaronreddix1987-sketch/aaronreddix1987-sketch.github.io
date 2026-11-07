@@ -3,278 +3,99 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TTI Digital Store — 25 Products | Total Transformation Institute</title>
+<title>TTI Digital Store — Total Transformation Institute</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;background:#f4f6f9;color:#111}
-header{background:linear-gradient(135deg,#1a1a2e,#16213e);color:#fff;padding:40px 20px;text-align:center}
-header h1{font-size:2rem;margin-bottom:8px}
-header p{font-size:1.1rem;opacity:.85;max-width:600px;margin:0 auto}
-.badge{display:inline-block;background:#c8102e;color:#fff;padding:6px 16px;border-radius:20px;font-size:.85rem;font-weight:700;margin-top:12px}
-.section-title{text-align:center;padding:30px 20px 10px;font-size:1.4rem;font-weight:700;color:#1a1a2e;border-bottom:3px solid #c8102e;max-width:900px;margin:0 auto}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;padding:20px;max-width:960px;margin:0 auto}
-.card{background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.08);transition:transform .2s,box-shadow .2s}
-.card:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,0,0,.12)}
-.tier{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:3px 10px;border-radius:12px;display:inline-block;margin-bottom:10px}
-.tier-1{background:#fff3cd;color:#856404}
-.tier-2{background:#d1ecf1;color:#0c5460}
-.tier-3{background:#d4edda;color:#155724}
-.tier-4{background:#f8d7da;color:#721c24}
-.card h3{font-size:1rem;font-weight:700;margin-bottom:8px;line-height:1.3;color:#1a1a2e}
-.card p{font-size:.85rem;color:#555;margin-bottom:16px;line-height:1.5}
-.price{font-size:1.4rem;font-weight:800;color:#c8102e;margin-bottom:12px}
-.btn{display:block;text-align:center;background:#1a1a2e;color:#fff;padding:12px;border-radius:8px;text-decoration:none;font-weight:700;font-size:.9rem;transition:background .2s}
-.btn:hover{background:#c8102e}
-.free-banner{background:linear-gradient(135deg,#006400,#228B22);color:#fff;text-align:center;padding:20px;margin:10px 20px;border-radius:12px;max-width:920px;margin:20px auto}
-footer{background:#1a1a2e;color:#aaa;text-align:center;padding:30px;font-size:.85rem;margin-top:40px}
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Helvetica Neue', Arial, sans-serif; background: #f5f5f5; color: #222; }
+  header { background: #1a1a2e; color: white; padding: 24px 20px; text-align: center; }
+  header h1 { font-size: 1.8em; letter-spacing: 1px; }
+  header p { color: #aaa; font-size: 0.95em; margin-top: 6px; }
+  .hero { background: linear-gradient(135deg, #1a4b8c, #c8102e); color: white; text-align: center; padding: 32px 20px; }
+  .hero h2 { font-size: 1.5em; margin-bottom: 10px; }
+  .hero p { font-size: 1em; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+  .lead-magnet { background: #fff8e7; border: 2px solid #f5a623; margin: 20px; border-radius: 10px; padding: 20px; text-align: center; }
+  .lead-magnet h3 { color: #c8102e; font-size: 1.3em; margin-bottom: 8px; }
+  .lead-magnet p { margin-bottom: 14px; color: #444; }
+  .lead-magnet a { background: #f5a623; color: white; padding: 12px 28px; border-radius: 6px; text-decoration: none; font-weight: bold; display: inline-block; }
+  .tier-label { text-align: center; padding: 14px 20px 4px; font-size: 1.1em; font-weight: bold; color: #1a1a2e; text-transform: uppercase; letter-spacing: 1px; border-top: 3px solid #1a4b8c; margin-top: 20px; }
+  .tier-desc { text-align: center; color: #666; font-size: 0.88em; padding: 0 20px 10px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 18px; padding: 10px 20px 20px; }
+  .card { background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); padding: 20px; display: flex; flex-direction: column; }
+  .card h3 { font-size: 1em; color: #1a1a2e; margin-bottom: 6px; }
+  .card p { font-size: 0.88em; color: #555; flex-grow: 1; line-height: 1.5; margin-bottom: 14px; }
+  .price { font-size: 1.5em; font-weight: bold; color: #c8102e; margin-bottom: 12px; }
+  .btn { background: #1a4b8c; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; text-align: center; font-weight: bold; font-size: 0.9em; display: block; }
+  .btn:hover { background: #c8102e; }
+  .new-badge { background: #c8102e; color: white; font-size: 0.7em; padding: 2px 8px; border-radius: 10px; margin-left: 8px; vertical-align: middle; }
+  footer { background: #1a1a2e; color: #aaa; text-align: center; padding: 24px 20px; font-size: 0.85em; margin-top: 30px; }
+  footer a { color: #f5a623; text-decoration: none; }
 </style>
 </head>
 <body>
 <header>
   <h1>TOTAL TRANSFORMATION INSTITUTE</h1>
-  <p>Digital Resources for Reentry, Recovery, Rights & Real Estate</p>
-  <span class="badge">25 PRODUCTS — All Created by Aaron Thomas Reddix, Founder</span>
+  <p>Reentry | Recovery | Rights | Real Estate</p>
 </header>
-
-<div class="free-banner">
-  <strong>FREE GIFT: 7-Day Reentry Quick-Start Checklist</strong><br>
-  Email <a href="mailto:aaronreddix38@gmail.com?subject=FREE CHECKLIST" style="color:#90EE90">aaronreddix38@gmail.com</a> with subject: FREE CHECKLIST — Get it instantly
+<div class="hero">
+  <h2>30 Digital Products Built From Lived Experience</h2>
+  <p>Every guide, kit, and masterclass was created by someone who came home from prison and built anyway. No fluff. Only what works.</p>
 </div>
-
-<div class="section-title">TIER 1 — HIGHEST IMPACT (7-7)</div>
+<div class="lead-magnet">
+  <h3>FREE: Reentry First Week Survival Checklist</h3>
+  <p>The 25 things you must do in your first 7 days home. Download free.</p>
+  <a href="mailto:aaronreddix38@gmail.com?subject=FREE CHECKLIST REQUEST">GET FREE CHECKLIST</a>
+</div>
+<div class="tier-label">Tier 1 -- Highest Impact ($37-$97)</div>
+<div class="tier-desc">Legal rights, real estate, and financial independence.</div>
 <div class="grid">
-
-<div class="card">
-<span class="tier tier-1">Tier 1 — 7</span>
-<h3>Clean Slate — California Record Clearing Toolkit</h3>
-<p>Pre-filled PC 1203.4 petition templates, case number lookup, court cheat sheets for LA/Riverside/Orange County, 30-day calendar.</p>
-<div class="price">7</div>
-<a href="mailto:aaronreddix38@gmail.com?subject=BUY: Clean Slate Record Clearing 7" class="btn">Buy Now — Email to Order</a>
+  <div class="card"><h3>FCRA DIY Credit Dispute Kit <span class="new-badge">NEW</span></h3><p>Exact letters and system to dispute fraudulent accounts and pursue your FCRA rights against credit bureaus and banks.</p><div class="price">$47</div><a class="btn" href="mailto:aaronreddix38@gmail.com?subject=BUY: FCRA DIY Credit Dispute Kit - $47">BUY NOW</a></div>
+  <div class="card"><h3>Owner Finance Real Estate Acquisition Kit</h3><p>Buy property with a record and no bank. Find sellers, structure the deal, convert to sober living.</p><div class="price">$97</div><a class="btn" href="mailto:aaronreddix38@gmail.com?subject=BUY: Owner Finance Real Estate Kit - $97">BUY NOW</a></div>
+  <div class="card"><h3>Sober Living Operator Certification Guide</h3><p>Start a certified sober living in California. DHCS Title 9, NARR certification, 90-day launch timeline.</p><div class="price">$97</div><a class="btn" href="mailto:aaronreddix38@gmail.com?subject=BUY: Sober Living Operator Guide - $97">BUY NOW</a></div>
+  <div class="card"><h3>Small Claims Court Victory Kit <span class="new-badge">NEW</span></h3><p>Sue anyone for up to $12,500 without a lawyer in California. File, serve, win, collect.</p><div class="price">$37</div><a class="btn" href="mailto:aaronreddix38@gmail.com?subject=BUY: Small Claims Court Kit - $37">BUY NOW</a></div>
+  <div class="card"><h3>Reentry Entrepreneur MasterClass</h3><p>Build a legal business after prison. EIN, business credit, bank accounts, first $1,000 with a record.</p><div class="price">$67</div><a class="btn" href="mailto:aaronreddix38@gmail.com?subject=BUY: Reentry Entrepreneur MasterClass - $67">BUY NOW</a></div>
+  <div class="card"><h3>Peer Support Specialist Launch Kit <span class="new-badge">NEW</span></h3><p>Get RADT/CADC certified, get hired, or build your own peer support practice. Medi-Cal billing included.</p><div class="price">$57</div><a class="btn" href="mailto:aaronreddix38@gmail.com?subject=BUY: Peer Support Specialist Kit - $57">BUY NOW</a></div>
 </div>
-
-<div class="card">
-<span class="tier tier-1">Tier 1 — 7</span>
-<h3>Sober Living Operator Certification Guide</h3>
-<p>DHCS Title 9 licensing, NARR certification, house rules templates, resident agreements, referral sources — everything to open a certified sober living in CA.</p>
-<div class="price">7</div>
-<a href="mailto:aaronreddix38@gmail.com?subject=BUY: Sober Living Operator Guide 7" class="btn">Buy Now — Email to Order</a>
-</div>
-
-<div class="card">
-<span class="tier tier-1">Tier 1 — 7</span>
-<h3>Owner Finance Real Estate Acquisition Kit</h3>
-<p>Buy property with a record and no bank. Find motivated sellers, structure the deal, convert to sober living, 10X portfolio strategy.</p>
-<div class="price">7</div>
-<a href="mailto:aaronreddix38@gmail.com?subject=BUY: Owner Finance Real Estate Kit 7" class="btn">Buy Now — Email to Order</a>
-</div>
-
-<div class="card">
-<span class="tier tier-1">Tier 1 — 7</span>
-<h3>Recovery Business Blueprint — Start a Peer Support Org</h3>
-<p>501(c)(3) checklist, DHCS licensing overview, grant writing framework, program model templates — 7 instead of ,500 to a consultant.</p>
-<div class="price">7</div>
-<a href="mailto:aaronreddix38@gmail.com?subject=BUY: Recovery Business Blueprint 7" class="btn">Buy Now — Email to Order</a>
-</div>
-
-<div class="card">
-<span class="tier tier-1">Tier 1 — 7</span>
-<h3>Reentry Real Estate — Own Property With a Record</h3>
-<p>Section 8 vouchers as leverage, owner financing strategy, fair chance housing rights, building equity from zero.</p>
-<div class="price">7</div>
-<a href="mailto:aaronreddix38@gmail.com?subject=BUY: Reentry Real Estate 7" class="btn">Buy Now — Email to Order</a>
-</div>
-
-<div class="card">
-<span class="tier tier-1">Tier 1 — 7</span>
-<h3>Reentry Business Builder — Notion Template</h3>
-<p>Complete Notion workspace: business plan builder, LLC checklist, EIN guide, bank tracker, grant organizer, 90-day revenue plan.</p>
-<div class="price">7</div>
-<a href="mailto:aaronreddix38@gmail.com?subject=BUY: Reentry Business Builder Notion 7" class="btn">Buy Now — Email to Order</a>
-</div>
-
-<div class="card">
-<span class="tier tier-1">Tier 1 — 7</span>
-<h3>Reentry Entrepreneur MasterClass</h3>
-<p>EIN, LLC, business banking with a record, business credit from zero, 5 businesses under 00, CDFI loans, 90-day revenue plan.</p>
-<div class="price">7</div>
-<a href="mailto:aaronreddix38@gmail.com?subject=BUY: Reentry Entrepreneur MasterClass 7" class="btn">Buy Now — Email to Order</a>
-</div>
-
-<div class="card">
-<span class="tier tier-1">Tier 1 — 7</span>
-<h3>Nonprofit Grant Writing Made Simple</h3>
-<p>Grant proposal templates, funder research guide, budget narrative, LOI framework — written for first-time nonprofit grant seekers.</p>
-<div class="price">7</div>
-<a href="mailto:aaronreddix38@gmail.com?subject=BUY: Nonprofit Grant Writing 7" class="btn">Buy Now — Email to Order</a>
-</div>
-
-<div class="card">
-<span class="tier tier-1">Tier 1 — 7</span>
-<h3>Credit Reset System — DIY Dispute Kit</h3>
-<p>30 pre-written dispute letters (Equifax, Experian, TransUnion, CFPB, FTC), video walkthrough, 90-day action calendar.</p>
-<div class="price">7</div>
-<a href="mailto:aaronreddix38@gmail.com?subject=BUY: Credit Reset Dispute Kit 7" class="btn">Buy Now — Email to Order</a>
-</div>
-
-<div class="card">
-<span class="tier tier-1">Tier 1 — 7</span>
-<h3>Landlord Persuasion Pack — Fair Chance Housing</h3>
-<p>5 proven letter templates, background check explanation guide, reference letter templates, "how to present yourself" coaching guide.</p>
-<div class="price">7</div>
-<a href="mailto:aaronreddix38@gmail.com?subject=BUY: Landlord Persuasion Pack 7" class="btn">Buy Now — Email to Order</a>
-</div>
-
-<div class="card">
-<span class="tier tier-1">Tier 1 — 7</span>
-<h3>Hired With a Record — Employment Guide</h3>
-<p>Fair chance employers in LA, background check rights, Ban the Box law, interview scripts, resume gap strategy.</p>
-<div class="price">7</div>
-<a href="mailto:aaronreddix38@gmail.com?subject=BUY: Hired With a Record 7" class="btn">Buy Now — Email to Order</a>
-</div>
-
-<div class="card">
-<span class="tier tier-1">Tier 1 — 7</span>
-<h3>Viral Content Creator Kit</h3>
-<p>60 plug-and-play scripts, hooks, and captions for reentry and recovery creators. 90-day content calendar + DM automation scripts.</p>
-<div class="price">7</div>
-<a href="mailto:aaronreddix38@gmail.com?subject=BUY: Viral Content Creator Kit 7" class="btn">Buy Now — Email to Order</a>
-</div>
-
-</div>
-
-<div class="section-title">TIER 2 — HIGH VALUE (7-7)</div>
+<div class="tier-label">Tier 2 -- Practical Tools ($17-$47)</div>
+<div class="tier-desc">Step-by-step guides to unlock benefits, housing, and funding.</div>
 <div class="grid">
-
-<div class="card">
-<span class="tier tier-2">Tier 2 — 7</span>
-<h3>Peer Support Specialist Exam Prep Bundle</h3>
-<p>200 practice questions, flashcard deck, study schedule, plain-language guide to PSS/RADT exam content areas.</p>
-<div class="price">7</div>
-<a href="mailto:aaronreddix38@gmail.com?subject=BUY: Peer Support Exam Prep 7" class="btn">Buy Now — Email to Order</a>
+  <div class="card"><h3>Reentry Housing Navigator <span class="new-badge">NEW</span></h3><p>Find housing in LA with a record. Fair Chance Ordinance, Section 8, rapid rehousing, 50+ sober living options.</p><div class="price">$37</div><a class="btn" href="mailto:aaronreddix38@gmail.com?subject=BUY: Reentry Housing Navigator - $37">BUY NOW</a></div>
+  <div class="card"><h3>GoFundMe and Crowdfunding Blueprint <span class="new-badge">NEW</span></h3><p>Raise $5,000-$50,000 for your mission. Viral story formula and donor outreach templates.</p><div class="price">$27</div><a class="btn" href="mailto:aaronreddix38@gmail.com?subject=BUY: GoFundMe Blueprint - $27">BUY NOW</a></div>
+  <div class="card"><h3>MediCal Benefits Maximizer</h3><p>Medi-Cal, CalFresh, General Relief, housing, and free phone. Unlock everything you are entitled to same day.</p><div class="price">$27</div><a class="btn" href="mailto:aaronreddix38@gmail.com?subject=BUY: MediCal Benefits Maximizer - $27">BUY NOW</a></div>
+  <div class="card"><h3>Viral Content Creator Kit</h3><p>60 plug-and-play scripts, hooks, and captions. 90-day content calendar and monetization roadmap.</p><div class="price">$47</div><a class="btn" href="mailto:aaronreddix38@gmail.com?subject=BUY: Viral Content Creator Kit - $47">BUY NOW</a></div>
+  <div class="card"><h3>ChexSystems Banking Rights Guide</h3><p>Dispute your ChexSystems record and restore banking access. Certified mail templates and second-chance bank directory.</p><div class="price">$27</div><a class="btn" href="mailto:aaronreddix38@gmail.com?subject=BUY: ChexSystems Banking Rights Guide - $27">BUY NOW</a></div>
+  <div class="card"><h3>Federal Court Pro Se Filing Kit</h3><p>File your own federal lawsuit without an attorney. Complaint drafting, service of process, and motion basics.</p><div class="price">$47</div><a class="btn" href="mailto:aaronreddix38@gmail.com?subject=BUY: Federal Court Pro Se Kit - $47">BUY NOW</a></div>
+  <div class="card"><h3>California Expungement and Record Clearing Guide</h3><p>PC 1203.4 expungement, Prop 64 cannabis relief, Certificate of Rehabilitation without an attorney.</p><div class="price">$37</div><a class="btn" href="mailto:aaronreddix38@gmail.com?subject=BUY: Expungement Guide - $37">BUY NOW</a></div>
+  <div class="card"><h3>Nonprofit Formation Blueprint</h3><p>Start a California nonprofit for under $400. Articles of incorporation, EIN, 501(c)(3), first grant application.</p><div class="price">$47</div><a class="btn" href="mailto:aaronreddix38@gmail.com?subject=BUY: Nonprofit Formation Blueprint - $47">BUY NOW</a></div>
+  <div class="card"><h3>Reentry Job Search Playbook</h3><p>Get hired with a record. Fair chance employer directory, background check rights, resume templates, interview scripts.</p><div class="price">$37</div><a class="btn" href="mailto:aaronreddix38@gmail.com?subject=BUY: Reentry Job Search Playbook - $37">BUY NOW</a></div>
+  <div class="card"><h3>CalFresh and Food Benefits Master Guide</h3><p>Maximize your CalFresh benefit, fight wrongful denials, and stack food assistance in California.</p><div class="price">$17</div><a class="btn" href="mailto:aaronreddix38@gmail.com?subject=BUY: CalFresh Master Guide - $17">BUY NOW</a></div>
 </div>
-
-<div class="card">
-<span class="tier tier-2">Tier 2 — 7</span>
-<h3>Benefits Maximizer — MediCal, CalFresh, SSI</h3>
-<p>Every benefit you are entitled to as a returning citizen in California: Medi-Cal, CalFresh, SSI, General Relief, Section 8, free phone, more.</p>
-<div class="price">7</div>
-<a href="mailto:aaronreddix38@gmail.com?subject=BUY: Benefits Maximizer 7" class="btn">Buy Now — Email to Order</a>
-</div>
-
-<div class="card">
-<span class="tier tier-2">Tier 2 — 7</span>
-<h3>Housing Voucher Mastery — Section 8 Guide</h3>
-<p>Step-by-step LA County Section 8/HCV application, waitlist strategy, landlord finder scripts, denial appeal templates.</p>
-<div class="price">7</div>
-<a href="mailto:aaronreddix38@gmail.com?subject=BUY: Housing Voucher Mastery 7" class="btn">Buy Now — Email to Order</a>
-</div>
-
-<div class="card">
-<span class="tier tier-2">Tier 2 — 7</span>
-<h3>FTC/CFPB Complaint Master Kit</h3>
-<p>Pre-written complaint templates for CFPB, FTC, OCC, state AG, plus a guide to building a consumer rights case file.</p>
-<div class="price">7</div>
-<a href="mailto:aaronreddix38@gmail.com?subject=BUY: CFPB Complaint Kit 7" class="btn">Buy Now — Email to Order</a>
-</div>
-
-<div class="card">
-<span class="tier tier-2">Tier 2 — 7</span>
-<h3>Child Support Survival Guide</h3>
-<p>Modify orders after incarceration, arrears reduction strategies, work with the DA family support division, parental rights protection.</p>
-<div class="price">7</div>
-<a href="mailto:aaronreddix38@gmail.com?subject=BUY: Child Support Guide 7" class="btn">Buy Now — Email to Order</a>
-</div>
-
-<div class="card">
-<span class="tier tier-2">Tier 2 — 7</span>
-<h3>90-Day Reentry Launch Planner</h3>
-<p>Day-by-day fillable PDF planner: housing, ID/documents, benefits, employment, banking, legal steps. Mobile-optimized.</p>
-<div class="price">7</div>
-<a href="mailto:aaronreddix38@gmail.com?subject=BUY: 90-Day Reentry Planner 7" class="btn">Buy Now — Email to Order</a>
-</div>
-
-<div class="card">
-<span class="tier tier-2">Tier 2 — 7</span>
-<h3>Reentry Resume Builder — Templates + AI Prompts</h3>
-<p>5 resume templates for employment gaps, 20 AI prompts for cover letters, guide to addressing your record on applications.</p>
-<div class="price">7</div>
-<a href="mailto:aaronreddix38@gmail.com?subject=BUY: Resume Builder 7" class="btn">Buy Now — Email to Order</a>
-</div>
-
-<div class="card">
-<span class="tier tier-2">Tier 2 — 7</span>
-<h3>Small Claims Court Made Easy</h3>
-<p>File in California Small Claims Court without a lawyer. Demand letters, filing guide, court day prep, judgment collection.</p>
-<div class="price">7</div>
-<a href="mailto:aaronreddix38@gmail.com?subject=BUY: Small Claims Court Guide 7" class="btn">Buy Now — Email to Order</a>
-</div>
-
-<div class="card">
-<span class="tier tier-2">Tier 2 — 7</span>
-<h3>ID and Documents Fast Track</h3>
-<p>Get your CA ID, Social Security card, birth certificate, and vital documents in 48-72 hours after release. Step-by-step checklist.</p>
-<div class="price">7</div>
-<a href="mailto:aaronreddix38@gmail.com?subject=BUY: ID Fast Track 7" class="btn">Buy Now — Email to Order</a>
-</div>
-
-</div>
-
-<div class="section-title">TIER 3 — BUSINESS TOOLS (7-7)</div>
+<div class="tier-label">Tier 3 -- Business and Income ($37-$67)</div>
+<div class="tier-desc">Build real income as a formerly incarcerated entrepreneur.</div>
 <div class="grid">
-
-<div class="card">
-<span class="tier tier-3">Tier 3 — 7</span>
-<h3>Auto Transport Business in a Box</h3>
-<p>FMCSA carrier authority, 5th-wheel training, MC/DOT numbers, insurance guide, rate negotiation, first contracts.</p>
-<div class="price">7</div>
-<a href="mailto:aaronreddix38@gmail.com?subject=BUY: Auto Transport Business 7" class="btn">Buy Now — Email to Order</a>
+  <div class="card"><h3>Digital Product Business Blueprint</h3><p>Create and sell digital products. No inventory, no shipping. Build $1,000-$5,000/month from your phone.</p><div class="price">$47</div><a class="btn" href="mailto:aaronreddix38@gmail.com?subject=BUY: Digital Product Business Blueprint - $47">BUY NOW</a></div>
+  <div class="card"><h3>Reentry Coaching Business Starter Kit</h3><p>Launch a reentry coaching business. Pricing, client scripts, service packages, first 5 clients.</p><div class="price">$57</div><a class="btn" href="mailto:aaronreddix38@gmail.com?subject=BUY: Reentry Coaching Business Kit - $57">BUY NOW</a></div>
+  <div class="card"><h3>Grant Writing 101 for Nonprofits</h3><p>Write your first grant proposal. SAMHSA, HUD, DOJ Second Chance Act narrative templates and budget formats.</p><div class="price">$47</div><a class="btn" href="mailto:aaronreddix38@gmail.com?subject=BUY: Grant Writing 101 - $47">BUY NOW</a></div>
+  <div class="card"><h3>Sober Living Marketing and Referral System</h3><p>Fill your beds fast. Court referral agreements, treatment center partnerships, digital marketing for recovery housing.</p><div class="price">$57</div><a class="btn" href="mailto:aaronreddix38@gmail.com?subject=BUY: Sober Living Marketing System - $57">BUY NOW</a></div>
+  <div class="card"><h3>LinkedIn Authority Builder for Reentry Leaders</h3><p>Build a professional LinkedIn presence that attracts investors, partners, and media. 30-day posting plan.</p><div class="price">$37</div><a class="btn" href="mailto:aaronreddix38@gmail.com?subject=BUY: LinkedIn Authority Builder - $37">BUY NOW</a></div>
+  <div class="card"><h3>Credit Repair Business Launch Kit</h3><p>Start a credit repair business helping others. CA Credit Services Act compliance and client acquisition.</p><div class="price">$67</div><a class="btn" href="mailto:aaronreddix38@gmail.com?subject=BUY: Credit Repair Business Kit - $67">BUY NOW</a></div>
+  <div class="card"><h3>Transitional Housing Development Handbook</h3><p>Develop transitional and supportive housing in California. Zoning, licensing, funding, and operations.</p><div class="price">$67</div><a class="btn" href="mailto:aaronreddix38@gmail.com?subject=BUY: Transitional Housing Handbook - $67">BUY NOW</a></div>
+  <div class="card"><h3>Reentry Social Media Growth System</h3><p>Grow your audience across Instagram, TikTok, and LinkedIn. Monetize your story into sustainable income.</p><div class="price">$47</div><a class="btn" href="mailto:aaronreddix38@gmail.com?subject=BUY: Social Media Growth System - $47">BUY NOW</a></div>
+  <div class="card"><h3>Reentry Legal Document Toolkit</h3><p>All legal documents a returning citizen needs. Dispute letters, demand letters, court forms, complaint templates.</p><div class="price">$37</div><a class="btn" href="mailto:aaronreddix38@gmail.com?subject=BUY: Reentry Legal Document Toolkit - $37">BUY NOW</a></div>
+  <div class="card"><h3>Recovery Community Organization Startup Guide</h3><p>Start an RCO in California. DHCS certification, peer support workforce, and SAMHSA funding.</p><div class="price">$57</div><a class="btn" href="mailto:aaronreddix38@gmail.com?subject=BUY: RCO Startup Guide - $57">BUY NOW</a></div>
 </div>
-
-<div class="card">
-<span class="tier tier-3">Tier 3 — 7</span>
-<h3>Certified Peer Support Specialist Roadmap</h3>
-<p>CCAPP/DHCS certification requirements, RADT/CADC career ladder, job boards, salary ranges, TTI training partnership.</p>
-<div class="price">7</div>
-<a href="mailto:aaronreddix38@gmail.com?subject=BUY: Peer Support Specialist Roadmap 7" class="btn">Buy Now — Email to Order</a>
-</div>
-
-<div class="card">
-<span class="tier tier-3">Tier 3 — 7</span>
-<h3>Nonprofit Grant Tracker — Google Sheets Dashboard</h3>
-<p>Complete grant management system: funder database, deadline tracker, proposal status board, reporting calendar, budget templates.</p>
-<div class="price">7</div>
-<a href="mailto:aaronreddix38@gmail.com?subject=BUY: Grant Tracker Dashboard 7" class="btn">Buy Now — Email to Order</a>
-</div>
-
-<div class="card">
-<span class="tier tier-3">Tier 3 — 7</span>
-<h3>Sober Living Startup Blueprint</h3>
-<p>Operating agreements, house rules, intake forms, insurance guide, resident agreements, California certification overview.</p>
-<div class="price">7</div>
-<a href="mailto:aaronreddix38@gmail.com?subject=BUY: Sober Living Startup Blueprint 7" class="btn">Buy Now — Email to Order</a>
-</div>
-
-</div>
-
-<div class="section-title">TIER 4 — PREMIUM BUNDLES (7/mo+)</div>
+<div class="tier-label">Tier 4 -- Community and Membership</div>
+<div class="tier-desc">Ongoing access, mentorship, and community.</div>
 <div class="grid">
-
-<div class="card">
-<span class="tier tier-4">Membership — 7/mo</span>
-<h3>Total Transformation Vault — Monthly Membership</h3>
-<p>All 25 TTI products + monthly new templates + group coaching calls + private community. First 7 days FREE.</p>
-<div class="price">7/month</div>
-<a href="mailto:aaronreddix38@gmail.com?subject=JOIN: TTI Vault Membership 7/month" class="btn">Join Now — Email to Start</a>
+  <div class="card"><h3>TTI Inner Circle Membership</h3><p>Monthly coaching calls with Aaron, early access to new resources, peer community, and accountability.</p><div class="price">$47/mo</div><a class="btn" href="mailto:aaronreddix38@gmail.com?subject=JOIN: TTI Inner Circle Membership - $47/month">JOIN NOW</a></div>
+  <div class="card"><h3>The Complete TTI Bundle -- All 30 Products</h3><p>Every guide, kit, and masterclass in the TTI library. The complete system for reentry rights, real estate, and business.</p><div class="price">$497</div><a class="btn" href="mailto:aaronreddix38@gmail.com?subject=BUY: Complete TTI Bundle - $497">BUY NOW</a></div>
+  <div class="card"><h3>1-on-1 Strategy Session with Aaron</h3><p>60 minutes direct with Aaron. Credit disputes, sober living, nonprofit formation, or reentry business strategy.</p><div class="price">$97</div><a class="btn" href="mailto:aaronreddix38@gmail.com?subject=BOOK: 1-on-1 Strategy Session - $97">BOOK NOW</a></div>
+  <div class="card"><h3>Donate to TTI -- Support the Mission</h3><p>Help build 15 beds of certified sober living in Sun Valley, LA. Every dollar goes toward the down payment.</p><div class="price">Any Amount</div><a class="btn" href="https://gofund.me/b94ce460" target="_blank">DONATE NOW</a></div>
 </div>
-
-</div>
-
 <footer>
-  <strong>Total Transformation Institute</strong> | Aaron Thomas Reddix, Founder<br>
-  Los Angeles, California | (747) 301-8586 | aaronreddix38@gmail.com<br>
-  EIN: 32-0663781 | Reentry · Recovery · Rights · Real Estate<br><br>
-  <em>All products are digital downloads delivered by email within 24 hours of payment confirmation.<br>
-  To order: email aaronreddix38@gmail.com with product name and amount in subject line.</em>
+  <p><strong>Total Transformation Institute</strong> | EIN: 32-0663781 | Los Angeles, CA 90011</p>
+  <p style="margin-top:8px;">Questions: <a href="mailto:aaronreddix38@gmail.com">aaronreddix38@gmail.com</a> | (747) 301-8586</p>
+  <p style="margin-top:8px;">Federal Case: 2:26-cv-03718-UA | CFPB: #260910-38224779 | FTC: #206871188</p>
+  <p style="margin-top:12px; color:#666;">Built by a formerly incarcerated founder. All proceeds fund sober living development and reentry services in Los Angeles.</p>
 </footer>
 </body>
 </html>
