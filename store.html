@@ -1,94 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>TTI Digital Store — Reentry Resources</title>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TTI Digital Store — Reentry & Recovery Resources</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#f5f5f5;color:#222}
-header{background:#1a3a1a;color:#fff;padding:20px 30px;text-align:center}
-header h1{font-size:28px;margin-bottom:4px}
-header p{opacity:.85;font-size:14px}
-.gofundme-bar{background:#e8f5e9;border:2px solid #2e7d32;padding:14px 20px;text-align:center;font-size:14px}
-.gofundme-bar a{color:#1a3a1a;font-weight:bold;font-size:16px}
-.store-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;padding:30px;max-width:1100px;margin:0 auto}
-.product-card{background:#fff;border-radius:10px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,.1);display:flex;flex-direction:column;align-items:center;text-align:center}
-.product-price{font-size:32px;font-weight:bold;color:#c62828;margin-bottom:8px}
-.product-card h3{font-size:15px;color:#1a3a1a;margin-bottom:14px;line-height:1.4}
-.btn-buy{background:#1a3a1a;color:#fff;padding:10px 20px;border-radius:6px;text-decoration:none;font-size:13px;font-weight:bold;width:100%;display:block}
-.btn-buy:hover{background:#2e7d32}
-.hero{background:#1a3a1a;color:#fff;text-align:center;padding:30px 20px}
-.hero h2{font-size:22px;margin-bottom:8px}
-footer{background:#111;color:#aaa;text-align:center;padding:16px;font-size:12px}
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f4f7f4; color: #1a1a1a; }
+  .header { background: linear-gradient(135deg, #1a4d1a, #2d8a2d); color: white; padding: 40px 20px; text-align: center; }
+  .header h1 { font-size: 2em; margin-bottom: 8px; }
+  .header p { font-size: 1.1em; opacity: 0.9; max-width: 700px; margin: 0 auto 16px; }
+  .header .stats { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 20px; }
+  .header .stat { text-align: center; }
+  .header .stat .num { font-size: 2em; font-weight: bold; }
+  .header .stat .label { font-size: 0.85em; opacity: 0.8; }
+  .nav { background: #fff; padding: 12px 20px; text-align: center; border-bottom: 2px solid #e0e8e0; }
+  .nav a { color: #1a4d1a; font-weight: bold; margin: 0 15px; text-decoration: none; font-size: 0.95em; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 30px 20px; }
+  .section-title { font-size: 1.5em; font-weight: bold; color: #1a4d1a; margin: 30px 0 15px; border-left: 4px solid #2d8a2d; padding-left: 12px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+  .card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.2s, box-shadow 0.2s; }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.13); }
+  .card-badge { background: #1a4d1a; color: white; padding: 6px 14px; font-size: 0.75em; font-weight: bold; display: inline-block; }
+  .card-body { padding: 18px; }
+  .card-title { font-size: 1.05em; font-weight: bold; color: #1a1a1a; margin-bottom: 6px; }
+  .card-desc { font-size: 0.88em; color: #555; line-height: 1.5; margin-bottom: 12px; }
+  .card-price { font-size: 1.4em; font-weight: bold; color: #1a6b1a; margin-bottom: 12px; }
+  .card-btn { display: block; background: #2d8a2d; color: white; text-align: center; padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9em; transition: background 0.2s; }
+  .card-btn:hover { background: #1a4d1a; }
+  .free-lead { background: linear-gradient(135deg, #fff9e6, #fff3cc); border: 2px solid #f0a500; border-radius: 10px; padding: 25px; text-align: center; margin: 20px 0 30px; }
+  .free-lead h3 { color: #b07500; font-size: 1.3em; margin-bottom: 8px; }
+  .free-lead p { color: #555; margin-bottom: 15px; }
+  .free-lead a { background: #f0a500; color: white; padding: 12px 30px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 1em; }
+  .contact { background: #1a4d1a; color: white; padding: 40px 20px; text-align: center; margin-top: 40px; }
+  .contact h3 { font-size: 1.4em; margin-bottom: 10px; }
+  .contact p { opacity: 0.85; margin-bottom: 6px; }
+  .contact a { color: #7ddc7d; }
+  .tier-label { font-size: 0.75em; background: #e8f5e8; color: #1a4d1a; padding: 2px 8px; border-radius: 10px; font-weight: bold; display: inline-block; margin-bottom: 8px; }
 </style>
 </head>
 <body>
-<header>
-  <h1>🌱 Total Transformation Institute</h1>
-  <p>Digital Resources for Formerly Incarcerated Individuals | Los Angeles, CA</p>
-</header>
-<div class="gofundme-bar">
-  ❤️ Support our mission — <a href="https://gofund.me/b94ce460" target="_blank">Donate on GoFundMe →</a>
-  &nbsp;|&nbsp; Website: <a href="https://aaronreddix1987-sketch.github.io">aaronreddix1987-sketch.github.io</a>
-</div>
-<div class="hero">
-  <h2>📚 10 Digital Products — Total Value $530</h2>
-  <p style="opacity:.85;font-size:14px;margin-top:6px">Everything you need to clear your record, fix your credit, find housing, start a business, and build generational wealth — created by someone who's been there.</p>
-</div>
-<div class="store-grid">
 
-    <div class="product-card">
-      <div class="product-price">$97</div>
-      <h3>Clean Slate Record Clearing Toolkit</h3>
-      <a href="https://drive.google.com/file/d/1lG9ldaJkFBZUUYcHidYiCTOGsD7mkFFM/view" class="btn-buy" target="_blank">📥 Download PDF</a>
-    </div>
-    <div class="product-card">
-      <div class="product-price">$47</div>
-      <h3>Credit Reset System — DIY Dispute Kit</h3>
-      <a href="https://drive.google.com/file/d/1WWYorLROTWCIdrRKB578SLGE5MiTmGCY/view" class="btn-buy" target="_blank">📥 Download PDF</a>
-    </div>
-    <div class="product-card">
-      <div class="product-price">$67</div>
-      <h3>Reentry Business Builder Notion Template</h3>
-      <a href="https://drive.google.com/file/d/1mDBYrAPR_gz1QJihFh1pUGKjerHVS-0e/view" class="btn-buy" target="_blank">📥 Download PDF</a>
-    </div>
-    <div class="product-card">
-      <div class="product-price">$47</div>
-      <h3>Landlord Persuasion Pack</h3>
-      <a href="https://drive.google.com/file/d/1AgMW6NloH7neZ4_8NieCflcUOpykTZ_R/view" class="btn-buy" target="_blank">📥 Download PDF</a>
-    </div>
-    <div class="product-card">
-      <div class="product-price">$37</div>
-      <h3>FTC/CFPB Complaint Master Kit</h3>
-      <a href="https://drive.google.com/file/d/1yNck18hG3533FjNsrkOVkGkwD4p4rjYn/view" class="btn-buy" target="_blank">📥 Download PDF</a>
-    </div>
-    <div class="product-card">
-      <div class="product-price">$37</div>
-      <h3>Peer Support Specialist Exam Prep Bundle</h3>
-      <a href="https://drive.google.com/file/d/1EEmwyr0mn0wIkCU7aIcI_4HyRBKpMGKO/view" class="btn-buy" target="_blank">📥 Download PDF</a>
-    </div>
-    <div class="product-card">
-      <div class="product-price">$27</div>
-      <h3>Reentry Resume Builder + AI Prompts</h3>
-      <a href="https://drive.google.com/file/d/1-4RM_vu5XelIMu5DyF5XlgYWntY5KqDm/view" class="btn-buy" target="_blank">📥 Download PDF</a>
-    </div>
-    <div class="product-card">
-      <div class="product-price">$27</div>
-      <h3>90-Day Reentry Launch Plan Digital Planner</h3>
-      <a href="https://drive.google.com/file/d/1NX49fbYdYuiiT4Y94T2_tye13wdddRk-/view" class="btn-buy" target="_blank">📥 Download PDF</a>
-    </div>
-    <div class="product-card">
-      <div class="product-price">$97</div>
-      <h3>Recovery Business Blueprint</h3>
-      <a href="https://drive.google.com/file/d/1_BLRn9LNH2K4YSHca43xdcHhfhk6IH9x/view" class="btn-buy" target="_blank">📥 Download PDF</a>
-    </div>
-    <div class="product-card">
-      <div class="product-price">$47</div>
-      <h3>Nonprofit Grant Tracker Google Sheets</h3>
-      <a href="https://drive.google.com/file/d/1QBlbVhbTSd__vuwb8x5ZUT96cNjgaGYs/view" class="btn-buy" target="_blank">📥 Download PDF</a>
-    </div>
+<div class="header">
+  <h1>Total Transformation Institute</h1>
+  <p>Digital Resources for Reentry, Recovery &amp; Community Rebuilding — Los Angeles, California</p>
+  <div class="stats">
+    <div class="stat"><div class="num">20</div><div class="label">Products Available</div></div>
+    <div class="stat"><div class="num">500K+</div><div class="label">CA Record Clearing Eligible</div></div>
+    <div class="stat"><div class="num">$1,200</div><div class="label">Saved vs. Lexington Law</div></div>
+    <div class="stat"><div class="num">400K+</div><div class="label">Section 8 Waitlist in LA</div></div>
+  </div>
 </div>
-<footer>
-  Total Transformation Institute | Aaron Thomas Reddix | (747) 301-8586 | aaronreddix38@gmail.com<br>
-  EIN: 32-0663781 | CA Corp: C4861952 | Los Angeles, CA 90011 | © 2026
-</footer>
-</body></html>
+
+<div class="nav">
+  <a href="/">Home</a>
+  <a href="/store.html">Store</a>
+  <a href="mailto:aaronreddix38@gmail.com">Contact</a>
+  <a href="https://gofund.me/b94ce460" target="_blank">Support TTI</a>
+</div>
+
+<div class="container">
+
+  <div class="free-lead">
+    <h3>🎁 FREE — 7-Day Reentry Quick-Start Checklist</h3>
+    <p>The exact steps to get ID, benefits, housing, and income in your first week out. Used by 1,000+ returning citizens.</p>
+    <a href="mailto:aaronreddix38@gmail.com?subject=Free 7-Day Checklist">Get It Free — Email Us</a>
+  </div>
+
+  <div class="section-title">TIER 1 — Best Sellers ($37–$97)</div>
+  <div class="grid">
+    <div class="card">
+      <span class="card-badge">🏆 BEST SELLER</span>
+      <div class="card-body">
+        <span class="tier-label">Record Clearing</span>
+        <div class="card-title">CLEAN SLATE — California Record Clearing Toolkit</div>
+        <div class="card-desc">Pre-filled PC 1203.4 petition templates, case number lookup, court cheat sheets for LA/Riverside/Orange/San Bernardino County, 30-day calendar.</div>
+        <div class="card-price">$97</div>
+        <a href="mailto:aaronreddix38@gmail.com?subject=Purchase: Clean Slate Toolkit $97" class="card-btn">Buy Now — $97</a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="card-badge">🔥 HIGH DEMAND</span>
+      <div class="card-body">
+        <span class="tier-label">Credit Repair</span>
+        <div class="card-title">CREDIT RESET SYSTEM — DIY Credit Dispute Kit</div>
+        <div class="card-desc">30 pre-written dispute letter templates for all 3 bureaus + CFPB/FTC. Video walkthrough, credit score tracker, 90-day action calendar. Save $1,200/year vs. Lexington Law.</div>
+        <div class="card-price">$47</div>
+        <a href="mailto:aaronreddix38@gmail.com?subject=Purchase: Credit Reset System $47" class="card-btn">Buy Now — $47</a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="card-badge">💼 ENTREPRENEUR</span>
+      <div class="card-body">
+        <span class="tier-label">Business</span>
+        <div class="card-title">REENTRY BUSINESS BUILDER — Notion Template</div>
+        <div class="card-desc">Complete Notion workspace: business plan, LLC checklist, EIN guide, bank account tracker, grant organizer, 90-day revenue plan. Zero competition in this niche.</div>
+        <div class="card-price">$67</div>
+        <a href="mailto:aaronreddix38@gmail.com?subject=Purchase: Reentry Business Builder $67" class="card-btn">Buy Now — $67</a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="card-badge">🏠 HOUSING</span>
+      <div class="card-body">
+        <span class="tier-label">Fair Chance Housing</span>
+        <div class="card-title">LANDLORD PERSUASION PACK — Housing Application Toolkit</div>
+        <div class="card-desc">5 proven letter templates for convincing landlords to accept applicants with records. Background check explanation guide, reference letter templates.</div>
+        <div class="card-price">$47</div>
+        <a href="mailto:aaronreddix38@gmail.com?subject=Purchase: Landlord Persuasion Pack $47" class="card-btn">Buy Now — $47</a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="card-badge">🏡 REAL ESTATE</span>
+      <div class="card-body">
+        <span class="tier-label">Creative Finance</span>
+        <div class="card-title">OWN REAL ESTATE WITH A RECORD</div>
+        <div class="card-desc">Owner financing, land contracts, subject-to, hard money, lease-option strategies. No bank needed. Sober living investment model included. California-specific.</div>
+        <div class="card-price">$97</div>
+        <a href="mailto:aaronreddix38@gmail.com?subject=Purchase: Real Estate with a Record $97" class="card-btn">Buy Now — $97</a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="card-badge">🏥 RECOVERY BIZ</span>
+      <div class="card-body">
+        <span class="tier-label">Sober Living</span>
+        <div class="card-title">SOBER LIVING STARTUP BLUEPRINT</div>
+        <div class="card-desc">DHCS certification, zoning, Medi-Cal billing, NARR standards, grant funding (SAMHSA/BSCC/PATH), operations manual template. 15-bed facility model.</div>
+        <div class="card-price">$97</div>
+        <a href="mailto:aaronreddix38@gmail.com?subject=Purchase: Sober Living Startup Blueprint $97" class="card-btn">Buy Now — $97</a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="card-badge">📝 GRANT WRITING</span>
+      <div class="card-body">
+        <span class="tier-label">Nonprofits</span>
+        <div class="card-title">GRANT WRITING MADE SIMPLE</div>
+        <div class="card-desc">10 pre-written grant templates, 200+ funder database, program design guide, budget narrative template, outcome metrics. For reentry/recovery nonprofits.</div>
+        <div class="card-price">$67</div>
+        <a href="mailto:aaronreddix38@gmail.com?subject=Purchase: Grant Writing Made Simple $67" class="card-btn">Buy Now — $67</a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="card-badge">🚛 TRANSPORT</span>
+      <div class="card-body">
+        <span class="tier-label">Auto Business</span>
+        <div class="card-title">AUTO TRANSPORT BUSINESS IN A BOX</div>
+        <div class="card-desc">FMCSA MC/DOT number walkthrough, insurance, load boards, pricing, contracts. $5,000–$15,000/month potential. Earn $3–$7/mile from day one.</div>
+        <div class="card-price">$97</div>
+        <a href="mailto:aaronreddix38@gmail.com?subject=Purchase: Auto Transport Business $97" class="card-btn">Buy Now — $97</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">TIER 2 — High Value ($17–$47)</div>
+  <div class="grid">
+    <div class="card">
+      <span class="card-badge">💰 BENEFITS</span>
+      <div class="card-body">
+        <span class="tier-label">Government Benefits</span>
+        <div class="card-title">BENEFITS NAVIGATOR — Government Benefits Guide</div>
+        <div class="card-desc">SSI, SNAP/CalFresh, MediCal, General Relief, Section 8, CalWORKS, WIOA. 30-day action calendar. Appeal letter templates. Get every dollar you're owed.</div>
+        <div class="card-price">$37</div>
+        <a href="mailto:aaronreddix38@gmail.com?subject=Purchase: Benefits Navigator $37" class="card-btn">Buy Now — $37</a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="card-badge">👔 EMPLOYMENT</span>
+      <div class="card-body">
+        <span class="tier-label">Jobs</span>
+        <div class="card-title">HIRED WITH A RECORD — Job Search System</div>
+        <div class="card-desc">Ban the Box employers, Federal Bonding Program, WOTC tax credit ($9,600), staffing agencies, gig economy guide. Word-for-word interview scripts.</div>
+        <div class="card-price">$47</div>
+        <a href="mailto:aaronreddix38@gmail.com?subject=Purchase: Hired with a Record $47" class="card-btn">Buy Now — $47</a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="card-badge">🧑‍⚕️ PEER SUPPORT</span>
+      <div class="card-body">
+        <span class="tier-label">Certification</span>
+        <div class="card-title">BECOME A CERTIFIED PEER SUPPORT SPECIALIST</div>
+        <div class="card-desc">DHCS PSS, CAADAC, CCAPP pathways, 100 practice exam questions, 20 free training programs in LA, 100+ employers hiring now. $18–$32/hour.</div>
+        <div class="card-price">$47</div>
+        <a href="mailto:aaronreddix38@gmail.com?subject=Purchase: Peer Support Certification $47" class="card-btn">Buy Now — $47</a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="card-badge">👨‍👧 CHILD SUPPORT</span>
+      <div class="card-body">
+        <span class="tier-label">Family</span>
+        <div class="card-title">CHILD SUPPORT SURVIVAL GUIDE</div>
+        <div class="card-desc">Modify, suspend, or compromise arrears. FL-300 pro se walkthrough, DCSS negotiation scripts, tax intercept protection, hardship exemption guide.</div>
+        <div class="card-price">$37</div>
+        <a href="mailto:aaronreddix38@gmail.com?subject=Purchase: Child Support Survival Guide $37" class="card-btn">Buy Now — $37</a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="card-badge">⚖️ LEGAL</span>
+      <div class="card-body">
+        <span class="tier-label">Self-Help Legal</span>
+        <div class="card-title">SMALL CLAIMS COURT MADE EASY</div>
+        <div class="card-desc">Sue landlords, employers, creditors for up to $12,500. SC-100 walkthrough, service of process, wage garnishment, pre-filled templates. No lawyer needed.</div>
+        <div class="card-price">$27</div>
+        <a href="mailto:aaronreddix38@gmail.com?subject=Purchase: Small Claims Court Guide $27" class="card-btn">Buy Now — $27</a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="card-badge">🪪 DOCUMENTS</span>
+      <div class="card-body">
+        <span class="tier-label">ID Fast Track</span>
+        <div class="card-title">ID &amp; DOCUMENTS FAST TRACK</div>
+        <div class="card-desc">Get your birth certificate, Social Security card, California ID, bank account, and phone in 7 days or less. DMV DL-937 fee waiver included.</div>
+        <div class="card-price">$17</div>
+        <a href="mailto:aaronreddix38@gmail.com?subject=Purchase: ID and Documents Fast Track $17" class="card-btn">Buy Now — $17</a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="card-badge">📋 PSS EXAM</span>
+      <div class="card-body">
+        <span class="tier-label">Study Bundle</span>
+        <div class="card-title">PEER SUPPORT SPECIALIST EXAM PREP</div>
+        <div class="card-desc">200 practice questions, flashcard deck, study schedule, plain-language guide to PSS exam content areas. Pass your exam the first time.</div>
+        <div class="card-price">$37</div>
+        <a href="mailto:aaronreddix38@gmail.com?subject=Purchase: PSS Exam Prep $37" class="card-btn">Buy Now — $37</a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="card-badge">📄 RESUME</span>
+      <div class="card-body">
+        <span class="tier-label">Career</span>
+        <div class="card-title">REENTRY RESUME BUILDER — Templates + AI Prompts</div>
+        <div class="card-desc">5 resume templates for employment gaps, 20 AI prompt scripts for ChatGPT to write tailored cover letters, guide to addressing your record.</div>
+        <div class="card-price">$27</div>
+        <a href="mailto:aaronreddix38@gmail.com?subject=Purchase: Reentry Resume Builder $27" class="card-btn">Buy Now — $27</a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="card-badge">🗓️ PLANNER</span>
+      <div class="card-body">
+        <span class="tier-label">Digital Planner</span>
+        <div class="card-title">90-DAY REENTRY LAUNCH PLAN</div>
+        <div class="card-desc">Day-by-day fillable PDF planner: housing, ID, benefits, employment, banking, legal steps. Mobile-optimized. The first 90 days are the most important.</div>
+        <div class="card-price">$27</div>
+        <a href="mailto:aaronreddix38@gmail.com?subject=Purchase: 90-Day Reentry Plan $27" class="card-btn">Buy Now — $27</a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="card-badge">🏛️ NONPROFIT</span>
+      <div class="card-body">
+        <span class="tier-label">Org Building</span>
+        <div class="card-title">RECOVERY BUSINESS BLUEPRINT</div>
+        <div class="card-desc">Start a certified peer support nonprofit: 501(c)(3) checklist, DHCS licensing overview, grant writing framework, program model templates. Full startup guide.</div>
+        <div class="card-price">$97</div>
+        <a href="mailto:aaronreddix38@gmail.com?subject=Purchase: Recovery Business Blueprint $97" class="card-btn">Buy Now — $97</a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="card-badge">⚖️ CONSUMER</span>
+      <div class="card-body">
+        <span class="tier-label">Consumer Rights</span>
+        <div class="card-title">FTC/CFPB COMPLAINT MASTER KIT</div>
+        <div class="card-desc">Pre-written complaint templates for CFPB, FTC, OCC, state AG. Build your consumer rights case file, track responses. Know your rights under FCRA/FDCPA.</div>
+        <div class="card-price">$37</div>
+        <a href="mailto:aaronreddix38@gmail.com?subject=Purchase: FTC CFPB Complaint Kit $37" class="card-btn">Buy Now — $37</a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="card-badge">📊 NONPROFIT TOOL</span>
+      <div class="card-body">
+        <span class="tier-label">Operations</span>
+        <div class="card-title">NONPROFIT GRANT TRACKER — Google Sheets Dashboard</div>
+        <div class="card-desc">Complete grant management system: funder database, deadline tracker, proposal status board, reporting calendar, budget templates. One-time $47 vs. $200/month SaaS.</div>
+        <div class="card-price">$47</div>
+        <a href="mailto:aaronreddix38@gmail.com?subject=Purchase: Nonprofit Grant Tracker $47" class="card-btn">Buy Now — $47</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">TIER 3 — Membership &amp; B2B (Highest ROI)</div>
+  <div class="grid">
+    <div class="card">
+      <span class="card-badge">🔁 RECURRING</span>
+      <div class="card-body">
+        <span class="tier-label">Monthly Membership</span>
+        <div class="card-title">TOTAL TRANSFORMATION VAULT — Monthly Membership</div>
+        <div class="card-desc">All 20 TTI digital products + monthly live group coaching calls + new templates each month + private community. 7-day free trial for all ebook buyers.</div>
+        <div class="card-price">$17/month</div>
+        <a href="mailto:aaronreddix38@gmail.com?subject=Join: TTI Vault Membership $17/month" class="card-btn">Join the Vault — $17/mo</a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="card-badge">🏢 ORGANIZATIONS</span>
+      <div class="card-body">
+        <span class="tier-label">Done-For-You</span>
+        <div class="card-title">DONE-FOR-YOU REENTRY PROGRAM TOOLKIT</div>
+        <div class="card-desc">Complete 12-week reentry curriculum, facilitator guides, participant workbooks, intake forms, outcome tools, grant proposal template. For reentry organizations.</div>
+        <div class="card-price">$297–$497</div>
+        <a href="mailto:aaronreddix38@gmail.com?subject=Purchase: Done-for-You Program Toolkit" class="card-btn">Inquire Now</a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="card-badge">🤖 AI TOOLS</span>
+      <div class="card-body">
+        <span class="tier-label">Automation</span>
+        <div class="card-title">AI TOOLS FOR REENTRY ORGS</div>
+        <div class="card-desc">Monthly Notion/Zapier automation templates for reentry orgs: intake forms, case management workflows, grant tracking dashboards. Zero competition in this niche.</div>
+        <div class="card-price">$47/month</div>
+        <a href="mailto:aaronreddix38@gmail.com?subject=Subscribe: AI Tools for Reentry Orgs $47/month" class="card-btn">Subscribe — $47/mo</a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="card-badge">💬 CHATBOT</span>
+      <div class="card-body">
+        <span class="tier-label">Technology</span>
+        <div class="card-title">AI CHATBOT FOR REENTRY SERVICES</div>
+        <div class="card-desc">Pre-built chatbot answering common questions about expungement, housing, employment, benefits. Ready to deploy in 30 minutes via Tidio or Chatbase.</div>
+        <div class="card-price">$197</div>
+        <a href="mailto:aaronreddix38@gmail.com?subject=Purchase: AI Chatbot for Reentry $197" class="card-btn">Buy Now — $197</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="contact">
+  <h3>Total Transformation Institute — Aaron Thomas Reddix</h3>
+  <p>Los Angeles, California 90011 | EIN: 32-0663781 | CA Corp: C4861952</p>
+  <p>📧 <a href="mailto:aaronreddix38@gmail.com">aaronreddix38@gmail.com</a> &nbsp;|&nbsp; 📞 (747) 301-8586</p>
+  <p style="margin-top:12px;">
+    <a href="https://gofund.me/b94ce460">Support TTI on GoFundMe</a> &nbsp;|&nbsp;
+    <a href="/">Back to Home</a>
+  </p>
+  <p style="margin-top:16px; font-size:0.8em; opacity:0.6;">
+    © 2026 Total Transformation Institute. All products are for educational and informational purposes.
+    Not legal advice. Formerly incarcerated, in recovery, and rebuilding — Los Angeles, California.
+  </p>
+</div>
+
+</body>
+</html>
