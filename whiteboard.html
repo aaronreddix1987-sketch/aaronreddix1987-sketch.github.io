@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TTI Command Center — Live Whiteboard & Tracking</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Courier New',monospace;background:#050505;color:#00ff88;min-height:100vh}
+header{background:#000;border-bottom:2px solid #00ff88;padding:16px 24px;display:flex;justify-content:space-between;align-items:center}
+header h1{font-size:18px;font-weight:bold;letter-spacing:2px}
+.live-dot{width:10px;height:10px;border-radius:50%;background:#00ff88;display:inline-block;margin-right:8px;animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.timestamp{font-size:12px;color:#666}
+/* GRID */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;padding:20px;max-width:1400px;margin:0 auto}
+.panel{background:#0a0a0a;border:1px solid #1a1a1a;border-radius:8px;padding:20px}
+.panel.green{border-color:#00ff88}
+.panel.red{border-color:#ff4444}
+.panel.yellow{border-color:#ffaa00}
+.panel.blue{border-color:#0088ff}
+.panel-title{font-size:11px;letter-spacing:3px;text-transform:uppercase;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid #1a1a1a}
+.panel-title.green{color:#00ff88;border-color:#00ff88}
+.panel-title.red{color:#ff4444;border-color:#ff4444}
+.panel-title.yellow{color:#ffaa00;border-color:#ffaa00}
+.panel-title.blue{color:#0088ff;border-color:#0088ff}
+/* STATUS ITEMS */
+.status-item{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #111;font-size:13px}
+.status-item:last-child{border-bottom:none}
+.status-item .label{color:#888}
+.status-item .value{font-weight:bold}
+.ok{color:#00ff88}
+.warn{color:#ffaa00}
+.dead{color:#ff4444}
+.pending{color:#0088ff}
+/* FUNNEL VIZ */
+.funnel-viz{margin:16px 0}
+.funnel-stage{margin:6px 0}
+.funnel-stage .stage-label{font-size:11px;color:#666;margin-bottom:3px;display:flex;justify-content:space-between}
+.funnel-bar{height:20px;background:#111;border-radius:3px;overflow:hidden}
+.funnel-fill{height:100%;border-radius:3px;transition:width 0.5s}
+.fill-green{background:#00ff88}
+.fill-yellow{background:#ffaa00}
+.fill-red{background:#ff4444}
+.fill-blue{background:#0088ff}
+/* LINKS TABLE */
+.link-table{width:100%;border-collapse:collapse;font-size:12px}
+.link-table td{padding:6px 4px;border-bottom:1px solid #111}
+.link-table td:first-child{color:#888;width:50%}
+.link-table a{color:#0088ff;text-decoration:none;word-break:break-all;font-size:11px}
+.link-table a:hover{color:#00aaff}
+/* PROGRESS BARS */
+.progress{margin:8px 0}
+.progress-label{display:flex;justify-content:space-between;font-size:11px;color:#888;margin-bottom:4px}
+.progress-bar{height:8px;background:#111;border-radius:4px;overflow:hidden}
+.progress-fill{height:100%;border-radius:4px}
+/* BIG NUMBERS */
+.big-num{font-size:48px;font-weight:bold;text-align:center;margin:16px 0}
+.big-num.green{color:#00ff88}
+.big-num.yellow{color:#ffaa00}
+.big-num.blue{color:#0088ff}
+.big-num small{font-size:14px;color:#666;display:block;margin-top:-8px}
+/* CHECKLIST */
+.checklist{list-style:none}
+.checklist li{padding:6px 0;border-bottom:1px solid #111;font-size:13px;display:flex;gap:8px;align-items:flex-start}
+.check-done::before{content:"✅";flex-shrink:0}
+.check-warn::before{content:"⚠️";flex-shrink:0}
+.check-todo::before{content:"⬜";flex-shrink:0}
+.check-fire::before{content:"🔥";flex-shrink:0}
+/* WIDE PANELS */
+.wide{grid-column:1/-1}
+.half{grid-column:span 2}
+@media(max-width:700px){.half{grid-column:1}}
+</style>
+</head>
+<body>
+<header>
+  <h1><span class="live-dot"></span>TTI COMMAND CENTER — LIVE WHITEBOARD</h1>
+  <div class="timestamp">Last updated: Nov 11, 2026 | Aaron T. Reddix, CEO</div>
+</header>
+
+<div class="grid">
+
+<!-- PLATFORM STATUS -->
+<div class="panel green">
+  <div class="panel-title green">🟢 PLATFORM STATUS</div>
+  <div class="status-item"><span class="label">Main Site (GitHub Pages)</span><span class="value ok">✅ LIVE</span></div>
+  <div class="status-item"><span class="label">TNN News Page</span><span class="value ok">✅ LIVE</span></div>
+  <div class="status-item"><span class="label">Funnel Page</span><span class="value ok">✅ LIVE</span></div>
+  <div class="status-item"><span class="label">Ebooks Store (44 products)</span><span class="value ok">✅ LIVE</span></div>
+  <div class="status-item"><span class="label">Investor Overview Page</span><span class="value ok">✅ LIVE</span></div>
+  <div class="status-item"><span class="label">Thank You Page</span><span class="value ok">✅ LIVE</span></div>
+  <div class="status-item"><span class="label">Stripe Payment Links (44+)</span><span class="value ok">✅ ACTIVE</span></div>
+  <div class="status-item"><span class="label">Stripe Public Key</span><span class="value ok">pk_live_51N2Y5aK...</span></div>
+  <div class="status-item"><span class="label">Stripe Payout Account</span><span class="value warn">⚠️ VERIFY BANK</span></div>
+</div>
+
+<!-- REVENUE TRACKER -->
+<div class="panel yellow">
+  <div class="panel-title yellow">💰 REVENUE TARGETS</div>
+  <div class="progress">
+    <div class="progress-label"><span>Month 1 Target: $3,000</span><span class="warn">LAUNCHING</span></div>
+    <div class="progress-bar"><div class="progress-fill" style="width:5%;background:#ffaa00"></div></div>
+  </div>
+  <div class="progress">
+    <div class="progress-label"><span>Month 3 Target: $10,000</span><span class="pending">PIPELINE</span></div>
+    <div class="progress-bar"><div class="progress-fill" style="width:0%;background:#0088ff"></div></div>
+  </div>
+  <div class="progress">
+    <div class="progress-label"><span>Month 6 Target: $25,000 MRR</span><span class="pending">PROJECTED</span></div>
+    <div class="progress-bar"><div class="progress-fill" style="width:0%;background:#0088ff"></div></div>
+  </div>
+  <div class="progress">
+    <div class="progress-label"><span>Year 1 Target: $50,000 MRR</span><span class="pending">PROJECTED</span></div>
+    <div class="progress-bar"><div class="progress-fill" style="width:0%;background:#0088ff"></div></div>
+  </div>
+  <div style="margin-top:16px;border-top:1px solid #222;padding-top:12px">
+    <div class="status-item"><span class="label">Active Stripe Products</span><span class="value ok">44</span></div>
+    <div class="status-item"><span class="label">TNN Subscriptions</span><span class="value warn">0 → 100 Goal</span></div>
+    <div class="status-item"><span class="label">Email List</span><span class="value warn">Building</span></div>
+  </div>
+</div>
+
+<!-- FUNNEL STAGES -->
+<div class="panel blue">
+  <div class="panel-title blue">🔄 SALES FUNNEL STAGES</div>
+  <div class="funnel-viz">
+    <div class="funnel-stage">
+      <div class="stage-label"><span>AWARENESS (Social/SEO/Outreach)</span><span class="ok">Active</span></div>
+      <div class="funnel-bar"><div class="funnel-fill fill-green" style="width:40%"></div></div>
+    </div>
+    <div class="funnel-stage">
+      <div class="stage-label"><span>INTEREST (Free Toolkit Opt-in)</span><span class="warn">Building</span></div>
+      <div class="funnel-bar"><div class="funnel-fill fill-yellow" style="width:20%"></div></div>
+    </div>
+    <div class="funnel-stage">
+      <div class="stage-label"><span>CONSIDERATION (Funnel Page)</span><span class="warn">Live</span></div>
+      <div class="funnel-bar"><div class="funnel-fill fill-yellow" style="width:15%"></div></div>
+    </div>
+    <div class="funnel-stage">
+      <div class="stage-label"><span>PURCHASE (Stripe Checkout)</span><span class="warn">Live</span></div>
+      <div class="funnel-bar"><div class="funnel-fill fill-yellow" style="width:10%"></div></div>
+    </div>
+    <div class="funnel-stage">
+      <div class="stage-label"><span>DELIGHT (Thank You → Upsell)</span><span class="ok">Live</span></div>
+      <div class="funnel-bar"><div class="funnel-fill fill-green" style="width:8%"></div></div>
+    </div>
+    <div class="funnel-stage">
+      <div class="stage-label"><span>RETENTION (TNN Subscription)</span><span class="pending">Launching</span></div>
+      <div class="funnel-bar"><div class="funnel-fill fill-blue" style="width:3%"></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- INVESTOR OUTREACH -->
+<div class="panel red">
+  <div class="panel-title red">🤝 INVESTOR OUTREACH TRACKER</div>
+  <div class="status-item"><span class="label">Grant Cardone (10X)</span><span class="value pending">📧 SENT</span></div>
+  <div class="status-item"><span class="label">Martel (Business Partner)</span><span class="value pending">📧 SENT</span></div>
+  <div class="status-item"><span class="label">Daymond John (FUBU/Shark Tank)</span><span class="value pending">📧 SENT</span></div>
+  <div class="status-item"><span class="label">Robert F. Smith (Vista Equity)</span><span class="value pending">📧 QUEUED</span></div>
+  <div class="status-item"><span class="label">Magic Johnson Enterprises</span><span class="value pending">📧 QUEUED</span></div>
+  <div class="status-item"><span class="label">LISC LA (Local Investor)</span><span class="value warn">📋 APPLY</span></div>
+  <div class="status-item"><span class="label">Kapor Capital (Impact VC)</span><span class="value pending">📧 QUEUED</span></div>
+  <div class="status-item"><span class="label">Backstage Capital</span><span class="value pending">📧 QUEUED</span></div>
+  <div class="status-item"><span class="label">Seed round target</span><span class="value ok">$25,000</span></div>
+  <div class="status-item"><span class="label">Growth round target</span><span class="value ok">$100,000</span></div>
+</div>
+
+<!-- GRANT TRACKER -->
+<div class="panel yellow">
+  <div class="panel-title yellow">📋 GRANT APPLICATIONS</div>
+  <ul class="checklist">
+    <li class="check-warn">California Grants Portal (grants.ca.gov) — Apply Now</li>
+    <li class="check-warn">LA EWDD / BusinessSource — North Hollywood intake open</li>
+    <li class="check-todo">CalOSBA Funding Board — Monitor for opening</li>
+    <li class="check-todo">Valley Economic Alliance (VEDC) — NoHo/Valley microloan</li>
+    <li class="check-warn">IBank Small Business Finance — Loan guarantee apply</li>
+    <li class="check-todo">Kiva 0% Microloan — Trustee application needed</li>
+    <li class="check-warn">LISC LA Small Business Products — Confirm window</li>
+    <li class="check-todo">Accion Opportunity Fund — Microloan</li>
+    <li class="check-todo">Pacific Coast Regional SDC — SBA Technical Assistance</li>
+    <li class="check-warn">MacArthur Foundation (Justice &amp; Opportunity) — Letters of Inquiry</li>
+    <li class="check-fire">PREPARE: EIN 32-0663781 · Public project page ready · Drive packet ready</li>
+  </ul>
+</div>
+
+<!-- MARKETING TRACKER -->
+<div class="panel blue">
+  <div class="panel-title blue">📱 MARKETING CAMPAIGN STATUS</div>
+  <div class="status-item"><span class="label">Instagram (@TTI / @TNN)</span><span class="value warn">⚠️ Post Daily</span></div>
+  <div class="status-item"><span class="label">Facebook Page</span><span class="value warn">⚠️ Post Daily</span></div>
+  <div class="status-item"><span class="label">YouTube Channel</span><span class="value warn">⚠️ Post Weekly</span></div>
+  <div class="status-item"><span class="label">TikTok</span><span class="value pending">🚀 Launch</span></div>
+  <div class="status-item"><span class="label">X/Twitter</span><span class="value pending">🚀 Launch</span></div>
+  <div class="status-item"><span class="label">Email Newsletter</span><span class="value pending">🚀 Build List</span></div>
+  <div class="status-item"><span class="label">SMS Alerts</span><span class="value pending">🚀 Build List</span></div>
+  <div class="status-item"><span class="label">Citizen App</span><span class="value pending">🚀 Activate</span></div>
+  <div class="status-item"><span class="label">Podcast</span><span class="value pending">🚀 90-Day Goal</span></div>
+  <div style="margin-top:12px;border-top:1px solid #222;padding-top:8px">
+    <div class="status-item"><span class="label">Housing outreach emails sent</span><span class="value ok">114+</span></div>
+    <div class="status-item"><span class="label">Investor emails sent today</span><span class="value ok">Sending</span></div>
+  </div>
+</div>
+
+<!-- QUICK LINKS -->
+<div class="panel half">
+  <div class="panel-title green">🔗 ALL LIVE LINKS</div>
+  <table class="link-table">
+    <tr><td>🏠 Main Site</td><td><a href="https://aaronreddix1987-sketch.github.io/" target="_blank">aaronreddix1987-sketch.github.io</a></td></tr>
+    <tr><td>🛒 Funnel / Start Here</td><td><a href="https://aaronreddix1987-sketch.github.io/funnel.html" target="_blank">.../funnel.html</a></td></tr>
+    <tr><td>📺 TNN News Network</td><td><a href="https://aaronreddix1987-sketch.github.io/news.html" target="_blank">.../news.html</a></td></tr>
+    <tr><td>📚 Ebooks Store (44 products)</td><td><a href="https://aaronreddix1987-sketch.github.io/ebooks.html" target="_blank">.../ebooks.html</a></td></tr>
+    <tr><td>💼 Investor Overview</td><td><a href="https://aaronreddix1987-sketch.github.io/investor.html" target="_blank">.../investor.html</a></td></tr>
+    <tr><td>🤝 Partnerships Page</td><td><a href="https://aaronreddix1987-sketch.github.io/partnerships.html" target="_blank">.../partnerships.html</a></td></tr>
+    <tr><td>✅ Thank You Page</td><td><a href="https://aaronreddix1987-sketch.github.io/thank-you.html" target="_blank">.../thank-you.html</a></td></tr>
+    <tr><td>💰 Pricing / Services</td><td><a href="https://aaronreddix1987-sketch.github.io/pricing.html" target="_blank">.../pricing.html</a></td></tr>
+    <tr><td>📊 This Whiteboard</td><td><a href="https://aaronreddix1987-sketch.github.io/whiteboard.html" target="_blank">.../whiteboard.html</a></td></tr>
+    <tr><td>📋 Grant Targets (Drive)</td><td><a href="https://docs.google.com/document/d/1hq-sw4cGv1hAXfF2n2nxpXs_n2tCcqkUjTbHaz_VpOs/edit" target="_blank">Google Doc</a></td></tr>
+    <tr><td>💳 Stripe — TNN Insider $9/mo</td><td><a href="https://buy.stripe.com/28o8wP8Ej45F8c9gla0ZW0H" target="_blank">buy.stripe.com/28o8wP...</a></td></tr>
+    <tr><td>📞 Phone / Text</td><td>(747) 301-8586</td></tr>
+    <tr><td>📧 Email</td><td><a href="mailto:aaronreddix1987@gmail.com">aaronreddix1987@gmail.com</a></td></tr>
+    <tr><td>🏢 EIN</td><td>32-0663781</td></tr>
+    <tr><td>❤️ GoFundMe</td><td><a href="https://gofund.me/b94ce460" target="_blank">gofund.me/b94ce460</a></td></tr>
+  </table>
+</div>
+
+<!-- ACTION ITEMS -->
+<div class="panel red wide">
+  <div class="panel-title red">🔥 NEXT 72 HOURS — HIGH PRIORITY ACTIONS</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px">
+    <ul class="checklist">
+      <li class="check-fire"><strong>STRIPE:</strong> Add new bank account (Chime removed) → go to dashboard.stripe.com → Settings → Bank Accounts</li>
+      <li class="check-fire"><strong>HOUSING:</strong> Call (626) 235-2765 — Lotus Property, $1,300 — TOP PRIORITY</li>
+      <li class="check-fire"><strong>HOUSING:</strong> Call 211 for rapid rehousing referral</li>
+      <li class="check-warn"><strong>COURT:</strong> Nov 17 hearing, Dept 100, 8:30am — Stanley Mosk — 19 petitions</li>
+    </ul>
+    <ul class="checklist">
+      <li class="check-warn"><strong>CLAIM:</strong> $714.58 at claimit.ca.gov → Claim ID 24876916</li>
+      <li class="check-warn"><strong>GRANTS:</strong> Apply at grants.ca.gov — filter: small business, LA, for-profit</li>
+      <li class="check-warn"><strong>GRANTS:</strong> Contact EWDD BusinessSource: ewdd.lacity.org</li>
+      <li class="check-todo"><strong>TNN:</strong> Create TNN Insider Stripe product → $9/mo recurring</li>
+    </ul>
+    <ul class="checklist">
+      <li class="check-todo"><strong>MARKETING:</strong> Post TTI + TNN intro on Instagram today</li>
+      <li class="check-todo"><strong>SOCIAL:</strong> Set up TikTok account for TNN</li>
+      <li class="check-todo"><strong>EMAIL:</strong> Set up Mailchimp or ConvertKit for newsletter</li>
+      <li class="check-todo"><strong>CCAPP:</strong> Ethics course $50 at counselorcehub.com</li>
+    </ul>
+  </div>
+</div>
+
+</div><!-- /grid -->
+
+<footer style="text-align:center;padding:20px;color:#333;font-size:12px;border-top:1px solid #111;margin-top:20px">
+  TTI COMMAND CENTER · Aaron T. Reddix · EIN: 32-0663781 · <a href="index.html" style="color:#444">Back to Site</a>
+</footer>
+
+</body>
+</html>
