@@ -1,265 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>TTI Command Center — Live Whiteboard & Tracking</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TTI Command Center — Live Whiteboard</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Courier New',monospace;background:#050505;color:#00ff88;min-height:100vh}
-header{background:#000;border-bottom:2px solid #00ff88;padding:16px 24px;display:flex;justify-content:space-between;align-items:center}
-header h1{font-size:18px;font-weight:bold;letter-spacing:2px}
-.live-dot{width:10px;height:10px;border-radius:50%;background:#00ff88;display:inline-block;margin-right:8px;animation:pulse 1.5s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-.timestamp{font-size:12px;color:#666}
-/* GRID */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;padding:20px;max-width:1400px;margin:0 auto}
-.panel{background:#0a0a0a;border:1px solid #1a1a1a;border-radius:8px;padding:20px}
-.panel.green{border-color:#00ff88}
-.panel.red{border-color:#ff4444}
-.panel.yellow{border-color:#ffaa00}
-.panel.blue{border-color:#0088ff}
-.panel-title{font-size:11px;letter-spacing:3px;text-transform:uppercase;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid #1a1a1a}
-.panel-title.green{color:#00ff88;border-color:#00ff88}
-.panel-title.red{color:#ff4444;border-color:#ff4444}
-.panel-title.yellow{color:#ffaa00;border-color:#ffaa00}
-.panel-title.blue{color:#0088ff;border-color:#0088ff}
-/* STATUS ITEMS */
-.status-item{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #111;font-size:13px}
-.status-item:last-child{border-bottom:none}
-.status-item .label{color:#888}
-.status-item .value{font-weight:bold}
-.ok{color:#00ff88}
-.warn{color:#ffaa00}
-.dead{color:#ff4444}
-.pending{color:#0088ff}
-/* FUNNEL VIZ */
-.funnel-viz{margin:16px 0}
-.funnel-stage{margin:6px 0}
-.funnel-stage .stage-label{font-size:11px;color:#666;margin-bottom:3px;display:flex;justify-content:space-between}
-.funnel-bar{height:20px;background:#111;border-radius:3px;overflow:hidden}
-.funnel-fill{height:100%;border-radius:3px;transition:width 0.5s}
-.fill-green{background:#00ff88}
-.fill-yellow{background:#ffaa00}
-.fill-red{background:#ff4444}
-.fill-blue{background:#0088ff}
-/* LINKS TABLE */
-.link-table{width:100%;border-collapse:collapse;font-size:12px}
-.link-table td{padding:6px 4px;border-bottom:1px solid #111}
-.link-table td:first-child{color:#888;width:50%}
-.link-table a{color:#0088ff;text-decoration:none;word-break:break-all;font-size:11px}
-.link-table a:hover{color:#00aaff}
-/* PROGRESS BARS */
-.progress{margin:8px 0}
-.progress-label{display:flex;justify-content:space-between;font-size:11px;color:#888;margin-bottom:4px}
-.progress-bar{height:8px;background:#111;border-radius:4px;overflow:hidden}
-.progress-fill{height:100%;border-radius:4px}
-/* BIG NUMBERS */
-.big-num{font-size:48px;font-weight:bold;text-align:center;margin:16px 0}
-.big-num.green{color:#00ff88}
-.big-num.yellow{color:#ffaa00}
-.big-num.blue{color:#0088ff}
-.big-num small{font-size:14px;color:#666;display:block;margin-top:-8px}
-/* CHECKLIST */
-.checklist{list-style:none}
-.checklist li{padding:6px 0;border-bottom:1px solid #111;font-size:13px;display:flex;gap:8px;align-items:flex-start}
-.check-done::before{content:"✅";flex-shrink:0}
-.check-warn::before{content:"⚠️";flex-shrink:0}
-.check-todo::before{content:"⬜";flex-shrink:0}
-.check-fire::before{content:"🔥";flex-shrink:0}
-/* WIDE PANELS */
-.wide{grid-column:1/-1}
-.half{grid-column:span 2}
-@media(max-width:700px){.half{grid-column:1}}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Arial, sans-serif; background: #0a0a0f; color: #e0e0e0; min-height: 100vh; }
+.header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); padding: 20px 30px; border-bottom: 2px solid #e94560; }
+.header h1 { font-size: 2em; color: #fff; }
+.header p { color: #a0a0c0; margin-top: 5px; }
+.badge { display: inline-block; background: #e94560; color: #fff; padding: 3px 10px; border-radius: 20px; font-size: 0.75em; margin-left: 10px; vertical-align: middle; animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.6} }
+.nav { background: #111120; padding: 10px 30px; border-bottom: 1px solid #2a2a4a; }
+.nav a { color: #7a7aaa; text-decoration: none; margin-right: 20px; font-size: 0.9em; }
+.nav a:hover { color: #e94560; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; padding: 20px 30px; }
+.card { background: #111120; border: 1px solid #2a2a4a; border-radius: 12px; padding: 20px; }
+.card h2 { font-size: 1.1em; color: #e94560; margin-bottom: 15px; border-bottom: 1px solid #2a2a4a; padding-bottom: 8px; }
+.stat-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #1a1a2a; font-size: 0.9em; }
+.stat-label { color: #8080a0; }
+.stat-value { color: #fff; font-weight: bold; }
+.green { color: #00ff88 !important; }
+.yellow { color: #ffcc00 !important; }
+.red { color: #ff4466 !important; }
+.blue { color: #4488ff !important; }
+.action-list { list-style: none; }
+.action-list li { padding: 6px 0; border-bottom: 1px solid #1a1a2a; font-size: 0.85em; }
+.action-list li:before { content: "→ "; color: #e94560; }
+.status-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
+.dot-green { background: #00ff88; }
+.dot-yellow { background: #ffcc00; }
+.dot-red { background: #ff4466; }
+.dot-blue { background: #4488ff; }
+.btn { display: inline-block; background: #e94560; color: #fff; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 0.85em; margin: 4px; }
+.btn-blue { background: #0066cc; }
+.btn-green { background: #00aa55; }
+.full-width { grid-column: 1 / -1; }
+.timestamp { text-align: center; padding: 10px; color: #4a4a6a; font-size: 0.8em; border-top: 1px solid #1a1a2a; margin-top: 20px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.82em; }
+th { background: #1a1a2e; color: #7a7aaa; padding: 8px; text-align: left; }
+td { padding: 7px 8px; border-bottom: 1px solid #1a1a2a; }
+.section-label { background: #0a0a1a; color: #e94560; padding: 15px 30px 5px; font-size: 0.85em; letter-spacing: 2px; text-transform: uppercase; }
 </style>
 </head>
 <body>
-<header>
-  <h1><span class="live-dot"></span>TTI COMMAND CENTER — LIVE WHITEBOARD</h1>
-  <div class="timestamp">Last updated: Nov 11, 2026 | Aaron T. Reddix, CEO</div>
-</header>
 
+<div class="header">
+  <h1>⚡ TTI COMMAND CENTER <span class="badge">LIVE</span></h1>
+  <p>Total Transformation Inc. + TNN News Network — Dan Martell Buyback Loop™ — Einstein Mode 24/7</p>
+  <p style="margin-top:8px;font-size:0.85em;color:#6080a0;">Last Updated: November 11, 2026 | CEO: Aaron T. Reddix | EIN: 32-0663781</p>
+</div>
+
+<div class="nav">
+  <a href="index.html">🏠 Home</a>
+  <a href="funnel.html">💰 Store</a>
+  <a href="investor.html">📈 Investors</a>
+  <a href="news.html">📺 TNN News</a>
+  <a href="gumroad.html">🛒 Gumroad</a>
+  <a href="partnerships.html">🤝 Partners</a>
+  <a href="automation.html">🤖 Automation</a>
+</div>
+
+<div class="section-label">📊 Revenue Dashboard</div>
 <div class="grid">
 
-<!-- PLATFORM STATUS -->
-<div class="panel green">
-  <div class="panel-title green">🟢 PLATFORM STATUS</div>
-  <div class="status-item"><span class="label">Main Site (GitHub Pages)</span><span class="value ok">✅ LIVE</span></div>
-  <div class="status-item"><span class="label">TNN News Page</span><span class="value ok">✅ LIVE</span></div>
-  <div class="status-item"><span class="label">Funnel Page</span><span class="value ok">✅ LIVE</span></div>
-  <div class="status-item"><span class="label">Ebooks Store (44 products)</span><span class="value ok">✅ LIVE</span></div>
-  <div class="status-item"><span class="label">Investor Overview Page</span><span class="value ok">✅ LIVE</span></div>
-  <div class="status-item"><span class="label">Thank You Page</span><span class="value ok">✅ LIVE</span></div>
-  <div class="status-item"><span class="label">Stripe Payment Links (44+)</span><span class="value ok">✅ ACTIVE</span></div>
-  <div class="status-item"><span class="label">Stripe Public Key</span><span class="value ok">pk_live_51N2Y5aK...</span></div>
-  <div class="status-item"><span class="label">Stripe Payout Account</span><span class="value warn">⚠️ VERIFY BANK</span></div>
+  <div class="card">
+    <h2>💳 Stripe — Live Products</h2>
+    <div class="stat-row"><span class="stat-label">TNN Insider</span><span class="stat-value green">$9/mo LIVE</span></div>
+    <div class="stat-row"><span class="stat-label">TNN Pro</span><span class="stat-value green">$29/mo LIVE</span></div>
+    <div class="stat-row"><span class="stat-label">TNN SMS Alerts</span><span class="stat-value green">$4.99/mo LIVE</span></div>
+    <div class="stat-row"><span class="stat-label">TNN Biz Spotlight</span><span class="stat-value green">$299/mo LIVE</span></div>
+    <div class="stat-row"><span class="stat-label">TNN Premium Spotlight</span><span class="stat-value green">$999/mo LIVE</span></div>
+    <div class="stat-row"><span class="stat-label">Total Products</span><span class="stat-value blue">44+ payment links</span></div>
+    <div class="stat-row"><span class="stat-label">Account Status</span><span class="stat-value green">charges_enabled ✓</span></div>
+    <div class="stat-row"><span class="stat-label">Payouts</span><span class="stat-value green">payouts_enabled ✓</span></div>
+    <div class="stat-row"><span class="stat-label">Bank Account</span><span class="stat-value yellow">Pending — Stripe Support</span></div>
+    <div style="margin-top:10px;">
+      <a href="funnel.html" class="btn">View Store</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🛒 Gumroad — Live Products</h2>
+    <div class="stat-row"><span class="stat-label">Housing Fast Track</span><span class="stat-value green">PUBLISHED</span></div>
+    <div class="stat-row"><span class="stat-label">Reentry Blueprint Bundle</span><span class="stat-value green">PUBLISHED</span></div>
+    <div class="stat-row"><span class="stat-label">AI Business Launch Kit</span><span class="stat-value green">PUBLISHED</span></div>
+    <div class="stat-row"><span class="stat-label">TNN Insider (Gumroad)</span><span class="stat-value green">PUBLISHED</span></div>
+    <div class="stat-row"><span class="stat-label">TNN Pro (Gumroad)</span><span class="stat-value green">PUBLISHED</span></div>
+    <div class="stat-row"><span class="stat-label">Total Products</span><span class="stat-value blue">15 published</span></div>
+    <div class="stat-row"><span class="stat-label">Profile</span><span class="stat-value">reddix5.gumroad.com</span></div>
+    <div style="margin-top:10px;">
+      <a href="gumroad.html" class="btn btn-green">View Gumroad Store</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🌐 Website Status</h2>
+    <div class="stat-row"><span class="stat-label">Main Site</span><span class="stat-value green">LIVE ✓</span></div>
+    <div class="stat-row"><span class="stat-label">TNN News</span><span class="stat-value green">news.html ✓</span></div>
+    <div class="stat-row"><span class="stat-label">Sales Funnel</span><span class="stat-value green">funnel.html ✓</span></div>
+    <div class="stat-row"><span class="stat-label">Investor Page</span><span class="stat-value green">investor.html ✓</span></div>
+    <div class="stat-row"><span class="stat-label">Partnerships</span><span class="stat-value green">partnerships.html ✓</span></div>
+    <div class="stat-row"><span class="stat-label">Gumroad Store</span><span class="stat-value green">gumroad.html ✓</span></div>
+    <div class="stat-row"><span class="stat-label">Automation Dashboard</span><span class="stat-value green">automation.html ✓</span></div>
+    <div class="stat-row"><span class="stat-label">This Whiteboard</span><span class="stat-value green">whiteboard.html ✓</span></div>
+    <div style="margin-top:10px;">
+      <a href="https://aaronreddix1987-sketch.github.io" class="btn btn-blue" target="_blank">View Live Site</a>
+    </div>
+  </div>
+
 </div>
 
-<!-- REVENUE TRACKER -->
-<div class="panel yellow">
-  <div class="panel-title yellow">💰 REVENUE TARGETS</div>
-  <div class="progress">
-    <div class="progress-label"><span>Month 1 Target: $3,000</span><span class="warn">LAUNCHING</span></div>
-    <div class="progress-bar"><div class="progress-fill" style="width:5%;background:#ffaa00"></div></div>
-  </div>
-  <div class="progress">
-    <div class="progress-label"><span>Month 3 Target: $10,000</span><span class="pending">PIPELINE</span></div>
-    <div class="progress-bar"><div class="progress-fill" style="width:0%;background:#0088ff"></div></div>
-  </div>
-  <div class="progress">
-    <div class="progress-label"><span>Month 6 Target: $25,000 MRR</span><span class="pending">PROJECTED</span></div>
-    <div class="progress-bar"><div class="progress-fill" style="width:0%;background:#0088ff"></div></div>
-  </div>
-  <div class="progress">
-    <div class="progress-label"><span>Year 1 Target: $50,000 MRR</span><span class="pending">PROJECTED</span></div>
-    <div class="progress-bar"><div class="progress-fill" style="width:0%;background:#0088ff"></div></div>
-  </div>
-  <div style="margin-top:16px;border-top:1px solid #222;padding-top:12px">
-    <div class="status-item"><span class="label">Active Stripe Products</span><span class="value ok">44</span></div>
-    <div class="status-item"><span class="label">TNN Subscriptions</span><span class="value warn">0 → 100 Goal</span></div>
-    <div class="status-item"><span class="label">Email List</span><span class="value warn">Building</span></div>
-  </div>
-</div>
-
-<!-- FUNNEL STAGES -->
-<div class="panel blue">
-  <div class="panel-title blue">🔄 SALES FUNNEL STAGES</div>
-  <div class="funnel-viz">
-    <div class="funnel-stage">
-      <div class="stage-label"><span>AWARENESS (Social/SEO/Outreach)</span><span class="ok">Active</span></div>
-      <div class="funnel-bar"><div class="funnel-fill fill-green" style="width:40%"></div></div>
-    </div>
-    <div class="funnel-stage">
-      <div class="stage-label"><span>INTEREST (Free Toolkit Opt-in)</span><span class="warn">Building</span></div>
-      <div class="funnel-bar"><div class="funnel-fill fill-yellow" style="width:20%"></div></div>
-    </div>
-    <div class="funnel-stage">
-      <div class="stage-label"><span>CONSIDERATION (Funnel Page)</span><span class="warn">Live</span></div>
-      <div class="funnel-bar"><div class="funnel-fill fill-yellow" style="width:15%"></div></div>
-    </div>
-    <div class="funnel-stage">
-      <div class="stage-label"><span>PURCHASE (Stripe Checkout)</span><span class="warn">Live</span></div>
-      <div class="funnel-bar"><div class="funnel-fill fill-yellow" style="width:10%"></div></div>
-    </div>
-    <div class="funnel-stage">
-      <div class="stage-label"><span>DELIGHT (Thank You → Upsell)</span><span class="ok">Live</span></div>
-      <div class="funnel-bar"><div class="funnel-fill fill-green" style="width:8%"></div></div>
-    </div>
-    <div class="funnel-stage">
-      <div class="stage-label"><span>RETENTION (TNN Subscription)</span><span class="pending">Launching</span></div>
-      <div class="funnel-bar"><div class="funnel-fill fill-blue" style="width:3%"></div></div>
+<div class="section-label">💰 Investor Pipeline</div>
+<div class="grid">
+  <div class="card full-width">
+    <h2>🏦 Active Investor Outreach — Nov 2026</h2>
+    <table>
+      <tr><th>Investor/Org</th><th>Ask</th><th>Sent</th><th>Follow-Up</th><th>Status</th></tr>
+      <tr><td>Grant Cardone</td><td>$25K seed</td><td>Nov 9</td><td>Nov 11 ✓</td><td><span class="dot-blue status-dot"></span>Awaiting</td></tr>
+      <tr><td>Daymond John</td><td>$25K–$100K</td><td>Nov 9</td><td>Nov 11 ✓</td><td><span class="dot-blue status-dot"></span>Awaiting</td></tr>
+      <tr><td>Backstage Capital</td><td>$25K–$100K</td><td>Nov 9</td><td>Nov 11 ✓</td><td><span class="dot-blue status-dot"></span>Awaiting</td></tr>
+      <tr><td>Kapor Capital</td><td>$100K+</td><td>Nov 9</td><td>Nov 11 ✓</td><td><span class="dot-blue status-dot"></span>Awaiting</td></tr>
+      <tr><td>Magic Johnson Enterprises</td><td>$100K–$250K</td><td>Nov 9</td><td>Nov 11 ✓</td><td><span class="dot-blue status-dot"></span>Awaiting</td></tr>
+      <tr><td>New Profit</td><td>Accelerator</td><td>Nov 9</td><td>Nov 11 ✓</td><td><span class="dot-blue status-dot"></span>Awaiting</td></tr>
+      <tr><td>Acumen Fund</td><td>Patient Capital</td><td>Nov 10</td><td>Nov 11 ✓</td><td><span class="dot-blue status-dot"></span>Awaiting</td></tr>
+    </table>
+    <div style="margin-top:12px;">
+      <a href="investor.html" class="btn">Full Investor Deck</a>
     </div>
   </div>
 </div>
 
-<!-- INVESTOR OUTREACH -->
-<div class="panel red">
-  <div class="panel-title red">🤝 INVESTOR OUTREACH TRACKER</div>
-  <div class="status-item"><span class="label">Grant Cardone (10X)</span><span class="value pending">📧 SENT</span></div>
-  <div class="status-item"><span class="label">Martel (Business Partner)</span><span class="value pending">📧 SENT</span></div>
-  <div class="status-item"><span class="label">Daymond John (FUBU/Shark Tank)</span><span class="value pending">📧 SENT</span></div>
-  <div class="status-item"><span class="label">Robert F. Smith (Vista Equity)</span><span class="value pending">📧 QUEUED</span></div>
-  <div class="status-item"><span class="label">Magic Johnson Enterprises</span><span class="value pending">📧 QUEUED</span></div>
-  <div class="status-item"><span class="label">LISC LA (Local Investor)</span><span class="value warn">📋 APPLY</span></div>
-  <div class="status-item"><span class="label">Kapor Capital (Impact VC)</span><span class="value pending">📧 QUEUED</span></div>
-  <div class="status-item"><span class="label">Backstage Capital</span><span class="value pending">📧 QUEUED</span></div>
-  <div class="status-item"><span class="label">Seed round target</span><span class="value ok">$25,000</span></div>
-  <div class="status-item"><span class="label">Growth round target</span><span class="value ok">$100,000</span></div>
-</div>
-
-<!-- GRANT TRACKER -->
-<div class="panel yellow">
-  <div class="panel-title yellow">📋 GRANT APPLICATIONS</div>
-  <ul class="checklist">
-    <li class="check-warn">California Grants Portal (grants.ca.gov) — Apply Now</li>
-    <li class="check-warn">LA EWDD / BusinessSource — North Hollywood intake open</li>
-    <li class="check-todo">CalOSBA Funding Board — Monitor for opening</li>
-    <li class="check-todo">Valley Economic Alliance (VEDC) — NoHo/Valley microloan</li>
-    <li class="check-warn">IBank Small Business Finance — Loan guarantee apply</li>
-    <li class="check-todo">Kiva 0% Microloan — Trustee application needed</li>
-    <li class="check-warn">LISC LA Small Business Products — Confirm window</li>
-    <li class="check-todo">Accion Opportunity Fund — Microloan</li>
-    <li class="check-todo">Pacific Coast Regional SDC — SBA Technical Assistance</li>
-    <li class="check-warn">MacArthur Foundation (Justice &amp; Opportunity) — Letters of Inquiry</li>
-    <li class="check-fire">PREPARE: EIN 32-0663781 · Public project page ready · Drive packet ready</li>
-  </ul>
-</div>
-
-<!-- MARKETING TRACKER -->
-<div class="panel blue">
-  <div class="panel-title blue">📱 MARKETING CAMPAIGN STATUS</div>
-  <div class="status-item"><span class="label">Instagram (@TTI / @TNN)</span><span class="value warn">⚠️ Post Daily</span></div>
-  <div class="status-item"><span class="label">Facebook Page</span><span class="value warn">⚠️ Post Daily</span></div>
-  <div class="status-item"><span class="label">YouTube Channel</span><span class="value warn">⚠️ Post Weekly</span></div>
-  <div class="status-item"><span class="label">TikTok</span><span class="value pending">🚀 Launch</span></div>
-  <div class="status-item"><span class="label">X/Twitter</span><span class="value pending">🚀 Launch</span></div>
-  <div class="status-item"><span class="label">Email Newsletter</span><span class="value pending">🚀 Build List</span></div>
-  <div class="status-item"><span class="label">SMS Alerts</span><span class="value pending">🚀 Build List</span></div>
-  <div class="status-item"><span class="label">Citizen App</span><span class="value pending">🚀 Activate</span></div>
-  <div class="status-item"><span class="label">Podcast</span><span class="value pending">🚀 90-Day Goal</span></div>
-  <div style="margin-top:12px;border-top:1px solid #222;padding-top:8px">
-    <div class="status-item"><span class="label">Housing outreach emails sent</span><span class="value ok">114+</span></div>
-    <div class="status-item"><span class="label">Investor emails sent today</span><span class="value ok">Sending</span></div>
+<div class="section-label">📋 Grant Applications</div>
+<div class="grid">
+  <div class="card full-width">
+    <h2>🏆 Grant Pipeline — Nov 2026</h2>
+    <table>
+      <tr><th>Funder</th><th>Amount</th><th>Sent</th><th>Follow-Up</th><th>Status</th></tr>
+      <tr><td>CalOSBA (CA Small Business)</td><td>$25K–$50K</td><td>Nov 9</td><td>Nov 11 ✓</td><td><span class="dot-blue status-dot"></span>Awaiting</td></tr>
+      <tr><td>EWDD (Los Angeles)</td><td>$25K–$50K</td><td>Nov 9</td><td>Nov 11 ✓</td><td><span class="dot-blue status-dot"></span>Awaiting</td></tr>
+      <tr><td>LISC Los Angeles</td><td>$25K–$75K</td><td>Nov 9</td><td>Nov 11 ✓</td><td><span class="dot-blue status-dot"></span>Awaiting</td></tr>
+      <tr><td>MacArthur Foundation</td><td>$100K+</td><td>Nov 9</td><td>Nov 11 ✓</td><td><span class="dot-blue status-dot"></span>Awaiting</td></tr>
+      <tr><td>Hilton Foundation</td><td>$50K+</td><td>Nov 10</td><td>Nov 11 ✓</td><td><span class="dot-blue status-dot"></span>Awaiting</td></tr>
+      <tr><td>Echoing Green</td><td>Fellowship</td><td>Nov 10 (fixed)</td><td>Nov 11 ✓</td><td><span class="dot-blue status-dot"></span>Awaiting</td></tr>
+      <tr><td>VEDC (Los Angeles)</td><td>Loan/Grant</td><td>Nov 9</td><td>Nov 11 ✓</td><td><span class="dot-blue status-dot"></span>Awaiting</td></tr>
+      <tr><td>RWJF (Robert Wood Johnson)</td><td>$50K+</td><td>Nov 10</td><td>Sent</td><td><span class="dot-blue status-dot"></span>Awaiting</td></tr>
+      <tr><td>Kiva Microfunds</td><td>$0–$15K</td><td>Nov 9</td><td>Sent</td><td><span class="dot-blue status-dot"></span>Awaiting</td></tr>
+      <tr><td>IBank (CA Infrastructure)</td><td>$50K+</td><td>Nov 9</td><td>Sent</td><td><span class="dot-blue status-dot"></span>Awaiting</td></tr>
+    </table>
   </div>
 </div>
 
-<!-- QUICK LINKS -->
-<div class="panel half">
-  <div class="panel-title green">🔗 ALL LIVE LINKS</div>
-  <table class="link-table">
-    <tr><td>🏠 Main Site</td><td><a href="https://aaronreddix1987-sketch.github.io/" target="_blank">aaronreddix1987-sketch.github.io</a></td></tr>
-    <tr><td>🛒 Funnel / Start Here</td><td><a href="https://aaronreddix1987-sketch.github.io/funnel.html" target="_blank">.../funnel.html</a></td></tr>
-    <tr><td>📺 TNN News Network</td><td><a href="https://aaronreddix1987-sketch.github.io/news.html" target="_blank">.../news.html</a></td></tr>
-    <tr><td>📚 Ebooks Store (44 products)</td><td><a href="https://aaronreddix1987-sketch.github.io/ebooks.html" target="_blank">.../ebooks.html</a></td></tr>
-    <tr><td>💼 Investor Overview</td><td><a href="https://aaronreddix1987-sketch.github.io/investor.html" target="_blank">.../investor.html</a></td></tr>
-    <tr><td>🤝 Partnerships Page</td><td><a href="https://aaronreddix1987-sketch.github.io/partnerships.html" target="_blank">.../partnerships.html</a></td></tr>
-    <tr><td>✅ Thank You Page</td><td><a href="https://aaronreddix1987-sketch.github.io/thank-you.html" target="_blank">.../thank-you.html</a></td></tr>
-    <tr><td>💰 Pricing / Services</td><td><a href="https://aaronreddix1987-sketch.github.io/pricing.html" target="_blank">.../pricing.html</a></td></tr>
-    <tr><td>📊 This Whiteboard</td><td><a href="https://aaronreddix1987-sketch.github.io/whiteboard.html" target="_blank">.../whiteboard.html</a></td></tr>
-    <tr><td>📋 Grant Targets (Drive)</td><td><a href="https://docs.google.com/document/d/1hq-sw4cGv1hAXfF2n2nxpXs_n2tCcqkUjTbHaz_VpOs/edit" target="_blank">Google Doc</a></td></tr>
-    <tr><td>💳 TNN Insider $9/mo</td><td><a href="https://buy.stripe.com/9B6bJ0bi8bhM9Lt0Y843S23" target="_blank">LIVE ✅</a></td></tr>
-    <tr><td>💳 TNN Pro $29/mo</td><td><a href="https://buy.stripe.com/fZu4gy85WclQ5vdeOY43S24" target="_blank">LIVE ✅</a></td></tr>
-    <tr><td>💳 TNN SMS $4.99/mo</td><td><a href="https://buy.stripe.com/fZu3cu2LCbhM6zh36g43S25" target="_blank">LIVE ✅</a></td></tr>
-    <tr><td>💳 Biz Spotlight $299/mo</td><td><a href="https://buy.stripe.com/00wbJ01HygC68Hp36g43S26" target="_blank">LIVE ✅</a></td></tr>
-    <tr><td>💳 Biz Premium $999/mo</td><td><a href="https://buy.stripe.com/fZubJ00Du85A5vd5eo43S27" target="_blank">LIVE ✅</a></td></tr>
-    <tr><td>🛒 Gumroad Store</td><td><a href="https://reddix5.gumroad.com" target="_blank">reddix5.gumroad.com ✅</a></td></tr>
-    <tr><td>🛒 Gumroad/Stripe Page</td><td><a href="https://aaronreddix1987-sketch.github.io/gumroad.html" target="_blank">LIVE ✅</a></td></tr>
-    <tr><td>📞 Phone / Text</td><td>(747) 301-8586</td></tr>
-    <tr><td>📧 Email</td><td><a href="mailto:aaronreddix1987@gmail.com">aaronreddix1987@gmail.com</a></td></tr>
-    <tr><td>🏢 EIN</td><td>32-0663781</td></tr>
-    <tr><td>❤️ GoFundMe</td><td><a href="https://gofund.me/b94ce460" target="_blank">gofund.me/b94ce460</a></td></tr>
-  </table>
-</div>
+<div class="section-label">🏠 Housing + Legal Pipeline</div>
+<div class="grid">
 
-<!-- ACTION ITEMS -->
-<div class="panel red wide">
-  <div class="panel-title red">🔥 NEXT 72 HOURS — HIGH PRIORITY ACTIONS</div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px">
-    <ul class="checklist">
-      <li class="check-fire"><strong>STRIPE:</strong> Add new bank account (Chime removed) → go to dashboard.stripe.com → Settings → Bank Accounts</li>
-      <li class="check-done"><strong>HOUSING:</strong> Email sent — Lotus Property, 7425 Vineland $1,300 — rentals@lotuspropertymanagement.com ✅</li>
-      <li class="check-done"><strong>HOUSING:</strong> Email sent — 211 LA rapid rehousing request — info@211la.org ✅</li>
-      <li class="check-warn"><strong>COURT:</strong> Nov 17 hearing, Dept 100, 8:30am — Stanley Mosk — 19 petitions</li>
-    </ul>
-    <ul class="checklist">
-      <li class="check-warn"><strong>CLAIM:</strong> $714.58 at claimit.ca.gov → Claim ID 24876916</li>
-      <li class="check-warn"><strong>GRANTS:</strong> Apply at grants.ca.gov — filter: small business, LA, for-profit</li>
-      <li class="check-warn"><strong>GRANTS:</strong> Contact EWDD BusinessSource: ewdd.lacity.org</li>
-      <li class="check-todo"><strong>TNN:</strong> Create TNN Insider Stripe product → $9/mo recurring</li>
-    </ul>
-    <ul class="checklist">
-      <li class="check-todo"><strong>MARKETING:</strong> Post TTI + TNN intro on Instagram today</li>
-      <li class="check-todo"><strong>SOCIAL:</strong> Set up TikTok account for TNN</li>
-      <li class="check-todo"><strong>EMAIL:</strong> Set up Mailchimp or ConvertKit for newsletter</li>
-      <li class="check-todo"><strong>CCAPP:</strong> Ethics course $50 at counselorcehub.com</li>
+  <div class="card">
+    <h2>🏘️ Housing Outreach</h2>
+    <ul class="action-list">
+      <li>HACLA — Section 8 Partnership (Follow-up Nov 11)</li>
+      <li>HUD/FHA — Emergency Housing (Follow-up sent)</li>
+      <li>LA County Supervisor's Office (Follow-up Nov 11)</li>
+      <li>LAHSA — Homelessness Prevention</li>
+      <li>Lotus Property — Master Lease Inquiry</li>
+      <li>EGL Properties — 15-unit inquiry</li>
+      <li>Appel Group — Multi-unit acquisition</li>
     </ul>
   </div>
+
+  <div class="card">
+    <h2>⚖️ Legal & Civil Rights</h2>
+    <ul class="action-list">
+      <li class="green">EEOC — 2 incidents confirmed ✓ (261029-000783, 261029-000786)</li>
+      <li>FTC OIG — Formal complaint filed + follow-up</li>
+      <li>SEC — OIG complaint filed (whistleblower@sec.gov failed — fixed)</li>
+      <li>HUD/FHA — 3 auto-replies received; monitoring</li>
+      <li>DOJ CA — 3 offices contacted Nov 10</li>
+      <li>CA State Auditor — Audit request filed</li>
+      <li class="blue">ACLU SoCal — Legal assistance requested Nov 11 ✓</li>
+      <li>Nov 17 Court Hearing — Dept 100, 8:30am, Stanley Mosk</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>📺 Media Pitches</h2>
+    <ul class="action-list">
+      <li class="blue">NBC4 Los Angeles — Exclusive tip sent Nov 11 ✓</li>
+      <li class="blue">KTTV Fox 11 — Resent with correct address Nov 11 ✓</li>
+      <li class="blue">CBS LA/KCAL — Resent with correct address Nov 11 ✓</li>
+      <li>LA Times — Story tip sent Nov 10</li>
+      <li>CBS News — Story tip sent Nov 10</li>
+      <li>USA Today — Story tip sent Nov 10</li>
+      <li>Vice News — Investigation tip sent Nov 10</li>
+      <li>Mother Jones — Investigation tip sent Nov 10</li>
+      <li>Univision LA — Story tip sent Nov 10</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>🤝 Partnership Outreach</h2>
+    <ul class="action-list">
+      <li>Homeboy Industries — Training + partnership (Follow-up Nov 11)</li>
+      <li>HACLA — Section 8 referral partner (Follow-up Nov 11)</li>
+      <li>SBDC Los Angeles — Free consulting (Follow-up Nov 11)</li>
+      <li>Discover Financial — CCPA + account dispute (Reply Nov 11)</li>
+      <li>Avant — Business credit application</li>
+      <li>D&B — DUNS + credit file (Resent Nov 11)</li>
+    </ul>
+  </div>
+
 </div>
 
-</div><!-- /grid -->
+<div class="section-label">📋 Pending Action Items</div>
+<div class="grid">
+  <div class="card full-width">
+    <h2>⚡ IMMEDIATE ACTION REQUIRED (Aaron Must Do)</h2>
+    <table>
+      <tr><th>Task</th><th>Deadline</th><th>How</th></tr>
+      <tr><td><span class="dot-red status-dot"></span>Reconnect Google Sheets</td><td>TODAY</td><td>Check email — 1-click link sent</td></tr>
+      <tr><td><span class="dot-red status-dot"></span>Reconnect YouTube</td><td>ASAP</td><td>Check email — auth link sent Nov 10</td></tr>
+      <tr><td><span class="dot-red status-dot"></span>Stripe — Add LAFCU Bank Account</td><td>ASAP</td><td>Routing: 322078370 / Acct: 10000007610694 — email instructions sent + Stripe support escalation filed</td></tr>
+      <tr><td><span class="dot-red status-dot"></span>Nov 17 Court Hearing</td><td>Nov 17, 8:30am</td><td>Stanley Mosk Courthouse, Dept 100 — 19 petitions</td></tr>
+      <tr><td><span class="dot-yellow status-dot"></span>Claim $714.58</td><td>Ongoing</td><td>claimit.ca.gov — Claim ID 24876916</td></tr>
+      <tr><td><span class="dot-yellow status-dot"></span>CCAPP Ethics Course</td><td>Ongoing</td><td>counselorcehub.com — Fee waiver pending</td></tr>
+    </table>
+  </div>
+</div>
 
-<footer style="text-align:center;padding:20px;color:#333;font-size:12px;border-top:1px solid #111;margin-top:20px">
-  TTI COMMAND CENTER · Aaron T. Reddix · EIN: 32-0663781 · <a href="index.html" style="color:#444">Back to Site</a>
-</footer>
+<div class="section-label">🤖 AI Automation Log</div>
+<div class="grid">
+  <div class="card full-width">
+    <h2>✅ Completed Actions — Nov 10–11, 2026</h2>
+    <table>
+      <tr><th>Action</th><th>Date</th><th>Result</th></tr>
+      <tr><td>Scan all 5 Gmail inboxes + sent folders</td><td>Nov 11</td><td class="green">✓ Complete — 20+ items processed</td></tr>
+      <tr><td>Reply to Discover Financial Executive Office</td><td>Nov 11</td><td class="green">✓ Email-only preference stated + CCPA acknowledged</td></tr>
+      <tr><td>Fix failed email addresses (FOX LA, CBS LA, Echoing Green, D&B)</td><td>Nov 11</td><td class="green">✓ Resent to corrected addresses</td></tr>
+      <tr><td>Investor follow-ups (Grant Cardone, Daymond, Backstage, Kapor, Magic Johnson)</td><td>Nov 11</td><td class="green">✓ 24-hr follow-up sent to all 5</td></tr>
+      <tr><td>Grant follow-ups (MacArthur, Hilton, CalOSBA, LISC, EWDD, VEDC)</td><td>Nov 11</td><td class="green">✓ Follow-up sent to all 6</td></tr>
+      <tr><td>Housing follow-ups (HACLA, County Supervisor)</td><td>Nov 11</td><td class="green">✓ Follow-up sent</td></tr>
+      <tr><td>New outreach: NBC4, ACLU SoCal</td><td>Nov 11</td><td class="green">✓ Exclusive tip + legal request sent</td></tr>
+      <tr><td>TNN News Network launched</td><td>Nov 10</td><td class="green">✓ Live at github.io/news.html</td></tr>
+      <tr><td>44+ Stripe payment links created</td><td>Nov 10</td><td class="green">✓ All live and accepting payments</td></tr>
+      <tr><td>15 Gumroad products published</td><td>Nov 10</td><td class="green">✓ reddix5.gumroad.com</td></tr>
+      <tr><td>Dan Martell Buyback Loop playbook</td><td>Nov 10</td><td class="green">✓ Uploaded to Google Drive</td></tr>
+      <tr><td>EEOC incidents filed</td><td>Nov 10</td><td class="green">✓ #261029-000783 + #261029-000786</td></tr>
+      <tr><td>All 6 inboxes scanned + replied</td><td>Nov 10</td><td class="green">✓ EEOC, Discover, FTC, SEC, HUD</td></tr>
+      <tr><td>Google Sheets reconnect initiated</td><td>Nov 11</td><td class="yellow">⚠ Pending Aaron auth (email sent)</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="card full-width">
+    <h2>📊 Dan Martell KPI Scorecard</h2>
+    <table>
+      <tr><th>Metric</th><th>Current</th><th>30-Day Target</th><th>90-Day Target</th></tr>
+      <tr><td>MRR (Monthly Recurring Revenue)</td><td class="yellow">$0 (building)</td><td class="blue">$500</td><td class="green">$5,000</td></tr>
+      <tr><td>TNN Subscriber Tier</td><td class="yellow">$9/mo</td><td class="blue">$9–$29/mo active</td><td class="green">$19–$49/mo (upgraded)</td></tr>
+      <tr><td>Grant Funding in Pipeline</td><td class="blue">$500K+ applied</td><td class="blue">1 grant awarded</td><td class="green">3+ grants awarded</td></tr>
+      <tr><td>Active Investor Conversations</td><td class="blue">7 pitched</td><td class="blue">2 responses</td><td class="green">1 funded</td></tr>
+      <tr><td>Media Coverage</td><td class="yellow">0 stories</td><td class="blue">1 pickup</td><td class="green">3 outlets</td></tr>
+      <tr><td>Gumroad Products Active</td><td class="green">15</td><td class="green">15</td><td class="green">25</td></tr>
+      <tr><td>Website Pages Live</td><td class="green">10+</td><td class="green">10+</td><td class="green">15+</td></tr>
+      <tr><td>$10K/hr Activities (Aaron)</td><td class="yellow">Partial</td><td class="blue">3 hours/day</td><td class="green">4+ hours/day</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="timestamp">
+  TTI Command Center — Powered by AI Automation | Total Transformation Inc. | EIN: 32-0663781<br>
+  <a href="https://aaronreddix1987-sketch.github.io" style="color:#4a4a6a;">aaronreddix1987-sketch.github.io</a>
+</div>
 
 </body>
 </html>
