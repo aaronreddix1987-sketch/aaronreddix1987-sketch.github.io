@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Start Here — Total Transformation Inc. | TTI + TNN</title>
+<meta name="description" content="From incarceration to empire. TTI helps formerly incarcerated individuals rebuild credit, clear records, find housing, and build businesses. TNN delivers the news no one else covers.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Arial',sans-serif;background:#0a0a0a;color:#fff}
+/* NAV */
+nav{background:#111;padding:14px 24px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;border-bottom:2px solid #c62828}
+.nav-logo{color:#fff;font-weight:bold;font-size:17px}
+.nav-links a{color:#ccc;text-decoration:none;margin-left:16px;font-size:13px}
+.nav-links a:hover{color:#fff}
+.nav-cta{background:#c62828;color:#fff;padding:7px 16px;border-radius:5px;text-decoration:none;font-size:13px;font-weight:bold}
+/* HERO */
+.hero{background:linear-gradient(135deg,#0a0a0a 0%,#1a0000 50%,#2d0000 100%);padding:70px 20px;text-align:center;border-bottom:1px solid #2a2a2a}
+.hero-badge{background:#c62828;color:#fff;font-size:11px;letter-spacing:3px;padding:5px 16px;border-radius:20px;display:inline-block;margin-bottom:20px;text-transform:uppercase}
+.hero h1{font-size:46px;line-height:1.1;max-width:800px;margin:0 auto 20px;font-weight:900}
+.hero h1 span{color:#ff4444}
+.hero p{font-size:18px;color:#ccc;max-width:600px;margin:0 auto 36px;line-height:1.6}
+.hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-fire{background:#c62828;color:#fff;padding:16px 36px;border-radius:8px;text-decoration:none;font-weight:bold;font-size:17px;display:inline-block}
+.btn-ghost{background:transparent;color:#fff;padding:16px 36px;border-radius:8px;text-decoration:none;font-weight:bold;font-size:17px;display:inline-block;border:2px solid #666}
+/* TRUST BAR */
+.trust{background:#111;padding:20px;text-align:center;border-bottom:1px solid #222}
+.trust-items{display:flex;gap:40px;justify-content:center;flex-wrap:wrap}
+.trust-item{color:#aaa;font-size:13px}
+.trust-item strong{color:#ff4444;display:block;font-size:20px;font-weight:900}
+/* FREE LEAD MAGNET */
+.free-section{background:linear-gradient(135deg,#111,#1a1100);border:2px solid #f5a623;border-radius:16px;max-width:700px;margin:50px auto;padding:40px 30px;text-align:center}
+.free-badge{background:#f5a623;color:#000;font-size:11px;font-weight:bold;letter-spacing:2px;padding:4px 12px;border-radius:3px;display:inline-block;margin-bottom:16px}
+.free-section h2{font-size:28px;margin-bottom:12px;color:#fff}
+.free-section p{color:#bbb;margin-bottom:24px;font-size:15px;line-height:1.6}
+.email-form{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.email-form input{padding:14px 18px;border-radius:8px;border:2px solid #f5a623;background:#0a0a0a;color:#fff;font-size:15px;width:280px}
+.email-form button,.email-form a{background:#f5a623;color:#000;padding:14px 24px;border-radius:8px;border:none;font-weight:bold;font-size:15px;cursor:pointer;text-decoration:none;display:inline-block}
+/* PRODUCTS GRID */
+.section{padding:60px 20px;max-width:1100px;margin:0 auto}
+.section-title{text-align:center;font-size:32px;margin-bottom:8px;font-weight:900}
+.section-sub{text-align:center;color:#888;font-size:15px;margin-bottom:40px}
+.products{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px}
+.product-card{background:#111;border:1px solid #222;border-radius:14px;padding:28px;transition:transform 0.2s,border-color 0.2s}
+.product-card:hover{transform:translateY(-4px);border-color:#c62828}
+.product-card.featured{border:2px solid #f5a623}
+.product-badge{font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:3px 10px;border-radius:3px;display:inline-block;margin-bottom:12px}
+.badge-new{background:#c62828;color:#fff}
+.badge-hot{background:#f5a623;color:#000}
+.badge-free{background:#27ae60;color:#fff}
+.product-card h3{font-size:16px;margin-bottom:8px;line-height:1.4}
+.product-card .price{font-size:30px;font-weight:900;color:#f5a623;margin:12px 0}
+.product-card .price small{font-size:14px;color:#888;font-weight:normal}
+.product-card p{color:#999;font-size:13px;margin-bottom:18px;line-height:1.5}
+.btn-buy{display:block;background:#c62828;color:#fff;padding:12px;border-radius:8px;text-decoration:none;font-weight:bold;text-align:center;font-size:14px}
+.btn-buy:hover{background:#a01f1f}
+.btn-secondary{background:#1a1a1a;border:1px solid #444;color:#fff}
+.btn-secondary:hover{background:#222}
+/* FUNNEL STEPS */
+.funnel-steps{background:#111;border-radius:16px;padding:50px 30px;margin:40px 0;text-align:center}
+.funnel-steps h2{font-size:28px;margin-bottom:40px;font-weight:900}
+.steps-grid{display:flex;gap:0;justify-content:center;flex-wrap:wrap;position:relative}
+.step-box{background:#0a0a0a;border:2px solid #222;border-radius:12px;padding:24px 20px;width:200px;margin:10px;text-align:center;position:relative}
+.step-num{background:#c62828;color:#fff;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:16px;margin:0 auto 12px}
+.step-box h4{font-size:14px;margin-bottom:6px}
+.step-box p{color:#888;font-size:12px}
+.arrow{color:#c62828;font-size:24px;display:flex;align-items:center;padding:0 5px}
+/* SUBSCRIPTION TIERS */
+.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;max-width:1000px;margin:0 auto}
+.tier{background:#111;border:2px solid #222;border-radius:16px;padding:36px 28px;text-align:center;transition:transform 0.2s}
+.tier.featured{border-color:#c62828;transform:scale(1.03)}
+.tier-label{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#888;margin-bottom:8px}
+.tier-name{font-size:24px;font-weight:900;margin-bottom:4px}
+.tier-price{font-size:48px;font-weight:900;color:#c62828;line-height:1}
+.tier-price span{font-size:16px;color:#888;font-weight:normal}
+.tier-features{list-style:none;text-align:left;margin:20px 0;padding:0}
+.tier-features li{padding:7px 0;color:#ccc;font-size:14px;border-bottom:1px solid #1a1a1a}
+.tier-features li::before{content:"✓ ";color:#c62828;font-weight:bold}
+.tier-btn{display:block;padding:14px;border-radius:8px;text-decoration:none;font-weight:bold;font-size:15px;margin-top:20px}
+.tier-btn-primary{background:#c62828;color:#fff}
+.tier-btn-secondary{background:transparent;border:2px solid #444;color:#fff}
+/* CTA BANNER */
+.cta-banner{background:linear-gradient(135deg,#c62828,#8b0000);padding:60px 20px;text-align:center}
+.cta-banner h2{font-size:36px;margin-bottom:16px;font-weight:900}
+.cta-banner p{color:#ffcccc;font-size:17px;margin-bottom:30px;max-width:600px;margin-left:auto;margin-right:auto}
+/* FOOTER */
+footer{background:#050505;padding:30px 20px;text-align:center;color:#555;font-size:13px;border-top:1px solid #111}
+footer a{color:#888;text-decoration:none}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo">🌱 TTI + 📺 TNN</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="ebooks.html">Ebooks</a>
+    <a href="news.html">TNN News</a>
+    <a href="pricing.html">Services</a>
+    <a href="https://gofund.me/b94ce460" target="_blank">Donate</a>
+    <a href="ebooks.html" class="nav-cta">Shop Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">🔥 Two Platforms. One Mission.</div>
+  <h1>From <span>Incarceration</span> to Empire — The Resources Are Here</h1>
+  <p>Total Transformation Institute gives formerly incarcerated individuals the tools, knowledge, and community to rebuild everything. Now with TNN — the news platform built for us.</p>
+  <div class="hero-btns">
+    <a href="ebooks.html" class="btn-fire">Shop All Ebooks & Tools →</a>
+    <a href="news.html" class="btn-ghost">Watch TNN News</a>
+  </div>
+</div>
+
+<!-- TRUST BAR -->
+<div class="trust">
+  <div class="trust-items">
+    <div class="trust-item"><strong>44+</strong>Live Stripe Products</div>
+    <div class="trust-item"><strong>$0</strong>Free Resources Available</div>
+    <div class="trust-item"><strong>6</strong>News Platforms Monitored</div>
+    <div class="trust-item"><strong>20</strong>Income Streams</div>
+    <div class="trust-item"><strong>24/7</strong>AI-Powered Platform</div>
+    <div class="trust-item"><strong>LA</strong>Based & Nationally Reaching</div>
+  </div>
+</div>
+
+<!-- FREE LEAD MAGNET -->
+<div style="max-width:1100px;margin:0 auto;padding:0 20px">
+<div class="free-section">
+  <div class="free-badge">FREE — No Credit Card</div>
+  <h2>🎁 Get Your Free Reentry Survival Toolkit</h2>
+  <p>Housing leads, record clearing checklist, credit repair roadmap, and business startup guide — all free, all actionable, delivered to your inbox instantly.</p>
+  <div class="email-form">
+    <input type="email" placeholder="Your email address" id="email-input">
+    <a href="mailto:aaronreddix1987@gmail.com?subject=Free%20Toolkit%20Request&body=Please%20send%20me%20the%20Free%20Reentry%20Survival%20Toolkit" class="btn-fire" style="padding:14px 24px">Get Free Toolkit →</a>
+  </div>
+  <p style="color:#666;font-size:12px;margin-top:12px">No spam. Unsubscribe anytime. We respect your privacy.</p>
+</div>
+</div>
+
+<!-- HOW THE FUNNEL WORKS -->
+<div style="max-width:1100px;margin:0 auto;padding:0 20px">
+<div class="funnel-steps">
+  <h2>Your Path From Here to There</h2>
+  <div class="steps-grid">
+    <div class="step-box">
+      <div class="step-num">1</div>
+      <h4>Free Toolkit</h4>
+      <p>Get the free reentry toolkit — no card needed</p>
+    </div>
+    <div class="arrow">→</div>
+    <div class="step-box">
+      <div class="step-num">2</div>
+      <h4>Pick a Guide</h4>
+      <p>Choose from 44+ ebooks starting at $7</p>
+    </div>
+    <div class="arrow">→</div>
+    <div class="step-box">
+      <div class="step-num">3</div>
+      <h4>Apply It</h4>
+      <p>Use the frameworks to clear records, get housing, start business</p>
+    </div>
+    <div class="arrow">→</div>
+    <div class="step-box">
+      <div class="step-num">4</div>
+      <h4>Scale with TNN</h4>
+      <p>Stay informed daily with TNN News — built for your community</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- TOP PRODUCTS -->
+<div class="section">
+  <div class="section-title">🔥 Best-Selling Products</div>
+  <div class="section-sub">Instant digital delivery. 90-day money-back guarantee.</div>
+  <div class="products">
+    <div class="product-card featured">
+      <div class="product-badge badge-hot">🏆 Best Seller</div>
+      <h3>Reentry Success Blueprint — Complete Bundle</h3>
+      <div class="price">$47 <small>was $197</small></div>
+      <p>Everything you need: housing, credit, record clearing, business — in one power pack.</p>
+      <a href="https://buy.stripe.com/dRm14m5XO5Xs9Lt0Y843S0z" class="btn-buy" target="_blank">Buy Now — $47 →</a>
+    </div>
+    <div class="product-card">
+      <div class="product-badge badge-new">NEW</div>
+      <h3>TNN Insider — Monthly News Subscription</h3>
+      <div class="price">$9 <small>/month</small></div>
+      <p>Housing alerts, reentry news, business spotlights, and community briefings delivered daily.</p>
+      <a href="https://buy.stripe.com/28o8wP8Ej45F8c9gla0ZW0H" class="btn-buy" target="_blank">Subscribe to TNN — $9/mo →</a>
+    </div>
+    <div class="product-card">
+      <div class="product-badge badge-free">FREE</div>
+      <h3>Record Clearing Checklist — California</h3>
+      <div class="price">$0 <small>free</small></div>
+      <p>Step-by-step Prop 47, expungement, and sealing guide. Know your rights.</p>
+      <a href="mailto:aaronreddix1987@gmail.com?subject=Free%20Record%20Clearing%20Checklist" class="btn-buy btn-secondary">Get Free →</a>
+    </div>
+    <div class="product-card">
+      <div class="product-badge badge-hot">📈 High Value</div>
+      <h3>AI Business Launch Kit — Start Earning in 30 Days</h3>
+      <div class="price">$97</div>
+      <p>Automated business framework with AI tools, scripts, and revenue playbook.</p>
+      <a href="https://buy.stripe.com/00w9ASgCs4Toe1J8qA43S0A" class="btn-buy" target="_blank">Buy Now — $97 →</a>
+    </div>
+    <div class="product-card">
+      <div class="product-badge badge-new">📰 TNN</div>
+      <h3>TNN Pro — Full Platform Access</h3>
+      <div class="price">$29 <small>/month</small></div>
+      <p>Everything in Insider + live briefings, business spotlights, advertising dashboard, and direct CEO access.</p>
+      <a href="mailto:aaronreddix1987@gmail.com?subject=TNN%20Pro%20Subscription%20-%2029%20per%20month" class="btn-buy" target="_blank">Get TNN Pro →</a>
+    </div>
+    <div class="product-card">
+      <div class="product-badge badge-hot">🏠 Housing</div>
+      <h3>Housing Fast Track — Get Housed in 30 Days</h3>
+      <div class="price">$27</div>
+      <p>Scripts, leads database, application templates, and landlord negotiation guide.</p>
+      <a href="https://buy.stripe.com/4gMdR80Du71w2j1bCM43S0B" class="btn-buy" target="_blank">Buy Now — $27 →</a>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:30px">
+    <a href="ebooks.html" style="color:#c62828;font-size:16px;font-weight:bold;text-decoration:none">View All 44 Products →</a>
+  </div>
+</div>
+
+<!-- TNN SUBSCRIPTION TIERS -->
+<div class="section">
+  <div class="section-title">📺 TNN News Network Plans</div>
+  <div class="section-sub">Stay informed. Stay empowered. Cancel anytime.</div>
+  <div class="tiers">
+    <div class="tier">
+      <div class="tier-label">Basic</div>
+      <div class="tier-name">TNN Free</div>
+      <div class="tier-price">$0<span>/mo</span></div>
+      <ul class="tier-features">
+        <li>Breaking news alerts (weekly)</li>
+        <li>Free reentry toolkit</li>
+        <li>Community newsletter</li>
+        <li>Public housing leads</li>
+      </ul>
+      <a href="mailto:aaronreddix1987@gmail.com?subject=TNN%20Free%20Signup" class="tier-btn tier-btn-secondary">Sign Up Free</a>
+    </div>
+    <div class="tier featured">
+      <div class="tier-label">⭐ Most Popular</div>
+      <div class="tier-name">TNN Insider</div>
+      <div class="tier-price">$9<span>/mo</span></div>
+      <ul class="tier-features">
+        <li>Daily news briefings</li>
+        <li>Housing & reentry alerts</li>
+        <li>Business spotlight features</li>
+        <li>Exclusive ebook discounts</li>
+        <li>Community member directory</li>
+        <li>Cancel anytime</li>
+      </ul>
+      <a href="https://buy.stripe.com/28o8wP8Ej45F8c9gla0ZW0H" class="tier-btn tier-btn-primary" target="_blank">Subscribe — $9/mo →</a>
+    </div>
+    <div class="tier">
+      <div class="tier-label">Premium</div>
+      <div class="tier-name">TNN Pro</div>
+      <div class="tier-price">$29<span>/mo</span></div>
+      <ul class="tier-features">
+        <li>Everything in Insider</li>
+        <li>Live weekly briefings</li>
+        <li>CEO direct access (Aaron)</li>
+        <li>Business advertising package</li>
+        <li>Investor network access</li>
+        <li>Grant opportunity alerts</li>
+        <li>Partnership opportunities</li>
+      </ul>
+      <a href="mailto:aaronreddix1987@gmail.com?subject=TNN%20Pro%20Subscription" class="tier-btn tier-btn-secondary">Get TNN Pro →</a>
+    </div>
+  </div>
+</div>
+
+<!-- CTA BANNER -->
+<div class="cta-banner">
+  <h2>Ready to Transform Your Life?</h2>
+  <p>Join thousands of formerly incarcerated individuals who are using TTI resources and TNN News to rebuild, grow, and lead.</p>
+  <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+    <a href="ebooks.html" style="background:#fff;color:#c62828;padding:16px 36px;border-radius:8px;text-decoration:none;font-weight:bold;font-size:17px;display:inline-block">Shop All Products →</a>
+    <a href="news.html" style="background:transparent;border:2px solid #fff;color:#fff;padding:16px 36px;border-radius:8px;text-decoration:none;font-weight:bold;font-size:17px;display:inline-block">Go to TNN News</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Total Transformation Inc. | Aaron T. Reddix, CEO | EIN: 32-0663781 | North Hollywood, CA</p>
+  <p style="margin-top:8px"><a href="tel:7473018586">(747) 301-8586</a> · <a href="mailto:aaronreddix1987@gmail.com">aaronreddix1987@gmail.com</a> · <a href="news.html">TNN News</a> · <a href="ebooks.html">Store</a> · <a href="https://gofund.me/b94ce460" target="_blank">Donate</a></p>
+</footer>
+</body>
+</html>
