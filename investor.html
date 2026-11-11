@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Investor & Partnership Overview — TTI + TNN | Aaron T. Reddix</title>
+<meta name="description" content="Investment opportunity in Total Transformation Inc. and TTI News Network — dual platform serving the $87B reentry market with AI automation and community news.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#050505;color:#fff}
+nav{background:#0a0a0a;padding:14px 30px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #c62828;position:sticky;top:0;z-index:100}
+.logo{font-weight:900;font-size:18px;color:#fff}
+.nav-right a{color:#ccc;text-decoration:none;margin-left:20px;font-size:13px}
+/* HERO */
+.hero{background:linear-gradient(135deg,#0a0000,#1a0000,#2d0000);padding:80px 30px;text-align:center}
+.tag{background:#c62828;color:#fff;font-size:11px;letter-spacing:3px;padding:5px 16px;border-radius:20px;display:inline-block;margin-bottom:20px;text-transform:uppercase}
+.hero h1{font-size:48px;font-weight:900;line-height:1.1;max-width:850px;margin:0 auto 20px}
+.hero h1 em{color:#f5a623;font-style:normal}
+.hero p{font-size:18px;color:#bbb;max-width:650px;margin:0 auto 36px;line-height:1.6}
+.hero-stats{display:flex;gap:40px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+.stat{text-align:center}
+.stat strong{display:block;font-size:40px;font-weight:900;color:#f5a623}
+.stat span{font-size:13px;color:#888;text-transform:uppercase;letter-spacing:1px}
+/* OPPORTUNITY SECTION */
+.section{padding:70px 30px;max-width:1100px;margin:0 auto}
+.section-label{color:#c62828;font-size:11px;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px}
+.section-title{font-size:34px;font-weight:900;margin-bottom:12px}
+.section-sub{color:#888;font-size:16px;margin-bottom:40px;line-height:1.6}
+/* CARDS */
+.cards-2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:700px){.cards-2{grid-template-columns:1fr}}
+.card{background:#111;border:1px solid #222;border-radius:14px;padding:30px}
+.card h3{font-size:20px;font-weight:900;margin-bottom:12px}
+.card h3 em{color:#f5a623;font-style:normal}
+.card p{color:#999;font-size:14px;line-height:1.7}
+.card-highlight{border-color:#c62828}
+/* METRICS TABLE */
+.metrics{background:#0d0d0d;border-radius:16px;padding:40px;margin:40px 0;overflow-x:auto}
+.metrics h3{font-size:22px;font-weight:900;margin-bottom:24px;color:#f5a623}
+table{width:100%;border-collapse:collapse}
+th{background:#1a1a1a;color:#888;font-size:12px;letter-spacing:1px;text-transform:uppercase;padding:12px 16px;text-align:left;border-bottom:1px solid #222}
+td{padding:12px 16px;border-bottom:1px solid #111;font-size:14px;color:#ccc}
+td:first-child{color:#fff;font-weight:bold}
+td.green{color:#27ae60;font-weight:bold}
+td.yellow{color:#f5a623;font-weight:bold}
+td.red{color:#c62828;font-weight:bold}
+/* REVENUE STREAMS */
+.streams{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin:30px 0}
+.stream{background:#111;border:1px solid #1a1a1a;border-radius:10px;padding:18px;text-align:center}
+.stream .icon{font-size:28px;margin-bottom:8px}
+.stream h4{font-size:13px;font-weight:bold;margin-bottom:4px}
+.stream p{color:#666;font-size:11px}
+.stream .amount{color:#f5a623;font-size:15px;font-weight:bold;margin-top:6px}
+/* INVESTMENT ASK */
+.ask{background:linear-gradient(135deg,#1a0000,#0a0000);border:2px solid #c62828;border-radius:20px;padding:60px 40px;text-align:center;margin:40px 0}
+.ask h2{font-size:38px;font-weight:900;margin-bottom:16px}
+.ask h2 em{color:#f5a623;font-style:normal}
+.ask p{color:#bbb;font-size:17px;max-width:600px;margin:0 auto 36px;line-height:1.6}
+.ask-boxes{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:800px;margin:0 auto 40px}
+.ask-box{background:#111;border:2px solid #2a2a2a;border-radius:12px;padding:28px;text-align:center}
+.ask-box h4{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#888;margin-bottom:8px}
+.ask-box .amount{font-size:36px;font-weight:900;color:#f5a623;margin-bottom:8px}
+.ask-box p{font-size:13px;color:#999}
+.btn-contact{background:#c62828;color:#fff;padding:18px 48px;border-radius:10px;text-decoration:none;font-weight:bold;font-size:18px;display:inline-block}
+/* FOUNDER */
+.founder{display:grid;grid-template-columns:auto 1fr;gap:30px;align-items:start;margin:40px 0;background:#0d0d0d;border-radius:16px;padding:40px}
+@media(max-width:600px){.founder{grid-template-columns:1fr}}
+.founder-img{width:120px;height:120px;border-radius:50%;background:#1a1a1a;border:3px solid #c62828;overflow:hidden}
+.founder-img img{width:100%;height:100%;object-fit:cover}
+.founder-name{font-size:22px;font-weight:900;margin-bottom:4px}
+.founder-title{color:#c62828;font-size:14px;margin-bottom:16px}
+.founder-bio{color:#999;font-size:14px;line-height:1.7}
+/* TIMELINE */
+.timeline{margin:40px 0}
+.timeline-item{display:flex;gap:20px;margin-bottom:20px}
+.timeline-dot{width:16px;height:16px;border-radius:50%;background:#c62828;flex-shrink:0;margin-top:3px}
+.timeline-content h4{font-size:15px;font-weight:bold;margin-bottom:4px}
+.timeline-content p{color:#888;font-size:13px}
+/* FOOTER */
+footer{background:#050505;padding:30px;text-align:center;color:#444;font-size:13px;border-top:1px solid #111}
+footer a{color:#666;text-decoration:none}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">🌱 TTI + 📺 TNN — Investor Overview</div>
+  <div class="nav-right">
+    <a href="index.html">Home</a>
+    <a href="news.html">TNN News</a>
+    <a href="funnel.html">Products</a>
+    <a href="mailto:aaronreddix1987@gmail.com?subject=Investment%20Inquiry%20-%20TTI%2FTNN">Contact Aaron</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="tag">🔥 Investment Opportunity</div>
+  <h1>The <em>$87 Billion</em> Reentry Market Has No<br>Digital Empire. We're Building It.</h1>
+  <p>Total Transformation Inc. + TTI News Network is a dual-platform AI-powered business serving 600,000 people released from California incarceration every year — and 2.3 million nationally.</p>
+  <div class="hero-stats">
+    <div class="stat"><strong>2.3M</strong><span>People released/year</span></div>
+    <div class="stat"><strong>$87B</strong><span>Reentry market size</span></div>
+    <div class="stat"><strong>44+</strong><span>Live Stripe products</span></div>
+    <div class="stat"><strong>20</strong><span>Revenue streams</span></div>
+    <div class="stat"><strong>0</strong><span>Dominant competitors</span></div>
+  </div>
+</div>
+
+<!-- OPPORTUNITY -->
+<div class="section">
+  <div class="section-label">The Gap</div>
+  <div class="section-title">No One Owns This Space. Yet.</div>
+  <div class="section-sub">650,000 people leave U.S. prisons every year with no money, no housing, no digital identity, and no media platform that speaks their language. The existing resources are fragmented, underfunded, and not AI-optimized. TTI is building the Amazon + CNN of reentry.</div>
+  <div class="cards-2">
+    <div class="card card-highlight">
+      <h3>🌱 TTI — The <em>Tools</em> Platform</h3>
+      <p>44+ digital products (ebooks, templates, guides) covering housing, record clearing, credit repair, business launch, and mental health recovery. Already live with Stripe payment infrastructure. AI-enhanced content delivery. 90-day money-back guarantee on all products. The "Home Depot" of reentry tools.</p>
+    </div>
+    <div class="card card-highlight">
+      <h3>📺 TNN — The <em>Media</em> Platform</h3>
+      <p>TTI News Network is an AI-powered news aggregator pulling from 6+ platforms (Instagram, YouTube, TikTok, Facebook, X, Citizen App) filtering for reentry, housing, criminal justice, and business news. Subscription model ($9–$29/mo). Advertising revenue. Sponsored content. The "CNN + Vice" for the reentry community.</p>
+    </div>
+    <div class="card">
+      <h3>📱 Platform Distribution</h3>
+      <p>Content published across Instagram, YouTube, TikTok, Facebook, X/Twitter, Citizen App, SMS, Email Newsletter, and Podcast simultaneously. AI automation handles distribution. Founder focuses on relationships and partnerships.</p>
+    </div>
+    <div class="card">
+      <h3>🤝 Partnership Model</h3>
+      <p>Reentry orgs, public defenders, treatment centers, landlords, and employers all need a trusted pipeline into the formerly incarcerated community. TTI becomes the bridge — referral fees, sponsored content, and B2B licensing create enterprise revenue on top of consumer sales.</p>
+    </div>
+  </div>
+</div>
+
+<!-- REVENUE STREAMS TABLE -->
+<div style="max-width:1100px;margin:0 auto;padding:0 30px">
+<div class="metrics">
+  <h3>📊 20 Revenue Streams — Active & Projected</h3>
+  <table>
+    <tr><th>Stream</th><th>Model</th><th>Target MRR</th><th>Status</th></tr>
+    <tr><td>Digital Ebooks (44 products)</td><td>One-time</td><td>$3,000–$8,000</td><td class="green">LIVE</td></tr>
+    <tr><td>TNN Insider Subscription</td><td>$9/mo recurring</td><td>$900–$5,000</td><td class="yellow">LAUNCHING</td></tr>
+    <tr><td>TNN Pro Subscription</td><td>$29/mo recurring</td><td>$1,500–$8,000</td><td class="yellow">LAUNCHING</td></tr>
+    <tr><td>Business Spotlight Ads (TNN)</td><td>$299–$999/mo</td><td>$2,000–$10,000</td><td class="yellow">READY</td></tr>
+    <tr><td>Sponsored Articles</td><td>$500/article</td><td>$2,000–$5,000</td><td class="yellow">READY</td></tr>
+    <tr><td>Referral Partnerships (Orgs)</td><td>$50–$200/referral</td><td>$1,000–$5,000</td><td class="red">PIPELINE</td></tr>
+    <tr><td>AI Business Services (TTI)</td><td>$500–$2,500/mo</td><td>$5,000–$25,000</td><td class="green">LIVE</td></tr>
+    <tr><td>Speaking / Training</td><td>$1,000–$5,000/event</td><td>$2,000–$10,000</td><td class="red">PIPELINE</td></tr>
+    <tr><td>TNN SMS Alerts</td><td>$4.99/mo</td><td>$500–$3,000</td><td class="yellow">READY</td></tr>
+    <tr><td>Podcast Sponsorships</td><td>$500–$2,000/episode</td><td>$1,000–$8,000</td><td class="red">PIPELINE</td></tr>
+    <tr><td>Video Spotlights</td><td>$1,500/video</td><td>$3,000–$9,000</td><td class="yellow">READY</td></tr>
+    <tr><td>Newsletter Sponsorships</td><td>$500–$2,500</td><td>$1,000–$5,000</td><td class="red">PIPELINE</td></tr>
+    <tr><td>Housing Lead Referrals</td><td>Per placement</td><td>$1,000–$5,000</td><td class="red">PIPELINE</td></tr>
+    <tr><td>Legal Aid Referrals</td><td>Per case</td><td>$500–$3,000</td><td class="red">PIPELINE</td></tr>
+    <tr><td>Course / Academy Platform</td><td>$97–$497/course</td><td>$3,000–$15,000</td><td class="red">90-DAY</td></tr>
+    <tr><td>White-Label Licensing</td><td>$500–$2,000/mo</td><td>$2,000–$10,000</td><td class="red">90-DAY</td></tr>
+    <tr><td>Grants & Philanthropy</td><td>$5K–$50K grants</td><td>$5,000+</td><td class="yellow">APPLYING</td></tr>
+    <tr><td>Community Membership Platform</td><td>$19/mo</td><td>$2,000–$10,000</td><td class="red">6-MONTH</td></tr>
+    <tr><td>Merchandise / Apparel</td><td>Per sale</td><td>$500–$3,000</td><td class="red">6-MONTH</td></tr>
+    <tr><td>TNN Live Events</td><td>Ticket sales + sponsors</td><td>$5,000–$25,000</td><td class="red">12-MONTH</td></tr>
+  </table>
+  <p style="color:#666;font-size:13px;margin-top:16px">Conservative Year 1 target: $25,000–$50,000 MRR | Year 2: $100,000–$250,000 MRR | Year 3: $1M+ MRR</p>
+</div>
+</div>
+
+<!-- INVESTMENT ASK -->
+<div style="max-width:1100px;margin:0 auto;padding:0 30px">
+<div class="ask">
+  <h2>Investment & <em>Partnership</em> Opportunity</h2>
+  <p>We're not just asking for money. We're building a network. Your investment opens the door to a community of 2.3 million people, a media platform, and a scalable AI business — with a founder who has lived the story.</p>
+  <div class="ask-boxes">
+    <div class="ask-box">
+      <h4>Seed Round</h4>
+      <div class="amount">$25K</div>
+      <p>Tech infrastructure, marketing, team. 5% equity stake. Advisory role available.</p>
+    </div>
+    <div class="ask-box">
+      <h4>Growth Round</h4>
+      <div class="amount">$100K</div>
+      <p>Full platform build, national outreach, TNN media launch. 10% equity. Board seat.</p>
+    </div>
+    <div class="ask-box">
+      <h4>Strategic Partner</h4>
+      <div class="amount">$250K+</div>
+      <p>Lead investor position. Full media licensing rights. Co-branded reentry platform.</p>
+    </div>
+  </div>
+  <a href="mailto:aaronreddix1987@gmail.com?subject=Investment%20Inquiry%20-%20TTI%2FTNN%20Platform&body=Hello%20Aaron%2C%0A%0AI%27m%20interested%20in%20learning%20more%20about%20the%20TTI%2FTNN%20investment%20opportunity.%0A%0APlease%20send%20me%20the%20full%20pitch%20deck.%0A%0AThank%20you." class="btn-contact">📧 Contact Aaron Directly →</a>
+  <p style="color:#666;font-size:13px;margin-top:16px">Call/Text: (747) 301-8586 | aaronreddix1987@gmail.com | EIN: 32-0663781</p>
+</div>
+</div>
+
+<!-- FOUNDER -->
+<div style="max-width:1100px;margin:0 auto;padding:0 30px">
+<div class="founder">
+  <div class="founder-img"><img src="aaron_main.jpg" alt="Aaron T. Reddix" onerror="this.style.display='none'"></div>
+  <div>
+    <div class="founder-name">Aaron T. Reddix</div>
+    <div class="founder-title">Founder & CEO — Total Transformation Inc. | TTI News Network</div>
+    <div class="founder-bio">
+      Aaron Reddix built TTI from lived experience — formerly incarcerated, rebuilt from zero, and now creating the infrastructure so the next person doesn't have to figure it out alone. He has personally navigated the housing system, credit recovery process, record clearing, and reentry business landscape in California. TTI isn't just a business — it's Aaron's testimony packaged as a platform.<br><br>
+      With a background spanning community organizing, digital business, AI automation, and media production, Aaron is uniquely positioned to bridge the gap between the reentry community and the investors, landlords, employers, and media organizations that have historically overlooked them.<br><br>
+      <strong style="color:#f5a623">His story is the product. His network is the moat. His mission is the brand.</strong>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- 30-DAY MILESTONES -->
+<div style="max-width:1100px;margin:0 auto;padding:0 30px 60px">
+  <div class="section-label">Roadmap</div>
+  <div class="section-title" style="margin-bottom:30px">Next 90 Days — Execution Plan</div>
+  <div class="timeline">
+    <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><h4>Day 1–30: Foundation</h4><p>TNN News fully live · Stripe products active · Email list building · First 100 TNN subscribers · 5 partnership outreach responses</p></div></div>
+    <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><h4>Day 31–60: Growth</h4><p>500+ email subscribers · First $5K month · 3 B2B partnerships signed · Grant applications submitted · Social media automated posting live</p></div></div>
+    <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><h4>Day 61–90: Scale</h4><p>$10K+ MRR · TNN Podcast launched · First speaking engagement · Investor round closes · National PR push</p></div></div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Total Transformation Inc. · EIN: 32-0663781 · North Hollywood, CA</p>
+  <p style="margin-top:8px"><a href="tel:7473018586">(747) 301-8586</a> · <a href="mailto:aaronreddix1987@gmail.com">aaronreddix1987@gmail.com</a> · <a href="index.html">Main Site</a> · <a href="news.html">TNN News</a></p>
+  <p style="margin-top:8px;color:#333">This page is for accredited investors and strategic partners. All projections are forward-looking estimates. Past performance does not guarantee future results.</p>
+</footer>
+</body>
+</html>
