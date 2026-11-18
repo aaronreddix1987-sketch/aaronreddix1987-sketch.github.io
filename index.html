@@ -1,156 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Total Transformation Institute — Reentry Resources for Formerly Incarcerated Individuals | Los Angeles</title>
-<meta name="description" content="Record clearing, credit repair, housing, and business tools for formerly incarcerated individuals in California. Created by Aaron Reddix, TTI founder.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Total Transformation Inc. — Digital library</title>
+<meta name="description" content="Low-price digital guides from Total Transformation Inc. Card checkout on Stripe. Instant delivery.">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#fff;color:#222}
-/* NAV */
-nav{background:#0d1f0d;padding:12px 24px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
-nav .logo{color:#fff;font-weight:bold;font-size:18px}
-nav a{color:#a5d6a7;text-decoration:none;margin-left:18px;font-size:13px}
-nav a:hover{color:#fff}
-/* HERO */
-.hero{background:linear-gradient(135deg,#0d1f0d 0%,#1a3a1a 60%,#2e5f2e 100%);color:#fff;padding:60px 20px;text-align:center}
-.hero h1{font-size:36px;line-height:1.2;margin-bottom:14px;max-width:700px;margin-left:auto;margin-right:auto}
-.hero h1 span{color:#a5d6a7}
-.hero p{font-size:16px;opacity:.9;max-width:580px;margin:0 auto 28px;line-height:1.6}
-.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.btn-main{background:#c62828;color:#fff;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:bold;font-size:15px}
-.btn-sec{background:transparent;color:#a5d6a7;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:bold;font-size:15px;border:2px solid #a5d6a7}
-/* SOCIAL PROOF BAR */
-.proof-bar{background:#1a3a1a;color:#a5d6a7;text-align:center;padding:12px;font-size:13px;font-weight:bold}
-/* PRODUCTS */
-.section{padding:50px 20px;max-width:1100px;margin:0 auto}
-.section h2{font-size:26px;color:#0d1f0d;text-align:center;margin-bottom:8px}
-.section .sub{text-align:center;color:#666;font-size:14px;margin-bottom:30px}
-.products{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}
-.card{border:1px solid #ddd;border-radius:10px;padding:20px;text-align:center;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.07);transition:transform .2s}
-.card:hover{transform:translateY(-3px);box-shadow:0 6px 16px rgba(0,0,0,.12)}
-.card .price{font-size:28px;font-weight:bold;color:#c62828;margin-bottom:8px}
-.card h3{font-size:14px;color:#0d1f0d;margin-bottom:14px;line-height:1.4}
-.card .badge{background:#e8f5e9;color:#2e7d32;font-size:11px;padding:3px 8px;border-radius:4px;margin-bottom:8px;display:inline-block}
-.btn-buy{background:#0d1f0d;color:#fff;padding:10px 18px;border-radius:6px;text-decoration:none;font-size:13px;font-weight:bold;display:block;width:100%}
-.btn-buy:hover{background:#2e7d32}
-/* FREE GUIDE */
-.freeguide{background:linear-gradient(135deg,#e8f5e9,#c8e6c9);border-radius:12px;padding:40px 30px;text-align:center;max-width:700px;margin:0 auto 50px}
-.freeguide h2{color:#0d1f0d;font-size:22px;margin-bottom:8px}
-.freeguide p{color:#333;margin-bottom:20px;font-size:14px;line-height:1.6}
-.freeguide form{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-.freeguide input{padding:12px 16px;border-radius:6px;border:2px solid #2e7d32;font-size:14px;width:260px}
-.freeguide button{background:#c62828;color:#fff;padding:12px 22px;border-radius:6px;border:none;font-size:14px;font-weight:bold;cursor:pointer}
-/* STORY */
-.story{background:#f5f5f5;padding:50px 20px}
-.story-inner{max-width:700px;margin:0 auto;text-align:center}
-.story-inner img{width:120px;height:120px;border-radius:50%;background:#1a3a1a;margin-bottom:16px;object-fit:cover}
-.story-inner h2{font-size:22px;color:#0d1f0d;margin-bottom:12px}
-.story-inner p{color:#444;line-height:1.7;font-size:14px;margin-bottom:12px}
-/* CASE STUDIES */
-.cases{background:#0d1f0d;color:#fff;padding:50px 20px}
-.cases h2{text-align:center;font-size:24px;margin-bottom:30px;color:#a5d6a7}
-.cases-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px;max-width:1000px;margin:0 auto}
-.case-card{background:rgba(255,255,255,.08);border-radius:8px;padding:18px;border-left:3px solid #a5d6a7}
-.case-card .num{font-size:28px;font-weight:bold;color:#a5d6a7}
-.case-card p{font-size:13px;opacity:.85;margin-top:4px;line-height:1.5}
-/* GOFUNDME */
-.gofundme{background:linear-gradient(135deg,#c62828,#b71c1c);color:#fff;padding:40px 20px;text-align:center}
-.gofundme h2{font-size:24px;margin-bottom:10px}
-.gofundme p{opacity:.9;font-size:14px;max-width:500px;margin:0 auto 20px;line-height:1.6}
-.btn-gfm{background:#fff;color:#c62828;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:bold;font-size:15px}
-/* FOOTER */
-footer{background:#0d1f0d;color:#aaa;text-align:center;padding:20px;font-size:12px}
-footer a{color:#a5d6a7}
-@media(max-width:600px){.hero h1{font-size:24px}.hero-btns{flex-direction:column;align-items:center}}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Georgia,serif;background:#0c1116;color:#edf3f8;line-height:1.45}
+  a{color:inherit}
+  nav{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:14px 20px;background:#101820;border-bottom:1px solid #243140}
+  nav strong{letter-spacing:.04em}
+  nav a{color:#e6bb5a;text-decoration:none;font-family:Arial,sans-serif;font-size:14px;margin-left:14px}
+  header{padding:48px 20px 28px;max-width:880px;margin:0 auto}
+  .kicker{font-family:Arial,sans-serif;color:#e6bb5a;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+  h1{font-size:clamp(32px,5vw,52px);line-height:1.05;margin:10px 0 14px}
+  header p{color:#b7c3cf;max-width:640px}
+  .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .btn{display:inline-block;background:#e6bb5a;color:#14110c;text-decoration:none;font-family:Arial,sans-serif;font-weight:800;padding:14px 18px;border-radius:10px}
+  .ghost{display:inline-block;border:1px solid #314456;text-decoration:none;font-family:Arial,sans-serif;font-weight:700;padding:13px 16px;border-radius:10px}
+  main{max-width:980px;margin:0 auto;padding:10px 20px 64px}
+  h2{font-family:Arial,sans-serif;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:#e6bb5a;margin:28px 0 12px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+  .card{background:#141c24;border:1px solid #243140;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:8px}
+  .card b{font-family:Arial,sans-serif}
+  .card span{color:#9aabba;font-size:14px;flex:1}
+  .price{font-family:Arial,sans-serif;color:#e6bb5a;font-weight:800}
+  .card a{font-family:Arial,sans-serif;font-weight:800;text-decoration:none;background:#e6bb5a;color:#14110c;text-align:center;border-radius:8px;padding:10px}
+  footer{border-top:1px solid #243140;color:#8b9bab;font-family:Arial,sans-serif;font-size:13px;padding:22px;text-align:center}
 </style>
 </head>
 <body>
 <nav>
-  <div class="logo">🌱 Total Transformation Institute</div>
+  <strong>Total Transformation Inc.</strong>
   <div>
-    <a href="funnel.html">Start Here</a>
-    <a href="ebooks.html">Store</a>
-    <a href="news.html">📺 TNN</a>
-    <a href="partnerships.html">Partner</a>
-    <a href="investor.html">Invest</a>
-    <a href="https://gofund.me/b94ce460" target="_blank">Donate</a>
-    <a href="gumroad.html" style="color:#a5d6a7;margin-left:10px;font-size:12px">Gumroad</a>
-    <a href="funnel.html" style="background:#c62828;color:#fff;padding:5px 12px;border-radius:4px;margin-left:10px">🛒 Shop Now</a>
+    <a href="ebooks.html">All 43 titles</a>
+    <a href="thank-you.html">After purchase</a>
   </div>
 </nav>
-<div class="hero">
-  <h1>From <span>Formerly Incarcerated</span> to<br>Financially Free — We Built the Roadmap</h1>
-  <p>Record clearing. Credit repair. Fair chance housing. Business startup. Peer support certification. 10 step-by-step toolkits created by someone who's been through it all.</p>
-  <div class="hero-btns">
-    <a href="store.html" class="btn-main">🛒 Shop All 10 Products</a>
-    <a href="https://gofund.me/b94ce460" target="_blank" class="btn-sec">❤️ Support Our GoFundMe</a>
+<header>
+  <p class="kicker">Live card checkout · Los Angeles</p>
+  <h1>Start at $9.97. The system is the $47 library.</h1>
+  <p>Dan Martell’s buyback rule, applied here: sell the smallest useful product first, then the core library, then the monthly briefing. Every button opens a Stripe checkout. Nothing on this page is a free download.</p>
+  <div class="row">
+    <a class="btn" href="https://buy.stripe.com/3cIaEW85W99Ee1JeOY43S0r">Start — Cold Call Code $9.97</a>
+    <a class="ghost" href="https://buy.stripe.com/6oUaEW71Sfy2cXF22c43S0p">12-book Blueprint $47</a>
   </div>
-</div>
-<div class="proof-bar">
-  ✅ 50+ Reentry Orgs Using Our Resources &nbsp;|&nbsp; ✅ 500,000+ Californians Eligible for Record Clearing &nbsp;|&nbsp; ✅ Founded by Aaron Reddix — Formerly Incarcerated
-</div>
-<!-- TNN NEWS PLATFORM BANNER -->
-<div style="background:linear-gradient(135deg,#1a0000,#3d0000);color:#fff;padding:28px 20px;text-align:center">
-  <div style="max-width:900px;margin:0 auto">
-    <div style="font-size:11px;letter-spacing:3px;color:#ff6b6b;text-transform:uppercase;margin-bottom:8px">NEW — Just Launched</div>
-    <h2 style="font-size:24px;margin-bottom:10px">📺 TTI News Network (TNN) is Live</h2>
-    <p style="color:#ffcccc;font-size:15px;margin-bottom:18px;max-width:600px;margin-left:auto;margin-right:auto">AI-powered community news covering housing, reentry, justice reform & business — built for formerly incarcerated individuals and their communities.</p>
-    <a href="news.html" style="background:#c62828;color:#fff;padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:bold;font-size:16px;display:inline-block">Visit TNN News Network →</a>
+</header>
+<main>
+  <h2>Fast entry — lowest price, same delivery</h2>
+  <div class="grid">
+    <article class="card"><b>Cold Call Code</b><span>Trust on the first call. The $9.97 door.</span><div class="price">$9.97</div><a href="https://buy.stripe.com/3cIaEW85W99Ee1JeOY43S0r">Buy on Stripe</a></article>
+    <article class="card"><b>Money Mindset</b><span>Affirmation system for building wealth.</span><div class="price">$9.97</div><a href="https://buy.stripe.com/aFa00i9a02Lg5vddKU43S0q">Buy on Stripe</a></article>
+    <article class="card"><b>Build to Sell</b><span>A business that runs without you.</span><div class="price">$9.97</div><a href="https://buy.stripe.com/9B63cugCs99E5vddKU43S0o">Buy on Stripe</a></article>
+    <article class="card"><b>Become the CEO</b><span>Stop working in the business.</span><div class="price">$9.97</div><a href="https://buy.stripe.com/7sY9ASdqgadIf5NayI43S0n">Buy on Stripe</a></article>
+    <article class="card"><b>30-Day Transformation Journal</b><span>One month of prompts. Lowest daily-use product.</span><div class="price">$17</div><a href="https://buy.stripe.com/3cI5kC3PG71w7DlfT243S13">Buy on Stripe</a></article>
+    <article class="card"><b>Medical Data Input and HIM Careers</b><span>A job-skill guide under $15.</span><div class="price">$14.97</div><a href="https://buy.stripe.com/6oU4gy0Du85AaPx7mw43S0u">Buy on Stripe</a></article>
   </div>
-</div>
-<div class="cases">
-  <h2>📊 Why These Products Work — The Numbers</h2>
-  <div class="cases-grid">
-    <div class="case-card"><div class="num">500K+</div><p>Californians eligible for record clearing. Zero competition in the DIY toolkit space.</p></div>
-    <div class="case-card"><div class="num">$1,200</div><p>Average annual savings vs. Lexington Law ($99/mo). Our Credit Reset Kit = $47 one-time.</p></div>
-    <div class="case-card"><div class="num">400K</div><p>LA County Section 8 waitlist. Our Housing Guide teaches every shortcut and legal protection.</p></div>
-    <div class="case-card"><div class="num">$18-28/hr</div><p>Starting pay for Peer Support Specialists. RADT certification = no degree required.</p></div>
+  <h2>Core — buy back the time</h2>
+  <div class="grid">
+    <article class="card"><b>Buy Back Your Time</b><span>Get your life back using AI. The operating model.</span><div class="price">$19</div><a href="https://buy.stripe.com/dRmcN485W3Pk6zhayI43S0s">Buy on Stripe</a></article>
+    <article class="card"><b>Credit Repair and Business Credit</b><span>Personal disputes plus business credit steps.</span><div class="price">$24.97</div><a href="https://buy.stripe.com/4gM6oG71S3Pk0aTbCM43S0y">Buy on Stripe</a></article>
+    <article class="card"><b>Real Estate and Sober Living</b><span>Investing notes for operators.</span><div class="price">$29.97</div><a href="https://buy.stripe.com/aFafZg5XO85A4r9gX643S0w">Buy on Stripe</a></article>
+    <article class="card"><b>The 10M Blueprint</b><span>Complete 12-book series. One checkout.</span><div class="price">$47</div><a href="https://buy.stripe.com/6oUaEW71Sfy2cXF22c43S0p">Buy on Stripe</a></article>
+    <article class="card"><b>Peer Support Specialist Exam Prep</b><span>PSS practice set. Same title as the library.</span><div class="price">$37</div><a href="https://buy.stripe.com/6oU8wO1Hyfy28Hp4ak43S0K">Buy on Stripe</a></article>
+    <article class="card"><b>TNN Insider</b><span>Monthly briefing after the first purchase.</span><div class="price">$9/mo</div><a href="https://buy.stripe.com/9B6bJ0bi8bhM9Lt0Y843S23">Subscribe on Stripe</a></article>
   </div>
-</div>
-<div id="products" class="section">
-  <h2>🛒 10 Digital Products — Instant Download</h2>
-  <p class="sub">Every product created from lived experience. Every dollar supports TTI's mission.</p>
-  <div class="products">
-    <div class="card"><div class="badge">🔥 TOP SELLER</div><div class="price">$97</div><h3>Clean Slate Record Clearing Toolkit</h3><a href="https://drive.google.com/file/d/1lG9ldaJkFBZUUYcHidYiCTOGsD7mkFFM/view" class="btn-buy" target="_blank">📥 Get It Now</a></div>
-    <div class="card"><div class="badge">🔥 TOP SELLER</div><div class="price">$47</div><h3>Credit Reset System — 30 Dispute Templates</h3><a href="https://drive.google.com/file/d/1WWYorLROTWCIdrRKB578SLGE5MiTmGCY/view" class="btn-buy" target="_blank">📥 Get It Now</a></div>
-    <div class="card"><div class="badge">⭐ HIGH VALUE</div><div class="price">$67</div><h3>Reentry Business Builder Notion Template</h3><a href="https://drive.google.com/file/d/1mDBYrAPR_gz1QJihFh1pUGKjerHVS-0e/view" class="btn-buy" target="_blank">📥 Get It Now</a></div>
-    <div class="card"><div class="badge">🏠 HOUSING</div><div class="price">$47</div><h3>Landlord Persuasion Pack — 5 Templates</h3><a href="https://drive.google.com/file/d/1AgMW6NloH7neZ4_8NieCflcUOpykTZ_R/view" class="btn-buy" target="_blank">📥 Get It Now</a></div>
-    <div class="card"><div class="badge">⚖️ LEGAL</div><div class="price">$37</div><h3>FTC/CFPB Complaint Master Kit</h3><a href="https://drive.google.com/file/d/1yNck18hG3533FjNsrkOVkGkwD4p4rjYn/view" class="btn-buy" target="_blank">📥 Get It Now</a></div>
-    <div class="card"><div class="badge">📚 CAREER</div><div class="price">$37</div><h3>Peer Support Specialist Exam Prep (200 Qs)</h3><a href="https://drive.google.com/file/d/1EEmwyr0mn0wIkCU7aIcI_4HyRBKpMGKO/view" class="btn-buy" target="_blank">📥 Get It Now</a></div>
-    <div class="card"><div class="badge">📄 JOBS</div><div class="price">$27</div><h3>Reentry Resume Builder + 20 AI Prompts</h3><a href="https://drive.google.com/file/d/1-4RM_vu5XelIMu5DyF5XlgYWntY5KqDm/view" class="btn-buy" target="_blank">📥 Get It Now</a></div>
-    <div class="card"><div class="badge">📅 PLAN</div><div class="price">$27</div><h3>90-Day Reentry Launch Planner</h3><a href="https://drive.google.com/file/d/1NX49fbYdYuiiT4Y94T2_tye13wdddRk-/view" class="btn-buy" target="_blank">📥 Get It Now</a></div>
-    <div class="card"><div class="badge">🏢 NONPROFIT</div><div class="price">$97</div><h3>Recovery Business Blueprint — 501(c)(3) Guide</h3><a href="https://drive.google.com/file/d/1_BLRn9LNH2K4YSHca43xdcHhfhk6IH9x/view" class="btn-buy" target="_blank">📥 Get It Now</a></div>
-    <div class="card"><div class="badge">📊 GRANTS</div><div class="price">$47</div><h3>Nonprofit Grant Tracker — 50 Funders Included</h3><a href="https://drive.google.com/file/d/1QBlbVhbTSd__vuwb8x5ZUT96cNjgaGYs/view" class="btn-buy" target="_blank">📥 Get It Now</a></div>
-  </div>
-</div>
-<div class="freeguide" id="freeguide">
-  <h2>🎁 Get the FREE 7-Day Reentry Quick-Start Checklist</h2>
-  <p>Everything you need to do in your first week — ID, benefits, housing, banking, credit, employment, and record clearing. Created by someone who's been through it.</p>
-  <form action="mailto:aaronreddix38@gmail.com" method="get">
-    <input type="email" name="subject" placeholder="Enter your email address" value="FREE Checklist Request">
-    <button type="submit">Send Me the Free Guide →</button>
-  </form>
-  <p style="font-size:11px;color:#666;margin-top:10px">Or email aaronreddix38@gmail.com with subject "FREE CHECKLIST"</p>
-</div>
-<div id="story" class="story">
-  <div class="story-inner">
-    <h2>Built by Someone Who's Been There</h2>
-    <p>Aaron Thomas Reddix founded Total Transformation Institute after experiencing incarceration, homelessness, identity theft, and the systematic barriers that prevent formerly incarcerated individuals from rebuilding their lives.</p>
-    <p>Every product in our store was created from lived experience — the record clearing toolkit, the credit dispute letters, the housing application templates, the business startup guide. These are the tools Aaron wished he had when he got out.</p>
-    <p><strong>TTI's mission:</strong> Reentry peer support, sober living development, and workforce training for formerly incarcerated individuals in Los Angeles, California.</p>
-    <p>EIN: 32-0663781 | CA Corp: C4861952 | Los Angeles, CA 90011</p>
-  </div>
-</div>
-<div class="gofundme">
-  <h2>❤️ Help Us Build the 15-Bed Sober Living Facility</h2>
-  <p>Your donation directly funds TTI's 15-bed sober living facility in Sun Valley, Los Angeles — giving formerly incarcerated individuals a safe place to rebuild their lives.</p>
-  <a href="https://gofund.me/b94ce460" target="_blank" class="btn-gfm">Donate on GoFundMe →</a>
-</div>
+  <h2>Full inventory</h2>
+  <p style="color:#b7c3cf;margin-bottom:12px">Forty-three titles already sit on <a href="ebooks.html" style="color:#e6bb5a">the library</a>. Each Buy button there is a Stripe payment link. Delivery page: <a href="thank-you.html" style="color:#e6bb5a">thank-you</a>.</p>
+  <a class="btn" href="ebooks.html">Open the full library</a>
+</main>
 <footer>
-  Total Transformation Institute | Aaron Thomas Reddix | (747) 301-8586 | aaronreddix38@gmail.com<br>
-  EIN: 32-0663781 | CA Corp: C4861952 | Los Angeles, CA 90011<br>
-  <a href="store.html">Digital Store</a> &nbsp;|&nbsp; <a href="https://gofund.me/b94ce460">GoFundMe</a><br>
-  © 2026 Total Transformation Institute. All rights reserved.
+  Total Transformation Inc. · Los Angeles · Educational products only. Card checkout through Stripe. Results depend on what you do with the material.
 </footer>
-</body></html>
+</body>
+</html>
