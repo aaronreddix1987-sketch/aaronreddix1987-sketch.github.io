@@ -1,15 +1,23 @@
 # TTI automated workflow — cash + housing + Martell loop
 
-Updated 2026-09-28 20:05 PDT. Martell loop: Audit → Transfer → Fill. Tokens first, hire later.
+Updated 2026-11-18. Martell loop: Audit → Transfer → Fill. No new URLs. No new payment links.
 
-## P0 Cash — ebooks live now
-Store: https://aaronreddix1987-sketch.github.io/ebooks.html
+## P0 Cash — use the links already live
+Store home: https://aaronreddix1987-sketch.github.io/
+Library: https://aaronreddix1987-sketch.github.io/ebooks.html
+Same library, old addresses: catalog.html, buy.html, checkout.html, execute-revenue.html, flashsale.html, free-sample.html
+Workflow: https://aaronreddix1987-sketch.github.io/workflow.html
+Same workflow, old addresses: dashboard.html, email-sequence.html, house.html
+Case pattern: https://aaronreddix1987-sketch.github.io/case-study.html
 - 10M Blueprint $47 https://buy.stripe.com/6oUaEW71Sfy2cXF22c43S0p
 - Buy Back Your Time $19 https://buy.stripe.com/dRmcN485W3Pk6zhayI43S0s
 - Credit Repair $24.97 https://buy.stripe.com/4gM6oG71S3Pk0aTbCM43S0y
 - Cold Call Code $9.97 https://buy.stripe.com/3cIaEW85W99Ee1JeOY43S0r
 Thank-you: https://aaronreddix1987-sketch.github.io/thank-you.html
-Chime is closed. Stripe card only. No invented sales.
+Chime is closed. Do not use Drive file CHIME_INSTANT_CHECKOUT_ALL_MONEY_TO_CHIME.js. Stripe card only. Payout bank is LAFCU and only Aaron can confirm it. No invented sales.
+
+## Model
+Copy the method on case-study.html: answer every lead, book the calendar, sell the product that already has a Stripe button. The percentages on that page are the pattern, not audited TTI client results. Drive catalog TTI_FULL_BOOK_CATALOG_FOR_SALE_Aug03.md still names Spark, System, Operator, and Treatment 01–10. Fulfill those folders only after a real Stripe receipt. Do not paste the folder links on a public page.
 
 ## P0 Housing — live-in manager near 9710 San Fernando Rd, Sun Valley 91352
 Daily automation searches 180+ DOM 3+ bed houses in 91352 / nearby and sends owner-carry or master-lease inquiries to verified listing-agent emails only. Cap 3/day. Never send a dollar bid without Aaron's cash authorization.
@@ -32,7 +40,7 @@ CR-180 / PC 1203.4 packet in Drive. Live Scan first, then courthouse of convicti
 A New Way of Life: 323-563-3575. LA PD: 213-974-2811. ReFresh: 213-204-9904. LAFLA: 800-399-4529.
 
 ## Gatekeeper rules
-Draft first on identity, legal, refund, and payment-permission items. Never email SSN or ID images. Never claim nonprofit, Medi-Cal, or an acquired building. Never mass-blast free books to government inboxes.
+Draft first on identity, legal, refund, and payment-permission items. Never email SSN or ID images. Never claim nonprofit, Medi-Cal, or an acquired building. Never mass-blast free books to government inboxes. Never invent clients or metrics.
 
 ## Daily 7:15 AM PT automation
 TTI Sun Valley housing + ebook cash engine (task e342fe57-e978-49be-be3f-ebcf325ab12b).
