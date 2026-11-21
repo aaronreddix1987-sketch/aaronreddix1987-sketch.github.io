@@ -1,505 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TTI Ebook Store | Total Transformation Inc.</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', Arial, sans-serif; background: #0b0f14; color: #fff; }
-    .hero { background: linear-gradient(135deg, #0b0f14 0%, #1a2436 100%); padding: 60px 20px 40px; text-align: center; border-bottom: 2px solid #ffc832; }
-    .hero h1 { font-size: 2.5rem; color: #ffc832; margin-bottom: 12px; }
-    .hero p { font-size: 1.1rem; color: #aaa; max-width: 600px; margin: 0 auto 20px; }
-    .hero .stats { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 20px; }
-    .hero .stat { text-align: center; }
-    .hero .stat .num { font-size: 2rem; font-weight: 700; color: #ffc832; }
-    .hero .stat .label { font-size: 0.85rem; color: #888; }
-    .free-banner { background: #ffc832; color: #0b0f14; text-align: center; padding: 14px 20px; font-size: 1rem; font-weight: 700; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
-    .section-title { font-size: 1.6rem; color: #ffc832; margin-bottom: 30px; padding-bottom: 10px; border-bottom: 1px solid #333; }
-    .books-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
-    .book-card { background: #141922; border: 1px solid #2a3545; border-radius: 10px; overflow: hidden; transition: transform 0.2s, border-color 0.2s; }
-    .book-card:hover { transform: translateY(-4px); border-color: #ffc832; }
-    .book-cover { background: linear-gradient(135deg, #1a2436, #0d1520); padding: 30px 20px; text-align: center; position: relative; min-height: 120px; display: flex; align-items: center; justify-content: center; }
-    .book-icon { font-size: 3rem; }
-    .book-badge { position: absolute; top: 10px; right: 10px; background: #ffc832; color: #0b0f14; font-weight: 700; font-size: 0.85rem; padding: 4px 10px; border-radius: 20px; }
-    .book-info { padding: 16px; }
-    .book-info h3 { font-size: 0.95rem; color: #fff; margin-bottom: 14px; line-height: 1.4; min-height: 42px; }
-    .buy-btn { display: block; background: #ffc832; color: #0b0f14; text-align: center; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: background 0.2s; }
-    .buy-btn:hover { background: #e6b42a; }
-    .free-section { margin-top: 60px; background: #141922; border: 2px solid #ffc832; border-radius: 12px; padding: 40px; text-align: center; }
-    .free-section h2 { font-size: 1.8rem; color: #ffc832; margin-bottom: 16px; }
-    .free-section p { color: #aaa; max-width: 500px; margin: 0 auto 24px; line-height: 1.6; }
-    .free-section .cta { display: inline-block; background: #ffc832; color: #0b0f14; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
-    .footer { background: #0b0f14; border-top: 1px solid #2a3545; padding: 30px 20px; text-align: center; color: #666; font-size: 0.85rem; margin-top: 60px; }
-    .footer a { color: #ffc832; text-decoration: none; }
-    @media (max-width: 600px) { .hero h1 { font-size: 1.8rem; } .books-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); } }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Study Guides &amp; Ebooks — Total Transformation Inc.</title>
+<meta name="description" content="Short, plain-English business guides from Total Transformation Inc. Cold Call Code is on sale now for $9.97. Plus 43 professional business ebooks — instant download after payment.">
+<link rel="canonical" href="https://aaronreddix1987-sketch.github.io/ebooks.html">
+<meta property="og:title" content="Study Guides &amp; Ebooks — Total Transformation Inc.">
+<meta property="og:description" content="Short, plain-English business guides from Total Transformation Inc. Cold Call Code $9.97 plus 43 professional business ebooks.">
+<meta property="og:image" content="https://aaronreddix1987-sketch.github.io/assets/img/ceo-command-center.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0b0f14">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="TTI">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,700&amp;display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
-
-<div class="hero">
-  <h1>TTI Ebook Store</h1>
-  <p>43 professional business guides by Aaron T. Reddix, CEO of Total Transformation Inc. Real strategies from someone who built from nothing.</p>
-  <div class="stats">
-    <div class="stat"><div class="num">43</div><div class="label">Business Guides</div></div>
-    <div class="stat"><div class="num">$27+</div><div class="label">Starting Price</div></div>
-    <div class="stat"><div class="num">100%</div><div class="label">Actionable</div></div>
+<a class="skip" href="#main">Skip to content</a>
+<nav class="top" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="/">Total <span>Transformation</span> Inc.</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    <div class="links" id="menu">
+      <a href="/services.html">Services</a><a href="/front-office.html">Front Office</a><a href="/case-study.html">Case study</a><a href="/ebooks.html" aria-current="page">Ebooks</a><a href="/#story">Our story</a>
+      <a class="btn" href="#contact">Book a call</a>
+    </div>
   </div>
-</div>
-
-<div class="free-banner">
-  &#127381; GET 3 FREE EBOOKS &mdash; Email us at aaronreddix1987@gmail.com with subject "FREE EBOOKS" to receive your starter pack
-</div>
-
-<div class="container">
-  <div class="section-title">All 43 Business Guides</div>
-  <div class="books-grid">
-
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$27</div>
-          </div>
-          <div class="book-info">
-            <h3>The AI Front Desk Guide</h3>
-            <a href="https://buy.stripe.com/8x2bJ13tz42lcCXfJ6gEg1J" class="buy-btn" target="_blank">Get It Now &mdash; $27</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$47</div>
-          </div>
-          <div class="book-info">
-            <h3>AI Business Automation 2026</h3>
-            <a href="https://buy.stripe.com/fZuaEX6FLdCV6ez40ogEg1K" class="buy-btn" target="_blank">Get It Now &mdash; $47</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$37</div>
-          </div>
-          <div class="book-info">
-            <h3>Sales Funnel Architecture</h3>
-            <a href="https://buy.stripe.com/eVqbJ14xDcyRauP1SggEg1L" class="buy-btn" target="_blank">Get It Now &mdash; $37</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$37</div>
-          </div>
-          <div class="book-info">
-            <h3>LLC Formation Guide</h3>
-            <a href="https://buy.stripe.com/28EcN53tz8iBcCXcwUgEg1M" class="buy-btn" target="_blank">Get It Now &mdash; $37</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$47</div>
-          </div>
-          <div class="book-info">
-            <h3>Credit Repair Complete System</h3>
-            <a href="https://buy.stripe.com/eVq5kD4xDbuN9qL2WkgEg1N" class="buy-btn" target="_blank">Get It Now &mdash; $47</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$47</div>
-          </div>
-          <div class="book-info">
-            <h3>The Digital Marketing Agency Blueprint</h3>
-            <a href="https://buy.stripe.com/5kQ14nd496atfP98gEgEg1O" class="buy-btn" target="_blank">Get It Now &mdash; $47</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$37</div>
-          </div>
-          <div class="book-info">
-            <h3>The Coaching Business Blueprint</h3>
-            <a href="https://buy.stripe.com/4gM00j1lr7ex0UfcwUgEg1P" class="buy-btn" target="_blank">Get It Now &mdash; $37</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$37</div>
-          </div>
-          <div class="book-info">
-            <h3>Grant Writing Mastery</h3>
-            <a href="https://buy.stripe.com/eVq00jd49cyR46rcwUgEg1Q" class="buy-btn" target="_blank">Get It Now &mdash; $37</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$37</div>
-          </div>
-          <div class="book-info">
-            <h3>Personal Branding Mastery</h3>
-            <a href="https://buy.stripe.com/8x26oH5BHbuNcCX1SggEg1R" class="buy-btn" target="_blank">Get It Now &mdash; $37</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$47</div>
-          </div>
-          <div class="book-info">
-            <h3>E-Commerce Store Launch Playbook</h3>
-            <a href="https://buy.stripe.com/cNi00jfchfL332n0OcgEg1S" class="buy-btn" target="_blank">Get It Now &mdash; $47</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$47</div>
-          </div>
-          <div class="book-info">
-            <h3>Real Estate Wholesaling System</h3>
-            <a href="https://buy.stripe.com/aFadR9aW1buNeL5gNagEg1T" class="buy-btn" target="_blank">Get It Now &mdash; $47</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$47</div>
-          </div>
-          <div class="book-info">
-            <h3>House Flipping Blueprint</h3>
-            <a href="https://buy.stripe.com/00wdR9c058iB8mH54sgEg1U" class="buy-btn" target="_blank">Get It Now &mdash; $47</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$27</div>
-          </div>
-          <div class="book-info">
-            <h3>Strategic Networking</h3>
-            <a href="https://buy.stripe.com/eVq9AT2pv8iBeL5fJ6gEg1V" class="buy-btn" target="_blank">Get It Now &mdash; $27</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$37</div>
-          </div>
-          <div class="book-info">
-            <h3>The Consulting Business Launch Guide</h3>
-            <a href="https://buy.stripe.com/00w4gz2pv0Q97iDdAYgEg1W" class="buy-btn" target="_blank">Get It Now &mdash; $37</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$27</div>
-          </div>
-          <div class="book-info">
-            <h3>Business Plan Writing Mastery</h3>
-            <a href="https://buy.stripe.com/cNi28rc059mF6ez68wgEg1X" class="buy-btn" target="_blank">Get It Now &mdash; $27</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$47</div>
-          </div>
-          <div class="book-info">
-            <h3>Passive Income Blueprint 2026</h3>
-            <a href="https://buy.stripe.com/3cI7sL7JP7exdH1gNagEg1Y" class="buy-btn" target="_blank">Get It Now &mdash; $47</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$37</div>
-          </div>
-          <div class="book-info">
-            <h3>TikTok Marketing Playbook 2026</h3>
-            <a href="https://buy.stripe.com/3cI8wP2pvcyR32n8gEgEg1Z" class="buy-btn" target="_blank">Get It Now &mdash; $37</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$37</div>
-          </div>
-          <div class="book-info">
-            <h3>Email Marketing Mastery</h3>
-            <a href="https://buy.stripe.com/5kQaEXggleGZcCXaoMgEg20" class="buy-btn" target="_blank">Get It Now &mdash; $37</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$27</div>
-          </div>
-          <div class="book-info">
-            <h3>The Podcast Launch Playbook</h3>
-            <a href="https://buy.stripe.com/8x214n8NT7ex6ez9kIgEg21" class="buy-btn" target="_blank">Get It Now &mdash; $27</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$37</div>
-          </div>
-          <div class="book-info">
-            <h3>The Remote Business Launch Guide</h3>
-            <a href="https://buy.stripe.com/7sY9AT9RX6atbyT8gEgEg22" class="buy-btn" target="_blank">Get It Now &mdash; $37</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$27</div>
-          </div>
-          <div class="book-info">
-            <h3>Sales Objection Mastery</h3>
-            <a href="https://buy.stripe.com/aFa14nc056at9qL54sgEg23" class="buy-btn" target="_blank">Get It Now &mdash; $27</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$37</div>
-          </div>
-          <div class="book-info">
-            <h3>Financial Literacy for Entrepreneurs</h3>
-            <a href="https://buy.stripe.com/dRm00j0hn0Q932n40ogEg24" class="buy-btn" target="_blank">Get It Now &mdash; $37</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$27</div>
-          </div>
-          <div class="book-info">
-            <h3>Millionaire Mindset</h3>
-            <a href="https://buy.stripe.com/9B63cvc05aqJfP97cAgEg25" class="buy-btn" target="_blank">Get It Now &mdash; $27</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$47</div>
-          </div>
-          <div class="book-info">
-            <h3>AI Tools for Business 2026</h3>
-            <a href="https://buy.stripe.com/3cIbJ14xD1Ud5av0OcgEg26" class="buy-btn" target="_blank">Get It Now &mdash; $47</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$27</div>
-          </div>
-          <div class="book-info">
-            <h3>Cold Email Mastery</h3>
-            <a href="https://buy.stripe.com/4gM14n9RXcyRfP940ogEg27" class="buy-btn" target="_blank">Get It Now &mdash; $27</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$37</div>
-          </div>
-          <div class="book-info">
-            <h3>Instagram Business Growth 2026</h3>
-            <a href="https://buy.stripe.com/00wdR92pv8iB6ezaoMgEg28" class="buy-btn" target="_blank">Get It Now &mdash; $37</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$47</div>
-          </div>
-          <div class="book-info">
-            <h3>The LinkedIn Sales System</h3>
-            <a href="https://buy.stripe.com/fZu7sLfchbuNfP940ogEg29" class="buy-btn" target="_blank">Get It Now &mdash; $47</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$37</div>
-          </div>
-          <div class="book-info">
-            <h3>YouTube Channel Blueprint</h3>
-            <a href="https://buy.stripe.com/cNi6oH5BHfL38mHbsQgEg2a" class="buy-btn" target="_blank">Get It Now &mdash; $37</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$37</div>
-          </div>
-          <div class="book-info">
-            <h3>Brand Building Guide</h3>
-            <a href="https://buy.stripe.com/eVqeVd4xD0Q9cCX8gEgEg2b" class="buy-btn" target="_blank">Get It Now &mdash; $37</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$37</div>
-          </div>
-          <div class="book-info">
-            <h3>Hiring and Team Building for Small Business</h3>
-            <a href="https://buy.stripe.com/aFaeVd6FL56p5av2WkgEg2c" class="buy-btn" target="_blank">Get It Now &mdash; $37</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$27</div>
-          </div>
-          <div class="book-info">
-            <h3>Customer Service Excellence</h3>
-            <a href="https://buy.stripe.com/cNi3cv7JP0Q9cCXcwUgEg2d" class="buy-btn" target="_blank">Get It Now &mdash; $27</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$27</div>
-          </div>
-          <div class="book-info">
-            <h3>The Entrepreneur Productivity System</h3>
-            <a href="https://buy.stripe.com/4gM14naW18iB0Uf9kIgEg2e" class="buy-btn" target="_blank">Get It Now &mdash; $27</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$37</div>
-          </div>
-          <div class="book-info">
-            <h3>Authority Marketing</h3>
-            <a href="https://buy.stripe.com/8x28wPd49buN0Uf0OcgEg2f" class="buy-btn" target="_blank">Get It Now &mdash; $37</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$37</div>
-          </div>
-          <div class="book-info">
-            <h3>Business Launch for the Recovery Community</h3>
-            <a href="https://buy.stripe.com/9B6eVd8NT42l1YjgNagEg2g" class="buy-btn" target="_blank">Get It Now &mdash; $37</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$47</div>
-          </div>
-          <div class="book-info">
-            <h3>PropTech and Real Estate Investing 2026</h3>
-            <a href="https://buy.stripe.com/3cI7sLaW156p7iDaoMgEg2h" class="buy-btn" target="_blank">Get It Now &mdash; $47</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$37</div>
-          </div>
-          <div class="book-info">
-            <h3>The Insurance Business Blueprint</h3>
-            <a href="https://buy.stripe.com/00w14nggl0Q932ncwUgEg2i" class="buy-btn" target="_blank">Get It Now &mdash; $37</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$27</div>
-          </div>
-          <div class="book-info">
-            <h3>The Virtual Assistant Business Guide</h3>
-            <a href="https://buy.stripe.com/7sYcN5d4942l0Uf68wgEg2j" class="buy-btn" target="_blank">Get It Now &mdash; $27</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$47</div>
-          </div>
-          <div class="book-info">
-            <h3>Financial Independence Blueprint</h3>
-            <a href="https://buy.stripe.com/7sY00j4xD9mF1YjdAYgEg2k" class="buy-btn" target="_blank">Get It Now &mdash; $47</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$27</div>
-          </div>
-          <div class="book-info">
-            <h3>The Spirit of Entrepreneurship</h3>
-            <a href="https://buy.stripe.com/9B600jgglgP71YjbsQgEg2l" class="buy-btn" target="_blank">Get It Now &mdash; $27</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$47</div>
-          </div>
-          <div class="book-info">
-            <h3>Government Contracting for Small Business</h3>
-            <a href="https://buy.stripe.com/28E8wPc050Q9auPfJ6gEg2m" class="buy-btn" target="_blank">Get It Now &mdash; $47</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$37</div>
-          </div>
-          <div class="book-info">
-            <h3>The Health Coaching Business Blueprint</h3>
-            <a href="https://buy.stripe.com/3cIdR98NTdCVfP97cAgEg2n" class="buy-btn" target="_blank">Get It Now &mdash; $37</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$37</div>
-          </div>
-          <div class="book-info">
-            <h3>The Urban Entrepreneur</h3>
-            <a href="https://buy.stripe.com/14A4gz8NTgP7eL59kIgEg2o" class="buy-btn" target="_blank">Get It Now &mdash; $37</a>
-          </div>
-        </div>
-        <div class="book-card">
-          <div class="book-cover">
-            <div class="book-icon">&#128218;</div>
-            <div class="book-badge">$37</div>
-          </div>
-          <div class="book-info">
-            <h3>Systems Thinking for Business Success</h3>
-            <a href="https://buy.stripe.com/5kQcN5aW142lcCXfJ6gEg2p" class="buy-btn" target="_blank">Get It Now &mdash; $37</a>
-          </div>
-        </div>
+</nav>
+<main id="main">
+<header class="hero plain">
+  <div class="wrap">
+    <p class="eyebrow">Study guides &amp; ebooks</p>
+    <h1>Short guides. <em>Plain English.</em></h1>
+    <p class="lead">Plain-English business guides that reach you the moment you pay. The Cold Call Code is our featured guide. Below that, 43 professional business ebooks — every one instant download.</p>
   </div>
+</header>
 
-  <div class="free-section">
-    <h2>Not Sure Where to Start?</h2>
-    <p>Call or text Aaron directly to find the right guide for your business goals. Free 10-minute consultation with every purchase.</p>
-    <a href="tel:+17473018586" class="cta">Call (747) 301-8586</a>
+<section>
+  <div class="wrap">
+    <div class="offer">
+      <div>
+        <p class="eyebrow">Featured guide</p>
+        <h2>Cold Call Code</h2>
+        <p class="big">$9.97<small>one time</small></p>
+        <p style="color:var(--muted);margin:14px 0 4px">A field guide to the first sixty seconds of a sales call. How to prepare, five rules with example lines, a full sample call, the calling rules you need to know, and a 10-day practice plan. About 30 minutes to read.</p>
+        <div class="cta"><a class="btn" href="https://buy.stripe.com/3cIaEW85W99Ee1JeOY43S0r" rel="noopener">Buy Cold Call Code · $9.97</a></div>
+        <p class="note">Secure card checkout by Stripe. The guide opens on your screen right after payment, with a button to print it or save it as a PDF.</p>
+      </div>
+      <div class="side">
+        <h3>Inside the guide</h3>
+        <ul class="ticks">
+          <li><strong>Before you dial:</strong> your list, your homework, your numbers</li>
+          <li><strong>The five rules</strong>, each with example lines and a drill</li>
+          <li><strong>A full sample call</strong>, a voicemail and a follow-up text</li>
+          <li><strong>Five common replies</strong> and a respectful answer to each</li>
+          <li><strong>The rules of the road:</strong> calling hours, do-not-call, recording</li>
+          <li><strong>A 10-day practice plan</strong> with a scorecard</li>
+          <li><strong>Sources listed</strong>, so you can check every figure</li>
+        </ul>
+        <h3>Good to know</h3>
+        <ul class="ticks no">
+          <li>It is a focused guide of about 2,200 words, not a long book</li>
+          <li>It is general education, not legal advice, and it does not promise sales</li>
+        </ul>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
-<div class="footer">
-  <p>Total Transformation Inc. | North Hollywood, CA | EIN: 32-0663781</p>
-  <p style="margin-top: 8px;"><a href="front-office.html">Home</a> &nbsp;|&nbsp; <a href="services.html">Services</a> &nbsp;|&nbsp; <a href="tel:+17473018586">(747) 301-8586</a></p>
-  <p style="margin-top: 8px; font-style: italic;">"From the streets to the suites &mdash; it's not a dream, it's a plan."</p>
-</div>
+<section class="band">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">Want the result, not the reading?</p>
+      <h2>Let the AI Front Office do it for you</h2>
+      <p>A guide teaches you how to follow up. The AI Front Office catches the calls you miss: an AI front desk answers, every caller is written down and nobody is forgotten.</p>
+      <div class="cta">
+        <a class="btn" href="/front-office.html">See the AI Front Office</a>
+        <a class="btn ghost" href="/front-office.html#offer">7-day pilot · $97</a>
+      </div>
+    </div>
+    <div class="panel" style="background:var(--bg)">
+      <ul class="ticks">
+        <li><strong>An AI front desk</strong> that answers missed calls, so callers reach you, not the next shop</li>
+        <li><strong>One lead list</strong> on your phone</li>
+        <li><strong>Follow-ups</strong> sent on schedule</li>
+        <li><strong>End-of-week review</strong> of every lead captured</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Three levels</p>
+      <h2>Read it, have it written, or have it done</h2>
+      <p>Pick the level of help that fits. Each one builds on the one before.</p>
+    </div>
+    <div class="grid3 tiers">
+      <article class="card tier">
+        <span class="tag">Read it</span>
+        <h3>The guide</h3>
+        <p class="amt">$9.97<small>one time</small></p>
+        <p class="grow">Cold Call Code, on your screen right after payment. Learn the method and practice it yourself.</p>
+        <a class="more" href="https://buy.stripe.com/3cIaEW85W99Ee1JeOY43S0r" rel="noopener">Buy the guide →</a>
+      </article>
+      <article class="card tier">
+        <span class="tag">Written for you</span>
+        <h3>Your own call script</h3>
+        <p class="amt">$97<small>one time</small></p>
+        <p class="grow">The guide, plus an opening, a qualifying question, answers to common replies, a voicemail and a follow-up text written for your business. Sent by email after a short set of questions.</p>
+        <a class="more" href="https://buy.stripe.com/9B63cv7JPbuN6ez7cAgEg0a" rel="noopener">Get your script →</a>
+      </article>
+      <article class="card tier best">
+        <span class="tag live">Done for you</span>
+        <h3>AI Front Office</h3>
+        <p class="amt">From $97<small>7-day pilot</small></p>
+        <p class="grow">We set it up so no caller is forgotten: an AI front desk answers missed calls and every caller is written down. Try it for a week, then decide.</p>
+        <a class="more" href="/services.html#front-office">See all three plans →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">43 professional business ebooks</p>
+      <h2>The full library</h2>
+      <p>Every ebook is instant download — yours the moment you pay. Covers AI, real estate, credit, marketing, law, and more.</p>
+    </div>
+    <div class="grid2">
+      <article class="card">
+        <h3>The AI Front Desk Guide</h3>
+        <p class="grow">$27 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/8x2bJ13tz42lcCXfJ6gEg1J" rel="noopener">Buy $27 →</a>
+      </article>
+      <article class="card">
+        <h3>AI Business Automation 2026</h3>
+        <p class="grow">$47 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/fZuaEX6FLdCV6ez40ogEg1K" rel="noopener">Buy $47 →</a>
+      </article>
+      <article class="card">
+        <h3>Sales Funnel Architecture</h3>
+        <p class="grow">$37 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/eVqbJ14xDcyRauP1SggEg1L" rel="noopener">Buy $37 →</a>
+      </article>
+      <article class="card">
+        <h3>LLC Formation Guide</h3>
+        <p class="grow">$37 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/28EcN53tz8iBcCXcwUgEg1M" rel="noopener">Buy $37 →</a>
+      </article>
+      <article class="card">
+        <h3>Credit Repair Complete System</h3>
+        <p class="grow">$47 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/eVq5kD4xDbuN9qL2WkgEg1N" rel="noopener">Buy $47 →</a>
+      </article>
+      <article class="card">
+        <h3>The Digital Marketing Agency Blueprint</h3>
+        <p class="grow">$47 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/5kQ14nd496atfP98gEgEg1O" rel="noopener">Buy $47 →</a>
+      </article>
+      <article class="card">
+        <h3>The Coaching Business Blueprint</h3>
+        <p class="grow">$37 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/4gM00j1lr7ex0UfcwUgEg1P" rel="noopener">Buy $37 →</a>
+      </article>
+      <article class="card">
+        <h3>Grant Writing Mastery</h3>
+        <p class="grow">$37 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/eVq00jd49cyR46rcwUgEg1Q" rel="noopener">Buy $37 →</a>
+      </article>
+      <article class="card">
+        <h3>Personal Branding Mastery</h3>
+        <p class="grow">$37 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/8x26oH5BHbuNcCX1SggEg1R" rel="noopener">Buy $37 →</a>
+      </article>
+      <article class="card">
+        <h3>E-Commerce Store Launch Playbook</h3>
+        <p class="grow">$47 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/cNi00jfchfL332n0OcgEg1S" rel="noopener">Buy $47 →</a>
+      </article>
+      <article class="card">
+        <h3>Real Estate Wholesaling System</h3>
+        <p class="grow">$47 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/aFadR9aW1buNeL5gNagEg1T" rel="noopener">Buy $47 →</a>
+      </article>
+      <article class="card">
+        <h3>House Flipping Blueprint</h3>
+        <p class="grow">$47 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/00wdR9c058iB8mH54sgEg1U" rel="noopener">Buy $47 →</a>
+      </article>
+      <article class="card">
+        <h3>Strategic Networking</h3>
+        <p class="grow">$27 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/eVq9AT2pv8iBeL5fJ6gEg1V" rel="noopener">Buy $27 →</a>
+      </article>
+      <article class="card">
+        <h3>The Consulting Business Launch Guide</h3>
+        <p class="grow">$37 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/00w4gz2pv0Q97iDdAYgEg1W" rel="noopener">Buy $37 →</a>
+      </article>
+      <article class="card">
+        <h3>Business Plan Writing Mastery</h3>
+        <p class="grow">$27 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/cNi28rc059mF6ez68wgEg1X" rel="noopener">Buy $27 →</a>
+      </article>
+      <article class="card">
+        <h3>Passive Income Blueprint 2026</h3>
+        <p class="grow">$47 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/3cI7sL7JP7exdH1gNagEg1Y" rel="noopener">Buy $47 →</a>
+      </article>
+      <article class="card">
+        <h3>TikTok Marketing Playbook 2026</h3>
+        <p class="grow">$37 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/3cI8wP2pvcyR32n8gEgEg1Z" rel="noopener">Buy $37 →</a>
+      </article>
+      <article class="card">
+        <h3>Email Marketing Mastery</h3>
+        <p class="grow">$37 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/5kQaEXggleGZcCXaoMgEg20" rel="noopener">Buy $37 →</a>
+      </article>
+      <article class="card">
+        <h3>The Podcast Launch Playbook</h3>
+        <p class="grow">$27 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/8x214n8NT7ex6ez9kIgEg21" rel="noopener">Buy $27 →</a>
+      </article>
+      <article class="card">
+        <h3>The Remote Business Launch Guide</h3>
+        <p class="grow">$37 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/7sY9AT9RX6atbyT8gEgEg22" rel="noopener">Buy $37 →</a>
+      </article>
+      <article class="card">
+        <h3>Sales Objection Mastery</h3>
+        <p class="grow">$27 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/aFa14nc056at9qL54sgEg23" rel="noopener">Buy $27 →</a>
+      </article>
+      <article class="card">
+        <h3>Financial Literacy for Entrepreneurs</h3>
+        <p class="grow">$37 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/dRm00j0hn0Q932n40ogEg24" rel="noopener">Buy $37 →</a>
+      </article>
+      <article class="card">
+        <h3>Millionaire Mindset</h3>
+        <p class="grow">$27 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/9B63cvc05aqJfP97cAgEg25" rel="noopener">Buy $27 →</a>
+      </article>
+      <article class="card">
+        <h3>AI Tools for Business 2026</h3>
+        <p class="grow">$47 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/3cIbJ14xD1Ud5av0OcgEg26" rel="noopener">Buy $47 →</a>
+      </article>
+      <article class="card">
+        <h3>Cold Email Mastery</h3>
+        <p class="grow">$27 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/4gM14n9RXcyRfP940ogEg27" rel="noopener">Buy $27 →</a>
+      </article>
+      <article class="card">
+        <h3>Instagram Business Growth 2026</h3>
+        <p class="grow">$37 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/00wdR92pv8iB6ezaoMgEg28" rel="noopener">Buy $37 →</a>
+      </article>
+      <article class="card">
+        <h3>The LinkedIn Sales System</h3>
+        <p class="grow">$47 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/fZu7sLfchbuNfP940ogEg29" rel="noopener">Buy $47 →</a>
+      </article>
+      <article class="card">
+        <h3>YouTube Channel Blueprint</h3>
+        <p class="grow">$37 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/cNi6oH5BHfL38mHbsQgEg2a" rel="noopener">Buy $37 →</a>
+      </article>
+      <article class="card">
+        <h3>Brand Building Guide</h3>
+        <p class="grow">$37 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/eVqeVd4xD0Q9cCX8gEgEg2b" rel="noopener">Buy $37 →</a>
+      </article>
+      <article class="card">
+        <h3>Hiring and Team Building for Small Business</h3>
+        <p class="grow">$37 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/aFaeVd6FL56p5av2WkgEg2c" rel="noopener">Buy $37 →</a>
+      </article>
+      <article class="card">
+        <h3>Customer Service Excellence</h3>
+        <p class="grow">$27 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/cNi3cv7JP0Q9cCXcwUgEg2d" rel="noopener">Buy $27 →</a>
+      </article>
+      <article class="card">
+        <h3>The Entrepreneur Productivity System</h3>
+        <p class="grow">$27 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/4gM14naW18iB0Uf9kIgEg2e" rel="noopener">Buy $27 →</a>
+      </article>
+      <article class="card">
+        <h3>Authority Marketing</h3>
+        <p class="grow">$37 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/8x28wPd49buN0Uf0OcgEg2f" rel="noopener">Buy $37 →</a>
+      </article>
+      <article class="card">
+        <h3>Business Launch for the Recovery Community</h3>
+        <p class="grow">$37 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/9B6eVd8NT42l1YjgNagEg2g" rel="noopener">Buy $37 →</a>
+      </article>
+      <article class="card">
+        <h3>PropTech and Real Estate Investing 2026</h3>
+        <p class="grow">$47 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/3cI7sLaW156p7iDaoMgEg2h" rel="noopener">Buy $47 →</a>
+      </article>
+      <article class="card">
+        <h3>The Insurance Business Blueprint</h3>
+        <p class="grow">$37 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/00w14nggl0Q932ncwUgEg2i" rel="noopener">Buy $37 →</a>
+      </article>
+      <article class="card">
+        <h3>The Virtual Assistant Business Guide</h3>
+        <p class="grow">$27 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/7sYcN5d4942l0Uf68wgEg2j" rel="noopener">Buy $27 →</a>
+      </article>
+      <article class="card">
+        <h3>Financial Independence Blueprint</h3>
+        <p class="grow">$47 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/7sY00j4xD9mF1YjdAYgEg2k" rel="noopener">Buy $47 →</a>
+      </article>
+      <article class="card">
+        <h3>The Spirit of Entrepreneurship</h3>
+        <p class="grow">$27 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/9B600jgglgP71YjbsQgEg2l" rel="noopener">Buy $27 →</a>
+      </article>
+      <article class="card">
+        <h3>Government Contracting for Small Business</h3>
+        <p class="grow">$47 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/28E8wPc050Q9auPfJ6gEg2m" rel="noopener">Buy $47 →</a>
+      </article>
+      <article class="card">
+        <h3>The Health Coaching Business Blueprint</h3>
+        <p class="grow">$37 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/3cIdR98NTdCVfP97cAgEg2n" rel="noopener">Buy $37 →</a>
+      </article>
+      <article class="card">
+        <h3>The Urban Entrepreneur</h3>
+        <p class="grow">$37 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/14A4gz8NTgP7eL59kIgEg2o" rel="noopener">Buy $37 →</a>
+      </article>
+      <article class="card">
+        <h3>Systems Thinking for Business Success</h3>
+        <p class="grow">$37 · instant download after payment</p>
+        <a class="more" href="https://buy.stripe.com/5kQcN5aW142lcCXfJ6gEg2p" rel="noopener">Buy $37 →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="honest">
+      <strong>Bought a guide before and did not get it?</strong> If you paid for a title earlier and it did not reach you, call <a href="tel:+17473018586">(747) 301-8586</a> with the name on your Stripe receipt and we will make it right.
+    </div>
+  </div>
+</section>
+<section id="contact" class="contact">
+  <div class="wrap">
+    <p class="eyebrow">Get started</p>
+    <h2>Questions about a guide or the Front Office?</h2>
+    <p>Call (747) 301-8586 and we will get back to you.</p>
+    <div class="cta">
+      <a class="btn" href="tel:+17473018586">Call (747) 301-8586</a>
+      </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div>
+      <a href="/services.html">Services and prices</a>
+      <a href="/front-office.html">AI Front Office</a>
+      <a href="/case-study.html">Case study</a>
+      <a href="/ebooks.html">Ebooks</a>
+      <a href="/love-and-rehab.html">Love &amp; Rehab</a>
+      <a href="/sober-living/">Property owners</a>
+      <a href="/app.html">Get the app</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+    <div>&#169; 2026 Total Transformation Inc. &middot; Los Angeles, California</div>
+    <p class="fine">We do not guarantee income or results. Educational material is general information, not legal, financial or medical advice.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
 
 </body>
 </html>
