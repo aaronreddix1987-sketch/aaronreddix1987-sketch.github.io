@@ -261,16 +261,108 @@
 <script src="/assets/site.js" defer></script>
 <script>
 (function(){
-  var GUIDE={"cold-call-code":{title:"Cold Call Code is yours.",lead:"Read it below. Stripe has emailed your $9.97 receipt to the address you entered. Use the button to print the guide or save it as a PDF."}};
-  var slug=new URLSearchParams(location.search).get("product")||"";
-  var item=GUIDE[slug];
-  if(item){
-    document.getElementById("ty-title").textContent=item.title;
-    document.getElementById("ty-lead").textContent=item.lead;
-    document.getElementById("guide").hidden=false;
-    document.getElementById("guide-tools").hidden=false;
-    document.getElementById("next").hidden=false;
-    document.getElementById("help").hidden=true;
+  var PRODUCTS = {
+    "cold-call-code": {
+      title: "Cold Call Code is yours.",
+      lead: "Read it below. Stripe has emailed your $9.97 receipt. Use the button to print or save as PDF.",
+      type: "guide"
+    },
+    "pilot": {
+      title: "Your 7-Day AI Front Desk Pilot is confirmed.",
+      lead: "Check your email — Aaron sent your onboarding instructions. Text or call (747) 301-8586 to get your AI front desk live today.",
+      type: "service"
+    },
+    "front-office": {
+      title: "Welcome to the Front Office.",
+      lead: "Your setup is confirmed. Check your email for next steps. Aaron will reach out within 24 hours to configure your AI front desk.",
+      type: "service"
+    },
+    "script": {
+      title: "Your custom cold call script is ordered.",
+      lead: "Check your email — Aaron will deliver your custom script within 24 hours. Questions? Call (747) 301-8586.",
+      type: "service"
+    },
+    "website": {
+      title: "Your website project is confirmed.",
+      lead: "Check your email for your kickoff questionnaire. Aaron will be in touch within 24 hours to start your site.",
+      type: "service"
+    },
+    "automation": {
+      title: "Your automation project is confirmed.",
+      lead: "Check your email. Aaron will schedule a 20-minute setup call within 24 hours to map out your automation.",
+      type: "service"
+    },
+    "app": {
+      title: "Your app project is confirmed.",
+      lead: "Check your email for your kickoff questionnaire. Aaron will reach out within 24 hours.",
+      type: "service"
+    },
+    "ai-front-desk-guide": { title: "The AI Front Desk Guide is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "ai-business-automation-2026": { title: "AI Business Automation 2026 is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "sales-funnel-architecture": { title: "Sales Funnel Architecture is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "llc-formation-guide": { title: "LLC Formation Guide is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "credit-repair-complete-system": { title: "Credit Repair Complete System is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "digital-marketing-agency-setup": { title: "The Digital Marketing Agency Blueprint is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "coaching-business-blueprint": { title: "The Coaching Business Blueprint is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "grant-writing-mastery": { title: "Grant Writing Mastery is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "personal-branding-mastery": { title: "Personal Branding Mastery is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "ecommerce-store-launch": { title: "E-Commerce Store Launch Playbook is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "real-estate-wholesaling-system": { title: "Real Estate Wholesaling System is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "house-flipping-blueprint": { title: "House Flipping Blueprint is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "networking-strategies": { title: "Strategic Networking is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "consulting-business-launch": { title: "The Consulting Business Launch Guide is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "business-plan-writing-guide": { title: "Business Plan Writing Mastery is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "passive-income-blueprint": { title: "Passive Income Blueprint 2026 is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "tiktok-marketing-playbook": { title: "TikTok Marketing Playbook 2026 is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "email-marketing-mastery": { title: "Email Marketing Mastery is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "podcast-launch-guide": { title: "The Podcast Launch Playbook is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "remote-work-business-launch": { title: "The Remote Business Launch Guide is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "sales-objection-mastery": { title: "Sales Objection Mastery is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "financial-literacy-for-entrepreneurs": { title: "Financial Literacy for Entrepreneurs is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "mindset-for-millionaires": { title: "Millionaire Mindset is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "ai-tools-business-guide": { title: "AI Tools for Business 2026 is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "cold-email-mastery": { title: "Cold Email Mastery is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "instagram-business-growth": { title: "Instagram Business Growth 2026 is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "linkedin-sales-system": { title: "The LinkedIn Sales System is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "youtube-channel-blueprint": { title: "YouTube Channel Blueprint is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "brand-building-guide": { title: "Brand Building Guide is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "hiring-and-team-building": { title: "Hiring and Team Building for Small Business is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "customer-service-excellence": { title: "Customer Service Excellence is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "productivity-system-for-entrepreneurs": { title: "The Entrepreneur Productivity System is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "authority-marketing-guide": { title: "Authority Marketing is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "recovery-business-launch": { title: "Business Launch for the Recovery Community is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "prop-tech-real-estate-guide": { title: "PropTech and Real Estate Investing 2026 is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "insurance-business-guide": { title: "The Insurance Business Blueprint is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "virtual-assistant-business": { title: "The Virtual Assistant Business Guide is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "financial-independence-blueprint": { title: "Financial Independence Blueprint is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "spiritual-entrepreneurship": { title: "The Spirit of Entrepreneurship is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "government-contracting-guide": { title: "Government Contracting for Small Business is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "health-coaching-business": { title: "The Health Coaching Business Blueprint is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "urban-entrepreneur-guide": { title: "The Urban Entrepreneur is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+    "systems-thinking-guide": { title: "Systems Thinking for Business Success is yours.", lead: "Check your email — Aaron is sending your ebook. If you do not receive it within 10 minutes, call or text (747) 301-8586 and we will get it to you right away.", type: "ebook" },
+  };
+  var slug = new URLSearchParams(location.search).get("product") || "";
+  var item = PRODUCTS[slug];
+  if(item) {
+    document.getElementById("ty-title").textContent = item.title;
+    document.getElementById("ty-lead").textContent  = item.lead;
+    if(item.type === "guide" || item.type === "ebook") {
+      document.getElementById("guide").hidden       = false;
+      document.getElementById("guide-tools").hidden = false;
+      document.getElementById("next").hidden        = false;
+      document.getElementById("help").hidden        = true;
+    } else {
+      // Service purchase - show email confirmation panel
+      document.getElementById("help").innerHTML = [
+        '<p class="eyebrow">What happens next</p>',
+        '<h2 style="font-size:26px;margin:12px 0">Check your email</h2>',
+        '<p style="color:var(--muted);margin-bottom:14px">Your onboarding instructions are on their way. Aaron personally handles every new customer within 24 hours. Questions right now? Call or text directly.</p>',
+        '<div class="cta" style="margin-top:20px">',
+        '<a class="btn" href="tel:+17473018586">Call or text (747) 301-8586</a>',
+        '<a class="btn ghost" href="/front-office.html" style="margin-top:8px">Review what you purchased</a>',
+        '</div>'
+      ].join('');
+    }
   }
 })();
 </script>
