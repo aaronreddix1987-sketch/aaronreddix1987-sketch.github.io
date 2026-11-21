@@ -38,10 +38,8 @@
       });
       document.getElementById('q-once').textContent=(from?'From ':'')+money(once);
       document.getElementById('q-mo').textContent=money(mo);
-      document.getElementById('q-note').textContent=picks.length?picks.length+(picks.length===1?' service':' services')+' picked. Send it to us and we will set up your free call.':'Pick at least one service to see a price.';
+      document.getElementById('q-note').textContent=picks.length?picks.length+(picks.length===1?' service':' services')+' picked. Call us and read it to the front desk.':'Pick at least one service to see a price.';
       var body='Hi Aaron, here is the quote I built on your site:\n'+(picks.length?picks.map(function(p){return '- '+p;}).join('\n'):'- (nothing picked yet)')+'\nOne time: '+(from?'from ':'')+money(once)+'\nEach month: '+money(mo)+'\n\nBusiness name:\nBest time to call me:';
-      document.getElementById('q-sms').href='sms:+17473018586?&body='+encodeURIComponent(body);
-      document.getElementById('q-mail').href='mailto:aaronreddix1987@gmail.com?subject='+encodeURIComponent('My quote from your site')+'&body='+encodeURIComponent(body);
     };
     qf.addEventListener('change',runQ);runQ();
   }
