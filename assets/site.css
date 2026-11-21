@@ -1,5 +1,6 @@
 :root{--bg:#0b0f14;--surface:#121821;--surface-2:#182130;--line:#232d3a;--text:#eef2f6;--muted:#a3b0bd;--gold:#d9ad55;--gold-2:#f0cf86;--ink:#15110a;--ok:#7fc8a0;--r:14px;--max:1160px}
 *{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{font-family:Satoshi,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
 img,video{display:block;max-width:100%;height:auto}
@@ -189,3 +190,40 @@ footer .fine{flex-basis:100%;font-size:13px;color:#8493a3}
 }
 .nb{white-space:nowrap}
 section[id],div[id].offer{scroll-margin-top:84px}
+/* price tiers */
+.tiers{align-items:stretch}
+.tier .amt{font-family:Zodiak,serif;font-size:40px;line-height:1.05;color:var(--gold-2);font-variant-numeric:tabular-nums}
+.tier .amt small{display:block;font-family:Satoshi,sans-serif;font-size:14px;color:var(--muted);font-weight:500;margin-top:6px;line-height:1.4}
+.tier ul.ticks{flex:1;font-size:16px;align-content:start;margin-top:4px}
+.tier.best{border-color:var(--gold)}
+.fineprint{font-size:14px;color:var(--muted)}
+.card p.fineprint{font-size:14px}
+.jump{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:26px;font-size:15px}
+.jump a{color:var(--gold-2);font-weight:700;text-decoration:none;padding:6px 0}
+.jump a:hover{text-decoration:underline}
+/* quote builder */
+.quote{display:grid;grid-template-columns:1.2fr 1fr;gap:20px;align-items:start}
+.field select{background:var(--bg);border:1px solid #3a4758;border-radius:10px;color:var(--text);font:inherit;padding:12px 14px;width:100%;min-height:48px}
+.field select:focus-visible,button:focus-visible{outline:2px solid var(--gold-2);outline-offset:3px}
+ol.howto{margin:6px 0 0 22px;display:grid;gap:12px;color:var(--muted)}
+ol.howto li strong{color:var(--text)}
+ol.howto li::marker{color:var(--gold);font-weight:700}
+@media (max-width:900px){.quote{grid-template-columns:1fr}.tiers{grid-template-columns:1fr}}
+/* print: study guide on paper */
+@media print{
+  :root{--bg:#fff;--surface:#fff;--line:#bbb;--text:#111;--muted:#333;--gold:#7a5a12;--gold-2:#5c430c}
+  body{background:#fff;color:#111;font-size:12pt}
+  nav.top,footer,.skip,.noprint,#next,#help,.hero,.contact{display:none!important}
+  section{padding:0}
+  .wrap{max-width:none;padding:0}
+  .panel{border:0;padding:0;background:#fff}
+  .prose p,.prose li,.tbl td{color:#111}
+  .prose h2{break-after:avoid;margin-top:22pt}
+  .prose h3{break-after:avoid;color:#111}
+  .prose .q{color:#111;border-left-color:#7a5a12}
+  .tbl th{color:#111}
+  .tbl tr,.prose li{break-inside:avoid}
+  .scroll{overflow:visible}
+  a{color:#111;text-decoration:none}
+}
+.card a.more{display:inline-block;padding:10px 0;align-self:flex-start}

@@ -1,0 +1,72 @@
+{
+ "name": "Total Transformation Inc.",
+ "short_name": "TTI",
+ "description": "AI Front Office, websites, phone apps and automations for local business.",
+ "id": "/",
+ "start_url": "/?source=app",
+ "scope": "/",
+ "display": "standalone",
+ "orientation": "portrait",
+ "background_color": "#0b0f14",
+ "theme_color": "#0b0f14",
+ "lang": "en-US",
+ "categories": [
+  "business",
+  "productivity"
+ ],
+ "icons": [
+  {
+   "src": "/assets/icons/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "/assets/icons/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "/assets/icons/icon-maskable-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ],
+ "shortcuts": [
+  {
+   "name": "Services and prices",
+   "short_name": "Prices",
+   "url": "/services.html",
+   "icons": [
+    {
+     "src": "/assets/icons/icon-192.png",
+     "sizes": "192x192"
+    }
+   ]
+  },
+  {
+   "name": "AI Front Office",
+   "short_name": "Front Office",
+   "url": "/front-office.html",
+   "icons": [
+    {
+     "src": "/assets/icons/icon-192.png",
+     "sizes": "192x192"
+    }
+   ]
+  },
+  {
+   "name": "Contact us",
+   "short_name": "Contact",
+   "url": "/contact.html",
+   "icons": [
+    {
+     "src": "/assets/icons/icon-192.png",
+     "sizes": "192x192"
+    }
+   ]
+  }
+ ]
+}
