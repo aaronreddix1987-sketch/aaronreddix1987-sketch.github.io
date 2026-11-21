@@ -2,75 +2,260 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Total Transformation Inc. — Digital library</title>
-<meta name="description" content="Low-price digital guides from Total Transformation Inc. Card checkout on Stripe. The $9.97 guide opens after payment.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Total Transformation Inc. — AI Front Desk, Business Education & Ebooks</title>
+<meta name="description" content="Total Transformation Inc. helps local service businesses capture missed calls and follow up with every lead, and publishes practical business ebooks. Founded by Aaron Reddix in Los Angeles.">
+<meta property="og:title" content="Total Transformation Inc. — From South Central to the Suites">
+<meta property="og:description" content="AI front desk setup, follow-up systems, and practical business education from Los Angeles.">
+<meta property="og:image" content="https://aaronreddix1987-sketch.github.io/assets/img/ceo-command-center.jpg">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
 <style>
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:Georgia,serif;background:#0c1116;color:#edf3f8;line-height:1.45}
-  a{color:inherit}
-  nav{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:14px 20px;background:#101820;border-bottom:1px solid #243140}
-  nav strong{letter-spacing:.04em}
-  nav a{color:#e6bb5a;text-decoration:none;font-family:Arial,sans-serif;font-size:14px;margin-left:14px}
-  header{padding:48px 20px 28px;max-width:880px;margin:0 auto}
-  .kicker{font-family:Arial,sans-serif;color:#e6bb5a;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
-  h1{font-size:clamp(32px,5vw,52px);line-height:1.05;margin:10px 0 14px}
-  header p{color:#b7c3cf;max-width:640px}
-  .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
-  .btn{display:inline-block;background:#e6bb5a;color:#14110c;text-decoration:none;font-family:Arial,sans-serif;font-weight:800;padding:14px 18px;border-radius:10px}
-  .ghost{display:inline-block;border:1px solid #314456;text-decoration:none;font-family:Arial,sans-serif;font-weight:700;padding:13px 16px;border-radius:10px}
-  main{max-width:980px;margin:0 auto;padding:10px 20px 64px}
-  h2{font-family:Arial,sans-serif;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:#e6bb5a;margin:28px 0 12px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
-  .card{background:#141c24;border:1px solid #243140;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:8px}
-  .card b{font-family:Arial,sans-serif}
-  .card span{color:#9aabba;font-size:14px;flex:1}
-  .price{font-family:Arial,sans-serif;color:#e6bb5a;font-weight:800}
-  .card a{font-family:Arial,sans-serif;font-weight:800;text-decoration:none;background:#e6bb5a;color:#14110c;text-align:center;border-radius:8px;padding:10px}
-  footer{border-top:1px solid #243140;color:#8b9bab;font-family:Arial,sans-serif;font-size:13px;padding:22px;text-align:center}
+:root{--bg:#0b0f14;--surface:#121821;--line:#232d3a;--text:#eef2f6;--muted:#a3b0bd;--gold:#d9ad55;--gold-2:#f0cf86;--ink:#15110a;--r:14px;--max:1160px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Satoshi,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:Zodiak,Georgia,serif;font-weight:700;line-height:1.1;letter-spacing:-.01em}
+.eyebrow{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.btn{display:inline-flex;white-space:nowrap;align-items:center;gap:8px;background:var(--gold);color:var(--ink);font-weight:700;text-decoration:none;padding:14px 22px;border-radius:999px;transition:background .2s,transform .2s}
+.btn:hover{background:var(--gold-2);transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+.btn.ghost:hover{border-color:var(--gold);background:transparent}
+a:focus-visible,.btn:focus-visible{outline:2px solid var(--gold-2);outline-offset:3px}
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:rgba(11,15,20,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+.brand{font-family:Zodiak,serif;font-weight:700;font-size:19px;text-decoration:none;white-space:nowrap}
+.brand span{color:var(--gold)}
+.links{display:flex;gap:26px;align-items:center}
+.links a{text-decoration:none;color:var(--muted);font-size:15px;font-weight:500}
+.links a:hover{color:var(--text)}
+.links .btn{color:var(--ink);padding:10px 18px;font-size:15px}
+/* hero */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero .bg{position:absolute;inset:0;background:url(assets/img/ceo-command-center.jpg) center 30%/cover;opacity:.32}
+.hero .bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 25%,rgba(11,15,20,.5) 70%,rgba(11,15,20,.85))}
+.hero .wrap{position:relative;padding:110px 24px 120px;max-width:var(--max)}
+.hero h1{font-size:clamp(40px,6.2vw,76px);max-width:780px;margin:18px 0 22px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p{color:var(--muted);font-size:19px;max-width:600px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+/* sections */
+section{padding:96px 0}
+.head{max-width:680px;margin-bottom:48px}
+.head h2{font-size:clamp(30px,4vw,46px);margin:12px 0 14px}
+.head p{color:var(--muted)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:30px;display:flex;flex-direction:column;gap:12px}
+.card h3{font-size:24px}
+.card p{color:var(--muted);flex:1}
+.card .price{font-weight:700;color:var(--gold-2);font-size:15px}
+.card a.more{color:var(--gold);font-weight:700;text-decoration:none}
+.card a.more:hover{text-decoration:underline}
+.tag{align-self:flex-start;font-size:12px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:4px 10px;color:var(--muted)}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+.step{border-top:2px solid var(--gold);padding-top:20px}
+.step:before{counter-increment:s;content:"0" counter(s);font-family:Zodiak,serif;font-size:30px;color:var(--gold)}
+.step h3{font-size:20px;margin:8px 0}
+.step p{color:var(--muted);font-size:16px}
+/* story */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.split img{border-radius:var(--r);border:1px solid var(--line);width:100%;object-fit:cover}
+.split p{color:var(--muted);margin-bottom:16px}
+.split h2{font-size:clamp(30px,4vw,46px);margin:12px 0 20px}
+.book{display:grid;grid-template-columns:320px 1fr;gap:56px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:48px}
+.book img{border-radius:10px;box-shadow:0 30px 60px rgba(0,0,0,.5)}
+.book h2{font-size:clamp(30px,4vw,44px);margin:12px 0 16px}
+.book p{color:var(--muted);margin-bottom:16px}
+.media{display:grid;grid-template-columns:1.4fr 1fr;gap:20px}
+.media figure{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.media img,.media video{width:100%;height:100%;object-fit:cover}
+.media video{max-height:520px;background:#000}
+.media figcaption{padding:14px 18px;color:var(--muted);font-size:15px}
+.honest{border:1px solid var(--line);border-radius:var(--r);padding:28px 30px;color:var(--muted);font-size:16px}
+.honest strong{color:var(--text)}
+/* contact */
+.contact{text-align:center;background:linear-gradient(180deg,var(--surface),var(--bg));border-top:1px solid var(--line)}
+.contact h2{font-size:clamp(32px,4.5vw,52px);margin:12px auto 16px;max-width:760px}
+.contact p{color:var(--muted);max-width:580px;margin:0 auto}
+.contact .cta{justify-content:center}
+footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+footer a{color:var(--muted);text-decoration:none;margin-right:18px}
+footer a:hover{color:var(--text)}
+@media (max-width:900px){
+  .grid3,.steps{grid-template-columns:1fr 1fr}
+  .split,.book,.media{grid-template-columns:1fr}
+  .book{padding:30px}.book img{max-width:300px;margin:0 auto}
+  .links a:not(.btn){display:none}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .grid3,.steps{grid-template-columns:1fr}
+  section{padding:68px 0}
+  .hero .wrap{padding:72px 20px 84px}
+  .wrap{padding:0 20px}
+  .brand{font-size:16px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
-<nav>
-  <strong>Total Transformation Inc.</strong>
-  <div>
-    <a href="ebooks.html">Library</a>
+
+<nav aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="/">Total <span>Transformation</span> Inc.</a>
+    <div class="links">
+      <a href="#services">Services</a>
+      <a href="#story">Our story</a>
+      <a href="/ebooks.html">Ebooks</a>
+      <a class="btn" href="#contact">Book a call</a>
+    </div>
   </div>
 </nav>
-<header>
-  <p class="kicker">Live card checkout · Los Angeles</p>
-  <h1>Start at $9.97. The system is the $47 library.</h1>
-  <p>Sell the smallest useful product first, then the core library. The $9.97 Cold Call Code opens on the next page after Stripe accepts the card. Nothing on this page is a free download.</p>
-  <div class="row">
-    <a class="btn" href="https://buy.stripe.com/3cIaEW85W99Ee1JeOY43S0r">Start — Cold Call Code $9.97</a>
-    <a class="ghost" href="https://buy.stripe.com/6oUaEW71Sfy2cXF22c43S0p">12-book Blueprint $47</a>
+
+<header class="hero">
+  <div class="bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="eyebrow">Los Angeles · AI for local business</p>
+    <h1>Never lose another customer to a <em>missed call.</em></h1>
+    <p>Total Transformation Inc. sets up AI front desk and follow-up systems for local service businesses, so every caller gets an answer, every lead gets logged, and every follow-up happens on time.</p>
+    <div class="cta">
+      <a class="btn" href="#contact">Start the 7-day pilot</a>
+      <a class="btn ghost" href="/ebooks.html">Browse the ebooks</a>
+    </div>
   </div>
 </header>
-<main>
-  <h2>Fast entry — lowest price, same delivery</h2>
-  <div class="grid">
-    <article class="card"><b>Cold Call Code</b><span>Trust on the first call. The $9.97 door. Opens immediately after payment.</span><div class="price">$9.97</div><a href="https://buy.stripe.com/3cIaEW85W99Ee1JeOY43S0r">Buy on Stripe</a></article>
-    <article class="card"><b>Money Mindset</b><span>Affirmation system for building wealth.</span><div class="price">$9.97</div><a href="https://buy.stripe.com/aFa00i9a02Lg5vddKU43S0q">Buy on Stripe</a></article>
-    <article class="card"><b>Build to Sell</b><span>A business that runs without you.</span><div class="price">$9.97</div><a href="https://buy.stripe.com/9B63cugCs99E5vddKU43S0o">Buy on Stripe</a></article>
-    <article class="card"><b>Become the CEO</b><span>Stop working in the business.</span><div class="price">$9.97</div><a href="https://buy.stripe.com/7sY9ASdqgadIf5NayI43S0n">Buy on Stripe</a></article>
-    <article class="card"><b>30-Day Transformation Journal</b><span>One month of prompts. Lowest daily-use product.</span><div class="price">$17</div><a href="https://buy.stripe.com/3cI5kC3PG71w7DlfT243S13">Buy on Stripe</a></article>
-    <article class="card"><b>Medical Data Input and HIM Careers</b><span>A job-skill guide under $15.</span><div class="price">$14.97</div><a href="https://buy.stripe.com/6oU4gy0Du85AaPx7mw43S0u">Buy on Stripe</a></article>
+
+<section id="services">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">What we do</p>
+      <h2>Three ways we help you grow</h2>
+      <p>Start small, prove it works for your business, then build from there.</p>
+    </div>
+    <div class="grid3">
+      <article class="card">
+        <span class="tag">Start here</span>
+        <h3>Missed-Call Recovery Pilot</h3>
+        <p>A 7-day setup for one business: missed calls and web inquiries are captured, logged in a simple CRM and followed up. You get a written scope and a review at the end of the week.</p>
+        <p class="price">$97 pilot · one business · 7 days</p>
+        <a class="more" href="#contact">Ask about the pilot →</a>
+      </article>
+      <article class="card">
+        <span class="tag">Ongoing</span>
+        <h3>AI Front Desk</h3>
+        <p>An AI receptionist that answers your approved questions, takes caller details, books callbacks and passes urgent calls to you. Set up and tested before it ever touches your real number.</p>
+        <p class="price">Quoted after the pilot</p>
+        <a class="more" href="#contact">Talk to us →</a>
+      </article>
+      <article class="card">
+        <span class="tag">Learn</span>
+        <h3>Business Ebooks</h3>
+        <p>Practical guides on follow-up, credit, AI tools and building a business from the ground up. Secure card checkout through Stripe.</p>
+        <p class="price">From $9.97</p>
+        <a class="more" href="/ebooks.html">See the library →</a>
+      </article>
+    </div>
   </div>
-  <h2>Core — buy back the time</h2>
-  <div class="grid">
-    <article class="card"><b>Buy Back Your Time</b><span>Get your life back using AI. The operating model.</span><div class="price">$19</div><a href="https://buy.stripe.com/dRmcN485W3Pk6zhayI43S0s">Buy on Stripe</a></article>
-    <article class="card"><b>Credit Repair and Business Credit</b><span>Personal disputes plus business credit steps.</span><div class="price">$24.97</div><a href="https://buy.stripe.com/4gM6oG71S3Pk0aTbCM43S0y">Buy on Stripe</a></article>
-    <article class="card"><b>Real Estate and Sober Living</b><span>Investing notes for operators.</span><div class="price">$29.97</div><a href="https://buy.stripe.com/aFafZg5XO85A4r9gX643S0w">Buy on Stripe</a></article>
-    <article class="card"><b>The 10M Blueprint</b><span>Complete 12-book series. One checkout.</span><div class="price">$47</div><a href="https://buy.stripe.com/6oUaEW71Sfy2cXF22c43S0p">Buy on Stripe</a></article>
-    <article class="card"><b>Peer Support Specialist Exam Prep</b><span>PSS practice set. Same title as the library.</span><div class="price">$37</div><a href="https://buy.stripe.com/6oU8wO1Hyfy28Hp4ak43S0K">Buy on Stripe</a></article>
-    <article class="card"><b>TNN Insider</b><span>Monthly briefing after the first purchase.</span><div class="price">$9/mo</div><a href="https://buy.stripe.com/9B6bJ0bi8bhM9Lt0Y843S23">Subscribe on Stripe</a></article>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">How the pilot works</p>
+      <h2>From first call to first result in a week</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Discovery call</h3><p>15 minutes on how calls and leads reach you today, and where they get lost.</p></div>
+      <div class="step"><h3>Setup</h3><p>We configure capture, logging and follow-up, and test it with sample calls first.</p></div>
+      <div class="step"><h3>Go live</h3><p>You approve it, then it runs for seven days on real inquiries.</p></div>
+      <div class="step"><h3>Review</h3><p>We go through every lead captured and decide together whether to continue.</p></div>
+    </div>
   </div>
-  <h2>Full inventory</h2>
-  <p style="color:#b7c3cf;margin-bottom:12px">The rest of the library is on <a href="ebooks.html" style="color:#e6bb5a">the library page</a>. Cold Call Code is the only title that delivers on the page after payment. The others still need that same hookup.</p>
-  <a class="btn" href="ebooks.html">Open the library</a>
-</main>
+</section>
+
+<section id="story" style="border-top:1px solid var(--line)">
+  <div class="wrap split">
+    <img src="assets/img/south-central-sunset.jpg" alt="A man walking toward the downtown Los Angeles skyline at sunset, with an open book in the foreground" width="512" height="768" loading="lazy">
+    <div>
+      <p class="eyebrow">Our story</p>
+      <h2>From South Central to the Suites</h2>
+      <p>Total Transformation Inc. was founded by Aaron Reddix, who grew up in South Central Los Angeles and rebuilt his life through recovery, hard work and learning new skills.</p>
+      <p>That journey shapes how we work: practical tools, plain-English teaching and honest results. We help local business owners use AI to save time and win more customers, and we share what we've learned with people who are rebuilding too.</p>
+      <div class="cta"><a class="btn ghost" href="/love-and-rehab.html">Read about Love &amp; Rehab</a></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap book">
+    <img src="assets/img/book-cover-south-central.jpg" alt="Book cover: From South Central to the Suites by Aaron Reddix" width="360" height="560" loading="lazy">
+    <div>
+      <p class="eyebrow">The book · Coming soon</p>
+      <h2>From South Central to the Suites</h2>
+      <p>Aaron Reddix's story of survival, recovery and building a business: the lessons, the setbacks and the systems that made a second chance possible.</p>
+      <p>Join the list to hear first when it's released.</p>
+      <div class="cta"><a class="btn" href="mailto:aaronreddix1987@gmail.com?subject=Notify%20me%3A%20From%20South%20Central%20to%20the%20Suites">Notify me</a></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Behind the work</p>
+      <h2>Meet the founder</h2>
+    </div>
+    <div class="media">
+      <figure>
+        <img src="assets/img/tti-banner.jpg" alt="Aaron Reddix at his desk in front of monitors and the Los Angeles skyline, with the banner Total Transformation Inc." width="422" height="380" loading="lazy">
+        <figcaption>Aaron Reddix, founder and CEO of Total Transformation Inc.</figcaption>
+      </figure>
+      <figure>
+        <video src="assets/img/aaron-intro.mp4" poster="assets/img/aaron-intro-poster.jpg" controls playsinline preload="none" aria-label="Short video message from Aaron Reddix"></video>
+        <figcaption>A short message from Aaron.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="honest">
+      <strong>Our promise.</strong> We're a young Los Angeles company and we'd rather earn your trust than oversell. We don't guarantee income or results, we test every system before it goes live, and you approve every change to your business.
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <p class="eyebrow">Get started</p>
+    <h2>Find out how many customers your missed calls are costing you</h2>
+    <p>Call, text or email. We'll set up a free 15-minute discovery call.</p>
+    <div class="cta">
+      <a class="btn" href="tel:7473018586">Call (747) 301-8586</a>
+      <a class="btn ghost" href="sms:7473018586">Text us</a>
+      <a class="btn ghost" href="mailto:aaronreddix1987@gmail.com?subject=Missed-call%20recovery%20pilot">Email</a>
+    </div>
+  </div>
+</section>
+
 <footer>
-  Total Transformation Inc. · Los Angeles · Educational products only. Card checkout through Stripe. Results depend on what you do with the material.
+  <div class="wrap">
+    <div>
+      <a href="/ebooks.html">Ebooks</a>
+      <a href="/shop.html">Quick shop</a>
+      <a href="/love-and-rehab.html">Love &amp; Rehab</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+    <div>© 2026 Total Transformation Inc. · Los Angeles, California</div>
+  </div>
 </footer>
+
 </body>
 </html>
