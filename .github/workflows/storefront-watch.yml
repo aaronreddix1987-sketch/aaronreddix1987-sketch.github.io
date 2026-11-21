@@ -1,4 +1,4 @@
-name: TTI storefront health check
+name: TTI site health check
 on:
   schedule:
     - cron: "0 */6 * * *"
@@ -7,41 +7,25 @@ jobs:
   health:
     runs-on: ubuntu-latest
     steps:
-      - name: Check all live pages and Stripe links
+      - name: Check live pages and the one checkout link
         run: |
-          set -e
           FAIL=0
+          BASE=https://aaronreddix1987-sketch.github.io
+          KEEP=3cIaEW85W99Ee1JeOY43S0r
           check() {
             code=$(curl -sS -o /dev/null -w "%{http_code}" -L --max-time 25 "$1")
-            if echo "$code" | grep -qE "^[23]"; then
-              echo "OK  $code $1"
-            else
-              echo "FAIL $code $1"
-              FAIL=1
-            fi
+            if echo "$code" | grep -qE "^[23]"; then echo "OK   $code $1"; else echo "FAIL $code $1"; FAIL=1; fi
           }
-          # Core pages
-          check https://aaronreddix1987-sketch.github.io/
-          check https://aaronreddix1987-sketch.github.io/ebooks.html
-          check https://aaronreddix1987-sketch.github.io/offer.html
-          check https://aaronreddix1987-sketch.github.io/lead.html
-          check https://aaronreddix1987-sketch.github.io/owners.html
-          check https://aaronreddix1987-sketch.github.io/system.html
-          check https://aaronreddix1987-sketch.github.io/workflow.html
-          check https://aaronreddix1987-sketch.github.io/escalation.html
-          check https://aaronreddix1987-sketch.github.io/thank-you.html
-          check https://aaronreddix1987-sketch.github.io/project.html
-          check https://aaronreddix1987-sketch.github.io/love-and-rehab.html
-          check https://aaronreddix1987-sketch.github.io/sober-living/
-          # Flagship Stripe links
-          check https://buy.stripe.com/6oUaEW71Sfy2cXF22c43S0p
-          check https://buy.stripe.com/dRmcN485W3Pk6zhayI43S0s
-          check https://buy.stripe.com/3cIaEW85W99Ee1JeOY43S0r
-          check https://buy.stripe.com/aFa00i9a02Lg5vddKU43S0q
-          check https://buy.stripe.com/9B63cugCs99E5vddKU43S0o
-          check https://buy.stripe.com/7sY9ASdqgadIf5NayI43S0n
-          if [ $FAIL -eq 1 ]; then
-            echo "ONE OR MORE CHECKS FAILED"
-            exit 1
-          fi
+          for p in "" front-office.html case-study.html ebooks.html contact.html links.html thank-you.html love-and-rehab.html sober-living/ assets/site.css assets/site.js; do
+            check "$BASE/$p"
+          done
+          # The only product on sale
+          check "https://buy.stripe.com/$KEEP"
+          # Old sales pages must forward, and no other checkout link may come back
+          for p in "" front-office.html case-study.html ebooks.html contact.html links.html thank-you.html shop.html store.html funnel.html gumroad.html offer.html download.html; do
+            extra=$(curl -sS --max-time 25 "$BASE/$p" | grep -oE "buy\.stripe\.com/[A-Za-z0-9]+" | grep -v "$KEEP" || true)
+            if [ -n "$extra" ]; then echo "FAIL unexpected checkout link on /$p: $extra"; FAIL=1; fi
+          done
+          if ! curl -sS --max-time 25 "$BASE/ebooks.html" | grep -q "$KEEP"; then echo "FAIL Cold Call Code button missing"; FAIL=1; fi
+          if [ $FAIL -eq 1 ]; then echo "ONE OR MORE CHECKS FAILED"; exit 1; fi
           echo "All checks passed"

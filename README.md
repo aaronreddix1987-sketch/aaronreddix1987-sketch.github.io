@@ -1,15 +1,15 @@
 # Total Transformation Inc.
 
-**The only customer URL:** https://aaronreddix1987-sketch.github.io/
+Live site: https://aaronreddix1987-sketch.github.io/
 
-Flagship checkout: $47 The 10M Blueprint Complete 12-Book Series  
-https://buy.stripe.com/6oUaEW71Sfy2cXF22c43S0p
-
-| Surface | URL |
+| Page | URL |
 |---|---|
-| Store | https://aaronreddix1987-sketch.github.io/ |
-| Library | https://aaronreddix1987-sketch.github.io/ebooks.html |
-| 10X Recovery | https://aaronreddix1987-sketch.github.io/recovery.html |
-| Capacity project | https://aaronreddix1987-sketch.github.io/project.html |
+| Home | https://aaronreddix1987-sketch.github.io/ |
+| AI Front Office (main offer, $97 7-day pilot) | https://aaronreddix1987-sketch.github.io/front-office.html |
+| Case study | https://aaronreddix1987-sketch.github.io/case-study.html |
+| Study guides | https://aaronreddix1987-sketch.github.io/ebooks.html |
+| Link-in-bio page | https://aaronreddix1987-sketch.github.io/links.html |
+| Contact | https://aaronreddix1987-sketch.github.io/contact.html |
 
-Card checkout through Stripe. File delivery through the Drive link on that Payment Link.
+Only one product has a card checkout: Cold Call Code ($9.97). It opens on `thank-you.html?product=cold-call-code` after payment.
+All other old pages forward to one of the pages above. Shared styles live in `assets/site.css`.
