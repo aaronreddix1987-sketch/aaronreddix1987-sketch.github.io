@@ -1,13 +1,13 @@
 {
- "updated_utc": "2026-11-22T10:30:19Z",
- "overall": "red",
- "headline": "1 needs help. 7 agents running. 7 start on schedule. No sales yet.",
+ "updated_utc": "2026-11-22T10:30:35Z",
+ "overall": "green",
+ "headline": "8 agents running. 7 start on schedule. No sales yet.",
  "money": {
   "today_usd": 0,
   "week_usd": 0,
   "all_time_usd": 0,
   "sales_count_all_time": 0,
-  "as_of_utc": "2026-11-22T10:30:19Z"
+  "as_of_utc": "2026-11-22T10:30:35Z"
  },
  "funnel": [
   {
@@ -126,10 +126,10 @@
   {
    "desk": "Money count",
    "job": "Counts sales and flags stuck orders",
-   "state": "problem",
+   "state": "ok",
    "overdue": false,
    "last_run_utc": "2026-11-22T10:28:36Z",
-   "last_note": "Reported a problem",
+   "last_note": "Paid sales 0, paid 11, lead 3, emails sent 0",
    "next_run_text": "Every day 9:05 AM"
   },
   {
@@ -186,6 +186,6 @@
  ],
  "site": {
   "up": true,
-  "checked_utc": "2026-11-22T10:30:19Z"
+  "checked_utc": "2026-11-22T10:30:35Z"
  }
 }
