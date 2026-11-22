@@ -1,14 +1,74 @@
 [
- {"id":"question","hook":"When you are on a job and the phone rings, what happens to that caller?","body":"Quick question for business owners.\n\nWhen you are on a job and the phone rings, what happens to that caller?\n\nA) They leave a voicemail\nB) They call back later\nC) They call someone else\n\nBe honest. Drop your letter in the comments.","page":"front-office.html"},
- {"id":"offer","hook":"One business. Seven days. $97.","body":"The 7-Day Missed-Call Recovery Pilot.\n\nOne business. Seven days. $97.\n\n- Missed calls get a text back\n- Every lead goes in one list on your phone\n- Follow-ups go out on time\n- You get a review of every lead at the end of the week\n\nNo contract. No promises about income. You see what it caught and you decide.","page":"front-office.html"},
- {"id":"four-boxes","hook":"Every job in your business fits in one of four boxes.","body":"Every job in your business fits in one of four boxes. This comes from Dan Martell's book Buy Back Your Time.\n\nD - Delegation: low money, drains you. Returning missed calls.\nR - Replacement: makes money, drains you. Chasing quotes.\nI - Investment: low money, gives you energy. Family, health, learning.\nP - Production: high money, gives you energy. Doing the job. Closing the sale.\n\nWhich box did you spend most of today in?\n\n(We are not affiliated with or endorsed by Dan Martell.)","page":"front-office.html"},
- {"id":"case-study-02","hook":"We are looking for case study number two.","body":"Our first case study was our own company.\n\nWe are now looking for case study 02.\n\nIf you run a local service business in Los Angeles and miss calls while you work, we will set up the 7-day pilot and show you every lead it catches. $97.\n\nWith your OK, your results become our next case study.","page":"front-office.html"},
- {"id":"audit","hook":"Before I asked any owner to trust me, I audited my own business.","body":"Before I asked any owner to trust me with their front desk, I audited my own business.\n\n2,300 files reviewed.\n63 checkout links tested, one by one.\n3 buttons that opened the wrong product.\n1 product left on sale: the one that delivers today.\n\nIt was not comfortable. But I would rather find my own leaks than have a customer find them.\n\nThe method is the Buyback Loop from Dan Martell's book Buy Back Your Time: Audit. Transfer. Fill. (Not affiliated with or endorsed by Dan Martell.)\n\nWhat is one thing in your business nobody has checked from the customer's side?","page":"case-study.html"},
- {"id":"math","hook":"What do missed calls cost you? Check your own number in 20 seconds.","body":"A simple example.\n\nA shop misses 10 calls a week.\n3 of those callers would have booked a $250 job.\nThat is $750 a week. About $3,250 a month.\n\nThose are example numbers, not a promise. Yours will be different.\n\nThere is a free calculator on our page so you can check your own in 20 seconds.","page":"front-office.html"},
- {"id":"buyback-rate","hook":"What is an hour of your time worth?","body":"What is an hour of your time worth?\n\nDan Martell's rule from Buy Back Your Time:\nYearly pay divided by 2,000 hours, divided by 4. That is your Buyback Rate.\n\nPay yourself $80,000? Your Buyback Rate is $10 an hour. Any task you can hand off for less than that should not be yours.\n\nFor most local owners, the first task to go is the phone: calling people back, writing down messages, chasing follow-ups.\n\nThat is the job our AI Front Office takes. 7-day pilot, $97.\n\n(Not affiliated with or endorsed by Dan Martell.)","page":"front-office.html"},
- {"id":"founder","hook":"The person who calls back gets the job.","body":"I grew up in South Central Los Angeles. I rebuilt my life through recovery, hard work and learning new skills.\n\nThe biggest business lesson I learned on the way was not about money. It was about follow-up. The person who calls back gets the job.\n\nSo I started Total Transformation Inc. to build one thing well: a front desk that never forgets to follow up.\n\nWe are a young company. We do not have a wall of client logos yet. What we have is a 7-day pilot where you see every lead the system catches, and then you decide.","page":"front-office.html"},
- {"id":"sticky-notes","hook":"No more sticky notes and lost voicemails.","body":"Where do your leads live right now?\n\nA sticky note on the dash. A voicemail you meant to return. A text you forgot to answer.\n\nIn the 7-day pilot, every lead goes in one simple list you can open on your phone: name, number and what they need.\n\nOne business. Seven days. $97. No contract.","page":"front-office.html"},
- {"id":"text-back","hook":"You can't answer the phone on a ladder. A text back can.","body":"You can't answer the phone when you are under a sink, on a ladder or with a customer.\n\nIn the 7-day pilot, when a call goes unanswered, the caller gets a friendly text asking how you can help. So they talk to you instead of the next shop.\n\nYou approve the wording first.\n\nOne business. Seven days. $97.","page":"front-office.html"},
- {"id":"follow-up","hook":"Follow-up is a job. It does not have to be your job.","body":"Follow-up is a job. It does not have to be your job.\n\nIn the 7-day pilot, reminders and follow-up messages go out at set times until the lead books or says no. You approve the wording first.\n\nAt the end of the week you get a review of every lead. Then you decide if it was worth it.\n\n$97. No contract. No promises about income.","page":"front-office.html"},
- {"id":"young-company","hook":"We are a young company. Here is what we do have.","body":"We are a young company. We do not have a wall of client logos yet.\n\nHere is what we do have:\n\n- A 7-day pilot for $97\n- A simple list of every lead the system catches\n- A review with you at the end of the week\n- No contract\n\nYou see what it caught, and then you decide.\n\nLocal service business in Los Angeles? Take a look.","page":"front-office.html"}
+ {
+  "id": "question",
+  "hook": "When you are on a job and the phone rings, what happens to that caller?",
+  "body": "Quick question for business owners.\n\nWhen you are on a job and the phone rings, what happens to that caller?\n\nA) They leave a voicemail\nB) They call back later\nC) They call someone else\n\nBe honest. Drop your letter in the comments.",
+  "page": "front-office.html"
+ },
+ {
+  "id": "offer",
+  "hook": "One business. Seven days. $97.",
+  "body": "The 7-Day Missed-Call Pilot.\n\nOne business. Seven days. $97.\n\n- When you miss a call, our AI answers it in English\n- It takes the caller's name, number and what they need\n- It emails that message to you\n- You call them back\n\nNo contract. No promises about income. You see what it caught and you decide.",
+  "page": "front-office.html"
+ },
+ {
+  "id": "four-boxes",
+  "hook": "Every job in your business fits in one of four boxes.",
+  "body": "Every job in your business fits in one of four boxes. This comes from Dan Martell's book Buy Back Your Time.\n\nD - Delegation: low money, drains you. Returning missed calls.\nR - Replacement: makes money, drains you. Chasing quotes.\nI - Investment: low money, gives you energy. Family, health, learning.\nP - Production: high money, gives you energy. Doing the job. Closing the sale.\n\nWhich box did you spend most of today in?\n\n(We are not affiliated with or endorsed by Dan Martell.)",
+  "page": "front-office.html"
+ },
+ {
+  "id": "case-study-02",
+  "hook": "We are looking for case study number two.",
+  "body": "Our first case study was our own company.\n\nWe are now looking for case study 02.\n\nIf you run a local service business in Los Angeles and miss calls while you work, we will set up the 7-day pilot and show you every lead it catches. $97.\n\nWith your OK, your results become our next case study.",
+  "page": "front-office.html"
+ },
+ {
+  "id": "audit",
+  "hook": "Before I asked any owner to trust me, I audited my own business.",
+  "body": "Before I asked any owner to trust me with their front desk, I audited my own business.\n\n2,300 files reviewed.\n63 checkout links tested, one by one.\n3 buttons that opened the wrong product.\n43 guides now on sale through Stripe.\n\nIt was not comfortable. But I would rather find my own leaks than have a customer find them.\n\nThe method is the Buyback Loop from Dan Martell's book Buy Back Your Time: Audit. Transfer. Fill. (Not affiliated with or endorsed by Dan Martell.)\n\nWhat is one thing in your business nobody has checked from the customer's side?",
+  "page": "case-study.html"
+ },
+ {
+  "id": "math",
+  "hook": "What do missed calls cost you? Check your own number in 20 seconds.",
+  "body": "A simple example.\n\nA shop misses 10 calls a week.\n3 of those callers would have booked a $250 job.\nThat is $750 a week. About $3,250 a month.\n\nThose are example numbers, not a promise. Yours will be different.\n\nThere is a free calculator on our page so you can check your own in 20 seconds.",
+  "page": "front-office.html"
+ },
+ {
+  "id": "buyback-rate",
+  "hook": "What is an hour of your time worth?",
+  "body": "What is an hour of your time worth?\n\nDan Martell's rule from Buy Back Your Time:\nYearly pay divided by 2,000 hours, divided by 4. That is your Buyback Rate.\n\nPay yourself $80,000? Your Buyback Rate is $10 an hour. Any task you can hand off for less than that should not be yours.\n\nFor most local owners, the first task to go is the phone: answering calls and writing down messages.\n\nOur AI Front Office answers your missed calls and emails you the message. 7-day pilot, $97.\n\n(Not affiliated with or endorsed by Dan Martell.)",
+  "page": "front-office.html"
+ },
+ {
+  "id": "founder",
+  "hook": "The person who calls back gets the job.",
+  "body": "I grew up in South Central Los Angeles. I rebuilt my life through recovery, hard work and learning new skills.\n\nThe biggest business lesson I learned on the way was not about money. It was about follow-up. The person who calls back gets the job.\n\nSo I started Total Transformation Inc. to build one thing well: a front desk that answers the calls you miss.\n\nWe are a young company. We do not have a wall of client logos yet. What we have is a 7-day pilot where you see every lead the system catches, and then you decide.",
+  "page": "front-office.html"
+ },
+ {
+  "id": "sticky-notes",
+  "hook": "No more sticky notes and lost voicemails.",
+  "body": "Where do your missed calls go right now?\n\nA voicemail you meant to return. A sticky note on the dash.\n\nIn the 7-day pilot, our AI answers missed calls in English. Each caller's name, number and what they need comes to you by email.\n\nOne business. Seven days. $97. No contract.",
+  "page": "front-office.html"
+ },
+ {
+  "id": "missed-call",
+  "hook": "You can't answer the phone on a ladder. Our AI can.",
+  "body": "You can't answer the phone when you are under a sink, on a ladder or with a customer.\n\nIn the 7-day pilot, when you miss a call, our AI answers it in English. It takes the caller's name, number and what they need. Then it emails that message to you.\n\nYou call them back when you are free.\n\nOne business. Seven days. $97.",
+  "page": "front-office.html"
+ },
+ {
+  "id": "follow-up",
+  "hook": "You can't call back a caller you never heard from.",
+  "body": "You can't call back a caller you never heard from.\n\nIn the 7-day pilot, our AI answers your missed calls in English. It emails you each caller's name, number and what they need. So you know who to call back.\n\n$97. No contract. No promises about income.",
+  "page": "front-office.html"
+ },
+ {
+  "id": "young-company",
+  "hook": "We are a young company. Here is what we do have.",
+  "body": "We are a young company. We do not have a wall of client logos yet.\n\nHere is what we do have:\n\n- A 7-day pilot for $97\n- Our AI answers your missed calls in English\n- You get an email with each caller's name, number and need\n- No contract\n\nYou see what it caught, and then you decide.\n\nLocal service business in Los Angeles? Take a look.",
+  "page": "front-office.html"
+ }
 ]

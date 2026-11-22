@@ -34,7 +34,7 @@ feed=f'''<?xml version="1.0" encoding="UTF-8"?>
   <title>Total Transformation Inc. - AI Front Office</title>
   <link>{SITE}/front-office.html</link>
   <atom:link href="{SITE}/feed.xml" rel="self" type="application/rss+xml"/>
-  <description>Short posts for local service business owners about missed calls, follow-up and the 7-day pilot.</description>
+  <description>Short posts for local service business owners about missed calls and the 7-day pilot.</description>
   <language>en-us</language>
   <lastBuildDate>{format_datetime(now)}</lastBuildDate>
 {chr(10).join(items)}
