@@ -7,25 +7,26 @@ jobs:
   health:
     runs-on: ubuntu-latest
     steps:
-      - name: Check live pages and the one checkout link
+      - name: Check live pages and every checkout link
         run: |
           FAIL=0
           BASE=https://aaronreddix1987-sketch.github.io
-          KEEP=3cIaEW85W99Ee1JeOY43S0r
           check() {
             code=$(curl -sS -o /dev/null -w "%{http_code}" -L --max-time 25 "$1")
             if echo "$code" | grep -qE "^[23]"; then echo "OK   $code $1"; else echo "FAIL $code $1"; FAIL=1; fi
           }
-          for p in "" services.html front-office.html case-study.html ebooks.html app.html contact.html links.html thank-you.html love-and-rehab.html sober-living/ assets/site.css assets/site.js manifest.webmanifest sw.js assets/icons/icon-192.png assets/icons/icon-512.png; do
+          for p in "" services.html front-office.html case-study.html ebooks.html checklist.html app.html contact.html links.html thank-you.html whiteboard.html love-and-rehab.html sober-living/ assets/site.css assets/site.js manifest.webmanifest sw.js assets/icons/icon-192.png assets/icons/icon-512.png; do
             check "$BASE/$p"
           done
-          # The only product on sale
-          check "https://buy.stripe.com/$KEEP"
-          # Old sales pages must forward, and no other checkout link may come back
-          for p in "" services.html app.html front-office.html case-study.html ebooks.html contact.html links.html thank-you.html shop.html store.html funnel.html gumroad.html offer.html download.html; do
-            extra=$(curl -sS --max-time 25 "$BASE/$p" | grep -oE "buy\.stripe\.com/[A-Za-z0-9]+" | grep -v "$KEEP" || true)
-            if [ -n "$extra" ]; then echo "FAIL unexpected checkout link on /$p: $extra"; FAIL=1; fi
+          # Every Stripe checkout link on the main sales pages must open
+          links=$(for p in "" ebooks.html front-office.html services.html checklist.html links.html; do curl -sS --max-time 25 "$BASE/$p"; done | grep -oE "https://buy\.stripe\.com/[A-Za-z0-9]+" | sort -u)
+          n=$(echo "$links" | grep -c . || true)
+          echo "Checkout links found: $n"
+          if [ "$n" -lt 40 ]; then echo "FAIL too few checkout links found"; FAIL=1; fi
+          for u in $links; do check "$u"; done
+          # Workbook download pages
+          for p in 9bcde703c28c 4edf77a67509 1d80e4212a30 3887b712263b 9528cbc8e736; do
+            check "$BASE/dl/$p/"
           done
-          if ! curl -sS --max-time 25 "$BASE/ebooks.html" | grep -q "$KEEP"; then echo "FAIL Cold Call Code button missing"; FAIL=1; fi
           if [ $FAIL -eq 1 ]; then echo "ONE OR MORE CHECKS FAILED"; exit 1; fi
           echo "All checks passed"
