@@ -25,7 +25,7 @@ jobs:
           if [ "$n" -lt 40 ]; then echo "FAIL too few checkout links found"; FAIL=1; fi
           for u in $links; do check "$u"; done
           # Workbook download pages
-          for p in 9bcde703c28c 4edf77a67509 1d80e4212a30 3887b712263b 9528cbc8e736 f4672d42c324 d036c293d460 13a7f2992d20 6abf0c05807b 28c88d5f65aa a49d15d0369d 4b24972250d4; do
+          for p in 9bcde703c28c 4edf77a67509 1d80e4212a30 3887b712263b 9528cbc8e736 f4672d42c324 d036c293d460 13a7f2992d20 6abf0c05807b 28c88d5f65aa a49d15d0369d 4b24972250d4 3891106275d4 121e8e866a8e; do
             check "$BASE/dl/$p/"
           done
           if [ $FAIL -eq 1 ]; then echo "ONE OR MORE CHECKS FAILED"; exit 1; fi
