@@ -1,13 +1,13 @@
 {
- "updated_utc": "2026-11-22T10:19:21Z",
- "overall": "green",
- "headline": "5 agents running. 10 start on schedule. No sales yet.",
+ "updated_utc": "2026-11-22T10:30:19Z",
+ "overall": "red",
+ "headline": "1 needs help. 7 agents running. 7 start on schedule. No sales yet.",
  "money": {
   "today_usd": 0,
   "week_usd": 0,
   "all_time_usd": 0,
   "sales_count_all_time": 0,
-  "as_of_utc": "2026-11-22T10:19:21Z"
+  "as_of_utc": "2026-11-22T10:30:19Z"
  },
  "funnel": [
   {
@@ -45,10 +45,10 @@
   {
    "desk": "AI CEO",
    "job": "Reads the log and sets the week's work",
-   "state": "waiting",
+   "state": "ok",
    "overdue": false,
-   "last_run_utc": null,
-   "last_note": "Starts every day 7:00 AM",
+   "last_run_utc": "2026-11-22T10:27:34Z",
+   "last_note": "Reported in",
    "next_run_text": "Every day 7:00 AM"
   },
   {
@@ -72,10 +72,10 @@
   {
    "desk": "DM replies",
    "job": "Answers business messages on social",
-   "state": "waiting",
+   "state": "ok",
    "overdue": false,
-   "last_run_utc": null,
-   "last_note": "Starts every day 9:15 AM, 5:15 PM",
+   "last_run_utc": "2026-11-22T10:30:04Z",
+   "last_note": "Messages answered 0",
    "next_run_text": "Every day 9:15 AM, 5:15 PM"
   },
   {
@@ -126,10 +126,10 @@
   {
    "desk": "Money count",
    "job": "Counts sales and flags stuck orders",
-   "state": "waiting",
+   "state": "problem",
    "overdue": false,
-   "last_run_utc": null,
-   "last_note": "Starts every day 9:05 AM",
+   "last_run_utc": "2026-11-22T10:28:36Z",
+   "last_note": "Reported a problem",
    "next_run_text": "Every day 9:05 AM"
   },
   {
@@ -186,6 +186,6 @@
  ],
  "site": {
   "up": true,
-  "checked_utc": "2026-11-22T10:19:21Z"
+  "checked_utc": "2026-11-22T10:30:19Z"
  }
 }
