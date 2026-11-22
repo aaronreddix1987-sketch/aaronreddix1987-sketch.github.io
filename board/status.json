@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-22T10:17:48Z",
+ "updated_utc": "2026-11-22T10:19:21Z",
  "overall": "green",
  "headline": "5 agents running. 10 start on schedule. No sales yet.",
  "money": {
@@ -7,7 +7,7 @@
   "week_usd": 0,
   "all_time_usd": 0,
   "sales_count_all_time": 0,
-  "as_of_utc": "2026-11-22T10:17:48Z"
+  "as_of_utc": "2026-11-22T10:19:21Z"
  },
  "funnel": [
   {
@@ -66,8 +66,8 @@
    "state": "waiting",
    "overdue": false,
    "last_run_utc": null,
-   "last_note": "Starts every 2 weeks, Wed",
-   "next_run_text": "Every 2 weeks, Wed"
+   "last_note": "Starts every Friday 10:00 AM",
+   "next_run_text": "Every Friday 10:00 AM"
   },
   {
    "desk": "DM replies",
@@ -186,6 +186,6 @@
  ],
  "site": {
   "up": true,
-  "checked_utc": "2026-11-22T10:17:48Z"
+  "checked_utc": "2026-11-22T10:19:21Z"
  }
 }
