@@ -36,12 +36,12 @@
   </div>
 </nav>
 <main id="main">
-<div id="pilot" hidden>
+<div id="pilot">
 <header class="hero plain">
   <div class="wrap narrow">
     <p class="eyebrow">7-day AI front desk pilot</p>
-    <h1>Next steps for the $97 pilot</h1>
-    <p class="lead">If you paid, check for a Stripe receipt. We&rsquo;ll email your pilot number and forwarding steps when setup is ready.</p>
+    <h1>Thank you. Your payment was received.</h1>
+    <p class="lead">Within one business day you get an email with your new AI phone number and simple forwarding steps.</p>
   </div>
 </header>
 <section>
@@ -51,31 +51,31 @@
       <ul class="ticks" style="font-size:19px">
         <li>Leave your phone forwarding as it is for now.</li>
         <li>Check your spam folder if you do not see our email.</li>
-        <li>This page does not verify payment. Check your Stripe receipt for payment details.</li>
+        <li>Stripe also emails you a receipt.</li>
       </ul>
       <div class="cta" style="margin-top:20px"><a class="btn" href="tel:+17473018586">Questions? Call (747) 301-8586</a></div>
     </div>
     <h2 style="font-family:Zodiak,serif;font-size:30px;margin:40px 0 14px">What happens next</h2>
     <ol class="ty-steps">
-      <li><b>Email with your number</b>Look for your pilot phone number and forwarding steps when setup is ready.</li>
+      <li><b>Email with your number</b>Within one business day: your new AI phone number and simple forwarding steps.</li>
       <li><b>Turn on forwarding</b>Follow the steps so calls you miss go to Clara. Make a test call.</li>
-      <li><b>Get your messages</b>For seven days after setup, Clara can answer forwarded missed calls and email the details callers leave.</li>
+      <li><b>Get your messages</b>For 7 days, Clara answers your missed calls and emails you each message.</li>
     </ol>
     <div class="panel" style="margin-top:36px">
       <p class="eyebrow">While you wait</p>
       <h2 style="font-size:24px;margin:10px 0">Free: The AI Company Map</h2>
       <p style="color:var(--muted)">A 2-page PDF that shows how a small business can run with AI helpers. A written guide, not software.</p>
-      <div class="cta" style="margin-top:16px"><a class="btn ghost" href="https://buy.stripe.com/dRmeVd3tz1Ud0Uf68wgEg2N">Get the free map</a><a class="btn ghost" href="/ebooks.html">See the guides</a></div>
+      <div class="cta" style="margin-top:16px"><a class="btn ghost" href="https://buy.stripe.com/dRmeVdc057exbyTaoMgEg2N">Get the free map</a><a class="btn ghost" href="/ebooks.html">See the guides</a></div>
     </div>
   </div>
 </section>
 </div>
-<div id="other">
+<div id="other" hidden>
 <header class="hero plain">
   <div class="wrap narrow">
     <p class="eyebrow">Order help</p>
-    <h1 id="ty-title">Order help and next steps</h1>
-    <p class="lead" id="ty-lead">This page does not verify payment. If you paid, check for a Stripe receipt at the email address you entered.</p>
+    <h1 id="ty-title">Thank you. Your payment went through.</h1>
+    <p class="lead" id="ty-lead">Stripe has emailed your receipt to the address you entered at checkout.</p>
   </div>
 </header>
 <section>
@@ -85,7 +85,7 @@
       <h2 style="font-size:26px;margin:12px 0">What happens next</h2>
       <p style="color:var(--muted);margin-bottom:10px">Ebook guides ($27 to $47) open a download page right after checkout.</p>
       <p style="color:var(--muted);margin-bottom:10px">The $97 7-day pilot: we will email you when your pilot line is ready, with forwarding steps.</p>
-      <p style="color:var(--muted);margin-bottom:14px">The free checklist: <a href="/checklist.html">open it here</a>.</p>
+      <p style="color:var(--muted);margin-bottom:14px">The free checklist: the link is emailed to you. You can also <a href="/checklist.html">open the checklist here</a>.</p>
       <p style="color:var(--muted);margin-bottom:14px">No email? Check your spam folder. Still nothing? Call us with the name on your receipt.</p>
       <div class="cta" style="margin-top:20px">
         <a class="btn" href="tel:+17473018586">Call (747) 301-8586</a>
@@ -310,12 +310,12 @@
   var PRODUCTS = {
     "cold-call-code": {
       title: "Cold Call Code is yours.",
-      lead: "Read the guide below. Use the button to print or save as PDF.",
+      lead: "Read it below. Stripe has emailed your receipt. Use the button to print or save as PDF.",
       type: "guide"
     },
     "checklist": {
       title: "Your free checklist is ready.",
-      lead: "Open the checklist below.",
+      lead: "The link is also emailed to you. Open the checklist below.",
       type: "checklist"
     },
     "pilot": {
@@ -393,16 +393,15 @@
     "systems-thinking-guide": { title: "Thank you for ordering Systems Thinking for Business Success.", lead: "If you completed checkout, your download page opens right after payment. Save the PDF there. If you need help, call (747) 301-8586.", type: "ebook" },
   };
   var slug = new URLSearchParams(location.search).get("product") || "";
-  var item = Object.prototype.hasOwnProperty.call(PRODUCTS, slug) ? PRODUCTS[slug] : null;
-  if(slug === "pilot") {
-    document.getElementById("pilot").hidden = false;
-    document.getElementById("other").hidden = true;
-  } else if(item) {
-    document.getElementById("ty-title").textContent = item.type === "ebook" ? "Help with your ebook download" : item.type === "service" ? "Service order help" : item.title;
+  var item = PRODUCTS[slug];
+  if(item && slug !== "pilot" && slug !== "front-office") {
+    document.getElementById("pilot").hidden = true;
+    document.getElementById("other").hidden = false;
+    document.getElementById("ty-title").textContent = item.title;
     document.getElementById("ty-lead").textContent  = item.lead;
     if(item.type === "ebook") {
       document.getElementById("next").hidden = false;
-      document.getElementById("help").innerHTML = '<p class="eyebrow">What happens next</p><h2 style="font-size:26px;margin:12px 0">Your guide is a PDF download</h2><p style="color:var(--muted)">This help page does not supply the PDF. If you did not reach the product download page after checkout, call (747) 301-8586 with the guide title and the email used at checkout. Do not share card details.</p>';
+      document.getElementById("help").innerHTML = '<p class="eyebrow">What happens next</p><h2 style="font-size:26px;margin:12px 0">Your guide is a PDF download</h2><p style="color:var(--muted)">The download page opens right after checkout. Save the PDF there. Lost it? Call (747) 301-8586 and leave the guide title and the email used at checkout. Do not share card details.</p>';
     } else if(item.type === "checklist") {
       document.getElementById("next").hidden = false;
       document.getElementById("help").innerHTML = '<p class="eyebrow">Your checklist</p><h2 style="font-size:26px;margin:12px 0">Eight quick checks</h2><div class="cta" style="margin-top:20px"><a class="btn" href="/checklist.html">Open the checklist</a></div>';
@@ -416,7 +415,7 @@
       document.getElementById("help").innerHTML = [
         '<p class="eyebrow">What happens next</p>',
         '<h2 style="font-size:26px;margin:12px 0">Check your email</h2>',
-        '<p style="color:var(--muted);margin-bottom:14px">If you paid, check for your receipt and any setup instructions. For questions, call the business contact number below.</p>',
+        '<p style="color:var(--muted);margin-bottom:14px">Your next steps are on their way by email. Questions right now? Call and Clara, our AI assistant, will take a message.</p>',
         '<div class="cta" style="margin-top:20px">',
         '<a class="btn" href="tel:+17473018586">Call (747) 301-8586</a>',
         '<a class="btn ghost" href="/front-office.html" style="margin-top:8px">Review what you purchased</a>',
