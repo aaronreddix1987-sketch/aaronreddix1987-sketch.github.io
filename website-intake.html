@@ -67,6 +67,7 @@
       <div class="field"><label for="ar">Area you serve</label><input id="ar" type="text"></div>
       <div class="field"><label for="ab">About your business (optional)</label><textarea id="ab" rows="3"></textarea></div>
       <div class="field"><label for="tg">Tagline (optional)</label><input id="tg" type="text"></div>
+      <div class="field"><label style="display:flex;gap:10px;align-items:flex-start;font-weight:400"><input id="sms" type="checkbox" style="width:auto;margin-top:5px"> <span>Optional: TTI may text me at the phone number above about my website order. Message frequency varies. Message and data rates may apply. Reply STOP to stop, HELP for help. Consent is not required to buy. See our <a href="/privacy.html">privacy page</a>.</span></label></div>
       <button class="btn" type="button" id="cp">Copy my answers</button>
       <p id="ok" role="status" aria-live="polite"></p>
     </form>
@@ -76,7 +77,7 @@
 <script>
 document.getElementById('cp').addEventListener('click',function(){
   var g=function(i){return document.getElementById(i).value.trim()};
-  var t='Phone for the call button: '+g('ph')+'\n\nServices:\n'+g('sv')+'\n\nHours:\n'+g('hr')+'\n\nArea I serve: '+g('ar')+'\n\nAbout: '+g('ab')+'\n\nTagline: '+g('tg')+'\n';
+  var t='Phone for the call button: '+g('ph')+'\n\nServices:\n'+g('sv')+'\n\nHours:\n'+g('hr')+'\n\nArea I serve: '+g('ar')+'\n\nAbout: '+g('ab')+'\n\nTagline: '+g('tg')+'\n\nText-message consent: '+(document.getElementById('sms').checked?'YES, checked on '+new Date().toISOString():'no')+'\n';
   var ok=document.getElementById('ok');
   if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){ok.textContent='Copied. Paste it into your reply email.'},function(){ok.textContent='Could not copy. Please type your answers into the reply email.'})}
   else{ok.textContent='Could not copy. Please type your answers into the reply email.'}
