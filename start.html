@@ -20,7 +20,7 @@
 <style>
 .fn{max-width:720px;margin:0 auto;padding:0 20px}
 .fn-top{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
-@media(max-width:420px){.fn-top .brand{font-size:16px}.fn-top a.call{font-size:15px}}
+@media(max-width:420px){.fn-top .num{display:none}.fn-top a.call{border:1px solid #3a4758;border-radius:99px;padding:8px 16px}}
 .fn-top a.call{color:var(--gold-2);font-weight:700;text-decoration:none;font-size:17px;white-space:nowrap}
 .fn-hero{padding:34px 0 26px}
 .fn-hero h1{font-family:Zodiak,serif;font-size:42px;line-height:1.12;margin:12px 0 16px}
@@ -63,7 +63,7 @@
 <div class="fn">
   <header class="fn-top">
     <a class="brand" href="/">Total <span>Transformation</span> Inc.</a>
-    <a class="call" href="tel:+17473018586">(747) 301-8586</a>
+    <a class="call" href="tel:+17473018586" aria-label="Call (747) 301-8586">Call<span class="num"> (747) 301-8586</span></a>
   </header>
 </div>
 <main id="main" class="fn">
