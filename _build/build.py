@@ -147,7 +147,7 @@ tr:nth-child(even) td { background:#f6f7f9; }
 blockquote { margin:.6em 0 .8em; padding:.1em .9em; border-left:3px solid #b45309; color:#374151; font-style:italic; }
 .box { margin: .7em 0 .9em; padding: .55em .75em .35em; border-radius:4px; font-size: 9.6pt; page-break-inside: avoid; }
 .box p { text-align:left; }
-.bt { font-family:'Lato',sans-serif; font-size:8pt; font-weight:700; text-transform:uppercase; letter-spacing:.08em; margin-bottom:.35em; }
+.bt { break-after: avoid; page-break-after: avoid; font-family:'Lato',sans-serif; font-size:8pt; font-weight:700; text-transform:uppercase; letter-spacing:.08em; margin-bottom:.35em; }
 .bl { }
 .objectives { background:#eef3fa; border-left: 4px solid #0f2a4a; } .objectives .bt{color:#0f2a4a}
 .callout { background:#fff7ed; border-left:4px solid #b45309; } .callout .bt{color:#b45309}
