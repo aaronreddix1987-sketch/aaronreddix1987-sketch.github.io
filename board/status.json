@@ -1,22 +1,22 @@
 {
- "updated_utc": "2026-11-22T10:12:33Z",
- "overall": "yellow",
- "headline": "5 of 14 agents reported in. No sales yet.",
+ "updated_utc": "2026-11-22T10:17:48Z",
+ "overall": "green",
+ "headline": "5 agents running. 10 start on schedule. No sales yet.",
  "money": {
   "today_usd": 0,
   "week_usd": 0,
   "all_time_usd": 0,
   "sales_count_all_time": 0,
-  "as_of_utc": "2026-11-22T10:12:33Z"
+  "as_of_utc": "2026-11-22T10:17:48Z"
  },
  "funnel": [
   {
    "label": "Emails sent",
-   "n": 0
+   "n": null
   },
   {
    "label": "Replies",
-   "n": 0
+   "n": null
   },
   {
    "label": "Calls answered",
@@ -46,46 +46,52 @@
    "desk": "AI CEO",
    "job": "Reads the log and sets the week's work",
    "state": "waiting",
+   "overdue": false,
    "last_run_utc": null,
-   "last_note": "No report yet",
-   "next_run_text": "Every day 7:30 AM"
+   "last_note": "Starts every day 7:00 AM",
+   "next_run_text": "Every day 7:00 AM"
   },
   {
    "desk": "Marketing",
    "job": "Finds local businesses and emails them",
    "state": "waiting",
+   "overdue": false,
    "last_run_utc": null,
-   "last_note": "No report yet",
+   "last_note": "Starts Mon-Sat 10:10 AM",
    "next_run_text": "Mon-Sat 10:10 AM"
   },
   {
    "desk": "Social posts",
    "job": "Keeps Facebook and LinkedIn posts lined up",
    "state": "waiting",
+   "overdue": false,
    "last_run_utc": null,
-   "last_note": "No report yet",
+   "last_note": "Starts every 2 weeks, Wed",
    "next_run_text": "Every 2 weeks, Wed"
-  },
-  {
-   "desk": "Email replies",
-   "job": "Answers buyers who email in",
-   "state": "waiting",
-   "last_run_utc": null,
-   "last_note": "No report yet",
-   "next_run_text": "When an email comes in"
   },
   {
    "desk": "DM replies",
    "job": "Answers business messages on social",
    "state": "waiting",
+   "overdue": false,
    "last_run_utc": null,
-   "last_note": "No report yet",
+   "last_note": "Starts every day 9:15 AM, 5:15 PM",
    "next_run_text": "Every day 9:15 AM, 5:15 PM"
+  },
+  {
+   "desk": "Email replies",
+   "job": "Answers buyers who email in",
+   "state": "waiting",
+   "overdue": false,
+   "last_run_utc": null,
+   "last_note": "Waits for its first job",
+   "next_run_text": "When an email comes in"
   },
   {
    "desk": "Phone desk",
    "job": "Answers the phone 24/7",
    "state": "ok",
+   "overdue": false,
    "last_run_utc": "2026-11-22T04:29:29Z",
    "last_note": "Phone robot checks are passing",
    "next_run_text": "Always on"
@@ -94,65 +100,82 @@
    "desk": "Phone pay links",
    "job": "Emails a pay link when a caller asks",
    "state": "ok",
+   "overdue": false,
    "last_run_utc": "2026-11-22T08:55:13Z",
    "last_note": "Sent 1, reconciled 0, held 0",
-   "next_run_text": "Every 30 minutes"
+   "next_run_text": "When a caller asks"
   },
   {
    "desk": "Orders",
    "job": "Checks new payments and sets up customers",
    "state": "ok",
+   "overdue": false,
    "last_run_utc": "2026-11-22T08:30:20Z",
    "last_note": "New sales 0, ads paused 0",
-   "next_run_text": "About 9 times a day"
+   "next_run_text": "About 10 times a day"
   },
   {
    "desk": "Websites",
    "job": "Builds paid 1-page websites",
    "state": "waiting",
+   "overdue": false,
    "last_run_utc": null,
-   "last_note": "No report yet",
+   "last_note": "Starts every day 8:40a, 1:40p, 6:40p",
    "next_run_text": "Every day 8:40a, 1:40p, 6:40p"
   },
   {
    "desk": "Money count",
    "job": "Counts sales and flags stuck orders",
    "state": "waiting",
+   "overdue": false,
    "last_run_utc": null,
-   "last_note": "No report yet",
+   "last_note": "Starts every day 9:05 AM",
    "next_run_text": "Every day 9:05 AM"
   },
   {
    "desk": "Deals",
    "job": "Follows up on open offers",
    "state": "ok",
+   "overdue": false,
    "last_run_utc": "2026-11-22T09:15:27Z",
    "last_note": "Proposals 0, follow-ups 0, stopped 0, held 0",
-   "next_run_text": "Every day"
+   "next_run_text": "Mon-Sat 11:40 AM"
   },
   {
    "desk": "Customer care",
    "job": "Checks that customer lines work",
    "state": "ok",
+   "overdue": false,
    "last_run_utc": "2026-11-22T09:15:46Z",
    "last_note": "Lines checked 1, reminders sent 0, calls 0, held 0",
-   "next_run_text": "Every day"
+   "next_run_text": "Every day 10:30 AM"
   },
   {
    "desk": "Reports",
    "job": "Writes the daily report",
    "state": "waiting",
+   "overdue": false,
    "last_run_utc": null,
-   "last_note": "No report yet",
-   "next_run_text": "Every day"
+   "last_note": "Starts every day 7:10 AM",
+   "next_run_text": "Every day 7:10 AM"
   },
   {
    "desk": "Agency outreach",
    "job": "Emails agencies about partner work",
    "state": "waiting",
+   "overdue": false,
    "last_run_utc": null,
-   "last_note": "No report yet",
-   "next_run_text": "Every day"
+   "last_note": "Starts Mon-Fri 1:10 PM",
+   "next_run_text": "Mon-Fri 1:10 PM"
+  },
+  {
+   "desk": "Coach",
+   "job": "Reviews results and sharpens each desk",
+   "state": "waiting",
+   "overdue": false,
+   "last_run_utc": null,
+   "last_note": "Starts Sundays 7:00 PM",
+   "next_run_text": "Sundays 7:00 PM"
   }
  ],
  "needs_you": [
@@ -163,6 +186,6 @@
  ],
  "site": {
   "up": true,
-  "checked_utc": "2026-11-22T10:12:33Z"
+  "checked_utc": "2026-11-22T10:17:48Z"
  }
 }
