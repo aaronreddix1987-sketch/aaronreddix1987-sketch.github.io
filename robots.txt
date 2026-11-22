@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /dl/
+Disallow: /board/
 Sitemap: https://aaronreddix1987-sketch.github.io/sitemap.xml

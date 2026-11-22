@@ -1,0 +1,146 @@
+{
+ "updated_utc": "2026-11-22T10:03:57Z",
+ "overall": "green",
+ "headline": "Site is up. No sales yet. 3 things need you.",
+ "money": {
+  "today_usd": 0,
+  "week_usd": 0,
+  "all_time_usd": 0,
+  "sales_count_all_time": 0,
+  "as_of_utc": "2026-11-22T10:03:57Z"
+ },
+ "funnel": [
+  {
+   "label": "Emails sent",
+   "n": null
+  },
+  {
+   "label": "Replies",
+   "n": null
+  },
+  {
+   "label": "Calls answered",
+   "n": null
+  },
+  {
+   "label": "Pay links sent",
+   "n": null
+  },
+  {
+   "label": "Paid",
+   "n": 0
+  },
+  {
+   "label": "Delivered",
+   "n": 0
+  }
+ ],
+ "agents": [
+  {
+   "desk": "AI CEO",
+   "job": "Reads sales and problems, sets desk tasks, writes the morning brief",
+   "state": "waiting",
+   "last_run_utc": null,
+   "last_note": "Live status starts when the board robot runs.",
+   "next_run_text": "Daily 7:30 AM"
+  },
+  {
+   "desk": "Marketing",
+   "job": "Finds local businesses and emails them the free checklist",
+   "state": "waiting",
+   "last_run_utc": null,
+   "last_note": "Live status starts when the board robot runs.",
+   "next_run_text": "Mon-Sat 10:10 AM"
+  },
+  {
+   "desk": "Social",
+   "job": "Keeps Facebook and LinkedIn posts queued",
+   "state": "waiting",
+   "last_run_utc": null,
+   "last_note": "Live status starts when the board robot runs.",
+   "next_run_text": "Every 2 weeks, Wed"
+  },
+  {
+   "desk": "Sales email",
+   "job": "Answers buyer emails with facts and a Stripe link",
+   "state": "waiting",
+   "last_run_utc": null,
+   "last_note": "Live status starts when the board robot runs.",
+   "next_run_text": "Each new email"
+  },
+  {
+   "desk": "Sales messages",
+   "job": "Replies once to business messages on social apps",
+   "state": "waiting",
+   "last_run_utc": null,
+   "last_note": "Live status starts when the board robot runs.",
+   "next_run_text": "Daily 9:15 AM and 5:15 PM"
+  },
+  {
+   "desk": "Clara phone",
+   "job": "Answers (747) 301-8586 any hour and takes a message",
+   "state": "waiting",
+   "last_run_utc": null,
+   "last_note": "Live status starts when the board robot runs.",
+   "next_run_text": "Every call, 24/7"
+  },
+  {
+   "desk": "Pay links",
+   "job": "Emails a checkout link when a caller asks for one",
+   "state": "waiting",
+   "last_run_utc": null,
+   "last_note": "Live status starts when the board robot runs.",
+   "next_run_text": "Every few minutes"
+  },
+  {
+   "desk": "Delivery",
+   "job": "Checks paid orders and starts AI phone line setup",
+   "state": "waiting",
+   "last_run_utc": null,
+   "last_note": "Live status starts when the board robot runs.",
+   "next_run_text": "Every 2 to 4 hours"
+  },
+  {
+   "desk": "Website builder",
+   "job": "Builds paid one-page websites",
+   "state": "waiting",
+   "last_run_utc": null,
+   "last_note": "Live status starts when the board robot runs.",
+   "next_run_text": "Daily 8:40 AM, 1:40 PM, 6:40 PM"
+  },
+  {
+   "desk": "Money check",
+   "job": "Counts sales and flags stuck orders",
+   "state": "waiting",
+   "last_run_utc": null,
+   "last_note": "Live status starts when the board robot runs.",
+   "next_run_text": "Daily 9:05 AM"
+  },
+  {
+   "desk": "Vapi watch",
+   "job": "Watches for a reply from Vapi about phone costs",
+   "state": "waiting",
+   "last_run_utc": null,
+   "last_note": "Live status starts when the board robot runs.",
+   "next_run_text": "Quiet check, pauses itself"
+  },
+  {
+   "desk": "Robots",
+   "job": "Log calls and set up phone lines from paid orders",
+   "state": "waiting",
+   "last_run_utc": null,
+   "last_note": "Live status starts when the board robot runs.",
+   "next_run_text": "Every 30 minutes"
+  }
+ ],
+ "needs_you": [
+  "Add a card at Vapi so new customers can get a phone line.",
+  "Add a checking account in Stripe so payouts can reach you.",
+  "Cancel the $90 Stripe Tax plan on the older Stripe account."
+ ],
+ "site": {
+  "up": true,
+  "checked_utc": "2026-11-22T10:03:57Z"
+ },
+ "seed": true
+}

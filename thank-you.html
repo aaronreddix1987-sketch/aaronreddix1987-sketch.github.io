@@ -21,6 +21,7 @@
 <link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,700&amp;display=swap" rel="stylesheet">
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
+<style>.ty-steps{list-style:none;margin:0;padding:0;display:grid;gap:12px;counter-reset:s}.ty-steps li{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 18px 18px 64px;position:relative;font-size:19px;line-height:1.5}.ty-steps li::before{counter-increment:s;content:counter(s);position:absolute;left:18px;top:16px;width:32px;height:32px;border-radius:50%;background:var(--gold);color:var(--ink);font-weight:700;display:flex;align-items:center;justify-content:center}.ty-steps li b{display:block;font-size:20px}</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -35,6 +36,41 @@
   </div>
 </nav>
 <main id="main">
+<div id="pilot">
+<header class="hero plain">
+  <div class="wrap narrow">
+    <p class="eyebrow">7-day AI front desk pilot</p>
+    <h1>Thank you. Your payment was received.</h1>
+    <p class="lead">Within one business day you get an email with your new AI phone number and simple forwarding steps.</p>
+  </div>
+</header>
+<section>
+  <div class="wrap narrow">
+    <div class="panel" style="border-color:var(--gold)">
+      <h2 style="font-size:26px;margin:0 0 12px">Until that email comes</h2>
+      <ul class="ticks" style="font-size:19px">
+        <li>Leave your phone forwarding as it is for now.</li>
+        <li>Check your spam folder if you do not see our email.</li>
+        <li>Stripe also emails you a receipt.</li>
+      </ul>
+      <div class="cta" style="margin-top:20px"><a class="btn" href="tel:+17473018586">Questions? Call (747) 301-8586</a></div>
+    </div>
+    <h2 style="font-family:Zodiak,serif;font-size:30px;margin:40px 0 14px">What happens next</h2>
+    <ol class="ty-steps">
+      <li><b>Email with your number</b>Within one business day: your new AI phone number and simple forwarding steps.</li>
+      <li><b>Turn on forwarding</b>Follow the steps so calls you miss go to Clara. Make a test call.</li>
+      <li><b>Get your messages</b>For 7 days, Clara answers your missed calls and emails you each message.</li>
+    </ol>
+    <div class="panel" style="margin-top:36px">
+      <p class="eyebrow">While you wait</p>
+      <h2 style="font-size:24px;margin:10px 0">Free: The AI Company Map</h2>
+      <p style="color:var(--muted)">A 2-page PDF that shows how a small business can run with AI helpers. A written guide, not software.</p>
+      <div class="cta" style="margin-top:16px"><a class="btn ghost" href="https://buy.stripe.com/dRmeVdc057exbyTaoMgEg2N">Get the free map</a><a class="btn ghost" href="/ebooks.html">See the guides</a></div>
+    </div>
+  </div>
+</section>
+</div>
+<div id="other" hidden>
 <header class="hero plain">
   <div class="wrap narrow">
     <p class="eyebrow">Order help</p>
@@ -243,7 +279,7 @@
     </div>
   </div>
 </section>
-
+</div>
 </main>
 <footer>
   <div class="wrap">
@@ -358,7 +394,9 @@
   };
   var slug = new URLSearchParams(location.search).get("product") || "";
   var item = PRODUCTS[slug];
-  if(item) {
+  if(item && slug !== "pilot" && slug !== "front-office") {
+    document.getElementById("pilot").hidden = true;
+    document.getElementById("other").hidden = false;
     document.getElementById("ty-title").textContent = item.title;
     document.getElementById("ty-lead").textContent  = item.lead;
     if(item.type === "ebook") {
@@ -377,7 +415,7 @@
       document.getElementById("help").innerHTML = [
         '<p class="eyebrow">What happens next</p>',
         '<h2 style="font-size:26px;margin:12px 0">Check your email</h2>',
-        '<p style="color:var(--muted);margin-bottom:14px">Your next steps are on their way by email. Questions right now? Call and our AI front desk will take a message.</p>',
+        '<p style="color:var(--muted);margin-bottom:14px">Your next steps are on their way by email. Questions right now? Call and Clara, our AI assistant, will take a message.</p>',
         '<div class="cta" style="margin-top:20px">',
         '<a class="btn" href="tel:+17473018586">Call (747) 301-8586</a>',
         '<a class="btn ghost" href="/front-office.html" style="margin-top:8px">Review what you purchased</a>',

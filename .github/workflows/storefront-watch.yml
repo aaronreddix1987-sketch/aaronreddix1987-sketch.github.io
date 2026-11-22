@@ -26,7 +26,7 @@ jobs:
           get() { curl -sS -L --max-time 25 --retry 3 --retry-delay 5 --retry-all-errors --retry-max-time 90 "$1?hc=$RANDOM" 2>/dev/null || true; }
           code() { curl -sS -o /dev/null -w "%{http_code}" -L --max-time 25 --retry 3 --retry-delay 5 --retry-all-errors --retry-max-time 90 "$1" 2>/dev/null || echo 000; }
           T=()
-          for p in "" services.html front-office.html case-study.html ebooks.html checklist.html app.html contact.html links.html thank-you.html whiteboard.html love-and-rehab.html sober-living/ assets/site.css assets/site.js manifest.webmanifest sw.js assets/icons/icon-192.png assets/icons/icon-512.png platform.html news.html privacy.html terms.html; do T+=("$BASE/$p"); done
+          for p in "" services.html front-office.html case-study.html ebooks.html checklist.html app.html contact.html links.html thank-you.html whiteboard.html love-and-rehab.html sober-living/ assets/site.css assets/site.js manifest.webmanifest sw.js assets/icons/icon-192.png assets/icons/icon-512.png platform.html news.html privacy.html terms.html start.html board/ board/status.json; do T+=("$BASE/$p"); done
           for p in 9bcde703c28c 4edf77a67509 1d80e4212a30 3887b712263b 9528cbc8e736 f4672d42c324 d036c293d460 13a7f2992d20 6abf0c05807b 28c88d5f65aa a49d15d0369d 4b24972250d4 3891106275d4 121e8e866a8e 7903404a0873 4844c08d29f1 013252a88ce5 d7417c1cc08d; do T+=("$BASE/dl/$p/"); done
           links=$(for p in "" ebooks.html front-office.html services.html checklist.html links.html platform.html; do get "$BASE/$p"; done | grep -oE "https://buy\.stripe\.com/[A-Za-z0-9]+" | sort -u)
           n=$(echo "$links" | grep -c . || true)
