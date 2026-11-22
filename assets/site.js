@@ -51,5 +51,7 @@
   window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();dp=e;if(ib)ib.hidden=false;if(inote)inote.textContent='Tap Install the app. It takes a few seconds.';});
   if(ib)ib.addEventListener('click',function(){if(!dp)return;dp.prompt();dp.userChoice.then(function(){dp=null;ib.hidden=true;});});
   window.addEventListener('appinstalled',function(){if(ib)ib.hidden=true;if(inote)inote.textContent='Installed. Look for the TTI icon on your home screen.';});
+  var ios=document.getElementById('ios-install'),inst=window.matchMedia('(display-mode: standalone)').matches||navigator.standalone;
+  if(ios&&!inst&&/iphone|ipad|ipod/i.test(navigator.userAgent))ios.hidden=false;
   if(inote&&(window.matchMedia('(display-mode: standalone)').matches||navigator.standalone))inote.textContent='You are using the app now.';
 })();
