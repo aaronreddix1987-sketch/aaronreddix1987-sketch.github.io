@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Release next post
         run: python3 social/release.py
       - name: Save
@@ -21,4 +23,11 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add feed.xml social/state.json
           git commit -m "Release next social post to feed.xml" || exit 0
-          git push
+          # Other commits can land at the same time. Rebase and retry instead of failing.
+          for i in 1 2 3 4 5; do
+            git push && exit 0
+            echo "Push try $i did not go through. Pulling and trying again."
+            sleep $((i*15))
+            git pull --rebase origin main || { git rebase --abort; git pull --rebase -X theirs origin main; }
+          done
+          echo "Could not push after 5 tries"; exit 1

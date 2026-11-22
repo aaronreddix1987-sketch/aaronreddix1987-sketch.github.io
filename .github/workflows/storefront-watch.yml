@@ -1,32 +1,68 @@
 name: TTI site health check
+# Checks live pages, download pages and every Stripe checkout link every 6 hours.
+# A slow or flaky answer is retried. Something only counts as down after 3 misses about 3 minutes apart.
+# A real outage opens ONE plain issue (or adds a note to the open one). When all is well again, that issue is closed.
 on:
   schedule:
     - cron: "0 */6 * * *"
   workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+concurrency: site-health
 jobs:
   health:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_REPO: ${{ github.repository }}
+      TITLE: "Site check: something on the website is not opening"
     steps:
       - name: Check live pages and every checkout link
         run: |
-          FAIL=0
+          set +e +o pipefail
           BASE=https://aaronreddix1987-sketch.github.io
-          check() {
-            code=$(curl -sS -o /dev/null -w "%{http_code}" -L --max-time 25 "$1")
-            if echo "$code" | grep -qE "^[23]"; then echo "OK   $code $1"; else echo "FAIL $code $1"; FAIL=1; fi
-          }
-          for p in "" services.html front-office.html case-study.html ebooks.html checklist.html app.html contact.html links.html thank-you.html whiteboard.html love-and-rehab.html sober-living/ assets/site.css assets/site.js manifest.webmanifest sw.js assets/icons/icon-192.png assets/icons/icon-512.png; do
-            check "$BASE/$p"
-          done
-          # Every Stripe checkout link on the main sales pages must open
-          links=$(for p in "" ebooks.html front-office.html services.html checklist.html links.html; do curl -sS --max-time 25 "$BASE/$p"; done | grep -oE "https://buy\.stripe\.com/[A-Za-z0-9]+" | sort -u)
+          get() { curl -sS -L --max-time 25 --retry 3 --retry-delay 5 --retry-all-errors --retry-max-time 90 "$1?hc=$RANDOM" 2>/dev/null || true; }
+          code() { curl -sS -o /dev/null -w "%{http_code}" -L --max-time 25 --retry 3 --retry-delay 5 --retry-all-errors --retry-max-time 90 "$1" 2>/dev/null || echo 000; }
+          T=()
+          for p in "" services.html front-office.html case-study.html ebooks.html checklist.html app.html contact.html links.html thank-you.html whiteboard.html love-and-rehab.html sober-living/ assets/site.css assets/site.js manifest.webmanifest sw.js assets/icons/icon-192.png assets/icons/icon-512.png platform.html news.html privacy.html terms.html; do T+=("$BASE/$p"); done
+          for p in 9bcde703c28c 4edf77a67509 1d80e4212a30 3887b712263b 9528cbc8e736 f4672d42c324 d036c293d460 13a7f2992d20 6abf0c05807b 28c88d5f65aa a49d15d0369d 4b24972250d4 3891106275d4 121e8e866a8e 7903404a0873 4844c08d29f1 013252a88ce5 d7417c1cc08d; do T+=("$BASE/dl/$p/"); done
+          links=$(for p in "" ebooks.html front-office.html services.html checklist.html links.html platform.html; do get "$BASE/$p"; done | grep -oE "https://buy\.stripe\.com/[A-Za-z0-9]+" | sort -u)
           n=$(echo "$links" | grep -c . || true)
           echo "Checkout links found: $n"
-          if [ "$n" -lt 40 ]; then echo "FAIL too few checkout links found"; FAIL=1; fi
-          for u in $links; do check "$u"; done
-          # Workbook download pages
-          for p in 9bcde703c28c 4edf77a67509 1d80e4212a30 3887b712263b 9528cbc8e736 f4672d42c324 d036c293d460 13a7f2992d20 6abf0c05807b 28c88d5f65aa a49d15d0369d 4b24972250d4 3891106275d4 121e8e866a8e 7903404a0873 4844c08d29f1 013252a88ce5 d7417c1cc08d; do
-            check "$BASE/dl/$p/"
+          for u in $links; do T+=("$u"); done
+          LOWCOUNT=0; if [ "$n" -lt 40 ]; then LOWCOUNT=1; fi
+          todo=("${T[@]}")
+          for round in 1 2 3; do
+            miss=()
+            for u in "${todo[@]}"; do
+              c=$(code "$u")
+              if echo "$c" | grep -qE "^[23]"; then [ $round -gt 1 ] && echo "OK on try $round  $c $u"; else echo "miss $round  $c $u"; miss+=("$u"); fi
+            done
+            if [ $LOWCOUNT -eq 1 ]; then
+              n=$(for p in "" ebooks.html front-office.html services.html checklist.html links.html platform.html; do get "$BASE/$p"; done | grep -oE "https://buy\.stripe\.com/[A-Za-z0-9]+" | sort -u | grep -c . || true)
+              if [ "$n" -ge 40 ]; then LOWCOUNT=0; echo "Checkout link count OK on try $round: $n"; else echo "miss $round  only $n checkout links found"; fi
+            fi
+            if [ ${#miss[@]} -eq 0 ] && [ $LOWCOUNT -eq 0 ]; then break; fi
+            todo=("${miss[@]}")
+            if [ $round -lt 3 ]; then echo "Waiting 3 minutes, then checking the misses again"; sleep 180; fi
           done
-          if [ $FAIL -eq 1 ]; then echo "ONE OR MORE CHECKS FAILED"; exit 1; fi
-          echo "All checks passed"
+          open=$(gh issue list --state open --search "in:title \"$TITLE\"" --json number --jq '.[0].number' 2>/dev/null || true)
+          if [ ${#miss[@]} -eq 0 ] && [ $LOWCOUNT -eq 0 ]; then
+            echo "All checks passed (${#T[@]} links)"
+            if [ -n "$open" ]; then gh issue close "$open" --comment "All pages and checkout links open again. Checked $(date -u '+%Y-%m-%d %H:%M UTC')." || true; fi
+            exit 0
+          fi
+          body="The website check found something that did not open 3 times in a row, about 3 minutes apart.
+
+          Checked: $(date -u '+%Y-%m-%d %H:%M UTC')
+
+          Not opening:
+          $(printf -- '- %s\n' "${miss[@]}")
+          $( [ $LOWCOUNT -eq 1 ] && echo "- Too few checkout links found on the sales pages ($n)." )
+
+          This issue closes by itself when everything opens again."
+          if [ -n "$open" ]; then gh issue comment "$open" --body "$body"; else gh issue create --title "$TITLE" --body "$body"; fi
+          echo "REAL OUTAGE: still failing after 3 tries"
+          exit 1
