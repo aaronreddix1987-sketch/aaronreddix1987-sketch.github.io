@@ -48,8 +48,16 @@ def slug(s, used):
 def md(text):
     return markdown.markdown(text, extensions=["tables", "sane_lists", "attr_list"])
 
+KINDS_ES = {"objectives": "Objetivos de aprendizaje", "callout": "Idea clave", "case": "Caso real",
+         "example": "Ejemplo práctico", "warning": "Precaución", "summary": "Resumen del capítulo",
+         "review": "Preguntas de repaso", "checklist": "Lista de verificación", "worksheet": "Hoja de trabajo"}
+LANG = "en"
+
 def render_block(kind, title, body):
-    label = KINDS.get(kind, kind.title())
+    label = (KINDS_ES if LANG == "es" else KINDS).get(kind, kind.title())
+    if kind == "example" and title:
+        mi = re.match(r"^(Illustrative example|Ejemplo ilustrativo)\s*[:\u2014-]\s*(.+)$", title, re.I)
+        if mi: label, title = mi.group(1).title() if LANG != "es" else "Ejemplo ilustrativo", mi.group(2)
     if kind == "worksheet":
         out = []
         buf = []
@@ -102,7 +110,7 @@ def convert(body):
         sid = slug(plain, used)
         if lvl in (1, 2): toc.append((lvl, plain, sid))
         if lvl == 1:
-            mm = re.match(r"^((?:Chapter|Part|Appendix)\s+[\w\d]+)\s*[:.\u2014-]\s*(.+)$", plain)
+            mm = re.match(r"^((?:Chapter|Part|Appendix|Step|Cap\u00edtulo|Ap\u00e9ndice|Paso)\s+[\w\d]+)\s*[:.\u2014-]\s*(.+)$", plain)
             if mm:
                 return (f'<h1 id="{sid}" class="chap"><span class="cn">{html.escape(mm.group(1))}</span>'
                         f'<span class="ct">{html.escape(mm.group(2))}</span></h1>')
@@ -193,21 +201,23 @@ pre { font-family:'DejaVu Sans Mono',monospace; font-size:7.8pt; background:#f3f
 """
 
 def build(src_path, out_path):
+    global LANG
     fm, body = parse(open(src_path, encoding="utf-8").read())
+    LANG = fm.get("lang", "en")
     title = fm.get("title", "Untitled"); sub = fm.get("subtitle", "")
     edition = fm.get("edition", "First Edition, 2026")
     content, toc = convert(body)
     toc_html = "".join(f'<li class="l{l}"><a href="#{i}">{html.escape(t)}</a></li>' for l, t, i in toc)
-    doc = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>{html.escape(title)}</title>
+    doc = f"""<!DOCTYPE html><html lang="{LANG}"><head><meta charset="utf-8"><title>{html.escape(title)}</title>
 <meta name="author" content="Total Transformation Inc."><style>{CSS.replace("__BOOKTITLE__", title.replace(chr(34), chr(39)))}</style></head><body>
-<div class="cover"><div class="band"></div><div class="inner"><div class="kicker">A Practitioner's Guide · {html.escape(edition)}</div>
+<div class="cover"><div class="band"></div><div class="inner"><div class="kicker">{html.escape(fm.get("kicker", "A Practitioner's Guide"))} · {html.escape(edition)}</div>
 <h1 class="t">{html.escape(title)}</h1><div class="rule"></div><div class="st">{html.escape(sub)}</div></div>
 <div class="pub">Total Transformation Inc.<small>Los Angeles, California · aaronreddix1987-sketch.github.io</small></div></div>
 <div class="front copyright"><p><strong>{html.escape(title)}</strong><br>{html.escape(sub)}</p>
-<p>{html.escape(edition)}. Copyright © 2026 Total Transformation Inc. All rights reserved. No part of this publication may be reproduced or distributed without written permission, except brief quotations in reviews and the worksheets, which the purchaser may copy for use in their own business.</p>
+{fm["copyright_html"] if "copyright_html" in fm else ""}{"" if "copyright_html" in fm else f'''<p>{html.escape(edition)}. Copyright © 2026 Total Transformation Inc. All rights reserved. No part of this publication may be reproduced or distributed without written permission, except brief quotations in reviews and the worksheets, which the purchaser may copy for use in their own business.</p>
 <p><strong>Disclaimer.</strong> This book is educational material only. It is not legal, tax, financial, accounting, or medical advice; consult a licensed professional for your situation. No income, revenue, or business result is promised or implied. Case studies describe publicly reported facts about other people and companies; their results are their own and are not results of Total Transformation Inc. or its customers. Named companies and people are not affiliated with and do not endorse this book. Facts were checked against the cited public sources as of November 2026; details may change.</p>
-<p>Published by Total Transformation Inc., Los Angeles, California. Contact: (747) 301-8586 · aaronreddix1987-sketch.github.io</p></div>
-<div class="toc"><h2>Contents</h2><ul>{toc_html}</ul></div>
+<p>Published by Total Transformation Inc., Los Angeles, California. Contact: (747) 301-8586 · aaronreddix1987-sketch.github.io</p>'''}</div>
+<div class="toc"><h2>{"Contenido" if LANG == "es" else "Contents"}</h2><ul>{toc_html}</ul></div>
 {content}
 </body></html>"""
     HTML(string=doc, base_url=".").write_pdf(out_path, metadata={"title": title})
