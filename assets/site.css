@@ -104,6 +104,11 @@ a.card.pick{text-decoration:none;transition:border-color .15s}
 a.card.pick:hover{border-color:var(--gold)}
 a.card.pick .more{color:var(--gold);font-weight:700}
 .card .btn{align-self:flex-start}
+.prose{overflow-wrap:anywhere}
+.prose table{display:block;overflow-x:auto;border-collapse:collapse;margin:8px 0 16px}
+.prose th,.prose td{border:1px solid var(--line);padding:8px 10px;text-align:left;color:#c9d2db;font-size:15px}
+.prose img{width:100%}
+.prose blockquote{border-left:2px solid var(--gold);padding-left:14px;margin:0 0 14px}
 /* calculator */
 .calc{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .calc .card{gap:16px}
