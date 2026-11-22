@@ -11,5 +11,5 @@ Live site: https://aaronreddix1987-sketch.github.io/
 | Link-in-bio page | https://aaronreddix1987-sketch.github.io/links.html |
 | Contact | https://aaronreddix1987-sketch.github.io/contact.html |
 
-Only one product has a card checkout: Cold Call Code ($9.97). It opens on `thank-you.html?product=cold-call-code` after payment.
+Study guides: `ebooks.html` sells 43 guides, $27 to $47, through Stripe. Each one is emailed after checkout. The $97 pilot checkout is on `front-office.html`.
 All other old pages forward to one of the pages above. Shared styles live in `assets/site.css`.
