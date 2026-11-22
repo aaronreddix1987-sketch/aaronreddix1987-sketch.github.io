@@ -23,7 +23,7 @@
 <link rel="stylesheet" href="/assets/site.css">
 <style>
 .board{font-size:20px}
-.counts{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:8px 0 12px}
+.counts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:8px 0 12px}
 .count{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;text-align:center}
 .count b{display:block;font-family:Zodiak,Georgia,serif;font-size:40px;color:var(--gold-2);line-height:1.1}
 .count span{font-size:18px}
@@ -31,6 +31,13 @@
 .list li{font-size:20px;padding:12px 0;border-bottom:1px solid var(--line)}
 .board h2{font-size:32px;margin-bottom:8px}
 @media(max-width:760px){.counts{grid-template-columns:repeat(2,1fr)}.board,.list li{font-size:20px}}
+.org{display:grid;gap:12px}
+.desk{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px}
+.desk b{display:block;font-family:Zodiak,Georgia,serif;font-size:26px;color:var(--gold-2)}
+.desk span{font-size:20px}
+.desk.ceo{text-align:center;border-color:var(--gold-2)}
+.desks{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media(max-width:760px){.desks{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -50,15 +57,16 @@
   <div class="wrap">
     <p class="eyebrow">TTI progress board</p>
     <h1>TTI progress board</h1>
-    <p class="lead">Business work only. 139 items.</p>
-    <p class="note" style="font-size:18px">Updated Nov 21, 2026</p>
+    <p class="lead">Business work only. 151 items.</p>
+    <p class="note" style="font-size:18px">Updated Nov 22, 2026</p>
   </div>
 </header>
 <section>
   <div class="wrap">
     <div class="counts">
-      <div class="count"><b>63</b><span>Done</span></div>
-      <div class="count"><b>41</b><span>In progress</span></div>
+      <div class="count"><b>70</b><span>Done</span></div>
+      <div class="count"><b>44</b><span>In progress</span></div>
+      <div class="count"><b>2</b><span>Blocked</span></div>
       <div class="count"><b>15</b><span>Needs Aaron</span></div>
       <div class="count"><b>14</b><span>Not started</span></div>
       <div class="count"><b>6</b><span>Declined</span></div>
@@ -66,43 +74,60 @@
     <p>Declined means we will not do it. Example: take card numbers by voice, or spend money without your OK.</p>
   </div>
 </section>
-<section class="band"><div class="wrap"><h2>Done</h2>
+<section class="band" id="how"><div class="wrap"><h2>How TTI runs</h2>
+<div class="org">
+  <div class="desk ceo"><b>AI CEO</b><span>Sets the weekly orders. Writes a one-page report each day. Approves business work.</span></div>
+  <div class="desks">
+    <div class="desk"><b>CMO desk</b><span>Marketing and social posts.</span></div>
+    <div class="desk"><b>CRO desk</b><span>Email, messages, phone and follow-up.</span></div>
+    <div class="desk"><b>COO desk</b><span>Delivers what customers buy.</span></div>
+    <div class="desk"><b>CFO desk</b><span>Tracks the numbers. Money review on Fridays.</span></div>
+  </div>
+</div>
+<p style="margin-top:16px">TTI is new. The owner signs, pays and decides legal matters. Agents do the daily work.</p>
+</div></section>
+<section><div class="wrap"><h2>Done</h2>
 <ul class="list">
-  <li>AI DM agent now checks Facebook, Instagram and LinkedIn messages twice a day.</li>
+  <li>AI CEO desk is live. One-page report every day at 7:30 AM PT. Weekly orders on Mondays. It approves business work.</li>
+  <li>All agents are grouped under four desks: CMO, CRO, COO and CFO. A master system prompt is written.</li>
+  <li>Weekly money review added to the CFO desk. It runs on Fridays.</li>
+  <li>DM agent is live. It answers business messages on Facebook, Instagram and LinkedIn at 9:15 AM and 5:15 PM PT.</li>
+  <li>Phone front desk now has a woman's voice and a mentor and teacher tone.</li>
   <li>The main website is live. Thank-you page and all site links checked and fixed.</li>
   <li>The $97 pilot pay link is live. 43 ebooks for sale. All 43 pay buttons checked.</li>
-  <li>9 workbooks on sale at $27 with instant download.</li>
-  <li>One-page website service live at $197 with automatic build and delivery.</li>
-  <li>Order checks now run day and night. Ebook orders can no longer be mixed up with workbook or website orders.</li>
-  <li>10 old payment links with no delivery turned off.</li>
-  <li>The AI phone agent answers 747-301-8586. It knows company facts, prices and free legal help numbers. It checks for the phone provider's reply twice a day.</li>
+  <li>9 workbooks on sale at $27 with instant download. One-page website service live at $197.</li>
+  <li>Order checks run day and night. Ebook, workbook and website orders can no longer be mixed up. 10 old payment links with no delivery turned off.</li>
+  <li>The AI phone agent answers 747-301-8586. It knows company facts, prices and free legal help numbers.</li>
   <li>Instant reply is on: Messenger and Instagram for TTI, and the Low Fee Tow inbox.</li>
   <li>Facebook: 38 junk posts removed. 18 posts scheduled Mon to Sat through Dec 12.</li>
-  <li>Instagram: 199 junk posts removed. 12 image posts scheduled Nov 23 to Dec 5.</li>
-  <li>LinkedIn cleaned: 48 old posts with wrong prices, made-up numbers, a street address or a tax ID removed. Unprofessional posts removed. 20 clean posts left.</li>
-  <li>LinkedIn: 6 posts scheduled through Dec 4 (Mon, Wed, Fri). The social agent keeps it stocked.</li>
-  <li>Ad guard: autopilot will switch off old Facebook ads the moment Facebook unlocks them.</li>
-  <li>Wrong sales emails stopped. Three outside tools cut off from Gmail. Marketing emails raised to 20 a day.</li>
-  <li>Free checklist, calculator, 9 trade pages, case study and clear prices are live. Email reply and marketing agents set up.</li>
+  <li>Instagram: second cleanup done. 140 more old or unprofessional posts removed, 339 in total. 12 image posts scheduled Nov 23 to Dec 5.</li>
+  <li>LinkedIn cleaned: 20 clean posts left. 6 posts scheduled through Dec 4.</li>
+  <li>Ad guard set. Wrong sales emails stopped. Marketing emails at 20 a day. Free checklist, calculator, 9 trade pages and clear prices are live.</li>
 </ul>
 </div></section>
-<section><div class="wrap"><h2>In progress</h2>
+<section class="band"><div class="wrap"><h2>In progress</h2>
 <ul class="list">
-  <li>Reading every Drive document for unfinished tasks (5 readers).</li>
+  <li>Second daily post on Facebook and Instagram. Cards are being scheduled now.</li>
+  <li>5 new digital products being built: a free AI Team Starter Kit and 4 workbooks.</li>
+  <li>Reading the rest of the Drive. About half is read.</li>
+  <li>Research on new income workflows, like short-video clipping.</li>
   <li>Viral content batch: 12 cards and 8 Reels.</li>
-  <li>AI replies to business DMs on Facebook, Instagram, LinkedIn.</li>
   <li>YouTube is signed in. No videos yet.</li>
   <li>Outbound calls and texts. Waiting on the phone company support reply.</li>
   <li>Pilot setup after payment, and the $297 monthly plan after day 7. Tested, no real paid order yet.</li>
   <li>Follow-up emails to callers on days 1, 3 and 7.</li>
   <li>Auto refill of the Facebook post queue. Set for Dec 9.</li>
-  <li>Finish all 43 ebooks to full quality. Three upgrades started.</li>
-  <li>Send each ebook to each buyer. One test worked.</li>
-  <li>Phone agent remembers past emails.</li>
-  <li>Check all Gmail accounts for sends and bounces.</li>
+  <li>Finish all 43 ebooks to full quality. Send each ebook to each buyer.</li>
+  <li>Phone agent remembers past emails. Check all Gmail accounts for sends and bounces.</li>
   <li>Daily money plan agent.</li>
   <li>Hook up CRM, calendar and booking.</li>
   <li>Grant follow-ups.</li>
+</ul>
+</div></section>
+<section><div class="wrap"><h2>Still blocked</h2>
+<ul class="list">
+  <li>Facebook ad account is locked.</li>
+  <li>First paid sale not made yet.</li>
 </ul>
 </div></section>
 <section class="band"><div class="wrap"><h2>Needs Aaron</h2>
