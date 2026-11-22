@@ -1,30 +1,30 @@
 {
- "updated_utc": "2026-11-22T10:03:57Z",
- "overall": "green",
- "headline": "Site is up. No sales yet. 3 things need you.",
+ "updated_utc": "2026-11-22T10:12:33Z",
+ "overall": "yellow",
+ "headline": "5 of 14 agents reported in. No sales yet.",
  "money": {
   "today_usd": 0,
   "week_usd": 0,
   "all_time_usd": 0,
   "sales_count_all_time": 0,
-  "as_of_utc": "2026-11-22T10:03:57Z"
+  "as_of_utc": "2026-11-22T10:12:33Z"
  },
  "funnel": [
   {
    "label": "Emails sent",
-   "n": null
+   "n": 0
   },
   {
    "label": "Replies",
-   "n": null
+   "n": 0
   },
   {
    "label": "Calls answered",
-   "n": null
+   "n": 14
   },
   {
    "label": "Pay links sent",
-   "n": null
+   "n": 0
   },
   {
    "label": "Paid",
@@ -35,112 +35,134 @@
    "n": 0
   }
  ],
+ "counts_7d": {
+  "new_customers_live": 0,
+  "orders": 0,
+  "leads": 2
+ },
+ "paid_7d": 0,
  "agents": [
   {
    "desk": "AI CEO",
-   "job": "Reads sales and problems, sets desk tasks, writes the morning brief",
+   "job": "Reads the log and sets the week's work",
    "state": "waiting",
    "last_run_utc": null,
-   "last_note": "Live status starts when the board robot runs.",
-   "next_run_text": "Daily 7:30 AM"
+   "last_note": "No report yet",
+   "next_run_text": "Every day 7:30 AM"
   },
   {
    "desk": "Marketing",
-   "job": "Finds local businesses and emails them the free checklist",
+   "job": "Finds local businesses and emails them",
    "state": "waiting",
    "last_run_utc": null,
-   "last_note": "Live status starts when the board robot runs.",
+   "last_note": "No report yet",
    "next_run_text": "Mon-Sat 10:10 AM"
   },
   {
-   "desk": "Social",
-   "job": "Keeps Facebook and LinkedIn posts queued",
+   "desk": "Social posts",
+   "job": "Keeps Facebook and LinkedIn posts lined up",
    "state": "waiting",
    "last_run_utc": null,
-   "last_note": "Live status starts when the board robot runs.",
+   "last_note": "No report yet",
    "next_run_text": "Every 2 weeks, Wed"
   },
   {
-   "desk": "Sales email",
-   "job": "Answers buyer emails with facts and a Stripe link",
+   "desk": "Email replies",
+   "job": "Answers buyers who email in",
    "state": "waiting",
    "last_run_utc": null,
-   "last_note": "Live status starts when the board robot runs.",
-   "next_run_text": "Each new email"
+   "last_note": "No report yet",
+   "next_run_text": "When an email comes in"
   },
   {
-   "desk": "Sales messages",
-   "job": "Replies once to business messages on social apps",
+   "desk": "DM replies",
+   "job": "Answers business messages on social",
    "state": "waiting",
    "last_run_utc": null,
-   "last_note": "Live status starts when the board robot runs.",
-   "next_run_text": "Daily 9:15 AM and 5:15 PM"
+   "last_note": "No report yet",
+   "next_run_text": "Every day 9:15 AM, 5:15 PM"
   },
   {
-   "desk": "Clara phone",
-   "job": "Answers (747) 301-8586 any hour and takes a message",
+   "desk": "Phone desk",
+   "job": "Answers the phone 24/7",
+   "state": "ok",
+   "last_run_utc": "2026-11-22T04:29:29Z",
+   "last_note": "Phone robot checks are passing",
+   "next_run_text": "Always on"
+  },
+  {
+   "desk": "Phone pay links",
+   "job": "Emails a pay link when a caller asks",
+   "state": "ok",
+   "last_run_utc": "2026-11-22T08:55:13Z",
+   "last_note": "Sent 1, reconciled 0, held 0",
+   "next_run_text": "Every 30 minutes"
+  },
+  {
+   "desk": "Orders",
+   "job": "Checks new payments and sets up customers",
+   "state": "ok",
+   "last_run_utc": "2026-11-22T08:30:20Z",
+   "last_note": "New sales 0, ads paused 0",
+   "next_run_text": "About 9 times a day"
+  },
+  {
+   "desk": "Websites",
+   "job": "Builds paid 1-page websites",
    "state": "waiting",
    "last_run_utc": null,
-   "last_note": "Live status starts when the board robot runs.",
-   "next_run_text": "Every call, 24/7"
+   "last_note": "No report yet",
+   "next_run_text": "Every day 8:40a, 1:40p, 6:40p"
   },
   {
-   "desk": "Pay links",
-   "job": "Emails a checkout link when a caller asks for one",
-   "state": "waiting",
-   "last_run_utc": null,
-   "last_note": "Live status starts when the board robot runs.",
-   "next_run_text": "Every few minutes"
-  },
-  {
-   "desk": "Delivery",
-   "job": "Checks paid orders and starts AI phone line setup",
-   "state": "waiting",
-   "last_run_utc": null,
-   "last_note": "Live status starts when the board robot runs.",
-   "next_run_text": "Every 2 to 4 hours"
-  },
-  {
-   "desk": "Website builder",
-   "job": "Builds paid one-page websites",
-   "state": "waiting",
-   "last_run_utc": null,
-   "last_note": "Live status starts when the board robot runs.",
-   "next_run_text": "Daily 8:40 AM, 1:40 PM, 6:40 PM"
-  },
-  {
-   "desk": "Money check",
+   "desk": "Money count",
    "job": "Counts sales and flags stuck orders",
    "state": "waiting",
    "last_run_utc": null,
-   "last_note": "Live status starts when the board robot runs.",
-   "next_run_text": "Daily 9:05 AM"
+   "last_note": "No report yet",
+   "next_run_text": "Every day 9:05 AM"
   },
   {
-   "desk": "Vapi watch",
-   "job": "Watches for a reply from Vapi about phone costs",
-   "state": "waiting",
-   "last_run_utc": null,
-   "last_note": "Live status starts when the board robot runs.",
-   "next_run_text": "Quiet check, pauses itself"
+   "desk": "Deals",
+   "job": "Follows up on open offers",
+   "state": "ok",
+   "last_run_utc": "2026-11-22T09:15:27Z",
+   "last_note": "Proposals 0, follow-ups 0, stopped 0, held 0",
+   "next_run_text": "Every day"
   },
   {
-   "desk": "Robots",
-   "job": "Log calls and set up phone lines from paid orders",
+   "desk": "Customer care",
+   "job": "Checks that customer lines work",
+   "state": "ok",
+   "last_run_utc": "2026-11-22T09:15:46Z",
+   "last_note": "Lines checked 1, reminders sent 0, calls 0, held 0",
+   "next_run_text": "Every day"
+  },
+  {
+   "desk": "Reports",
+   "job": "Writes the daily report",
    "state": "waiting",
    "last_run_utc": null,
-   "last_note": "Live status starts when the board robot runs.",
-   "next_run_text": "Every 30 minutes"
+   "last_note": "No report yet",
+   "next_run_text": "Every day"
+  },
+  {
+   "desk": "Agency outreach",
+   "job": "Emails agencies about partner work",
+   "state": "waiting",
+   "last_run_utc": null,
+   "last_note": "No report yet",
+   "next_run_text": "Every day"
   }
  ],
  "needs_you": [
-  "Add a card at Vapi so new customers can get a phone line.",
-  "Add a checking account in Stripe so payouts can reach you.",
-  "Cancel the $90 Stripe Tax plan on the older Stripe account."
+  "Add a card at Vapi so new customers can get a phone line",
+  "Add your checking account in Stripe payout settings",
+  "Cancel the $90 Stripe Tax plan on the older Stripe account",
+  "14 personal to-dos on your private list"
  ],
  "site": {
   "up": true,
-  "checked_utc": "2026-11-22T10:03:57Z"
- },
- "seed": true
+  "checked_utc": "2026-11-22T10:12:33Z"
+ }
 }
