@@ -236,3 +236,14 @@ ol.howto li::marker{color:var(--gold);font-weight:700}
   a{color:#111;text-decoration:none}
 }
 .card a.more{display:inline-block;padding:10px 0;align-self:flex-start}
+.tag.new{background:var(--gold);border-color:var(--gold);color:var(--ink);font-weight:700}
+.platform .card h3{font-size:26px}
+.platform .card .price{font-size:19px}
+.platform .card .lbl{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:4px}
+.platform ol.howto{margin:0;padding-left:22px;color:var(--text);font-size:18px;line-height:1.55}
+.platform ol.howto li{margin:6px 0}
+.platform .deliv{font-size:17px;color:var(--muted)}
+.platform .deliv strong{color:var(--text)}
+.platform .cta{margin-top:auto;padding-top:8px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.platform .btn{font-size:18px;padding:16px 26px}
+.calc>*{min-width:0}.field input,.field select{max-width:100%;box-sizing:border-box}
