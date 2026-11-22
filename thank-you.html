@@ -46,8 +46,11 @@
   <div class="wrap narrow">
     <div class="panel" id="help">
       <p class="eyebrow">Your order</p>
-      <h2 style="font-size:26px;margin:12px 0">Call us and we will get you your order</h2>
-      <p style="color:var(--muted);margin-bottom:14px">This title is not set up to open on this page. Call us with the name on your receipt and what you bought, and we will get it to you or make it right.</p>
+      <h2 style="font-size:26px;margin:12px 0">Your order comes by email</h2>
+      <p style="color:var(--muted);margin-bottom:10px">Ebook guides ($27 to $47) are emailed to you, usually within a few hours.</p>
+      <p style="color:var(--muted);margin-bottom:10px">The $97 7-day pilot: your setup steps are emailed to you within a few hours.</p>
+      <p style="color:var(--muted);margin-bottom:14px">The free checklist: the link is emailed to you. You can also <a href="/checklist.html">open the checklist here</a>.</p>
+      <p style="color:var(--muted);margin-bottom:14px">No email? Check your spam folder. Still nothing? Call us with the name on your receipt.</p>
       <div class="cta" style="margin-top:20px">
         <a class="btn" href="tel:+17473018586">Call (747) 301-8586</a>
         </div>
@@ -234,8 +237,8 @@
 </article>
     <div class="panel" id="next" hidden style="margin-top:24px;border-color:var(--gold)">
       <p class="eyebrow">Next step</p>
-      <h2 style="font-size:26px;margin:12px 0">Want the <span class="nb">follow-up</span> done for you?</h2>
-      <p style="color:var(--muted)">The AI Front Office answers the calls you miss and sends you a written message after each one. Try it on one business for 7 days for $97.</p>
+      <h2 style="font-size:26px;margin:12px 0">Want your missed calls answered?</h2>
+      <p style="color:var(--muted)">The AI Front Office answers the calls you miss in English. It emails you each caller's name, number and need. Try it on one business for 7 days for $97.</p>
       <div class="cta" style="margin-top:20px"><a class="btn" href="/front-office.html">See the AI Front Office</a><a class="btn ghost" href="/">Back to home</a></div>
     </div>
   </div>
@@ -265,8 +268,13 @@
   var PRODUCTS = {
     "cold-call-code": {
       title: "Cold Call Code is yours.",
-      lead: "Read it below. Stripe has emailed your $9.97 receipt. Use the button to print or save as PDF.",
+      lead: "Read it below. Stripe has emailed your receipt. Use the button to print or save as PDF.",
       type: "guide"
+    },
+    "checklist": {
+      title: "Your free checklist is ready.",
+      lead: "The link is also emailed to you. Open the checklist below.",
+      type: "checklist"
     },
     "pilot": {
       title: "Your 7-Day AI Front Desk Pilot is confirmed.",
@@ -350,6 +358,9 @@
     if(item.type === "ebook") {
       document.getElementById("next").hidden = false;
       document.getElementById("help").innerHTML = '<p class="eyebrow">What happens next</p><h2 style="font-size:26px;margin:12px 0">Your guide is on its way by email</h2><p style="color:var(--muted)">It goes to the email address you typed at checkout. Check your spam folder too. If it has not arrived by the next morning, call (747) 301-8586 and leave your name and email with our AI front desk.</p>';
+    } else if(item.type === "checklist") {
+      document.getElementById("next").hidden = false;
+      document.getElementById("help").innerHTML = '<p class="eyebrow">Your checklist</p><h2 style="font-size:26px;margin:12px 0">Eight quick checks</h2><div class="cta" style="margin-top:20px"><a class="btn" href="/checklist.html">Open the checklist</a></div>';
     } else if(item.type === "guide") {
       document.getElementById("guide").hidden       = false;
       document.getElementById("guide-tools").hidden = false;
