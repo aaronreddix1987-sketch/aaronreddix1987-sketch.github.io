@@ -1,4 +1,4 @@
-title: Millionaire Mindset
+title: Everyday Wealth Habits
 subtitle: An Evidence-Based Course on Goals, Habits, Spending, Skills, and Decisions That Support Long-Term Wealth Building
 edition: First Edition, 2026
 ---
