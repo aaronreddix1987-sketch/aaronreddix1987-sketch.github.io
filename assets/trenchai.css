@@ -1,0 +1,50 @@
+.trench { --trench-pad:clamp(18px,3vw,30px); --trench-small:.875rem; }
+.trench-hero.hero.plain .wrap { padding-top:clamp(44px,7vw,78px); padding-bottom:clamp(38px,6vw,66px); }
+.trench-jumps { margin-top:24px; }
+.trench-section { padding:clamp(44px,6vw,72px) 0; }
+.trench-section .head { margin-bottom:24px; }
+.trench-section[id], .trench #tax-liens { scroll-margin-top:86px; }
+.trench-filters, .trench-actions { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+.trench-actions .btn { white-space:normal; }
+.trench-filters button, .trench-item button { border:1px solid #596677; background:transparent; color:var(--text); border-radius:999px; padding:8px 14px; min-height:44px; font:700 var(--trench-small)/1.35 Satoshi,system-ui,sans-serif; cursor:pointer; }
+.trench-filters button:hover, .trench-item button:hover { border-color:var(--gold); }
+.trench-filters button[aria-pressed="true"] { background:var(--gold-2); border-color:var(--gold-2); color:var(--ink); }
+.trench button:focus-visible, .trench textarea:focus-visible, .trench select:focus-visible { outline:2px solid var(--gold-2); outline-offset:3px; }
+.trench-count { margin:10px 0; color:var(--muted); font-size:var(--trench-small); }
+.trench-records { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+.trench-source, .trench-panel { background:var(--surface); border:1px solid var(--line); border-radius:var(--r); padding:var(--trench-pad); min-width:0; }
+.trench-source { display:flex; flex-direction:column; gap:10px; }
+.trench-source .eyebrow { letter-spacing:.11em; }
+.trench-source h3, .trench-panel h3 { font-size:clamp(20px,2.4vw,25px); overflow-wrap:anywhere; }
+.trench-source > p:not(.eyebrow), .trench-muted, #trench-result-help { color:var(--muted); }
+.trench-source ul { margin-top:auto; list-style:none; }
+.trench-source li a { display:inline-flex; align-items:center; min-height:44px; font-size:var(--trench-small); font-weight:700; text-underline-offset:3px; }
+.trench-tool-grid { display:grid; grid-template-columns:minmax(0,1.08fr) minmax(0,1fr); gap:16px; align-items:start; }
+.trench-panel { display:grid; gap:15px; }
+.trench-section.band .trench-panel { background:var(--bg); }
+.trench-fields { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+.trench .field { align-content:start; min-width:0; }
+.trench .field input, .trench .field select, .trench .field textarea { width:100%; min-width:0; min-height:46px; background:var(--bg); color:var(--text); border:1px solid #596677; border-radius:8px; font:inherit; font-size:1rem; color-scheme:dark; padding:9px 11px; }
+.trench .field textarea { resize:vertical; }
+.trench-section.band .field :is(input,select) { background:var(--surface); }
+.trench-wide { grid-column:1/-1; }
+.trench-panel > .btn { justify-self:start; }
+.trench-result { border-top:3px solid var(--gold); }
+#trench-calc-result { border-top:1px solid var(--line); padding-top:14px; }
+.trench-metrics { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr)); gap:12px; }
+.trench-metrics div { display:flex; flex-direction:column; gap:2px; }
+.trench-metrics dt, .trench-item .trench-meta { color:var(--muted); font-size:var(--trench-small); }
+.trench-metrics dd { color:var(--gold-2); font-size:clamp(19px,2vw,25px); font-weight:700; font-variant-numeric:tabular-nums; line-height:1.25; overflow-wrap:anywhere; }
+.trench-result-detail { margin-top:14px; font-size:var(--trench-small); }
+.trench-storage { border-left:3px solid var(--gold); padding-left:10px; }
+#trench-watch-feedback:empty { display:none; }
+#trench-watch-items { display:grid; gap:10px; }
+.trench-item { background:var(--bg); border:1px solid var(--line); padding:14px; border-radius:10px; display:grid; gap:8px; overflow-wrap:anywhere; }
+.trench-item h4 { line-height:1.3; }
+.trench-item a { color:var(--gold-2); min-height:44px; display:inline-flex; align-items:center; justify-self:start; }
+.trench-item .trench-note { white-space:pre-wrap; }
+.trench-export:disabled { cursor:not-allowed; opacity:.72; transform:none; }
+@media (max-width:900px) { .trench-records { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:700px) { .trench-tool-grid { grid-template-columns:1fr; } }
+@media (max-width:560px) { .trench-records,.trench-fields { grid-template-columns:1fr; } }
+@media (prefers-reduced-motion:reduce) { .trench *, .trench *::before, .trench *::after { transition:none!important; } }

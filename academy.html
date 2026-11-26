@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Academy: TrenchAI Real Estate Education — Total Transformation Inc.</title>
-<meta name="description" content="Free TrenchAI education topics from Total Transformation Inc.: tax liens, tax-deed auctions, foreclosures and owner financing. Education only, no guaranteed income.">
+<title>TrenchAI Real Estate Research Tools | Total Transformation Inc.</title>
+<meta name="description" content="Research tax liens, tax deeds, foreclosures and owner financing with official sources, deal calculators and a private browser watchlist. No account needed.">
 <link rel="canonical" href="https://aaronreddix1987-sketch.github.io/academy.html">
-<meta property="og:title" content="Academy: TrenchAI Real Estate Education — Total Transformation Inc.">
-<meta property="og:description" content="Free TrenchAI education topics from Total Transformation Inc.: tax liens, tax-deed auctions, foreclosures and owner financing. Education only, no guaranteed income.">
+<meta property="og:title" content="TrenchAI Real Estate Research Tools | Total Transformation Inc.">
+<meta property="og:description" content="Research tax liens, tax deeds, foreclosures and owner financing with official sources, deal calculators and a private browser watchlist. No account needed.">
 <meta property="og:image" content="https://aaronreddix1987-sketch.github.io/assets/img/ceo-command-center.jpg">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0b0f14">
@@ -20,6 +20,7 @@
 <link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,700&amp;display=swap" rel="stylesheet">
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/trenchai.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -33,29 +34,97 @@
     </div>
   </div>
 </nav>
-<main id="main">
-<header class="hero plain">
+<main id="main" class="trench">
+<header class="hero plain trench-hero">
   <div class="wrap">
-    <p class="eyebrow">Academy</p>
-    <h1>TrenchAI education. <em>Learn the basics before you buy anything.</em></h1>
-    <p class="lead">TrenchAI is Total Transformation Inc.&rsquo;s education and research tool for property buyers. These topics explain how public property sales and seller financing work. Education only, no guaranteed income.</p>
-    <div class="cta"><a class="btn" href="#tax-liens">Start with tax liens</a></div>
+    <p class="eyebrow">TTI Academy / TrenchAI</p>
+    <h1>Real estate research tools</h1>
+    <p class="lead">Find official records, run the numbers and track what you still need to verify. Start with tax liens, tax deeds, foreclosures or owner financing.</p>
+    <nav class="cta trench-jumps" aria-label="TrenchAI tools"><a class="btn" href="#sources">Find official sources</a><a class="btn ghost" href="#underwrite">Run a scenario</a><a class="btn ghost" href="#watchlist">Open watchlist</a></nav>
+    <p class="note">Free to use without an account. No live listing feed, alerts or automated bidding. <a href="#tax-liens">Start with tax liens</a> if you&rsquo;re new to these sales.</p>
   </div>
 </header>
-<section>
+<section id="sources" class="trench-section" aria-labelledby="source-title">
+  <div class="wrap">
+    <div class="head"><p class="eyebrow">01 / Research</p><h2 id="source-title">Official source directory</h2><p>A starting point for selected jurisdictions, not a list of properties for sale. Check the agency or authorized sale operator for current notices, rules, deposits and deadlines.</p></div>
+    <div id="trench-filter" class="trench-filters" role="group" aria-label="Filter sources by deal type" hidden>
+      <button type="button" data-filter="all" aria-pressed="true">All sources</button>
+      <button type="button" data-filter="lien" aria-pressed="false">Tax lien</button>
+      <button type="button" data-filter="deed" aria-pressed="false">Tax deed</button>
+      <button type="button" data-filter="foreclosure" aria-pressed="false">Foreclosure</button>
+      <button type="button" data-filter="finance" aria-pressed="false">Owner financing</button>
+    </div>
+    <p id="trench-source-status" class="trench-count" role="status">5 official references</p>
+    <div class="trench-records">
+      <article class="trench-source" data-source="deed"><p class="eyebrow">Tax deed · California</p><h3>Los Angeles County</h3><p>Look up official tax-defaulted property sales, sale rules and the parcel itself. The county does not sell tax-lien certificates.</p><ul><li><a href="https://ttc.lacounty.gov/schedule-of-upcoming-auctions/" target="_blank" rel="noopener noreferrer">Treasurer: Auction schedule</a></li><li><a href="https://ttc.lacounty.gov/auction-frequently-asked-questions/" target="_blank" rel="noopener noreferrer">Treasurer: Auction FAQ</a></li><li><a href="https://assessor.lacounty.gov/" target="_blank" rel="noopener noreferrer">Assessor: Parcel research</a></li></ul></article>
+      <article class="trench-source" data-source="deed"><p class="eyebrow">Tax deed · California</p><h3>Riverside County</h3><p>Check official secured tax-sale information. A parcel subject to sale is not necessarily scheduled for an auction.</p><ul><li><a href="https://countytreasurer.org/new-tax-sale-information" target="_blank" rel="noopener noreferrer">Treasurer: Tax-sale information</a></li></ul></article>
+      <article class="trench-source" data-source="lien"><p class="eyebrow">Tax lien · Arizona</p><h3>Maricopa County</h3><p>Review the county&rsquo;s lien sale information and forms. A lien certificate is not immediate ownership of the property.</p><ul><li><a href="https://treasurer.maricopa.gov/TaxLienInformation/" target="_blank" rel="noopener noreferrer">Treasurer: Tax-lien information</a></li></ul></article>
+      <article class="trench-source" data-source="foreclosure"><p class="eyebrow">Foreclosure · California</p><h3>Los Angeles County</h3><p>Use the county&rsquo;s foreclosure guide and recorder instructions to identify what to verify. Confirm sale status directly with the named trustee or sheriff.</p><ul><li><a href="https://dcba.lacounty.gov/portfolio/foreclosure/" target="_blank" rel="noopener noreferrer">County foreclosure guide</a></li><li><a href="https://www.lavote.gov/home/recorder/real-estate-records/general-info" target="_blank" rel="noopener noreferrer">County recorder: Real estate records</a></li></ul></article>
+      <article class="trench-source" data-source="finance"><p class="eyebrow">Owner financing · Federal</p><h3>Consumer Financial Protection Bureau</h3><p>Review Regulation Z&rsquo;s seller-financer provisions with a qualified professional. This is a rules reference, not a source of properties or financing.</p><ul><li><a href="https://www.consumerfinance.gov/rules-policy/regulations/1026/36/" target="_blank" rel="noopener noreferrer">CFPB: Regulation Z § 1026.36</a></li></ul></article>
+    </div>
+    <p class="note">Directory links checked November 25, 2026. External references open in a new tab. Research here needs no login; the official sale operator may require one to participate.</p>
+  </div>
+</section>
+<section id="underwrite" class="trench-section band" aria-labelledby="scenario-title">
+  <div class="wrap">
+    <div class="head"><p class="eyebrow">02 / Estimate</p><h2 id="scenario-title">Deal scenario calculator</h2><p>Enter your own numbers. The results are estimates in US dollars, not a valuation, rate quote or recommendation to bid.</p></div>
+    <noscript><p class="honest">Enable JavaScript to use the calculator and watchlist. The official source directory is still available.</p></noscript>
+    <div id="trench-scenarios" class="trench-tool-grid" hidden>
+      <form id="trench-calc" class="trench-panel">
+        <div class="field"><label for="deal-type">Deal type</label><select id="deal-type" name="deal"><option value="deed">Tax deed</option><option value="foreclosure">Foreclosure</option><option value="lien">Tax lien</option><option value="finance">Owner financing</option></select></div>
+        <div id="trench-inputs" class="trench-fields"></div>
+        <button type="submit" class="btn">Calculate estimate</button>
+      </form>
+      <div class="trench-panel trench-result">
+        <p class="eyebrow">Scenario estimate</p>
+        <h3 id="trench-result-title">Tax deed purchase cap</h3>
+        <p id="trench-result-help"></p>
+        <div id="trench-calc-result" role="status"><p>Enter your assumptions to calculate an estimate.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="watchlist" class="trench-section" aria-labelledby="watch-title">
+  <div class="wrap">
+    <div class="head"><p class="eyebrow">03 / Track</p><h2 id="watch-title">Due diligence watchlist</h2><p>Save leads you find yourself. TrenchAI does not verify your entries or track deadlines for you.</p></div>
+    <div id="trench-watch" class="trench-tool-grid" hidden>
+      <form id="trench-watch-form" class="trench-panel">
+        <h3 id="trench-watch-heading">Add a lead</h3>
+        <div class="trench-fields">
+          <div class="field"><label for="watch-name">Parcel ID, address or label</label><input id="watch-name" name="name" maxlength="120" required></div>
+          <div class="field"><label for="watch-type">Lead type</label><select id="watch-type" name="type"><option value="deed">Tax deed</option><option value="foreclosure">Foreclosure</option><option value="lien">Tax lien</option><option value="finance">Owner financing</option></select></div>
+          <div class="field"><label for="watch-date">Deadline or next check (optional)</label><input id="watch-date" name="date" type="date"></div>
+          <div class="field"><label for="watch-status">Research status</label><select id="watch-status" name="status"><option>To verify</option><option>In review</option><option>Reviewed</option><option>Passed</option></select></div>
+          <div class="field trench-wide"><label for="watch-url">Public notice or reference URL (optional)</label><input id="watch-url" name="url" type="url" placeholder="https://" maxlength="600"></div>
+          <div class="field trench-wide"><label for="watch-note">What still needs to be checked? (optional)</label><textarea id="watch-note" name="note" rows="3" maxlength="600" placeholder="For example: verify title, payment deadline or balloon terms."></textarea></div>
+        </div>
+        <div class="trench-actions"><button class="btn" id="trench-save" type="submit">Save lead</button><button class="btn ghost" id="trench-cancel" type="button" hidden>Cancel edit</button></div>
+      </form>
+      <div class="trench-panel">
+        <h3>Saved leads</h3>
+        <p class="trench-muted">Saved in this browser when storage is available. Clearing browser data can erase them; export a CSV to keep a copy. Do not enter private contact or payment information.</p>
+        <p id="trench-storage" class="trench-storage" role="status" hidden></p>
+        <p id="trench-watch-feedback" role="status"></p>
+        <div id="trench-watch-items"></div>
+        <button class="btn ghost trench-export" id="trench-export" type="button" disabled>Export CSV</button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="trench-section band">
   <div class="wrap">
     <div class="head"><p class="eyebrow">Topics</p><h2>What TrenchAI covers</h2></div>
     <div class="grid3">
-      <article class="card" id="tax-liens"><h3>Tax liens and tax-deed auctions</h3><p class="grow">How unpaid property taxes lead to lien certificates in some states and tax-deed or tax-defaulted property auctions in others. In California, counties such as Los Angeles hold tax-defaulted property sales and do not sell lien certificates. Rules, deposits and redemption periods differ by county, so always read the county&rsquo;s official sale rules.</p></article>
+      <article class="card" id="tax-liens"><h3>Tax liens and tax-deed auctions</h3><p class="grow">How unpaid property taxes lead to lien certificates in some states and tax-deed or tax-defaulted property auctions in others. In California, counties such as Los Angeles hold tax-defaulted property sales and do not sell lien certificates, according to the <a href="https://www.propertytax.lacounty.gov/Home/GeneralFAQ/4">LA County Property Tax Portal</a>. Rules, deposits and redemption periods differ by jurisdiction, so read the official local sale rules.</p></article>
       <article class="card" id="foreclosures"><h3>Foreclosures</h3><p class="grow">How lender foreclosures, trustee sales and sheriff sales work, what &ldquo;as is&rdquo; really means, and why title, liens, occupancy and condition must be checked with a title company and qualified professionals before bidding.</p></article>
       <article class="card" id="owner-finance"><h3>Owner financing</h3><p class="grow">How seller carry-back, lease-options and master leases work, which questions to ask an owner or agent, and why every deal needs its own legal, tax and title review.</p></article>
     </div>
   </div>
 </section>
-<section class="tight">
+<section class="trench-section">
   <div class="wrap">
     <div class="head"><p class="eyebrow">Please read</p><h2>Education only, no guaranteed income</h2></div>
-    <p>This page and TrenchAI are for learning and research. They are not legal, tax or investment advice, and they do not promise any profit or income. Real estate can lose money. Talk to a licensed attorney, tax professional or real estate agent before you bid, sign or pay for anything. Related study guides are on the <a href="/ebooks.html">Ebooks page</a>. Questions? <a href="/contact.html">Contact us</a>.</p>
+    <p>This page and TrenchAI are for learning and research. They are not legal, tax or investment advice. Real estate can lose money. Talk to a licensed attorney, tax professional or real estate agent before you bid, sign or pay for anything. Related study guides are on the <a href="/ebooks.html">Ebooks page</a>. Questions? <a href="/contact.html">Contact us</a>.</p>
   </div>
 </section>
 </main>
@@ -83,6 +152,7 @@
   </div>
 </footer>
 <script src="/assets/site.js" defer></script>
+<script src="/assets/trenchai.js" defer></script>
 
 <script src="/assets/tti-count.js" defer></script>
 </body>
