@@ -70,6 +70,9 @@
   <h2>Needs you</h2>
   <ul class="needs" id="needs"></ul>
 
+  <h2>Projects</h2>
+  <div class="agents" id="projects"></div>
+
   <h2>Agents</h2>
   <div class="agents" id="agents"></div>
 
@@ -95,7 +98,11 @@
       if(typeof r.n==='number'){row.appendChild(el('b',null,String(r.n)));}else{row.appendChild(el('span','na','Not measured'));}
       var tr=el('div','track'),fi=el('div','fill');fi.style.width=(typeof r.n==='number'?Math.round(100*r.n/max):0)+'%';tr.appendChild(fi);w.appendChild(row);w.appendChild(tr);fu.appendChild(w);});
     var nd=document.getElementById('needs');nd.innerHTML='';
-    var n=(s.needs_you||[]).slice(0,6);if(!n.length)nd.appendChild(el('li',null,'Nothing needs you right now.'));n.forEach(function(x){nd.appendChild(el('li',null,x));});
+    var n=(s.needs_you||[]).slice(0,10);if(!n.length)nd.appendChild(el('li',null,'Nothing needs you right now.'));n.forEach(function(x){nd.appendChild(el('li',null,x));});
+    var pj=document.getElementById('projects');pj.innerHTML='';
+    (s.projects||[]).forEach(function(p){var st={done:'ok',running:'ok',waiting:'waiting',paused:'off'}[p.status]||'off',t=el('div','ag'),h=el('div','h');
+      h.appendChild(el('span','dot '+st));h.lastChild.setAttribute('aria-hidden','true');h.appendChild(el('span',null,p.name));h.appendChild(el('span','st',{done:'Done',running:'Running',waiting:'Waiting on you',paused:'Paused'}[p.status]||p.status));t.appendChild(h);
+      t.appendChild(el('p','job',p.note||''));pj.appendChild(t);});
     var ag=document.getElementById('agents');ag.innerHTML='';
     (s.agents||[]).forEach(function(a){var st=STATES[a.state]?a.state:'off',t=el('div','ag'),h=el('div','h');
       h.appendChild(el('span','dot '+st));h.lastChild.setAttribute('aria-hidden','true');h.appendChild(el('span',null,a.desk));h.appendChild(el('span','st',STATES[st]));t.appendChild(h);

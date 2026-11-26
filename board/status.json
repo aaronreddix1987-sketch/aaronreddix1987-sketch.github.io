@@ -1,7 +1,7 @@
 {
- "updated_utc": "2026-11-22T10:30:35Z",
- "overall": "green",
- "headline": "8 agents running. 7 start on schedule. No sales yet.",
+ "updated_utc": "2026-11-26T01:11:30Z",
+ "overall": "yellow",
+ "headline": "2 late. 2 agents running. No sales yet.",
  "money": {
   "today_usd": 0,
   "week_usd": 0,
@@ -12,7 +12,7 @@
  "funnel": [
   {
    "label": "Emails sent",
-   "n": null
+   "n": 0
   },
   {
    "label": "Replies",
@@ -20,7 +20,7 @@
   },
   {
    "label": "Calls answered",
-   "n": 14
+   "n": 39
   },
   {
    "label": "Pay links sent",
@@ -38,53 +38,53 @@
  "counts_7d": {
   "new_customers_live": 0,
   "orders": 0,
-  "leads": 2
+  "leads": 4
  },
  "paid_7d": 0,
  "agents": [
   {
    "desk": "AI CEO",
    "job": "Reads the log and sets the week's work",
-   "state": "ok",
+   "state": "off",
    "overdue": false,
    "last_run_utc": "2026-11-22T10:27:34Z",
-   "last_note": "Reported in",
-   "next_run_text": "Every day 7:00 AM"
+   "last_note": "Paused to save credits until the first sale",
+   "next_run_text": "Paused"
   },
   {
    "desk": "Marketing",
    "job": "Finds local businesses and emails them",
    "state": "waiting",
-   "overdue": false,
-   "last_run_utc": null,
-   "last_note": "Starts Mon-Sat 10:10 AM",
+   "overdue": true,
+   "last_run_utc": "2026-11-22T14:19:56Z",
+   "last_note": "Late: missed its last run",
    "next_run_text": "Mon-Sat 10:10 AM"
   },
   {
    "desk": "Social posts",
    "job": "Keeps Facebook and LinkedIn posts lined up",
-   "state": "waiting",
+   "state": "off",
    "overdue": false,
    "last_run_utc": null,
-   "last_note": "Starts every Friday 10:00 AM",
-   "next_run_text": "Every Friday 10:00 AM"
+   "last_note": "Paused to save credits until the first sale",
+   "next_run_text": "Paused"
   },
   {
    "desk": "DM replies",
    "job": "Answers business messages on social",
-   "state": "ok",
-   "overdue": false,
+   "state": "waiting",
+   "overdue": true,
    "last_run_utc": "2026-11-22T10:30:04Z",
-   "last_note": "Messages answered 0",
+   "last_note": "Late: missed its last run",
    "next_run_text": "Every day 9:15 AM, 5:15 PM"
   },
   {
    "desk": "Email replies",
    "job": "Answers buyers who email in",
-   "state": "waiting",
+   "state": "ok",
    "overdue": false,
-   "last_run_utc": null,
-   "last_note": "Waits for its first job",
+   "last_run_utc": "2026-11-22T13:06:50Z",
+   "last_note": "Replies sent 0",
    "next_run_text": "When an email comes in"
   },
   {
@@ -92,100 +92,180 @@
    "job": "Answers the phone 24/7",
    "state": "ok",
    "overdue": false,
-   "last_run_utc": "2026-11-22T04:29:29Z",
+   "last_run_utc": "2026-11-26T00:53:11Z",
    "last_note": "Phone robot checks are passing",
    "next_run_text": "Always on"
   },
   {
    "desk": "Phone pay links",
    "job": "Emails a pay link when a caller asks",
-   "state": "ok",
+   "state": "off",
    "overdue": false,
    "last_run_utc": "2026-11-22T08:55:13Z",
-   "last_note": "Sent 1, reconciled 0, held 0",
-   "next_run_text": "When a caller asks"
+   "last_note": "Paused to save credits until the first sale",
+   "next_run_text": "Paused"
   },
   {
    "desk": "Orders",
    "job": "Checks new payments and sets up customers",
-   "state": "ok",
+   "state": "off",
    "overdue": false,
    "last_run_utc": "2026-11-22T08:30:20Z",
-   "last_note": "New sales 0, ads paused 0",
-   "next_run_text": "About 10 times a day"
+   "last_note": "Paused to save credits until the first sale",
+   "next_run_text": "Paused"
   },
   {
    "desk": "Websites",
    "job": "Builds paid 1-page websites",
-   "state": "waiting",
+   "state": "off",
    "overdue": false,
    "last_run_utc": null,
-   "last_note": "Starts every day 8:40a, 1:40p, 6:40p",
-   "next_run_text": "Every day 8:40a, 1:40p, 6:40p"
+   "last_note": "Paused to save credits until the first sale",
+   "next_run_text": "Paused"
   },
   {
    "desk": "Money count",
    "job": "Counts sales and flags stuck orders",
-   "state": "ok",
+   "state": "off",
    "overdue": false,
    "last_run_utc": "2026-11-22T10:28:36Z",
-   "last_note": "Paid sales 0, paid 11, lead 3, emails sent 0",
-   "next_run_text": "Every day 9:05 AM"
+   "last_note": "Paused to save credits until the first sale",
+   "next_run_text": "Paused"
   },
   {
    "desk": "Deals",
    "job": "Follows up on open offers",
-   "state": "ok",
+   "state": "off",
    "overdue": false,
    "last_run_utc": "2026-11-22T09:15:27Z",
-   "last_note": "Proposals 0, follow-ups 0, stopped 0, held 0",
-   "next_run_text": "Mon-Sat 11:40 AM"
+   "last_note": "Paused to save credits until the first sale",
+   "next_run_text": "Paused"
   },
   {
    "desk": "Customer care",
    "job": "Checks that customer lines work",
-   "state": "ok",
+   "state": "off",
    "overdue": false,
    "last_run_utc": "2026-11-22T09:15:46Z",
-   "last_note": "Lines checked 1, reminders sent 0, calls 0, held 0",
-   "next_run_text": "Every day 10:30 AM"
+   "last_note": "Paused to save credits until the first sale",
+   "next_run_text": "Paused"
   },
   {
    "desk": "Reports",
    "job": "Writes the daily report",
-   "state": "waiting",
+   "state": "off",
    "overdue": false,
    "last_run_utc": null,
-   "last_note": "Starts every day 7:10 AM",
-   "next_run_text": "Every day 7:10 AM"
+   "last_note": "Paused to save credits until the first sale",
+   "next_run_text": "Paused"
   },
   {
    "desk": "Agency outreach",
    "job": "Emails agencies about partner work",
-   "state": "waiting",
+   "state": "off",
    "overdue": false,
    "last_run_utc": null,
-   "last_note": "Starts Mon-Fri 1:10 PM",
-   "next_run_text": "Mon-Fri 1:10 PM"
+   "last_note": "Paused to save credits until the first sale",
+   "next_run_text": "Paused"
   },
   {
    "desk": "Coach",
    "job": "Reviews results and sharpens each desk",
-   "state": "waiting",
+   "state": "off",
    "overdue": false,
    "last_run_utc": null,
-   "last_note": "Starts Sundays 7:00 PM",
-   "next_run_text": "Sundays 7:00 PM"
+   "last_note": "Paused to save credits until the first sale",
+   "next_run_text": "Paused"
   }
  ],
  "needs_you": [
-  "Add a card at Vapi so new customers can get a phone line",
-  "Add your checking account in Stripe payout settings",
+  "Enter the 16-letter Gmail app password in the secure form to start free daily outreach",
+  "Reconnect Facebook with posting permission and link Instagram",
+  "Turn on Vapi auto-reload with a spending cap",
+  "Call back the open business leads from the phone line",
+  "Change your Google password (it was typed in chat)",
   "Cancel the $90 Stripe Tax plan on the older Stripe account",
   "14 personal to-dos on your private list"
  ],
+ "projects": [
+  {
+   "name": "Website and checkout",
+   "status": "done",
+   "note": "Stripe is live with your bank. 70+ products deliver instantly."
+  },
+  {
+   "name": "AI phone line",
+   "status": "running",
+   "note": "Answers 24/7, logs every call, sends pay links."
+  },
+  {
+   "name": "Ebook library",
+   "status": "done",
+   "note": "61 business books plus 6 recovery books in English and Spanish."
+  },
+  {
+   "name": "New tools for agents",
+   "status": "done",
+   "note": "$9, $17 and $27 tools are on sale."
+  },
+  {
+   "name": "YouTube and TikTok videos",
+   "status": "running",
+   "note": "10 Shorts live, more upload each day."
+  },
+  {
+   "name": "Facebook and Instagram posts",
+   "status": "waiting",
+   "note": "30 days of posts ready. Needs posting permission."
+  },
+  {
+   "name": "Free email outreach",
+   "status": "waiting",
+   "note": "Built on GitHub. Needs the Gmail app password."
+  },
+  {
+   "name": "Press pitches",
+   "status": "done",
+   "note": "Release written, 20 outlets pitched."
+  },
+  {
+   "name": "10X Recovery homes",
+   "status": "running",
+   "note": "30 owner-finance pitches go out by the daily job."
+  },
+  {
+   "name": "10X Recovery Circle page",
+   "status": "done",
+   "note": "Weekly AI-guided session page is live."
+  },
+  {
+   "name": "Grants",
+   "status": "waiting",
+   "note": "Business Freedom needs your age range. Skip needs your login. Shophand goes Dec 1."
+  },
+  {
+   "name": "Legal deadlines",
+   "status": "waiting",
+   "note": "Tracker and drafts are in your private Drive folder."
+  },
+  {
+   "name": "Drive cleanup",
+   "status": "done",
+   "note": "6,021 files archived, nothing deleted."
+  },
+  {
+   "name": "Real Estate and Credit Academy",
+   "status": "paused",
+   "note": "Restarts when credits allow."
+  },
+  {
+   "name": "Avatar and drama videos",
+   "status": "paused",
+   "note": "Restarts when credits allow."
+  }
+ ],
  "site": {
   "up": true,
-  "checked_utc": "2026-11-22T10:30:35Z"
+  "checked_utc": "2026-11-26T01:11:30Z"
  }
 }
