@@ -1,188 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>TTI progress board — Total Transformation Inc.</title>
-<meta name="description" content="TTI progress board. What is done, in progress, needs Aaron, and not started.">
-<meta name="robots" content="noindex">
-<link rel="canonical" href="https://aaronreddix1987-sketch.github.io/whiteboard.html">
-<meta property="og:title" content="TTI progress board — Total Transformation Inc.">
-<meta property="og:description" content="TTI progress board. What is done, in progress, needs Aaron, and not started.">
-<meta property="og:image" content="https://aaronreddix1987-sketch.github.io/assets/img/ceo-command-center.jpg">
-<meta property="og:type" content="website">
-<meta name="theme-color" content="#0b0f14">
-<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-<link rel="manifest" href="/manifest.webmanifest">
-<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="TTI">
-<link rel="preconnect" href="https://api.fontshare.com">
-<link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,700&amp;display=swap" rel="stylesheet">
-<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css">
-<style>
-.board{font-size:20px}
-.counts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:8px 0 12px}
-.count{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;text-align:center}
-.count b{display:block;font-family:Zodiak,Georgia,serif;font-size:40px;color:var(--gold-2);line-height:1.1}
-.count span{font-size:18px}
-.list{list-style:none;padding:0;margin:0}
-.list li{font-size:20px;padding:12px 0;border-bottom:1px solid var(--line)}
-.board h2{font-size:32px;margin-bottom:8px}
-@media(max-width:760px){.counts{grid-template-columns:repeat(2,1fr)}.board,.list li{font-size:20px}}
-.org{display:grid;gap:12px}
-.desk{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px}
-.desk b{display:block;font-family:Zodiak,Georgia,serif;font-size:26px;color:var(--gold-2)}
-.desk span{font-size:20px}
-.desk.ceo{text-align:center;border-color:var(--gold-2)}
-.desks{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-@media(max-width:760px){.desks{grid-template-columns:1fr}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#121a1a">
+  <title>Operations Whiteboard | Total Transformation Inc.</title>
+  <link rel="canonical" href="https://aaronreddix1987-sketch.github.io/board/">
+  <link rel="stylesheet" href="./board/board.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<nav class="top" aria-label="Main">
-  <div class="wrap">
-    <a class="brand" href="/">Total <span>Transformation</span> Inc.</a>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
-    <div class="links" id="menu">
-      <a href="/platform.html">Platform</a><a href="/services.html">Services</a><a href="/front-office.html">Front Office</a><a href="/case-study.html">Case study</a><a href="/ebooks.html">Ebooks</a><a href="/news.html">News</a><a href="/#story">Our story</a><a href="https://billing.stripe.com/p/login/bJebJ1c050Q932nfJ6gEg00" data-acct>My account</a>
-      <a class="btn" href="https://buy.stripe.com/9B63cv7JPbuN6ez7cAgEg0a">Start for $97</a>
+  <main class="frame">
+    <div class="intro">
+      <div>
+        <p class="eyebrow">TOTAL TRANSFORMATION INC.</p>
+        <h1>The operations whiteboard has moved</h1>
+        <p><a href="./board/">Open the current status board</a>. Sales and internal action items are tracked separately.</p>
+      </div>
     </div>
-  </div>
-</nav>
-<main id="main" class="board">
-<header class="hero plain">
-  <div class="wrap">
-    <p class="eyebrow">TTI progress board</p>
-    <h1>TTI progress board</h1>
-    <p class="lead">Business work only. 152 items.</p>
-    <p class="note" style="font-size:18px">Updated Nov 22, 2026</p>
-  </div>
-</header>
-<section>
-  <div class="wrap">
-    <div class="counts">
-      <div class="count"><b>71</b><span>Done</span></div>
-      <div class="count"><b>44</b><span>In progress</span></div>
-      <div class="count"><b>2</b><span>Blocked</span></div>
-      <div class="count"><b>15</b><span>Needs Aaron</span></div>
-      <div class="count"><b>14</b><span>Not started</span></div>
-      <div class="count"><b>6</b><span>Declined</span></div>
-    </div>
-    <p>Declined means we will not do it. Example: take card numbers by voice, or spend money without your OK.</p>
-  </div>
-</section>
-<section class="band" id="how"><div class="wrap"><h2>How TTI runs</h2>
-<div class="org">
-  <div class="desk ceo"><b>AI CEO</b><span>Sets the weekly orders. Writes a one-page report each day. Approves business work.</span></div>
-  <div class="desks">
-    <div class="desk"><b>CMO desk</b><span>Marketing and social posts.</span></div>
-    <div class="desk"><b>CRO desk</b><span>Email, messages, phone and follow-up.</span></div>
-    <div class="desk"><b>COO desk</b><span>Delivers what customers buy.</span></div>
-    <div class="desk"><b>CFO desk</b><span>Tracks the numbers. Money review on Fridays.</span></div>
-  </div>
-</div>
-<p style="margin-top:16px">TTI is new. The owner signs, pays and decides legal matters. Agents do the daily work.</p>
-</div></section>
-<section><div class="wrap"><h2>Done</h2>
-<ul class="list">
-  <li>Free funnel: one free workshop (workshop.html) plus the free Missed-Call Checklist, both leading to the $97 pilot. Starter Kit and Company Map no longer promoted.</li>
-  <li>AI CEO desk is live. One-page report every day at 7:30 AM PT. Weekly orders on Mondays. It approves business work.</li>
-  <li>All agents are grouped under four desks: CMO, CRO, COO and CFO. A master system prompt is written.</li>
-  <li>Weekly money review added to the CFO desk. It runs on Fridays.</li>
-  <li>The business DM responder is scheduled at 9:15 AM and 5:15 PM PT. Replies have not been verified end to end on all three channels.</li>
-  <li>Phone front desk now has a woman's voice and a mentor and teacher tone.</li>
-  <li>The main website is live. Thank-you page and all site links checked and fixed.</li>
-  <li>The $97 pilot pay link is live. 44 guides and 15 workbooks for sale. Pay buttons checked.</li>
-  <li>All 59 paid guides and workbooks rewritten to full length (64 to 92 pages) in November 2026; files replaced in place so every download link still works.</li>
-  <li>15 workbooks on sale at $27 with instant download. One-page website service live at $197.</li>
-  <li>Order checks are scheduled. Matching rules separate ebooks, workbooks and website services; live paid delivery still needs verification. Ten old payment links were turned off.</li>
-  <li>The AI phone agent answers 747-301-8586. It knows company facts, prices and free legal help numbers.</li>
-  <li>Instant reply is on: Messenger and Instagram for TTI, and the Low Fee Tow inbox.</li>
-  <li>Facebook: 38 junk posts removed. 18 posts scheduled Mon to Sat through Dec 12.</li>
-  <li>Instagram: second cleanup done. 140 more old or unprofessional posts removed, 339 in total. 12 image posts scheduled Nov 23 to Dec 5.</li>
-  <li>LinkedIn cleaned: 20 clean posts left. 6 posts scheduled through Dec 4.</li>
-  <li>Ad and email safeguards are configured. We still need to verify all sending sources. Free checklist, calculator, 9 trade pages and clear prices are live.</li>
-</ul>
-</div></section>
-<section class="band"><div class="wrap"><h2>In progress</h2>
-<ul class="list">
-  <li>Second daily post on Facebook and Instagram. Cards are being scheduled now.</li>
-  <li>4 new workbooks being built.</li>
-  <li>Drive review is underway. Some files have been reviewed; offline extraction and review are not complete.</li>
-  <li>Research on new income workflows, like short-video clipping.</li>
-  <li>Viral content batch: 12 cards and 8 Reels.</li>
-  <li>YouTube is signed in. No videos yet.</li>
-  <li>Outbound calls and texts. Waiting on the phone company support reply.</li>
-  <li>Pilot setup after payment, and the $297 monthly plan after day 7. Tested, no real paid order yet.</li>
-  <li>Follow-up emails to callers on days 1, 3 and 7.</li>
-  <li>Auto refill of the Facebook post queue. Set for Dec 9.</li>
-  <li>Phone agent remembers past emails. Check all Gmail accounts for sends and bounces.</li>
-  <li>Daily money plan agent.</li>
-  <li>Hook up CRM, calendar and booking.</li>
-  <li>Grant follow-ups.</li>
-</ul>
-</div></section>
-<section><div class="wrap"><h2>Still blocked</h2>
-<ul class="list">
-  <li>Facebook ad account is locked.</li>
-  <li>First paid sale not made yet.</li>
-</ul>
-</div></section>
-<section class="band"><div class="wrap"><h2>Needs Aaron</h2>
-<p>Only you can do these.</p>
-<ul class="list">
-  <li>Sign in to Stripe on the shared screen, so order checks can run every 30 minutes. Then replace the payout bank and cancel the Stripe Tax charge.</li>
-  <li>Verizon $10,000 grant: 2 short courses and application by Dec 7.</li>
-  <li>Secretary of State filing, $25.</li>
-  <li>Confirm total 2025 gross receipts, then reply to LA Finance.</li>
-  <li>Sign in to TikTok and Kick.</li>
-  <li>Old Facebook ads: Facebook has them locked for an unpaid $32.78. They are not running. Do not pay it by hand. The guard turns the ads off if it clears.</li>
-  <li>Say yes if you want the AI to call your lead back on Monday morning.</li>
-  <li>Link a TTI Instagram. The towing one is linked now.</li>
-  <li>Finish codes and terms for new social accounts.</li>
-  <li>Call back the credit repair business lead.</li>
-  <li>Approve an ad account and budget before any ads run.</li>
-  <li>Reconnect Vercel with project access.</li>
-  <li>Sign off on grant applications.</li>
-  <li>Give the book manuscript for producers.</li>
-  <li>Set up the Instagram skill on your own account.</li>
-</ul>
-</div></section>
-<section><div class="wrap"><h2>Not started</h2>
-<ul class="list">
-  <li>First real $97 sale. Not yet.</li>
-  <li>Ask for old Stripe Tax fees back.</li>
-  <li>Facebook money tools. Page needs followers first.</li>
-  <li>Record 43 audiobooks.</li>
-  <li>Send 500 free promo copies.</li>
-  <li>Send the pitch PDF to producers.</li>
-  <li>Phone and desktop apps for app stores.</li>
-  <li>Full agent builder platform.</li>
-  <li>$199 48-hour follow-up checkout.</li>
-  <li>Work from the Chromebook.</li>
-  <li>Tax deal research tool.</li>
-  <li>Check tax deal data before paying for it.</li>
-  <li>Test five Symphony workflows.</li>
-  <li>Steady repeat sales and growth.</li>
-</ul>
-</div></section>
-</main>
-<footer>
-  <div class="wrap">
-    <div><a href="/">Home</a><a href="/services.html">Services and prices</a><a href="/front-office.html">AI Front Office</a><a href="/ebooks.html">Ebooks</a><a href="/contact.html">Contact</a>
-      <a href="/platform.html">Platform</a>
-      <a href="https://billing.stripe.com/p/login/bJebJ1c050Q932nfJ6gEg00" data-acct>My account</a>
-      <a href="/privacy.html">Privacy</a>
-      <a href="/terms.html">Terms</a>
-      <a href="/news.html">News</a>
-    </div>
-    <div>© 2026 Total Transformation Inc. · Los Angeles, California</div>
-  </div>
-</footer>
-<script src="/assets/site.js" defer></script>
-<script src="/assets/tti-count.js" defer></script>
+  </main>
 </body>
 </html>
