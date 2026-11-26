@@ -21,6 +21,22 @@
 <link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,700&amp;display=swap" rel="stylesheet">
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
+<script>
+/* Rescue mistyped or outdated links (stray punctuation, wrong case, old AI Front Desk addresses). */
+(function(){
+  try{
+    var l=location, p=decodeURIComponent(l.pathname);
+    var known=["/front-office.html","/services.html","/ebooks.html","/checkout.html","/buy.html","/contact.html","/case-study.html","/workshop.html","/love-and-rehab.html","/app.html","/platform.html","/news.html","/checklist.html","/business-readiness.html","/academy.html","/thank-you.html"];
+    var c=p.replace(/[\s.,;:!?)\]>'"\/]+$/,"").toLowerCase();
+    if(c==="")return;
+    var t=null;
+    if(/^\/(ai-?)?front-?(desk|office)(\.html?)?$/.test(c)||/^\/(pilot|ai-?receptionist|ai-?front-?desk-?pilot)(\.html?)?$/.test(c)) t="/front-office.html";
+    else if(known.indexOf(c)>-1) t=c;
+    else if(known.indexOf(c+".html")>-1) t=c+".html";
+    if(t&&t!==l.pathname) l.replace(t+l.search+l.hash);
+  }catch(e){}
+})();
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
