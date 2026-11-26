@@ -1,7 +1,7 @@
 {
- "updated_utc": "2026-11-26T01:19:32Z",
+ "updated_utc": "2026-11-26T10:51:18Z",
  "overall": "yellow",
- "headline": "2 late. 2 agents running. No sales yet.",
+ "headline": "1 late. 3 agents running. No sales yet.",
  "money": {
   "today_usd": 0,
   "week_usd": 0,
@@ -65,17 +65,17 @@
    "job": "Keeps Facebook and LinkedIn posts lined up",
    "state": "off",
    "overdue": false,
-   "last_run_utc": null,
+   "last_run_utc": "2026-11-26T01:26:08Z",
    "last_note": "Paused to save credits until the first sale",
    "next_run_text": "Paused"
   },
   {
    "desk": "DM replies",
    "job": "Answers business messages on social",
-   "state": "waiting",
-   "overdue": true,
-   "last_run_utc": "2026-11-22T10:30:04Z",
-   "last_note": "Late: missed its last run",
+   "state": "ok",
+   "overdue": false,
+   "last_run_utc": "2026-11-26T01:23:34Z",
+   "last_note": "Messages answered 0, calls 0",
    "next_run_text": "Every day 9:15 AM, 5:15 PM"
   },
   {
@@ -266,6 +266,6 @@
  ],
  "site": {
   "up": true,
-  "checked_utc": "2026-11-26T01:19:32Z"
+  "checked_utc": "2026-11-26T10:51:18Z"
  }
 }
