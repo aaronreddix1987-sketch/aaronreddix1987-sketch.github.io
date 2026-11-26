@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; form-action 'none'; base-uri 'none'">
+  <meta name="description" content="Preview the Total Transformation Inc. Records &amp; Dispute Desk: an example records workflow, evidence checklist, and scripted AI phone intake demo.">
+  <meta name="theme-color" content="#0b0f14">
+  <title>Records &amp; Dispute Desk | Total Transformation Inc.</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="demo.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="/" aria-label="Total Transformation Inc. homepage">Total <span>Transformation</span> Inc.</a>
+      <nav aria-label="Main">
+        <a href="#workflow">Workflow</a>
+        <a href="#checklist">Checklist</a>
+        <a href="#phone">Phone demo</a>
+        <a href="#resources">Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="title">
+      <div class="wrap hero-inner">
+        <div>
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Preview only · No live intake</p>
+          <h1 id="title">Records &amp;<br><span>Dispute Desk</span></h1>
+          <p class="intro">Organize your records, build a clear timeline, and find official resources when you spot an error.</p>
+          <p class="scope">Administrative information only. Total Transformation Inc. is not a law firm and does not provide legal advice or representation.</p>
+          <div class="actions">
+            <a class="button primary" href="#checklist">View evidence checklist <span aria-hidden="true">↓</span></a>
+            <a class="button secondary" href="#phone">Try the phone demo <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="hero-media" aria-hidden="true">
+          <img src="records-desk.webp" width="960" height="720" alt="" fetchpriority="high">
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="workflow" aria-labelledby="workflow-title">
+      <h2 id="workflow-title">A sample records workflow</h2>
+      <ol class="workflow">
+        <li><span class="step" aria-hidden="true">01</span><h3>Identify the discrepancy</h3><p>Note which record looks wrong, where it appears, and what you believe is inaccurate.</p></li>
+        <li><span class="step" aria-hidden="true">02</span><h3>Organize the evidence</h3><p>Make a timeline and keep copies of supporting documents, relevant notices, and replies together.</p></li>
+        <li><span class="step" aria-hidden="true">03</span><h3>Find the official channel</h3><p>Use the <a href="#resources">official resources</a> for instructions. This desk does not file disputes or contact organizations on your behalf.</p></li>
+      </ol>
+    </section>
+
+    <section class="section checklist-band" id="checklist" aria-labelledby="checklist-title">
+      <div class="wrap split">
+        <div>
+          <h2 id="checklist-title">Evidence checklist</h2>
+          <p class="context">Use this list to organize your own files. Do not share records or personal information on this preview.</p>
+          <p class="reference">For credit-report errors, see the <a href="https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/" target="_blank" rel="noopener noreferrer">CFPB’s credit report dispute guide</a>.</p>
+        </div>
+        <ul class="checklist">
+          <li><div><strong>The record in question</strong><p>A copy with the relevant item marked.</p></div></li>
+          <li><div><strong>A short timeline</strong><p>Relevant dates, what happened, and when you noticed the discrepancy.</p></div></li>
+          <li><div><strong>Supporting documents</strong><p>Copies of statements, notices, receipts, or correspondence. Keep originals for your records.</p></div></li>
+          <li><div><strong>A communication log</strong><p>Any prior submissions, receipts, replies, and confirmation numbers, kept in your own files.</p></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section wrap split" id="phone" aria-labelledby="phone-title">
+      <div>
+        <p class="eyebrow">Scripted demo · No live calls</p>
+        <h2 id="phone-title">AI phone intake preview</h2>
+        <p class="context">See how a phone assistant could handle a few common questions. This demo runs in the page. It does not place a call, use your microphone, or collect or save information.</p>
+      </div>
+      <div class="phone-panel">
+        <div class="phone-top">
+          <svg class="phone-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16.6v3a2 2 0 0 1-2.2 2 19 19 0 0 1-8.3-3 19 19 0 0 1-6-6 19 19 0 0 1-3-8.4A2 2 0 0 1 3.5 2h3a2 2 0 0 1 2 1.7l.6 3a2 2 0 0 1-.5 2.1L7.4 10a15 15 0 0 0 6.6 6.6l1.2-1.2a2 2 0 0 1 2.1-.5l3 .6a2 2 0 0 1 1.7 2z"/></svg>
+          <h3>Sample call transcript</h3>
+        </div>
+        <p class="greeting"><strong>AI assistant:</strong> “You’ve reached the Total Transformation Inc. Records &amp; Dispute Desk demo. This is administrative information, not legal advice. Please don’t share personal or account information.”</p>
+        <div id="demo-controls" hidden>
+          <p class="demo-label">Choose a sample question:</p>
+          <div class="choices" role="group" aria-label="Sample questions">
+            <button type="button" data-branch="records" aria-pressed="false">What should I gather?</button>
+            <button type="button" data-branch="credit" aria-pressed="false">Who handles credit errors?</button>
+            <button type="button" data-branch="legal" aria-pressed="false">Can you give legal advice?</button>
+          </div>
+          <p class="reply" id="demo-reply" role="status" aria-atomic="true">Choose a question to see the assistant’s sample response.</p>
+        </div>
+        <noscript><p class="reply"><strong>AI assistant:</strong> “Keep the record in question, a timeline, and copies of supporting documents together. For dispute instructions or legal help, see the official resources below.”</p></noscript>
+      </div>
+    </section>
+
+    <section class="section resources-band" id="resources" aria-labelledby="resources-title">
+      <div class="wrap">
+        <h2 id="resources-title">Official resources</h2>
+        <div class="resource-list">
+          <a href="https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/" target="_blank" rel="noopener noreferrer"><span><strong>Dispute a credit report error</strong><span>Consumer Financial Protection Bureau</span></span><span class="out" aria-hidden="true">↗</span></a>
+          <a href="https://www.calbar.ca.gov/Public/Need-Legal-Help/Lawyer-Referral-Service/" target="_blank" rel="noopener noreferrer"><span><strong>Find a certified lawyer referral service</strong><span>The State Bar of California</span></span><span class="out" aria-hidden="true">↗</span></a>
+          <a href="https://selfhelp.courts.ca.gov/hire-lawyer" target="_blank" rel="noopener noreferrer"><span><strong>Learn how to find legal help</strong><span>California Courts Self-Help Guide</span></span><span class="out" aria-hidden="true">↗</span></a>
+        </div>
+        <p class="reference">External resources open in a new tab.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <a class="wordmark" href="/" aria-label="Total Transformation Inc. homepage">Total <span>Transformation</span> Inc.</a>
+      <p>This preview does not accept cases, file disputes, or guarantee any outcome.</p>
+    </div>
+  </footer>
+</body>
+</html>
