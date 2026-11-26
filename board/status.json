@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-26T10:51:18Z",
+ "updated_utc": "2026-11-26T20:10:07Z",
  "overall": "yellow",
  "headline": "1 late. 3 agents running. No sales yet.",
  "money": {
@@ -74,8 +74,8 @@
    "job": "Answers business messages on social",
    "state": "ok",
    "overdue": false,
-   "last_run_utc": "2026-11-26T01:23:34Z",
-   "last_note": "Messages answered 0, calls 0",
+   "last_run_utc": "2026-11-26T17:19:38Z",
+   "last_note": "Messages answered 0, calls 0, requests 2",
    "next_run_text": "Every day 9:15 AM, 5:15 PM"
   },
   {
@@ -266,6 +266,6 @@
  ],
  "site": {
   "up": true,
-  "checked_utc": "2026-11-26T10:51:18Z"
+  "checked_utc": "2026-11-26T20:10:07Z"
  }
 }
