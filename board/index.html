@@ -1,131 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Live board · Total Transformation Inc.</title>
-<meta name="robots" content="noindex,nofollow">
-<meta name="theme-color" content="#0b0f14">
-<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://api.fontshare.com">
-<link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,700&amp;display=swap" rel="stylesheet">
-<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css">
-<style>
-.bd{max-width:880px;margin:0 auto;padding:18px 18px 60px}
-.bd-top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:6px 0 16px}
-.banner{border-radius:18px;padding:22px 22px 20px;border:2px solid var(--line);background:var(--surface)}
-.banner.green{border-color:#3f8f66;background:#10241a}
-.banner.yellow{border-color:#b98a2c;background:#2a2110}
-.banner.red{border-color:#c9584f;background:#2c1312}
-.banner .state{font-size:15px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
-.banner.green .state{color:#8fe0b4}.banner.yellow .state{color:#f0cf86}.banner.red .state{color:#ffaaa3}
-.banner h1{font-family:Zodiak,serif;font-size:30px;line-height:1.2;margin:8px 0 10px;color:var(--text)}
-.upd{font-size:18px;color:var(--muted)}
-.bd h2{font-family:Zodiak,serif;font-size:26px;margin:34px 0 12px}
-.tiles{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.tile{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px}
-.tile .n{font-family:Zodiak,serif;font-size:40px;line-height:1.1;color:var(--text);font-weight:700}
-.tile .l{font-size:18px;color:var(--muted);margin-top:4px}
-.bar{margin:10px 0}
-.bar .row{display:flex;justify-content:space-between;font-size:19px;gap:10px}
-.bar .row b{font-size:22px}
-.bar .track{height:16px;background:var(--surface-2);border-radius:99px;margin-top:6px;overflow:hidden}
-.bar .fill{height:100%;background:var(--gold);border-radius:99px;min-width:0}
-.na{color:var(--muted);font-size:18px;font-weight:500}
-.agents{display:grid;grid-template-columns:1fr;gap:12px}
-.ag{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
-.ag .h{display:flex;align-items:center;gap:12px;font-size:21px;font-weight:700}
-.dot{width:16px;height:16px;border-radius:50%;flex:none;background:#7d8894}
-.dot.ok{background:#4fc485}.dot.waiting{background:#e0b04f}.dot.problem{background:#ef6a5f}.dot.off{background:#7d8894}
-.ag .st{margin-left:auto;font-size:15px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.ag p{margin:6px 0 0;font-size:18px;color:var(--muted)}
-.ag p.job{color:var(--text)}
-.needs{list-style:none;padding:0;margin:0;display:grid;gap:10px}
-.needs li{background:#2a2110;border:1px solid #b98a2c;border-radius:14px;padding:16px 18px;font-size:20px;color:var(--text)}
-.err{background:#2c1312;border:1px solid #c9584f;border-radius:14px;padding:14px 18px;font-size:18px;margin-top:12px}
-.fine{font-size:15px;color:var(--muted);margin-top:30px}
-@media(min-width:720px){.tiles{grid-template-columns:repeat(4,1fr)}.agents{grid-template-columns:1fr 1fr}.banner h1{font-size:36px}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#121a1a">
+  <meta name="description" content="TTI operations status, public endpoint checks, and what counts as a verified sale.">
+  <title>Operations Whiteboard | Total Transformation Inc.</title>
+  <link rel="stylesheet" href="./board.css">
+  <script src="./board.js" defer></script>
 </head>
 <body>
-<main class="bd" id="main">
-  <div class="bd-top">
-    <a class="brand" href="/">Total <span>Transformation</span> Inc.</a>
-    <button class="btn" type="button" id="listen">Listen</button>
-  </div>
-  <section class="banner" id="banner" aria-live="polite">
-    <div class="state" id="state">Loading</div>
-    <h1 id="headline">Getting the latest status.</h1>
-    <div class="upd" id="upd">&nbsp;</div>
-  </section>
-  <div id="err" class="err" hidden></div>
+  <a class="skip" href="#main">Skip to whiteboard</a>
+  <header class="top">
+    <div class="frame top-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M5 8h22M5 15h22M12 8v16m8-9v9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span>
+        <span><strong>Total Transformation Inc.</strong><small>OPERATIONS</small></span>
+      </div>
+      <a class="store" href="https://aaronreddix1987-sketch.github.io/">Storefront <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+  <main id="main" class="frame">
+    <div class="intro">
+      <div>
+        <p class="eyebrow">STATUS / PUBLIC VIEW</p>
+        <h1>Operations whiteboard</h1>
+        <p>See what you can reach, what was checked, and what remains unverified.</p>
+      </div>
+      <button id="refresh" type="button">
+        <svg aria-hidden="true" viewBox="0 0 20 20" width="17" height="17" fill="none"><path d="M16 8a6.3 6.3 0 1 0-.1 4.4M16 3.8V8h-4.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Refresh status
+      </button>
+    </div>
 
-  <h2>Money</h2>
-  <div class="tiles" id="money"></div>
+    <section class="signal" aria-label="Status feed">
+      <div class="signal-line">
+        <div class="signal-copy">
+          <p class="eyebrow">CHECK FEED</p>
+          <p id="notice" class="notice" role="status">Checking for a verified report…</p>
+        </div>
+        <span id="feed-badge" class="badge">Waiting</span>
+      </div>
+      <p id="last" class="last">An hourly target is not a guarantee of execution.</p>
+      <noscript><p>Live status needs JavaScript. This page does not show payment or fulfillment details.</p></noscript>
+    </section>
 
-  <h2>Funnel, last 7 days</h2>
-  <div id="funnel"></div>
+    <div class="panels">
+      <section class="panel" aria-labelledby="health">
+        <div class="panel-head">
+          <p class="eyebrow"><span class="number">01</span> BUILD &amp; SYSTEMS</p>
+          <h2 id="health">Hourly checks</h2>
+          <p>Public pages and selected workflow evidence, not blanket agent health.</p>
+        </div>
+        <ul class="checks" id="checks"></ul>
+        <details>
+          <summary>How checks work</summary>
+          <p>Public-page checks look for a successful response and expected content. System and skills checks only cover the specified run or files. None of these checks places a call, tests SMS, charges a card or confirms delivery. Reports older than three hours are not treated as current.</p>
+        </details>
+      </section>
 
-  <h2>Needs you</h2>
-  <ul class="needs" id="needs"></ul>
+      <section class="panel" aria-labelledby="sales">
+        <div class="panel-head">
+          <p class="eyebrow"><span class="number">02</span> SALES EVIDENCE</p>
+          <h2 id="sales">From interest to delivery</h2>
+          <p>Totals and order records stay on the private sales whiteboard. Nothing here implies zero orders.</p>
+        </div>
+        <ol class="stages">
+          <li><span class="stage-index">01</span><div><strong>Inquiry received</strong><p>An inbound message or a permissioned conversation was logged.</p></div></li>
+          <li><span class="stage-index">02</span><div><strong>Qualified</strong><p>The buyer’s need, fit and next step were confirmed.</p></div></li>
+          <li><span class="stage-index">03</span><div><strong>Payment verified</strong><p>A live payment succeeded. Visiting checkout does not count.</p></div></li>
+          <li><span class="stage-index">04</span><div><strong>Delivery verified</strong><p>Product receipt or pilot activation was separately confirmed.</p></div></li>
+        </ol>
+        <p class="note"><strong>Release rule:</strong> Don’t call a pilot ready based on a checkout or a configured agent alone.</p>
+      </section>
+    </div>
 
-  <h2>Projects</h2>
-  <div class="agents" id="projects"></div>
-
-  <h2>Agents</h2>
-  <div class="agents" id="agents"></div>
-
-  <p class="fine">This page shows counts only. No names, numbers or emails. It refreshes every minute.</p>
-</main>
-<script>
-(function(){
-  var S=null,STATES={ok:'Running',waiting:'Waiting',problem:'Problem',off:'Off'};
-  function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e;}
-  function usd(n){if(n==null)return '—';return '$'+Number(n||0).toLocaleString('en-US',{maximumFractionDigits:0});}
-  function ago(iso){if(!iso)return 'not yet';var m=Math.round((Date.now()-Date.parse(iso))/60000);if(isNaN(m))return 'unknown';if(m<1)return 'just now';if(m<60)return m+(m===1?' minute ago':' minutes ago');var h=Math.round(m/60);if(h<48)return h+(h===1?' hour ago':' hours ago');return Math.round(h/24)+' days ago';}
-  function render(s){
-    S=s;var o=['green','yellow','red'].indexOf(s.overall)>=0?s.overall:'yellow';
-    var b=document.getElementById('banner');b.className='banner '+o;
-    document.getElementById('state').textContent={green:'All good',yellow:'Needs a look',red:'Problem'}[o];
-    document.getElementById('headline').textContent=s.headline||'';
-    document.getElementById('upd').textContent='Updated '+ago(s.updated_utc)+(s.site?(s.site.up===true?'. Website is up.':s.site.up===false?'. Website is DOWN.':'. Website check: not measured.'):'');
-    var m=s.money||{},mo=document.getElementById('money');mo.innerHTML='';
-    [[usd(m.today_usd),'Today'],[usd(m.week_usd),'This week'],[usd(m.all_time_usd),'All time'],[m.sales_count_all_time==null?'—':String(m.sales_count_all_time),'Sales, all time']].forEach(function(x){var t=el('div','tile');t.appendChild(el('div','n',x[0]));t.appendChild(el('div','l',x[1]+(x[0]==='—'?': not measured':'')));mo.appendChild(t);});
-    var f=s.funnel||[],fu=document.getElementById('funnel');fu.innerHTML='';
-    var max=Math.max.apply(null,f.map(function(r){return typeof r.n==='number'?r.n:0}).concat([1]));
-    f.forEach(function(r){var w=el('div','bar'),row=el('div','row');row.appendChild(el('span',null,r.label));
-      if(typeof r.n==='number'){row.appendChild(el('b',null,String(r.n)));}else{row.appendChild(el('span','na','Not measured'));}
-      var tr=el('div','track'),fi=el('div','fill');fi.style.width=(typeof r.n==='number'?Math.round(100*r.n/max):0)+'%';tr.appendChild(fi);w.appendChild(row);w.appendChild(tr);fu.appendChild(w);});
-    var nd=document.getElementById('needs');nd.innerHTML='';
-    var n=(s.needs_you||[]).slice(0,10);if(!n.length)nd.appendChild(el('li',null,'Nothing needs you right now.'));n.forEach(function(x){nd.appendChild(el('li',null,x));});
-    var pj=document.getElementById('projects');pj.innerHTML='';
-    (s.projects||[]).forEach(function(p){var st={done:'ok',running:'ok',waiting:'waiting',paused:'off'}[p.status]||'off',t=el('div','ag'),h=el('div','h');
-      h.appendChild(el('span','dot '+st));h.lastChild.setAttribute('aria-hidden','true');h.appendChild(el('span',null,p.name));h.appendChild(el('span','st',{done:'Done',running:'Running',waiting:'Waiting on you',paused:'Paused'}[p.status]||p.status));t.appendChild(h);
-      t.appendChild(el('p','job',p.note||''));pj.appendChild(t);});
-    var ag=document.getElementById('agents');ag.innerHTML='';
-    (s.agents||[]).forEach(function(a){var st=STATES[a.state]?a.state:'off',t=el('div','ag'),h=el('div','h');
-      h.appendChild(el('span','dot '+st));h.lastChild.setAttribute('aria-hidden','true');h.appendChild(el('span',null,a.desk));h.appendChild(el('span','st',STATES[st]));t.appendChild(h);
-      t.appendChild(el('p','job',a.job||''));if(a.last_note)t.appendChild(el('p',null,a.last_note));
-      t.appendChild(el('p',null,'Last run: '+ago(a.last_run_utc)+(a.next_run_text?'. Next: '+a.next_run_text:'')));ag.appendChild(t);});
-  }
-  function load(){
-    fetch('/board/status.json?t='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json();})
-    .then(function(s){document.getElementById('err').hidden=true;render(s);})
-    .catch(function(){var e=document.getElementById('err');e.hidden=false;e.textContent='Could not load the latest status. Trying again in one minute.';});
-  }
-  load();setInterval(load,60000);
-  setInterval(function(){if(S)document.getElementById('upd').textContent='Updated '+ago(S.updated_utc)+(S.site?(S.site.up===true?'. Website is up.':S.site.up===false?'. Website is DOWN.':'. Website check: not measured.'):'');},30000);
-  var L=document.getElementById('listen');
-  if(!('speechSynthesis' in window)){L.hidden=true;}
-  L.addEventListener('click',function(){
-    if(!S)return;speechSynthesis.cancel();var m=S.money||{};
-    var t=(S.headline||'')+(m.today_usd==null?'. Money is not measured yet. ':'. Money today: '+m.today_usd+' dollars. This week: '+(m.week_usd||0)+' dollars. All time: '+(m.all_time_usd||0)+' dollars. ');
-    var n=S.needs_you||[];t+=n.length?'Needs you: '+n.join(' Next. '):'Nothing needs you right now.';
-    var u=new SpeechSynthesisUtterance(t);u.rate=0.9;u.lang='en-US';speechSynthesis.speak(u);
-  });
-})();
-</script>
-<script src="/assets/tti-count.js" defer></script>
+    <section class="loop" aria-labelledby="loop">
+      <div>
+        <p class="eyebrow">IMPROVEMENT LOOP</p>
+        <h2 id="loop">Check, fix, measure</h2>
+      </div>
+      <p>Fix broken buying paths first. Test one change at a time and measure verified payments and delivery before scaling it.</p>
+    </section>
+  </main>
+  <footer class="frame footer"><span>TTI / OPERATIONS WHITEBOARD</span><span>Public status only</span></footer>
 </body>
 </html>
