@@ -1,7 +1,7 @@
 {
- "updated_utc": "2026-11-27T12:13:08Z",
+ "updated_utc": "2026-11-27T21:16:35Z",
  "overall": "yellow",
- "headline": "1 late. 3 agents running. Sales not measured here.",
+ "headline": "2 late. 2 agents running. Sales not measured here.",
  "money": {
   "today_usd": null,
   "week_usd": null,
@@ -20,7 +20,7 @@
   },
   {
    "label": "Calls answered",
-   "n": 42
+   "n": 43
   },
   {
    "label": "Pay links sent",
@@ -72,10 +72,10 @@
   {
    "desk": "DM replies",
    "job": "Answers business messages on social",
-   "state": "ok",
-   "overdue": false,
+   "state": "waiting",
+   "overdue": true,
    "last_run_utc": "2026-11-27T01:19:43Z",
-   "last_note": "Messages answered 0, calls 0",
+   "last_note": "Late: missed its last run",
    "next_run_text": "Every day 9:15 AM, 5:15 PM"
   },
   {
@@ -92,7 +92,7 @@
    "job": "Answers the phone 24/7",
    "state": "ok",
    "overdue": false,
-   "last_run_utc": "2026-11-27T04:22:16Z",
+   "last_run_utc": "2026-11-27T17:25:55Z",
    "last_note": "Phone robot checks are passing",
    "next_run_text": "Always on"
   },
@@ -266,6 +266,6 @@
  ],
  "site": {
   "up": true,
-  "checked_utc": "2026-11-27T12:13:08Z"
+  "checked_utc": "2026-11-27T21:16:35Z"
  }
 }
