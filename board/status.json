@@ -1,13 +1,13 @@
 {
- "updated_utc": "2026-11-27T02:50:32Z",
+ "updated_utc": "2026-11-27T03:15:20Z",
  "overall": "yellow",
- "headline": "1 late. 3 agents running. No sales yet.",
+ "headline": "1 late. 3 agents running. Sales not measured here.",
  "money": {
-  "today_usd": 0,
-  "week_usd": 0,
-  "all_time_usd": 0,
-  "sales_count_all_time": 0,
-  "as_of_utc": "2026-11-22T10:30:35Z"
+  "today_usd": null,
+  "week_usd": null,
+  "all_time_usd": null,
+  "sales_count_all_time": null,
+  "as_of_utc": null
  },
  "funnel": [
   {
@@ -28,7 +28,7 @@
   },
   {
    "label": "Paid",
-   "n": 0
+   "n": null
   },
   {
    "label": "Delivered",
@@ -40,7 +40,7 @@
   "orders": 0,
   "leads": 4
  },
- "paid_7d": 0,
+ "paid_7d": null,
  "agents": [
   {
    "desk": "AI CEO",
@@ -266,6 +266,6 @@
  ],
  "site": {
   "up": true,
-  "checked_utc": "2026-11-27T02:50:32Z"
+  "checked_utc": "2026-11-27T03:15:20Z"
  }
 }
