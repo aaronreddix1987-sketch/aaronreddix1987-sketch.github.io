@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-27T03:15:20Z",
+ "updated_utc": "2026-11-27T12:13:08Z",
  "overall": "yellow",
  "headline": "1 late. 3 agents running. Sales not measured here.",
  "money": {
@@ -20,7 +20,7 @@
   },
   {
    "label": "Calls answered",
-   "n": 40
+   "n": 42
   },
   {
    "label": "Pay links sent",
@@ -38,7 +38,7 @@
  "counts_7d": {
   "new_customers_live": 0,
   "orders": 0,
-  "leads": 4
+  "leads": 5
  },
  "paid_7d": null,
  "agents": [
@@ -92,7 +92,7 @@
    "job": "Answers the phone 24/7",
    "state": "ok",
    "overdue": false,
-   "last_run_utc": "2026-11-26T22:54:11Z",
+   "last_run_utc": "2026-11-27T04:22:16Z",
    "last_note": "Phone robot checks are passing",
    "next_run_text": "Always on"
   },
@@ -266,6 +266,6 @@
  ],
  "site": {
   "up": true,
-  "checked_utc": "2026-11-27T03:15:20Z"
+  "checked_utc": "2026-11-27T12:13:08Z"
  }
 }
