@@ -1,6 +1,6 @@
 name: Release next social post
-# Adds the next post from social/queue.json to feed.xml every Monday and Thursday at 9 am Pacific.
-# An auto-posting app (dlvr.it) reads feed.xml and posts each new item to the connected social pages.
+# At the existing cadence, release at most one reviewed, never-before-released item.
+# RSS publication does not verify delivery to any downstream social account.
 on:
   schedule:
     - cron: "0 17 * * 1,4"
@@ -15,6 +15,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Check release safeguards
+        run: python3 -m unittest discover -s social -p test_release.py
       - name: Release next post
         run: python3 social/release.py
       - name: Save
