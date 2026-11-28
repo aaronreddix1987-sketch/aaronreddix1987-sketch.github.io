@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Get the App — Total Transformation Inc.</title>
+<title>TTI App — Total Transformation Inc.</title>
 <meta name="description" content="Put Total Transformation Inc. on your phone or computer. Install the app from this page on iPhone, Android, Windows or Mac in under a minute.">
 <link rel="canonical" href="https://aaronreddix1987-sketch.github.io/app.html">
 <meta property="og:title" content="Get the App — Total Transformation Inc.">
@@ -28,23 +28,48 @@
     <a class="brand" href="/">Total <span>Transformation</span> Inc.</a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
     <div class="links" id="menu">
-      <a href="/platform.html">Platform</a><a href="/services.html">Services</a><a href="/front-office.html">Front Office</a><a href="/case-study.html">Case study</a><a href="/ebooks.html">Ebooks</a><a href="/news.html">News</a><a href="/#story">Our story</a><a href="https://billing.stripe.com/p/login/bJebJ1c050Q932nfJ6gEg00" data-acct>My account</a>
+      <a href="/platform.html">Platform</a><a href="/services.html">Services</a><a href="/front-office.html">Front Office</a><a href="/case-study.html">Case study</a><a href="/ebooks.html">Ebooks</a><a href="/kits.html">Kits</a><a href="/news.html">News</a><a href="/#story">Our story</a><a href="https://billing.stripe.com/p/login/bJebJ1c050Q932nfJ6gEg00" data-acct>My account</a>
       <a class="btn" href="https://buy.stripe.com/9B63cv7JPbuN6ez7cAgEg0a">Start for $97</a>
     </div>
   </div>
 </nav>
 <main id="main">
-<header class="hero plain">
-  <div class="wrap">
+<style>
+.app-home{padding:28px 0 8px}
+.app-home h1{font-size:clamp(30px,8vw,48px);line-height:1.08}
+.app-tiles{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.app-tile{display:flex;flex-direction:column;gap:6px;min-height:118px;padding:16px;border:1px solid var(--line);border-radius:16px;background:var(--surface);color:var(--text);text-decoration:none}
+.app-tile:hover,.app-tile:focus-visible{border-color:var(--gold)}
+.app-tile b{font-size:17px;line-height:1.25}
+.app-tile span{font-size:14px;color:var(--muted);line-height:1.4}
+.app-tile em{font-style:normal;margin-top:auto;font-weight:700;color:var(--gold-2);font-size:14px}
+.app-tile.wide{grid-column:1/-1;min-height:0}
+.install-card{margin-top:18px;padding:16px;border:1px solid var(--gold);border-radius:16px;background:var(--surface)}
+.install-card[hidden]{display:none}
+.app-tabs{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:repeat(5,1fr);background:var(--bg);border-top:1px solid var(--line);padding:6px 4px calc(6px + env(safe-area-inset-bottom))}
+.app-tabs a{display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 2px;font-size:12px;color:var(--muted);text-decoration:none;text-align:center;line-height:1.2}
+.app-tabs a svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8}
+.app-tabs a:hover,.app-tabs a:focus-visible,.app-tabs a[aria-current]{color:var(--gold-2)}
+body.has-tabs{padding-bottom:78px}
+@media (min-width:900px){.app-tabs{display:none}body.has-tabs{padding-bottom:0}.app-tiles{grid-template-columns:repeat(3,1fr)}}
+</style>
+<header class="app-home">
+  <div class="wrap narrow">
     <p class="eyebrow">The TTI app</p>
-    <h1>Put us on your <em>home screen.</em></h1>
-    <p class="lead">One tap to call us, see prices, run the missed-call calculator and open your guide. It installs from this page in under a minute.</p>
-    <div class="cta">
-      <button class="btn" id="install-btn" type="button" hidden>Install the app</button>
-      <a class="btn ghost" href="#iphone">iPhone steps</a>
-      <a class="btn ghost" href="#android">Android steps</a>
+    <h1>Total Transformation Inc. <em>in your pocket.</em></h1>
+    <p class="lead">Everything on our website, one tap away: the AI front desk, the $9 missed-call tracker, self-help kits, Second Start and a direct line to us.</p>
+    <nav class="app-tiles" aria-label="App home">
+      <a class="app-tile" href="/front-office.html"><b>AI Front Desk</b><span>Answers the calls you miss and sends you each message.</span><em>7 days for $97 &rarr;</em></a>
+      <a class="app-tile" href="/ebooks.html#lead-leak-calculator"><b>$9 Missed-Call Tracker</b><span>Estimate what missed calls may cost, with a 14-day log.</span><em>$9 one time &rarr;</em></a>
+      <a class="app-tile" href="/kits.html"><b>Self-Help Kits</b><span>Credit, complaint, loan, tax-penalty and court templates. Not legal advice.</span><em>From $9 &rarr;</em></a>
+      <a class="app-tile" href="/second-start.html"><b>Second Start</b><span>Our program for people starting over.</span><em>Learn more &rarr;</em></a>
+      <a class="app-tile" href="/contact.html"><b>Contact</b><span>Questions, quotes or help with an order.</span><em>Get in touch &rarr;</em></a>
+      <a class="app-tile" href="tel:+17473018586"><b>Call us</b><span>(747) 301-8586</span><em>Tap to call &rarr;</em></a>
+    </nav>
+    <div class="install-card" id="install-card">
+      <p style="margin:0 0 10px"><strong>Install the app.</strong> <span id="install-note">On an iPhone, tap Share, then Add to Home Screen. On Android or a computer, an Install button appears here in Chrome or Edge.</span></p>
+      <div class="cta" style="margin-top:0"><button class="btn" id="install-btn" type="button" hidden>Install the app</button><a class="btn ghost" href="#iphone">iPhone steps</a><a class="btn ghost" href="#android">Android steps</a></div>
     </div>
-    <p class="note" id="install-note">On an iPhone, follow the three steps below. On Android or a computer, an Install button appears here in Chrome.</p>
   </div>
 </header>
 <section>
@@ -64,7 +89,7 @@
         <h3>Install with Chrome</h3>
         <ol class="howto">
           <li>Open this page in <strong>Chrome</strong>.</li>
-          <li>Tap <strong>Install the app</strong> at the top of this page, or tap the three dots in the corner.</li>
+          <li>Tap <strong>Install the app</strong> above, or tap the three dots in the corner.</li>
           <li>Tap <strong>Install app</strong> or <strong>Add to Home screen</strong>, then confirm.</li>
         </ol>
       </article>
@@ -73,42 +98,31 @@
         <h3>Install on Windows or Mac</h3>
         <ol class="howto">
           <li>Open this page in <strong>Chrome</strong> or <strong>Edge</strong>.</li>
-          <li>Click the <strong>Install</strong> icon at the right end of the address bar, or click <strong>Install the app</strong> at the top of this page.</li>
-          <li>Click <strong>Install</strong>. The app opens in its own window and sits with your other programs.</li>
+          <li>Click the <strong>Install</strong> icon at the right end of the address bar, or click <strong>Install the app</strong> above.</li>
+          <li>Click <strong>Install</strong>. The app opens in its own window.</li>
         </ol>
       </article>
     </div>
+    <p class="note" style="margin-top:18px">This app installs from our website. It is free, takes almost no space and asks for no permissions. It is not in the Apple App Store or Google Play.</p>
   </div>
 </section>
-<section class="band">
-  <div class="wrap split">
-    <div>
-      <p class="eyebrow">What it does</p>
-      <h2>Everything on the site, one tap away</h2>
-      <ul class="ticks">
-        <li><strong>Call us</strong> in one tap</li>
-        <li><strong>See every price</strong> and build a quote</li>
-        <li><strong>Run the missed-call calculator</strong> for your business</li>
-        <li><strong>Open pages you have already seen</strong> even on a weak signal</li>
-      </ul>
-    </div>
-    <div class="panel" style="background:var(--bg)">
-      <p class="eyebrow">Good to know</p>
-      <p style="margin-top:12px">This app installs from our website. It is free, it takes almost no space and it does not ask for any permissions. It is not in the Apple App Store or Google Play.</p>
-      <div class="cta" style="margin-top:8px"><a class="btn" href="/services.html">See current services</a></div>
-    </div>
-  </div>
-</section>
-<section id="contact" class="contact">
-  <div class="wrap">
-    <p class="eyebrow">Get started</p>
-    <h2>Want an app like this for your business?</h2>
-    <p>Call (747) 301-8586. We will show you how it would look with your name and your icon.</p>
-    <div class="cta">
-      <a class="btn" href="tel:+17473018586">Call (747) 301-8586</a>
-      </div>
-  </div>
-</section>
+<nav class="app-tabs" aria-label="App tabs">
+  <a href="/front-office.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Front Desk</a>
+  <a href="/ebooks.html#lead-leak-calculator"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h2M12 11h2M16 11h0M8 15h2M12 15h2"/></svg>$9 Tracker</a>
+  <a href="/kits.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6z"/><path d="M9 10h6M9 14h6M9 18h4"/></svg>Kits</a>
+  <a href="/second-start.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20 12 4l8 16"/><path d="M8 13h8"/></svg>Second Start</a>
+  <a href="/contact.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>Contact</a>
+</nav>
+<script>
+(function(){
+  document.body.classList.add('has-tabs');
+  var ua=navigator.userAgent||'';
+  var standalone=window.matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
+  var card=document.getElementById('install-card'),note=document.getElementById('install-note');
+  if(standalone&&card){card.hidden=true;return;}
+  if(/iPhone|iPad|iPod/.test(ua)&&note){note.textContent='On iPhone or iPad: open this page in Safari, tap the Share button (square with an up arrow), then Add to Home Screen.';}
+})();
+</script>
 </main>
 <footer>
   <div class="wrap">

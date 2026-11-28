@@ -1,9 +1,9 @@
 {
  "name": "Total Transformation Inc.",
  "short_name": "TTI",
- "description": "AI Front Office, websites, phone apps and automations for local business.",
+ "description": "AI Front Desk, the $9 missed-call tracker, self-help legal and credit kits, Second Start and contact, from Total Transformation Inc.",
  "id": "/",
- "start_url": "/?source=app",
+ "start_url": "/app.html?source=pwa",
  "scope": "/",
  "display": "standalone",
  "orientation": "portrait",
@@ -36,9 +36,9 @@
  ],
  "shortcuts": [
   {
-   "name": "Services and prices",
-   "short_name": "Prices",
-   "url": "/services.html",
+   "name": "AI Front Desk",
+   "short_name": "Front Desk",
+   "url": "/front-office.html",
    "icons": [
     {
      "src": "/assets/icons/icon-192.png",
@@ -47,9 +47,20 @@
    ]
   },
   {
-   "name": "AI Front Office",
-   "short_name": "Front Office",
-   "url": "/front-office.html",
+   "name": "$9 Missed-Call Tracker",
+   "short_name": "$9 Tracker",
+   "url": "/ebooks.html#lead-leak-calculator",
+   "icons": [
+    {
+     "src": "/assets/icons/icon-192.png",
+     "sizes": "192x192"
+    }
+   ]
+  },
+  {
+   "name": "Self-Help Legal & Credit Kits",
+   "short_name": "Kits",
+   "url": "/kits.html",
    "icons": [
     {
      "src": "/assets/icons/icon-192.png",

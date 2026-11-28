@@ -1,6 +1,6 @@
 /* Total Transformation Inc. app shell. Network first, saved copy as backup. */
-var CACHE="tti-v10-2026-11-22";
-var SHELL=["/","/services.html","/front-office.html","/ebooks.html","/case-study.html","/contact.html","/app.html","/platform.html","/news.html","/offline.html","/assets/site.css","/assets/site.js","/assets/favicon.svg","/assets/icons/icon-192.png"];
+var CACHE="tti-v11-2026-11-28";
+var SHELL=["/","/services.html","/front-office.html","/ebooks.html","/case-study.html","/contact.html","/app.html","/kits.html","/second-start.html","/platform.html","/news.html","/offline.html","/assets/site.css","/assets/site.js","/assets/favicon.svg","/assets/icons/icon-192.png"];
 self.addEventListener("install",function(e){
   e.waitUntil(caches.open(CACHE).then(function(c){return Promise.all(SHELL.map(function(u){return c.add(u).catch(function(){});}));}).then(function(){return self.skipWaiting();}));
 });

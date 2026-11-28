@@ -247,3 +247,6 @@ ol.howto li::marker{color:var(--gold);font-weight:700}
 .platform .cta{margin-top:auto;padding-top:8px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
 .platform .btn{font-size:18px;padding:16px 26px}
 .calc>*{min-width:0}.field input,.field select{max-width:100%;box-sizing:border-box}
+
+/* Kits link: keep the desktop nav on one line */
+@media (min-width:901px) and (max-width:1360px){.links{gap:14px}.links a{font-size:14px}.links a:not(.btn){white-space:nowrap}}
